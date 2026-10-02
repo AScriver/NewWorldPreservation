@@ -13,3 +13,4 @@ __pycache__/
 *.pcapng
 *.pem
 *.key
+.vscode/settings.json
