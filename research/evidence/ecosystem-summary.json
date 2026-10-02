@@ -1,0 +1,38 @@
+{
+  "observedAtUtc": "2026-10-02T04:29:54Z",
+  "scope": "Public metadata and read-only pinned source inspection; no joining Discord or contacting maintainers.",
+  "firstLight": {
+    "repository": "https://github.com/nw-private-server/first-light",
+    "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "commitDateUtc": "2026-05-16T02:01:17Z",
+    "archivedFlag": false,
+    "repositoryNotice": "Defunct; development redirected to OpenWorld Discord",
+    "detectedLicense": null
+  },
+  "forks": {
+    "api": "https://api.github.com/repos/nw-private-server/first-light/forks?sort=newest&per_page=30",
+    "allVisibleBranches": "main",
+    "allHeads": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "repositories": ["dragoso/first-light", "itsOwen/first-light", "zkulle/first-light", "Commando501/first-light", "Realystic1/first-light", "lemmcode/first-light", "ryanmcadams/first-light", "jeremylcarter/first-light"]
+  },
+  "openWorld": {
+    "historicalInvite": "https://discord.gg/5XzwZHFv",
+    "historicalInviteApiStatus": 404,
+    "currentCommunityLinkedInvite": "https://discord.gg/projectopenworld",
+    "currentInviteApiStatus": 200,
+    "guildName": "Open World",
+    "publicSourceRepository": "not established",
+    "teamContinuity": "not authenticated",
+    "developmentProgress": "not inspectable from public invite",
+    "linkDiscovery": "https://www.reddit.com/r/newworldgame/comments/1wulcxs/modded_singleplayer/"
+  },
+  "newerPublicResearch": {
+    "repository": "https://github.com/Coldzer0/Aeternum-World",
+    "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+    "commitDate": "2026-06-14T16:38:02+03:00",
+    "license": "AGPL-3.0",
+    "trackedFiles": 17,
+    "implementation": "Capture tools, HTTPS extraction and LZ4-aware Carrier ledger decoder; no checked-in game server or position-component decoder"
+  },
+  "searchLimit": "Eight fork branch inventories plus public web search and bounded GitHub repository searches. Not exhaustive; private, deleted, unindexed or differently named successors remain unknown. Unverified donation/scam claims excluded."
+}

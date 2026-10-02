@@ -1,0 +1,15 @@
+# External reference checkout is not our redistributable source.
+/research/upstream/
+/.scratch/
+/.venv/
+/private/
+/research/evidence/public-ecosystem.json
+/research/evidence/successor-inspection.json
+/research/evidence/*junit*.xml
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pcap
+*.pcapng
+*.pem
+*.key

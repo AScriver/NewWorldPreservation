@@ -1,0 +1,16 @@
+{
+  "firstLight": {
+    "url": "https://github.com/nw-private-server/first-light.git",
+    "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "directory": "research/upstream/first-light",
+    "fixture": "info/nw-login-safe-20260502-153840/messages-redacted.txt",
+    "fixtureSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+    "license": "No license file or detected license at this commit; keep external, do not vendor."
+  },
+  "aeternumWorld": {
+    "url": "https://github.com/Coldzer0/Aeternum-World.git",
+    "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+    "directory": "research/upstream/aeternum-world",
+    "license": "AGPL-3.0; reviewed as external reference only."
+  }
+}
