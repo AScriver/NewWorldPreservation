@@ -1,168 +1,156 @@
-# Current-client connectivity gate
+# Current-client connectivity
 
-## Result and acceptance boundary
+## Result — October 2, 2026 UTC
 
-**Current New World client connectivity has NOT been demonstrated. No current client build was tested.** No legitimate executable was found in the discovered Steam libraries, no matching process was running, and the checked conventional config directories were absent. This is a bounded search, not proof that no copy exists anywhere. The explicit installation-path question is pending. See [discovery receipt](../research/evidence/current-client-discovery.json) and `scripts/Inspect-CurrentClient.ps1`.
+**The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-The new original HTTPS probe works with **Python control clients** on IPv4/IPv6 loopback. Its tests prove that the measurement apparatus distinguishes validated requests, untrusted CA and hostname mismatch. They do **not** establish New World's endpoints, trust provider, pinning, authentication, world loading or game transport. See [control receipt](../research/evidence/connectivity-validation.json).
+**Furthest verified protocol state:** HTTP/1.1 channel-bootstrap GET received and diagnostic HTTP **501** returned. Not authenticated, not world-loading, not spawned, not game-transport-connected, and not Milestone 1. Native game-window inspection was unavailable; a generic level-loader log marker is not evidence of loading Aeternum.
 
-**Installation follow-up (October 2 UTC):** User authorized downloading their library copy. The existing, validly signed Valve Steam client was sent `steam://install/1063730` at 06:59:07 UTC. At 07:04:10 UTC the configured library still had neither the app manifest nor a partial-download directory, so only request dispatch—not download/entitlement/install success—is established. Native Steam-window control is unavailable in this session; the browser account page was signed out. A precise user handoff to complete Steam's Install dialog is pending. No credentials were read or entered. See [install-attempt receipt](../research/evidence/steam-install-attempt.json). This does not alter the current-client TLS/spawn gate.
-
-To pass this gate, pin the actual owned client build/hash, associate its process/socket with the probe's connection, and demonstrate a decrypted request. To additionally claim **certificate validation solved**, inspect the unmodified client's validation outcome and exercise negative CA/hostname controls against our endpoint. Even decrypted HTTP cannot tell the server whether the peer verified its certificate: a deliberately permissive **Python-only negative control** also reaches HTTP 200. No such bypass was applied to the game. HTTPS acceptance alone also does not solve the separate REP/DTLS trust gate. Spawn work remains gated on the required current-client connectivity; no spawn protocol or gameplay implementation was added.
-
-## Evidence identities
-
-| Evidence | Identity / scope |
+| Identity | Verified value / limit |
 |---|---|
-| Starting workspace | Local `main`, `c77b3c962fd9eaf28b7b2ba25217e0e34ef23903`, clean before this connectivity slice. New scripts/tests are original; control receipt hashes their exact tested bytes. |
-| Existing First Light | Clean external source `63756a3f7ff0ae41752dcc7c80267802c3fa7548`; unchanged. Source references below are paths inside `research/upstream/first-light`, not our redistributable code. |
-| Client discovery | October 2, 2026 UTC receipt; registered Steam libraries + existing conventional C/D Steam roots + eight config-directory existence checks. No client files/logs copied and no launch. Additional bounded filename searches in discovered Steam/common and conventional D locations found no executable. `D:\Code\NewWorld` contains a small JavaScript/data project, not the client. |
-| Probe runtime | Isolated workspace Python 3.11.9; exact OpenSSL runtime and source/fixture hashes in control receipt. Generated CA/leaf and request logs stay in ignored temporary directories. |
-| Fixtures | `tests/fixtures/connectivity/requests.json` is independently written synthetic HTTP, **not a game capture or current response schema**. No New World request/handshake fixture exists. |
+| Steam | App `1063730`, installed build `22469132` |
+| Executable | `C:\Program Files (x86)\Steam\steamapps\common\New World\Bin64\NewWorld.exe` |
+| File/product and own-log version | `1.400.6031.6004151` |
+| Installed executable | 179,204,176 bytes; SHA-256 `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e` |
+| Live identity | Ordinary Steam launch, name/PID/exact start time, own-log build, exact OS socket owner. Windows returned no live executable path. **Installed-file hash is not a live-image hash.** Cause of path restriction is unknown. |
+| Source identity | Started at clean local `main` `2206da7`; original instrumentation was uncommitted during experiments. Exact exercised source hashes/private-source hashes: [live receipt](../research/evidence/current-client-connectivity.json). First Light remains unchanged at `63756a3`. |
+| Probe | Workspace Python 3.11.9, builtin SSL/OpenSSL 3.0.13; different from First Light's pyOpenSSL provider. Loopback only; no forwarding/authentication/game transport. |
 
-Existing ecosystem findings remain in [First Light analysis](FIRST_LIGHT_ANALYSIS.md); they were not repeated. The previously passing upstream protocol profile is unchanged.
+The prior no-install/discovery and Steam-install handoff were historical results, superseded by the user-supplied installation and live tests. Initial ecosystem investigation was not repeated.
 
 ## Observed endpoint flow
 
-### Current client: unknown
+```mermaid
+flowchart TD
+    Steam[Ordinary Steam launch] --> Client[NewWorld.exe: current build]
+    Client --> Bootstrap[Channel URL: d2c74t4zimux3r.cloudfront.net]
+    Bootstrap --> Hosts[One-host temporary mapping: 127.0.0.1 and ::1]
+    Hosts --> Probe[Owned loopback TCP 443: actual game used ::1]
+    Probe --> TLS[TLS 1.2: matching SNI and CA/SAN controls]
+    TLS --> GET[GET /STEAM_APP_ID.1063730.json HTTP/1.1]
+    GET --> Stop[Probe HTTP 501: bootstrap stops here]
+    Bootstrap -. normal-service log references only .-> Regions[Regional API / auth / gateway descriptor]
+    Regions -. own log ConfigureLogin / Omni URL .-> Auth[Authentication: not established privately]
+    Auth -. unverified .-> REP[Session selection and REP / DTLS]
+```
 
-| Stage | Current observation / evidence |
+| Stage | Actual evidence and boundary |
 |---|---|
-| Startup | No executable/build identified, no running `NewWorld` process; discovery receipt. No launch. |
-| Endpoint selection/configuration | Unknown; current client files and local config were unavailable. No supported CLI parameter has been established. |
-| Hostnames / DNS | No current-client DNS query or endpoint observed. An operator `.NET Dns.GetHostAddresses('localhost')` control returned `::1` and `127.0.0.1`; it does not establish the game's resolver, cache or IPv6 policy. |
-| Connection attempt | No current-client-owned socket observed. Probe accepts control sockets only. |
-| TLS / SNI / certificate | Unknown for current client. Python controls provide SNI `localhost` with hostname connections, and no SNI for literal IP SAN connections. |
-| HTTP/bootstrap/API | No current client request received; exact method/order/schema unknown. |
-| Authentication request/response | Not observed. Probe does not authenticate. A synthetic historical-route request receives diagnostic HTTP 501. |
-| Character/world/session selection | Not observed or implemented by probe. |
-| REP game transport | Not observed; probe is TCP HTTPS, **not** a UDP DTLS responder. |
+| Startup | Launched through existing Steam, first `steam://rungameid/1063730`, subsequent `-applaunch 1063730`. Installed hash checked before each launch. Own `Game.log` reports the same numeric build. |
+| Channel selection | Baseline owned log line 298 references `https://d2c74t4zimux3r.cloudfront.net/STEAM_APP_ID.1063730.json`; later captured **actual** GET matches. This is not merely an executable string. |
+| Configuration | Baseline log lines 305–348 reference five regional sets of CloudFront/execute-api hostnames; western hosts include `q8hqllbg6k.execute-api.us-east-1.amazonaws.com`, `v7irlu1nrl.execute-api.us-west-2.amazonaws.com`, `d3bj4csovi1fe8.cloudfront.net`. Listing a host does not prove it was contacted. Full safe hostname/line list is in the receipt. |
+| Auth lead | Baseline line 380 mentions `https://d3bj4csovi1fe8.cloudfront.net/prod/credentials/omni`; line 424 contains `ConfigureLogin`. These are **log references**, not captured requests or successful authentication. Method/schema/order remain unknown. |
+| DNS/redirection | Guarded hosts readback plus operator `.NET` resolver returned `::1` and `127.0.0.1`. Exact game-owned sockets reached `::1:443`. Supports current redirection compatibility; **not a client DNS-query trace** or proof of resolver/cache/fallback implementation. |
+| TLS / HTTP | Actual attributed connections: SNI bootstrap hostname; TLS1.2; `ECDHE-RSA-AES256-GCM-SHA384`; selected ALPN `null`; HTTP/1.1 GET, zero declared body, no Authorization/Cookie headers. Offered TLS/ALPN extensions were not captured. |
+| Other sockets | Baseline game TCP table had ports 443 and 80 on public IPs. No hostname/SNI/payload attribution for these; port80 alone is not proof of HTTP. Unrelated process traffic was not captured. |
+| Character/world/session / spawn | No private observation; HTTP501 never supplies the needed descriptor. |
+| Game transport / reconnect | No UDP/DTLS connection, actor or in-world reconnect tested. Fresh launches are startup controls, not game reconnect semantics. |
 
-### Historical First Light path: source-supported leads, not current observations
+Baseline log read SHA-256: `11c17fd275b648ca0a55a0407a59b43ca7dee87927a3eeb83f4ac1083ce92de3`, 44,996 bytes. Source log is not copied into this repository. Whitelist metadata stays ignored; public receipt retains only approved hostname/version/provenance fields. Extractor timestamps are extraction times, **not source-event times**; growing-log reads are explicitly marked unstable.
 
-`docs/connection-flow.md:1` explicitly attributes its flow to **Game.log 2025-12-27**. `server/auth_mock.py:10-40` attributes its host list to channel configuration and a game log. The hardcoded redirection/certificate lists are manually maintained, not live discovery (`tools/setup_hosts.py:28-59`; `tools/generate_auth_certs.py:26-82`).
+## Certificate / TLS observations
 
-| Historical stage | Endpoint / behavior | Evidence |
-|---|---|---|
-| Channel discovery | `https://d2c74t4zimux3r.cloudfront.net/STEAM_APP_ID.1063730.json` | `docs/connection-flow.md:6-19`; mock route `auth_mock.py:1343` |
-| Regional service choice | JSON supplies regional auth/API/gateway hosts. Mock loads `capture/channel_config.json` if present; otherwise synthetic US-East auth/US-West gateway fallback. | `auth_mock.py:197-233,761-763` |
-| Credentials | `/prod/credentials/omni` on historical regional gateway, e.g. `d3bj4csovi1fe8.cloudfront.net` | `docs/connection-flow.md:28-43`; `auth_mock.py:1346-1347` |
-| Login information | `/prod/game/getlogininfo` returns world/character information in historical mock | `auth_mock.py:895-993,1359-1360` |
-| Queue/session ticket | `/prod/game/login/queue...` / older `/prod/users/login_queue...`; ready-ticket response contains REP address | `auth_mock.py:258-314,547-589,777-892,1353-1354` |
-| Ancillary HTTP | Entitlement, remote-config, content, token-service/JWKS/OpenID routes | `auth_mock.py:1377-1399`; HTTP route handlers are not proof of actual HTTP/2/gRPC support |
-| Game connection | Separate UDP REP endpoint, historically `127.0.0.1:23971` when redirected by the mock | `auth_mock.py:78-81,1561-1564`; `server/rep_responder.py:167-175,316-382` |
+All times UTC. Each phase used a fresh ordinary client launch. Within each experiment CA, correct leaf, endpoint, routing and executable stayed fixed; the hostname control used another leaf signed by the **same CA**, with the same server public key but a different DNS SAN and serial.
 
-Historical regional gateway names from `docs/connection-flow.md:12-18`: `d1w0bfy6smo4d1.cloudfront.net` (EU), `d1cjlmzk0xrm0z.cloudfront.net` (SA), `d2oeuvxi3kfsrw.cloudfront.net` (US-East), `d3bj4csovi1fe8.cloudfront.net` (US-West), `de4mfzk9wkelz.cloudfront.net` (AP). Historical auth endpoints are API Gateway names listed in that document. **None has been contacted or identified as current here.** Avoid treating this list as a safe shotgun redirect recipe.
+| Phase | First TCP accept | Accepts / HTTP requests | Result |
+|---|---|---|---|
+| A: local CA absent | 15:35:42.823 | 3 / **0** | Server TLS1.2 handshake finished; peer closed before parsed HTTP. No CA-alert diagnosis is invented. |
+| A: same CA in CurrentUser Root | 15:40:00.621 | 3 / **3** | Bootstrap GET received, HTTP501 returned. |
+| A: same CA removed | 15:42:29.544 | 3 / **0** | Reversal restored no-HTTP behavior. |
+| B: new local CA, correct name | 15:50:29.803 | 3 / **3** | Exact socket owner PID **38624**, start `15:50:22.1571585Z`, matched launch. |
+| B: same CA, wrong-name leaf | 15:53:21.044 | 3 / **0** | Exact owner **42316**, start `15:53:13.3230843Z`; unchanged requested SNI. Wrong SAN `hostname-mismatch.invalid`; no HTTP. |
+| B: original correct leaf restored | 15:56:00.585 | 3 / **3** | Exact owner **40672**, start `15:55:53.1931704Z`; restored successful HTTP. |
 
-## TLS/certificate observations
+Exact timestamps/fingerprints/source hashes are authoritative in the receipt. Three connections per launch were observed; retry-policy internals are unknown.
 
-| Claim | Status / source |
+**Solved for this bootstrap:** temporary one-host routing + short-lived local CA in `CurrentUser\Root` + correct hostname leaf works with the stock client. A mandatory hardcoded Amazon certificate pin does **not** block this endpoint on this build. Unknown: active TLS/trust API, whether roots are loaded through Windows directly or application/library code, and any pinning/trust on other services. **REP/DTLS trust remains separate and untested.** A CA-signed local leaf was tested, not a standalone self-signed leaf.
+
+Server `TLS_ESTABLISHED` alone is not client trust proof: even the untrusted/wrong-name game controls emitted it. The certificate conclusions rely on differential HTTP behavior, matching socket ownership, and restoration. Do not classify a reset or absent request as pinning. No TLS validation was disabled in the game.
+
+## Redirection options, failures and limits
+
+| Option | Current outcome |
 |---|---|
-| Probe leaf has local CA signature, explicit DNS SAN(s), loopback IP SANs and server-auth EKU | Generated independently by `connectivity_probe.py::generate_certificates`; seven-day lifetime; CA private key not saved. No Amazon subject impersonation. |
-| Python trusts correct CA + SAN and rejects untrusted CA / wrong SAN | Executed control tests, TLS 1.2 and 1.3; actual socket handshakes/requests, not context construction alone. Wrong-host control verifies X509 hostname-mismatch result. |
-| Current New World accepts local/self-signed certificates | **Unknown.** Controls load the CA in a Python SSL context only; no Windows trust store was modified. CA-signed leaf control does not test a self-signed game certificate. |
-| HTTPS uses Windows trust store | **Unknown for current game.** Historical certificate generator merely prints `certutil` instructions (`generate_auth_certs.py:9-13,146-147`). |
-| Current game has certificate pinning | **Unknown.** A fatal `unknown ca` would indicate trust failure but by itself would not distinguish bundled roots, missing local trust, pinning, hostname policy or other validation. |
-| Historical REP certificate failure | `docs/dtls-trust-bypass.md:7-14` reports local DTLS `unknown ca` and game transport-security error. Later runtime-patch claims are historical and unexecuted here, not proof about stock/current executable behavior. |
-| HTTPS and DTLS are the same trust path | **Unsupported.** Separate TCP/UDP implementations; installing an HTTPS CA does not establish REP trust. |
-| SNI is equivalent to DNS redirection | **No.** Probe controls connect to loopback while supplying a separate hostname for TLS validation/SNI; DNS selection and TLS identity must be measured separately. Current game behavior remains unknown. |
+| Single-host hosts mapping, both address families | **Works**. No broad historical list, proxy, global DNS setting or DNS-cache flush. Hosts was restored byte-for-byte after both windows. Requires Windows elevation; a validated timed helper requested UAC normally. |
+| Local user-store CA | **Works for bootstrap**, exact-fingerprint import/readback/removal. No machine-wide CA import. CA private key is never written; leaf key/certs stay ignored. |
+| Local config / CLI server override | No supported control found in bounded root/config/package-index/ASCII-flag inspection. Do not invent flags. Not proof none exists anywhere. |
+| `bootstrap.cfg` remote_ip / remote_port | Commented/disabled asset-processor controls, not an evidenced game endpoint override. Static adjacency to `AssetProcessorConnection` corroborates this. Not used. |
+| Local DNS server / HTTP proxy / SSL_CERT_FILE | Not tested. Compiled OpenSSL environment strings do not establish runtime support. Proxying would not prove certificate trust. |
+| Binary patch / hooks / memory inspection | Not performed. User permitted narrowly scoped memory inspection, but supported trust/routing already solved this gate. EAC remains untouched. |
 
-The probe uses standard [Python SSL contexts/SNI callbacks](https://docs.python.org/3.11/library/ssl.html), not a custom TLS implementation. SNI identifies a requested hostname during TLS negotiation, independent of the address reached ([RFC 6066, section 3](https://www.rfc-editor.org/rfc/rfc6066#section-3)). TLS failures may precede any HTTP request; record the phase and OpenSSL alert mnemonic, not a guessed game state ([RFC 8446, section 6](https://www.rfc-editor.org/rfc/rfc8446#section-6)).
+Instrumentation failures retained: original observer silently skipped path-inaccessible game processes; corrected to log the limitation and offer explicit PID/start-time correlation. Initial elevated helper had a malformed prefix-array expression and exited **before mutation**; corrected. Initial CA loader expected a private key; corrected to parse certificate-only PEM **before import**. A launch watcher misinterpreted PowerShell's automatic JSON date conversion; fixed, later exact owner controls succeeded. These failures are not game pinning evidence.
 
-## Redirection options and failed approaches
+## Smallest service and structured transitions
 
-| Option | Tested? / conclusion |
-|---|---|
-| Explicit loopback socket + separate TLS hostname | **Python controls only:** works with matching trusted CA/SAN; rejects wrong hostname and unknown CA. No game endpoint override proven. |
-| Current client configuration / CLI endpoint override | Not tested: executable/config unavailable; no evidenced supported override in inspected First Light tools. Do not invent command-line switches. |
-| Single observed-host Windows hosts mapping | Not applied. Historical tool adds IPv4 and IPv6 mappings; current applicability unknown. Requires exact observed host, guarded backup/readback/revert and ensuring only our own client is affected. |
-| Local DNS override | Not tested; no current client resolver/caching behavior observed. Mapping to an IP does not solve certificate identity. |
-| Local CA in user trust store | Not installed/tested. Prefer scoped/current-user trust if the identified stack uses it; record exact certificate thumbprint and remove only the certificate we introduced. No blanket CA-store edits. |
-| HTTP(S) proxy | Not configured/tested. Current client proxy support and HTTP/2 requirements unknown. Probe never proxies or forwards traffic. |
-| UDP redirect / DTLS responder | Not run in this slice. Requires authenticated game's actual REP address/handshake evidence, separate from HTTPS. |
-| Binary/hook modification | Not performed or justified by current evidence. Missing client access is not a reason to bypass trust. Historical patches are not part of this test procedure. |
+The implemented original service accepts TLS, sanitizes one bounded HTTP request, and returns 501 except its own health route. It never forwards, invents auth success or saves request headers/bodies. Necessary **next service**: a client-accepted HTTP200 channel descriptor directing later services to private endpoints. Its current full schema/requirements are not yet a fixture; do not blindly reuse First Light's synthetic fallback.
 
-**Executed failures:** untrusted-CA and wrong-hostname **control** handshakes; cleartext sent to the TLS listener; ambiguous/unsupported HTTP body framing. The service records alert/rejection metadata without secret contents. **No failed New World redirection experiment has occurred.**
+All server/mutation/observer events have UTC timestamps. Server events carry run/connection UUIDs and ordered sequence numbers; logs flush per transition. Important states:
 
-An added control run also exposed a Windows timing difference: an untrusted TLS 1.3 client reported certificate verification failure, while the server saw `ConnectionResetError` rather than `unknown ca`. The original overly specific test assertion failed (18 passed / 1 failed), and was corrected to require the exact **client** issuer-validation error and no HTTP, while preserving the actual server failure reason. A reset alone must not be diagnosed as certificate pinning or CA failure. Historical failed-run diagnostics remain ignored/private.
+- `CLIENT_START` / `CLIENT_IDENTITY_UNAVAILABLE`: exact-path or explicitly labelled launch-correlated observer; target-file hash is context only.
+- `ENDPOINT_RESOLUTION`: operator resolver evidence, **not fabricated client DNS telemetry**.
+- `CONNECTION_ATTEMPT` → `CONNECTION_OWNER_OBSERVED`: accept-time exact client-side tuple lookup through Windows IP Helper, not 500ms polling alone. Only that tuple's PID is returned; unrelated table rows are discarded.
+- `TLS_CLIENT_HELLO` → `TLS_ESTABLISHED` / `TLS_FAILED`: SNI callback, negotiated values, bounded error mnemonic. No full ClientHello/session-key capture.
+- `HTTP_REQUEST` → `HTTP_RESPONSE`: route/method/version/body-length/header-presence metadata only.
+- `AUTHENTICATION_REQUEST` / rejected `AUTHENTICATION_RESPONSE` and `GAME_SESSION_SELECTION_REQUEST`: already instrumented historical-route classifications; **not reached in these private tests**. No successful selection/transport state emitted.
+- `CONNECTION_CLOSED`, CA/hosts mutation/readback/restoration events and bounded listener stop/ownership checks.
 
-## Minimum service and structured transitions
+Probe events deliberately remain `client_identity:unattributed`; the evidence receipt performs the PID/start-time/socket correlation. Socket ownership is not live-image verification. API layout references: [GetExtendedTcpTable](https://learn.microsoft.com/windows/win32/api/iphlpapi/nf-iphlpapi-getextendedtcptable), [IPv4 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcprow_owner_pid), [IPv6 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcp6row_owner_pid). These are OS metadata, not invented New World packet layouts.
 
-The implemented service is sufficient to answer a narrower measurement question: *does an identified client reach our loopback TLS server, validate its certificate, and send an HTTP request?* It is **not** sufficient to advance authentication or world loading. The minimum current-client bootstrap service set remains unknown until that client can be observed.
+## Reproducible procedure
 
-Every probe event has UTC timestamp, schema, run ID, connection UUID and sequence. Events flush as JSONL; no raw URI/query, account ID, headers, tokens, cookies or bodies are exported. Only allowlisted hostnames and route classes are retained. Unknown paths/hosts are redacted. One request per connection, bounded body discard, short socket timeout, loopback-only binds and bounded process lifetime. HTTP/1.1 only; offered ALPN list, full ClientHello extensions and game protocol are not decoded. A client requiring HTTP/2 would need an evidence-led extension, not a fabricated gRPC response.
+### Offline validation — no game/hosts/trust mutation
 
-| Requested transition | Instrumentation / truthful limitation |
-|---|---|
-| `CLIENT START` | `Observe-CurrentClient.ps1`: matched executable process, PID, actual start timestamp and executable hash. Does not launch game. Syntax validated; no actual game run yet. |
-| Endpoint resolution | **Not observable by TLS listener.** Own-process DNS tracing / sanitized own-client config/log evidence is still required. Operator DNS control must be labelled as such. |
-| Connection attempt | Observer samples only matched PID's TCP table, with local/remote four-tuple and TCP state. Probe records accepted socket separately; absence may mean a missed short-lived attempt, not proof of no attempt. |
-| TLS/session establishment | `TLS_CLIENT_HELLO` from OpenSSL SNI callback; `TLS_ESTABLISHED` with negotiated version/cipher/ALPN; `TLS_FAILED` with phase/reason. Callback is not a full handshake capture. |
-| Authentication request | `HTTP_REQUEST` plus `AUTHENTICATION_REQUEST` for allowlisted historical credentials route. Route label is historical inference, not validation of current semantics. |
-| Authentication response | HTTP 501 + `AUTHENTICATION_RESPONSE`, explicitly `authentication_success:false`; no fake successful login. |
-| Game-server/session selection | Historical queue/login-info request is logged as `GAME_SESSION_SELECTION_REQUEST`. No selection response or `GAME_SESSION_SELECTED` is emitted. |
-| Game transport connection | **Not instrumented/observed by this HTTPS-only slice.** Requires subsequent owned REP/DTLS test; no success event is fabricated. |
-
-The observer polls at 500 ms, cannot see payloads/TLS or UDP remote peers and cannot attribute DNS. Match observer/probe four-tuples and timing before attributing a request to NewWorld.exe; `client_identity:"unattributed"` is deliberately the probe default. Do not equate a browser/curl/Python request with game success.
-
-## Exact reproducible procedure
-
-### A. Verified local controls, no installed game required
-
-From `C:\Code\NewWorldPreservation`, using the existing pinned `.venv`:
+From `C:\Code\NewWorldPreservation`:
 
 ```powershell
-& 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
 & 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Test-ConnectivityProbe.ps1 -Execute
 & 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Test-FirstLight.ps1 -Execute
 ```
 
-The probe profile runs 19 scoped tests, then `scripts/verify_probe_cli.py`: generate a fresh local CA/SAN leaf, start a hidden child probe on an ephemeral loopback port, use explicit CA+hostname validation to send `GET /__probe/health`, require HTTP 200, wait for automatic stop, verify child exit 0 and closed listener. The test runner emits safe summary counts only; raw diagnostics/JUnit stay ignored. [CLI receipt](../research/evidence/connectivity-cli-control.json) records request, certificate fingerprint, script hash, progression and cleanup. No hostname redirect, Windows certificate import, game launch or external service is involved.
+First script: original19 loopback controls, CLI health/start/automatic-stop control,26 instrumentation/fixture tests, mocked observer scenarios. Hosts tests use only isolated `.scratch/` fixtures; native owner tests hold owned ephemeral sockets. No real trust-store edit. See [control receipt](../research/evidence/connectivity-validation.json), [instrumentation receipt](../research/evidence/instrumentation-validation.json), [CLI receipt](../research/evidence/connectivity-cli-control.json).
 
-### B. Standalone diagnostic listener
+### Owned-client trial — explicitly live, not part of offline tests
 
-Generate once in a **new** ignored directory; reuse that exact certificate directory across trust/hostname controls. Existing certificate directories and logs are refused rather than overwritten:
-
-```powershell
-& .\.venv\Scripts\python.exe @('scripts/connectivity_probe.py', 'certificates', '--directory', 'private/connectivity/manual-01/certificates', '--hostname', 'localhost')
-& .\.venv\Scripts\python.exe @('scripts/connectivity_probe.py', 'serve', '--certificates', 'private/connectivity/manual-01/certificates', '--log', 'private/connectivity/manual-01/events-v4.jsonl', '--bind', '127.0.0.1', '--port', '8443', '--duration', '60')
-```
-
-For IPv6 use `--bind ::1` and a distinct log. Two listeners may run in separate terminals on their respective loopback addresses with the same certificate directory. Binding an all-interface/remote address is refused. Port collision fails without stopping any existing process. The probe supports a specified port, including 443, but **443 was not tested** and should only be used once the actual client URL/port is known and the listener is free. DNS mapping cannot change a URL's port.
-
-`--hostname` is repeatable to issue SANs for **observed** client hostnames in a future controlled redirect. No arbitrary upstream host list is installed, resolved or contacted by certificate generation. Logs and private keys must stay private, even if future client traffic arrives. The listener is intentionally not an auth mock; HTTP 501 is its application-path stopping point.
-
-### C. Resume with the actual legitimate client: pending, not executed
-
-1. Supply/locate the actual `NewWorld.exe`, then pin it with the script's explicit-path parameter. Steam build ID is recorded when available; file version/hash is recorded regardless. Verify the path belongs to the legitimate current install. **Do not substitute First Light's historical build string.**
-2. Start the bounded observer before an ordinary user-owned launch. It does not read Steam account configuration, game logs, credentials, request payloads or other processes' connections:
+1. Pin the actual installed executable with validated `Inspect-CurrentClient.ps1 -ClientExecutable 'C:\Program Files (x86)\Steam\steamapps\common\New World\Bin64\NewWorld.exe'`. Verify Steam build/version/hash. Preserve any already-running client unless its launch ownership is recorded.
+2. Choose a **fresh** `private/connectivity/<run>/` directory. Generate a CA and two same-key/same-CA leaves:
 
 ```powershell
-& 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Inspect-CurrentClient.ps1 -Execute -ArgumentList @('-ClientExecutable', 'ACTUAL_FULL_PATH_TO_NewWorld.exe')
-& 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Observe-CurrentClient.ps1 -Execute -ArgumentList @('-ClientExecutable', 'ACTUAL_FULL_PATH_TO_NewWorld.exe', '-LogPath', 'C:\Code\NewWorldPreservation\private\connectivity\owned-client-01.jsonl', '-Seconds', '60')
+& .\.venv\Scripts\python.exe @('scripts/connectivity_probe.py','certificates','--directory','private/connectivity/<run>/certificates','--hostname','d2c74t4zimux3r.cloudfront.net','--hostname-negative-control')
 ```
 
-3. Establish the attempted hostname/config source using only this client's safe metadata. TCP-table IPs are not hostnames. Process-attributed DNS tracing and a whitelist extractor for this build's own log/config are **not yet implemented/validated**; do not use an unfiltered machine-wide packet capture or copy raw credential-bearing logs into the repository.
-4. Prefer an evidenced supported endpoint configuration/CLI option. If none exists, redirect **one observed** bootstrap hostname to the matching loopback listener(s), with a separately guarded script preserving unrelated hosts entries and a documented restoration. No broad historical-host mapping has been prepared/applied. Keep default official access unchanged outside the controlled experiment.
-5. Test the local leaf without importing trust first. Record exact game failure + server alert/reset. If the identified TLS stack uses the Windows user store, test the same CA after a narrowly scoped import; verify that exact fingerprint and later remove only the introduced certificate. If it uses bundled roots/pinning, record that evidence before considering narrower interoperability work. This conditional step has no tested current-client recipe yet.
-6. Correlate matched process PID/hash and TCP four-tuple with probe request events. Compare correct-CA/SAN, untrusted CA and wrong-name controls **against our endpoint**, preserving the client's executable. A request proves application connectivity; validation policy requires these additional observations. Export only sanitized current-build request/handshake metadata with provenance into fixtures.
-7. Only after this gate is truly met, identify the minimum bootstrap/selection replies and separate REP handshake. Do not turn 501, SNI alone or an old replay into successful authentication. If world-loading/actor existence is reached later, stop expansion and document it. No spawn work may start from the Python control result.
+3. In separate hidden processes/terminals start both binds; never stop an unrelated 443 listener. Record launched process IDs and Windows venv-shim child ownership:
 
-Steps C3-C6 cannot be made precise for the current client until its installation/build exists locally; this is the exact remaining prerequisite, not an inferred pinning failure.
+```powershell
+& .\.venv\Scripts\python.exe @('scripts/connectivity_probe.py','serve','--certificates','private/connectivity/<run>/certificates','--log','private/connectivity/<run>/correct-v4.jsonl','--bind','127.0.0.1','--port','443','--duration','600','--observe-local-socket-owner')
+```
 
-## Current-client differences from First Light
+For IPv6 substitute `::1` and a distinct `correct-v6.jsonl`. Both must actually be listening before routing changes. `Start-Process` may return the venv launcher PID rather than the real socket-owner child PID; verify the parent-child relationship, do not guess.
 
-Actual wire/build differences are **unknown**. The known differences are our evidence and tooling: current build unpinned/unrun; historical flow dated; HTTPS probe loopback-only and secret-minimizing; no success-synthesizing auth mock; no broad hosts/CA edits or trust hook; separate HTTPS and DTLS acceptance gates. The historical `omnisdk-notes.md:102-108` claim of 34 certificate SANs disagrees with 28 entries in the pinned generator (`generate_auth_certs.py:28-82`), further reason not to trust old setup counts blindly.
+4. Use the validator with `Set-ConnectivityHosts.ps1 -Action Prepare -JournalDirectory 'C:\Code\NewWorldPreservation\private\connectivity\<run>\hosts-journal'`. This snapshots existing bytes and refuses an existing active mapping for this host. Then run validated `Invoke-ConnectivityRedirectWindow.ps1` **elevated**, supplying that journal and actual `-IPv4ListenerProcessId` / `-IPv6ListenerProcessId`; `-Seconds 480`. It checks both listeners, applies one mapping, logs operator resolution, and restores in `finally` or at timeout. **Do not launch if resolution/readback is not confirmed.** End early by creating its `stop.request` file. It does not launch the client or change CA trust.
+5. With CA absent, launch the owned game normally via Steam. Record launch time, unique new PID and exact UTC start time. Run validated `Observe-CurrentClient.ps1` with both `-ProcessId` and `-ExpectedStartTimeUtc` if its executable path is inaccessible. Match probe `CONNECTION_OWNER_OBSERVED` PID against this record. Capture only the game log whitelist via `game_log_metadata.py --source 'C:\Users\Austin\AppData\Local\AGS\New World\Game.log' --output private/connectivity/<run>/untrusted-log.json`.
+6. Exit **only the recorded owned test client** before each next ordinary launch. Import exactly this CA through validated `Use-ConnectivityTrust.ps1 -Action Import -CertificateDirectory 'C:\Code\NewWorldPreservation\private\connectivity\<run>\certificates'`. Require exact CurrentUserRoot readback, then relaunch unchanged client and require attributed bootstrap GET. Remove with `-Action Remove`, relaunch under unchanged routing/cert and require no HTTP. A new run/directory is required for another import because ownership receipts are not overwritten.
+7. For the hostname experiment use a fresh run/CA, import once, first confirm the correct leaf, then stop **only our verified listener child processes** and restart on both binds with the same certificate directory and additional `--hostname-negative-control`, fresh logs. Relaunch client: same requested SNI, no HTTP. Restart listeners without that flag and confirm restored HTTP from a fresh launch. Keep trust/routing/build fixed. No client verification bypass.
+8. Stop only recorded owned client/probe processes; remove each exact CA; create `stop.request` for the elevated window; require its restoration event and original hosts SHA. Verify no probe listener remains. Keep raw/local logs, generated leaf keys, backups and journals ignored. Export only the normalized metadata/provenance fixture. Do not publish anything.
 
-## Verification review / unresolved questions
+Guard scripts are rerunnable/reconcile partial apply/removal, refuse conflicts or ambiguous restoration, and preserve unrelated hosts/certificates/processes. Procedure placeholders are paths/recorded PID values, **not executable game flags**. It reproduces the measured 501 stopping point, not private authentication or world entry.
 
-- Independent tester at starting HEAD + probe SHA-256 `bfddc360269c7d2756b0d2a85cc9a5c9657eadd9439ada40950afdda34e0532a` exercised wrong CA/SAN, malformed/error-path secret markers, absolute-form URL with a loopback no-forwarding sentinel, failed auth/queue responses and IPv6. No secret leak or forwarding reproduced in those cases; this is bounded evidence, not exhaustive proof. Server event ambiguity was reproduced by a deliberately unverified **Python-only** control. Two useful falsifiers were promoted into tracked tests; the probe source stayed unchanged.
-- Base Python HTTP parsing accepts some malformed header shapes; this diagnostic does not claim complete strict HTTP validation. Ambiguous body framing is explicitly rejected. No HTTP/2, game-specific parser, actor or gameplay codec was modified.
-- CLI lifecycle control verifies real process start/stop and listener closure; observer is syntax-validated only, not tested with a legitimate client. Existing upstream tests must remain green; exact current receipts are linked above.
-- **Missing:** installed client's exact build/hash, live endpoint/config chain, resolver/cache/IPv6 behavior, SNI and offered TLS/ALPN, trust provider and pinning evidence, acceptable bootstrap/auth schemas, session-selection response and REP trust behavior.
-- **Exact next blocker:** access to the legitimate installed current executable (installation path or installation), then its first process-attributed controlled HTTPS attempt. There is no evidence-based reason to modify a binary or diagnose hardcoded trust yet.
-- **Actor/spawn work can begin? No.** `SPAWN_SEQUENCE.md` is deliberately not created before the user-required connectivity gate. Milestone 1 and world-loading remain unachieved.
+## Current-client differences from First Light / reuse
 
-## Capture Before Shutdown: connectivity-specific priorities
+The historical bootstrap hostname/path still applies to this current build; source route: external `server/auth_mock.py:1343`, historical flow dated2025-12-27 in `docs/connection-flow.md`. Current western credential URL is logged, but First Light's full old routes/response schema/Steam JWT assumptions remain unverified on this build. Its manually maintained broad host list is unnecessary for this isolated test.
 
-Only our own normal legitimate sessions; no credential acquisition or traffic from others. After a client is available, prioritize: exact executable/build identity; startup configuration URL/source and regional selection; normal endpoint names/ports/fallback order; DNS vs cached resolution and IPv4/IPv6 choices; SNI/TLS/ALPN and public certificate chain identity; redirects/HTTP status/content types and sanitized route ordering; account-independent channel metadata; queue/world selection dependencies and REP address handoff; observed failure/retry/timing/state transitions. Store secrets neither as fixtures nor ordinary logs. Own encrypted traffic may show timing/length but does not establish plaintext schemas. These items are requested future observations, **not captures already made**.
+Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
+
+**Exact next blocker:** accepted current channel JSON/HTTP200, then evidenced private auth/session selection and REP/DTLS handshake. Spawn **research** may now begin; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records historical candidate codecs and unknowns. Live actor creation/transform/visibility remains blocked by those preceding states. No gameplay implemented.
+
+## Capture Before Shutdown
+
+Only our own legitimate normal sessions. Prioritize:
+
+- Account-independent channel descriptor **field names/types/required values**, regional/fallback selection, version compatibility and safe response metadata; do not retain tokens or account IDs.
+- Own-process DNS/cache/IPv4–IPv6 decisions and public certificate-chain identity; offered TLS/ALPN extensions remain unknown despite selectedTLS1.2/HTTP1.1 proof.
+- Normal auth route order, methods/status/content types and **redacted schemas**, refresh/failure/retry states; do not scrape credentials, tickets, cookies or tokens.
+- Character/world selection fields and permitted empty/error responses; queue state changes and REP address handoff stripped of session secrets.
+- First normal REP handshake, channel/registration/state transitions and disconnection behavior, captured in a secret-minimizing way; encrypted lengths/timing alone cannot establish payload semantics.
+- First self/actor creation, initial transform, owned-vs-remote replica identity, level visibility and reconnect cleanup from authorized own sessions; preserve deterministic sanitized fixtures and build identity.
+
+These are outstanding captures, not invented observations. The current preserved fixture is **metadata only**, not a complete wire transcript or server-response schema.

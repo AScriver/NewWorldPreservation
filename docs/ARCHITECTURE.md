@@ -28,7 +28,7 @@ flowchart TD
   F --> L["Transition logs + private deterministic fixtures"]
 ```
 
-All solid paths above are target responsibilities, **not proof they currently work**. Endpoint selection and stock-client certificate trust are separate unresolved gates. First Light's historical instrumentation-assisted acceptance is not evidence that an unmodified current client trusts a private DTLS certificate.
+All solid paths above are target responsibilities, **not proof they currently work**. [Current bootstrap HTTPS](CURRENT_CLIENT_CONNECTIVITY.md) is now demonstrated with the stock client and local user-store CA/SAN controls. Private auth/session and REP/DTLS trust remain unresolved; HTTPS acceptance does not establish a game transport handshake. First Light's historical instrumentation is not current DTLS proof.
 
 ## Smallest deployment
 

@@ -1,6 +1,6 @@
 # Client connection flow
 
-Evidence: clean First Light `63756a3`; newer Aeternum research `820156d`. Source references are relative to their external checkouts. This is a **server-side trace plus historical client observations**, not a trace of an installed current client. No game was launched. See [ledger](EVIDENCE_LEDGER.md).
+Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. This document is the **historical server-side flow**, not a current-client packet recipe. Later actual bootstrap HTTPS is traced in [CURRENT_CLIENT_CONNECTIVITY](CURRENT_CLIENT_CONNECTIVITY.md); current auth/REP/world flow remains unknown. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
 
 ## Intended and historical flow
 

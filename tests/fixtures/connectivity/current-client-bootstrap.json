@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "kind": "observed-current-client-metadata-not-raw-wire-or-server-schema",
+  "provenance": {
+    "receipt": "research/evidence/current-client-connectivity.json",
+    "steamBuildId": "22469132",
+    "requestSourceSha256": "21a8af465eebd7f3af2a7459d304507394c60826b27ac88c817fdbd5e06ceb52"
+  },
+  "request": {
+    "hostname": "d2c74t4zimux3r.cloudfront.net",
+    "path": "/STEAM_APP_ID.1063730.json",
+    "method": "GET",
+    "httpVersion": "HTTP/1.1",
+    "transport": "TCP over IPv6 loopback, destination443",
+    "tlsVersion": "TLSv1.2",
+    "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+    "selectedAlpn": null,
+    "authorizationPresent": false,
+    "cookiePresent": false,
+    "declaredBodyBytes": 0,
+    "responseStatus": 501
+  },
+  "observedSequence": [
+    "CONNECTION_ATTEMPT",
+    "CONNECTION_OWNER_OBSERVED",
+    "TLS_CLIENT_HELLO",
+    "TLS_ESTABLISHED",
+    "HTTP_REQUEST",
+    "HTTP_RESPONSE",
+    "CONNECTION_CLOSED"
+  ],
+  "differentialControls": {
+    "untrusted_ca_http_requests": 0,
+    "trusted_correct_name_http_requests": 3,
+    "trusted_wrong_name_http_requests": 0,
+    "correct_name_restored_http_requests": 3
+  },
+  "authenticationSucceeded": false,
+  "worldEntered": false
+}

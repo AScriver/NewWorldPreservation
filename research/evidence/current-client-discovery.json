@@ -1,18 +1,37 @@
 {
-  "observedAtUtc": "2026-10-02T05:39:33.0292884Z",
+  "observedAtUtc": "2026-10-02T15:06:39.8956195Z",
   "operation": "Read-only Steam manifest, executable identity, config-directory existence and process metadata. No game files/logs/credentials copied; no client started.",
   "scope": "Registered Steam libraries, existing conventional C/D Steam roots, optional explicit executable. Not an exhaustive disk search.",
   "manifestChecks": [
     {
       "library": "C:\\Program Files (x86)\\Steam",
-      "manifestPresent": false
+      "manifestPresent": true
     },
     {
       "library": "c:/program files (x86)/steam",
-      "manifestPresent": false
+      "manifestPresent": true
     }
   ],
-  "installs": [],
+  "installs": [
+    {
+      "executable": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+      "source": "Steam manifest",
+      "steamBuildId": "22469132",
+      "fileVersion": "1.400.6031.6004151",
+      "productVersion": "1.400.6031.6004151",
+      "bytes": 179204176,
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+    },
+    {
+      "executable": "C:\\program files (x86)\\steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+      "source": "Steam manifest",
+      "steamBuildId": "22469132",
+      "fileVersion": "1.400.6031.6004151",
+      "productVersion": "1.400.6031.6004151",
+      "bytes": 179204176,
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+    }
+  ],
   "configLocations": [
     {
       "path": "C:\\Users\\Austin\\AppData\\Local\\AGS\\New World",

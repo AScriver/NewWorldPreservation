@@ -1,7 +1,7 @@
 {
-  "observedAtUtc": "2026-10-02T16:03:02.019590+00:00",
-  "mode": "synthetic-loopback-controls-not-new-world",
-  "profile": "probe",
+  "observedAtUtc": "2026-10-02T16:03:32.081408+00:00",
+  "mode": "offline-instrumentation-controls-and-observed-metadata-fixture",
+  "profile": "instrumentation",
   "status": "passed",
   "newWorldClientTested": false,
   "currentClientBuild": null,
@@ -11,15 +11,15 @@
     "tlsLibrary": "OpenSSL 3.0.13 30 Jan 2024"
   },
   "tests": {
-    "total": 19,
-    "passed": 19,
+    "total": 26,
+    "passed": 26,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "processExitCode": 0,
-    "expectedTotal": 19
+    "expectedTotal": 26
   },
-  "runDirectory": ".scratch\\connectivity-validation\\run-frdgbt2t",
+  "runDirectory": ".scratch\\connectivity-validation\\run-y6w3v7qo",
   "sourceSha256": {
     "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
     "scripts/validate_connectivity.py": "eccfbf95c73c9da46ed0112bf57ed1c3a6f8b7b074443bcb9c3cb1e2e466122f",
@@ -27,7 +27,11 @@
     "scripts/game_log_metadata.py": "79057471f2bc6083b0a1cfb9286dc24ae3f744eafd782c660f15a336b68ca7ee",
     "scripts/Set-ConnectivityHosts.ps1": "562fc81f308bb0b1c7a1e94c15f99a998d607b4def738706f5f83c2f4f2be881",
     "scripts/Observe-CurrentClient.ps1": "6892e83c673b45a3f4c2e932095f13cacb94250f7faa792365190c8c8cc839ab",
-    "tests/test_connectivity_probe.py": "106cc0d6c942e5078bcf93053bfdfad09eff383c9feafe06b3dce2c30dc3d886",
+    "tests/test_game_log_metadata.py": "6270994ac6946b74ce917377e114f67a4bc49ff772a03faaf9447fcdf9e894b3",
+    "tests/test_hosts_redirect.py": "e82417bd4eb1e2b31827619bce0d2aafa68a7992eb058462b1c7067c97e8b4fa",
+    "tests/test_windows_tcp_owner.py": "dcd1b80c91f69ebfb5e8de3d022c9a0b1308d4b2e1364cef7d98a98a12b1b513",
+    "tests/test_probe_controls.py": "1b4960b475cb419cc0f1e47837b9e442137fb205ae056a6565fa3b1e4f5a5ff2",
+    "tests/test_current_client_fixture.py": "124120f4c34d3556b4a90f06d076dd37fee43ed2aed5bc316aba268ce38513d5",
     "tests/fixtures/connectivity/requests.json": "4b2954607e02e40652ae7ec5b0e16487b8efc1f4472e794ef01180c3a809ba54",
     "tests/fixtures/connectivity/current-client-bootstrap.json": "26a41712e83e0f667171a2bd68ea4d03678992697b2698b9f5a8f053725c05ac"
   },

@@ -1,14 +1,14 @@
 # Open questions
 
-Unknowns are explicit work inputs, not invented protocol behavior. Source profiles and executed test boundaries are in [ledger](EVIDENCE_LEDGER.md). The offline environment task is complete; no live-client compatibility is established.
+Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
 ## Questions that gate real-client progress
 
 | Question | Current evidence / limit | Smallest resolution |
 |---|---|---|
-| Which legitimate PC client build is the target? | First Light response defaults to `[RETAIL].Javelin.1.365.6031.6006993`; newer Aeternum research targets `v1.400.6031.40375`. No game install found in discovered Steam libraries, not an exhaustive scan. | Record owned installation's Steam build ID, executable version/hash and normal launch/config identity. Do not transfer indices across builds. |
-| How can that client select an entirely private bootstrap endpoint? | Public source describes historical redirection/instrumentation; no current supported configuration path proved. | Read legitimate local configuration/startup behavior; observe normal session metadata; test only a deliberate endpoint on a host/service we control. No hidden machine-wide hosts/proxy/cert changes. |
-| Can the stock executable trust a private world-service certificate? | Historical responder comment mentions trust-bypass instrumentation. Our DTLS-context construction says nothing about client trust. | Establish certificate/endpoint validation requirements for this build; prove private handshake without Amazon keys or official auth bypass. If client adaptation is unavoidable, document that concrete decision before any implementation; do not claim unmodified compatibility. |
+| Which legitimate PC client build is the target? | **Answered here:** Steam22469132 / file and own-log1.400.6031.6004151 / SHA8654f01d…; [receipt](../research/evidence/current-client-connectivity.json). | Repin updates; disclose inaccessible live image path and launch/name/PID/start-time/socket correlation. Do not transfer old indices across builds. |
+| How can that client select an entirely private bootstrap endpoint? | **Answered:** temporary one-host dual-stack hosts mapping, owned loopback443; current game used IPv6. No supported config/CLI override found in bounded inspection. Hosts restored. | Accepted HTTP200 descriptor must select further private services. DNS/cache/fallback internals remain unknown; no hidden global proxy/DNS mutation. |
+| Can the stock executable trust a private world-service certificate? | **Bootstrap HTTPS answered:** CurrentUserRoot CA + correct SAN; noCA/wrong-name controls block HTTP, restored correct trust/name restores it. No EAC/binary change. **REP/DTLS unknown.** | Preserve separate trust gates. Do not infer all endpoints lack pinning or that server-side handshake proves client validation. |
 | Can it still launch after game-service and platform dependencies disappear? | Owning/installing the client is not proof Steam/offline-launch/session behavior survives shutdown. | Preserve normal documented launch/offline-mode observations and local dependency metadata while available; do not emulate Amazon/Steam ownership or distribute clients. |
 | What identity/session contract must private auth supply? | Shared global `Ctx` plus synthetic responses; current schemas unverified. | Own normal-session schema observations with secrets removed, then two isolated private-account tests and a ticket-to-peer binding proof. |
 
@@ -38,4 +38,4 @@ Cloud hosting, large-scale shards, server economy, territories/wars, transfers, 
 
 ## What this workspace intentionally does not contain
 
-Game binaries/assets, Amazon server source, leaked code, credentials, local/private keys, proprietary decompilations or new live captures. External references/private test output are ignored. No invented packet implementation or claim that friends can already play.
+Game binaries/assets, Amazon server source, leaked code, credentials, local/private keys, proprietary decompilations or raw live captures. External references/private output are ignored. A sanitized own-client bootstrap metadata fixture is tracked, not raw wire or a server schema. No invented packet implementation or claim friends can already play.

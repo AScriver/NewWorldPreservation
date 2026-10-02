@@ -1,0 +1,362 @@
+{
+  "schema": 1,
+  "recordedAtUtc": "2026-10-02T16:01:58.911908+00:00",
+  "status": "current-owned-client-private-bootstrap-https-demonstrated",
+  "client": {
+    "steamAppId": "1063730",
+    "steamBuildId": "22469132",
+    "fileVersion": "1.400.6031.6004151",
+    "installedTargetSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "liveExecutablePathReadable": false,
+    "identityLimit": "ordinary Steam launch + name/PID/exact start time + OS TCP owner + own log build; not a live image hash"
+  },
+  "workspace": {
+    "startingHead": "2206da7b842ca4c8442bf1f472bfe20beb1ef327",
+    "branch": "main",
+    "sourceSha256": {
+      "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+      "scripts/windows_tcp_owner.py": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58",
+      "scripts/Observe-CurrentClient.ps1": "6892e83c673b45a3f4c2e932095f13cacb94250f7faa792365190c8c8cc839ab",
+      "scripts/Set-ConnectivityHosts.ps1": "562fc81f308bb0b1c7a1e94c15f99a998d607b4def738706f5f83c2f4f2be881",
+      "scripts/Invoke-ConnectivityRedirectWindow.ps1": "4b80e4577efee5e188c90df0bfa7c51e8a09d944ac1a5a29b63323cba139f338",
+      "scripts/Use-ConnectivityTrust.ps1": "8bed313bb1126903db58b0f1d319b5a5420b36fb2b414d503d22ec2cb695ba48",
+      "scripts/game_log_metadata.py": "79057471f2bc6083b0a1cfb9286dc24ae3f744eafd782c660f15a336b68ca7ee"
+    }
+  },
+  "bootstrap": {
+    "hostname": "d2c74t4zimux3r.cloudfront.net",
+    "path": "/STEAM_APP_ID.1063730.json",
+    "method": "GET",
+    "httpVersion": "HTTP/1.1",
+    "transport": "TCP over IPv6 loopback, destination443",
+    "tlsVersion": "TLSv1.2",
+    "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+    "selectedAlpn": null,
+    "authorizationPresent": false,
+    "cookiePresent": false,
+    "declaredBodyBytes": 0,
+    "responseStatus": 501
+  },
+  "trust": {
+    "bootstrapCompatibilityDemonstrated": true,
+    "strategy": "CurrentUser\\Root local CA + exact hostname SAN",
+    "firstCaSha256": "81d7843272fc58d6131f33eec7ffde5382b0dc2e373a7e23bc3a26eb4f4aa241",
+    "firstLeafSha256": "fdcf8975bff246f5842655ab2dba3dfe98c1819ddeef9668be788e4483205ce5",
+    "secondCaSha256": "34b81e065adbff620a63db1a17897a4e030b8c2de7b97f3e6b0928e5f7fb5393",
+    "correctLeafSha256": "122426d50d132a4cdbd9d96ebeb7584e4a47aac6018025a3dbee0c913ad51037",
+    "wrongNameLeafSha256": "fdb4fe0170ff5d1d38ba1b7861b2fa574a01e0cb7e46dd6260ad038cdd0c35b9",
+    "sameCaAndPublicKeyForNameControls": true,
+    "hardcodedAmazonPinRequiredForThisBootstrap": false,
+    "activeTrustApi": "unknown; user-store influence observed",
+    "otherHttpsAndDtlsTrust": "unknown"
+  },
+  "phases": [
+    {
+      "name": "untrusted_ca",
+      "firstAcceptUtc": "2026-10-02T15:35:42.823Z",
+      "tcpAccepts": 3,
+      "httpRequests": 0,
+      "httpResponseStatus": null,
+      "exactSocketOwnerPids": [],
+      "launchCorrelation": null,
+      "serverHandshakeCount": 3
+    },
+    {
+      "name": "trusted_ca",
+      "firstAcceptUtc": "2026-10-02T15:40:00.621Z",
+      "tcpAccepts": 3,
+      "httpRequests": 3,
+      "httpResponseStatus": 501,
+      "exactSocketOwnerPids": [],
+      "launchCorrelation": null,
+      "serverHandshakeCount": 3
+    },
+    {
+      "name": "ca_removed",
+      "firstAcceptUtc": "2026-10-02T15:42:29.544Z",
+      "tcpAccepts": 3,
+      "httpRequests": 0,
+      "httpResponseStatus": null,
+      "exactSocketOwnerPids": [],
+      "launchCorrelation": null,
+      "serverHandshakeCount": 3
+    },
+    {
+      "name": "trusted_correct_name",
+      "firstAcceptUtc": "2026-10-02T15:50:29.803Z",
+      "tcpAccepts": 3,
+      "httpRequests": 3,
+      "httpResponseStatus": 501,
+      "exactSocketOwnerPids": [
+        38624
+      ],
+      "launchCorrelation": {
+        "start_time_utc": "2026-10-02T15:50:22.1571585Z",
+        "timestamp_utc": "2026-10-02T15:50:22.2243762Z",
+        "state": "LAUNCH_CORRELATED_CLIENT_SEEN",
+        "live_executable_path_verified": false,
+        "launch_boundary_utc": "2026-10-02T15:50:18.6542993Z",
+        "process_id": 38624
+      },
+      "serverHandshakeCount": 3
+    },
+    {
+      "name": "trusted_wrong_name_same_ca",
+      "firstAcceptUtc": "2026-10-02T15:53:21.044Z",
+      "tcpAccepts": 3,
+      "httpRequests": 0,
+      "httpResponseStatus": null,
+      "exactSocketOwnerPids": [
+        42316
+      ],
+      "launchCorrelation": {
+        "live_executable_path_verified": false,
+        "start_time_utc": "2026-10-02T15:53:13.3230843Z",
+        "state": "LAUNCH_CORRELATED_CLIENT_SEEN",
+        "launch_boundary_utc": "2026-10-02T15:53:10.0653697Z",
+        "process_id": 42316,
+        "timestamp_utc": "2026-10-02T15:53:13.3372916Z"
+      },
+      "serverHandshakeCount": 3
+    },
+    {
+      "name": "trusted_correct_name_restored",
+      "firstAcceptUtc": "2026-10-02T15:56:00.585Z",
+      "tcpAccepts": 3,
+      "httpRequests": 3,
+      "httpResponseStatus": 501,
+      "exactSocketOwnerPids": [
+        40672
+      ],
+      "launchCorrelation": {
+        "timestamp_utc": "2026-10-02T15:55:53.2911870Z",
+        "start_time_utc": "2026-10-02T15:55:53.1931704Z",
+        "process_id": 40672,
+        "launch_boundary_utc": "2026-10-02T15:55:49.9990181Z",
+        "live_executable_path_verified": false,
+        "state": "LAUNCH_CORRELATED_CLIENT_SEEN"
+      },
+      "serverHandshakeCount": 3
+    }
+  ],
+  "cleanup": [
+    {
+      "run": "private/connectivity/bootstrap-836cbdf736f04a49988ea64b741de481",
+      "hostsRestoredUtc": "2026-10-02T15:42:50.7496463Z",
+      "hostsSha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+      "caRemovedUtc": "2026-10-02T15:42:17.9138538Z",
+      "caRemainingCount": 0
+    },
+    {
+      "run": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d",
+      "hostsRestoredUtc": "2026-10-02T15:57:14.2032979Z",
+      "hostsSha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+      "caRemovedUtc": "2026-10-02T15:57:13.2374410Z",
+      "caRemainingCount": 0
+    }
+  ],
+  "ownBaselineLog": {
+    "sourceReadSha256": "11c17fd275b648ca0a55a0407a59b43ca7dee87927a3eeb83f4ac1083ce92de3",
+    "sourceBytesHashed": 44996,
+    "serviceHostnameReferences": [
+      {
+        "line": 298,
+        "hostname": "d2c74t4zimux3r.cloudfront.net",
+        "routeClass": "historical_channel_discovery"
+      },
+      {
+        "line": 305,
+        "hostname": "2mfrik7h83.execute-api.us-east-1.amazonaws.com",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 307,
+        "hostname": "u433g9r00c.execute-api.eu-central-1.amazonaws.com"
+      },
+      {
+        "line": 308,
+        "hostname": "d1w0bfy6smo4d1.cloudfront.net"
+      },
+      {
+        "line": 310,
+        "hostname": "d1w0bfy6smo4d1.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 314,
+        "hostname": "kqqt5twsi7.execute-api.us-east-1.amazonaws.com",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 316,
+        "hostname": "j4n6whncmi.execute-api.sa-east-1.amazonaws.com"
+      },
+      {
+        "line": 317,
+        "hostname": "d1cjlmzk0xrm0z.cloudfront.net"
+      },
+      {
+        "line": 319,
+        "hostname": "d1cjlmzk0xrm0z.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 323,
+        "hostname": "eudbjx6mig.execute-api.us-east-1.amazonaws.com",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 325,
+        "hostname": "0prplal5u1.execute-api.us-east-1.amazonaws.com"
+      },
+      {
+        "line": 326,
+        "hostname": "d2oeuvxi3kfsrw.cloudfront.net"
+      },
+      {
+        "line": 328,
+        "hostname": "d2oeuvxi3kfsrw.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 332,
+        "hostname": "q8hqllbg6k.execute-api.us-east-1.amazonaws.com",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 334,
+        "hostname": "v7irlu1nrl.execute-api.us-west-2.amazonaws.com"
+      },
+      {
+        "line": 335,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net"
+      },
+      {
+        "line": 337,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 343,
+        "hostname": "hhf8nn71vb.execute-api.us-east-1.amazonaws.com",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 345,
+        "hostname": "ep1m9qoir8.execute-api.ap-southeast-2.amazonaws.com"
+      },
+      {
+        "line": 346,
+        "hostname": "de4mfzk9wkelz.cloudfront.net"
+      },
+      {
+        "line": 348,
+        "hostname": "de4mfzk9wkelz.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 380,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net",
+        "routeClass": "historical_credentials_omni"
+      },
+      {
+        "line": 420,
+        "hostname": "v7irlu1nrl.execute-api.us-west-2.amazonaws.com"
+      },
+      {
+        "line": 421,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net"
+      },
+      {
+        "line": 422,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net",
+        "routeClass": "unclassified"
+      },
+      {
+        "line": 424,
+        "hostname": "d3bj4csovi1fe8.cloudfront.net",
+        "routeClass": "unclassified"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "private/connectivity/bootstrap-836cbdf736f04a49988ea64b741de481/probe-v6.jsonl",
+      "sha256": "395ee9d1b8332b195af351524cdd07f0602defaf60ac67fafb102f841bc848b2",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-836cbdf736f04a49988ea64b741de481/certificates/certificate-manifest.json",
+      "sha256": "dfc692cdd2fec26835aeef60058723774b8e335727c44a0f5ad43364ec64e2f8",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/probe-v6.jsonl",
+      "sha256": "21a8af465eebd7f3af2a7459d304507394c60826b27ac88c817fdbd5e06ceb52",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/wrongname-62e08ce63e5d449d89ed3102b0428137-v6.jsonl",
+      "sha256": "4aeee7f356cdca635c961b6dd5e14e1e1160549453b0890a929a3d67b0045d13",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/correctname-985c2f4ae0e346ffb31b5d86046a35d9-v6.jsonl",
+      "sha256": "b2a6f4be8c41d83b9855107fa7d03ed43d4e8ee54bcf34c2c5479ac507938d67",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/certificates/certificate-manifest.json",
+      "sha256": "1ab04adfd6a379ad5b22a16b0f3cac4da4a02a77ec358195c72b114556bdb96a",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/baseline-dec7598153a74b1aaa2e038dda9df86f/client-identity.json",
+      "sha256": "765ed200537d5c5054d63a37d78588f4c2632cc4465ee5bb497b93d95006659a",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/baseline-86871f2ceed540ee925fcc8852814422/client-identity.json",
+      "sha256": "e36561a5c22b2bf13bfc3537f301b4506b12f7d3f86c64c0a693b6acd02aef86",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/baseline-1fa0763ffad2480b88a39b503c6f489c/client-identity.json",
+      "sha256": "87fcd946ca9ac7c994f03821cb4937032661d2abb263d4c6bc6e3b44b4eee8a8",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/baseline-ab075d7e9b0746b3a226626dc96182eb/game-metadata-01.json",
+      "sha256": "8390db0b56f0cc0c7cd0c49962066e2a588908480c70c8d3a1b5fb2fa3b7b047",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-836cbdf736f04a49988ea64b741de481/hosts-journal/events.jsonl",
+      "sha256": "5ab8385c1c584c13f5e1dba3b07f8063787896af4819a1c12694a5e5e7380178",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-836cbdf736f04a49988ea64b741de481/certificates/trust-events.jsonl",
+      "sha256": "f98a483e8aab94320d411b32ad581392de13a5411ef8005f8dd82e2aea50194c",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/hosts-journal/events.jsonl",
+      "sha256": "7e72107e7faa9f1a778f2b24cf23d516add5ae1b20abdaffb0683efa581910f6",
+      "ignoredPrivateSource": true
+    },
+    {
+      "path": "private/connectivity/bootstrap-d95f43317f4f48308747550c7b258d2d/certificates/trust-events.jsonl",
+      "sha256": "c3b368035001854be45035c3870b1642160f2118fa009131288a262c85f1f15c",
+      "ignoredPrivateSource": true
+    }
+  ],
+  "rawTrafficOrGameFilesExported": false,
+  "credentialsExported": false,
+  "memoryReadOrEacModified": false,
+  "worldLoadingOrActorObserved": false,
+  "authenticationSucceeded": false,
+  "gameTransportObserved": false,
+  "milestone1Achieved": false,
+  "nextBlocker": "Accepted HTTP200 channel descriptor, then current private authentication/session schemas and separate REP/DTLS trust before spawn"
+}

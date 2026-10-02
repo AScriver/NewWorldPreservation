@@ -1,13 +1,13 @@
 # Evidence ledger
 
-Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Initial evidence below concerns offline source review, public metadata and isolated Python tests. The subsequent connectivity slice is recorded separately below. No game clients, hooks, Amazon game endpoints, hosts entries or certificate stores were touched; local Python TLS control services were exercised.
+Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Initial evidence was offline source review/public metadata/isolated tests; no game/hosts/trust mutations occurred **then**. The actual current-client slice is at the end, with cleanup verified. No hooks, process-memory inspection or EAC/binary changes.
 
 ## Evidence identities
 
 - First Light: clean source at `63756a3f7ff0ae41752dcc7c80267802c3fa7548`, external ignored checkout. Initially sparse without `info/`; subsequently restored only the public redacted May 2 reference fixture. See `research/upstreams.json` and `research/evidence/fixture-summary.json` for identity/hash. Relevant source unchanged between profiles; only fixture-dependent checks needed revalidation.
 - Aeternum-World: clean external source at `820156dbc44c86c9436af81aa0dba72e94cb636b`. Packet decoder/documentation inspected, capture hooks not run.
 - Test runtime: Windows, CPython 3.11.9, pytest 9.1.1, pyOpenSSL 26.4.0, cryptography 50.0.2. Hash-pinned `requirements-dev.lock`.
-- No own New World installation was found through the locally discovered Steam libraries (`client-install-summary.json`); this is not an exhaustive disk scan or an ownership judgment. Current client compatibility is unknown.
+- Historical initial bounded discovery found no installation, not an ownership judgment. Superseded by installed Steam22469132 / version1.400.6031.6004151 and actual bootstrap HTTPS evidence below; downstream compatibility is unknown.
 
 ## Material claims
 
@@ -46,18 +46,34 @@ The original validation harness and its current gate tests are recorded in READM
 
 ## Current-client connectivity slice
 
-Starting checkout `main` at `c77b3c962fd9eaf28b7b2ba25217e0e34ef23903`, clean; original scripts/tests subsequently uncommitted during experiments. [Probe receipt](../research/evidence/connectivity-validation.json) hashes the exact tested source, runner, tests and independently written synthetic fixture. [CLI receipt](../research/evidence/connectivity-cli-control.json) pins probe and generated certificate fingerprints. First Light remains clean/unchanged at its existing pin. Runtime: isolated Python 3.11.9 / OpenSSL 3.0.13; no current New World runtime exists in this evidence.
+Historical instrumentation preparation started at clean `main`c77b3c9; no game existed **in that slice**. C01/C07/C09 are superseded where affected by K01–K07 below. Current control receipts hash exercised source/fixtures but remain offline evidence. First Light unchanged; runtime Python3.11.9 / builtin OpenSSL3.0.13.
 
 | ID | Claim | Status / limits | Evidence |
 |---|---|---|---|
-| C01 | No client identified by registered libraries/conventional paths/config directories; no matching process running | Observed **bounded absence**, not exhaustive machine absence. Install-path question pending. | [Discovery](../research/evidence/current-client-discovery.json); `Inspect-CurrentClient.ps1` |
+| C01 | Initial bounded search found no client | Historical, **superseded** by K01; no longer a blocker. | Discovery at Git2206da7; latest discovery now records installed client. |
 | C02 | Python loopback TLS 1.2/1.3 clients validate expected CA+SAN; reject missing CA and mismatched hostname | Reproduced control behavior; not game compatibility, Windows user-store or DTLS proof. | 19-test control receipt, `test_connectivity_probe.py` |
 | C03 | Original probe binds only explicit IPv4/IPv6 loopback, records sanitized metadata, implements no auth/forwarding/game transport | Strongly source-supported; malformed/secret/absolute-URL controls produced no leak or forwarding in tested cases. Not exhaustive all-input verification. | `connectivity_probe.py`; tests; independent private tester report |
 | C04 | TLS-success/decrypted HTTP logs do not prove peer certificate verification or executable identity | Reproduced ambiguity with a permissive **Python-only negative control**; logs deliberately retain `unattributed`. No game bypass. | `test_permissive_control_does_not_turn_server_logs_into_validation_proof`; [connectivity doc](CURRENT_CLIENT_CONNECTIVITY.md) |
 | C05 | Historical auth/queue route requests + HTTP 501 are diagnostic rejection, not successful auth/world selection | Reproduced synthetic requests; current route semantics unknown. | Synthetic fixture privacy test; no `GAME_SESSION_SELECTED`/transport-complete events |
 | C06 | Probe CLI genuinely starts, receives CA-validated health HTTP200, stops and releases listener | Reproduced on ephemeral IPv4 loopback; child ownership/cleanup confirmed. Not real game startup or port443/firewall verification. | `verify_probe_cli.py`; CLI receipt |
-| C07 | Own-client observer would record matched executable metadata and sampled TCP four-tuples; does not see DNS/TLS/payloads | Source-supported + PowerShell syntax/analyzer validation only; unexecuted with legitimate game. Sampling may miss short sockets. | `Observe-CurrentClient.ps1`; connectivity procedure |
+| C07 | Original observer required readable exact process path | Historical proposal; actual path-inaccessible process falsified coverage. Corrected explicit launch correlation plus accept-time tuple lookup covers observed sockets; not live-image proof. | Current observer/native-owner tests and K03; old source at2206da7. |
 | C08 | First Light's redirection uses fixed hosts list + local CA/SAN certificate; REP/DTLS trust is separate | Strongly source-supported. Old flow dated 2025-12-27; historical unknown-ca/patch report unverified on current build. No supported current override proven. | `setup_hosts.py:28-59,69-81`; `generate_auth_certs.py:95-147`; `auth_mock.py:1547-1564`; `docs/dtls-trust-bypass.md:7-14` in external reference |
-| C09 | Current-client endpoint/config, resolver, SNI, certificates/pinning, auth schemas and private-world entry | **Unknown.** Game not found/launched; synthetic controls cannot settle any of these. Spawn cannot begin. | Missing executable and current capture; no `SPAWN_SEQUENCE.md` until required gate |
+| C09 | Current endpoint/trust and downstream contracts were unknown | Partly **superseded**: bootstrap/SNI/HTTPS trust answered K02–K04. Auth/world/REP/spawn still unknown; spawn analysis may begin, implementation waits. | K01–K07 and [spawn evidence](SPAWN_SEQUENCE.md). |
 
-A failed intermediate control run (18 pass/1 fail) showed client certificate error versus server reset in TLS1.3; an assertion incorrectly required the server CA-alert mnemonic. Test now checks exact client validation error + absent HTTP and retains server's actual reason. This counter-evidence is documented rather than diagnosing all resets as pinning. Existing 455-pass/one-deliberate-skip and 9-gate-test profile was revalidated without upstream/codecs changes; only local control instrumentation is newly proven.
+A failed intermediate control run (18 pass/1 fail) showed client certificate error versus server reset in TLS1.3; an assertion incorrectly required the server CA-alert mnemonic. Test now checks exact client validation error + absent HTTP and retains server's actual reason. This is counter-evidence to diagnosing resets as pinning, not game evidence.
+
+## Actual owned current-client slice
+
+Started clean `main`2206da7; original files dirty during trials. [Live receipt](../research/evidence/current-client-connectivity.json) pins installed client, relevant source bytes, ignored evidence hashes, phase/PID/start-time correlation and cleanup. ExperimentA probe SHA`bfddc360269c7d2756b0d2a85cc9a5c9657eadd9439ada40950afdda34e0532a`; experimentB instrumented SHA`3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c`. Unaffected First Light evidence remains current; no codec changed.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K01 | Current install Steam22469132 / file and own-log1.400.6031.6004151 | Observed file/hash/log; live image path unavailable, not live-hash proof. | Discovery/live receipt and ordinary launch records. |
+| K02 | Historical bootstrap host/path still works for current redirection | Observed own log plus game-owned IPv6-loopback GET; operator resolver/readback, not client DNS trace. | Receipt bootstrap/log/window metadata. |
+| K03 | ExperimentB sockets belong to recorded game PIDs | Observed exact Windows client-side tuple owner + name/PID/start-time launch match; not live image bytes. | PIDs38624/42316/40672; native IPv4/IPv6 controls. |
+| K04 | Correct CA/SAN permits bootstrap HTTP; absent trust/wrong name do not | Reproduced game differential0/3/0/3/0/3, CA reversal and same-CA/same-key SAN restoration. Active trust API and other HTTPS/DTLS unknown. | Fingerprints/phases in receipt; connectivity procedure. |
+| K05 | Reached HTTP bootstrap, not auth/world/REP | Observed HTTP1.1/TLS1.2 GET + deliberate501. Generic loader marker is not world entry. | Current metadata fixture and receipt. |
+| K06 | Temporary trust/routing cleaned up | Hosts original SHA7c0d9bdf…; exact introduced CA counts0; no owned443 listener/game left. No memory/EAC/binary change. | Restoration/readback/stop events and final OS checks. |
+| K07 | Existing codecs/replay do not establish current actor flow | Strong old-source support, not current runtime: unwired SelfIdent, unknown LevelInfo ID, opaque actor/transform. | SPAWN_SEQUENCE and pinned clean source. |
+
+Final offline profiles:455 upstream passes/1deliberate skip;9 gates;19 original probe controls;26 instrumentation/metadata-fixture tests;CLI lifecycle and mocked observer scenarios pass. None promotes501 to auth or Milestone1. Exact next blocker: accepted current channel descriptor, private auth/session, separate REP/DTLS gate, then current actor fixture.

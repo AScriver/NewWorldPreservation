@@ -1,0 +1,72 @@
+# Player spawn sequence — evidence map, not a packet recipe
+
+## Gate and current stopping point
+
+Current build `1.400.6031.6004151` / Steam22469132 has passed the **private bootstrap HTTPS** gate; see [connectivity](CURRENT_CLIENT_CONNECTIVITY.md) and its attributed CA/SAN controls. It received intentional HTTP501. **No private authentication, character/world selection, REP handshake, actor, initial transform or world visibility has been observed.** Spawn research can now begin; an actual spawn implementation is not yet justified.
+
+Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
+
+## State machine
+
+Solid edges are historical source-supported ordering, not a replay validated with our game. Dashed edges are unresolved historical actor hypotheses. Numeric state labels refer to old static analysis, **not measured current-client state values**.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Bootstrap
+    Bootstrap --> PrivateHTTPSObserved: current GET received
+    PrivateHTTPSObserved --> BootstrapRejected: our HTTP501
+    BootstrapRejected --> [*]
+    Bootstrap --> ChannelAccepted: next required current fixture
+    ChannelAccepted --> Authenticated: historical Omni / credentials flow
+    Authenticated --> CharacterWorldSelected: historical login-info / queue
+    CharacterWorldSelected --> TicketReady: ticket / world / REP address
+    TicketReady --> DTLSConnected: separate UDP DTLS trust
+    DTLSConnected --> CarrierConnected: historical SM_CONNECT request / ACK
+    CarrierConnected --> RegisteredV3: historical request0x13 / response0x03
+    RegisteredV3 --> SelfIdentWait: historical state10
+    SelfIdentWait --> SelfIdentified: proposed0x5d1; body unresolved
+    SelfIdentified --> LevelInfoWait: historical11 to12 local readiness
+    LevelInfoWait --> ReplicaWait: proposed LevelInfoChanged; ID unknown
+    ReplicaWait --> ActorExists: creation / ownership packet unknown
+    ActorExists --> InitialTransform: current payload unknown
+    InitialTransform --> WorldVisible: dependencies / acknowledgment unknown
+    WorldVisible --> PeerVisible: second actor and movement fan-out unimplemented
+```
+
+The lower half is a **research target**, not an implemented or proven sequence. In particular, SelfIdent + LevelInfo + NewProxy is not a demonstrated three-message minimum.
+
+## Message/state evidence
+
+| Stage | Existing definition / relationship | Classification and missing proof |
+|---|---|---|
+| Authentication | `auth_mock.py:766–805` credentials handler; historical Steam/Omni chain `connection-flow.md:5–37` | Old log plus synthetic mock. Current accepted request/response schema and private-account ownership missing. Do not reuse seeded identities/JWT assumptions as real authentication. |
+| Character / world choice | `auth_mock.py:895`, route map `:1345–1360`; `/prod/game/getlogininfo`, `/prod/game/login/queue` | Handler scaffolding exists. Old note documents queue for one character, not a general selection UI/state machine. Current private behavior unknown. |
+| Session ticket | `auth_mock.py:258–314`; `CharacterId`, `WorldId`, `RepAddress`; shared `Ctx :404–464` | Source-supported old mock fields. No current ticket fixture or per-account isolation; never export secret ticket values. |
+| REP session | Detailed `docs/post-v3-flow.md:16–35`: UDP/DTLS1.2, then Carrier connect/ACK | Source-supported old transport. Older `connection-flow.md:63–69` calls it TCP: retain this conflict, prefer detailed wire implementation for the historical transport. Current game transport untested. HTTPS trust does not settle it. |
+| V3 registration | `RegistrationRequestV3Msg 0x13` → `RegistrationResponseMsg 0x03`; responder `:586–675`, token echo `:650–676` | Sender/decoder implemented historically. Not observed/validated on current build. A decoded request is not authenticated account ownership. |
+| Self-identification | `PlayerManagerSelfIdentificationMsg 0x5d1`; dispatch encoder/decoder `:120–124,212` | Codec exists but message absent from replay and sender unwired (`post-v3-sequence.md:115,132–140`). `self_ident.py:39–61,92–104` conflicts between four-byte trigger hypothesis and ≥21-byte structured body. No current valid body. |
+| Level readiness | `LevelInfoChangedMsg`; `level_info_changed.py:1–36,147–190` | Speculative codec, **no established wire ID**, absent from central dispatch; nonempty extended container unimplemented (`:129–135,221–226`). No proof of client transition. |
+| Actor/replica creation | Historical state13→14 predicate over local replica-shaped collection (`state_machine_summary.md:90–105,283–293`) | Static RE, not current execution. NewProxy is leading hypothesis; exact New World message/wire type unresolved (`state_13_14_writer_investigation.md:187–235`). |
+| Replica stream | `StateBundle / chunked stream 0x08`; `chunked_stream_08.py:1–30,67–165` | Captured old server-direction data; anchor/subtype or UUID plus **opaque tail** round-trip. No actor/transform/owner/visibility semantic codec. `SpawnActorsMsg 0x23e` is not a captured top-level packet (`typeregistry_vs_replay.md:46–76`). |
+| GridMate commands | Generic stream `Cmd_NewProxy=2`, `Cmd_NewOwner=4`; constructor/dataset/RPC notes `gridmate-reference.md:413–483,510–518` | Reference concepts, not identified current New World packets. Do not confuse nested command IDs with Carrier/Javelin wire IDs. |
+| Spawn-labelled old records | R-direction `0x1096`, `0x1097`; phase outline `post-v3-sequence.md:124–126` | `frame_config_1096.py` documents one 80-byte shape with speculative fields; `result_token_1097.py` a paired numeric result. Neither establishes an initial player transform. `0x663` is a level descriptor, not world-visibility proof. |
+| Visibility / movement | No authoritative actor owner/fan-out in the responder | Unknown current registration/creation linkage, initial transform, AOI/visibility completion and local-vs-remote identity. No movement server implemented. |
+
+Do not confuse decimal type13 in newer position notes with hexadecimal registration `0x13`. Transport framing, Javelin messages, nested replica commands and RPC type identifiers are different layers; build-specific meaning must be captured.
+
+## What First Light actually emits
+
+`rep_responder.py:598–675,776–830,873–931` sends V3 responses, replays captured R-direction records with redacted request-derived spans substituted, and can regenerate heartbeat scaffolding. It does **not** call the SelfIdent or LevelInfoChanged encoder, generate current actors/replica identities/initial transforms, or implement world movement ownership. Replaying old opaque actor-state bytes does not create a valid independently owned player. No alternative SessionStatus/re-handshake path was found in this bounded sender/codec/flow review.
+
+Reusable now: transport framing/codec round-trip tests, per-peer DTLS scaffolding and replay analysis as research tools. Broken/abandoned for this target: unwired SelfIdent/LevelInfo setup, unknown creation packet, opaque replication tail, shared auth persona, and old replay-as-world-state. Do not fix these by inventing fields or substituting arbitrary packet IDs.
+
+## Independently testable next tasks
+
+1. **Accepted bootstrap descriptor:** capture current account-independent schema/response metadata from our normal session, typed/redacted fixture; serve only evidenced required fields and private endpoints; prove current log progression beyond501. No speculative old fallback.
+2. **Private auth/selection contract:** exact current methods/redacted schemas and state relationships, then isolated local account/character ownership tests. Stub rejection is not auth success.
+3. **Separate transport gate:** correct selected REP address, own current-client DTLS handshake/trust, Carrier connect and V3 request/response with secret-minimizing traces. A two-Python-peer DTLS test is useful offline but is not this gate.
+4. **Current spawn fixture:** relate registration, self-identification, actor/replica creation, ownership, initial transform and visibility. Record state/frame direction/channel, build, byte boundaries, stable **sanitized** ID correlations and positive/negative outcomes. Validate codec parsing/serialization before changing them.
+5. **One-player visible actor:** emit the minimum validated sequence with structured logs and demonstrate local world/actor state. Stop expansion at that success as requested.
+6. **Second distinct player:** independent private account/session/actor, bilateral position/rotation changes, removal/reconnect without duplicate actor. No combat/NPC/inventory/persistence work beforehand.
+
+**Exact immediate blocker is task1, not a guessed spawn packet.** Current evidence permits spawn analysis; live actor implementation still waits for tasks1–4. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.

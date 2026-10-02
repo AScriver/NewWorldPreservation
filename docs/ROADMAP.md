@@ -10,9 +10,9 @@ No Amazon service, credentials or asset redistribution should be necessary for t
 
 - Research completed for the publicly accessible pinned First Light/Aeternum sources and visible forks. Private OpenWorld implementation remains uninspectable.
 - **M1-00 completed:** reproducible development/reference/test environment. Original scripts pin source and redacted fixture, hash-lock dependencies, guard verification and log test transitions.
-- **455 upstream tests passed, one deliberate skip; 9 original gate tests passed.** Certificate-backed DTLS context/memory BIO constructed; no handshake/client tested.
-- No New World install found in discovered local Steam libraries. No game launched, live packets observed, account created, host mapping changed or trust hook enabled.
-- **Connectivity instrumentation prepared:** loopback HTTPS/SNI probe, safe JSONL, executable discovery and syntax-validated own-process TCP observer. 19 Python control tests + CLI startup/validated HTTP/automatic cleanup pass. These are **not current New World client connections**; [connectivity gate](CURRENT_CLIENT_CONNECTIVITY.md) remains blocked on identifying the installed legitimate executable.
+- **455 upstream tests passed, one deliberate skip; 9 original gate tests passed.** Certificate-backed DTLS context/memory BIO constructed; no game DTLS handshake tested.
+- **Actual current client pinned and private bootstrap HTTPS proven:** version1.400.6031.6004151 / Steam22469132; exact socket owner correlated with ordinary Steam launch. GET channel over TLS1.2/HTTP1.1; response501 is the deliberate stop. Correct user-store CA/SAN works, absent CA/wrong SAN do not; restores to working. [Live evidence](../research/evidence/current-client-connectivity.json).
+- **Instrumentation validated:** original19 controls +26 new instrumentation/fixture tests + CLI lifecycle + mocked observer. Both CAs removed, hosts restored byte-exact, owned game/probes stopped. No EAC/binary/memory/trust bypass. [Connectivity](CURRENT_CLIENT_CONNECTIVITY.md) and [spawn evidence](SPAWN_SEQUENCE.md).
 - **Milestone 1 not achieved.** No private account system, world entry, actor spawning or mutual movement implemented by this workspace.
 
 ## Small independently testable tasks
@@ -22,10 +22,12 @@ Tasks are bounded outcomes, not assignments to layers. Dependencies identify act
 | ID | Outcome / scope | Depends on | Independent verification / completion criterion |
 |---|---|---|---|
 | M1-00 **Done** | Reproduce strongest public Python implementation; retain unchanged source and existing fixtures externally | None | Pinned clean source/hash-verified fixture; hash-pinned venv; explicit 11-module profile: 455 pass / 1 intentional skip; 9 gate tests; DTLS context constructor |
-| M1-01 Next, time-sensitive | Pin actual owned target client and collect minimal normal-session bootstrap/entry/movement/reconnect evidence | Access to legitimate installed client/session, not M1-00 | Version/hash/build metadata + consented scenario manifests; actual transitions distinguished from unknown/encrypted data; no secrets in tracked output |
-| M1-02 | Resolve controlled private bootstrap and certificate trust for target build | M1-01 | One legitimate client deliberately reaches only our loopback auth/DTLS endpoints; prove negotiation or precisely identify trust failure; no official auth bypass or machine-wide mutation hidden in a launcher |
+| M1-01 **Partial** | Pin target client; own-session bootstrap evidence done, entry/movement/reconnect still missing | Owned installation/session | Build/hash + launch/owner correlation + safe schema/state fixtures; no secrets |
+| M1-02A **Done** | Stock current client reaches private bootstrap HTTPS with local trust | M1-01 bootstrap | Actual attributed GET; CA absent/present/removed and same-CA correct/wrong/restored-name controls; all routing/trust restored |
+| M1-02B **Next** | Accepted channel HTTP200 descriptor points later services to private endpoints | M1-02A + current descriptor schema | Deterministic typed account-independent fixture, current client progresses beyond501; no synthetic unknown fields/auth-success claims |
+| M1-02C | Separate current game REP/DTLS trust | M1-04 selection/address + M1-03 transport | Stock client handshake to owned selected REP address; no inference from HTTPS trust or old patch |
 | M1-03 | Exercise actual responder transport with two locally controlled protocol endpoints | M1-00 | Actual loopback DTLS handshake/send/receive for two independent peers; no sequence/key/session cross-talk; deterministic disconnect/idle cleanup; these endpoints are **not** New World clients |
-| M1-04 | Implement two private account/character selections with client-compatible response schemas | M1-01's schema evidence; M1-02 for client acceptance | Two logins return disjoint character ownership; wrong/expired credentials rejected locally; changing one identity cannot rewrite another; cold restart behavior explicitly defined |
+| M1-04 | Implement two private account/character selections with client-compatible response schemas | M1-01's schema evidence; M1-02B for bootstrap acceptance | Two logins return disjoint character ownership; wrong/expired credentials rejected locally; changing one identity cannot rewrite another; cold restart behavior explicitly defined |
 | M1-05 | Bind private world ticket to one authorized game peer/character/world | M1-03, M1-04 | Deterministic issue/consume/expiry/replay/wrong-account tests; registration logs identify a private character, not guessed identity from span length |
 | M1-06 | Establish evidence-backed current-build registration -> world-entry contract | M1-01; M1-02/05 for real private acceptance | Versioned fixtures and exact type/body/dependency ordering; separate retry, transport-ready, level-ready and actor-ready observations; controlled private omission tests where justified |
 | M1-07 | One real character spawns in a generated minimal world session | M1-06 | Actual visible local actor and usable camera/map; server-generated identity/state, not old-session impersonation or a black loading screen; log proven spawn transition |
@@ -39,9 +41,9 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
-The first local development blocker—missing fixtures/unpinned environment—is resolved. The **next live-client gate** is identifying the actual target build and proving how it can use our private bootstrap and trusted DTLS endpoint. This host has no identified game install; public source cannot establish that behavior for the latest legitimate executable.
+The environment blocker and current **bootstrap HTTPS** gate are resolved. The exact next live task is an accepted current HTTP200 channel descriptor with private endpoint metadata, not another endpoint/certificate guess. Private auth/session schema and separate REP/DTLS trust then precede actor creation.
 
-Prepared measurement apparatus does not complete M1-01 or M1-02: no current game endpoint, resolution, SNI, trust or auth observation exists. Exact pending input is the `NewWorld.exe` installation path (or installation of the owned copy). Continue the [owned-client connectivity procedure](CURRENT_CLIENT_CONNECTIVITY.md) from that identity, not the initial ecosystem tour. User-required gate keeps actor/spawn work and `SPAWN_SEQUENCE.md` deferred.
+M1-01 is partial; M1-02A is complete from actual build22469132, attributed sockets and CA/SAN controls. M1-02B/C and downstream private login/world contracts remain open. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) is now source-traced, but no spawn packet is validated for this build. Continue the [owned-client procedure](CURRENT_CLIENT_CONNECTIVITY.md), not the initial ecosystem tour.
 
 The next **world-entry protocol blocker** after that gate is establishing/generated actor/replica creation and its self-identification/level/replication dependencies. First Light's proposed three-message minimum is not established. Do not jump straight to movement fan-out or describe current OpenWorld community claims as solving it.
 

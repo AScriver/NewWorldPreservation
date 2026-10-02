@@ -13,3 +13,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Connectivity control tests failed; see ignored
 $cliArguments = @((Join-Path $PSScriptRoot 'verify_probe_cli.py'))
 & $pythonExecutable @cliArguments
 if ($LASTEXITCODE -ne 0) { throw 'Probe CLI lifecycle control failed; see ignored scratch diagnostics.' }
+$instrumentationArguments = @((Join-Path $PSScriptRoot 'validate_connectivity.py'), '--profile', 'instrumentation')
+& $pythonExecutable @instrumentationArguments
+if ($LASTEXITCODE -ne 0) { throw 'Connectivity instrumentation tests failed; see ignored scratch diagnostics.' }
+$observerTestPath = Join-Path $workspaceRoot 'tests\test_observe_current_client.ps1'
+& 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path $observerTestPath -Execute
