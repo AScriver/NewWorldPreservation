@@ -1,5 +1,5 @@
 {
-  "observedAtUtc": "2026-10-02T17:09:38.626648+00:00",
+  "observedAtUtc": "2026-10-02T17:26:57.769375+00:00",
   "mode": "synthetic-loopback-controls-not-new-world",
   "profile": "probe",
   "status": "passed",
@@ -19,13 +19,13 @@
     "processExitCode": 0,
     "expectedTotal": 19
   },
-  "runDirectory": ".scratch\\connectivity-validation\\run-af5q2oa8",
+  "runDirectory": ".scratch\\connectivity-validation\\run-g8yuzll3",
   "sourceSha256": {
     "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
-    "scripts/validate_connectivity.py": "eccfbf95c73c9da46ed0112bf57ed1c3a6f8b7b074443bcb9c3cb1e2e466122f",
+    "scripts/validate_connectivity.py": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e",
     "scripts/windows_tcp_owner.py": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58",
     "scripts/game_log_metadata.py": "79057471f2bc6083b0a1cfb9286dc24ae3f744eafd782c660f15a336b68ca7ee",
-    "scripts/Set-ConnectivityHosts.ps1": "562fc81f308bb0b1c7a1e94c15f99a998d607b4def738706f5f83c2f4f2be881",
+    "scripts/Set-ConnectivityHosts.ps1": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f",
     "scripts/Observe-CurrentClient.ps1": "6892e83c673b45a3f4c2e932095f13cacb94250f7faa792365190c8c8cc839ab",
     "tests/test_connectivity_probe.py": "106cc0d6c942e5078bcf93053bfdfad09eff383c9feafe06b3dce2c30dc3d886",
     "tests/fixtures/connectivity/requests.json": "4b2954607e02e40652ae7ec5b0e16487b8efc1f4472e794ef01180c3a809ba54",

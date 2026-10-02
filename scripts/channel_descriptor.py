@@ -1,7 +1,7 @@
 """Validate an original, synthetic channel descriptor for a local bootstrap probe.
 
-The sole advertised hostname is temporarily redirected to loopback by the
-caller. This module never fetches or forwards a descriptor.
+Advertised hostnames must be temporarily redirected to loopback by the caller.
+This module never fetches or forwards a descriptor.
 """
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from pathlib import Path
 
 MAX_DESCRIPTOR_BYTES = 65536
 BOOTSTRAP_HOST = "d2c74t4zimux3r.cloudfront.net"
+TOKEN_HOSTNAMES = ("tokenservice.amazongames.com", "prod.newworld.com")
 APP_ID = "STEAM_APP_ID.1063730"
 ZERO_UUID = "00000000-0000-0000-0000-000000000000"
 REGIONS = {
@@ -35,7 +36,13 @@ def _literal(value: object, expected: str) -> None:
         raise ValueError("Unexpected channel descriptor value")
 
 
-def _validate(value: object) -> dict:
+def _validate(value: object, *, token_routing: str = "collapsed") -> dict:
+    token_urls = {
+        "collapsed": (f"https://{BOOTSTRAP_HOST}", f"https://{BOOTSTRAP_HOST}/"),
+        "original-hostnames": (f"https://{TOKEN_HOSTNAMES[0]}", f"https://{TOKEN_HOSTNAMES[1]}/"),
+    }
+    if type(token_routing) is not str or token_routing not in token_urls:
+        raise ValueError("Unknown token routing profile")
     _keys(value, {"channelName", "platformMetadata", *REGIONS})
     _literal(value["channelName"], "Retail")
     for region, aws_region in REGIONS.items():
@@ -68,8 +75,8 @@ def _validate(value: object) -> dict:
     omni = platform[f"OMNI.{APP_ID}"]
     _keys(omni, {"omniTokenUrl", "nwTokenUrl", "omniStage", "omniGameAlias"})
     for key, expected in {
-        "omniTokenUrl": f"https://{BOOTSTRAP_HOST}",
-        "nwTokenUrl": f"https://{BOOTSTRAP_HOST}/",
+        "omniTokenUrl": token_urls[token_routing][0],
+        "nwTokenUrl": token_urls[token_routing][1],
         "omniStage": "prod", "omniGameAlias": "new-world",
     }.items():
         _literal(omni[key], expected)
@@ -89,7 +96,7 @@ def _invalid_constant(_value: str) -> None:
     raise ValueError("Non-JSON numeric constant")
 
 
-def load_local_descriptor(path: str | Path) -> dict:
+def load_local_descriptor(path: str | Path, *, token_routing: str = "collapsed") -> dict:
     """Read at most 64 KiB and return only a fully validated local descriptor."""
     with Path(path).open("rb") as source:
         data = source.read(MAX_DESCRIPTOR_BYTES + 1)
@@ -100,12 +107,12 @@ def load_local_descriptor(path: str | Path) -> dict:
                            parse_constant=_invalid_constant)
     except (UnicodeDecodeError, json.JSONDecodeError) as failure:
         raise ValueError("Invalid channel descriptor JSON") from failure
-    return _validate(value)
+    return _validate(value, token_routing=token_routing)
 
 
-def encode_local_descriptor(value: dict) -> bytes:
+def encode_local_descriptor(value: dict, *, token_routing: str = "collapsed") -> bytes:
     """Deterministic ASCII JSON for a fully validated synthetic descriptor."""
-    _validate(value)
+    _validate(value, token_routing=token_routing)
     data = json.dumps(value, ensure_ascii=True, allow_nan=False,
                       sort_keys=True, separators=(",", ":")).encode("ascii")
     if len(data) > MAX_DESCRIPTOR_BYTES:

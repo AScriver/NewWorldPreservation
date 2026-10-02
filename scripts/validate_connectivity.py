@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = {
     'probe': (19, ['tests/test_connectivity_probe.py']),
-    'instrumentation': (26, ['tests/test_game_log_metadata.py', 'tests/test_hosts_redirect.py',
+    'instrumentation': (29, ['tests/test_game_log_metadata.py', 'tests/test_hosts_redirect.py',
                             'tests/test_windows_tcp_owner.py', 'tests/test_probe_controls.py',
                             'tests/test_current_client_fixture.py'])}
 

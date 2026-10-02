@@ -1,5 +1,5 @@
 {
-  "observedAtUtc": "2026-10-02T17:10:08.209381+00:00",
+  "observedAtUtc": "2026-10-02T17:27:36.954579+00:00",
   "mode": "offline-instrumentation-controls-and-observed-metadata-fixture",
   "profile": "instrumentation",
   "status": "passed",
@@ -11,24 +11,24 @@
     "tlsLibrary": "OpenSSL 3.0.13 30 Jan 2024"
   },
   "tests": {
-    "total": 26,
-    "passed": 26,
+    "total": 29,
+    "passed": 29,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "processExitCode": 0,
-    "expectedTotal": 26
+    "expectedTotal": 29
   },
-  "runDirectory": ".scratch\\connectivity-validation\\run-z_whl1u2",
+  "runDirectory": ".scratch\\connectivity-validation\\run-ikw0q7k_",
   "sourceSha256": {
     "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
-    "scripts/validate_connectivity.py": "eccfbf95c73c9da46ed0112bf57ed1c3a6f8b7b074443bcb9c3cb1e2e466122f",
+    "scripts/validate_connectivity.py": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e",
     "scripts/windows_tcp_owner.py": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58",
     "scripts/game_log_metadata.py": "79057471f2bc6083b0a1cfb9286dc24ae3f744eafd782c660f15a336b68ca7ee",
-    "scripts/Set-ConnectivityHosts.ps1": "562fc81f308bb0b1c7a1e94c15f99a998d607b4def738706f5f83c2f4f2be881",
+    "scripts/Set-ConnectivityHosts.ps1": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f",
     "scripts/Observe-CurrentClient.ps1": "6892e83c673b45a3f4c2e932095f13cacb94250f7faa792365190c8c8cc839ab",
     "tests/test_game_log_metadata.py": "6270994ac6946b74ce917377e114f67a4bc49ff772a03faaf9447fcdf9e894b3",
-    "tests/test_hosts_redirect.py": "e82417bd4eb1e2b31827619bce0d2aafa68a7992eb058462b1c7067c97e8b4fa",
+    "tests/test_hosts_redirect.py": "b27f22b0f2756c45647c11b49494107163f35bbfb04b06f9c3be71a27af6233e",
     "tests/test_windows_tcp_owner.py": "dcd1b80c91f69ebfb5e8de3d022c9a0b1308d4b2e1364cef7d98a98a12b1b513",
     "tests/test_probe_controls.py": "1b4960b475cb419cc0f1e47837b9e442137fb205ae056a6565fa3b1e4f5a5ff2",
     "tests/test_current_client_fixture.py": "124120f4c34d3556b4a90f06d076dd37fee43ed2aed5bc316aba268ce38513d5",

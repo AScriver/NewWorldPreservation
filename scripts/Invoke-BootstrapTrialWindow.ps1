@@ -6,7 +6,8 @@ param(
     [Parameter(Mandatory)][string]$RunDirectory,
     [Parameter(Mandatory)][int]$IPv4ListenerProcessId,
     [Parameter(Mandatory)][int]$IPv6ListenerProcessId,
-    [ValidateRange(1,600)][int]$Seconds = 300
+    [ValidateRange(1,600)][int]$Seconds = 300,
+    [ValidateSet('BootstrapOnly','TokenServices')][string]$EndpointProfile = 'BootstrapOnly'
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -21,6 +22,8 @@ $clientExecutable = 'C:\Program Files (x86)\Steam\steamapps\common\New World\Bin
 $expectedClientHash = '8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e'
 $validatorPath = 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1'
 $redirectScript = Join-Path $PSScriptRoot 'Set-ConnectivityHosts.ps1'
+$endpointNames = @('d2c74t4zimux3r.cloudfront.net')
+if ($EndpointProfile -eq 'TokenServices') { $endpointNames += @('tokenservice.amazongames.com','prod.newworld.com') }
 $ruleName = 'NewWorldPreservation-Bootstrap-' + [guid]::NewGuid().ToString('N')
 $ruleGroup = $ruleName
 # Permit only 127.0.0.1 / ::1 for this executable. No other process is filtered.
@@ -72,10 +75,14 @@ try {
     $portFilter = $activeRule | Get-NetFirewallPortFilter
     if ([string]$portFilter.Protocol -ne 'Any' -or @(Compare-Object -ReferenceObject $remoteAddresses -DifferenceObject @($addressFilter.RemoteAddress)).Count -gt 0) { throw 'Effective firewall address/protocol readback failed.' }
     Write-TrialWindowEvent -State 'GAME_OUTBOUND_CONTAINMENT_CONFIGURED' -Details @{ rule_name = $ruleName; program = $clientExecutable; profile = 'Any'; protocol = 'Any'; remote_addresses = @($addressFilter.RemoteAddress); evidence_source = 'ActiveStore_configuration_not_packet_trace'; helper_processes_filtered = $false }
-    & $validatorPath -Path $redirectScript -Execute -ArgumentList @('-Action','Apply','-JournalDirectory',$journalPath) | Out-Null
-    $resolvedAddresses = @([Net.Dns]::GetHostAddresses('d2c74t4zimux3r.cloudfront.net') | ForEach-Object { $_.ToString() })
-    if ($resolvedAddresses.Count -eq 0 -or @($resolvedAddresses | Where-Object { $_ -notin @('127.0.0.1','::1') }).Count -gt 0) { throw 'Non-loopback resolver result; do not launch.' }
-    Write-TrialWindowEvent -State 'BOOTSTRAP_TRIAL_READY' -Details @{ hostname = 'd2c74t4zimux3r.cloudfront.net'; addresses = $resolvedAddresses; seconds = $Seconds; evidence_source = 'operator_resolver_not_client_dns' }
+    & $validatorPath -Path $redirectScript -Execute -ArgumentList @('-Action','Apply','-JournalDirectory',$journalPath,'-EndpointProfile',$EndpointProfile) | Out-Null
+    $resolverEvidence = @{}
+    foreach ($observedEndpointName in $endpointNames) {
+        $resolvedAddresses = @([Net.Dns]::GetHostAddresses($observedEndpointName) | ForEach-Object { $_.ToString() })
+        if ($resolvedAddresses.Count -eq 0 -or @($resolvedAddresses | Where-Object { $_ -notin @('127.0.0.1','::1') }).Count -gt 0) { throw 'Non-loopback resolver result; do not launch.' }
+        $resolverEvidence[$observedEndpointName] = $resolvedAddresses
+    }
+    Write-TrialWindowEvent -State 'BOOTSTRAP_TRIAL_READY' -Details @{ hostname = 'd2c74t4zimux3r.cloudfront.net'; resolutions = $resolverEvidence; endpoint_profile = $EndpointProfile; seconds = $Seconds; evidence_source = 'operator_resolver_not_client_dns' }
     $deadline = [DateTime]::UtcNow.AddSeconds($Seconds)
     while ([DateTime]::UtcNow -lt $deadline -and -not (Test-Path -LiteralPath (Join-Path $runPath 'stop.request'))) { Start-Sleep -Milliseconds 250 }
 } catch {
@@ -84,7 +91,7 @@ try {
 } finally {
     try {
         Stop-OwnedTrialClient
-        & $validatorPath -Path $redirectScript -Execute -ArgumentList @('-Action','Restore','-JournalDirectory',$journalPath) | Out-Null
+        & $validatorPath -Path $redirectScript -Execute -ArgumentList @('-Action','Restore','-JournalDirectory',$journalPath,'-EndpointProfile',$EndpointProfile) | Out-Null
         $ownedRule = Get-OwnedRule
         if ($null -ne $ownedRule) { $ownedRule | Remove-NetFirewallRule -ErrorAction Stop }
         if ($null -ne (Get-OwnedRule) -or $null -ne (Get-OwnedRule -PolicyStore ActiveStore)) { throw 'Owned firewall rule remains after removal.' }

@@ -2,7 +2,8 @@
 param(
     [Parameter(Mandatory)][ValidateSet('Prepare','Apply','Restore')][string]$Action,
     [Parameter(Mandatory)][string]$JournalDirectory,
-    [string]$HostsPath = (Join-Path $env:SystemRoot 'System32\drivers\etc\hosts')
+    [string]$HostsPath = (Join-Path $env:SystemRoot 'System32\drivers\etc\hosts'),
+    [ValidateSet('BootstrapOnly','TokenServices')][string]$EndpointProfile = 'BootstrapOnly'
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -21,6 +22,8 @@ if ($targetPath -ine $systemHostsPath -and -not $targetPath.StartsWith($scratchP
 if (-not (Test-Path -LiteralPath $targetPath -PathType Leaf)) { throw 'Hosts target must already exist.' }
 if ((Get-Item -LiteralPath $targetPath).Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'Reparse-point hosts target refused.' }
 $endpointName = 'd2c74t4zimux3r.cloudfront.net' # Observed current-client bootstrap, not an arbitrary host list.
+$endpointNames = @($endpointName)
+if ($EndpointProfile -eq 'TokenServices') { $endpointNames += @('tokenservice.amazongames.com','prod.newworld.com') } # Observed current public descriptor, not observed contacts yet.
 $planPath = Join-Path $journalPath 'plan.json'
 $backupPath = Join-Path $journalPath 'before.bin'
 $journalEventsPath = Join-Path $journalPath 'events.jsonl'
@@ -33,7 +36,7 @@ function Get-ByteHash {
 }
 function Write-HostsEvent {
     param([string]$State, [hashtable]$Details)
-    $record = [ordered]@{ schema = 1; timestamp_utc = [DateTime]::UtcNow.ToString('o'); state = $State; hostname = $endpointName; metadata = $Details }
+    $record = [ordered]@{ schema = 1; timestamp_utc = [DateTime]::UtcNow.ToString('o'); state = $State; hostname = $endpointName; hostnames = $endpointNames; metadata = $Details }
     $serialized = $record | ConvertTo-Json -Depth 5 -Compress
     [IO.File]::AppendAllText($journalEventsPath, $serialized + "`n", [Text.UTF8Encoding]::new($false))
     $serialized
@@ -59,23 +62,30 @@ if ($Action -eq 'Prepare') {
     if ($beforeText.Contains([char]0)) { throw 'Unsupported hosts encoding.' }
     foreach ($hostsLine in ($beforeText -split "`n")) {
         $activePart = ($hostsLine -split '#', 2)[0].Trim()
-        if (($activePart -split '\s+') -icontains $endpointName) { throw 'Existing bootstrap-host mapping conflicts with this test; preserve it.' }
+        foreach ($observedEndpointName in $endpointNames) {
+            if (($activePart -split '\s+') -icontains $observedEndpointName) { throw 'Existing observed-host mapping conflicts with this test; preserve it.' }
+        }
     }
     $redirectRunId = [guid]::NewGuid().ToString('N')
     $separator = ''
     if ($beforeText.Length -gt 0 -and -not $beforeText.EndsWith("`n")) { $separator = "`r`n" }
-    $blockText = $separator + "# BEGIN NewWorldPreservation $redirectRunId`r`n127.0.0.1 $endpointName`r`n::1 $endpointName`r`n# END NewWorldPreservation $redirectRunId`r`n"
+    $blockText = $separator + "# BEGIN NewWorldPreservation $redirectRunId`r`n"
+    foreach ($observedEndpointName in $endpointNames) { $blockText += "127.0.0.1 $observedEndpointName`r`n::1 $observedEndpointName`r`n" }
+    $blockText += "# END NewWorldPreservation $redirectRunId`r`n"
     $blockBytes = $utf8Strict.GetBytes($blockText)
     $afterBytes = [byte[]]($beforeBytes + $blockBytes)
     $null = New-Item -ItemType Directory -Path $journalPath
     [IO.File]::WriteAllBytes($backupPath, $beforeBytes)
-    $plan = [ordered]@{ schema = 1; run_id = $redirectRunId; target = $targetPath; hostname = $endpointName; before_sha256 = (Get-ByteHash $beforeBytes); applied_sha256 = (Get-ByteHash $afterBytes); block_base64 = [Convert]::ToBase64String($blockBytes) }
+    $plan = [ordered]@{ schema = 1; run_id = $redirectRunId; target = $targetPath; hostname = $endpointName; endpoint_profile = $EndpointProfile; hostnames = $endpointNames; before_sha256 = (Get-ByteHash $beforeBytes); applied_sha256 = (Get-ByteHash $afterBytes); block_base64 = [Convert]::ToBase64String($blockBytes) }
     [IO.File]::WriteAllText($planPath, ($plan | ConvertTo-Json -Depth 4), [Text.UTF8Encoding]::new($false))
     Write-HostsEvent -State 'HOSTS_REDIRECT_PREPARED' -Details @{ hosts_modified = $false; before_sha256 = $plan.before_sha256; addresses = @('127.0.0.1','::1') }
     return
 }
 $plan = Get-Content -LiteralPath $planPath -Raw | ConvertFrom-Json
 if ($plan.schema -ne 1 -or $plan.target -ine $targetPath -or $plan.hostname -cne $endpointName) { throw 'Journal identity does not match requested target.' }
+if ($plan.PSObject.Properties.Name -contains 'endpoint_profile') {
+    if ($plan.endpoint_profile -cne $EndpointProfile -or @($plan.hostnames).Count -ne $endpointNames.Count -or (@($plan.hostnames) -join '|') -cne ($endpointNames -join '|')) { throw 'Journal endpoint profile/list mismatch; no mutation.' }
+} elseif ($EndpointProfile -ne 'BootstrapOnly') { throw 'Legacy journal cannot expand hostname scope.' }
 $beforeBytes = [IO.File]::ReadAllBytes($backupPath)
 $blockBytes = [Convert]::FromBase64String($plan.block_base64)
 if ((Get-ByteHash $beforeBytes) -cne $plan.before_sha256 -or (Get-ByteHash ([byte[]]($beforeBytes + $blockBytes))) -cne $plan.applied_sha256) { throw 'Backup/plan integrity failure.' }

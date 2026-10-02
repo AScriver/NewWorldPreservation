@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "kind": "observed_owned_client_metadata_not_credentials_or_wire_payload",
+  "client": {
+    "steamBuild": "22469132",
+    "version": "1.400.6031.6004151"
+  },
+  "routing_profile": "original-hostnames",
+  "bootstrap": {
+    "connection_id": "f9d78494-6afa-4392-b420-6b897472fc38",
+    "owner_process_id": 31396,
+    "local": {
+      "address": "::1",
+      "port": 443
+    },
+    "request_time_utc": "2026-10-02T17:35:36.563Z",
+    "sni": "d2c74t4zimux3r.cloudfront.net",
+    "tls": {
+      "tls_version": "TLSv1.2",
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "selected_alpn": null
+    },
+    "request": {
+      "method": "GET",
+      "host": "d2c74t4zimux3r.cloudfront.net",
+      "http_version": "HTTP/1.1",
+      "declared_body_bytes": 0,
+      "authorization_present": false,
+      "cookie_present": false,
+      "path": "/STEAM_APP_ID.1063730.json"
+    },
+    "response": {
+      "status": 200,
+      "canonical_descriptor_sha256": "68bf491abacc05e06c4a536015aaffb3a653618d23c04f61810df6af854a5f13",
+      "body_bytes": 3812
+    }
+  },
+  "token_requests": [
+    {
+      "connection_id": "dee8c91d-47db-484d-bd0f-4355536cd793",
+      "owner_process_id": 31396,
+      "local": {
+        "address": "::1",
+        "port": 443
+      },
+      "request_time_utc": "2026-10-02T17:35:43.026Z",
+      "sni": "tokenservice.amazongames.com",
+      "tls": {
+        "tls_version": "TLSv1.3",
+        "cipher": "TLS_AES_256_GCM_SHA384",
+        "selected_alpn": null
+      },
+      "request": {
+        "method": "POST",
+        "host": "tokenservice.amazongames.com",
+        "http_version": "HTTP/1.1",
+        "declared_body_bytes": 2941,
+        "authorization_present": false,
+        "cookie_present": false,
+        "path": "/games/new-world/tokens"
+      },
+      "response": {
+        "status": 501
+      }
+    },
+    {
+      "connection_id": "75c820e6-71cd-455c-9c98-dff9e72ee699",
+      "owner_process_id": 31396,
+      "local": {
+        "address": "::1",
+        "port": 443
+      },
+      "request_time_utc": "2026-10-02T17:35:43.653Z",
+      "sni": "tokenservice.amazongames.com",
+      "tls": {
+        "tls_version": "TLSv1.3",
+        "cipher": "TLS_AES_256_GCM_SHA384",
+        "selected_alpn": null
+      },
+      "request": {
+        "method": "POST",
+        "host": "tokenservice.amazongames.com",
+        "http_version": "HTTP/1.1",
+        "declared_body_bytes": 2941,
+        "authorization_present": false,
+        "cookie_present": false,
+        "path": "/games/new-world/tokens"
+      },
+      "response": {
+        "status": 501
+      }
+    },
+    {
+      "connection_id": "6b904670-9de0-4783-89df-b0dcdd7f4993",
+      "owner_process_id": 31396,
+      "local": {
+        "address": "::1",
+        "port": 443
+      },
+      "request_time_utc": "2026-10-02T17:35:45.537Z",
+      "sni": "tokenservice.amazongames.com",
+      "tls": {
+        "tls_version": "TLSv1.3",
+        "cipher": "TLS_AES_256_GCM_SHA384",
+        "selected_alpn": null
+      },
+      "request": {
+        "method": "POST",
+        "host": "tokenservice.amazongames.com",
+        "http_version": "HTTP/1.1",
+        "declared_body_bytes": 2941,
+        "authorization_present": false,
+        "cookie_present": false,
+        "path": "/games/new-world/tokens"
+      },
+      "response": {
+        "status": 501
+      }
+    }
+  ],
+  "request_body_saved": false,
+  "request_body_schema_known": false,
+  "declared_body_bytes_are_not_a_fixed_protocol_size": true,
+  "owned_log": {
+    "source_sha256": "55ee6f31a527b0f2c4dc3ce15cb4f56b6200df11a01d9539b3bed75104def228",
+    "source_bytes": 25697,
+    "regions_parsed": [
+      "fra-prod",
+      "gru-prod",
+      "iad-prod",
+      "pdx-prod",
+      "syd-prod"
+    ],
+    "session_result_codes": [
+      201
+    ],
+    "result_meaning": "unknown_on_current_build",
+    "timestamp_basis": "extraction_not_client_event"
+  },
+  "authentication_http_reached_private_service": true,
+  "authenticated": false,
+  "world_entered": false,
+  "player_actor_created": false
+}

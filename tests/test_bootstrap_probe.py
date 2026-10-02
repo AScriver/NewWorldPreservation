@@ -120,3 +120,13 @@ def test_unknown_route_template_never_exports_identifiers_queries_or_fragments(e
     output = json.dumps(events)
     assert not any(word in output for word in ("private-account", "not-for-logs", "private-fragment"))
     assert any(e.get("path_template") == "/prod/games/new-world/session/<redacted>" for e in events)
+
+
+def test_token_session_route_is_observed_but_not_authenticated_or_captured(endpoint):
+    response = exchange(endpoint, request("/games/new-world/tokens", method="POST",
+        extra="Content-Length: 12\r\n", body="not-for-logs"))
+    assert response.startswith(b"HTTP/1.1 501")
+    events = records(endpoint)
+    assert any(e["state"] == "TOKEN_SESSION_REQUEST" and not e["request_body_saved"] for e in events)
+    assert any(e["state"] == "TOKEN_SESSION_RESPONSE" and not e["authentication_success"] for e in events)
+    assert "not-for-logs" not in json.dumps(events)

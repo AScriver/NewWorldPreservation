@@ -41,6 +41,9 @@ class BootstrapHandler(probe.ProbeHandler):
             return super().respond(status, authentication=authentication)
         self.emit("HTTP_PATH_TEMPLATE", path_template=path_template(self.path),
                   observation="fixed_public_words_only_not_raw_target_or_protocol_semantics")
+        if self.path == "/games/new-world/tokens":
+            self.emit("TOKEN_SESSION_REQUEST", route="games_new_world_tokens",
+                      semantics="observed_route_only_not_auth_success", request_body_saved=False)
         hostname = self.server.safe_hostname(self.headers.get("Host"))
         allowed = {BOOTSTRAP_HOST, BOOTSTRAP_HOST + ":" + str(self.server.server_port)}
         if (self.command == "GET" and self.path == BOOTSTRAP_PATH
@@ -58,19 +61,23 @@ class BootstrapHandler(probe.ProbeHandler):
             self.close_connection = True
             self.emit("HTTP_RESPONSE", status=200, semantics="local_channel_descriptor_not_authentication")
             self.emit("CHANNEL_DESCRIPTOR_RESPONSE", status=200, response_bytes=len(body),
-                      descriptor_sha256=self.server.channel_sha256, destinations="bootstrap_loopback_mapping_only",
+                      descriptor_sha256=self.server.channel_sha256, token_routing=self.server.token_routing,
+                      destinations="explicit_host_profile_requires_loopback_mapping",
                       client_acceptance_observed=False, authentication_success=False)
             return
         super().respond(status, authentication=authentication)
+        if self.path == "/games/new-world/tokens":
+            self.emit("TOKEN_SESSION_RESPONSE", status=status, authentication_success=False, semantics="diagnostic_rejection")
 
 
-def make_server(bind, port, certificates, events, descriptor):
+def make_server(bind, port, certificates, events, descriptor, *, token_routing="collapsed"):
     # Validate containment before opening a socket or reading certificate material.
-    body = encode_local_descriptor(descriptor)
+    body = encode_local_descriptor(descriptor, token_routing=token_routing)
     server = probe.make_server(bind, port, certificates, events)
     server.RequestHandlerClass = BootstrapHandler
     server.channel_payload = body
     server.channel_sha256 = hashlib.sha256(body).hexdigest()
+    server.token_routing = token_routing
     return server
 
 
@@ -83,10 +90,11 @@ def main():
     parser.add_argument("--port", type=int, default=8443)
     parser.add_argument("--duration", type=int, default=60)
     parser.add_argument("--observe-local-socket-owner", action="store_true")
+    parser.add_argument("--token-routing", choices=["collapsed", "original-hostnames"], default="collapsed")
     options = parser.parse_args()
     if not 1 <= options.duration <= 600:
         parser.error("duration must be 1..600 seconds")
-    descriptor = load_local_descriptor(probe.private_directory(options.descriptor))
+    descriptor = load_local_descriptor(probe.private_directory(options.descriptor), token_routing=options.token_routing)
     certificates = probe.private_directory(options.certificates)
     log_path = probe.private_directory(options.log)
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -94,12 +102,13 @@ def main():
     server = None
     timer = None
     try:
-        server = make_server(options.bind, options.port, certificates, events, descriptor)
+        server = make_server(options.bind, options.port, certificates, events, descriptor, token_routing=options.token_routing)
         if options.observe_local_socket_owner:
             from windows_tcp_owner import owner_of_connection
             server.socket_owner_lookup = owner_of_connection
         events.emit("BOOTSTRAP_LISTENING", bind=options.bind, port=server.server_port,
                     descriptor_sha256=server.channel_sha256, tls_minimum="TLSv1.2",
+                    token_routing=options.token_routing,
                     authentication_implemented=False, game_transport_implemented=False,
                     client_acceptance_observed=False)
         timer = threading.Timer(options.duration, server.shutdown)

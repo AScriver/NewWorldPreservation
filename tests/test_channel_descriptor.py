@@ -18,6 +18,7 @@ REGIONS = {
     "pdx-prod": "us-west-2", "syd-prod": "ap-southeast-2",
 }
 TAGS = ("authStack", "loginGateway", "JavelinGatewayServiceV2", "JavelinGatewayService-CF")
+ORIGINAL_TOKEN_URLS = ("https://tokenservice.amazongames.com", "https://prod.newworld.com/")
 
 
 def sample():
@@ -52,6 +53,67 @@ def test_synthetic_roundtrip_is_deterministic_and_ascii(tmp_path):
     path = tmp_path / "channel.json"
     path.write_bytes(encoded)
     assert descriptor.load_local_descriptor(path) == source
+
+
+def original_hostnames_sample():
+    value = sample()
+    omni = value["platformMetadata"][f"OMNI.{APP_ID}"]
+    omni["omniTokenUrl"], omni["nwTokenUrl"] = ORIGINAL_TOKEN_URLS
+    return value
+
+
+def test_explicit_original_hostnames_roundtrip_preserves_cf_stage_omission(tmp_path):
+    value = original_hostnames_sample()
+    encoded = descriptor.encode_local_descriptor(value, token_routing="original-hostnames")
+    path = tmp_path / "channel.json"
+    path.write_bytes(encoded)
+    assert descriptor.load_local_descriptor(path, token_routing="original-hostnames") == value
+    assert all("stage" not in value[region]["publicApis"][3] for region in REGIONS)
+    assert descriptor.encode_local_descriptor(value, token_routing="original-hostnames") == encoded
+
+
+def test_token_profiles_do_not_accept_each_others_urls(tmp_path):
+    original = original_hostnames_sample()
+    collapsed = sample()
+    with pytest.raises(ValueError):
+        descriptor.encode_local_descriptor(original)
+    with pytest.raises(ValueError):
+        descriptor.encode_local_descriptor(collapsed, token_routing="original-hostnames")
+    original_path = tmp_path / "original.json"
+    collapsed_path = tmp_path / "collapsed.json"
+    original_path.write_bytes(descriptor.encode_local_descriptor(original, token_routing="original-hostnames"))
+    collapsed_path.write_bytes(descriptor.encode_local_descriptor(collapsed))
+    with pytest.raises(ValueError):
+        descriptor.load_local_descriptor(original_path)
+    with pytest.raises(ValueError):
+        descriptor.load_local_descriptor(collapsed_path, token_routing="original-hostnames")
+
+
+@pytest.mark.parametrize("token_routing", ["collapsed", "original-hostnames"])
+def test_mixed_or_changed_urls_rejected_in_both_profiles(token_routing):
+    for field, replacement in [
+        ("omniTokenUrl", "https://remote.example"),
+        ("nwTokenUrl", "https://remote.example/"),
+        ("omniTokenUrl", "https://u@tokenservice.amazongames.com"),
+        ("omniTokenUrl", "https://tokenservice.amazongames.com/path"),
+        ("nwTokenUrl", "https://prod.newworld.com/?x=1"),
+        ("omniTokenUrl", ORIGINAL_TOKEN_URLS[0] if token_routing == "collapsed" else f"https://{HOST}"),
+        ("nwTokenUrl", ORIGINAL_TOKEN_URLS[1] if token_routing == "collapsed" else f"https://{HOST}/"),
+    ]:
+        value = sample() if token_routing == "collapsed" else original_hostnames_sample()
+        value["platformMetadata"][f"OMNI.{APP_ID}"][field] = replacement
+        with pytest.raises(ValueError):
+            descriptor.encode_local_descriptor(value, token_routing=token_routing)
+
+
+@pytest.mark.parametrize("profile", ["auto", None, []], ids=["unknown", "none", "unhashable"])
+def test_unknown_token_profile_rejected(tmp_path, profile):
+    path = tmp_path / "channel.json"
+    path.write_bytes(descriptor.encode_local_descriptor(sample()))
+    with pytest.raises(ValueError):
+        descriptor.encode_local_descriptor(sample(), token_routing=profile)
+    with pytest.raises(ValueError):
+        descriptor.load_local_descriptor(path, token_routing=profile)
 
 
 @pytest.mark.parametrize("change", [

@@ -2,7 +2,7 @@
 
 Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
-Latest [HTTP200 checkpoint](BOOTSTRAP_CHANNEL.md): five original local region labels parsed; frontend initialized; Omni CreateSession204/no private session HTTP. Actual session destination, whether token-host metadata is honored, and cause/meaning of204 remain unknown. Local session/actor work must not assume authentication succeeded.
+Latest [token HTTPS checkpoint](BOOTSTRAP_CHANNEL.md): five local region labels parsed; three actual TLS1.3 POSTs reached our redirected `tokenservice.amazongames.com/games/new-world/tokens`; stub501, SDK result201. The earlier204/no-tokenHTTP state is historical. Whether the URL comes from metadata versus a matching hardcoded default, causes/meanings of201/204, request body schema and successful token/session response contract remain unknown. No private authentication or actor success.
 
 ## Questions that gate real-client progress
 
@@ -10,7 +10,7 @@ Latest [HTTP200 checkpoint](BOOTSTRAP_CHANNEL.md): five original local region la
 |---|---|---|
 | Which legitimate PC client build is the target? | **Answered here:** Steam22469132 / file and own-log1.400.6031.6004151 / SHA8654f01d…; [receipt](../research/evidence/current-client-connectivity.json). | Repin updates; disclose inaccessible live image path and launch/name/PID/start-time/socket correlation. Do not transfer old indices across builds. |
 | How can that client select an entirely private bootstrap endpoint? | **Answered:** temporary one-host dual-stack hosts mapping, owned loopback443; current game used IPv6. No supported config/CLI override found in bounded inspection. Hosts restored. | Accepted HTTP200 descriptor must select further private services. DNS/cache/fallback internals remain unknown; no hidden global proxy/DNS mutation. |
-| Can the stock executable trust a private world-service certificate? | **Bootstrap HTTPS answered:** CurrentUserRoot CA + correct SAN; noCA/wrong-name controls block HTTP, restored correct trust/name restores it. No EAC/binary change. **REP/DTLS unknown.** | Preserve separate trust gates. Do not infer all endpoints lack pinning or that server-side handshake proves client validation. |
+| Can the stock executable trust a private world-service certificate? | **Bootstrap and observed token HTTPS answered:** CurrentUserRoot CA + correct SAN; bootstrap noCA/wrong-name reversals and token-positive HTTP. No EAC/binary change. Later game-auth and **REP/DTLS unknown.** | Preserve separate trust gates; token-negative controls remain unrun. Do not infer all endpoints lack pinning or that server-side handshake proves client validation. |
 | Can it still launch after game-service and platform dependencies disappear? | Owning/installing the client is not proof Steam/offline-launch/session behavior survives shutdown. | Preserve normal documented launch/offline-mode observations and local dependency metadata while available; do not emulate Amazon/Steam ownership or distribute clients. |
 | What identity/session contract must private auth supply? | Shared global `Ctx` plus synthetic responses; current schemas unverified. | Own normal-session schema observations with secrets removed, then two isolated private-account tests and a ticket-to-peer binding proof. |
 

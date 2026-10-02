@@ -4,7 +4,9 @@
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-**Furthest verified protocol state:** HTTP/1.1 channel-bootstrap GET received and diagnostic HTTP **501** returned. Not authenticated, not world-loading, not spawned, not game-transport-connected, and not Milestone 1. Native game-window inspection was unavailable; a generic level-loader log marker is not evidence of loading Aeternum.
+**Latest furthest verified protocol state:** local HTTP200 channel descriptor parsed, then **three attributed HTTP/1.1 `POST /games/new-world/tokens` requests** received at our redirected token service over **TLS1.3**. The stub deliberately returned501. Not authenticated, not world-loading, not spawned, not game-transport-connected, and not Milestone1. The user reported the authentication-failure popup again. No cursor/keyboard control was used.
+
+Latest metadata-only evidence: [token-session receipt](../research/evidence/current-client-token.json), [deterministic observed fixture](../tests/fixtures/connectivity/current-client-token-result.json), [procedure and earlier failed controls](BOOTSTRAP_CHANNEL.md). Earlier501-bootstrap and204/no-session results below are historical, not the current stopping point. HTTPS connectivity is solved for bootstrap **and the observed token origin**; private session response semantics and REP/DTLS remain unknown.
 
 | Identity | Verified value / limit |
 |---|---|
@@ -24,14 +26,17 @@ The prior no-install/discovery and Steam-install handoff were historical results
 flowchart TD
     Steam[Ordinary Steam launch] --> Client[NewWorld.exe: current build]
     Client --> Bootstrap[Channel URL: d2c74t4zimux3r.cloudfront.net]
-    Bootstrap --> Hosts[One-host temporary mapping: 127.0.0.1 and ::1]
+    Bootstrap --> Hosts[Guarded temporary hosts mapping: 127.0.0.1 and ::1]
     Hosts --> Probe[Owned loopback TCP 443: actual game used ::1]
     Probe --> TLS[TLS 1.2: matching SNI and CA/SAN controls]
     TLS --> GET[GET /STEAM_APP_ID.1063730.json HTTP/1.1]
-    GET --> Stop[Probe HTTP 501: bootstrap stops here]
-    Bootstrap -. normal-service log references only .-> Regions[Regional API / auth / gateway descriptor]
-    Regions -. own log ConfigureLogin / Omni URL .-> Auth[Authentication: not established privately]
-    Auth -. unverified .-> REP[Session selection and REP / DTLS]
+    GET --> Regions[HTTP200 local descriptor: five region markers parsed]
+    Regions --> Token[Token hostname redirected to owned ::1:443]
+    Token --> TokenTLS[TLS1.3: SNI tokenservice.amazongames.com]
+    TokenTLS --> Post[POST /games/new-world/tokens: HTTP1.1]
+    Post --> Stop[Private diagnostic501: session fails]
+    Stop -. response contract unknown .-> Auth[Private authentication / session selection]
+    Auth -. unverified .-> REP[Game transport REP / DTLS and actor creation]
 ```
 
 | Stage | Actual evidence and boundary |
@@ -43,7 +48,9 @@ flowchart TD
 | DNS/redirection | Guarded hosts readback plus operator `.NET` resolver returned `::1` and `127.0.0.1`. Exact game-owned sockets reached `::1:443`. Supports current redirection compatibility; **not a client DNS-query trace** or proof of resolver/cache/fallback implementation. |
 | TLS / HTTP | Actual attributed connections: SNI bootstrap hostname; TLS1.2; `ECDHE-RSA-AES256-GCM-SHA384`; selected ALPN `null`; HTTP/1.1 GET, zero declared body, no Authorization/Cookie headers. Offered TLS/ALPN extensions were not captured. |
 | Other sockets | Baseline game TCP table had ports 443 and 80 on public IPs. No hostname/SNI/payload attribution for these; port80 alone is not proof of HTTP. Unrelated process traffic was not captured. |
-| Character/world/session / spawn | No private observation; HTTP501 never supplies the needed descriptor. |
+| Current token/session request | Fresh owned PID31396/start17:35:29.4344206Z; exact socket owner for bootstrap and all three token connections. FirstPOST17:35:43.026Z: SNI/Host `tokenservice.amazongames.com`, TLS1.3/`TLS_AES_256_GCM_SHA384`, selectedALPNnull, HTTP1.1, declared body2941bytes, no Authorization/Cookie. Bodies discarded, not inspected or saved. Length is not a fixed protocol size. |
+| Current descriptor / endpoint selection | Original local shape plus original token URL hostnames; only three explicitly allowed hostnames mapped to loopback. Five unique local names parsed again. No request to `prod.newworld.com` observed. Original token hostname could come from metadata or a matching hardcoded default: not distinguished. Collapsed origin previously produced204/no tokenHTTP, but that does not establish204's cause. |
+| Character/world/session / spawn | HTTP200 discovery and tokenHTTP now observed;501 token rejection is not successful authentication. SDK result201 after501 is unknown, not HTTP201. No character/world selection, actor or REP connection. |
 | Game transport / reconnect | No UDP/DTLS connection, actor or in-world reconnect tested. Fresh launches are startup controls, not game reconnect semantics. |
 
 Baseline log read SHA-256: `11c17fd275b648ca0a55a0407a59b43ca7dee87927a3eeb83f4ac1083ce92de3`, 44,996 bytes. Source log is not copied into this repository. Whitelist metadata stays ignored; public receipt retains only approved hostname/version/provenance fields. Extractor timestamps are extraction times, **not source-event times**; growing-log reads are explicitly marked unstable.
@@ -67,6 +74,8 @@ Exact timestamps/fingerprints/source hashes are authoritative in the receipt. Th
 
 Server `TLS_ESTABLISHED` alone is not client trust proof: even the untrusted/wrong-name game controls emitted it. The certificate conclusions rely on differential HTTP behavior, matching socket ownership, and restoration. Do not classify a reset or absent request as pinning. No TLS validation was disabled in the game.
 
+**Later token-origin positive control:** with the exact local CA confirmed trusted **before launch** and a matching `tokenservice.amazongames.com` SAN, the stock client sent three POSTs over TLS1.3. This demonstrates compatible local trust for that endpoint; mandatory Amazon-only pinning did not prevent it. Token-specific absent-CA/wrong-SAN reversals were not executed. `prod.newworld.com`, regional auth/gateway HTTPS and game DTLS trust are untested. No process-memory inspection, binary patch, EAC change or validation bypass was needed.
+
 ## Redirection options, failures and limits
 
 | Option | Current outcome |
@@ -82,7 +91,7 @@ Instrumentation failures retained: original observer silently skipped path-inacc
 
 ## Smallest service and structured transitions
 
-The original transport probe accepts TLS and returns501 except health. A later [bootstrap checkpoint](BOOTSTRAP_CHANNEL.md) adds a strict local HTTP200 descriptor: current client parsed all five local region names and initialized its frontend, then failed Omni CreateSession with result204. No subsequent HTTP reached our listener; field requiredness and session routing remain unknown. Neither service forwards, invents auth success or saves headers/bodies. Do not reuse First Light's synthetic fallback verbatim.
+The original transport probe accepts TLS and returns501 except health. The [latest bootstrap/token checkpoint](BOOTSTRAP_CHANNEL.md) adds a strict local HTTP200 descriptor and explicit original-hostname routing profile: five local region names parsed, then three token POSTs reached us. Earlier collapsed-token204/no-session behavior is retained as historical. Field requiredness, successful response schema and follow-on selection remain unknown. Neither service forwards, invents auth success or saves headers/bodies. Do not reuse First Light's synthetic fallback verbatim.
 
 All server/mutation/observer events have UTC timestamps. Server events carry run/connection UUIDs and ordered sequence numbers; logs flush per transition. Important states:
 
@@ -92,6 +101,7 @@ All server/mutation/observer events have UTC timestamps. Server events carry run
 - `TLS_CLIENT_HELLO` → `TLS_ESTABLISHED` / `TLS_FAILED`: SNI callback, negotiated values, bounded error mnemonic. No full ClientHello/session-key capture.
 - `HTTP_REQUEST` → `HTTP_RESPONSE`: route/method/version/body-length/header-presence metadata only.
 - `AUTHENTICATION_REQUEST` / rejected `AUTHENTICATION_RESPONSE` and `GAME_SESSION_SELECTION_REQUEST`: already instrumented historical-route classifications; **not reached in these private tests**. No successful selection/transport state emitted.
+- `TOKEN_SESSION_REQUEST` / rejected `TOKEN_SESSION_RESPONSE`: actual current token path observed; timestamps/correlation, declared length/header-presence and501 response only. Authentication is explicitly false; body/credential capture is explicitly false.
 - `CONNECTION_CLOSED`, CA/hosts mutation/readback/restoration events and bounded listener stop/ownership checks.
 
 Probe events deliberately remain `client_identity:unattributed`; the evidence receipt performs the PID/start-time/socket correlation. Socket ownership is not live-image verification. API layout references: [GetExtendedTcpTable](https://learn.microsoft.com/windows/win32/api/iphlpapi/nf-iphlpapi-getextendedtcptable), [IPv4 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcprow_owner_pid), [IPv6 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcp6row_owner_pid). These are OS metadata, not invented New World packet layouts.
@@ -107,9 +117,11 @@ From `C:\Code\NewWorldPreservation`:
 & 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1' -Path .\scripts\Test-FirstLight.ps1 -Execute
 ```
 
-First script: original19 loopback controls, CLI health/start/automatic-stop control,26 instrumentation/fixture tests, mocked observer scenarios. Hosts tests use only isolated `.scratch/` fixtures; native owner tests hold owned ephemeral sockets. No real trust-store edit. See [control receipt](../research/evidence/connectivity-validation.json), [instrumentation receipt](../research/evidence/instrumentation-validation.json), [CLI receipt](../research/evidence/connectivity-cli-control.json).
+First script: original19 loopback controls, CLI health/start/automatic-stop control,29 instrumentation/fixture tests, mocked observer scenarios. Hosts tests use only isolated `.scratch/` fixtures; native owner tests hold owned ephemeral sockets. No real trust-store edit. Additional58 focused descriptor/bootstrap/safe-log/token-flow tests are listed in [BOOTSTRAP_CHANNEL](BOOTSTRAP_CHANNEL.md). See [control receipt](../research/evidence/connectivity-validation.json), [instrumentation receipt](../research/evidence/instrumentation-validation.json), [CLI receipt](../research/evidence/connectivity-cli-control.json).
 
-### Owned-client trial — explicitly live, not part of offline tests
+### Historical bootstrap CA/SAN controls — explicitly live, not offline tests
+
+For the **latest** descriptor/token trial use [BOOTSTRAP_CHANNEL's procedure](BOOTSTRAP_CHANNEL.md#reproduce-the-latest-token-stopping-point): strict three-host profile, program-scoped containment, trust completed before launch, recorded owned client stopped before routing cleanup. The following sequence documents the earlier bootstrap-only controls, not the current token checkpoint.
 
 1. Pin the actual installed executable with validated `Inspect-CurrentClient.ps1 -ClientExecutable 'C:\Program Files (x86)\Steam\steamapps\common\New World\Bin64\NewWorld.exe'`. Verify Steam build/version/hash. Preserve any already-running client unless its launch ownership is recorded.
 2. Choose a **fresh** `private/connectivity/<run>/` directory. Generate a CA and two same-key/same-CA leaves:
@@ -140,7 +152,7 @@ The historical bootstrap hostname/path still applies to this current build; sour
 
 Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
 
-**Exact next blocker (supersedes501 checkpoint):** current channel JSON/HTTP200 parsing is observed; now route/observe Omni CreateSession on private infrastructure and explain result204 before implementing its response. [Latest evidence/procedure](BOOTSTRAP_CHANNEL.md). Private auth/session selection and separate REP/DTLS then precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented.
+**Exact next blocker (supersedes501-bootstrap/204 checkpoints):** current channel HTTP200 parsing and private tokenPOST/TLS1.3 are observed; now establish the token/session response structure and validation before implementing a compatibility responder. SDK201/204 meanings remain unknown. [Latest evidence/procedure](BOOTSTRAP_CHANNEL.md). Successful private auth/session selection and separate REP/DTLS precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented. Latest exact CA, hosts, firewall, client and listener cleanup readbacks are complete in the token receipt.
 
 ## Capture Before Shutdown
 

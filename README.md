@@ -24,7 +24,7 @@ Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites
 
 **Stock New World `1.400.6031.6004151` / Steam build22469132 reached our private HTTPS server.** Exact accepted-socket owner matched our recorded ordinary Steam launch. The client sent HTTP/1.1 `GET /STEAM_APP_ID.1063730.json` over TLS1.2 to IPv6 localhost443; probe returned deliberate501. Local CurrentUserRoot CA + correct hostname works; absent CA or wrong-name same-CA leaf prevents HTTP; restoration restores HTTP. No memory inspection, binary patch or EAC change. Both temporary CAs removed, hosts restored byte-exact, owned probes/client closed.
 
-**Later checkpoint:** current client parsed our HTTP200 channel descriptor and all five local region labels, initialized the frontend, then reported Omni CreateSession204. No session HTTP reached our listener. **Still not authenticated or in Aeternum; Milestone1 not achieved.** [Latest evidence, exact blocker and procedure](docs/BOOTSTRAP_CHANNEL.md). Next: own token/session request, private auth/session schemas, separate REP/DTLS, then actor creation. Original19/26 controls, CLI and observer checks reran successfully; new descriptor/HTTPS/safe-log tests pass. Offline controls remain separate from actual game observations.
+**Latest checkpoint:** current client parsed our HTTP200 descriptor, then sent three owned-client TLS1.3 `POST /games/new-world/tokens` requests to the locally redirected token hostname. The diagnostic stub returned501; SDK result201 is unexplained. **Bootstrap/token HTTPS connectivity is proven; still not authenticated or in Aeternum; Milestone1 not achieved.** [Evidence, failed controls and procedure](docs/BOOTSTRAP_CHANNEL.md). Next: evidence-backed token/session response schema, private auth/session selection, separate REP/DTLS, then actor creation.58 focused tests,19 original controls,29 instrumentation tests, CLI/observer checks pass; these offline controls are not live login proof.
 
 ```powershell
 C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
@@ -60,6 +60,6 @@ Current local test receipt: [latest-validation.json](research/evidence/latest-va
 
 ## Next step
 
-Route/observe current Omni CreateSession after proven channel parsing, establish private auth/session selection and REP/DTLS trust, then prove registration-to-actor-spawn behavior. Independent offline slice: actual two-peer loopback DTLS exchange—not an invented gameplay codec. See [roadmap](docs/ROADMAP.md).
+Establish the current token/session response contract after the observed private token POST; implement only evidence-backed private auth/session selection, then resolve REP/DTLS trust and registration-to-actor spawning. Independent offline slice: actual two-peer loopback DTLS exchange—not an invented gameplay codec. See [roadmap](docs/ROADMAP.md).
 
 All work is local. No remote/public repository, contributor messages or Actionables were created/updated; no governing Actionables work-item ID was supplied.
