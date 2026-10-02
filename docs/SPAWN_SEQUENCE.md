@@ -1,6 +1,6 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
-**Latest gate:** [DTLS_REGISTRATION](DTLS_REGISTRATION.md) records the current stock game's **fatal unknown_ca** after our configured full-chain DTLS flight, twice. No established DTLS or current Carrier/V3. The frontend preview is not a world actor; Play spinner is not world loading. Active REP trust source/private roots, secure private ticket binding, registration and actor contract remain gates. Earlier receive-only stopping points are historical.
+**Latest gate:** [DTLS_REGISTRATION](DTLS_REGISTRATION.md) records the stock game's **fatal unknown_ca** after our configured full-chain DTLS flights, six attempts across three runs. [REP_TRUST_POLICY](REP_TRUST_POLICY.md) now maps current embedded-certificate initialization/verifier/identity inputs statically; actual REP context/private-anchor configuration remain unproven. No established DTLS or current Carrier/V3. The frontend preview is not a world actor; Play spinner is not world loading. Private transport acceptance, secure ticket binding, registration and actor contract remain gates. Earlier receive-only stopping points are historical.
 
 ## Gate and current stopping point
 

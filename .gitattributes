@@ -45,3 +45,4 @@
 /research/evidence/current-dtls-trust-rejection-validation.json text eol=lf
 /tests/fixtures/connectivity/current-dtls-trust-rejection.json text eol=lf
 /research/evidence/current-dtls-trust-controls.json text eol=lf
+/research/evidence/current-rep-trust-policy.json text eol=lf

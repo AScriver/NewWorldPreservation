@@ -11,6 +11,7 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 - [Current-client connectivity result and probe procedure](docs/CURRENT_CLIENT_CONNECTIVITY.md)
 - [Current private queue-to-game handoff and next DTLS gate](docs/PRIVATE_GAME_HANDOFF.md)
 - [Current DTLS trust result and gated Carrier/V3 registration](docs/DTLS_REGISTRATION.md)
+- [Current-build trust-store, verifier and expected-peer evidence](docs/REP_TRUST_POLICY.md)
 - [Spawn-sequence evidence and remaining gates](docs/SPAWN_SEQUENCE.md)
 - [Milestone 1 tasks and exact next blockers](docs/ROADMAP.md)
 - [Open questions](docs/OPEN_QUESTIONS.md)
@@ -26,7 +27,7 @@ Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites
 
 **Stock New World `1.400.6031.6004151` / Steam build22469132 reached our private HTTPS server.** Exact accepted-socket owner matched our recorded ordinary Steam launch. The client sent HTTP/1.1 `GET /STEAM_APP_ID.1063730.json` over TLS1.2 to IPv6 localhost443; probe returned deliberate501. Local CurrentUserRoot CA + correct hostname works; absent CA or wrong-name same-CA leaf prevents HTTP; restoration restores HTTP. No memory inspection, binary patch or EAC change. Both temporary CAs removed, hosts restored byte-exact, owned probes/client closed.
 
-**Latest checkpoint:** stock client reaches our selected loopback endpoint; original DTLS responder sends its configured full-chain flight. The game returns **fatal unknown_ca** in six attempts across three runs: normal Steam plus original-launcher/default and child-scoped CA-file controls. User sees secure-connection error(2). Active REP trust initialization/peer policy remains unidentified; pinning unproven. **No completed DTLS, Carrier/V3, world loading, actor or Milestone1.** [Evidence/reproduction](docs/DTLS_REGISTRATION.md).273 explicit workspace tests pass; unchanged upstream455/skip1 historical. Same CA retained; hosts/rules restored, owned game/listeners stopped. No secure private account/ticket validation yet.
+**Latest live checkpoint:** stock client reaches our selected loopback endpoint; original DTLS responder sends its configured full-chain flight. The game returns **fatal unknown_ca** in six attempts across three runs: normal Steam plus original-launcher/default and child-scoped CA-file controls. User sees secure-connection error(2). **New static checkpoint:** the current UDP transport's embedded-certificate store initialization, standard verifier and expected-identity inputs are mapped, including the same-object factory→connection→secure-setup link. Live REP context attribution/private-root configuration remain unproven; no global no-pinning claim. [Trust policy](docs/REP_TRUST_POLICY.md). **No completed DTLS, Carrier/V3, world loading, actor or Milestone1.** [Live evidence/reproduction](docs/DTLS_REGISTRATION.md).273 explicit workspace tests previously pass; all39 validated artifact hashes rechecked unchanged, no rerun for static/docs-only work. Upstream455/skip1 historical. Same CA retained; hosts/rules restored, owned game/listeners stopped. No secure private account/ticket validation yet.
 
 ```powershell
 C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
@@ -62,6 +63,6 @@ Current local test receipt: [latest-validation.json](research/evidence/latest-va
 
 ## Next step
 
-Identify/configure the current REP DTLS trust source after its explicit rejection of our locally trusted full chain; then observe and answer Carrier/V3 registration. Two isolated CA-verified DTLS controls already exchange data. Actor work remains gated. See [roadmap](docs/ROADMAP.md).
+Establish a private-anchor loading boundary that preserves verification, then prove an actual current-client handshake and observe/answer Carrier/V3 registration. The REP wrapper/interface source join is complete; live branch/store readback is not. Two isolated CA-verified DTLS controls already exchange data. Actor work remains gated. See [trust evidence](docs/REP_TRUST_POLICY.md) and [roadmap](docs/ROADMAP.md).
 
 All work is local. No remote/public repository, contributor messages or Actionables were created/updated; no governing Actionables work-item ID was supplied.

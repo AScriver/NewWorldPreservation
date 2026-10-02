@@ -6,6 +6,8 @@ Continuation of [private queue handoff](PRIVATE_GAME_HANDOFF.md), clean parent H
 
 Work in this slice: verified local DTLS peers, owned current-client handshake/trust, then current Carrier/V3 **only if transport succeeds**. No actor/gameplay implementation, memory writes, executable/EAC change, other-user traffic, official-system authentication bypass, remote publication or mouse/keyboard control.
 
+**Newer static checkpoint:** [REP_TRUST_POLICY](REP_TRUST_POLICY.md) identifies current embedded-certificate transport→store initialization, the actual linked verifier/identity inputs and the same-object factory→connection→secure-setup path. This supersedes the initial unlinked-candidate findings below, not the live rejection. Actual REP context attribution/private-root configuration remain unproven. No additional game trial, bypass or protocol implementation;39 previously validated artifact hashes unchanged.
+
 ## Evidence ledger for this slice
 
 | ID | Claim | Classification / limit | Evidence |
@@ -108,9 +110,11 @@ Both cases stop the owned game before restoring hosts/rule, then stop443/64003. 
 
 Reproduction delta to the seven-step procedure above: after a fresh prepared/responder/ready window, validate/run `.scratch/start-owned-launcher-trust.ps1` with `-ArgumentList @('-TrustSource','Default')`, then `.scratch/record-launcher-trust-client.ps1` immediately. Repeat in a **new cleaned run** using `-ArgumentList @('-TrustSource','RetainedCaFile')`. `-ArgumentList` belongs to the wrapper; each full helper is validated before execution. Both require ready-window age<=60seconds and pinned client/launcher. Normal user inputs/cleanup unchanged. Preserve `launch-manifest.json`, `trust-case-metadata.json`, filtered own Game.log hash/error codes and all structured trial/source/cleanup hashes. Do not equate child launch configuration with verified game environment consumption.
 
-## Bounded current-build trust-path inspection
+## Initial bounded current-build trust-path inspection (historical)
 
 Reason for binary inspection: current REP explicitly rejected our approved local full chain despite private HTTPS success. Static read-only inspection of the pinned installed PE was warranted to identify configuration/trust loading, not to remove verification. No proprietary disassembly, PEM, subject name or game file is included here; original analysis-only scripts and local output remain ignored under `.scratch/current-dtls-trust-path/`.
+
+The initial findings below retain the failed discriminator and its limits. Later positive argument/object/context analysis is documented in [REP_TRUST_POLICY](REP_TRUST_POLICY.md); the embedded certificate now has a concrete static secure-driver store relationship. The initial string-based inability to join it is not the latest result.
 
 | Static finding | Evidence / limit |
 |---|---|
@@ -128,6 +132,6 @@ Ignored discriminator artifacts: vendor-source-check.py SHA7c2d5134050de25c855f4
 
 ## Exact remaining blocker and Carrier/V3 gate
 
-Identify the **current REP context's trust-store initialization and verifier/expected-peer policy**, then determine an evidence-backed private-root configuration. Tested CurrentUserRoot/full-chain and launcher-scoped CA-file configurations do not establish the game handshake. Embedded candidate, default-path loaders, public-engine descriptor and old Frida reports are not enough to choose a patch. No broad verification bypass or memory write was applied.
+Current REP wrapper/interface→factory→UDP trust-store initialization, verifier dispatch and expected-peer inputs are now mapped in [REP_TRUST_POLICY](REP_TRUST_POLICY.md). Both known SDK connect branches converge before UDP selection. **Remaining:** determine an evidence-backed private-anchor loading boundary preserving validation and prove the actual game handshake. Live enum/context/store contents remain unread. Tested CurrentUserRoot/full-chain and launcher-scoped CA-file configurations do not establish the handshake. No supported override, global no-pinning result, broad bypass or memory write follows from static code or old Frida reports.
 
 No current decrypted application/Carrier/V3 input was received in any of these six handshake attempts. Therefore the historical connectACK/V3 codecs were mapped but **not speculatively connected to the stock client**. Next transport-positive checkpoint must prove handshake plus genuine client application data; only then parse the actual Carrier connect and registration request with secret-minimizing metadata, reuse pinned codecs, and verify response-driven state transitions. Actor/spawn remains gated; no world-loading/player actor or Milestone1.
