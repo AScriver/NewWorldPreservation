@@ -1,0 +1,26 @@
+{
+  "observedAtUtc": "2026-10-02T06:04:47.909426+00:00",
+  "mode": "python-cli-loopback-control",
+  "status": "passed",
+  "newWorldClientTested": false,
+  "python": "3.11.9",
+  "probeSha256": "bfddc360269c7d2756b0d2a85cc9a5c9657eadd9439ada40950afdda34e0532a",
+  "certificateLeafSha256": "78a916557137c706c26ef2fc4ea300ce784457be7798000e0694be45b9169e83",
+  "trustedCA": "explicit Python SSL context only, no Windows trust-store edit",
+  "request": "GET /__probe/health",
+  "httpStatus": 200,
+  "states": [
+    "PROBE_LISTENING",
+    "CONNECTION_ATTEMPT",
+    "TLS_CLIENT_HELLO",
+    "TLS_ESTABLISHED",
+    "HTTP_REQUEST",
+    "HTTP_RESPONSE",
+    "CONNECTION_CLOSED",
+    "PROBE_STOPPED"
+  ],
+  "childExitCode": 0,
+  "listenerClosed": true,
+  "stderrEmpty": true,
+  "runDirectory": ".scratch\\cli-t7ipdit4"
+}

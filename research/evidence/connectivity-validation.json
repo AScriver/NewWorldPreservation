@@ -1,0 +1,40 @@
+{
+  "observedAtUtc": "2026-10-02T06:04:44.377581+00:00",
+  "mode": "synthetic-loopback-controls-not-new-world",
+  "status": "passed",
+  "newWorldClientTested": false,
+  "currentClientBuild": null,
+  "currentClientTlsSolved": false,
+  "runtime": {
+    "python": "3.11.9",
+    "tlsLibrary": "OpenSSL 3.0.13 30 Jan 2024"
+  },
+  "tests": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "processExitCode": 0,
+    "expectedTotal": 19
+  },
+  "runDirectory": ".scratch\\connectivity-validation\\run-99kh9kxh",
+  "sourceSha256": {
+    "scripts/connectivity_probe.py": "bfddc360269c7d2756b0d2a85cc9a5c9657eadd9439ada40950afdda34e0532a",
+    "scripts/validate_connectivity.py": "c29d6f238e4cca2fa051bbf4531a8c21531b1016fff32927b63cf0b1fd824b0f",
+    "tests/test_connectivity_probe.py": "106cc0d6c942e5078bcf93053bfdfad09eff383c9feafe06b3dce2c30dc3d886",
+    "tests/fixtures/connectivity/requests.json": "4b2954607e02e40652ae7ec5b0e16487b8efc1f4472e794ef01180c3a809ba54"
+  },
+  "trustStoreModified": false,
+  "hostsModified": false,
+  "listeners": "ephemeral IPv4/IPv6 loopback, closed by fixture cleanup",
+  "controls": [
+    "TLS1.2/TLS1.3 trusted CA+SAN",
+    "untrusted CA rejected",
+    "wrong hostname rejected",
+    "IP SAN and IPv6",
+    "SNI metadata",
+    "HTTP framing/credential-log rejection",
+    "501 never authentication success"
+  ]
+}

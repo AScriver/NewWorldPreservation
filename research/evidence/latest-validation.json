@@ -1,8 +1,8 @@
 {
-  "observedAtUtc": "2026-10-02T05:00:20.530273+00:00",
+  "observedAtUtc": "2026-10-02T06:00:26.575501+00:00",
   "mode": "offline-only",
   "milestone1": "not tested",
-  "runDirectory": ".scratch\\validation\\run-52h9ue0j",
+  "runDirectory": ".scratch\\validation\\run-dgtidl10",
   "reference": {
     "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
     "sourceWorktree": "clean",

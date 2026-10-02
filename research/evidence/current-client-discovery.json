@@ -1,0 +1,52 @@
+{
+  "observedAtUtc": "2026-10-02T05:39:33.0292884Z",
+  "operation": "Read-only Steam manifest, executable identity, config-directory existence and process metadata. No game files/logs/credentials copied; no client started.",
+  "scope": "Registered Steam libraries, existing conventional C/D Steam roots, optional explicit executable. Not an exhaustive disk search.",
+  "manifestChecks": [
+    {
+      "library": "C:\\Program Files (x86)\\Steam",
+      "manifestPresent": false
+    },
+    {
+      "library": "c:/program files (x86)/steam",
+      "manifestPresent": false
+    }
+  ],
+  "installs": [],
+  "configLocations": [
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Local\\AGS\\New World",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Roaming\\AGS\\New World",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Local\\AGS\\NewWorld",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Roaming\\AGS\\NewWorld",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Local\\New World",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Roaming\\New World",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Local\\NewWorld",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\Austin\\AppData\\Roaming\\NewWorld",
+      "exists": false
+    }
+  ],
+  "runningClientProcesses": [],
+  "clientTested": false
+}

@@ -12,6 +12,7 @@ No Amazon service, credentials or asset redistribution should be necessary for t
 - **M1-00 completed:** reproducible development/reference/test environment. Original scripts pin source and redacted fixture, hash-lock dependencies, guard verification and log test transitions.
 - **455 upstream tests passed, one deliberate skip; 9 original gate tests passed.** Certificate-backed DTLS context/memory BIO constructed; no handshake/client tested.
 - No New World install found in discovered local Steam libraries. No game launched, live packets observed, account created, host mapping changed or trust hook enabled.
+- **Connectivity instrumentation prepared:** loopback HTTPS/SNI probe, safe JSONL, executable discovery and syntax-validated own-process TCP observer. 19 Python control tests + CLI startup/validated HTTP/automatic cleanup pass. These are **not current New World client connections**; [connectivity gate](CURRENT_CLIENT_CONNECTIVITY.md) remains blocked on identifying the installed legitimate executable.
 - **Milestone 1 not achieved.** No private account system, world entry, actor spawning or mutual movement implemented by this workspace.
 
 ## Small independently testable tasks
@@ -39,6 +40,8 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 ## Exact next blocker
 
 The first local development blocker—missing fixtures/unpinned environment—is resolved. The **next live-client gate** is identifying the actual target build and proving how it can use our private bootstrap and trusted DTLS endpoint. This host has no identified game install; public source cannot establish that behavior for the latest legitimate executable.
+
+Prepared measurement apparatus does not complete M1-01 or M1-02: no current game endpoint, resolution, SNI, trust or auth observation exists. Exact pending input is the `NewWorld.exe` installation path (or installation of the owned copy). Continue the [owned-client connectivity procedure](CURRENT_CLIENT_CONNECTIVITY.md) from that identity, not the initial ecosystem tour. User-required gate keeps actor/spawn work and `SPAWN_SEQUENCE.md` deferred.
 
 The next **world-entry protocol blocker** after that gate is establishing/generated actor/replica creation and its self-identification/level/replication dependencies. First Light's proposed three-message minimum is not established. Do not jump straight to movement fan-out or describe current OpenWorld community claims as solving it.
 

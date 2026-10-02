@@ -1,6 +1,6 @@
 # Evidence ledger
 
-Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Only offline source review, public metadata reads and isolated Python tests were authorized/executed. No game clients, hooks, game endpoints, hosts entries or certificate stores were touched.
+Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Initial evidence below concerns offline source review, public metadata and isolated Python tests. The subsequent connectivity slice is recorded separately below. No game clients, hooks, Amazon game endpoints, hosts entries or certificate stores were touched; local Python TLS control services were exercised.
 
 ## Evidence identities
 
@@ -43,3 +43,21 @@ Targeted read-only review found:
 | Is newer documented position replication implemented publicly? | No component decoder/server in pinned full tree; Carrier decoder stops at payload (`decode_dtls_ledger.py:118-234`). E11 survives within that tree. | Treat diagrams as research leads; private work still unknown. |
 
 The original validation harness and its current gate tests are recorded in README and roadmap. No upstream source changed. Only fixture-dependent historical checks were revalidated; transport/auth/spawn runtime claims remain unverified.
+
+## Current-client connectivity slice
+
+Starting checkout `main` at `c77b3c962fd9eaf28b7b2ba25217e0e34ef23903`, clean; original scripts/tests subsequently uncommitted during experiments. [Probe receipt](../research/evidence/connectivity-validation.json) hashes the exact tested source, runner, tests and independently written synthetic fixture. [CLI receipt](../research/evidence/connectivity-cli-control.json) pins probe and generated certificate fingerprints. First Light remains clean/unchanged at its existing pin. Runtime: isolated Python 3.11.9 / OpenSSL 3.0.13; no current New World runtime exists in this evidence.
+
+| ID | Claim | Status / limits | Evidence |
+|---|---|---|---|
+| C01 | No client identified by registered libraries/conventional paths/config directories; no matching process running | Observed **bounded absence**, not exhaustive machine absence. Install-path question pending. | [Discovery](../research/evidence/current-client-discovery.json); `Inspect-CurrentClient.ps1` |
+| C02 | Python loopback TLS 1.2/1.3 clients validate expected CA+SAN; reject missing CA and mismatched hostname | Reproduced control behavior; not game compatibility, Windows user-store or DTLS proof. | 19-test control receipt, `test_connectivity_probe.py` |
+| C03 | Original probe binds only explicit IPv4/IPv6 loopback, records sanitized metadata, implements no auth/forwarding/game transport | Strongly source-supported; malformed/secret/absolute-URL controls produced no leak or forwarding in tested cases. Not exhaustive all-input verification. | `connectivity_probe.py`; tests; independent private tester report |
+| C04 | TLS-success/decrypted HTTP logs do not prove peer certificate verification or executable identity | Reproduced ambiguity with a permissive **Python-only negative control**; logs deliberately retain `unattributed`. No game bypass. | `test_permissive_control_does_not_turn_server_logs_into_validation_proof`; [connectivity doc](CURRENT_CLIENT_CONNECTIVITY.md) |
+| C05 | Historical auth/queue route requests + HTTP 501 are diagnostic rejection, not successful auth/world selection | Reproduced synthetic requests; current route semantics unknown. | Synthetic fixture privacy test; no `GAME_SESSION_SELECTED`/transport-complete events |
+| C06 | Probe CLI genuinely starts, receives CA-validated health HTTP200, stops and releases listener | Reproduced on ephemeral IPv4 loopback; child ownership/cleanup confirmed. Not real game startup or port443/firewall verification. | `verify_probe_cli.py`; CLI receipt |
+| C07 | Own-client observer would record matched executable metadata and sampled TCP four-tuples; does not see DNS/TLS/payloads | Source-supported + PowerShell syntax/analyzer validation only; unexecuted with legitimate game. Sampling may miss short sockets. | `Observe-CurrentClient.ps1`; connectivity procedure |
+| C08 | First Light's redirection uses fixed hosts list + local CA/SAN certificate; REP/DTLS trust is separate | Strongly source-supported. Old flow dated 2025-12-27; historical unknown-ca/patch report unverified on current build. No supported current override proven. | `setup_hosts.py:28-59,69-81`; `generate_auth_certs.py:95-147`; `auth_mock.py:1547-1564`; `docs/dtls-trust-bypass.md:7-14` in external reference |
+| C09 | Current-client endpoint/config, resolver, SNI, certificates/pinning, auth schemas and private-world entry | **Unknown.** Game not found/launched; synthetic controls cannot settle any of these. Spawn cannot begin. | Missing executable and current capture; no `SPAWN_SEQUENCE.md` until required gate |
+
+A failed intermediate control run (18 pass/1 fail) showed client certificate error versus server reset in TLS1.3; an assertion incorrectly required the server CA-alert mnemonic. Test now checks exact client validation error + absent HTTP and retains server's actual reason. This counter-evidence is documented rather than diagnosing all resets as pinning. Existing 455-pass/one-deliberate-skip and 9-gate-test profile was revalidated without upstream/codecs changes; only local control instrumentation is newly proven.

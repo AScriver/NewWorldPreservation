@@ -1,0 +1,9 @@
+{
+  "provenance": "Independently written synthetic HTTP requests; NOT captured New World traffic or known current schemas.",
+  "requests": [
+    {"wire": "POST /prod/credentials/omni?token=fixture-query-secret HTTP/1.1\r\nHost: localhost\r\nAuthorization: Bearer fixture-header-secret\r\nCookie: fixture-cookie-secret\r\nContent-Length: 19\r\n\r\nfixture-body-secret"},
+    {"wire": "GET /prod/game/login/queue/fixture-ticket-secret HTTP/1.1\r\nHost: localhost\r\n\r\n"},
+    {"wire": "GET /unknown/fixture-path-secret?user=fixture-query-secret HTTP/1.1\r\nHost: localhost\r\n\r\n"}
+  ],
+  "must_not_log": ["fixture-query-secret", "fixture-header-secret", "fixture-cookie-secret", "fixture-body-secret", "fixture-ticket-secret", "fixture-path-secret"]
+}

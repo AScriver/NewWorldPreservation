@@ -8,6 +8,7 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 - [Architecture and diagram](docs/ARCHITECTURE.md)
 - [Protocol notes and Capture Before Shutdown](docs/PROTOCOL_NOTES.md)
 - [Client connection flow](docs/CLIENT_FLOW.md)
+- [Current-client connectivity gate and probe procedure](docs/CURRENT_CLIENT_CONNECTIVITY.md)
 - [Milestone 1 tasks and exact next blockers](docs/ROADMAP.md)
 - [Open questions](docs/OPEN_QUESTIONS.md)
 - [Evidence ledger](docs/EVIDENCE_LEDGER.md)
@@ -17,6 +18,17 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 Reproduced pinned First Light on Windows with an isolated Python environment and existing public redacted fixture. **455 upstream tests passed, one deliberate skip; 9 original validation-gate tests passed.** DTLS context/memory-BIO construction works with an ephemeral self-generated certificate; **no handshake, game client, private account, spawn or multiplayer behavior tested**.
 
 Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites. Newer Aeternum-World source (`820156d`) was inspected too. All eight visible First Light fork heads match the historical source. Current community lead: [Open World Discord](https://discord.gg/projectopenworld); no public current server source established. See analysis for limits and provenance.
+
+## Current connectivity slice
+
+Added an original **loopback-only HTTPS/SNI diagnostic**, secret-minimizing structured logs, client executable discovery and a bounded own-process TCP observer. **19 control tests pass**, and a separate CLI lifecycle control receives CA-validated HTTP 200 then verifies listener cleanup. These use Python, **not New World**. Discovery found no current installed client in the checked locations; the exact executable path is required for the live gate. No game was launched, hosts/trust stores changed, binary patched, auth completed or actor spawned. HTTPS and REP/DTLS trust remain separate unproven current-client requirements.
+
+```powershell
+C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
+C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-ConnectivityProbe.ps1 -Execute
+```
+
+See [CURRENT_CLIENT_CONNECTIVITY](docs/CURRENT_CLIENT_CONNECTIVITY.md) for exact controls, historical endpoint sources, failure observations, redirection options **not yet tested on the game**, and the gated live procedure. Safe receipts: [test profile](research/evidence/connectivity-validation.json), [CLI control](research/evidence/connectivity-cli-control.json), [client discovery](research/evidence/current-client-discovery.json). Observer was syntax-validated only; it cannot see DNS/payloads and may miss short-lived connections. No spawn work begins from synthetic success.
 
 ## Reproduce locally
 
