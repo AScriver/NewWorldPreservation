@@ -1,0 +1,3 @@
+# Match the upstream Python/pytest/pyOpenSSL stack; resolution is pinned below.
+pytest>=8.4,<10
+pyOpenSSL>=25,<27

@@ -1,0 +1,58 @@
+{
+  "observedAtUtc": "2026-10-02T05:00:20.530273+00:00",
+  "mode": "offline-only",
+  "milestone1": "not tested",
+  "runDirectory": ".scratch\\validation\\run-52h9ue0j",
+  "reference": {
+    "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "sourceWorktree": "clean",
+    "fixtureSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+    "fixtureBytes": 6910608
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "packages": {
+      "cffi": "2.1.1",
+      "colorama": "0.4.6",
+      "cryptography": "50.0.2",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pycparser": "3.0",
+      "pygments": "2.21.0",
+      "pyopenssl": "26.4.0",
+      "pytest": "9.1.1",
+      "typing-extensions": "4.16.0"
+    },
+    "lockSha256": "483b751596cad95721288c403d87f45d8417b7cbef8679eb2a32ae818e98a4b2"
+  },
+  "dtlsCapability": {
+    "serverContext": "constructed",
+    "memoryBio": "constructed",
+    "certificate": "ephemeral self-generated; deleted",
+    "handshake": "not tested"
+  },
+  "tests": {
+    "total": 456,
+    "passed": 455,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1,
+    "unexpectedSkips": [],
+    "processExitCode": 0,
+    "selectedFiles": [
+      "server/javelin/test_parser.py",
+      "server/javelin/test_codecs.py",
+      "server/javelin/test_replay_substitution.py",
+      "server/test_chunking.py",
+      "server/test_loopback.py",
+      "server/test_captures.py",
+      "server/test_vlq32.py",
+      "server/test_piggyback_ack.py",
+      "server/test_multi_peer.py",
+      "server/javelin/test_shadow_decode.py",
+      "server/javelin/test_heartbeat_encode_validate.py"
+    ]
+  },
+  "status": "passed"
+}

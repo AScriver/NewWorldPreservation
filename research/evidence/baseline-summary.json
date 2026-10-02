@@ -1,0 +1,58 @@
+{
+  "kind": "first-light-windows-offline-baseline-before-fixtures",
+  "upstream_commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+  "upstream_worktree": "clean",
+  "sparse_info_directory_present": false,
+  "runtime": {
+    "platform": "Windows",
+    "python": "3.11.9",
+    "pytest": "9.1.1",
+    "pyopenssl": "26.4.0",
+    "cryptography": "50.0.2",
+    "venv": "C:\\Code\\NewWorldPreservation\\.venv"
+  },
+  "pytest": {
+    "selected_files": [
+      "server/javelin/test_parser.py",
+      "server/javelin/test_codecs.py",
+      "server/javelin/test_replay_substitution.py",
+      "server/test_chunking.py",
+      "server/test_loopback.py",
+      "server/test_captures.py",
+      "server/test_vlq32.py",
+      "server/test_piggyback_ack.py",
+      "server/test_multi_peer.py",
+      "server/javelin/test_shadow_decode.py",
+      "server/javelin/test_heartbeat_encode_validate.py"
+    ],
+    "total": 456,
+    "passed": 402,
+    "skipped": 50,
+    "failed": 4,
+    "errors": 0,
+    "exit_code": 1,
+    "skip_reasons": {
+      "replay file not present": 49,
+      "no captures found in info/": 1
+    },
+    "failed_cases": [
+      "server/javelin/test_codecs.py::test_decode_cli_list_mode",
+      "server/javelin/test_codecs.py::test_decode_cli_seq_path",
+      "server/javelin/test_codecs.py::test_decode_cli_seq_rejects_type_mismatch",
+      "server/javelin/test_codecs.py::test_decode_cli_replay_index_path"
+    ],
+    "failure_classification": "fixture-dependent in sparse checkout; not adjudicated with reference replay present",
+    "junit": "research/evidence/baseline-junit.xml",
+    "output": ".scratch/tester/pytest-output.txt"
+  },
+  "dtls_probe": {
+    "dtls_server_method_present": true,
+    "responder_make_ssl_context": "passed with ephemeral self-signed identity",
+    "memory_bio_connection_accept_state": "passed",
+    "actual_handshake": "not tested",
+    "socket_or_listener": false,
+    "exit_code": 0,
+    "output": ".scratch/tester/dtls-output.txt"
+  },
+  "milestone1_two_clients_same_map_mutual_movement": "not tested"
+}

@@ -1,0 +1,10 @@
+{
+  "observedAtUtc": "2026-10-02T05:07:25.5135990Z",
+  "experiment": "Fresh isolated copy of original bootstrap script and manifest; clone/detach/sparse restore/hash/origin/cleanliness checks",
+  "result": "passed",
+  "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+  "fixtureSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+  "checkoutLineEndings": "core.autocrlf=true explicitly set in cloned reference only",
+  "location": ".scratch\\fresh-reference-c6d5c295dad043ccbc538db0fb21d964",
+  "cleanup": "Retained isolated ignored checkout for reproducibility; no services, clients or temporary keys created."
+}

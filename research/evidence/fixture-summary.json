@@ -1,0 +1,9 @@
+{
+  "observedAtUtc": "2026-10-02T04:35:55.4068597Z",
+  "sourceCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+  "sourcePath": "info/nw-login-safe-20260502-153840/messages-redacted.txt",
+  "bytes": 6910608,
+  "sha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+  "scope": "Public upstream redacted reference, restored only in ignored external checkout. Raw traffic, client assets and keys are not retrieved; no packet bytes are exported.",
+  "caveat": "Upstream redaction is historical evidence, not a guarantee that all sensitive spans are recognized. Keep external and private."
+}

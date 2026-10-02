@@ -30,7 +30,7 @@ C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Initiali
 C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-FirstLight.ps1 -Execute
 ```
 
-The wrapper validates each entire PowerShell script before running it in `pwsh -NoProfile`. `Get-FirstLightReference` downloads public reference code and a redacted fixture into ignored `research/upstream/`; it checks origin, commit, cleanliness and fixture hash and does not overwrite a changed checkout. `Initialize-DevEnvironment` syncs hash-pinned packages **only in this workspace's .venv**. It does not re-resolve the lock or alter global Python packages.
+The wrapper validates each entire PowerShell script before running it in `pwsh -NoProfile`. `Get-FirstLightReference` downloads public reference code and a redacted fixture into ignored `research/upstream/`; it checks origin, commit, cleanliness and fixture hash and does not overwrite a changed checkout. New references explicitly use Windows CRLF conversion; the fixture pin identifies those checkout bytes, not the canonical Git blob. `Initialize-DevEnvironment` syncs hash-pinned packages **only in this workspace's .venv**. It does not re-resolve the lock or alter global Python packages.
 
 `Test-FirstLight` runs our verification-gate tests and an explicit11-module upstream profile. It refuses wrong source/dependency/fixture identities, unexpected skips, zero/changed test coverage, failures or errors. Avoid bare upstream `pytest`: `server/test_client.py` is a CLI with import-time exit behavior. Site/dashboard test profiles are not included in this protocol/runtime profile.
 

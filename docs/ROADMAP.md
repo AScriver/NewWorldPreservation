@@ -50,7 +50,7 @@ Incrementally add durable private accounts/characters/positions, authoritative c
 
 ## Verification and handoff
 
-Run the scripts in [README](../README.md). Current original receipt: `research/evidence/latest-validation.json`; historical sparse and fixture-enabled receipts remain separate. Raw output stays ignored in `.scratch/`.
+Run the scripts in [README](../README.md). Current original receipt: `research/evidence/latest-validation.json`; historical sparse and fixture-enabled receipts remain separate. Fresh isolated bootstrap validation is recorded in `research/evidence/fresh-reference-summary.json`. Raw output stays ignored in `.scratch/`.
 
 Every future packet change must record: upstream/source dirty-state identity, exact client build, fixture hash, direction/state/channel/type, input/output relationships, positive and rejection cases, and remaining unknowns. Relevant edits stale affected evidence only. Add structured transition logs when implementing connection behavior; no tokens/keys/raw bodies in normal logs.
 

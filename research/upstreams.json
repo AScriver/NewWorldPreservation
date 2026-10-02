@@ -5,6 +5,7 @@
     "directory": "research/upstream/first-light",
     "fixture": "info/nw-login-safe-20260502-153840/messages-redacted.txt",
     "fixtureSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+    "fixtureHashFormat": "Windows checkout bytes with core.autocrlf=true; canonical Git blob SHA256 is 8ce2e5164985f4288ea0c4f83002d1bfd8dcecaa1bb091033900cd6f8ffc7e2e",
     "license": "No license file or detected license at this commit; keep external, do not vendor."
   },
   "aeternumWorld": {
