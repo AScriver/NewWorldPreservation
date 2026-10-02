@@ -1,0 +1,19 @@
+{
+  "requestedAtUtc": "2026-10-02T06:59:07.3165264Z",
+  "appId": 1063730,
+  "method": "Existing official Steam client, steam://install/1063730",
+  "steamExecutable": "C:\\Program Files (x86)\\Steam\\steam.exe",
+  "steamSignature": "Valid Valve signature",
+  "credentialsRead": false,
+  "requestDispatched": true,
+  "downloadObserved": false,
+  "statusObservedAtUtc": "2026-10-02T07:04:10.9149206Z",
+  "library": "C:\\Program Files (x86)\\Steam",
+  "manifestPresent": false,
+  "partialDownloadDirectoryPresent": false,
+  "gameLaunched": false,
+  "nativeWindowControlAvailable": false,
+  "browserAlternative": "Steam account page redirected to Sign In; temporary tab closed without credential entry",
+  "nextAction": "User completes Steam installation dialog; then inspect manifest/download completion and current executable identity",
+  "limits": "Dispatching a Steam URI does not demonstrate entitlement, dialog acceptance or completed installation. No diagnosis of license failure."
+}
