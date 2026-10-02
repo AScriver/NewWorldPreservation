@@ -4,9 +4,9 @@
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-**Latest furthest verified state:** synthetic token/credentials accepted and **login-info200 renders the selectable Preservation character, world label and frontend avatar preview**. Play produces an attributed POST `/prod/game/login/queue/v2/<redacted>/omni` (644bytes, discarded), deliberately501. No ticket, world-loading, in-world actor, game transport or Milestone1. No cursor/keyboard control was used.
+**Latest furthest verified state:** accepted synthetic token/credentials/login-info render selectable Preservation/world/frontend preview. Play sends attributed queue-v2 POST644bytes (discarded); our original829byte200 response selects127.0.0.1:64003, where ten owned-client **DTLS ClientHello-header datagrams** arrive. Observer sends no replies. **No completed game handshake, DTLS trust result, world-loading screen, in-world actor or Milestone1.** No cursor/keyboard control was used.
 
-Latest evidence and procedure: [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md), [metadata receipt](../research/evidence/current-login-info.json). Credentials/token and earlier501-login-info results are historical stopping points. The current query-bearing login-info request initially failed our raw-target guard; a separate diagnostic isolated it, then path-only matching served the original965byte candidate successfully. Query values/signatures were not saved. Queue-v2/ticket handoff and REP/DTLS remain unresolved. The same CA was reused and retained; no new certificate approval was required.
+Latest evidence and procedure: [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md), [metadata receipt](../research/evidence/current-queue-handoff.json). Credentials/token,501-login-info and501-queue are historical stopping points. Path-only matching corrected the query-bearing login-info guard without saving query values/signatures. Queue response/address handoff is now observed; secure private account/ticket validation and REP/DTLS handshake/trust remain unresolved. The same CA was reused and retained; no new certificate approval was required.261 explicit workspace tests pass,48 new; [validation receipt](../research/evidence/current-queue-handoff-validation.json).
 
 | Identity | Verified value / limit |
 |---|---|
@@ -34,9 +34,13 @@ flowchart TD
     Regions --> Token[Token hostname redirected to owned ::1:443]
     Token --> TokenTLS[TLS1.3: SNI tokenservice.amazongames.com]
     TokenTLS --> Post[POST /games/new-world/tokens: HTTP1.1]
-    Post --> Stop[Private diagnostic501: session fails]
-    Stop -. response contract unknown .-> Auth[Private authentication / session selection]
-    Auth -. unverified .-> REP[Game transport REP / DTLS and actor creation]
+    Post --> TokenAccepted[Current synthetic token200: SDK0]
+    TokenAccepted --> Credentials[Local credentials GET: compatible synthetic200]
+    Credentials --> Preview[Login-info200: selectable Preservation /frontend preview]
+    Preview --> Queue[User Play: queue-v2 POST /synthetic200]
+    Queue --> UDP[Owned127.0.0.1:64003: DTLS ClientHello-header observations]
+    UDP --> Stop[Receive-only observer: no reply /connection-error popup]
+    UDP -. unverified .-> REP[DTLS handshake/trust /Carrier V3 /world actor]
 ```
 
 | Stage | Actual evidence and boundary |
@@ -50,8 +54,8 @@ flowchart TD
 | Other sockets | Baseline game TCP table had ports 443 and 80 on public IPs. No hostname/SNI/payload attribution for these; port80 alone is not proof of HTTP. Unrelated process traffic was not captured. |
 | Current token/session request | Fresh owned PID31396/start17:35:29.4344206Z; exact socket owner for bootstrap and all three token connections. FirstPOST17:35:43.026Z: SNI/Host `tokenservice.amazongames.com`, TLS1.3/`TLS_AES_256_GCM_SHA384`, selectedALPNnull, HTTP1.1, declared body2941bytes, no Authorization/Cookie. Bodies discarded, not inspected or saved. Length is not a fixed protocol size. |
 | Current descriptor / endpoint selection | Original local shape plus original token URL hostnames; only three explicitly allowed hostnames mapped to loopback. Five unique local names parsed again. No request to `prod.newworld.com` observed. Original token hostname could come from metadata or a matching hardcoded default: not distinguished. Collapsed origin previously produced204/no tokenHTTP, but that does not establish204's cause. |
-| Character/world/session / spawn | HTTP200 discovery and tokenHTTP now observed;501 token rejection is not successful authentication. SDK result201 after501 is unknown, not HTTP201. No character/world selection, actor or REP connection. |
-| Game transport / reconnect | No UDP/DTLS connection, actor or in-world reconnect tested. Fresh launches are startup controls, not game reconnect semantics. |
+| Character/world/session / spawn | Latest compatible synthetic token/credentials/login-info/queue200 advances through character preview/Play to the selected owned UDP endpoint. Earlier501/SDK201 observations remain historical; not official authorization, secure private accounts or actor spawning. |
+| Game transport / reconnect | Latest ten159byte ClientHello-header datagrams at owned loopbackREP; no reply/certificate/handshake. User saw Play-button spinner then connection error, not world loading. In-world reconnect untested; fresh launches are startup controls. |
 
 Baseline log read SHA-256: `11c17fd275b648ca0a55a0407a59b43ca7dee87927a3eeb83f4ac1083ce92de3`, 44,996 bytes. Source log is not copied into this repository. Whitelist metadata stays ignored; public receipt retains only approved hostname/version/provenance fields. Extractor timestamps are extraction times, **not source-event times**; growing-log reads are explicitly marked unstable.
 
@@ -74,7 +78,7 @@ Exact timestamps/fingerprints/source hashes are authoritative in the receipt. Th
 
 Server `TLS_ESTABLISHED` alone is not client trust proof: even the untrusted/wrong-name game controls emitted it. The certificate conclusions rely on differential HTTP behavior, matching socket ownership, and restoration. Do not classify a reset or absent request as pinning. No TLS validation was disabled in the game.
 
-**Later token-origin positive control:** with the exact local CA confirmed trusted **before launch** and a matching `tokenservice.amazongames.com` SAN, the stock client sent three POSTs over TLS1.3. This demonstrates compatible local trust for that endpoint; mandatory Amazon-only pinning did not prevent it. Token-specific absent-CA/wrong-SAN reversals were not executed. `prod.newworld.com`, regional auth/gateway HTTPS and game DTLS trust are untested. No process-memory inspection, binary patch, EAC change or validation bypass was needed.
+**Later token-origin positive control:** with the exact local CA confirmed trusted **before launch** and a matching `tokenservice.amazongames.com` SAN, the stock client sent three POSTs over TLS1.3. This demonstrates compatible local trust for that endpoint; mandatory Amazon-only pinning did not prevent it. Token-specific absent-CA/wrong-SAN reversals were not executed. Subsequent credentials/login-info/queue HTTPS works through the local regional bootstrap alias; this does not prove every original regional hostname's trust. `prod.newworld.com` and game DTLS trust remain untested. No process-memory inspection, binary patch, EAC change or validation bypass was needed.
 
 ## Redirection options, failures and limits
 
@@ -91,7 +95,7 @@ Instrumentation failures retained: original observer silently skipped path-inacc
 
 ## Smallest service and structured transitions
 
-The original transport probe accepts TLS and returns501 except health. The [latest bootstrap/token checkpoint](BOOTSTRAP_CHANNEL.md) adds a strict local HTTP200 descriptor and explicit original-hostname routing profile: five local region names parsed, then three token POSTs reached us. Earlier collapsed-token204/no-session behavior is retained as historical. Field requiredness, successful response schema and follow-on selection remain unknown. Neither service forwards, invents auth success or saves headers/bodies. Do not reuse First Light's synthetic fallback verbatim.
+The initial transport probe accepts TLS and returns501 except health. Later original handlers add compatible synthetic descriptor/token/credentials/login-info/queue responses; [current service and procedure](PRIVATE_GAME_HANDOFF.md) reaches our owned UDP observer. Earlier collapsed-token204 and501 stops remain historical. Secure private account/ticket validation and field requiredness remain unknown. Services do not forward or save auth values/bodies; synthetic compatibility is not official authorization. Do not reuse First Light's fallback verbatim.
 
 All server/mutation/observer events have UTC timestamps. Server events carry run/connection UUIDs and ordered sequence numbers; logs flush per transition. Important states:
 
@@ -100,8 +104,9 @@ All server/mutation/observer events have UTC timestamps. Server events carry run
 - `CONNECTION_ATTEMPT` → `CONNECTION_OWNER_OBSERVED`: accept-time exact client-side tuple lookup through Windows IP Helper, not 500ms polling alone. Only that tuple's PID is returned; unrelated table rows are discarded.
 - `TLS_CLIENT_HELLO` → `TLS_ESTABLISHED` / `TLS_FAILED`: SNI callback, negotiated values, bounded error mnemonic. No full ClientHello/session-key capture.
 - `HTTP_REQUEST` → `HTTP_RESPONSE`: route/method/version/body-length/header-presence metadata only.
-- `AUTHENTICATION_REQUEST` / rejected `AUTHENTICATION_RESPONSE` and `GAME_SESSION_SELECTION_REQUEST`: already instrumented historical-route classifications; **not reached in these private tests**. No successful selection/transport state emitted.
-- `TOKEN_SESSION_REQUEST` / rejected `TOKEN_SESSION_RESPONSE`: actual current token path observed; timestamps/correlation, declared length/header-presence and501 response only. Authentication is explicitly false; body/credential capture is explicitly false.
+- `AUTHENTICATION_REQUEST` / `AUTHENTICATION_RESPONSE`: initial historical route classifications; latest original handlers log current compatible token/credentials response delivery, not secure authentication.
+- `TOKEN_SESSION_REQUEST` / `TOKEN_SESSION_RESPONSE`: current token route observed; earlier501 and later synthetic200 phases separately identified; request values are discarded.
+- Current selection/queue/UDP events and their ownership/state limits are specified in [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md). No successful game DTLS/session/world state is emitted.
 - `CONNECTION_CLOSED`, CA/hosts mutation/readback/restoration events and bounded listener stop/ownership checks.
 
 Probe events deliberately remain `client_identity:unattributed`; the evidence receipt performs the PID/start-time/socket correlation. Socket ownership is not live-image verification. API layout references: [GetExtendedTcpTable](https://learn.microsoft.com/windows/win32/api/iphlpapi/nf-iphlpapi-getextendedtcptable), [IPv4 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcprow_owner_pid), [IPv6 owner row](https://learn.microsoft.com/windows/win32/api/tcpmib/ns-tcpmib-mib_tcp6row_owner_pid). These are OS metadata, not invented New World packet layouts.
@@ -152,7 +157,7 @@ The historical bootstrap hostname/path still applies to this current build; sour
 
 Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
 
-**Exact next blocker:** compatible response to current **GET `/prod/credentials/omni`** and subsequent private game-session handoff. [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md) establishes a token envelope that reaches this request, not a complete account system. SDK201/204 meanings remain unknown; empty-model203 and accepted-model0 have current controlled observations. Successful private game auth/selection and separate REP/DTLS precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented. Routing/process cleanup and the explicitly retained current test CA are recorded with the trials.
+**Exact next blocker:** current-client **REP/DTLS handshake and certificate trust**. Compatible synthetic credentials/selection/queue-to-owned-UDP handoff is now observed, not a secure private account/ticket system. [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) pins this result. Subsequent current Carrier/V3 and spawn/private-identity evidence still gate live actor work; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) is not a current actor recipe. No gameplay implemented. Routing/process cleanup and the intentionally retained current CA are recorded with each trial.
 
 ## Capture Before Shutdown
 

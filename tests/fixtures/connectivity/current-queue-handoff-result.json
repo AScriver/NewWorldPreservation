@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "kind": "observed_queue_to_udp_metadata_not_packets",
+  "steam_build_id": "22469132",
+  "file_version": "1.400.6031.6004151",
+  "client_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "queue": {
+    "timestamp_utc": "2026-10-02T20:45:07.369Z",
+    "method": "POST",
+    "body_bytes": 644,
+    "path_template": "/prod/game/login/queue/v2/<redacted>/omni",
+    "http_status": 200,
+    "response_bytes": 829,
+    "response_sha256": "628bca819e5995a8e0eec41405f2d3750ea75691ab1fac98f924357f45b9aeca",
+    "exact_owned_client_tcp_tuple": true,
+    "request_values_saved": false,
+    "request_schema_validated": false
+  },
+  "transport": {
+    "destination": "127.0.0.1:64003",
+    "observed_datagrams": 10,
+    "first": {
+      "timestamp_utc": "2026-10-02T20:45:07.530Z",
+      "datagram_bytes": 159,
+      "datagram_class": "dtls_client_hello_header",
+      "record_version": "DTLS1.2",
+      "record_content_type": "handshake",
+      "record_epoch": 0,
+      "first_record_bytes": 146,
+      "first_record_complete": true,
+      "client_hello_complete": true,
+      "client_hello_body_validated": false,
+      "negotiated_version_proven": false,
+      "payload_saved": false,
+      "handshake_established": false,
+      "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow"
+    },
+    "last_timestamp_utc": "2026-10-02T20:45:22.606Z",
+    "all_datagrams_bound_port_owned_by_fresh_client": true,
+    "datagram_reply_sent": false
+  },
+  "user_report": {
+    "play_clicked": true,
+    "play_button_spinner_then_popup": true,
+    "final_popup": "Unable to connect to the server",
+    "frontend_character_visible": true
+  },
+  "claims": {
+    "handoff_to_owned_udp_observed": true,
+    "secure_private_accounts_implemented": false,
+    "game_dtls_trust_tested": false,
+    "game_handshake_complete": false,
+    "world_loading_observed": false,
+    "world_entry_proven": false,
+    "actor_spawn_proven": false
+  }
+}

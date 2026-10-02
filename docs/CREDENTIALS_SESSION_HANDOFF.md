@@ -1,6 +1,6 @@
 # Current credentials and private-session handoff
 
-**Newer selection checkpoint:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) supersedes the login-info501 stopping point below: query-aware path matching served a synthetic965byte model, rendered Preservation and produced queue-v2 after Play. The credentials evidence below is unchanged. Ticket/game transport remain unresolved.
+**Newer checkpoint:** [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) supersedes the login-info501 stopping point below: compatible synthetic selection/queue200 advances to owned-loopback DTLS ClientHello-header observations. The credentials evidence below is unchanged. Secure private ticket validation, DTLS handshake/trust and world entry remain unresolved.
 
 ## Verified checkpoint: 2026-10-02
 

@@ -22,3 +22,14 @@
 /tests/fixtures/connectivity/current-login-info-result.json text eol=lf
 /research/evidence/current-login-info.json text eol=lf
 /research/evidence/current-login-info-validation.json text eol=lf
+/scripts/queue_contract_probe.py text eol=lf
+/scripts/udp_handoff_probe.py text eol=lf
+/scripts/windows_udp_owner.py text eol=lf
+/tests/test_queue_contract_probe.py text eol=lf
+/tests/test_udp_handoff_probe.py text eol=lf
+/tests/test_windows_udp_owner.py text eol=lf
+/tests/test_current_queue_handoff.py text eol=lf
+/tests/fixtures/connectivity/current-queue-parser-candidate.json text eol=lf
+/tests/fixtures/connectivity/current-queue-handoff-result.json text eol=lf
+/research/evidence/current-queue-handoff.json text eol=lf
+/research/evidence/current-queue-handoff-validation.json text eol=lf

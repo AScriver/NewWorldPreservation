@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "kind": "current_private_queue_handoff_evidence",
+  "checkout_head_before_edits": "71cbca2d5c39e6cb5db65e9f9bcbd3ca78aa7e84",
+  "exercised_sources_dirty": true,
+  "sources": {
+    "scripts/queue_contract_probe.py": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+    "scripts/udp_handoff_probe.py": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919",
+    "scripts/windows_udp_owner.py": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf",
+    "scripts/session_handoff_probe.py": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+    "scripts/credentials_contract_probe.py": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+    "scripts/token_contract_probe.py": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+    "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+    "tests/fixtures/connectivity/current-queue-parser-candidate.json": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99"
+  },
+  "source_identity": {
+    "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+    "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+    "head": "71cbca2d5c39e6cb5db65e9f9bcbd3ca78aa7e84",
+    "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+    "session_handoff_probe_sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+    "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358",
+    "scripts_queue_contract_probe_py_sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+    "scripts_udp_handoff_probe_py_sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919",
+    "scripts_windows_udp_owner_py_sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf",
+    "tests_fixtures_connectivity_current_queue_parser_candidate_json_sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99"
+  },
+  "run_directory": "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf",
+  "owned_client": {
+    "live_path_verified": false,
+    "start_time_utc": "2026-10-02T20:44:33.2930389Z",
+    "process_id": 24748,
+    "launch_boundary_utc": "2026-10-02T20:44:28.7533440Z",
+    "identity_basis": "exclusive_fresh_normal_Steam_launch_PID_and_start_time_not_memory",
+    "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\baseline-10e9dadc41a14b60adbc8e75ba8daf06\\launch-manifest.json",
+    "timestamp_utc": "2026-10-02T20:44:33.3465594Z"
+  },
+  "private_sources": {
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\run-manifest.json": "2b6e0575de6dbb30e49854b343311721b822c53e24a64fa3661269d567df56eb",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\owned-client.json": "e941ca7376c1901036e208394cfcabdc995ca7ba87dd79883b03e12f814a6493",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\bootstrap-v4.jsonl": "a24e2bda1c840bf6604aa786e952a5fcc27ec2308dfd682ebc01af8ac28ad939",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\bootstrap-v6.jsonl": "a1b6dfe0754634e9aa9816255f56cea74e1bd637f5dc6e2aeb89785e9dc06553",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\bootstrap-log-final.json": "b1a780f5ae6c0609bd45fea0aa322763f719e5ceeb0e878111e6a85c2072b6da",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\trial-window.jsonl": "3bbee6d3d3a28f99f630602eacc730ae17f3d2779a817bd2895d7a90f1adc694",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\trial-dispatch.json": "8bd5c12f95c71a8ace77f6fd7b9d7be83c9eee52f995ccc8330d211d3c82b175",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\cleanup-readback.json": "2243b30fd9a7c1a549a0c260cc7fdcadf1e3ca25459d7a895ef5d3789905ef8d",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\udp-handoff.jsonl": "a2ed67356dc9d977782e8cb031228d08b7a86229c09c63388d6bd4a8ed5fc8a6",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\udp-ownership.json": "b3d7f239781f875819aead4b8b98c80fcf8b9ea688684e2e21302ad7f232bf88",
+    "private\\connectivity\\token-contract-credentials-24ec4c1dc1b445eeb94b6d9947822caf\\udp-cleanup.json": "8e3414fe73a6fef1bde080458b0f2c2b12292e909019e476c96068d8ec1998a8"
+  },
+  "private_static_inspection": {
+    "net-inspect-1474e1370.txt": "09532c4849313a7ba4c94d68acb2966652cb9e44b881d4cf1574626f1da9f211",
+    "net-inspect-1474e89d0.txt": "1357c35aa689fbb3f4c5db32be32087a5b1875adbed8c9960f6ddfdf3ac64999",
+    "net-inspect-1474e4f20.txt": "62c75b71f64fa95438397922f70beca2a7d0fe8c9d41af798df93d181d4def98",
+    "net-inspect-1474e5990.txt": "b64a8911b934a369499dd834a2e62f3c14235339a4d189de86e700bcfb40fe83",
+    "net-inspect-147465440.txt": "8608ea1ccaa81bcd0f5f4b99050aed02195db81d290fac65ba7ebb82bffefcb2",
+    "net-inspect-1463e6650.txt": "6c9b7872ae879c5484a5dada2b2d4e081a4fa43d7e663307324f815f1a70716f",
+    "net-inspect-1463e6d30.txt": "583d3f9175bba03ee9e317f64df0c9d3b40fc76489cb1279416162d8d895d384"
+  },
+  "own_log_sha256": "eb2247f3f604a47a28ab817584d608afc37c02f48edbfe2ec7cad2fda8cd9df1",
+  "cleanup_readback": {
+    "schema": 1,
+    "timestamp_utc": "2026-10-02T20:47:57.4984906Z",
+    "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+    "owned_rule_absent": true,
+    "game_absent": true,
+    "listeners_absent": true,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "retained_ca_root_count": 1,
+    "ca_removed": false,
+    "ca_regenerated": false,
+    "inputs_controlled": false,
+    "memory_accessed": false
+  },
+  "udp_cleanup": {
+    "timestamp_utc": "2026-10-02T20:47:55.2545160Z",
+    "state": "OWNED_UDP_OBSERVER_ABSENT",
+    "port": 64003,
+    "controlled_shutdown_not_graceful": true
+  },
+  "claims": {
+    "handoff_to_owned_udp_observed": true,
+    "secure_private_accounts_implemented": false,
+    "game_dtls_trust_tested": false,
+    "game_handshake_complete": false,
+    "world_loading_observed": false,
+    "world_entry_proven": false,
+    "actor_spawn_proven": false
+  },
+  "udp_identity_limit": "OS_IPv4_bound_endpoint_owner_not_exact_UDP_flow_or_live_image_hash",
+  "user_cache_cleared": false,
+  "clock_units_and_expiry_verified": false,
+  "downstream_signature_validation_verified": false,
+  "request_schema_verified": false,
+  "inputs_controlled": false,
+  "memory_accessed": false,
+  "ca_regenerated_or_imported": false,
+  "dtls_primary_source": "https://www.rfc-editor.org/rfc/rfc6347.html",
+  "udp_owner_primary_source": "https://learn.microsoft.com/windows/win32/api/iphlpapi/nf-iphlpapi-getextendedudptable"
+}

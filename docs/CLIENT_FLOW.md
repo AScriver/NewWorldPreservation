@@ -1,8 +1,8 @@
 # Client connection flow
 
-**Latest current-build checkpoint:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) verifies local credentials -> login-info200 -> selectable Preservation/world/preview -> user Play -> queue-v2 POST644bytes/diagnostic501. No private ticket/REP/world actor. Earlier current stopping points below remain historical evidence, not today's result.
+**Latest current-build checkpoint:** [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) verifies synthetic local credentials ->login-info200 ->selectable Preservation/world/preview ->user Play ->queue-v2 POST644bytes ->original queue200829bytes ->owned127.0.0.1:64003 DTLS ClientHello-header observations. Receive-only observer; no handshake/certificate/trust test, world loading or actor. Earlier stopping points below remain historical evidence, not today's result.
 
-Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. This document is the **historical server-side flow**, not a current-client packet recipe. Current bootstrap -> token model -> **local credentials acceptance / Campfire login-success -> gateway login-info request** is verified in [CREDENTIALS_SESSION_HANDOFF](CREDENTIALS_SESSION_HANDOFF.md). User reached character-selection frontend; login-info currently501, no private ticket/REP/world proof. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
+Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. The diagram/table are the **historical server-side flow**, not a current-client packet recipe. The current observed state machine and exact reproduction live in [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md); compatible synthetic selection/handoff is not secure private-account authorization. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
 
 ## Intended and historical flow
 

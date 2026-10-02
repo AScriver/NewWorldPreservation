@@ -1,16 +1,16 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
-**Latest gate:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) verifies local login-info200 -> Preservation character/world/frontend avatar -> Play -> queue-v2 POST501. The preview is not a world actor. Queue ticket, REP trust, registration and actor contract remain gates; earlier stopping points below are historical.
+**Latest gate:** [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) verifies synthetic selection/queue200 ->owned loopback DTLS ClientHello-header observations. The frontend preview is not a world actor, and the Play-button spinner is not world loading. DTLS handshake/trust, secure private ticket binding, registration and actor contract remain gates; earlier stopping points are historical.
 
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 accepts synthetic credentials and login-info200, renders selectable Preservation/world/frontend avatar, and reaches private queue-v2 POST after Play; queue is deliberately501. See [selection contract](LOGIN_INFO_CONTRACT.md). **No ticket, REP handshake, in-world actor, initial transform or world visibility is observed.** Offline spawn research can continue; live spawn implementation remains gated.
+Current build `1.400.6031.6004151` / Steam22469132 accepts original synthetic credentials/login-info/queue200 and attempts DTLS at selected127.0.0.1:64003. The observer sends no replies/certificate; **no REP handshake/trust result, world loading, in-world actor, initial transform or world visibility**. Offline spawn research can continue; live spawn implementation remains gated.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
 ## State machine
 
-The bootstrap/token/credentials prefix below is current observed ordering. The subsequent edges are historical source-supported ordering or explicitly future/unresolved hypotheses, not replay validated with our game. Numeric state labels refer to old static analysis, **not measured current-client state values**.
+The prefix through owned UDP attempt below is current observed ordering. Subsequent edges are historical source-supported ordering or explicitly future/unresolved hypotheses, not replay validated with our game. Numeric state labels refer to old static analysis, **not measured current-client state values**.
 
 ```mermaid
 stateDiagram-v2
@@ -22,13 +22,12 @@ stateDiagram-v2
     LocalCredentialsAccepted --> GatewayLoginInfo: current GET / character-selection frontend
     GatewayLoginInfo --> PrivatePreview: current synthetic login-info200
     PrivatePreview --> QueueV2: user selection and Play
-    QueueV2 --> DiagnosticStop: current queue stub501
+    QueueV2 --> OwnedUDPAttempt: current synthetic829byte200 /selected REP
+    OwnedUDPAttempt --> DiagnosticStop: receive-only observer /no DTLS reply
     DiagnosticStop --> [*]
-    GatewayLoginInfo --> Authenticated: future private selection/ticket contract unresolved
-    Authenticated --> CharacterWorldSelected: historical login-info / queue
-    CharacterWorldSelected --> TicketReady: ticket / world / REP address
-    TicketReady --> DTLSConnected: separate UDP DTLS trust
-    DTLSConnected --> CarrierConnected: historical SM_CONNECT request / ACK
+    OwnedUDPAttempt --> DTLSConnected: NEXT separate UDP DTLS handshake/trust
+    DTLSConnected --> PrivatePeerBound: future secure ticket-to-peer ownership
+    PrivatePeerBound --> CarrierConnected: historical SM_CONNECT request / ACK
     CarrierConnected --> RegisteredV3: historical request0x13 / response0x03
     RegisteredV3 --> SelfIdentWait: historical state10
     SelfIdentWait --> SelfIdentified: proposed0x5d1; body unresolved
@@ -69,11 +68,11 @@ Reusable now: transport framing/codec round-trip tests, per-peer DTLS scaffoldin
 
 ## Independently testable next tasks
 
-1. **Token envelope handoff (proven; credentials response next):** [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md) records empty-model203 and two synthetic models accepted withSDK0, then actual local credentials GET501. Top-level account can be omitted for this handoff. Later token/credentials semantics and private identity ownership remain unresolved; no real-token replay.
-2. **Private auth/selection contract:** exact current methods/redacted schemas and state relationships, then isolated local account/character ownership tests. Stub rejection is not auth success.
-3. **Separate transport gate:** correct selected REP address, own current-client DTLS handshake/trust, Carrier connect and V3 request/response with secret-minimizing traces. A two-Python-peer DTLS test is useful offline but is not this gate.
+1. **Compatible HTTP/address handoff (proven):** current original token/credentials/selection/queue response fixtures advance to owned UDP; [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md). Not secure account/ticket validation and no real-token replay.
+2. **Separate transport gate (next):** answer selected REP ClientHello, establish own current-client DTLS handshake/trust, then Carrier connect and V3 request/response with secret-minimizing traces. Two isolated Python DTLS peers are the first offline transport check, not real-client acceptance.
+3. **Private auth/session ownership:** exact current request schemas/state relationships and isolated local account/character/ticket-to-peer tests. Synthetic compatibility is not authorization.
 4. **Current spawn fixture:** relate registration, self-identification, actor/replica creation, ownership, initial transform and visibility. Record state/frame direction/channel, build, byte boundaries, stable **sanitized** ID correlations and positive/negative outcomes. Validate codec parsing/serialization before changing them.
 5. **One-player visible actor:** emit the minimum validated sequence with structured logs and demonstrate local world/actor state. Stop expansion at that success as requested.
 6. **Second distinct player:** independent private account/session/actor, bilateral position/rotation changes, removal/reconnect without duplicate actor. No combat/NPC/inventory/persistence work beforehand.
 
-**Exact immediate blocker is the current credentials response/private game-session handoff, not token connectivity or a guessed spawn packet.** Current evidence permits offline spawn analysis; live actor implementation still waits for successful private game auth/selection, transport and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.
+**Exact immediate blocker is current-client REP/DTLS handshake and certificate trust.** Current evidence permits offline spawn analysis; live actor implementation still waits for transport/registration, private identity ownership and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.

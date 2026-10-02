@@ -1,5 +1,7 @@
 # Current private character-selection checkpoint
 
+**Historical stopping point below:** later [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) serves queue200 and observes the current client's owned-loopback DTLS attempt. No completed handshake or world actor. This document retains the selection experiment and its earlier deliberate queue501.
+
 ## Observed result
 
 Steam build **22469132**, file version **1.400.6031.6004151**, installed SHA256 `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e`. With the same retained CA and unchanged stock client, an original synthetic login-info response rendered **Preservation**, its **Preservation Local** world label and a frontend avatar preview. The user selected it and pressed Play; an attributed queue-v2 POST followed and received our deliberate501. **No world entry, REP connection or player actor is proven.**
@@ -24,7 +26,7 @@ Run `token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc`; starting clea
 | Login-info GET |20:22:57.880Z, body0/auth-present, local regional alias TLS1.2|Sanitized `/prod/game/getlogininfo/<redacted>/omni`; query values discarded|
 | Synthetic login-info200 |965bytes, SHA `8b9019b4a1133be82ce3532592d3298faccb8a234129d93b1e41ba9a7b3b03b5`|Original controlled candidate, not captured official response|
 | Character preview and Play |User report/screenshots|Frontend avatar is not an in-world actor|
-| Queue-v2 POST |20:23:20.758Z,644bytes/auth-present, same owned PID/TLS1.2;501|Body discarded, no queue response/ticket issued|
+| Queue-v2 POST |First20:23:19.989Z; sixth retry20:23:20.758Z;644bytes/auth-present, same owned PID/TLS1.2;501|Body discarded, no queue response/ticket issued in this historical trial|
 | Cleanup |Client stopped20:24:27.299Z before hosts/rule restore20:24:28.401Z; listeners absent20:24:44.416Z; OS readback20:24:46.619Z|Original hostsSHA, rule/client/listeners absent; same CA Root1 intentionally retained|
 
 ## Current static model evidence

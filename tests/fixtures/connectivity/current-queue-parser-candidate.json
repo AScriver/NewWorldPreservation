@@ -1,0 +1,34 @@
+{
+  "LoginQueueResponse": {
+    "AllowQueueTransfer": false,
+    "EstimatedTime": 0,
+    "Position": 0,
+    "QueueName": "Preservation Local",
+    "RecommendedTransferWorldId": "",
+    "RefreshInterval": 1,
+    "TicketId": "00000000-0000-4000-8000-000000000030",
+    "Token": {
+      "AccountAge": 18,
+      "AccountIsLocked": false,
+      "ChannelId": "Retail",
+      "CharacterId": "00000000-0000-4000-8000-000000000020",
+      "ClientCapabilities": "",
+      "GenerateTime": 1893456000.0,
+      "HostHash": "",
+      "IsPermanentAppOwner": true,
+      "IsTrialOwner": false,
+      "IssueTime": 1893456000.0,
+      "JwtClaims": "",
+      "LocationGroupId": "pdx-prod",
+      "LocationId": "pdx-nwp-local-1",
+      "PersonaId": "00000000-0000-4000-8000-000000000002",
+      "RepAddress": "127.0.0.1:64003",
+      "Signature": "nwp-synthetic-signature-not-issued-by-amazon",
+      "SteamAppId": 1063730,
+      "SteamUserId": "",
+      "TicketId": "00000000-0000-4000-8000-000000000030",
+      "TokenVersion": 1,
+      "WorldId": "pdx-nwp-local-1"
+    }
+  }
+}
