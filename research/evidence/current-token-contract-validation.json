@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-02T19:19:55.409453+00:00",
+  "head_before_local_checkpoint": "b18861c8498a8f43a8df5f6cb132b9026b564745",
+  "source_was_dirty": true,
+  "python_version": "3.11.9",
+  "results": {
+    "focused": {
+      "passed": 88,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_private_path": ".scratch\\token-contract-tests.xml",
+      "junit_sha256": "c8d3754cd8aeb83861582b2e8e70584951cbbbd6aec1b36559bd396c6b1eb9d0",
+      "counts_by_test_module": {
+        "tests.test_token_contract_probe": 26,
+        "tests.test_current_token_contract": 4,
+        "tests.test_bootstrap_probe": 14,
+        "tests.test_current_token_flow": 2,
+        "tests.test_channel_descriptor": 37,
+        "tests.test_bootstrap_log_metadata": 5
+      },
+      "test_modules_explicit": [
+        "tests/test_bootstrap_log_metadata.py",
+        "tests/test_bootstrap_probe.py",
+        "tests/test_channel_descriptor.py",
+        "tests/test_current_token_contract.py",
+        "tests/test_current_token_flow.py",
+        "tests/test_token_contract_probe.py"
+      ],
+      "command_form": "python -m pytest -q -p no:cacheprovider <listed_explicit_modules> --junitxml=<private_path>",
+      "loopback_or_synthetic_only": true,
+      "live_client_launched": false,
+      "system_trust_or_real_hosts_changed": false
+    },
+    "workspace_regression": {
+      "passed": 145,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_private_path": ".scratch\\token-contract-regression.xml",
+      "junit_sha256": "c57fb6b32601248024bddd60f3f4a936946618eb79a66de76c703e463630a314",
+      "counts_by_test_module": {
+        "tests.test_token_contract_probe": 26,
+        "tests.test_current_token_contract": 4,
+        "tests.test_bootstrap_probe": 14,
+        "tests.test_current_token_flow": 2,
+        "tests.test_channel_descriptor": 37,
+        "tests.test_bootstrap_log_metadata": 5,
+        "tests.test_connectivity_probe": 19,
+        "tests.test_probe_controls": 3,
+        "tests.test_hosts_redirect": 9,
+        "tests.test_game_log_metadata": 9,
+        "tests.test_windows_tcp_owner": 6,
+        "tests.test_current_client_fixture": 2,
+        "tests.test_validation_gate": 9
+      },
+      "test_modules_explicit": [
+        "tests/test_bootstrap_log_metadata.py",
+        "tests/test_bootstrap_probe.py",
+        "tests/test_channel_descriptor.py",
+        "tests/test_connectivity_probe.py",
+        "tests/test_current_client_fixture.py",
+        "tests/test_current_token_contract.py",
+        "tests/test_current_token_flow.py",
+        "tests/test_game_log_metadata.py",
+        "tests/test_hosts_redirect.py",
+        "tests/test_probe_controls.py",
+        "tests/test_token_contract_probe.py",
+        "tests/test_validation_gate.py",
+        "tests/test_windows_tcp_owner.py"
+      ],
+      "command_form": "python -m pytest -q -p no:cacheprovider <listed_explicit_modules> --junitxml=<private_path>",
+      "loopback_or_synthetic_only": true,
+      "live_client_launched": false,
+      "system_trust_or_real_hosts_changed": false
+    }
+  },
+  "tested_source_sha256": {
+    "scripts/token_contract_probe.py": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+    "tests/test_token_contract_probe.py": "8b04450855e630cdec476f0c81ffe80c5faed88f2931b0bd3673da98884241ae",
+    "tests/test_current_token_contract.py": "09747c36e654d2fa87e99ec7f4d9155cb835c0b4f13601b2366a220ed847906d",
+    "tests/fixtures/connectivity/current-token-parser-candidate.json": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9",
+    "tests/fixtures/connectivity/current-token-contract-result.json": "f88be3878e16720c404bcd12f32a0ff15ddc07a5d13e92eb441f484ab9e46a92",
+    "research/evidence/current-token-contract.json": "f84522614c8db1d32444d9f51736ff34503ed7397bd85631f3d2ab1fea73aa44"
+  },
+  "new_contract_tests": 30,
+  "current_validation_gate_tests_passed": 9,
+  "unchanged_upstream_baseline": {
+    "passed": 455,
+    "deliberate_skip": 1,
+    "rerun_this_turn": false
+  },
+  "live_behavior_evidence": "research/evidence/current-token-contract.json",
+  "milestone_1_achieved": false
+}

@@ -1,6 +1,8 @@
 # Current bootstrap and token HTTPS checkpoint
 
-## Latest observed result — token request reached us
+**Newer checkpoint:** the current client accepted an original synthetic token envelope with SDK0 and reached our local credentials API. See [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md). The501-token procedure/results below remain historical connectivity controls, not the latest stopping point.
+
+## Historical observed result — token request reached us
 
 On the same stock Steam22469132 / client1.400.6031.6004151, the fresh trusted trial reached **TLS1.3 token HTTP**. [Receipt](../research/evidence/current-client-token.json), [observed fixture](../tests/fixtures/connectivity/current-client-token-result.json), [original loopback tests](../tests/test_current_token_flow.py).
 

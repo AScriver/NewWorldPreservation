@@ -1,6 +1,6 @@
 # Protocol notes
 
-Evidence profiles: First Light `63756a3`, historical May2 redacted reference (hash in `research/evidence/fixture-summary.json`); Aeternum-World `820156d`, documentation targets `v1.400.6031.40375`. The actual installed current client is **not identified**. All application-wire interpretations below are scoped to those sources, not promises about the final client.
+Evidence profiles: First Light `63756a3`, historical May2 redacted reference (hash in `research/evidence/fixture-summary.json`); Aeternum-World `820156d`, documentation targets `v1.400.6031.40375`. These game-packet notes remain historical/source-backed, not current-client wire proof. The installed client is now pinned to Steam22469132 / version1.400.6031.6004151; its separately verified HTTP token contract is in [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md). No current REP/actor packet is validated.
 
 ## Transport, framing and serialization
 

@@ -1,0 +1,17 @@
+{
+  "accessToken": "nwp-synthetic-access-not-a-service-credential",
+  "fallbackToken": "nwp-synthetic-fallback-not-a-service-credential",
+  "expiresIn": 3600,
+  "platformAccount": {
+    "identityType": "Steam",
+    "identityId": "00000000-0000-4000-8000-000000000001",
+    "personaId": "00000000-0000-4000-8000-000000000002",
+    "ageGroup": "Adult"
+  },
+  "account": {
+    "identityId": "00000000-0000-4000-8000-000000000003",
+    "personaId": "00000000-0000-4000-8000-000000000002",
+    "type": "Amazon",
+    "ageGroup": "Adult"
+  }
+}

@@ -1,0 +1,9 @@
+# Keep byte-hashed new contract evidence stable across Windows Git checkouts.
+/scripts/token_contract_probe.py text eol=lf
+/tests/test_token_contract_probe.py text eol=lf
+/tests/test_current_token_contract.py text eol=lf
+/tests/fixtures/connectivity/current-token-parser-candidate.json text eol=lf
+# Preserve the original Windows export bytes, including CRLF, in these receipts.
+/tests/fixtures/connectivity/current-token-contract-result.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/research/evidence/current-token-contract.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/research/evidence/current-token-contract-validation.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

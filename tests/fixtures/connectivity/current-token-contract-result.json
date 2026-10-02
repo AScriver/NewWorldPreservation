@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "kind": "observed_owned_client_transition_metadata_not_credentials_or_raw_wire",
+  "client": {
+    "steam_build": "22469132",
+    "version": "1.400.6031.6004151",
+    "installed_executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "routing_profile": "original-hostnames",
+  "trials": [
+    {
+      "case": "empty-object",
+      "owned_client": {
+        "process_id": 860,
+        "start_time_utc": "2026-10-02T18:46:04.0802444Z",
+        "launch_boundary_utc": "2026-10-02T18:45:59.5718931Z",
+        "live_path_verified": false
+      },
+      "connections": [
+        {
+          "connection_id": "f79017ee-8b4e-477a-8e46-44f19baad6d2",
+          "owner_process_id": 860,
+          "request_time_utc": "2026-10-02T18:46:11.526Z",
+          "response_time_utc": "2026-10-02T18:46:11.527Z",
+          "sni": "d2c74t4zimux3r.cloudfront.net",
+          "tls": {
+            "tls_version": "TLSv1.2",
+            "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "GET",
+            "host": "d2c74t4zimux3r.cloudfront.net",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 0,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/STEAM_APP_ID.1063730.json"
+          },
+          "response": {
+            "status": 200,
+            "body_bytes": 3812,
+            "body_sha256": "68bf491abacc05e06c4a536015aaffb3a653618d23c04f61810df6af854a5f13"
+          }
+        },
+        {
+          "connection_id": "09984867-7177-4e7f-a301-1dec7796d525",
+          "owner_process_id": 860,
+          "request_time_utc": "2026-10-02T18:46:18.805Z",
+          "response_time_utc": "2026-10-02T18:46:18.805Z",
+          "sni": "tokenservice.amazongames.com",
+          "tls": {
+            "tls_version": "TLSv1.3",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "POST",
+            "host": "tokenservice.amazongames.com",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 2941,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/games/new-world/tokens"
+          },
+          "response": {
+            "status": 200,
+            "case": "empty-object",
+            "body_bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          }
+        }
+      ],
+      "client_sdk_result_codes": [
+        203
+      ],
+      "client_log_metadata": {
+        "source_sha256": "28bc4e3e47f6dacd014bb8f9dd9be56c6e7bb65461e69a77eda0048900aa28ef",
+        "source_bytes": 25751,
+        "stable_during_read": true,
+        "extracted_at_utc": "2026-10-02T18:47:45.521180+00:00",
+        "timestamp_basis": "extraction_not_client_event",
+        "identity_exported": false
+      },
+      "token_model_acceptance_observed": false,
+      "game_authentication_success_observed": false,
+      "world_entry_observed": false,
+      "cleanup": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T18:57:25.9705698Z",
+        "state": "TOKEN_CONTRACT_CLEANUP_VERIFIED",
+        "cleanup_complete": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "owned_rule_absent": true,
+        "ca_readback_count": 0,
+        "ca_thumbprint": "A7AFB2CE0B4BD39D13103858181B57C94F9D85D8",
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "inputs_controlled": false,
+        "client_memory_modified": false
+      }
+    },
+    {
+      "case": "model-with-account",
+      "owned_client": {
+        "process_id": 32416,
+        "start_time_utc": "2026-10-02T18:49:19.8913515Z",
+        "launch_boundary_utc": "2026-10-02T18:49:15.8152554Z",
+        "live_path_verified": false
+      },
+      "connections": [
+        {
+          "connection_id": "766d2882-cdc7-4e79-ae9a-6b236a0d7ca9",
+          "owner_process_id": 32416,
+          "request_time_utc": "2026-10-02T18:49:27.212Z",
+          "response_time_utc": "2026-10-02T18:49:27.212Z",
+          "sni": "d2c74t4zimux3r.cloudfront.net",
+          "tls": {
+            "tls_version": "TLSv1.2",
+            "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "GET",
+            "host": "d2c74t4zimux3r.cloudfront.net",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 0,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/STEAM_APP_ID.1063730.json"
+          },
+          "response": {
+            "status": 200,
+            "body_bytes": 3812,
+            "body_sha256": "68bf491abacc05e06c4a536015aaffb3a653618d23c04f61810df6af854a5f13"
+          }
+        },
+        {
+          "connection_id": "deb3ac74-0134-4bad-8a28-0140d71c58e1",
+          "owner_process_id": 32416,
+          "request_time_utc": "2026-10-02T18:49:34.137Z",
+          "response_time_utc": "2026-10-02T18:49:34.137Z",
+          "sni": "tokenservice.amazongames.com",
+          "tls": {
+            "tls_version": "TLSv1.3",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "POST",
+            "host": "tokenservice.amazongames.com",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 2941,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/games/new-world/tokens"
+          },
+          "response": {
+            "status": 200,
+            "case": "model-with-account",
+            "body_bytes": 461,
+            "body_sha256": "660b1029f2e439fd9508763f07c6e6ce214496d53cf67bffa25a39e2f0506c04"
+          }
+        },
+        {
+          "connection_id": "748d6d7e-45aa-4ba2-9da0-2d6e48433c7d",
+          "owner_process_id": 32416,
+          "request_time_utc": "2026-10-02T18:49:34.144Z",
+          "response_time_utc": "2026-10-02T18:49:34.144Z",
+          "sni": "d2c74t4zimux3r.cloudfront.net",
+          "tls": {
+            "tls_version": "TLSv1.2",
+            "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "GET",
+            "host": "d2c74t4zimux3r.cloudfront.net",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 0,
+            "authorization_present": true,
+            "cookie_present": false,
+            "path": "/prod/credentials/omni"
+          },
+          "response": {
+            "status": 501
+          }
+        }
+      ],
+      "client_sdk_result_codes": [
+        0
+      ],
+      "client_log_metadata": {
+        "source_sha256": "7b6e94c4ae0f26c27f9f0f2e1c8054e10327d6287e48788d06a248ddb61c3173",
+        "source_bytes": 26045,
+        "stable_during_read": true,
+        "extracted_at_utc": "2026-10-02T18:50:43.992698+00:00",
+        "timestamp_basis": "extraction_not_client_event",
+        "identity_exported": false
+      },
+      "token_model_acceptance_observed": true,
+      "game_authentication_success_observed": false,
+      "world_entry_observed": false,
+      "cleanup": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T18:57:26.2976652Z",
+        "state": "TOKEN_CONTRACT_CLEANUP_VERIFIED",
+        "cleanup_complete": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "owned_rule_absent": true,
+        "ca_readback_count": 0,
+        "ca_thumbprint": "A7AFB2CE0B4BD39D13103858181B57C94F9D85D8",
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "inputs_controlled": false,
+        "client_memory_modified": false
+      }
+    },
+    {
+      "case": "model-without-account",
+      "owned_client": {
+        "process_id": 42280,
+        "start_time_utc": "2026-10-02T19:01:03.2148749Z",
+        "launch_boundary_utc": "2026-10-02T19:00:59.1611329Z",
+        "live_path_verified": false
+      },
+      "connections": [
+        {
+          "connection_id": "6430ab46-fb93-48fa-bd56-5a1d96307088",
+          "owner_process_id": 42280,
+          "request_time_utc": "2026-10-02T19:01:10.332Z",
+          "response_time_utc": "2026-10-02T19:01:10.332Z",
+          "sni": "d2c74t4zimux3r.cloudfront.net",
+          "tls": {
+            "tls_version": "TLSv1.2",
+            "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "GET",
+            "host": "d2c74t4zimux3r.cloudfront.net",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 0,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/STEAM_APP_ID.1063730.json"
+          },
+          "response": {
+            "status": 200,
+            "body_bytes": 3812,
+            "body_sha256": "68bf491abacc05e06c4a536015aaffb3a653618d23c04f61810df6af854a5f13"
+          }
+        },
+        {
+          "connection_id": "c2be910a-2d1d-435b-afe1-9096a7a08f32",
+          "owner_process_id": 42280,
+          "request_time_utc": "2026-10-02T19:01:17.402Z",
+          "response_time_utc": "2026-10-02T19:01:17.402Z",
+          "sni": "tokenservice.amazongames.com",
+          "tls": {
+            "tls_version": "TLSv1.3",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "POST",
+            "host": "tokenservice.amazongames.com",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 719,
+            "authorization_present": false,
+            "cookie_present": false,
+            "path": "/games/new-world/tokens"
+          },
+          "response": {
+            "status": 200,
+            "case": "model-without-account",
+            "body_bytes": 311,
+            "body_sha256": "d5c7d093f6ba73934b617ee45023fe5bb372a48782e73c8e9b63e205a2856700"
+          }
+        },
+        {
+          "connection_id": "c53919d8-c707-4092-a9b9-f83d0d223156",
+          "owner_process_id": 42280,
+          "request_time_utc": "2026-10-02T19:01:17.407Z",
+          "response_time_utc": "2026-10-02T19:01:17.407Z",
+          "sni": "d2c74t4zimux3r.cloudfront.net",
+          "tls": {
+            "tls_version": "TLSv1.2",
+            "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+            "selected_alpn": null
+          },
+          "request": {
+            "method": "GET",
+            "host": "d2c74t4zimux3r.cloudfront.net",
+            "http_version": "HTTP/1.1",
+            "declared_body_bytes": 0,
+            "authorization_present": true,
+            "cookie_present": false,
+            "path": "/prod/credentials/omni"
+          },
+          "response": {
+            "status": 501
+          }
+        }
+      ],
+      "client_sdk_result_codes": [
+        0
+      ],
+      "client_log_metadata": {
+        "source_sha256": "2bc9439a91955971c407c3c0c057f829bd4a50334b0d3b9c185eaf3511a3c788",
+        "source_bytes": 26273,
+        "stable_during_read": true,
+        "extracted_at_utc": "2026-10-02T19:02:40.232444+00:00",
+        "timestamp_basis": "extraction_not_client_event",
+        "identity_exported": false
+      },
+      "token_model_acceptance_observed": true,
+      "game_authentication_success_observed": false,
+      "world_entry_observed": false,
+      "cleanup": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T19:04:21.7192122Z",
+        "state": "TEST_CA_RETAINED_BY_EXPLICIT_USER_REQUEST",
+        "certificate_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\certificates",
+        "store": "CurrentUser\\Root",
+        "thumbprint": "1AEE2B69AD82A5C6F2CF52A80127D22A4487CECA",
+        "ca_sha256": "2c9f403d47318a0c1f801d5bc5ea11a33cef83612221248a0df8c5ca3e34bbeb",
+        "expires_at_utc": "2026-10-09T18:58:22.0000000Z",
+        "trust_readback_count": 1,
+        "trust_removed": false,
+        "routine_test_runs_should_reuse": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "owned_rules_absent": true,
+        "hosts_restored_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "inputs_controlled": false,
+        "process_memory_accessed": false
+      }
+    }
+  ],
+  "milestone_1_achieved": false,
+  "privacy": {
+    "raw_request_bodies_exported": false,
+    "header_values_exported": false,
+    "real_tokens_exported": false,
+    "raw_game_log_exported": false
+  }
+}

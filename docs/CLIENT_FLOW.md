@@ -1,6 +1,6 @@
 # Client connection flow
 
-Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. This document is the **historical server-side flow**, not a current-client packet recipe. Later actual bootstrap HTTPS is traced in [CURRENT_CLIENT_CONNECTIVITY](CURRENT_CLIENT_CONNECTIVITY.md); current auth/REP/world flow remains unknown. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
+Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. This document is the **historical server-side flow**, not a current-client packet recipe. Current bootstrap -> token model acceptance -> credentials GET is verified in [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md) and [CURRENT_CLIENT_CONNECTIVITY](CURRENT_CLIENT_CONNECTIVITY.md); later game auth/REP/world flow remains unknown. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
 
 ## Intended and historical flow
 

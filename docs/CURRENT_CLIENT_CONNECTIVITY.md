@@ -4,9 +4,9 @@
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-**Latest furthest verified protocol state:** local HTTP200 channel descriptor parsed, then **three attributed HTTP/1.1 `POST /games/new-world/tokens` requests** received at our redirected token service over **TLS1.3**. The stub deliberately returned501. Not authenticated, not world-loading, not spawned, not game-transport-connected, and not Milestone1. The user reported the authentication-failure popup again. No cursor/keyboard control was used.
+**Latest furthest verified protocol state:** local HTTP200 channel parsed; synthetic token response accepted with **Omni CreateSession result0**; attributed **GET `/prod/credentials/omni`** reached our service with Authorization present. That endpoint deliberately returned501. No successful game authentication, world-loading, spawn, game transport or Milestone1. No cursor/keyboard control was used.
 
-Latest metadata-only evidence: [token-session receipt](../research/evidence/current-client-token.json), [deterministic observed fixture](../tests/fixtures/connectivity/current-client-token-result.json), [procedure and earlier failed controls](BOOTSTRAP_CHANNEL.md). Earlier501-bootstrap and204/no-session results below are historical, not the current stopping point. HTTPS connectivity is solved for bootstrap **and the observed token origin**; private session response semantics and REP/DTLS remain unknown.
+Latest evidence and reproducible procedure: [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md), [metadata receipt](../research/evidence/current-token-contract.json). Earlier501-bootstrap,204/no-session and501-token results below are historical, not the current stopping point. Local HTTPS works for bootstrap/token and the tested regional API alias. Current credentials response/game-session handoff and REP/DTLS remain unknown.
 
 | Identity | Verified value / limit |
 |---|---|
@@ -152,7 +152,7 @@ The historical bootstrap hostname/path still applies to this current build; sour
 
 Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
 
-**Exact next blocker (supersedes501-bootstrap/204 checkpoints):** current channel HTTP200 parsing and private tokenPOST/TLS1.3 are observed; now establish the token/session response structure and validation before implementing a compatibility responder. SDK201/204 meanings remain unknown. [Latest evidence/procedure](BOOTSTRAP_CHANNEL.md). Successful private auth/session selection and separate REP/DTLS precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented. Latest exact CA, hosts, firewall, client and listener cleanup readbacks are complete in the token receipt.
+**Exact next blocker:** compatible response to current **GET `/prod/credentials/omni`** and subsequent private game-session handoff. [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md) establishes a token envelope that reaches this request, not a complete account system. SDK201/204 meanings remain unknown; empty-model203 and accepted-model0 have current controlled observations. Successful private game auth/selection and separate REP/DTLS precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented. Routing/process cleanup and the explicitly retained current test CA are recorded with the trials.
 
 ## Capture Before Shutdown
 

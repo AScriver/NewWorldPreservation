@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-10-02T19:06:08.573965+00:00",
+  "mode": "current_owned_stock_client_controlled_response_contract_trials",
+  "checkout_head_at_start": "b18861c8498a8f43a8df5f6cb132b9026b564745",
+  "source_was_dirty": true,
+  "client": {
+    "steam_build": "22469132",
+    "version": "1.400.6031.6004151",
+    "installed_executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "fixture_path": "tests\\fixtures\\connectivity\\current-token-contract-result.json",
+  "fixture_sha256": "f88be3878e16720c404bcd12f32a0ff15ddc07a5d13e92eb441f484ab9e46a92",
+  "trial_provenance": [
+    {
+      "case": "empty-object",
+      "private_source_hashes": {
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\run-manifest.json": "732497080aef7a24a91556c811d8c59480a4cda15631ce21e7327e13f3dc40c2",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\owned-client.json": "3a67beec67d6015abb7e916b7c394d62a62c4045585c0e68c5dafb7b24ee8582",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\bootstrap-v4.jsonl": "785a882b3dcda22eef704b0e8e6e5129285900e4304873ecf33b5ca27be029ad",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\bootstrap-v6.jsonl": "df7ce153b53a9ff74e1e6532e7ce7213a3b5be41be6c02e57c72ebe86d755e2c",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\bootstrap-log-final.json": "9212c07f866be28dcf35cbd5b090c18bdf75770cff76be09108b9b907bfcea1c",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\trial-window.jsonl": "dfa9c9daccc0ffd5523d6c31a627784414d0213093beea8856af0752bb9a393c",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\firewall-ownership.json": "ff9e1ea3fcca2d6503b074640b33e753d5c4630b1f41e671874936e27e519814",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\cleanup-readback.json": "cec621c4c5e6e3d54533162e78db9ba82dc27c637d9d6e97a7f275978eba09db",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\certificates\\certificate-manifest.json": "f3857c7108c2aea6bbbe86dce6d0d4f41a12f6abc8d91cd8f6a785f93bf736ec",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\certificates\\trust-events.jsonl": "40ba8becea64b8cdca9be7cbc0435f39d609abe3b578da9cac68e9948d217187"
+      },
+      "source_at_preparation": {
+        "note": "initial control source hashes not recorded at preparation; response bytes independently logged; cases added while this control was running"
+      }
+    },
+    {
+      "case": "model-with-account",
+      "private_source_hashes": {
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\run-manifest.json": "1f7dd39b1cdd54f315cff86a130e61003afd3dfe360866d35ce2897336f003bd",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\owned-client.json": "af75e671c68dd363254fba1b03eab07dda1ae2c2ba8f056385729533bcd30697",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\bootstrap-v4.jsonl": "09c552528983c17ee50ca944c0515acf3a3e4e9ad1af4da6283dc2d72568b573",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\bootstrap-v6.jsonl": "e0c6449c136288f680588e48bea068c4ca95a3be90323d3896ba5f239da2a2af",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\bootstrap-log-final.json": "78d821f63cd03a84d8d48846463e18d4536b7dbeefe058caad2bc6f95b645853",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\trial-window.jsonl": "3bc3de2020e76da2fd9dda5894bbe8f72f150b94535f5b423b5955561bd6efa2",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\firewall-ownership.json": "4d1d5dc60aaece7a3294de1f28203339c12da46636e1150b62d484247ca23e14",
+        "private\\connectivity\\token-contract-24a98df5d8a34a378621d7604c3a11c8\\cleanup-readback.json": "e660183bb12a6d90cc4e31d633dc4ddb925985d016ea2cd5cf1642600ddf149d",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\certificates\\certificate-manifest.json": "f3857c7108c2aea6bbbe86dce6d0d4f41a12f6abc8d91cd8f6a785f93bf736ec",
+        "private\\connectivity\\token-contract-4643a6aa35e2483585e7973ab7c087f0\\certificates\\trust-events.jsonl": "40ba8becea64b8cdca9be7cbc0435f39d609abe3b578da9cac68e9948d217187"
+      },
+      "source_at_preparation": {
+        "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+        "synthetic_candidate_sha256": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9",
+        "head": "b18861c8498a8f43a8df5f6cb132b9026b564745"
+      }
+    },
+    {
+      "case": "model-without-account",
+      "private_source_hashes": {
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\run-manifest.json": "df2cb966bc4296ae95a1c0969aa207195400a94495b8d8ecb68b22c8e52494d8",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\owned-client.json": "a5dd7cd6a357401674a2e77f1348f1520c9c81580b816a18e81ba3244eb01e4e",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\bootstrap-v4.jsonl": "e80bcc3194f45b54bce0ef4055a9c936943e128f4437422bae98afc6f4658d19",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\bootstrap-v6.jsonl": "f6330ed984d5cc0359dec2892333bc4dafa26d5fb7d0f1c920d01c90a27fd31b",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\bootstrap-log-final.json": "968c9de092802239a17d051f9de08ec547e8d30e1977f08bd06b330f7e6bd999",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\trial-window.jsonl": "5b16c3ca56939ada6840fa09235dd31d6c5d3be58f277c8dd97d5a9a3fcdf3f7",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\firewall-ownership.json": "c8c05142d9d20e03bc3fb210e349e96bf0bcac02bcf43efc25a45dc4f099c19a",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\cleanup-retained-ca.json": "f4aa3dcb42a86c2c2ce65afd6e464e8b623f74c8dc532feec39ea5ae71b9bb8b",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\certificates\\certificate-manifest.json": "2e1c0ddfc62f6a0c288446077844adb1c20be37b6fbd1c21080c4916f5f08461",
+        "private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\certificates\\trust-events.jsonl": "dfdc5a98c9c82d788f2f96e51a8ce6f12eadc809d004e9d845b87b820a5fcaba"
+      },
+      "source_at_preparation": {
+        "synthetic_candidate_sha256": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9",
+        "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+        "head": "b18861c8498a8f43a8df5f6cb132b9026b564745"
+      }
+    }
+  ],
+  "static_inspection": {
+    "kind": "read_only_installed_PE_not_process_attachment",
+    "private_annotation_hashes": {
+      "private\\connectivity\\annotated-1479b6d00.txt": "8f0d6aec2a18a8032b2ed95af3bf2c4153b00db540a2ab2d67a62773c9731605",
+      "private\\connectivity\\annotated-1479c0fd0.txt": "b1dfd7712828bb5925ee23c37da493de0609dc7bc912dcbaf822027b06942b89",
+      "private\\connectivity\\annotated-1479c0620.txt": "9113001e7d4c0deee5f2259b139cde092bf635f520ba00812da18ac95d199cf5",
+      "private\\connectivity\\annotated-1479c2240.txt": "e3f5d076739df994bddac6f5a4cf53a1deec4cffba320f8cd23a96c2fa6c1d3c",
+      "private\\connectivity\\annotated-1479d0de0.txt": "44795285db56e45077c41d7ffcc9dfc4f3eafdf224250c2269d92e9238e90143",
+      "private\\connectivity\\annotated-1479d6770.txt": "72889db9b8ce40cf301f9a7da6d3d95652bf1be4ef2dbf6d5b61c50e12924384",
+      "private\\connectivity\\annotated-1479d6860.txt": "31ffb0663d3fbf2a3baf1c3aca71f28c3df67f40e4119eb8e373a84f811a93f6",
+      "private\\connectivity\\annotated-1479d66e0.txt": "9b1d0b0420fe2b7d8b3a29aa27901ccf91134eff260451de4c885eac63f08db7",
+      "private\\connectivity\\annotated-1479c9f00.txt": "6ba763d80825b7fecdc66245e7f36ed32268638c0eb2b582f61199cbe4b0c989"
+    },
+    "inspection_helper_sha256": "05f69781a14acb3661bde4539e5b242a8661eef35745aaac72d7509870befe32",
+    "section_symbol_metadata_sha256": "362297c638c202a9b098141e9d89f4aad2ba7f5d58abad1f7827c522e5098f2e",
+    "no_proprietary_assembly_exported": true
+  },
+  "canceled_comparison": {
+    "timestamp_utc": "2026-10-02T18:55:55.6423250Z",
+    "state": "TOKEN_COMPARISON_NOT_EXECUTED",
+    "response_case": "model-without-account",
+    "reason": "Start-Process_RunAs_reported_operation_canceled_by_user",
+    "client_launched": false,
+    "routing_applied": false,
+    "listeners_absent": true,
+    "hosts_unchanged": true,
+    "ca_cleanup_parent_owned": true
+  },
+  "retained_ca": {
+    "schema": 1,
+    "timestamp_utc": "2026-10-02T19:04:21.7192122Z",
+    "state": "TEST_CA_RETAINED_BY_EXPLICIT_USER_REQUEST",
+    "certificate_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\certificates",
+    "store": "CurrentUser\\Root",
+    "thumbprint": "1AEE2B69AD82A5C6F2CF52A80127D22A4487CECA",
+    "ca_sha256": "2c9f403d47318a0c1f801d5bc5ea11a33cef83612221248a0df8c5ca3e34bbeb",
+    "expires_at_utc": "2026-10-09T18:58:22.0000000Z",
+    "trust_readback_count": 1,
+    "trust_removed": false,
+    "routine_test_runs_should_reuse": true,
+    "game_absent": true,
+    "listeners_absent": true,
+    "owned_rules_absent": true,
+    "hosts_restored_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "inputs_controlled": false,
+    "process_memory_accessed": false
+  },
+  "exercised_source_hashes_at_receipt": {
+    "scripts/token_contract_probe.py": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+    "scripts/bootstrap_probe.py": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f",
+    "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+    "scripts/bootstrap_log_metadata.py": "80738c2a19dc40db16158da91ccf3cb89b7b51deffd0b59190f51f56640ab176",
+    "tests/fixtures/connectivity/current-token-parser-candidate.json": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9"
+  },
+  "next_blocker": "current GET /prod/credentials/omni response and private game-session handoff",
+  "milestone_1_achieved": false,
+  "process_memory_accessed": false,
+  "keyboard_mouse_controlled": false,
+  "published_remotely": false
+}

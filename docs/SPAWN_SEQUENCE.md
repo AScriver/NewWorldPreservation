@@ -2,22 +2,23 @@
 
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 has passed the **private bootstrap HTTPS** gate; see [connectivity](CURRENT_CLIENT_CONNECTIVITY.md) and its attributed CA/SAN controls. It received intentional HTTP501. **No private authentication, character/world selection, REP handshake, actor, initial transform or world visibility has been observed.** Spawn research can now begin; an actual spawn implementation is not yet justified.
+Current build `1.400.6031.6004151` / Steam22469132 has passed private bootstrap/token HTTPS and **token model acceptance**: SDK0 and local GET `/prod/credentials/omni`, whose response is deliberately501. See [contract](TOKEN_SESSION_CONTRACT.md) and [connectivity](CURRENT_CLIENT_CONNECTIVITY.md). **No successful private game authentication, character/world selection, REP handshake, actor, initial transform or world visibility has been observed.** Offline spawn research can continue; live spawn implementation is not yet justified.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
 ## State machine
 
-Solid edges are historical source-supported ordering, not a replay validated with our game. Dashed edges are unresolved historical actor hypotheses. Numeric state labels refer to old static analysis, **not measured current-client state values**.
+The bootstrap/token/credentials prefix below is current observed ordering. The subsequent edges are historical source-supported ordering or explicitly future/unresolved hypotheses, not replay validated with our game. Numeric state labels refer to old static analysis, **not measured current-client state values**.
 
 ```mermaid
 stateDiagram-v2
     [*] --> Bootstrap
-    Bootstrap --> PrivateHTTPSObserved: current GET received
-    PrivateHTTPSObserved --> BootstrapRejected: our HTTP501
-    BootstrapRejected --> [*]
-    Bootstrap --> ChannelAccepted: next required current fixture
-    ChannelAccepted --> Authenticated: historical Omni / credentials flow
+    Bootstrap --> ChannelAccepted: current local descriptor200 parsed
+    ChannelAccepted --> TokenModelAccepted: current synthetic envelope SDK0
+    TokenModelAccepted --> CredentialsRequested: current local credentials GET
+    CredentialsRequested --> DiagnosticStop: current stub501
+    DiagnosticStop --> [*]
+    CredentialsRequested --> Authenticated: future private credentials contract unresolved
     Authenticated --> CharacterWorldSelected: historical login-info / queue
     CharacterWorldSelected --> TicketReady: ticket / world / REP address
     TicketReady --> DTLSConnected: separate UDP DTLS trust
@@ -62,11 +63,11 @@ Reusable now: transport framing/codec round-trip tests, per-peer DTLS scaffoldin
 
 ## Independently testable next tasks
 
-1. **Bootstrap/token connectivity (proven; response contract next):** [BOOTSTRAP_CHANNEL](BOOTSTRAP_CHANNEL.md) records current public shape, local HTTP200, five parsed regions and three actual local TLS1.3 token POSTs. The responder deliberately returned501; current SDK result201 remains unexplained. Earlier204/no tokenHTTP is historical. Private token/session response semantics remain a blocker; no guessed successful tokens or old fallback.
+1. **Token envelope handoff (proven; credentials response next):** [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md) records empty-model203 and two synthetic models accepted withSDK0, then actual local credentials GET501. Top-level account can be omitted for this handoff. Later token/credentials semantics and private identity ownership remain unresolved; no real-token replay.
 2. **Private auth/selection contract:** exact current methods/redacted schemas and state relationships, then isolated local account/character ownership tests. Stub rejection is not auth success.
 3. **Separate transport gate:** correct selected REP address, own current-client DTLS handshake/trust, Carrier connect and V3 request/response with secret-minimizing traces. A two-Python-peer DTLS test is useful offline but is not this gate.
 4. **Current spawn fixture:** relate registration, self-identification, actor/replica creation, ownership, initial transform and visibility. Record state/frame direction/channel, build, byte boundaries, stable **sanitized** ID correlations and positive/negative outcomes. Validate codec parsing/serialization before changing them.
 5. **One-player visible actor:** emit the minimum validated sequence with structured logs and demonstrate local world/actor state. Stop expansion at that success as requested.
 6. **Second distinct player:** independent private account/session/actor, bilateral position/rotation changes, removal/reconnect without duplicate actor. No combat/NPC/inventory/persistence work beforehand.
 
-**Exact immediate blocker is the current token/session response contract, not connectivity or a guessed spawn packet.** Current evidence permits spawn analysis; live actor implementation still waits for successful private auth/selection, transport and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.
+**Exact immediate blocker is the current credentials response/private game-session handoff, not token connectivity or a guessed spawn packet.** Current evidence permits offline spawn analysis; live actor implementation still waits for successful private game auth/selection, transport and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.
