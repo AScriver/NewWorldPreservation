@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "kind": "current_dtls_non_destructive_trust_controls",
+  "timestamp_utc": "2026-10-02T22:21:08.813594+00:00",
+  "exercised_head": "f8c9b7f150c4afe8442875753792891e32a4370d",
+  "tracked_source_dirty_during_trials": false,
+  "steam_build_id": "22469132",
+  "client_version": "1.400.6031.6004151",
+  "installed_exe_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "dtls_probe_sha256": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611",
+  "cases": [
+    {
+      "case": "Default",
+      "chain": "full",
+      "identity": {
+        "process_id": 26168,
+        "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\launcher-trust-951af04ddc9649c886c5c9df6ccde1f4\\launch-manifest.json",
+        "runtime_environment_readback": false,
+        "timestamp_utc": "2026-10-02T22:08:14.0558529Z",
+        "start_time_utc": "2026-10-02T22:08:12.8959387Z",
+        "live_path_verified": false,
+        "launch_boundary_utc": "2026-10-02T22:08:10.5161045Z",
+        "parent_process_id": 14364,
+        "identity_basis": "exclusive_fresh_original_vendor_launcher_PID_and_start_time_not_memory"
+      },
+      "alerts": [
+        {
+          "timestamp_utc": "2026-10-02T22:08:45.981Z",
+          "connection_id": "520ababd-d6a6-432b-b7f6-6c4a62c2b22d",
+          "direction": "read",
+          "level": "fatal",
+          "description": "unknown_ca"
+        },
+        {
+          "timestamp_utc": "2026-10-02T22:08:46.000Z",
+          "connection_id": "7fc75e88-ca74-404b-8d8c-139209630803",
+          "direction": "read",
+          "level": "fatal",
+          "description": "unknown_ca"
+        }
+      ],
+      "handshake_established": false,
+      "application_records_observed": 0,
+      "sni_callbacks": [
+        {
+          "present": false,
+          "timestamp_utc": "2026-10-02T22:08:45.980Z"
+        },
+        {
+          "present": false,
+          "timestamp_utc": "2026-10-02T22:08:45.999Z"
+        }
+      ],
+      "game_error_codes": [
+        {
+          "line_number": 464,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 465,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 474,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 476,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        }
+      ],
+      "owned_game_log_sha256": "1256e768ef24a52ae6bf759b1920b6d72c461be1271d8499db08cdc99d295dd4",
+      "cleanup": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T22:09:55.0413551Z",
+        "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+        "owned_rule_absent": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "retained_ca_root_count": 1,
+        "ca_removed": false,
+        "ca_regenerated": false,
+        "inputs_controlled": false,
+        "memory_accessed": false
+      },
+      "udp_cleanup": {
+        "timestamp_utc": "2026-10-02T22:09:52.7984193Z",
+        "state": "OWNED_DTLS_RESPONDER_ABSENT",
+        "port": 64003,
+        "controlled_shutdown_not_graceful": true
+      },
+      "source_hashes": {
+        "run-manifest.json": "4b1abf2069a686cbfad7fa72a0bd46f55b75e468d694e43b10fd321863be770c",
+        "dtls-transport.jsonl": "21eec0a4d6719c6ee2090c3075c3fc75571fb67e44c11a9149fd177ff58138dd",
+        "owned-client.json": "c23182b7cb058043358368a61f51881d8423286faf3857eb162e3670def0a4dc",
+        "dtls-ownership.json": "7b08371f2beb2dab352362d012608307e7704d95a6092e67a72898066b26685e",
+        "bootstrap-v4.jsonl": "2a6505dbe0301b120b2bdf51a776bfa0d1720fc34891792fdd0a1bafd1e5a676",
+        "bootstrap-v6.jsonl": "a71dbe2df3641524526914c30ad9e4372e39dbc20e3a927717ac55fbefbce464",
+        "trial-window.jsonl": "6d76c2d5f5ec333721f75bc6d87071d176fdbe379368299b9f7dd645c2565085",
+        "cleanup-readback.json": "56294198912d6e98c91599909712f7b84779626c890114d90348e96a1d5fecd3",
+        "dtls-cleanup.json": "00ba643f8304cdc47c1fce0a996e2562abb9122df819769b039db5493175f0a9",
+        "game-log-metadata.json": "1e3510a1c4db8064274d176a6a783d96b41a4dfdec38940c0473fec7fb28e3f6"
+      },
+      "launch_manifest_sha256": "6df122d8c5236f35cc7e5f62af9d95111a243b4499c6a73ca317f25e4abdabcb",
+      "launcher_trust_script_sha256": "e31831812fd7c4eb8f28e9522900dca26a3186eaf0e7c36529539f1723323eef",
+      "runtime_environment_readback": false,
+      "private_run_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-b876e5a9b79543c8b782df1facc24706",
+      "private_case_metadata_sha256": "dcaaa688dcb0d2645f7d38dac90075f4ac93e3129541a154baf6cea853dd4950",
+      "launcher": {
+        "observedAtUtc": "2026-10-02T22:08:10.5161045Z",
+        "method": "Original installed NewWorldLauncher.exe with child-scoped environment; EAC intact; no Steam restart",
+        "launcherSha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+        "originalLauncherProcessId": 14364,
+        "childScopedSslCertFile": null,
+        "caPemFileSha256": null,
+        "sslCertDirRemovedOnlyFromChild": true,
+        "steamAppId": "1063730",
+        "steamGameId": "1063730",
+        "globalEnvironmentChanged": false,
+        "processMemoryAccessed": false
+      },
+      "server_output_bytes_each": 2516
+    },
+    {
+      "case": "RetainedCaFile",
+      "chain": "full",
+      "identity": {
+        "launch_boundary_utc": "2026-10-02T22:12:18.5459860Z",
+        "timestamp_utc": "2026-10-02T22:12:21.9106028Z",
+        "live_path_verified": false,
+        "parent_process_id": 28296,
+        "identity_basis": "exclusive_fresh_original_vendor_launcher_PID_and_start_time_not_memory",
+        "process_id": 35112,
+        "runtime_environment_readback": false,
+        "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\launcher-trust-dffb8c1284054e7187158fa6c398a897\\launch-manifest.json",
+        "start_time_utc": "2026-10-02T22:12:20.9027034Z"
+      },
+      "alerts": [
+        {
+          "timestamp_utc": "2026-10-02T22:12:56.404Z",
+          "connection_id": "b79bf1fe-40ec-420a-830c-b5ee4e7f84cd",
+          "direction": "read",
+          "level": "fatal",
+          "description": "unknown_ca"
+        },
+        {
+          "timestamp_utc": "2026-10-02T22:12:56.424Z",
+          "connection_id": "d25ac5ce-b0db-4cda-9e52-9c0744ed881f",
+          "direction": "read",
+          "level": "fatal",
+          "description": "unknown_ca"
+        }
+      ],
+      "handshake_established": false,
+      "application_records_observed": 0,
+      "sni_callbacks": [
+        {
+          "present": false,
+          "timestamp_utc": "2026-10-02T22:12:56.403Z"
+        },
+        {
+          "present": false,
+          "timestamp_utc": "2026-10-02T22:12:56.423Z"
+        }
+      ],
+      "game_error_codes": [
+        {
+          "line_number": 464,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 465,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 474,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        },
+        {
+          "line_number": 476,
+          "code": "mm_csdkerr_transport_security_error",
+          "numeric_code": 2
+        }
+      ],
+      "owned_game_log_sha256": "32b1f8a6eeaf1c4d776947a2c9e48771f9b61b6dbb4bb9f668ceabcfccbdef0b",
+      "cleanup": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T22:16:08.3124519Z",
+        "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+        "owned_rule_absent": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "retained_ca_root_count": 1,
+        "ca_removed": false,
+        "ca_regenerated": false,
+        "inputs_controlled": false,
+        "memory_accessed": false
+      },
+      "udp_cleanup": {
+        "timestamp_utc": "2026-10-02T22:16:06.0979609Z",
+        "state": "OWNED_DTLS_RESPONDER_ABSENT",
+        "port": 64003,
+        "controlled_shutdown_not_graceful": true
+      },
+      "source_hashes": {
+        "run-manifest.json": "c7efac0d47aa449a02b4234af3462c0fdf72cc38de907a1c68440798bca18cdc",
+        "dtls-transport.jsonl": "47d34426232c978afb556300005ae18a45ace9a5ff24d6e14718027e17453458",
+        "owned-client.json": "ec175a2b52107ce03e3080c97a876ec96271958329eed4b7af2f7c2dde6beab7",
+        "dtls-ownership.json": "1a7ee5d3e8f06e98a27cd275821f94837b6511cda0ae8bb85eab9f4c54f22d1d",
+        "bootstrap-v4.jsonl": "a421f389bc81d7cbed16b9312384ad18da2a65082a00384cae2a7dc874585fa6",
+        "bootstrap-v6.jsonl": "940c11804251a59c89095109acbedfcb4eba9b3c5fda49c6d1f17f6c87713040",
+        "trial-window.jsonl": "b67651549848f3bbbdd400e8d94201859863eec035d0c05a1a287712e362f28c",
+        "cleanup-readback.json": "48952c9026c5dd56126c894182b310c9fdc5985584e777ae7b8959fbb58497b3",
+        "dtls-cleanup.json": "dec15bcff7f37db6c30cd4abb40789713d12166064c2cbc747a6202d44803ea5",
+        "game-log-metadata.json": "811bb91fd7e4df16a2ddba2e27418ee92d19bcdb0982dd673dc0f5b87e677b56"
+      },
+      "launch_manifest_sha256": "72a60d400d9dd4ed97df83a7a7ee2ff3805fef3d23c4fdd2160526d1277fbb3a",
+      "launcher_trust_script_sha256": "e31831812fd7c4eb8f28e9522900dca26a3186eaf0e7c36529539f1723323eef",
+      "runtime_environment_readback": false,
+      "private_run_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-1a9240fd4ab64f2cb0950423e88c9b87",
+      "private_case_metadata_sha256": "2a41902e566af85514cf3c4d082b1daeffe3694a76dd0988fca32d05e8e06586",
+      "launcher": {
+        "observedAtUtc": "2026-10-02T22:12:18.5459860Z",
+        "method": "Original installed NewWorldLauncher.exe with child-scoped environment; EAC intact; no Steam restart",
+        "launcherSha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+        "originalLauncherProcessId": 28296,
+        "childScopedSslCertFile": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-2458af8d05284aaf953801042aa5e810\\certificates\\ca.pem",
+        "caPemFileSha256": "30bba23f8800ddad69f199c96746aec5eed7e5ce405e130206c630d516573b19",
+        "sslCertDirRemovedOnlyFromChild": true,
+        "steamAppId": "1063730",
+        "steamGameId": "1063730",
+        "globalEnvironmentChanged": false,
+        "processMemoryAccessed": false
+      },
+      "server_output_bytes_each": 2516
+    }
+  ],
+  "result": "launcher_scoped_CA_file_configuration_did_not_establish_REP_DTLS_in_this_trial",
+  "game_environment_read_back": false,
+  "active_trust_store_identified": false,
+  "pinning_proven": false,
+  "caller_layer_rep_linkage_proven": false,
+  "same_certificate_reused": true,
+  "user_reported_vpn_disabled": true,
+  "vpn_change_exact_time_unknown": true,
+  "vpn_state_independently_verified": false,
+  "vpn_effect_isolated": false,
+  "carrier_v3_observed": false,
+  "actor_work_ready": false,
+  "milestone_1_achieved": false,
+  "client_memory_read_or_written": false,
+  "client_binary_eac_configuration_changed": false,
+  "global_environment_changed": false,
+  "inputs_controlled": false,
+  "raw_game_payloads_exported": false,
+  "analysis_only_source_hashes": {
+    "analyze.py": "7b68d7017011caa9eee4083cae8381c3be5c53f96e5ecfd8b289ff41e1efbc20",
+    "run.ps1": "cccc9a8dcf29c9314bcb3dca20c0f6c4561c354f1ed9934d1d4e68cbdea1ab18",
+    "xrefs.json": "537f55f9a41f1a85c7cf838aa1ece252b0ec3a6de20a81d20a6ab0424b41946a",
+    "nearby-functions.txt": "8f9a35362be8d4b6bf2c0f1e67131db4a4b664cfc56c5ef9ca334faf56b247f5"
+  },
+  "public_validation_receipt": "research/evidence/current-dtls-trust-rejection-validation.json",
+  "public_validation_receipt_sha256": "0fdb78272288962f76ebf990a3cf3ebee03b45517a8f2e1062ff786e3f8b347f",
+  "validation_code_source_changed_since_273_pass": false
+}

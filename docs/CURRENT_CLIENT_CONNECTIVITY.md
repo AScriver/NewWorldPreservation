@@ -159,6 +159,8 @@ Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, se
 
 **Exact next blocker:** current REP's **active trust source and supported private-root configuration**. It explicitly rejects our retained locally trusted full chain with unknown_ca; this alone is not pinning proof. Trace current-build trust loading before any narrowly justified executable interoperability workaround; no historical memory hook. [DTLS_REGISTRATION](DTLS_REGISTRATION.md) pins failure/cleanup. Carrier/V3 and spawn/private-identity evidence still gate actor work; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) is not a current actor recipe. No gameplay implemented.
 
+Subsequent non-destructive controls: original launcher/default and launcher-scoped SSL_CERT_FILE=retainedCA both yield two fatal unknown_ca/no app. Game parent matches launcher, runtime environment consumption unknown. Bounded default-path/embedded-certificate inspection does not identify REP's active roots or pinning. [Control/inspection evidence](DTLS_REGISTRATION.md#non-destructive-trust-controls-after-the-first-rejection). User reported VPN disabled, but timing/state/causality were not independently captured. All runs cleaned client-first; same CA retained. Carrier/V3 cannot be exercised until this trust gate passes.
+
 ## Capture Before Shutdown
 
 Only our own legitimate normal sessions. Prioritize:
