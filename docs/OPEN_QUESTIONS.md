@@ -2,7 +2,7 @@
 
 Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
-Latest [token response checkpoint](TOKEN_SESSION_CONTRACT.md): synthetic current-compatible model with/without `account` ->SDK0 ->attributed local GET `/prod/credentials/omni`, intentionally501. Empty-model200 ->203. Earlier204/no-tokenHTTP and501-token/201 are historical. Token envelope acceptance is established; request schema, exhaustive field/error/refresh handling and **credentials response/private game-session handoff** remain unknown. No successful game login or actor.
+Latest [credentials checkpoint](CREDENTIALS_SESSION_HANDOFF.md): synthetic token ->SDK0 ->flat numeric-expiration credentials200 ->Campfire login-success/ConfigureLogin ->user-confirmed character-selection frontend ->GET login-info intentionally501. The tested credentials envelope is accepted; exhaustive expiry/type/refresh behavior, compatible login-info/character/world/ticket responses and private game-session handoff remain unresolved. No world or actor. Earlier credentials501 and token controls remain historical evidence.
 
 ## Questions that gate real-client progress
 

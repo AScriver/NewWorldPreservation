@@ -4,9 +4,9 @@
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-**Latest furthest verified protocol state:** local HTTP200 channel parsed; synthetic token response accepted with **Omni CreateSession result0**; attributed **GET `/prod/credentials/omni`** reached our service with Authorization present. That endpoint deliberately returned501. No successful game authentication, world-loading, spawn, game transport or Milestone1. No cursor/keyboard control was used.
+**Latest furthest verified state:** synthetic token SDK0 and **local credentials HTTP200 accepted**, Campfire login-success marker, ConfigureLogin, and user-confirmed **character-selection frontend**. Attributed GET `/prod/game/getlogininfo/<redacted>/omni` then deliberately returned501, with “Login malfunction” popup. No private game-session handoff, world-loading, spawn, game transport or Milestone1. No cursor/keyboard control was used.
 
-Latest evidence and reproducible procedure: [TOKEN_SESSION_CONTRACT](TOKEN_SESSION_CONTRACT.md), [metadata receipt](../research/evidence/current-token-contract.json). Earlier501-bootstrap,204/no-session and501-token results below are historical, not the current stopping point. Local HTTPS works for bootstrap/token and the tested regional API alias. Current credentials response/game-session handoff and REP/DTLS remain unknown.
+Latest evidence and reproducible procedure: [CREDENTIALS_SESSION_HANDOFF](CREDENTIALS_SESSION_HANDOFF.md), [metadata receipt](../research/evidence/current-credentials-contract.json). [Token contract](TOKEN_SESSION_CONTRACT.md) and earlier501-bootstrap/204/501-token/501-credentials results below are historical, not the current stopping point. Local HTTPS and the tested flat numeric-expiration credentials envelope work for this build. Login-info/character/world/ticket handoff and REP/DTLS remain unresolved. The same CA was reused and retained; no fresh certificate approval was required.
 
 | Identity | Verified value / limit |
 |---|---|

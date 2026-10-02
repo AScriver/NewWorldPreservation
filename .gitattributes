@@ -7,3 +7,11 @@
 /tests/fixtures/connectivity/current-token-contract-result.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 /research/evidence/current-token-contract.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 /research/evidence/current-token-contract-validation.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/scripts/credentials_contract_probe.py text eol=lf
+/tests/test_credentials_contract_probe.py text eol=lf
+/tests/test_credentials_log_metadata.py text eol=lf
+/tests/test_current_credentials_contract.py text eol=lf
+/tests/fixtures/connectivity/current-credentials-parser-candidate.json text eol=lf
+/tests/fixtures/connectivity/current-credentials-contract-result.json text eol=lf
+/research/evidence/current-credentials-contract.json text eol=lf
+/research/evidence/current-credentials-contract-validation.json text eol=lf

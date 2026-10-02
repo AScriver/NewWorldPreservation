@@ -29,6 +29,16 @@ def parse_metadata(line):
     for code in SESSION_RESULT.findall(line):
         records.append({"state": "CLIENT_OMNI_SESSION_RESULT", "result_code": int(code),
                         "meaning_on_this_build": "unknown", "identity_exported": False})
+    if "OnCampfireLoginComplete" in line and "login successful" in line:
+        records.append({"state": "CLIENT_CAMPFIRE_LOGIN_COMPLETE_MARKER",
+                        "observation": "owned_log_reports_login_success_not_official_authorization",
+                        "world_entry_proven": False})
+    if "ConfigureLogin" in line:
+        records.append({"state": "CLIENT_GATEWAY_CONFIGURE_LOGIN_MARKER",
+                        "observation": "fixed_log_marker_not_game_session_handoff"})
+    if "getlogininfo" in line.lower():
+        records.append({"state": "CLIENT_GET_LOGIN_INFO_MARKER",
+                        "observation": "fixed_log_marker_not_HTTP_request_proof"})
     return records
 
 

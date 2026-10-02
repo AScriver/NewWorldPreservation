@@ -12,7 +12,7 @@ MARKERS = {"CHANNEL_SERVICE": r"\bChannelService\b", "CONFIGURE_LOGIN": r"\bConf
            "OMNI_SDK": r"\bOmniSDK\b", "GAME_CONNECTION_WRAPPER": r"\bGameConnectionWrapper\b",
            "REP_CONNECTION": r"\bREP connection\b", "TLS_VALIDATION_FAILURE": r"certificate verify failed|unknown ca|SSL peer certificate",
            "GENERIC_LEVEL_LOADER": r"\bLoading level\b|\bLoadLevel\b"}
-SECRET_SIGNAL = re.compile(r"authorization|\bbearer\b|\bJWT\b|password|fallbackToken|steam.?ticket|access.?token|refresh.?token|session.?token", re.I)
+SECRET_SIGNAL = re.compile(r"authorization|\bbearer\b|\bJWT\b|password|fallbackToken|steam.?ticket|access.?token|refresh.?token|session.?token|access.?key.?id|secret.?access.?key", re.I)
 VERSION = re.compile(r"\b[0-9]{1,2}\.[0-9]{1,4}\.[0-9]{1,6}\.[0-9]{1,8}\b")
 
 

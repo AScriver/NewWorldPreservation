@@ -2,7 +2,7 @@
 
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 has passed private bootstrap/token HTTPS and **token model acceptance**: SDK0 and local GET `/prod/credentials/omni`, whose response is deliberately501. See [contract](TOKEN_SESSION_CONTRACT.md) and [connectivity](CURRENT_CLIENT_CONNECTIVITY.md). **No successful private game authentication, character/world selection, REP handshake, actor, initial transform or world visibility has been observed.** Offline spawn research can continue; live spawn implementation is not yet justified.
+Current build `1.400.6031.6004151` / Steam22469132 accepts **synthetic local credentials200**, reports Campfire login-success/ConfigureLogin, and reaches the character-selection frontend. Its login-info GET is deliberately501. See [handoff contract](CREDENTIALS_SESSION_HANDOFF.md) and [connectivity](CURRENT_CLIENT_CONNECTIVITY.md). **No private character/world selection, game-session ticket, REP handshake, actor, initial transform or world visibility has been observed.** Offline spawn research can continue; live spawn implementation is not yet justified.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
@@ -16,9 +16,11 @@ stateDiagram-v2
     Bootstrap --> ChannelAccepted: current local descriptor200 parsed
     ChannelAccepted --> TokenModelAccepted: current synthetic envelope SDK0
     TokenModelAccepted --> CredentialsRequested: current local credentials GET
-    CredentialsRequested --> DiagnosticStop: current stub501
+    CredentialsRequested --> LocalCredentialsAccepted: current synthetic200 / login-success marker
+    LocalCredentialsAccepted --> GatewayLoginInfo: current GET / character-selection frontend
+    GatewayLoginInfo --> DiagnosticStop: current login-info stub501
     DiagnosticStop --> [*]
-    CredentialsRequested --> Authenticated: future private credentials contract unresolved
+    GatewayLoginInfo --> Authenticated: future private selection/ticket contract unresolved
     Authenticated --> CharacterWorldSelected: historical login-info / queue
     CharacterWorldSelected --> TicketReady: ticket / world / REP address
     TicketReady --> DTLSConnected: separate UDP DTLS trust
