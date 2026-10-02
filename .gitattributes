@@ -33,3 +33,9 @@
 /tests/fixtures/connectivity/current-queue-handoff-result.json text eol=lf
 /research/evidence/current-queue-handoff.json text eol=lf
 /research/evidence/current-queue-handoff-validation.json text eol=lf
+/scripts/dtls_transport_probe.py text eol=lf
+/tests/test_dtls_transport_probe.py text eol=lf
+/research/evidence/dtls-local-validation.json text eol=lf
+/research/evidence/current-dtls-trust.json text eol=lf
+/research/evidence/current-dtls-trust-validation.json text eol=lf
+/tests/fixtures/connectivity/current-dtls-trust-result.json text eol=lf
