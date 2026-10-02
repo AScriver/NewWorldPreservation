@@ -1,5 +1,7 @@
 # Client connection flow
 
+**Latest current-build checkpoint:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) verifies local credentials -> login-info200 -> selectable Preservation/world/preview -> user Play -> queue-v2 POST644bytes/diagnostic501. No private ticket/REP/world actor. Earlier current stopping points below remain historical evidence, not today's result.
+
 Evidence: clean First Light `63756a3`; newer research `820156d`. References below are external-checkout paths. This document is the **historical server-side flow**, not a current-client packet recipe. Current bootstrap -> token model -> **local credentials acceptance / Campfire login-success -> gateway login-info request** is verified in [CREDENTIALS_SESSION_HANDOFF](CREDENTIALS_SESSION_HANDOFF.md). User reached character-selection frontend; login-info currently501, no private ticket/REP/world proof. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records unresolved actor gates. See [ledger](EVIDENCE_LEDGER.md).
 
 ## Intended and historical flow

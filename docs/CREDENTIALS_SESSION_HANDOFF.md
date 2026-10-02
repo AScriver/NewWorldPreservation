@@ -1,5 +1,7 @@
 # Current credentials and private-session handoff
 
+**Newer selection checkpoint:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) supersedes the login-info501 stopping point below: query-aware path matching served a synthetic965byte model, rendered Preservation and produced queue-v2 after Play. The credentials evidence below is unchanged. Ticket/game transport remain unresolved.
+
 ## Verified checkpoint: 2026-10-02
 
 Stock Steam build **22469132**, version **1.400.6031.6004151**, installed executable SHA256 `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e`.

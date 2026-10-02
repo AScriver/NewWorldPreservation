@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "kind": "current_login_info_evidence",
+  "checkout_head_before_edits": "5250f79ff2eaa820590124f220e882e3f14f1b3f",
+  "exercised_sources_dirty": true,
+  "sources": {
+    "scripts/session_handoff_probe.py": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+    "scripts/credentials_contract_probe.py": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+    "scripts/bootstrap_probe.py": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f",
+    "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+    "tests/fixtures/connectivity/current-login-info-candidate.json": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+  },
+  "private_sources": {
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\run-manifest.json": "3c9021f374433f6e9440888ddb9fdf3c62cbbda129f2eee95aedee0001b9a9dc",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\owned-client.json": "ae731ce6faaff44dc199d2f41c23bd361b17515c9995d15d52e3da257958274f",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\bootstrap-v4.jsonl": "b9873861f7534141d580f68e366f8ac0584ed6605078cfd741e693fa05170ed9",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\bootstrap-v6.jsonl": "d6a25e0c32a7b9bdbecc071618cc15c6949024bdc10c84b7614ae604d9331b94",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\bootstrap-log-final.json": "75accd24d179daf4f63092a2e09af0bbe9f5910654a043eed6159a32c6283525",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\trial-window.jsonl": "7de46dffbd601b4777c6fb3da4d7b86f038dd5e61164f154b7099b7010b9ae0d",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\trial-dispatch.json": "8db1c99a35c53e3535910333bf6f0a0c1f87af78ac7f6a675aa3e212c224c1da",
+    "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d\\cleanup-readback.json": "c596f86585ab79d0ab45b14c87823127b89c478c41843e29317ff2b6dd864ce1",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\run-manifest.json": "100ed54b465556195105435068e2820486db6ca727440e4635c203138bc6e8a7",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\owned-client.json": "49165b98a317a92075426c2f2ed923ee95676c771e583ebaa3f2a38737d6ee6b",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\bootstrap-v4.jsonl": "a95ffddac3114f037cf02b2754081e59e6a504eae2f8a3b28d1ef206b76a82da",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\bootstrap-v6.jsonl": "c59144fb2b7fc688860fcf4d52d1dbe1534834281d5fb239062aa1db3e05bee7",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\bootstrap-log-final.json": "88db7e70bfac4018b053ee47b9470519e240fed949aaba2d7dbe91dcb107d97b",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\trial-window.jsonl": "8e43329e5042167d68c84dbd57ea9e76000a8b914448b82ea3ae02067ea9cd02",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\trial-dispatch.json": "de797e734a14b25795125b59c5eaa9d4c4dd1b7f27170b998a834545db0c5f95",
+    "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba\\cleanup-readback.json": "8dd9813601e7a655248cc41b029a7c68aae80b0c23b3c01cdedac7eda6772410",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\run-manifest.json": "772df98c1156037a2d1a507f90bae0fbb1fb9116046095168aa2d27b59b3eb6f",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\owned-client.json": "b4284ca99e738c76ef91bce0ef3cf70c5e974f01a6f7d310fd2139324e039340",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\bootstrap-v4.jsonl": "ee3b0ff8be0b82f117d37f82c06f1744feac5b5ba7aceec6c0300c68ad534964",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\bootstrap-v6.jsonl": "394105c1218603df03dfae27109f2426fb78d92d775dc5f0c21f572448548469",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\bootstrap-log-final.json": "dee95fa10b292a157f50f2ae58e8e991e969e6db869e00dda8f0b6e7e4ed4319",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\trial-window.jsonl": "8e752e434df41c98816b213d0443fb7ebf164d7490c326dfea9ccb6061c30e20",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\trial-dispatch.json": "33cf3056054e680465c701a739c8106f83ac9709d3bb80b19d6c73ff71f9de3d",
+    "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc\\cleanup-readback.json": "b550e4afa565ce205c423df8f3e0abd77926be040750bf90d54d1e89eb4a8575"
+  },
+  "cases": [
+    {
+      "case": "unmatched-target",
+      "run_directory": "private\\connectivity\\token-contract-credentials-57a477a2982a4490a50cfeca3cf74c4d",
+      "source_identity": {
+        "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+        "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+        "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+        "head": "5250f79ff2eaa820590124f220e882e3f14f1b3f",
+        "session_handoff_probe_sha256": "69b034e2bfa601f40f1c39f0896d1e932065721648dd4a54032b42759013dd98",
+        "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+      },
+      "owned_client": {
+        "process_id": 38768,
+        "identity_basis": "exclusive_fresh_normal_Steam_launch_PID_and_start_time_not_memory",
+        "live_path_verified": false,
+        "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\baseline-6bb84f143d99465cbe04d1bb590dfa7c\\launch-manifest.json",
+        "start_time_utc": "2026-10-02T20:08:20.0711378Z",
+        "timestamp_utc": "2026-10-02T20:08:20.1072459Z",
+        "launch_boundary_utc": "2026-10-02T20:08:15.4755719Z"
+      },
+      "cleanup_readback": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T20:15:53.8483566Z",
+        "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+        "owned_rule_absent": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "retained_ca_root_count": 1,
+        "ca_removed": false,
+        "ca_regenerated": false,
+        "inputs_controlled": false,
+        "memory_accessed": false
+      },
+      "own_log_sha256": "7ab4da3052baa3d0b01576481617fbe7edf11ad71755fe8a535b7ffcfc2aca4b"
+    },
+    {
+      "case": "query-diagnostic",
+      "run_directory": "private\\connectivity\\token-contract-credentials-6ae55d1371e4477291d6496e4f3855ba",
+      "source_identity": {
+        "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+        "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+        "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+        "head": "5250f79ff2eaa820590124f220e882e3f14f1b3f",
+        "session_handoff_probe_sha256": "3c738014dc30586778966bc225005721193121d0f2e654ec2504611acdb4b310",
+        "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+      },
+      "owned_client": {
+        "process_id": 7532,
+        "live_path_verified": false,
+        "identity_basis": "exclusive_fresh_normal_Steam_launch_PID_and_start_time_not_memory",
+        "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\baseline-39b9deffa93941aab0a35d0589c66dbb\\launch-manifest.json",
+        "start_time_utc": "2026-10-02T20:18:18.4014455Z",
+        "launch_boundary_utc": "2026-10-02T20:18:14.2197290Z",
+        "timestamp_utc": "2026-10-02T20:18:18.5025773Z"
+      },
+      "cleanup_readback": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T20:20:45.2993395Z",
+        "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+        "owned_rule_absent": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "retained_ca_root_count": 1,
+        "ca_removed": false,
+        "ca_regenerated": false,
+        "inputs_controlled": false,
+        "memory_accessed": false
+      },
+      "own_log_sha256": "d9ce710a0c780c5e45637d3868c7ba30a242c96b5429766c32a0e555f61f5e87"
+    },
+    {
+      "case": "path-only-route",
+      "run_directory": "private\\connectivity\\token-contract-credentials-6f7ee271dea5474cbb568e6df8d0facc",
+      "source_identity": {
+        "head": "5250f79ff2eaa820590124f220e882e3f14f1b3f",
+        "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+        "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+        "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+        "session_handoff_probe_sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+        "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+      },
+      "owned_client": {
+        "start_time_utc": "2026-10-02T20:22:31.6038291Z",
+        "process_id": 2196,
+        "launch_boundary_utc": "2026-10-02T20:22:27.3585815Z",
+        "timestamp_utc": "2026-10-02T20:22:31.6716683Z",
+        "identity_basis": "exclusive_fresh_normal_Steam_launch_PID_and_start_time_not_memory",
+        "live_path_verified": false,
+        "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\baseline-2d05def809204a1994e17f546e402dbd\\launch-manifest.json"
+      },
+      "cleanup_readback": {
+        "schema": 1,
+        "timestamp_utc": "2026-10-02T20:24:46.6185999Z",
+        "state": "CREDENTIALS_TRIAL_CLEANED_CA_RETAINED",
+        "owned_rule_absent": true,
+        "game_absent": true,
+        "listeners_absent": true,
+        "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+        "retained_ca_root_count": 1,
+        "ca_removed": false,
+        "ca_regenerated": false,
+        "inputs_controlled": false,
+        "memory_accessed": false
+      },
+      "own_log_sha256": "0a7b84f6ee90fd7d02147d8eacb3495ca2f78db2c731d2db04201125a636a4b0"
+    }
+  ],
+  "private_static_inspection": {
+    "net-inspect-1474e42e0.txt": "bfb30bc82d002f5949adc8f058d8d16be4d75e99732b7f16d0c1d1763b9b6f0a",
+    "net-inspect-1474e1f60.txt": "4fc157be3f98fcb1e6a87b65d82c1d5b0701f92bafd396a5363e4e51eb4af3ff",
+    "net-inspect-1474e8e90.txt": "de8257504ebf694fd9988ffab7a9f15ef7483e370ef671b062f5c43e4f9f4e80",
+    "net-inspect-1474ea130.txt": "63def6afe212c719079320633cdfb85f9bc1434f5aee3150a7496f6e0a73fe33",
+    "annotated-1464154e0.txt": "5abd15c6ccbfbb6f15a4935025760f3c9c91f530124c6ba228bb1d8eb074bd5e",
+    "annotated-1463e5e30.txt": "99d135ecd2e7cbec78c192f2a2c637499bbd2fb41a1ff73df85fb6f75be7cfd3",
+    "net-inspect-1474ea680.txt": "80dbe6cb6774085d257dd443930e3c04e506649c824a5a8eb988df2bbf3fbc16"
+  },
+  "live_image_path_verified": false,
+  "identity_basis": "pinned_installed_file_and_exclusive_fresh_Steam_PID_start_time_and_exact_client_TCP_tuple_owner",
+  "user_cache_cleared": false,
+  "official_authentication_proven": false,
+  "game_transport_proven": false,
+  "actor_spawn_proven": false,
+  "inputs_controlled": false,
+  "memory_accessed": false,
+  "ca_regenerated_or_imported": false,
+  "query_names_values_or_identifiers_exported": false
+}

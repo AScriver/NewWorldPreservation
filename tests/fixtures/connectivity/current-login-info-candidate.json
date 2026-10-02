@@ -1,0 +1,40 @@
+{
+  "LoginInfoList": {
+    "MaxChannelCharacters": 4,
+    "CrossRegionTransferCooldownMins": 0,
+    "NameReservations": [],
+    "PendingWorldMerges": [],
+    "Worlds": [{
+      "WorldId": "pdx-nwp-local-1",
+      "WorldName": "Preservation Local",
+      "PublicName": "Preservation Local",
+      "WorldStatus": "ACTIVE",
+      "WorldType": "OpenWorld",
+      "WorldSet": "live",
+      "WorldVersion": "1.400.6031.6004151",
+      "TransferToRegion": "",
+      "PublicStatusCode": 0,
+      "MaxAccountCharacters": 4,
+      "MaxConnectionCount": 8,
+      "ConnectionCount": 0,
+      "IsFull": false,
+      "IsRecommended": true,
+      "WorldMetrics": {"QueueSize": 0, "QueueWaitTimeSec": 0, "WorldAgeDays": 0}
+    }],
+    "Characters": [{
+      "CharacterId": "00000000-0000-4000-8000-000000000020",
+      "PersonaId": "00000000-0000-4000-8000-000000000002",
+      "WorldId": "pdx-nwp-local-1",
+      "Name": "Preservation",
+      "CreatedDate": "2026-10-02T00:00:00Z",
+      "ModifiedDate": "2026-10-02T00:00:00Z",
+      "OwnerState": "permanent",
+      "PublishedData": "",
+      "FtueCompleted": false,
+      "IsFreshStart": false,
+      "IsTrialOwner": false,
+      "LocationGroupId": "pdx-prod",
+      "LocationId": "pdx-nwp-local-1"
+    }]
+  }
+}

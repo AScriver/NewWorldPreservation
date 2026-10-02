@@ -2,7 +2,7 @@
 
 Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
-Latest [credentials checkpoint](CREDENTIALS_SESSION_HANDOFF.md): synthetic token ->SDK0 ->flat numeric-expiration credentials200 ->Campfire login-success/ConfigureLogin ->user-confirmed character-selection frontend ->GET login-info intentionally501. The tested credentials envelope is accepted; exhaustive expiry/type/refresh behavior, compatible login-info/character/world/ticket responses and private game-session handoff remain unresolved. No world or actor. Earlier credentials501 and token controls remain historical evidence.
+Latest [selection checkpoint](LOGIN_INFO_CONTRACT.md): accepted synthetic token/credentials ->login-info200 ->selectable Preservation/world/frontend avatar ->Play ->queue-v2 POST501. Remaining: queue response/readiness/refresh/cancel/ticket/REP-address and DTLS acceptance. Query presence is observed; actual query names/values are not captured. No world or actor. Earlier501-login-info/credentials/token controls remain historical evidence.
 
 ## Questions that gate real-client progress
 

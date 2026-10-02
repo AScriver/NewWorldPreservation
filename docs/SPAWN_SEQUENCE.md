@@ -1,8 +1,10 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
+**Latest gate:** [LOGIN_INFO_CONTRACT](LOGIN_INFO_CONTRACT.md) verifies local login-info200 -> Preservation character/world/frontend avatar -> Play -> queue-v2 POST501. The preview is not a world actor. Queue ticket, REP trust, registration and actor contract remain gates; earlier stopping points below are historical.
+
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 accepts **synthetic local credentials200**, reports Campfire login-success/ConfigureLogin, and reaches the character-selection frontend. Its login-info GET is deliberately501. See [handoff contract](CREDENTIALS_SESSION_HANDOFF.md) and [connectivity](CURRENT_CLIENT_CONNECTIVITY.md). **No private character/world selection, game-session ticket, REP handshake, actor, initial transform or world visibility has been observed.** Offline spawn research can continue; live spawn implementation is not yet justified.
+Current build `1.400.6031.6004151` / Steam22469132 accepts synthetic credentials and login-info200, renders selectable Preservation/world/frontend avatar, and reaches private queue-v2 POST after Play; queue is deliberately501. See [selection contract](LOGIN_INFO_CONTRACT.md). **No ticket, REP handshake, in-world actor, initial transform or world visibility is observed.** Offline spawn research can continue; live spawn implementation remains gated.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
@@ -18,7 +20,9 @@ stateDiagram-v2
     TokenModelAccepted --> CredentialsRequested: current local credentials GET
     CredentialsRequested --> LocalCredentialsAccepted: current synthetic200 / login-success marker
     LocalCredentialsAccepted --> GatewayLoginInfo: current GET / character-selection frontend
-    GatewayLoginInfo --> DiagnosticStop: current login-info stub501
+    GatewayLoginInfo --> PrivatePreview: current synthetic login-info200
+    PrivatePreview --> QueueV2: user selection and Play
+    QueueV2 --> DiagnosticStop: current queue stub501
     DiagnosticStop --> [*]
     GatewayLoginInfo --> Authenticated: future private selection/ticket contract unresolved
     Authenticated --> CharacterWorldSelected: historical login-info / queue

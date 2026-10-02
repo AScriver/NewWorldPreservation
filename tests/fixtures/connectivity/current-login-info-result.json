@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "kind": "observed_current_login_info_metadata_not_packets",
+  "steam_build_id": "22469132",
+  "file_version": "1.400.6031.6004151",
+  "client_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "cases": [
+    {
+      "case": "unmatched-target",
+      "observations": [
+        {
+          "route": "login_info",
+          "timestamp_utc": "2026-10-02T20:09:01.425Z",
+          "method": "GET",
+          "request_body_bytes": 0,
+          "authorization_present": true,
+          "cookie_present": false,
+          "tls_version": "TLSv1.2",
+          "http_status": 501,
+          "exact_owned_client_tcp_tuple": true,
+          "request_values_saved": false
+        }
+      ],
+      "observed_login_info_requests": 6,
+      "observed_queue_requests": 0,
+      "login_info_candidate_sent": false,
+      "character_rendered_user_report": false,
+      "play_clicked_user_report": false,
+      "game_session_ticket_issued": false,
+      "world_entry_proven": false
+    },
+    {
+      "case": "query-diagnostic",
+      "observations": [
+        {
+          "route": "login_info",
+          "timestamp_utc": "2026-10-02T20:19:06.283Z",
+          "method": "GET",
+          "request_body_bytes": 0,
+          "authorization_present": true,
+          "cookie_present": false,
+          "tls_version": "TLSv1.2",
+          "http_status": 501,
+          "exact_owned_client_tcp_tuple": true,
+          "request_values_saved": false,
+          "target_shape": {
+            "path_matches_candidate": true,
+            "raw_target_matches_candidate": false,
+            "query_present": true,
+            "fragment_present": false,
+            "absolute_form": false,
+            "trailing_slash": false,
+            "repeated_separator": false,
+            "path_segment_count": 5,
+            "identifier_length": 3,
+            "method_matches": true,
+            "host_matches": true,
+            "authorization_present": true,
+            "empty_body": true,
+            "uri_values_saved": false
+          }
+        }
+      ],
+      "observed_login_info_requests": 6,
+      "observed_queue_requests": 0,
+      "login_info_candidate_sent": false,
+      "character_rendered_user_report": false,
+      "play_clicked_user_report": false,
+      "game_session_ticket_issued": false,
+      "world_entry_proven": false
+    },
+    {
+      "case": "path-only-route",
+      "observations": [
+        {
+          "route": "login_info",
+          "timestamp_utc": "2026-10-02T20:22:57.880Z",
+          "method": "GET",
+          "request_body_bytes": 0,
+          "authorization_present": true,
+          "cookie_present": false,
+          "tls_version": "TLSv1.2",
+          "http_status": 200,
+          "exact_owned_client_tcp_tuple": true,
+          "request_values_saved": false,
+          "target_shape": {
+            "path_matches_candidate": true,
+            "raw_target_matches_candidate": false,
+            "query_present": true,
+            "fragment_present": false,
+            "absolute_form": false,
+            "trailing_slash": false,
+            "repeated_separator": false,
+            "path_segment_count": 5,
+            "identifier_length": 3,
+            "method_matches": true,
+            "host_matches": true,
+            "authorization_present": true,
+            "empty_body": true,
+            "uri_values_saved": false
+          },
+          "response_bytes": 965,
+          "response_sha256": "8b9019b4a1133be82ce3532592d3298faccb8a234129d93b1e41ba9a7b3b03b5",
+          "synthetic_values_only": true
+        },
+        {
+          "route": "login_queue_v2",
+          "timestamp_utc": "2026-10-02T20:23:19.989Z",
+          "method": "POST",
+          "request_body_bytes": 644,
+          "authorization_present": true,
+          "cookie_present": false,
+          "tls_version": "TLSv1.2",
+          "http_status": 501,
+          "exact_owned_client_tcp_tuple": true,
+          "request_values_saved": false
+        }
+      ],
+      "observed_login_info_requests": 1,
+      "observed_queue_requests": 6,
+      "login_info_candidate_sent": true,
+      "character_rendered_user_report": true,
+      "play_clicked_user_report": true,
+      "game_session_ticket_issued": false,
+      "world_entry_proven": false
+    }
+  ]
+}

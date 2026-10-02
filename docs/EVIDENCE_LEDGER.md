@@ -134,3 +134,16 @@ Read-only adversarial review: K18/K19 survived within the recorded handoff; all 
 | K26 | Credentials additions preserve the explicit workspace suite | Executed183 pass/no failures/errors/skips, including9 gates and38 new tests;75 probe/log checks passed earlier. No upstream/codecs/gameplay change;455 upstream/skip1 historical baseline not rerun | [Validation receipt](../research/evidence/current-credentials-contract-validation.json), SHA-pinned private JUnit and named-script identity |
 
 These claims supersede the **stopping point** in K18/K19, not their original observations. Milestone1 remains false; actor implementation is still gated on private selection/ticket/REP/spawn evidence.
+
+## Current login-info checkpoint — HEAD5250f79, dirty original discovery additions
+
+[Receipt](../research/evidence/current-login-info.json) pins each failed/positive trial's sources, owned launch/PID/start, exact TCP owners, private metadata and restored resources. Installed build/SHA unchanged; no upstream/codecs/gameplay/EAC/binary/memory/input changes. Per-user cache not cleared.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K27 | Raw-target guard failed on the current request's query | Observed separate diagnostic: origin-form, parsed path match, query present, raw match false, correct method/Host/auth/body0. First candidate never sent; not response rejection | Fixture cases unmatched-target/query-diagnostic; PID7532/start20:18:18; six guard observations |
+| K28 | Current client renders original synthetic character/world/frontend preview | Observed attributed GET20:22:57.880Z,200965bytes/SHA8b9019b4…; user report/screenshot Preservation/Preservation Local/1of4/avatar. Not world entry/actor spawn | Positive fixture; PID2196/start20:22:31.6038291Z; candidate/source pinned |
+| K29 | Play reaches current private queue-v2 route | Observed POST20:23:20.758Z,644bytes discarded/auth present/TLS1.2/exact owner; intentional501. Popup “too many players” is not measured congestion | Sanitized /prod/game/login/queue/v2/<redacted>/omni; no request/header values or ticket issued |
+| K30 | Each discovery trial restored runtime resources and retained the same CA | Observed owned client stops before hosts/rule removal; no game/443/owned rule and original hostsSHA/same Root1 in each cleanup readback. Program-only configuration, not helper/packet proof | Receipt private-source hashes; latest readback20:24:46.619Z |
+
+K24's501 stopping point is superseded, not erased. Credentials review's earlier missing nested-model hash was resolved in its committed additional_static_inspection map. Actor implementation still waits for ticket/transport/spawn evidence; no static model name proves readiness or crypto semantics.

@@ -15,3 +15,10 @@
 /tests/fixtures/connectivity/current-credentials-contract-result.json text eol=lf
 /research/evidence/current-credentials-contract.json text eol=lf
 /research/evidence/current-credentials-contract-validation.json text eol=lf
+/scripts/session_handoff_probe.py text eol=lf
+/tests/test_session_handoff_probe.py text eol=lf
+/tests/test_current_login_info.py text eol=lf
+/tests/fixtures/connectivity/current-login-info-candidate.json text eol=lf
+/tests/fixtures/connectivity/current-login-info-result.json text eol=lf
+/research/evidence/current-login-info.json text eol=lf
+/research/evidence/current-login-info-validation.json text eol=lf
