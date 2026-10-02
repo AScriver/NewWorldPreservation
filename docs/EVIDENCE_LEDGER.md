@@ -76,4 +76,17 @@ Started clean `main`2206da7; original files dirty during trials. [Live receipt](
 | K06 | Temporary trust/routing cleaned up | Hosts original SHA7c0d9bdf…; exact introduced CA counts0; no owned443 listener/game left. No memory/EAC/binary change. | Restoration/readback/stop events and final OS checks. |
 | K07 | Existing codecs/replay do not establish current actor flow | Strong old-source support, not current runtime: unwired SelfIdent, unknown LevelInfo ID, opaque actor/transform. | SPAWN_SEQUENCE and pinned clean source. |
 
-Final offline profiles:455 upstream passes/1deliberate skip;9 gates;19 original probe controls;26 instrumentation/metadata-fixture tests;CLI lifecycle and mocked observer scenarios pass. None promotes501 to auth or Milestone1. Exact next blocker: accepted current channel descriptor, private auth/session, separate REP/DTLS gate, then current actor fixture.
+Historical environment profiles:455 upstream passes/1deliberate skip;9 gates. Original19 probe controls,26 instrumentation checks,CLI and observer reran successfully17:09–17:10UTC. Added48 descriptor/HTTPS/safe-log checks passed17:08UTC. No test count establishes private authentication or Milestone1.
+
+## Channel HTTP200 evidence (later, same current build)
+
+Scope: main starting1f094ac; preexisting untracked`.vscode/` preserved; original new modules/fixture dirty during trial, exact SHA256s recorded in [channel receipt](../research/evidence/current-client-channel.json). Original probe SHA3231f78d… unchanged. Public original configuration/raw owned logs stay ignored. See [checkpoint/procedure](BOOTSTRAP_CHANNEL.md).
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K08 | Current public descriptor has five regions/four API tags plus nwTokenUrl/entitlement metadata | Observed unauthenticated public read, not game wire capture; full-shape presence not field-requiredness proof. | Public5404byte/SHAa09098b6… receipt; original local fixture intentionally substituted. |
+| K09 | Current owned client parsed local HTTP200 descriptor | Observed own PID41196/UTCstart/accept-time owner; server200SHA69075e7a… plus five unique local display markers in fresh own log. Not proof every API/tag/token URL consumed. | Channel receipt/fixture; own stable logSHA bfc518da…, markers279/288/297/306/317. |
+| K10 | Furthest current state is frontend plus Omni session failure204 | Observed generic frontend markers and numeric204; user-supplied failure popup/retry. Meaning of204 and underlying endpoint/transport unknown; no session HTTP or auth/world/actor proof. | Exactly one private HTTP request; owned-log352/353 etc; user screenshot not redistributed. |
+| K11 | Trial's own resources restored after client exit | Observed stop17:00:33 before hosts/firewall removal17:00:34, CAcount0 then listenersabsent. Rule scope ActiveStore-readback, not packet trace/helper containment. | Ownership/window/trust receipt hashes plus root OS readbacks; no memory/EAC/input control. |
+
+Exact next blocker: route/observe **current Omni CreateSession** at private infrastructure, determine204 cause, then establish response schema/session selection/REP-DTLS and actor fixtures. K05's501 stopping point remains historical; only the affected state-progress claim is superseded, not its trust controls.

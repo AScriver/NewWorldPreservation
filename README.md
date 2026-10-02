@@ -24,7 +24,7 @@ Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites
 
 **Stock New World `1.400.6031.6004151` / Steam build22469132 reached our private HTTPS server.** Exact accepted-socket owner matched our recorded ordinary Steam launch. The client sent HTTP/1.1 `GET /STEAM_APP_ID.1063730.json` over TLS1.2 to IPv6 localhost443; probe returned deliberate501. Local CurrentUserRoot CA + correct hostname works; absent CA or wrong-name same-CA leaf prevents HTTP; restoration restores HTTP. No memory inspection, binary patch or EAC change. Both temporary CAs removed, hosts restored byte-exact, owned probes/client closed.
 
-**Still not authenticated or in Aeternum; Milestone1 not achieved.** Next: accepted channel-bootstrap descriptor, private auth/session schemas, separate REP/DTLS trust, then actor creation. Added safe current-client metadata fixture, guarded hosts/trust scripts, accept-time Windows socket ownership and observer fallback. Original19 probe controls,26 instrumentation/fixture tests, CLI lifecycle control and mocked observer checks pass; these offline checks remain distinct from the actual game experiment.
+**Later checkpoint:** current client parsed our HTTP200 channel descriptor and all five local region labels, initialized the frontend, then reported Omni CreateSession204. No session HTTP reached our listener. **Still not authenticated or in Aeternum; Milestone1 not achieved.** [Latest evidence, exact blocker and procedure](docs/BOOTSTRAP_CHANNEL.md). Next: own token/session request, private auth/session schemas, separate REP/DTLS, then actor creation. Original19/26 controls, CLI and observer checks reran successfully; new descriptor/HTTPS/safe-log tests pass. Offline controls remain separate from actual game observations.
 
 ```powershell
 C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
@@ -60,6 +60,6 @@ Current local test receipt: [latest-validation.json](research/evidence/latest-va
 
 ## Next step
 
-Serve an evidenced current channel descriptor beyond501, establish private auth/session selection and REP/DTLS trust, then prove registration-to-actor-spawn behavior. Independent offline slice: actual two-peer loopback DTLS exchange—not an invented gameplay codec. See [roadmap](docs/ROADMAP.md).
+Route/observe current Omni CreateSession after proven channel parsing, establish private auth/session selection and REP/DTLS trust, then prove registration-to-actor-spawn behavior. Independent offline slice: actual two-peer loopback DTLS exchange—not an invented gameplay codec. See [roadmap](docs/ROADMAP.md).
 
 All work is local. No remote/public repository, contributor messages or Actionables were created/updated; no governing Actionables work-item ID was supplied.

@@ -1,5 +1,5 @@
 {
-  "observedAtUtc": "2026-10-02T16:03:32.081408+00:00",
+  "observedAtUtc": "2026-10-02T17:10:08.209381+00:00",
   "mode": "offline-instrumentation-controls-and-observed-metadata-fixture",
   "profile": "instrumentation",
   "status": "passed",
@@ -19,7 +19,7 @@
     "processExitCode": 0,
     "expectedTotal": 26
   },
-  "runDirectory": ".scratch\\connectivity-validation\\run-y6w3v7qo",
+  "runDirectory": ".scratch\\connectivity-validation\\run-z_whl1u2",
   "sourceSha256": {
     "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
     "scripts/validate_connectivity.py": "eccfbf95c73c9da46ed0112bf57ed1c3a6f8b7b074443bcb9c3cb1e2e466122f",

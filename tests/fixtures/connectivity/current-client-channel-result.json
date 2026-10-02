@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "kind": "observed_owned_client_metadata_not_auth_payload_or_wire_capture",
+  "client": {
+    "steamBuild": "22469132",
+    "version": "1.400.6031.6004151"
+  },
+  "request": {
+    "method": "GET",
+    "route": "channel_discovery",
+    "host": "d2c74t4zimux3r.cloudfront.net",
+    "http_version": "HTTP/1.1",
+    "declared_body_bytes": 0,
+    "authorization_present": false,
+    "cookie_present": false
+  },
+  "response": {
+    "status": 200,
+    "canonical_descriptor_sha256": "69075e7a7487b9ac6269db8df865decd56ea6a8190f7adacd9798c1bd7a1cbae",
+    "body_bytes": 3825
+  },
+  "owned_log": {
+    "source_sha256": "bfc518da3c87f64689c5c0c0f496ba74549e0e4e5bb2f49cc71cde8f325defd4",
+    "source_bytes": 30131,
+    "regions_parsed": [
+      "fra-prod",
+      "gru-prod",
+      "iad-prod",
+      "pdx-prod",
+      "syd-prod"
+    ],
+    "session_result_codes": [
+      204
+    ],
+    "result_meaning": "unknown_on_current_build"
+  },
+  "front_end_initialized": true,
+  "authentication_http_reached_private_service": false,
+  "authenticated": false,
+  "world_entered": false,
+  "player_actor_created": false
+}

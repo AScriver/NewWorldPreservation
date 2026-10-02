@@ -62,11 +62,11 @@ Reusable now: transport framing/codec round-trip tests, per-peer DTLS scaffoldin
 
 ## Independently testable next tasks
 
-1. **Accepted bootstrap descriptor:** capture current account-independent schema/response metadata from our normal session, typed/redacted fixture; serve only evidenced required fields and private endpoints; prove current log progression beyond501. No speculative old fallback.
+1. **Bootstrap descriptor (parsing proven; session routing next):** [BOOTSTRAP_CHANNEL](BOOTSTRAP_CHANNEL.md) records current public shape, original local substitutions, HTTP200 and five parsed regions. Omni CreateSession result204/no private session HTTP remains a blocker; preserve uncertainties, no old fallback.
 2. **Private auth/selection contract:** exact current methods/redacted schemas and state relationships, then isolated local account/character ownership tests. Stub rejection is not auth success.
 3. **Separate transport gate:** correct selected REP address, own current-client DTLS handshake/trust, Carrier connect and V3 request/response with secret-minimizing traces. A two-Python-peer DTLS test is useful offline but is not this gate.
 4. **Current spawn fixture:** relate registration, self-identification, actor/replica creation, ownership, initial transform and visibility. Record state/frame direction/channel, build, byte boundaries, stable **sanitized** ID correlations and positive/negative outcomes. Validate codec parsing/serialization before changing them.
 5. **One-player visible actor:** emit the minimum validated sequence with structured logs and demonstrate local world/actor state. Stop expansion at that success as requested.
 6. **Second distinct player:** independent private account/session/actor, bilateral position/rotation changes, removal/reconnect without duplicate actor. No combat/NPC/inventory/persistence work beforehand.
 
-**Exact immediate blocker is task1, not a guessed spawn packet.** Current evidence permits spawn analysis; live actor implementation still waits for tasks1–4. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.
+**Exact immediate blocker is routing/observing Omni CreateSession after task1's proven descriptor parsing, not a guessed spawn packet.** Current evidence permits spawn analysis; live actor implementation still waits for private auth/selection, transport and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.

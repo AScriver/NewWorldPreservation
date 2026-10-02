@@ -82,7 +82,7 @@ Instrumentation failures retained: original observer silently skipped path-inacc
 
 ## Smallest service and structured transitions
 
-The implemented original service accepts TLS, sanitizes one bounded HTTP request, and returns 501 except its own health route. It never forwards, invents auth success or saves request headers/bodies. Necessary **next service**: a client-accepted HTTP200 channel descriptor directing later services to private endpoints. Its current full schema/requirements are not yet a fixture; do not blindly reuse First Light's synthetic fallback.
+The original transport probe accepts TLS and returns501 except health. A later [bootstrap checkpoint](BOOTSTRAP_CHANNEL.md) adds a strict local HTTP200 descriptor: current client parsed all five local region names and initialized its frontend, then failed Omni CreateSession with result204. No subsequent HTTP reached our listener; field requiredness and session routing remain unknown. Neither service forwards, invents auth success or saves headers/bodies. Do not reuse First Light's synthetic fallback verbatim.
 
 All server/mutation/observer events have UTC timestamps. Server events carry run/connection UUIDs and ordered sequence numbers; logs flush per transition. Important states:
 
@@ -140,7 +140,7 @@ The historical bootstrap hostname/path still applies to this current build; sour
 
 Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
 
-**Exact next blocker:** accepted current channel JSON/HTTP200, then evidenced private auth/session selection and REP/DTLS handshake. Spawn **research** may now begin; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) records historical candidate codecs and unknowns. Live actor creation/transform/visibility remains blocked by those preceding states. No gameplay implemented.
+**Exact next blocker (supersedes501 checkpoint):** current channel JSON/HTTP200 parsing is observed; now route/observe Omni CreateSession on private infrastructure and explain result204 before implementing its response. [Latest evidence/procedure](BOOTSTRAP_CHANNEL.md). Private auth/session selection and separate REP/DTLS then precede live actor work. [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) remains a historical source map, not a current actor recipe. No gameplay implemented.
 
 ## Capture Before Shutdown
 

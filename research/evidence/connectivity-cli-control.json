@@ -1,11 +1,11 @@
 {
-  "observedAtUtc": "2026-10-02T16:03:05.559991+00:00",
+  "observedAtUtc": "2026-10-02T17:09:42.162535+00:00",
   "mode": "python-cli-loopback-control",
   "status": "passed",
   "newWorldClientTested": false,
   "python": "3.11.9",
   "probeSha256": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
-  "certificateLeafSha256": "e7925e13384324c78535ae31f372917f0021559d5aa51cb7535a6c8b358747d9",
+  "certificateLeafSha256": "03235a2393f7b8157359fafaa4a6428980b4bfa346e9317a38f2d7f38f80a602",
   "trustedCA": "explicit Python SSL context only, no Windows trust-store edit",
   "request": "GET /__probe/health",
   "httpStatus": 200,
@@ -22,5 +22,5 @@
   "childExitCode": 0,
   "listenerClosed": true,
   "stderrEmpty": true,
-  "runDirectory": ".scratch\\cli-yzcsxlo2"
+  "runDirectory": ".scratch\\cli-m5o1hyqn"
 }

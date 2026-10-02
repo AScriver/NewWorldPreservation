@@ -2,6 +2,8 @@
 
 Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
+Latest [HTTP200 checkpoint](BOOTSTRAP_CHANNEL.md): five original local region labels parsed; frontend initialized; Omni CreateSession204/no private session HTTP. Actual session destination, whether token-host metadata is honored, and cause/meaning of204 remain unknown. Local session/actor work must not assume authentication succeeded.
+
 ## Questions that gate real-client progress
 
 | Question | Current evidence / limit | Smallest resolution |

@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "observedAtUtc": "2026-10-02T17:11:09.057980+00:00",
+  "startingHead": "1f094ac5b8d9cc11ce4a7f88a01c39de5b4593f0",
+  "preexistingUntrackedPreserved": [
+    ".vscode/"
+  ],
+  "mode": "actual_owned_stock_client_channel_HTTP200_parse_trial",
+  "newWorldClientTested": true,
+  "client": {
+    "steamBuild": "22469132",
+    "version": "1.400.6031.6004151",
+    "installedExecutableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "identity": {
+    "live_path_verified": false,
+    "identity_basis": "exclusive_fresh_normal_Steam_launch_PID_and_start_time_not_memory",
+    "launch_boundary_utc": "2026-10-02T16:56:46.5960643Z",
+    "timestamp_utc": "2026-10-02T16:56:50.5687141Z",
+    "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\baseline-a6dec8607b4a4f648750274c9e05bb02\\launch-manifest.json",
+    "start_time_utc": "2026-10-02T16:56:50.4958785Z",
+    "process_id": 41196
+  },
+  "connection": {
+    "ownerProcessId": 41196,
+    "connectionId": "b677aaf9-2251-4f8f-a048-5e872d366b0a",
+    "requestTimeUtc": "2026-10-02T16:56:57.841Z",
+    "responseTimeUtc": "2026-10-02T16:56:57.841Z",
+    "httpRequestCount": 1,
+    "tls": {
+      "tls_version": "TLSv1.2",
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "selected_alpn": null
+    }
+  },
+  "fixture": {
+    "schema": 1,
+    "kind": "observed_owned_client_metadata_not_auth_payload_or_wire_capture",
+    "client": {
+      "steamBuild": "22469132",
+      "version": "1.400.6031.6004151"
+    },
+    "request": {
+      "method": "GET",
+      "route": "channel_discovery",
+      "host": "d2c74t4zimux3r.cloudfront.net",
+      "http_version": "HTTP/1.1",
+      "declared_body_bytes": 0,
+      "authorization_present": false,
+      "cookie_present": false
+    },
+    "response": {
+      "status": 200,
+      "canonical_descriptor_sha256": "69075e7a7487b9ac6269db8df865decd56ea6a8190f7adacd9798c1bd7a1cbae",
+      "body_bytes": 3825
+    },
+    "owned_log": {
+      "source_sha256": "bfc518da3c87f64689c5c0c0f496ba74549e0e4e5bb2f49cc71cde8f325defd4",
+      "source_bytes": 30131,
+      "regions_parsed": [
+        "fra-prod",
+        "gru-prod",
+        "iad-prod",
+        "pdx-prod",
+        "syd-prod"
+      ],
+      "session_result_codes": [
+        204
+      ],
+      "result_meaning": "unknown_on_current_build"
+    },
+    "front_end_initialized": true,
+    "authentication_http_reached_private_service": false,
+    "authenticated": false,
+    "world_entered": false,
+    "player_actor_created": false
+  },
+  "bootstrapTrustedHttpsSolved": true,
+  "currentChannelParsingObserved": true,
+  "omniSessionHttpReachedPrivateListener": false,
+  "omniSessionResult": 204,
+  "meaningOf204": "unknown",
+  "allEndpointsConsumed": false,
+  "REPDTLSTrustSolved": false,
+  "milestone1Achieved": false,
+  "publicDescriptorRead": {
+    "observedAtUtc": "2026-10-02T16:39:50.990626+00:00",
+    "authenticationUsed": false,
+    "source": "public_bootstrap_resource_not_client_wire_capture",
+    "status": 200,
+    "contentType": "application/octet-stream",
+    "bodyBytes": 5404,
+    "bodySha256": "a09098b6c061de4499fc2b7e666c5f1c48ff60016c4bc95958aea271312ba4a9",
+    "rawDocumentKeptIgnored": true
+  },
+  "userSuppliedScreen": {
+    "title": "CONNECTION FAILED",
+    "message": "Failed to authenticate. Failed to create session. Please try again.",
+    "observation": "user_attachment_at_16:58UTC_not_automated_screen_read",
+    "userReportsPopupRepeatsAfterOK": true,
+    "imageRedistributed": false
+  },
+  "cleanup": {
+    "clientStoppedAtUtc": "2026-10-02T17:00:33.2356299Z",
+    "windowClosedAtUtc": "2026-10-02T17:00:34.3381375Z",
+    "hostsRestoredByteExactSha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "ownedFirewallRuleAbsent": true,
+    "caReadbackCount": 0,
+    "caRemovedAtUtc": "2026-10-02T17:03:14.5970578Z",
+    "listenersStoppedAtUtc": "2026-10-02T17:03:16.4419132Z",
+    "listenerShutdown": "guarded_controller_termination_not_graceful_stop_event"
+  },
+  "containmentScope": "NewWorld.exe ActiveStore all-profile all-protocol IPv4/IPv6 block outside127.0.0.1and::1; helperprocessesnotfiltered; configured_policy_not_packet_trace",
+  "sourceSha256": {
+    "scripts/bootstrap_probe.py": "14ef5c3f5bb02c98cb13bc4312ed60b8425de921ebce768680b197e9b2fdf748",
+    "scripts/channel_descriptor.py": "830017d4094445aecde76f2120813c810d4382b48e5c6bcd4aa7c7a098b3ecaf",
+    "scripts/bootstrap_log_metadata.py": "80738c2a19dc40db16158da91ccf3cb89b7b51deffd0b59190f51f56640ab176",
+    "scripts/Invoke-BootstrapTrialWindow.ps1": "e45c0b1f11a91cecb467f8a7ee6971b3942123b463b86ca8d4fe34a809e716a1",
+    "tests/test_bootstrap_probe.py": "add161980a9d0a3e7d2d3cafaf26131eaaafd9303533d40e81ec3d7763525c0d",
+    "tests/test_channel_descriptor.py": "11cbe528cf16ccade71ddf15c7f641e39e3316ecd87a28f814b1cb83d4a552a7",
+    "tests/test_bootstrap_log_metadata.py": "051965c12a3a4bd2450e10cb784983a534a01d0ceebdabbc95ecf6b176ac89bc",
+    "tests/fixtures/connectivity/local-channel.json": "0345c3259f5782d1c6e33065ee7a0f7a642168747bea73b67df515e5ddf5e7a2"
+  },
+  "privateEvidenceSha256": {
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\bootstrap-v4.jsonl": "f5bd4243adc71038d4bff2a206abb7b64715890e4f498df9f4f13bef17497004",
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\bootstrap-v6.jsonl": "36a2e3151e45997533c62f041bfeced68055e3846c551358e042b71e9667976f",
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\bootstrap-log-final.json": "910890d9d823822335586f79a05dd95b668984583e0f51c56d3c8a16808469ff",
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\owned-client.json": "1a47d08d621d5c33c45eecfcba49763755866e17f2a9208b15c16abcc9b8f620",
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\trial-window.jsonl": "22831a2219b723fc497f5aa48c4bd105f9ef63dd129513925835a37dd5cd3787",
+    "private\\connectivity\\channel-trial-2116bbcc46bb4e6c84f7160c4f261cd6\\certificates\\trust-events.jsonl": "f770c07bfde3f6014bd86499f09e4f2ff693278f8ca59ba7fcb7c2448ca7bf50"
+  },
+  "nextBlocker": "Route/observe current Omni CreateSession network request on private infrastructure before implementing response; endpoint and result204cause unknown"
+}
