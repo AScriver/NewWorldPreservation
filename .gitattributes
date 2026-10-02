@@ -39,3 +39,8 @@
 /research/evidence/current-dtls-trust.json text eol=lf
 /research/evidence/current-dtls-trust-validation.json text eol=lf
 /tests/fixtures/connectivity/current-dtls-trust-result.json text eol=lf
+/scripts/game_log_metadata.py text eol=lf
+/tests/test_game_log_metadata.py text eol=lf
+/research/evidence/current-dtls-trust-rejection.json text eol=lf
+/research/evidence/current-dtls-trust-rejection-validation.json text eol=lf
+/tests/fixtures/connectivity/current-dtls-trust-rejection.json text eol=lf

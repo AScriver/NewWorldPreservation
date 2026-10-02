@@ -1,0 +1,254 @@
+{
+  "schema": 1,
+  "kind": "sanitized_current_dtls_rejection_metadata_not_wire_replay",
+  "steam_build_id": "22469132",
+  "client_version": "1.400.6031.6004151",
+  "configured_chain": "full",
+  "destination": "127.0.0.1:64003",
+  "source": {
+    "address": "127.0.0.1",
+    "port": 27000,
+    "process_id": 34940,
+    "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow"
+  },
+  "payloads_saved": false,
+  "auth_material_saved": false,
+  "events": [
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 2,
+      "state": "DTLS_PEER_OPENED",
+      "timestamp_utc": "2026-10-02T21:45:12.757Z"
+    },
+    {
+      "client_hello_body_validated": false,
+      "client_hello_complete": true,
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "datagram_bytes": 159,
+      "datagram_class": "dtls_client_hello_header",
+      "event_sequence": 3,
+      "first_record_bytes": 146,
+      "first_record_complete": true,
+      "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+      "process_id": 34940,
+      "record_content_type": "handshake",
+      "record_epoch": 0,
+      "record_version": "DTLS1.2",
+      "state": "DTLS_DATAGRAM_RECEIVED",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 4,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "other",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 5,
+      "name_class": "other",
+      "present": false,
+      "state": "DTLS_SNI",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 6,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "client_hello",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 7,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "server_hello",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 8,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "certificate",
+      "timestamp_utc": "2026-10-02T21:45:12.758Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 9,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "key_exchange",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 10,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "other",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "datagram_bytes": 2516,
+      "event_sequence": 11,
+      "state": "DTLS_SERVER_OUTPUT",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "datagram_bytes": 15,
+      "datagram_class": "dtls_record_header",
+      "event_sequence": 12,
+      "first_record_bytes": 2,
+      "first_record_complete": true,
+      "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+      "process_id": 34940,
+      "record_content_type": "alert",
+      "record_epoch": 0,
+      "record_version": "DTLS1.2",
+      "state": "DTLS_DATAGRAM_RECEIVED",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "description": "unknown_ca",
+      "direction": "read",
+      "event_sequence": 13,
+      "level": "fatal",
+      "state": "DTLS_ALERT",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 14,
+      "state": "DTLS_FAILURE",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "222857ec-f7bc-4dc4-a89c-19a12d39ddb6",
+      "event_sequence": 15,
+      "handshake_established": false,
+      "reason": "openssl_failure",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-02T21:45:12.759Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 16,
+      "state": "DTLS_PEER_OPENED",
+      "timestamp_utc": "2026-10-02T21:45:12.777Z"
+    },
+    {
+      "client_hello_body_validated": false,
+      "client_hello_complete": true,
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "datagram_bytes": 159,
+      "datagram_class": "dtls_client_hello_header",
+      "event_sequence": 17,
+      "first_record_bytes": 146,
+      "first_record_complete": true,
+      "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+      "process_id": 34940,
+      "record_content_type": "handshake",
+      "record_epoch": 0,
+      "record_version": "DTLS1.2",
+      "state": "DTLS_DATAGRAM_RECEIVED",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 18,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "other",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 19,
+      "name_class": "other",
+      "present": false,
+      "state": "DTLS_SNI",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 20,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "client_hello",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 21,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "server_hello",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 22,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "certificate",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 23,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "key_exchange",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 24,
+      "state": "DTLS_HANDSHAKE_STATE",
+      "state_class": "other",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "datagram_bytes": 2516,
+      "event_sequence": 25,
+      "state": "DTLS_SERVER_OUTPUT",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "datagram_bytes": 15,
+      "datagram_class": "dtls_record_header",
+      "event_sequence": 26,
+      "first_record_bytes": 2,
+      "first_record_complete": true,
+      "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+      "process_id": 34940,
+      "record_content_type": "alert",
+      "record_epoch": 0,
+      "record_version": "DTLS1.2",
+      "state": "DTLS_DATAGRAM_RECEIVED",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "description": "unknown_ca",
+      "direction": "read",
+      "event_sequence": 27,
+      "level": "fatal",
+      "state": "DTLS_ALERT",
+      "timestamp_utc": "2026-10-02T21:45:12.778Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 28,
+      "state": "DTLS_FAILURE",
+      "timestamp_utc": "2026-10-02T21:45:12.779Z"
+    },
+    {
+      "connection_id": "794276ee-c084-4b22-ab72-efa7a0cf9015",
+      "event_sequence": 29,
+      "handshake_established": false,
+      "reason": "openssl_failure",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-02T21:45:12.779Z"
+    }
+  ]
+}

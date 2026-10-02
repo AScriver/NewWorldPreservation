@@ -1,10 +1,10 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
-**Latest gate:** [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) verifies synthetic selection/queue200 ->owned loopback DTLS ClientHello-header observations. The frontend preview is not a world actor, and the Play-button spinner is not world loading. DTLS handshake/trust, secure private ticket binding, registration and actor contract remain gates; earlier stopping points are historical.
+**Latest gate:** [DTLS_REGISTRATION](DTLS_REGISTRATION.md) records the current stock game's **fatal unknown_ca** after our configured full-chain DTLS flight, twice. No established DTLS or current Carrier/V3. The frontend preview is not a world actor; Play spinner is not world loading. Active REP trust source/private roots, secure private ticket binding, registration and actor contract remain gates. Earlier receive-only stopping points are historical.
 
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 accepts original synthetic credentials/login-info/queue200 and attempts DTLS at selected127.0.0.1:64003. The observer sends no replies/certificate; **no REP handshake/trust result, world loading, in-world actor, initial transform or world visibility**. Offline spawn research can continue; live spawn implementation remains gated.
+Current build `1.400.6031.6004151` / Steam22469132 accepts original synthetic credentials/login-info/queue200 and attempts DTLS at selected127.0.0.1:64003. Our responder now answers, but the game rejects its configured full chain with **unknown_ca**. No completed handshake, world loading, in-world actor, initial transform or visibility. Offline spawn research remains separate; live actor implementation is gated.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
@@ -23,7 +23,7 @@ stateDiagram-v2
     GatewayLoginInfo --> PrivatePreview: current synthetic login-info200
     PrivatePreview --> QueueV2: user selection and Play
     QueueV2 --> OwnedUDPAttempt: current synthetic829byte200 /selected REP
-    OwnedUDPAttempt --> DiagnosticStop: receive-only observer /no DTLS reply
+    OwnedUDPAttempt --> DiagnosticStop: server flight then fatal unknown_ca (current)
     DiagnosticStop --> [*]
     OwnedUDPAttempt --> DTLSConnected: NEXT separate UDP DTLS handshake/trust
     DTLSConnected --> PrivatePeerBound: future secure ticket-to-peer ownership
@@ -48,7 +48,7 @@ The lower half is a **research target**, not an implemented or proven sequence. 
 | Authentication | `auth_mock.py:766–805` credentials handler; historical Steam/Omni chain `connection-flow.md:5–37` | Old log plus synthetic mock. Current accepted request/response schema and private-account ownership missing. Do not reuse seeded identities/JWT assumptions as real authentication. |
 | Character / world choice | `auth_mock.py:895`, route map `:1345–1360`; `/prod/game/getlogininfo`, `/prod/game/login/queue` | Handler scaffolding exists. Old note documents queue for one character, not a general selection UI/state machine. Current private behavior unknown. |
 | Session ticket | `auth_mock.py:258–314`; `CharacterId`, `WorldId`, `RepAddress`; shared `Ctx :404–464` | Source-supported old mock fields. No current ticket fixture or per-account isolation; never export secret ticket values. |
-| REP session | Detailed `docs/post-v3-flow.md:16–35`: UDP/DTLS1.2, then Carrier connect/ACK | Source-supported old transport. Older `connection-flow.md:63–69` calls it TCP: retain this conflict, prefer detailed wire implementation for the historical transport. Current game transport untested. HTTPS trust does not settle it. |
+| REP session | Detailed `docs/post-v3-flow.md:16–35`: UDP/DTLS1.2, then Carrier connect/ACK | Source-supported old transport. Older `connection-flow.md:63–69` calls it TCP: retain conflict, prefer detailed implementation historically. Current DTLS flight receives fatal unknown_ca; no established Carrier session. |
 | V3 registration | `RegistrationRequestV3Msg 0x13` → `RegistrationResponseMsg 0x03`; responder `:586–675`, token echo `:650–676` | Sender/decoder implemented historically. Not observed/validated on current build. A decoded request is not authenticated account ownership. |
 | Self-identification | `PlayerManagerSelfIdentificationMsg 0x5d1`; dispatch encoder/decoder `:120–124,212` | Codec exists but message absent from replay and sender unwired (`post-v3-sequence.md:115,132–140`). `self_ident.py:39–61,92–104` conflicts between four-byte trigger hypothesis and ≥21-byte structured body. No current valid body. |
 | Level readiness | `LevelInfoChangedMsg`; `level_info_changed.py:1–36,147–190` | Speculative codec, **no established wire ID**, absent from central dispatch; nonempty extended container unimplemented (`:129–135,221–226`). No proof of client transition. |
@@ -69,10 +69,10 @@ Reusable now: transport framing/codec round-trip tests, per-peer DTLS scaffoldin
 ## Independently testable next tasks
 
 1. **Compatible HTTP/address handoff (proven):** current original token/credentials/selection/queue response fixtures advance to owned UDP; [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md). Not secure account/ticket validation and no real-token replay.
-2. **Separate transport gate (next):** answer selected REP ClientHello, establish own current-client DTLS handshake/trust, then Carrier connect and V3 request/response with secret-minimizing traces. Two isolated Python DTLS peers are the first offline transport check, not real-client acceptance.
+2. **Separate transport gate (next):** resolve current REP's active trust configuration after explicit unknown_ca, then establish own current-client DTLS and Carrier/V3 with secret-minimizing traces. Two isolated Python DTLS peers already exchange data; they are not game acceptance.
 3. **Private auth/session ownership:** exact current request schemas/state relationships and isolated local account/character/ticket-to-peer tests. Synthetic compatibility is not authorization.
 4. **Current spawn fixture:** relate registration, self-identification, actor/replica creation, ownership, initial transform and visibility. Record state/frame direction/channel, build, byte boundaries, stable **sanitized** ID correlations and positive/negative outcomes. Validate codec parsing/serialization before changing them.
 5. **One-player visible actor:** emit the minimum validated sequence with structured logs and demonstrate local world/actor state. Stop expansion at that success as requested.
 6. **Second distinct player:** independent private account/session/actor, bilateral position/rotation changes, removal/reconnect without duplicate actor. No combat/NPC/inventory/persistence work beforehand.
 
-**Exact immediate blocker is current-client REP/DTLS handshake and certificate trust.** Current evidence permits offline spawn analysis; live actor implementation still waits for transport/registration, private identity ownership and current spawn fixtures. No official-system authentication bypass, credential acquisition, EAC modifications or leaked/proprietary server material is needed or assumed.
+**Exact immediate blocker is current REP's active trust source/private-root configuration after explicit full-chain rejection.** Live actor work still waits for DTLS/Carrier/V3, private ownership and current spawn fixtures. No official-system bypass, credential acquisition, EAC modifications or proprietary server material is assumed.

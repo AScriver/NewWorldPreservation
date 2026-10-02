@@ -10,6 +10,7 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 - [Client connection flow](docs/CLIENT_FLOW.md)
 - [Current-client connectivity result and probe procedure](docs/CURRENT_CLIENT_CONNECTIVITY.md)
 - [Current private queue-to-game handoff and next DTLS gate](docs/PRIVATE_GAME_HANDOFF.md)
+- [Current DTLS trust result and gated Carrier/V3 registration](docs/DTLS_REGISTRATION.md)
 - [Spawn-sequence evidence and remaining gates](docs/SPAWN_SEQUENCE.md)
 - [Milestone 1 tasks and exact next blockers](docs/ROADMAP.md)
 - [Open questions](docs/OPEN_QUESTIONS.md)
@@ -25,7 +26,7 @@ Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites
 
 **Stock New World `1.400.6031.6004151` / Steam build22469132 reached our private HTTPS server.** Exact accepted-socket owner matched our recorded ordinary Steam launch. The client sent HTTP/1.1 `GET /STEAM_APP_ID.1063730.json` over TLS1.2 to IPv6 localhost443; probe returned deliberate501. Local CurrentUserRoot CA + correct hostname works; absent CA or wrong-name same-CA leaf prevents HTTP; restoration restores HTTP. No memory inspection, binary patch or EAC change. Both temporary CAs removed, hosts restored byte-exact, owned probes/client closed.
 
-**Latest checkpoint:** synthetic token/credentials/login-info render selectable Preservation; Play receives our original829byte queue200 and triggers ten DTLS ClientHello-header datagrams at owned127.0.0.1:64003. The receive-only observer sends no replies: **no game handshake/trust result, world loading, actor or Milestone1**. [Evidence and reproduction](docs/PRIVATE_GAME_HANDOFF.md). Next: existing Python/First Light DTLS responder and current-client trust, then Carrier/V3 and spawn evidence.261 explicit workspace tests pass (48 new queue/UDP/evidence checks); unchanged upstream455/skip1 historical. Earlier501 checkpoints remain recorded. Same short-lived local CA retained at the user's request; hosts/rules restored and owned client/listeners stopped. No secure private accounts or ticket validation yet.
+**Latest checkpoint:** stock current client reaches our selected loopback endpoint; original DTLS responder sends its configured full-chain flight. The game returns **fatal unknown_ca** on both attempts and shows secure-connection error(2). HTTPS-compatible CurrentUserRoot trust is insufficient here; exact REP trust source/pinning still under investigation. **No completed DTLS, Carrier/V3, world loading, actor or Milestone1.** [Evidence/reproduction](docs/DTLS_REGISTRATION.md).273 explicit workspace tests pass; unchanged upstream455/skip1 historical. Same CA retained; hosts/rules restored, owned game/listeners stopped. No secure private account/ticket validation yet.
 
 ```powershell
 C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Inspect-CurrentClient.ps1 -Execute
@@ -61,6 +62,6 @@ Current local test receipt: [latest-validation.json](research/evidence/latest-va
 
 ## Next step
 
-Establish the current token/session response contract after the observed private token POST; implement only evidence-backed private auth/session selection, then resolve REP/DTLS trust and registration-to-actor spawning. Independent offline slice: actual two-peer loopback DTLS exchange—not an invented gameplay codec. See [roadmap](docs/ROADMAP.md).
+Identify/configure the current REP DTLS trust source after its explicit rejection of our locally trusted full chain; then observe and answer Carrier/V3 registration. Two isolated CA-verified DTLS controls already exchange data. Actor work remains gated. See [roadmap](docs/ROADMAP.md).
 
 All work is local. No remote/public repository, contributor messages or Actionables were created/updated; no governing Actionables work-item ID was supplied.

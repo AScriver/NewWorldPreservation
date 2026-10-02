@@ -54,3 +54,22 @@ def test_generic_level_loading_does_not_claim_world_entry():
     assert metadata.parse_line("Loading level") == [
         {"state": "CLIENT_LOG_MARKER", "marker": "GENERIC_LEVEL_LOADER",
          "observation": "whitelisted_log_marker_only"}]
+
+
+def test_owned_current_dtls_security_error_is_a_fixed_code_not_free_form_text():
+    records = metadata.parse_line("private-person @mm_csdkerr_transport_security_error (2) private-detail")
+    assert records == [{"state": "CLIENT_LOG_ERROR_CODE", "code": "mm_csdkerr_transport_security_error", "numeric_code": 2}]
+    assert "private" not in json.dumps(records)
+
+
+@pytest.mark.parametrize("line", [
+    "mm_csdkerr_unrecognized_error (2)",
+    "mm_csdkerr_transport_security_error (999)",
+    "prefixmm_csdkerr_transport_security_error (2)",
+])
+def test_unobserved_sdk_codes_or_values_are_not_exported(line):
+    assert metadata.parse_line(line) == []
+
+
+def test_dtls_error_marker_does_not_override_credential_line_discard():
+    assert metadata.parse_line("sessionToken=private mm_csdkerr_transport_security_error (2)") == []

@@ -59,6 +59,10 @@ def parse_line(line):
             result.append({"state": "CLIENT_LOG_VERSION", "version": version})
     for failure in re.findall(r"\b(?:SSL_ERROR_[A-Z_]+|CURLE_[A-Z_]+|ERROR_INTERNET_[A-Z_]+)\b", line):
         result.append({"state": "CLIENT_LOG_ERROR_CODE", "code": failure})
+    # This exact SDK code/value is observed in the owned current-build DTLS
+    # failure. It is correlation evidence, not a certificate/pinning diagnosis.
+    if re.search(r"\bmm_csdkerr_transport_security_error\s*\(2\)", line):
+        result.append({"state": "CLIENT_LOG_ERROR_CODE", "code": "mm_csdkerr_transport_security_error", "numeric_code": 2})
     return result
 
 

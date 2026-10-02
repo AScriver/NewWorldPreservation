@@ -4,9 +4,9 @@
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.
 
-**Latest furthest verified state:** accepted synthetic token/credentials/login-info render selectable Preservation/world/frontend preview. Play sends attributed queue-v2 POST644bytes (discarded); our original829byte200 response selects127.0.0.1:64003, where ten owned-client **DTLS ClientHello-header datagrams** arrive. Observer sends no replies. **No completed game handshake, DTLS trust result, world-loading screen, in-world actor or Milestone1.** No cursor/keyboard control was used.
+**Latest furthest verified state:** accepted synthetic selection/queue200 reaches127.0.0.1:64003. Our original responder answers two current-game ClientHello attempts with its configured full-chain server flight; the game returns **incoming fatal unknown_ca** twice and shows secure-connection error(2). No completed handshake, Carrier/V3, world loading, actor or Milestone1. CurrentUserRoot trust that works for HTTPS is insufficient for this REP path; active roots/pinning remain unknown. No cursor/keyboard control. [Current DTLS evidence/reproduction](DTLS_REGISTRATION.md).
 
-Latest evidence and procedure: [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md), [metadata receipt](../research/evidence/current-queue-handoff.json). Credentials/token,501-login-info and501-queue are historical stopping points. Path-only matching corrected the query-bearing login-info guard without saving query values/signatures. Queue response/address handoff is now observed; secure private account/ticket validation and REP/DTLS handshake/trust remain unresolved. The same CA was reused and retained; no new certificate approval was required.261 explicit workspace tests pass,48 new; [validation receipt](../research/evidence/current-queue-handoff-validation.json).
+Latest receipt: [current DTLS rejection](../research/evidence/current-dtls-trust-rejection.json). [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) preserves the prior receive-only handoff, not today's responder outcome. Earlier credentials/token/login-info/queue stops remain historical. Same CA reused/retained; no new certificate approval. Secure private account/ticket validation remains unresolved.273 explicit workspace tests pass, including7 responder controls and5 new fixed-error/privacy tests; upstream455/skip1 unchanged historical.
 
 | Identity | Verified value / limit |
 |---|---|
@@ -74,11 +74,11 @@ All times UTC. Each phase used a fresh ordinary client launch. Within each exper
 
 Exact timestamps/fingerprints/source hashes are authoritative in the receipt. Three connections per launch were observed; retry-policy internals are unknown.
 
-**Solved for this bootstrap:** temporary one-host routing + short-lived local CA in `CurrentUser\Root` + correct hostname leaf works with the stock client. A mandatory hardcoded Amazon certificate pin does **not** block this endpoint on this build. Unknown: active TLS/trust API, whether roots are loaded through Windows directly or application/library code, and any pinning/trust on other services. **REP/DTLS trust remains separate and untested.** A CA-signed local leaf was tested, not a standalone self-signed leaf.
+**Solved for this bootstrap:** temporary one-host routing + short-lived local CA in `CurrentUser\Root` + correct hostname leaf works with the stock client. A mandatory hardcoded Amazon certificate pin does **not** block this endpoint on this build. Unknown: active TLS/trust API, Windows-vs-application root loading, and other-service pins. **Current REP/DTLS separately rejects our full-chain response with unknown_ca.** A CA-signed local leaf was tested, not a standalone self-signed leaf.
 
 Server `TLS_ESTABLISHED` alone is not client trust proof: even the untrusted/wrong-name game controls emitted it. The certificate conclusions rely on differential HTTP behavior, matching socket ownership, and restoration. Do not classify a reset or absent request as pinning. No TLS validation was disabled in the game.
 
-**Later token-origin positive control:** with the exact local CA confirmed trusted **before launch** and a matching `tokenservice.amazongames.com` SAN, the stock client sent three POSTs over TLS1.3. This demonstrates compatible local trust for that endpoint; mandatory Amazon-only pinning did not prevent it. Token-specific absent-CA/wrong-SAN reversals were not executed. Subsequent credentials/login-info/queue HTTPS works through the local regional bootstrap alias; this does not prove every original regional hostname's trust. `prod.newworld.com` and game DTLS trust remain untested. No process-memory inspection, binary patch, EAC change or validation bypass was needed.
+**Later token-origin positive control:** exact local CA trusted **before launch**, matching tokenservice.amazongames.com SAN; stock client sends three POSTs over TLS1.3. This endpoint permits compatible local trust; token-specific absent-CA/wrong-SAN controls were not run. Credentials/login-info/queue HTTPS works through the regional bootstrap alias, not proof for every original hostname. prod.newworld.com remains untested. Game DTLS is now separately tested/rejected as above. No memory inspection, binary/EAC change or validation bypass.
 
 ## Redirection options, failures and limits
 
@@ -126,7 +126,7 @@ First script: original19 loopback controls, CLI health/start/automatic-stop cont
 
 ### Historical bootstrap CA/SAN controls — explicitly live, not offline tests
 
-For the **latest** descriptor/token trial use [BOOTSTRAP_CHANNEL's procedure](BOOTSTRAP_CHANNEL.md#reproduce-the-latest-token-stopping-point): strict three-host profile, program-scoped containment, trust completed before launch, recorded owned client stopped before routing cleanup. The following sequence documents the earlier bootstrap-only controls, not the current token checkpoint.
+For the **latest DTLS trial** use [DTLS_REGISTRATION's procedure](DTLS_REGISTRATION.md#exact-current-workspace-reproduction). [BOOTSTRAP_CHANNEL's procedure](BOOTSTRAP_CHANNEL.md#reproduce-the-latest-token-stopping-point) preserves the older descriptor/token gate. The following sequence documents historical bootstrap-only trust controls, not current REP testing.
 
 1. Pin the actual installed executable with validated `Inspect-CurrentClient.ps1 -ClientExecutable 'C:\Program Files (x86)\Steam\steamapps\common\New World\Bin64\NewWorld.exe'`. Verify Steam build/version/hash. Preserve any already-running client unless its launch ownership is recorded.
 2. Choose a **fresh** `private/connectivity/<run>/` directory. Generate a CA and two same-key/same-CA leaves:
@@ -157,7 +157,7 @@ The historical bootstrap hostname/path still applies to this current build; sour
 
 Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, separate transport/codecs/replay scaffolding. **Not used:** upstream raw request logging, success-synthesizing auth responses, shared persona/account state, all-interface listener, DTLS memory patch. No licensed source was vendored; our service/guard/observer/tests are original. Historical black-screen/replay results do not become current actor proof.
 
-**Exact next blocker:** current-client **REP/DTLS handshake and certificate trust**. Compatible synthetic credentials/selection/queue-to-owned-UDP handoff is now observed, not a secure private account/ticket system. [PRIVATE_GAME_HANDOFF](PRIVATE_GAME_HANDOFF.md) pins this result. Subsequent current Carrier/V3 and spawn/private-identity evidence still gate live actor work; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) is not a current actor recipe. No gameplay implemented. Routing/process cleanup and the intentionally retained current CA are recorded with each trial.
+**Exact next blocker:** current REP's **active trust source and supported private-root configuration**. It explicitly rejects our retained locally trusted full chain with unknown_ca; this alone is not pinning proof. Trace current-build trust loading before any narrowly justified executable interoperability workaround; no historical memory hook. [DTLS_REGISTRATION](DTLS_REGISTRATION.md) pins failure/cleanup. Carrier/V3 and spawn/private-identity evidence still gate actor work; [SPAWN_SEQUENCE](SPAWN_SEQUENCE.md) is not a current actor recipe. No gameplay implemented.
 
 ## Capture Before Shutdown
 
