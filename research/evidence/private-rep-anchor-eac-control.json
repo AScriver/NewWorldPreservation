@@ -1,0 +1,686 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-03T08:31:24.992037+00:00",
+  "state": "DATA_ONLY_ANCHOR_REFUSED_AT_LAUNCH_STOCK_CONTROL_REACHES_DTLS_UNKNOWN_CA",
+  "base_head": "bd1be5804acb5e940f691fcab043643306398c42",
+  "steam_build_id": "22469132",
+  "file_version": "1.400.6031.6004151",
+  "stock_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "candidate": {
+    "run_directory": "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe",
+    "launch_identity": {
+      "schema": 1,
+      "timestamp_utc": "2026-10-03T08:02:30.9802723Z",
+      "process_id": 38908,
+      "start_time_utc": "2026-10-03T08:02:30.0645332Z",
+      "launch_boundary_utc": "2026-10-03T08:02:27.1652355Z",
+      "run_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe",
+      "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe\\anchor-launch-manifest.json",
+      "live_path_verified": false,
+      "parent_process_id": null,
+      "direct_parent_pid_matches_launcher": false,
+      "launcher_ancestry_verified": false,
+      "identity_basis": "exclusive_fresh_serial_trial_PID_start_time_not_process_memory_or_full_ancestry",
+      "installed_candidate_sha256_after_launch": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096"
+    },
+    "window_events": [
+      {
+        "timestamp_utc": "2026-10-03T08:01:54.8162672Z",
+        "state": "GAME_OUTBOUND_CONTAINMENT_CONFIGURED",
+        "metadata": {
+          "evidence_source": "ActiveStore_configuration_not_packet_trace",
+          "helper_processes_filtered": false,
+          "protocol": "Any",
+          "profile": "Any",
+          "rule_name": "NewWorldPreservation-Bootstrap-e7384df1bef74ce48929a52ca74040d9",
+          "program": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+          "remote_addresses": [
+            "0.0.0.0-127.0.0.0",
+            "127.0.0.2-255.255.255.255",
+            "::2-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:01:55.4325725Z",
+        "state": "BOOTSTRAP_TRIAL_READY",
+        "metadata": {
+          "endpoint_profile": "TokenServices",
+          "hostname": "d2c74t4zimux3r.cloudfront.net",
+          "resolutions": {
+            "prod.newworld.com": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "tokenservice.amazongames.com": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "d2c74t4zimux3r.cloudfront.net": [
+              "::1",
+              "127.0.0.1"
+            ]
+          },
+          "seconds": 300,
+          "evidence_source": "operator_resolver_not_client_dns"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:26.9791779Z",
+        "state": "REP_ANCHOR_TRIAL_READY",
+        "metadata": {
+          "candidate_image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "anchor_policy_substituted": true,
+          "same_verifier_instructions": true,
+          "candidate_journal_sha256": "837095e1641d71e737f28df2a8394698f4ed1d0cda3e153e67728a28af335c29",
+          "launcher_eac_unchanged": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:27.2002484Z",
+        "state": "OWNED_ANCHOR_LAUNCHER_CREATED",
+        "metadata": {
+          "start_time_utc": "2026-10-03T08:02:27.1857596Z",
+          "method": "Serial containment-owner original installed launcher; certificate-data-only candidate; EAC intact",
+          "process_id": 39884
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:30.8904474Z",
+        "state": "OWNED_GAME_PATH_UNAVAILABLE",
+        "metadata": {
+          "attribution_limit": "fresh_PID_start_time_not_live_image_path",
+          "eac_cause_proven": false,
+          "process_id": 38908
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:30.9797980Z",
+        "state": "OWNED_GAME_PARENT_METADATA_UNAVAILABLE",
+        "metadata": {
+          "eac_cause_proven": false,
+          "parent_pid_proven": false,
+          "process_id": 38908
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:31.1465391Z",
+        "state": "OWNED_ANCHOR_GAME_CORRELATED",
+        "metadata": {
+          "direct_parent_pid_matches_launcher": false,
+          "ancestry_verified": false,
+          "start_time_utc": "2026-10-03T08:02:30.0645332Z",
+          "process_id": 38908,
+          "live_path_verified": false,
+          "installed_candidate_sha256_after_launch": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:05:11.7763151Z",
+        "state": "STOCK_CLIENT_RESTORED_BEFORE_ROUTING_RELEASE",
+        "metadata": {
+          "stock_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "game_absent": true,
+          "stock_signature_valid": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:05:12.8302988Z",
+        "state": "BOOTSTRAP_TRIAL_CLOSED",
+        "metadata": {
+          "trust_cleanup_is_parent_owned": true,
+          "hosts_restoration_requested": true,
+          "client_absent": true,
+          "owned_firewall_rule_absent": true
+        }
+      }
+    ],
+    "http_requests": [],
+    "http_request_count": 0,
+    "dtls_received_datagrams": 0,
+    "dtls_received_count_basis": "logged event count only; candidate probe stopped by guarded termination, no final counter event",
+    "dtls_established_count": 0,
+    "dtls_application_count": 0,
+    "dtls_server_output_bytes": [],
+    "dtls_alerts": [],
+    "dtls_sni": [],
+    "dtls_owner_observations": [],
+    "probe_stop_events": [],
+    "source_identity": {
+      "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+      "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+      "head": "bd1be5804acb5e940f691fcab043643306398c42",
+      "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+      "session_handoff_probe_sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+      "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358",
+      "scripts_queue_contract_probe_py_sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+      "scripts_udp_handoff_probe_py_sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919",
+      "scripts_windows_udp_owner_py_sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf",
+      "tests_fixtures_connectivity_current_queue_parser_candidate_json_sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99",
+      "dtls_transport_probe_sha256": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611",
+      "scripts_rep_anchor_candidate_py_sha256": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1",
+      "scripts_RepAnchorImageTransaction_psm1_sha256": "c35db5c8dbf0278eb4f3d3e81b898524a980820ad310f68ac91abbc2ab9f0588",
+      "scripts_Set_RepAnchorTrialImage_ps1_sha256": "eff56e764a35902c3483b7e991ae12bcaaf2ac0a83828227c54e232902af3d1e",
+      "scripts_Invoke_RepAnchorTrialWindow_ps1_sha256": "811e9dc11ce1ef8c1304fb3cc8a0098c208a1bc1a7078c31711060fcb61736e0"
+    },
+    "tracked_tree_clean_at_preparation": true,
+    "image_events": [
+      {
+        "timestamp_utc": "2026-10-03T08:01:58.6403070+00:00",
+        "state": "ANCHOR_APPLY_PRECONDITIONS_VERIFIED",
+        "metadata": {
+          "game_absent": true,
+          "ca_reused": true,
+          "journal_sha256": "837095e1641d71e737f28df2a8394698f4ed1d0cda3e153e67728a28af335c29",
+          "effective_nonloopback_guard": true,
+          "original_signature_status": "Valid"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:16.9926169+00:00",
+        "state": "ANCHOR_APPLY_WRITE_INTENT",
+        "metadata": {
+          "expected_image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "capacity": 1350,
+          "offset": 140045408,
+          "prior_image_state": "stock"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:25.1924733+00:00",
+        "state": "ANCHOR_APPLY_HASH_VERIFIED",
+        "metadata": {
+          "image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "process_memory_written": false,
+          "target_handle_exclusive": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:02:26.3993617+00:00",
+        "state": "ANCHOR_APPLY_SIGNATURE_READBACK",
+        "metadata": {
+          "memory_written": false,
+          "launcher_or_eac_modified": false,
+          "image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "authenticode_status": "HashMismatch"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:05:02.5863261+00:00",
+        "state": "ANCHOR_RESTORE_WRITE_INTENT",
+        "metadata": {
+          "offset": 140045408,
+          "prior_image_state": "candidate",
+          "capacity": 1350,
+          "expected_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:05:10.2761868+00:00",
+        "state": "ANCHOR_RESTORE_HASH_VERIFIED",
+        "metadata": {
+          "process_memory_written": false,
+          "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "target_handle_exclusive": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:05:11.3336210+00:00",
+        "state": "ANCHOR_RESTORE_SIGNATURE_READBACK",
+        "metadata": {
+          "launcher_or_eac_modified": false,
+          "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "memory_written": false,
+          "authenticode_status": "Valid"
+        }
+      }
+    ],
+    "eac_observation": {
+      "source": "user-supplied screenshot during this owned trial; exact original bytes retained privately",
+      "private_image": "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/user-eac-launch-refusal.png",
+      "sha256": "855ca87a8d1968a9067918d9c0d76fb6733ddd4059631460c567e17b72e9eed7",
+      "ui_heading": "Launch Error",
+      "ui_message": "Unrecognized game client. Cannot continue.",
+      "notification": "Easy Anti-Cheat: Unknown file version (NewWorld.exe)",
+      "source_event_timestamp_exact": false,
+      "dtls_rejection_observed_in_candidate": false,
+      "loaded_image_hash_observed": false
+    }
+  },
+  "unchanged_stock_control": {
+    "run_directory": "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831",
+    "launch_identity": {
+      "schema": 1,
+      "timestamp_utc": "2026-10-03T08:19:34.6838361Z",
+      "process_id": 28024,
+      "start_time_utc": "2026-10-03T08:19:33.6629333Z",
+      "launch_boundary_utc": "2026-10-03T08:19:31.1088373Z",
+      "run_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831",
+      "launch_manifest": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831\\anchor-launch-manifest.json",
+      "live_path_verified": false,
+      "parent_process_id": 38144,
+      "direct_parent_pid_matches_launcher": true,
+      "launcher_ancestry_verified": false,
+      "identity_basis": "exclusive_fresh_serial_trial_PID_start_time_not_process_memory_or_full_ancestry",
+      "installed_candidate_sha256_after_launch": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+    },
+    "window_events": [
+      {
+        "timestamp_utc": "2026-10-03T08:19:29.3055923Z",
+        "state": "GAME_OUTBOUND_CONTAINMENT_CONFIGURED",
+        "metadata": {
+          "helper_processes_filtered": false,
+          "profile": "Any",
+          "protocol": "Any",
+          "program": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+          "remote_addresses": [
+            "0.0.0.0-127.0.0.0",
+            "127.0.0.2-255.255.255.255",
+            "::2-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"
+          ],
+          "evidence_source": "ActiveStore_configuration_not_packet_trace",
+          "rule_name": "NewWorldPreservation-Bootstrap-9ed46f6fdaf249eb824352a03cb35f2e"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:29.9923622Z",
+        "state": "BOOTSTRAP_TRIAL_READY",
+        "metadata": {
+          "hostname": "d2c74t4zimux3r.cloudfront.net",
+          "resolutions": {
+            "d2c74t4zimux3r.cloudfront.net": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "tokenservice.amazongames.com": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "prod.newworld.com": [
+              "::1",
+              "127.0.0.1"
+            ]
+          },
+          "seconds": 300,
+          "endpoint_profile": "TokenServices",
+          "evidence_source": "operator_resolver_not_client_dns"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:30.9391792Z",
+        "state": "STOCK_IMAGE_TRIAL_READY",
+        "metadata": {
+          "candidate_journal_sha256": "837095e1641d71e737f28df2a8394698f4ed1d0cda3e153e67728a28af335c29",
+          "launcher_eac_unchanged": true,
+          "same_verifier_instructions": true,
+          "candidate_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "anchor_policy_substituted": false
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:31.1397902Z",
+        "state": "OWNED_ANCHOR_LAUNCHER_CREATED",
+        "metadata": {
+          "method": "Serial containment-owner original installed launcher; unchanged stock image; EAC intact",
+          "process_id": 38144,
+          "start_time_utc": "2026-10-03T08:19:31.1274207Z"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:34.5903337Z",
+        "state": "OWNED_GAME_PATH_UNAVAILABLE",
+        "metadata": {
+          "eac_cause_proven": false,
+          "process_id": 28024,
+          "attribution_limit": "fresh_PID_start_time_not_live_image_path"
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:34.8448886Z",
+        "state": "OWNED_ANCHOR_GAME_CORRELATED",
+        "metadata": {
+          "start_time_utc": "2026-10-03T08:19:33.6629333Z",
+          "installed_candidate_sha256_after_launch": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "ancestry_verified": false,
+          "live_path_verified": false,
+          "process_id": 28024,
+          "direct_parent_pid_matches_launcher": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:24:31.8661349Z",
+        "state": "OWNED_CLEANUP_PATH_UNAVAILABLE",
+        "metadata": {
+          "pid_start_time_verified": true,
+          "process_id": 28024,
+          "live_image_path_verified": false
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:24:32.2977244Z",
+        "state": "OWNED_CLIENT_STOPPED",
+        "metadata": {
+          "start_time_utc": "2026-10-03T08:19:33.6629333Z",
+          "process_id": 28024
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:24:33.2115317Z",
+        "state": "STOCK_CLIENT_RESTORED_BEFORE_ROUTING_RELEASE",
+        "metadata": {
+          "stock_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "game_absent": true,
+          "stock_signature_valid": true
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:24:34.3045838Z",
+        "state": "BOOTSTRAP_TRIAL_CLOSED",
+        "metadata": {
+          "owned_firewall_rule_absent": true,
+          "hosts_restoration_requested": true,
+          "trust_cleanup_is_parent_owned": true,
+          "client_absent": true
+        }
+      }
+    ],
+    "http_requests": [
+      {
+        "timestamp_utc": "2026-10-03T08:19:42.304Z",
+        "method": "GET",
+        "http_version": "HTTP/1.1",
+        "host": "d2c74t4zimux3r.cloudfront.net",
+        "declared_body_bytes": 0,
+        "authorization_present": false,
+        "cookie_present": false,
+        "tcp_tuple_owner_pid": 28024,
+        "path_template": "/STEAM_APP_ID.1063730.json",
+        "response_statuses": [
+          200
+        ],
+        "tls": {
+          "tls_version": "TLSv1.2",
+          "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "selected_alpn": null
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:49.259Z",
+        "method": "POST",
+        "http_version": "HTTP/1.1",
+        "host": "tokenservice.amazongames.com",
+        "declared_body_bytes": 719,
+        "authorization_present": false,
+        "cookie_present": false,
+        "tcp_tuple_owner_pid": 28024,
+        "path_template": "/games/new-world/tokens",
+        "response_statuses": [
+          200
+        ],
+        "tls": {
+          "tls_version": "TLSv1.3",
+          "cipher": "TLS_AES_256_GCM_SHA384",
+          "selected_alpn": null
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:19:49.264Z",
+        "method": "GET",
+        "http_version": "HTTP/1.1",
+        "host": "d2c74t4zimux3r.cloudfront.net",
+        "declared_body_bytes": 0,
+        "authorization_present": true,
+        "cookie_present": false,
+        "tcp_tuple_owner_pid": 28024,
+        "path_template": "/prod/credentials/omni",
+        "response_statuses": [
+          200
+        ],
+        "tls": {
+          "tls_version": "TLSv1.2",
+          "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "selected_alpn": null
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:05.147Z",
+        "method": "GET",
+        "http_version": "HTTP/1.1",
+        "host": "d2c74t4zimux3r.cloudfront.net",
+        "declared_body_bytes": 0,
+        "authorization_present": true,
+        "cookie_present": false,
+        "tcp_tuple_owner_pid": 28024,
+        "path_template": "/prod/game/getlogininfo/<redacted>/omni",
+        "response_statuses": [
+          200
+        ],
+        "tls": {
+          "tls_version": "TLSv1.2",
+          "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "selected_alpn": null
+        }
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.565Z",
+        "method": "POST",
+        "http_version": "HTTP/1.1",
+        "host": "d2c74t4zimux3r.cloudfront.net",
+        "declared_body_bytes": 644,
+        "authorization_present": true,
+        "cookie_present": false,
+        "tcp_tuple_owner_pid": 28024,
+        "path_template": "/prod/game/login/queue/v2/<redacted>/omni",
+        "response_statuses": [
+          200
+        ],
+        "tls": {
+          "tls_version": "TLSv1.2",
+          "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "selected_alpn": null
+        }
+      }
+    ],
+    "http_request_count": 5,
+    "dtls_received_datagrams": 4,
+    "dtls_received_count_basis": "four receive events and explicit graceful PROBE_STOPPED received_datagrams=4",
+    "dtls_established_count": 0,
+    "dtls_application_count": 0,
+    "dtls_server_output_bytes": [
+      2516,
+      2516
+    ],
+    "dtls_alerts": [
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.699Z",
+        "connection_id": "c7e57ede-910d-475e-85da-e1768e2d2c69",
+        "direction": "read",
+        "level": "fatal",
+        "description": "unknown_ca"
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.714Z",
+        "connection_id": "8858a921-0775-4ee9-ac1c-81ed162cf497",
+        "direction": "read",
+        "level": "fatal",
+        "description": "unknown_ca"
+      }
+    ],
+    "dtls_sni": [
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.696Z",
+        "present": false,
+        "name_class": "other"
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.713Z",
+        "present": false,
+        "name_class": "other"
+      }
+    ],
+    "dtls_owner_observations": [
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.693Z",
+        "process_id": 28024,
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "datagram_bytes": 159,
+        "record_content_type": "handshake",
+        "record_version": "DTLS1.2",
+        "negotiated_version_proven": false,
+        "payload_saved": false
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.699Z",
+        "process_id": 28024,
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "datagram_bytes": 15,
+        "record_content_type": "alert",
+        "record_version": "DTLS1.2",
+        "negotiated_version_proven": false,
+        "payload_saved": false
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.713Z",
+        "process_id": 28024,
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "datagram_bytes": 159,
+        "record_content_type": "handshake",
+        "record_version": "DTLS1.2",
+        "negotiated_version_proven": false,
+        "payload_saved": false
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:20:08.714Z",
+        "process_id": 28024,
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "datagram_bytes": 15,
+        "record_content_type": "alert",
+        "record_version": "DTLS1.2",
+        "negotiated_version_proven": false,
+        "payload_saved": false
+      }
+    ],
+    "probe_stop_events": [
+      {
+        "timestamp_utc": "2026-10-03T08:21:35.116Z",
+        "state": "QUEUE_CONTRACT_PROBE_STOPPED"
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:21:35.100Z",
+        "state": "QUEUE_CONTRACT_PROBE_STOPPED"
+      },
+      {
+        "timestamp_utc": "2026-10-03T08:21:36.528Z",
+        "state": "DTLS_PROBE_STOPPED",
+        "received_datagrams": 4,
+        "sockets_closed": true
+      }
+    ],
+    "source_identity": {
+      "credentials_contract_probe_sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+      "head": "bd1be5804acb5e940f691fcab043643306398c42",
+      "synthetic_credentials_candidate_sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+      "token_contract_probe_sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+      "session_handoff_probe_sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+      "discovery_candidate_sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358",
+      "scripts_queue_contract_probe_py_sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+      "scripts_udp_handoff_probe_py_sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919",
+      "scripts_windows_udp_owner_py_sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf",
+      "tests_fixtures_connectivity_current_queue_parser_candidate_json_sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99",
+      "dtls_transport_probe_sha256": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611",
+      "scripts_rep_anchor_candidate_py_sha256": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1",
+      "scripts_RepAnchorImageTransaction_psm1_sha256": "c35db5c8dbf0278eb4f3d3e81b898524a980820ad310f68ac91abbc2ab9f0588",
+      "scripts_Set_RepAnchorTrialImage_ps1_sha256": "eff56e764a35902c3483b7e991ae12bcaaf2ac0a83828227c54e232902af3d1e",
+      "scripts_Invoke_RepAnchorTrialWindow_ps1_sha256": "811e9dc11ce1ef8c1304fb3cc8a0098c208a1bc1a7078c31711060fcb61736e0",
+      "stock_control_window_sha256": "e2efeabbac183b1f472197da3d61c33a6011a53eed9bdbd0188df41168917a45"
+    },
+    "tracked_tree_clean_at_preparation": true,
+    "executable_written_by_control": false,
+    "legacy_candidate_metadata_names_contain_stock_identity": true,
+    "client_screen_report": "not obtained in this matched control; server metadata establishes request/alert flow only",
+    "ui_input_sent_by_agent": 0,
+    "services_expired_before_window_cleanup": true,
+    "results_precede_service_expiry": true
+  },
+  "cleanup_readback": {
+    "timestamp_utc": "2026-10-03T08:27:01.8138031+00:00",
+    "client_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "authenticode_status": "Valid",
+    "game_count": 0,
+    "tcp_443_count": 0,
+    "udp_64003_count": 0,
+    "rule_count": 0,
+    "retained_root_count": 1,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "ui_native_type_compiled": true,
+    "ui_input_struct_size": 40,
+    "ui_inputs_sent": 0
+  },
+  "strict_cleanup_readback": {
+    "schema": 1,
+    "timestamp_utc": "2026-10-03T08:40:41.9964501+00:00",
+    "state": "STRICT_STOCK_AND_RESOURCE_READBACK",
+    "source_script_sha256": "5aee23e7a776db388a2c78bd460c231fb77a7100d6424e875043d494f6f1905c",
+    "queries_succeeded": ["Win32_Process", "TCP_listeners", "UDP_endpoints", "ActiveStore_firewall_rules", "CurrentUser_Root"],
+    "error_policy": "Stop; full successful network/firewall enumeration before filtering for project resources",
+    "client_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "authenticode_status": "Valid",
+    "file_version": "1.400.6031.6004151",
+    "game_and_launcher_count": 0,
+    "tcp_443_count": 0,
+    "udp_64003_count": 0,
+    "project_rule_count": 0,
+    "retained_root_count": 1,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "snapshot_not_atomic": true,
+    "unrelated_resource_details_exported": false
+  },
+  "private_and_source_sha256": {
+    ".scratch/strict-connectivity-readback.ps1": "5aee23e7a776db388a2c78bd460c231fb77a7100d6424e875043d494f6f1905c",
+    ".scratch/strict-connectivity-readback-2a2be27bfd2b43ed8ba2966a82371970.json": "5f009c77ea437e1733160e029fafeeda6d4f3e18359a9b54a2d5eba709a417f9",
+    ".scratch/rep-anchor-stock-control-v2/attach.ps1": "9d88ee68f0d1e66c86497e95376176ec218c018b6c1a80bd0f26f96530dca314",
+    ".scratch/rep-anchor-stock-control-v2/dispatch.ps1": "ec3fbb5744c284c3797149a060a40656ed2361b5d6c2b581cd7a5ffd0d40bc59",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/run-manifest.json": "6c0c1d3783524bb86af654dc75f418720efbdd51ea3b30414454208e78438264",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/owned-client.json": "8baa3d3b51bdf1330b3bfc6ed17b147221f36dd514ef2ae965f84333f22af2b1",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/trial-window.jsonl": "2fac9eb2ba8dd539161b1ac5385807e58c50639a457d7719e7cf7f1c1d11f7bd",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/anchor-launch-manifest.json": "ab054273bec75bf60dd757e5ee65c104abd25cd4488d518a5dfccca2ea360d0c",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/trial-dispatch.json": "6f22fd4094f3d9b2b4009f3098dbef16b51f796dd3fe70bfa5ae6100d3b0c1bb",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/bootstrap-v4.jsonl": "dc1dfb58509dead5afc0e2736f8f1a7a299dffaa3f761a2144f682181521a402",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/bootstrap-v6.jsonl": "2b03b12bc94b7805cacc36edbc4d8f195af8ba93cf4483aeba9fa02c7dca01a9",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/dtls-transport.jsonl": "546a24c1ec2352a8b779ee7462f796781e8f3999859760341a6901507f1749e3",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/dtls-cleanup.json": "b76d6574b6ae22efd4f7a4c60053310ef3af78e18a2a303ca14ae43f2d4d9f30",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/run-manifest.json": "487b0da34df431fd993562875ffdf51157aa23d37d1d9ca59aa7289d37b15c6d",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/owned-client.json": "23533db9535fdf5d2998ba4345ed7f662c3b3c4d8d74fbaf0975c34d14182e96",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/trial-window.jsonl": "124c1b0e0d9180db6a33621c9f0a0bd346d5a69dc9e3308f41cb3ff1a88b6a4d",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/anchor-launch-manifest.json": "5fb4d6488041a2f0396e26a590603e51b30d773208a59d3be6575ec47f2638dc",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/trial-dispatch.json": "755331d7e9bfcc9d7c09278315b9841dc5739f38ccd2089812e19990c1b27b15",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/bootstrap-v4.jsonl": "1f909b195f379dc94b60d05fad23721605a7e94d866a5a20d2fba5106bd5c1e4",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/bootstrap-v6.jsonl": "052fdbc111f8af5e38435e75561e82d4389ab07e6fb6c67083d9007d05a7c1a2",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/dtls-transport.jsonl": "414cd12f2dbf1591f2f0f69a983c59c205d042dd04cb3143f9aeea9b49a86274",
+    "private/connectivity/token-contract-credentials-2027b2d762d84d3bb1f6bcbd96122831/dtls-cleanup.json": "5a94f8026ad8194e163744e76bfdd9669fe3dc0200684f06ed2eca0de7530832",
+    "private/connectivity/token-contract-credentials-e679003e07344b6cb2b374dcdfd68abe/anchor-image-transaction.jsonl": "1aa1dd0b1e3a0378422fa7e411df0103e9743baa24d8019c911487bfa399fc8a",
+    ".scratch/rep-anchor-stock-control-v2/Invoke-StockControlWindow.ps1": "e2efeabbac183b1f472197da3d61c33a6011a53eed9bdbd0188df41168917a45",
+    ".scratch/rep-anchor-trial-v2/Own-GameWindow.ps1": "6b3317020ab00d9fccae525872b442b418e270fd1963fd68d829c41d91405f9b",
+    ".scratch/close-channel-listeners.ps1": "f47687dc1f3f6cc5d732571cd6bfbb9933486d97b1f7c8f79a98681a1b43dcd1",
+    ".scratch/close-dtls-responder.ps1": "ebd435b4b9ae599a5bd62f24a62cbcac6379018319652a20567c03997bf67e96",
+    ".scratch/rep-anchor-trial-v2/preflight.ps1": "50143fb4e6bbcdc7cbd4f49612ad2330147b80d8bb648bfe292ceb97af1473a2",
+    ".scratch/rep-anchor-trial-v2/preflight-5937db4f1e214ee1b75928988809a8f5.json": "2ac4ad7e48fcc4256f674a8f5712b43256ab216e2eced452c66948c7bd5d5cb6",
+    "scripts/Invoke-RepAnchorTrialWindow.ps1": "811e9dc11ce1ef8c1304fb3cc8a0098c208a1bc1a7078c31711060fcb61736e0",
+    "scripts/Set-RepAnchorTrialImage.ps1": "eff56e764a35902c3483b7e991ae12bcaaf2ac0a83828227c54e232902af3d1e",
+    "scripts/RepAnchorImageTransaction.psm1": "c35db5c8dbf0278eb4f3d3e81b898524a980820ad310f68ac91abbc2ab9f0588",
+    "scripts/dtls_transport_probe.py": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611",
+    "tests/test_rep_launch_lifecycle.ps1": "773880bb0b45451d57ce57bce60c02f8c88273d8576c3078d25fe5bfd9b24d50"
+  },
+  "limitations": [
+    "Candidate refusal is demonstrated by the user's EAC screenshot, not missing process Path/CIM metadata.",
+    "Matched elevated original-launcher stock control succeeds through private queue; this is not a second modified-client experiment or proof of the exact EAC internal check.",
+    "HTTP attribution uses exact TCP tuple owner; UDP attribution uses bound endpoint PID, not exact UDP flow or loaded-image hashing.",
+    "No current-client DTLS establishment, decrypted application data, Carrier/V3, world loading, actor or multiplayer.",
+    "HTTPS requests and synthetic envelopes are not secure private-account or cryptographic ticket proof.",
+    "Data-only executable substitution route is retired; no EAC/launcher bypass, memory access/write, certificate-store mutation or remote publication occurred.",
+    "Own-window observation failed safe (candidate launcher exited; stock focus changed). No screenshot/input was produced by the helper; the EAC image came from the user.",
+    "No protocol codec/source changes or new test execution; prior 285 Python, 14 interval, 9 lifecycle and 455 upstream/1 skip results remain historical."
+  ],
+  "next_blocker": "Unchanged-client private REP trust/configuration route compatible with intact launcher/EAC; then actual DTLS/application evidence before Carrier/V3",
+  "actor_work_can_begin": false
+}

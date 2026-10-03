@@ -1,6 +1,6 @@
 # Current REP DTLS trust and Carrier/V3 registration
 
-> October 3 update: [private anchor attempts](PRIVATE_REP_ANCHOR_TRIAL.md) applied/restored a certificate-data interval; the attempt ended with a metadata exception and no game traffic was observed. Hardened retry was not admitted through Windows elevation. No DTLS acceptance or Carrier/V3 result is inferred. Nine synthetic lifecycle checks pass; stock hash/signature/routing restored, same CA retained. Previous stock `unknown_ca` observations below remain historical evidence.
+> Latest October 3 comparison: the certificate-data candidate was refused at launch by intact EAC (“Unrecognized game client” / “Unknown file version”). After exact stock restoration, a matched elevated original-launcher control reached private queue200 and returned two more fatal `unknown_ca` alerts. Eight alerts across four stock runs; **no private game DTLS, Carrier/V3 or actor**. Final stock hash/signature/hosts verified, temporary resources absent, same CA retained. [Live receipt](../research/evidence/private-rep-anchor-eac-control.json). Earlier metadata failure/canceled elevation remain separate historical outcomes, not explanations for this refusal. The on-disk substitution route is retired; investigate unchanged-client configuration instead.
 
 ## Scope and current evidence boundary
 

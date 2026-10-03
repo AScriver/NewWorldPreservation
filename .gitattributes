@@ -55,3 +55,4 @@
 /scripts/Invoke-RepAnchorTrialWindow.ps1 text eol=lf
 /tests/test_rep_launch_lifecycle.ps1 text eol=lf
 /research/evidence/private-rep-anchor-attempts.json text eol=lf
+/research/evidence/private-rep-anchor-eac-control.json text eol=lf

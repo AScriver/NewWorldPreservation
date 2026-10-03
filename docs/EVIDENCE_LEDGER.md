@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## October 3 admitted private-anchor/stock comparison — clean preparation HEADbd1be58
+
+[Live comparison receipt](../research/evidence/private-rep-anchor-eac-control.json) pins exact run/source/ownership/log identities. Steam22469132 / client1.400.6031.6004151 / stock SHA8654f01d…; original launcher unchanged. Previous K36–K40 remain historical; no earlier inference is upgraded retroactively.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K41 | Admitted certificate-data candidate hit an EAC launch refusal | Observed user screenshot “Unrecognized game client. Cannot continue.” / “Unknown file version (NewWorld.exe)”; candidate hash and HashMismatch read back, zero HTTP/UDP logged. Fresh named game identity recorded, but loaded-image/path/parent unverified. Not candidate TLS rejection or exact EAC internal-check proof | Candidate run e679…; private image SHA855ca87a…; image/window/log hashes in new receipt |
+| K42 | Matched elevated unchanged-stock/original-launcher control progressed to private REP | Observed five HTTP200 request chains with exact TCP tuple owner28024; queue829byte200/SHA628bca… at08:20:08.566UTC selects127.0.0.1:64003, followed by UDP traffic. No executable write by stock control; metadata fields named candidate contain stock SHA. No new control screen report or secure-account/ticket proof | Stock run2027…; original-launcher PID38144/game28024 direct parent match; source e2efeabb… and current receipts |
+| K43 | Stock REP again rejects the retained full chain | Observed two159byte ClientHello-header datagrams, two2516byte flights, two15byte incoming fatal unknown_ca alerts; four datagrams total, no established/application events. Both SNI callbacks present=false. Bound UDP-owner PID28024 is not exact-flow/loaded-image proof; no global pinning/name-check inference | DTLS log/fixed responder hashes in receipt; all events precede service expiry08:21:36 |
+| K44 | Client/route/service cleanup and retained CA verified | Observed candidate restored stock SHA/Valid08:05:10/11 before routing release08:05:12. Stock control stopped owned game08:24:32 before read-only stock hash/signature check/routing release08:24:34; services had expired gracefully. Final08:27:01.813UTC stockValid/originalhosts/zero game+launcher/443/64003/projectrules/Root1. No memory or CA-store operation; helper observation failures produced no input/image | Final preflight and both per-run cleanup hashes in receipt; legacy UDP cleanup field says controlled shutdown, but probe STOPPED events establish natural expiry for stock |
+| K45 | Data-only disk substitution is not a viable intact-EAC route in this tested build | Strongly supported by K41 plus K42 controlled comparison. Not proof every unchanged-client configuration/provider path is absent or sole attribution of EAC internal cause. Retire this route; do not bypass launcher/EAC or write memory | New live receipt, [retired procedure](PRIVATE_REP_ANCHOR_TRIAL.md) |
+
+**Next gate:** evidence of a normal unchanged-client REP trust/configuration route; only then actual game DTLS/application data and unrelated-root rejection. Carrier/V3, actors and Milestone1 remain unproven. No protocol/source modification or new test execution in this comparison; earlier285 Python/14 interval/9 lifecycle/455 upstream+skip1 results are historical, unchanged.
+
+Targeted read-only review matched39 files (30 receipt-map entries, eight further protocol/source/fixture identities and the user screenshot). K41–K45 survived within scope. Candidate zero is now explicitly an event-derived count, not an unavailable final counter. Review flagged that the old preflight suppressed enumeration errors. **Resolved by new executed strict readback08:40:41.996UTC:** all process/TCP/UDP/ActiveStore/Root queries succeeded with Stop error policy before project filtering; stockValid/originalhosts/zero relevant processes/listeners/rules/Root1 reproduced. Both old and strict receipts are retained; snapshot is sequential, not atomic. Reviewer did not operate system resources or independently audit every primary operation.
+
 ## October 3 private-anchor attempts — clean preparation HEAD0c18036
 
 [Receipt](../research/evidence/private-rep-anchor-attempts.json) pins both private runs, unchanged earlier script/test identities and new original recovery sources. Steam22469132 / client1.400.6031.6004151. First v1 runtime SHA56773b1a…; v2 SHA92b900c7…; the promoted tracked owner has its own test/receipt identity. No source-level verifier inference is upgraded to a live trust claim.
@@ -12,7 +28,7 @@
 | K39 | V2 retry never reached client/routing admission | Windows Start-Process reported cancellation on both elevation dispatches; no window/dispatch/image/game records; listener-only logs. Native error code/exit timestamp not retained. Not a game trust test | Receipt second attempt; preparation cleanHEAD0c18036/v2 source |
 | K40 | Owned runtime resources safely closed and CA retained | Observed04:54:29.310UTC readback: stock hash/Valid, original hosts, no game/443/64003/project rule, Root count1. Services stopped by guarded ownership, not graceful probe exit; no input/memory/CA-store action | Receipt cleanup/UDP metadata and private hashes |
 
-**Next gate:** fresh Windows elevation admission, then actual candidate-client DTLS/application data and same-candidate unrelated-root rejection. No current Carrier/V3, world actor or Milestone1; no raw credential/proprietary capture exported. [Procedure](PRIVATE_REP_ANCHOR_TRIAL.md).
+**Historical next gate:** fresh Windows elevation admission, superseded by K41–K45 above. No current Carrier/V3, world actor or Milestone1; no raw credential/proprietary capture exported. [Procedure](PRIVATE_REP_ANCHOR_TRIAL.md).
 
 Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Initial evidence was offline source review/public metadata/isolated tests; no game/hosts/trust mutations occurred **then**. The actual current-client slice is at the end, with cleanup verified. No hooks, process-memory inspection or EAC/binary changes.
 

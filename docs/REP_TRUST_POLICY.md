@@ -1,5 +1,7 @@
 # Current REP trust policy — current-build evidence
 
+> October 3 live follow-up: the mapped certificate-data candidate was refused at launch by intact EAC, then restored exactly. A matched unchanged-stock/original-launcher control reached queue200 and returned two further unknown_ca alerts. No private game DTLS acceptance; on-disk substitution is retired, not an EAC bypass. [Live comparison](PRIVATE_REP_ANCHOR_TRIAL.md), [receipt](../research/evidence/private-rep-anchor-eac-control.json). The static findings below are not a live readback of a candidate verifier.
+
 ## Result and identity
 
 **The current REP wrapper→SDK→UDP secure-driver trust initializer and linked verifier are now statically identified. Private-root acceptance remains unproven.** The complete source/object chain is not a live readback of the selected enum, context or store contents.
@@ -97,6 +99,6 @@ The positive static source/object join is complete for these known implementatio
 
 If stronger runtime attribution is needed during that test, observe only the owned session's selected transport/context/verify mode/store fingerprints/expected-identity metadata. If a read-only process query is denied, report that denial rather than bypassing EAC. No raw memory/token capture or write is needed by this plan. Any client interoperability change is a separate evidence-constrained implementation, not part of this analysis.
 
-**Next engineering checkpoint:** [private anchor trial](PRIVATE_REP_ANCHOR_TRIAL.md) adds bounded pointer/configuration findings, an offline exact-build certificate-data candidate and guarded interval recovery. No supported normal override or actual acceptance is established by preparation.
+**Next engineering checkpoint:** trace the shared settings-manager/provider input boundary for a supported unchanged-client REP trust control, if one exists. The [private anchor trial](PRIVATE_REP_ANCHOR_TRIAL.md) is now complete as an EAC refusal with verified recovery; do not repeat that substitution or modify EAC/launcher protections. No supported normal override or actual private game acceptance is established.
 
 **Current outcome unchanged:** synthetic character selection → private queue → DTLS certificate rejection. No world-loading state, completed game DTLS, decrypted Carrier/V3 record, actor or Milestone1. Carrier/V3 can proceed only after an actual current-client handshake and genuine application data are observed; actor/spawn work remains gated.

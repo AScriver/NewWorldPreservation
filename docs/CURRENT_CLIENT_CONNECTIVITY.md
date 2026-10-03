@@ -1,10 +1,20 @@
 # Current-client connectivity
 
-## October 3 trial update
+## October 3 live comparison — EAC refusal and stock DTLS rejection
+
+**HTTPS trust is solved for the tested endpoints; private game DTLS trust is not.** A fresh trial at clean HEAD `bd1be58` substituted only the mapped certificate-data interval. The user supplied an EAC screenshot: “Unrecognized game client. Cannot continue.” and “Unknown file version (NewWorld.exe)”. No HTTP request or UDP datagram was logged in that candidate trial. This is a demonstrated launch refusal, **not** a test of the candidate's runtime verifier. The executable was restored byte-exact with a valid signature before routing was released. That substitution route is retired; EAC is not bypassed.
+
+The elevated **unchanged-stock/original-launcher control** subsequently completed five private HTTP requests. Queue-v2 returned the existing synthetic829-byte200 at `08:20:08.566Z`, selecting127.0.0.1:64003. Two159-byte ClientHello-header datagrams received two2516-byte server flights; the client returned two15-byte fatal `unknown_ca` alerts. No completed DTLS, application data, Carrier/V3, world loading or actor. TCP tuples belong to fresh PID28024; UDP evidence is bound-endpoint ownership, not exact-flow or loaded-image proof. No screen report was obtained for this control; do not invent its popup.
+
+Final strict `08:40:41.996Z` readback: successful process/TCP/UDP/ActiveStore/Root enumerations with Stop error policy; stock SHA/signatureValid, original hosts, zero game/launcher/443/64003/project rules, retained approved Root count1. This strengthens the earlier08:27 check that suppressed enumeration errors. No process-memory access/write or CA-store mutation; own-window observations failed safely without input or generated screenshot. [Hash-pinned live comparison](../research/evidence/private-rep-anchor-eac-control.json), [procedure and limits](PRIVATE_REP_ANCHOR_TRIAL.md).
+
+**Exact next gate:** an unchanged-client private REP trust/configuration route compatible with intact launcher/EAC. Then require actual current-game DTLS and genuine application input before Carrier/V3. Actors remain gated. Static settings-manager/provider tracing is not yet a demonstrated private-CA control.
+
+## Historical October 3 instrumentation/elevation update
 
 [Private REP anchor attempts](PRIVATE_REP_ANCHOR_TRIAL.md) do **not** advance the furthest client state. The first certificate-data-only disk substitution was read back, then restored with valid stock signature after a PowerShell metadata exception; zero HTTP requests/DTLS datagrams and no verified game identity. Its precise failing property is unknown, not an EAC verdict. Hardened retry stopped at two canceled elevation dispatches, with no routing/client mutation. Nine current synthetic lifecycle checks pass; no game inputs or process-memory accesses occurred. [Receipt](../research/evidence/private-rep-anchor-attempts.json).
 
-**Immediate gate:** accept fresh Windows elevation for the bounded retry. **Technical gate:** actual current-game private-anchor handshake and genuine application data, with unrelated-root rejection. HTTPS trust remains solved; game DTLS unproven. Carrier/V3 and actors cannot yet begin.
+At that historical checkpoint the immediate gate was Windows elevation. The later comparison above supersedes that gate, not the earlier failed-attempt evidence. HTTPS trust remains solved; private game DTLS is unproven.
 
 ## Result — October 2, 2026 UTC
 
@@ -45,8 +55,9 @@ flowchart TD
     Credentials --> Preview[Login-info200: selectable Preservation /frontend preview]
     Preview --> Queue[User Play: queue-v2 POST /synthetic200]
     Queue --> UDP[Owned127.0.0.1:64003: DTLS ClientHello-header observations]
-    UDP --> Stop[Receive-only observer: no reply /connection-error popup]
-    UDP -. unverified .-> REP[DTLS handshake/trust /Carrier V3 /world actor]
+    UDP --> Flight[Owned responder: full-chain DTLS server flight]
+    Flight --> Stop[Stock client: fatal unknown_ca /no completed handshake]
+    Stop -. still gated .-> REP[Private trust /Carrier V3 /world actor]
 ```
 
 | Stage | Actual evidence and boundary |
@@ -61,7 +72,7 @@ flowchart TD
 | Current token/session request | Fresh owned PID31396/start17:35:29.4344206Z; exact socket owner for bootstrap and all three token connections. FirstPOST17:35:43.026Z: SNI/Host `tokenservice.amazongames.com`, TLS1.3/`TLS_AES_256_GCM_SHA384`, selectedALPNnull, HTTP1.1, declared body2941bytes, no Authorization/Cookie. Bodies discarded, not inspected or saved. Length is not a fixed protocol size. |
 | Current descriptor / endpoint selection | Original local shape plus original token URL hostnames; only three explicitly allowed hostnames mapped to loopback. Five unique local names parsed again. No request to `prod.newworld.com` observed. Original token hostname could come from metadata or a matching hardcoded default: not distinguished. Collapsed origin previously produced204/no tokenHTTP, but that does not establish204's cause. |
 | Character/world/session / spawn | Latest compatible synthetic token/credentials/login-info/queue200 advances through character preview/Play to the selected owned UDP endpoint. Earlier501/SDK201 observations remain historical; not official authorization, secure private accounts or actor spawning. |
-| Game transport / reconnect | Latest ten159byte ClientHello-header datagrams at owned loopbackREP; no reply/certificate/handshake. User saw Play-button spinner then connection error, not world loading. In-world reconnect untested; fresh launches are startup controls. |
+| Game transport / reconnect | Historical receive-only run: ten159byte ClientHello-header datagrams/spinner/error. Four later stock responder runs: eight fatal unknown_ca alerts after configured full-chain flights, no completed handshake/application/world load. Latest control has no screen report. In-world reconnect untested; fresh launches are startup controls. |
 
 Baseline log read SHA-256: `11c17fd275b648ca0a55a0407a59b43ca7dee87927a3eeb83f4ac1083ce92de3`, 44,996 bytes. Source log is not copied into this repository. Whitelist metadata stays ignored; public receipt retains only approved hostname/version/provenance fields. Extractor timestamps are extraction times, **not source-event times**; growing-log reads are explicitly marked unstable.
 
