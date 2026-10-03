@@ -396,7 +396,14 @@
         "K77",
         "K78",
         "K79",
-        "K80"
+        "K80",
+        "K81",
+        "K82",
+        "K83",
+        "K84",
+        "K85",
+        "K86",
+        "K87"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -421,6 +428,11 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-supported-root-input.json",
+          "classification": "source-inference",
+          "scope": "Actual REP verification-store capacity/lifetimes, gated same-owner CA helper and bounded normal activation/alias checks; supported root input and live acceptance unresolved"
+        },
         {
           "path": "research/evidence/current-rep-filecfg-validation.json",
           "classification": "offline-executed",
@@ -655,6 +667,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-supported-root-input.json",
     "research/evidence/current-rep-store-loader-boundary.json",
     "research/evidence/current-rep-default-config-boundary.json",
     "research/evidence/current-rep-ca-input-boundary.json",
