@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-03T19:33:39.643366+00:00",
+  "analysis": "conditional fileCfg consumption/provider population, not a private CA override",
+  "steam_build": 22469132,
+  "client_version": "1.400.6031.6004151",
+  "executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "investigation_checkout": {
+    "head": "1928216a3c27a71249a99b18c6f5013a12071d72",
+    "tracked_state": "clean"
+  },
+  "recording_checkout": {
+    "head": "b7e61d7f8e4a4728bcadeaac87e108f31d4e66c5",
+    "status": " M docs/CURRENT_CLIENT_CONNECTIVITY.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REP_TRUST_POLICY.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n"
+  },
+  "tooling_commit": "b7e61d7f8e4a4728bcadeaac87e108f31d4e66c5",
+  "runtime": {
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "jdk": "21.0.12.1+1",
+    "procedure": "shared Run-Tool.ps1; task scripts validated for parser/automatic-variable rules"
+  },
+  "provider": {
+    "constructor": "0x140845950",
+    "vtable": "0x147f4d700",
+    "registration": "0x140845c80",
+    "dispatch_target_source": "caller method descriptor; container supplies receiver",
+    "typed_lookup": "0x140852900",
+    "aggregate_rebuild": "0x140854fa0",
+    "runtime_receiver_and_values_sampled": false
+  },
+  "conditional_file_route": {
+    "consumer": "0x14102ee20",
+    "file_type_global": "0x14a2f8d3c",
+    "type_literal_va": "0x147effb68",
+    "type_literal": "LayerId_FileCfg",
+    "handler": "0x14084c270",
+    "reader": "0x140853f90",
+    "parser": "0x147464c90",
+    "walker": "0x1408578a0",
+    "insertion_limits": "existing key/mask intersection and secondary-map flag; not arbitrary-key acceptance/drop",
+    "io_success_or_physical_alias_established": false
+  },
+  "modezero_adjudication": {
+    "label": "fileCfg.publicLegacy",
+    "reader_join": "falsified in this mapped consumer",
+    "disable_site": "0x14102f229",
+    "mode_two_enable_site": "0x14102f20d",
+    "base_maps": "empty at construction only",
+    "ret_zero_correction": "RET immediate zero is stack cleanup, not an EAX return value",
+    "separate_population_producer_established": false
+  },
+  "watcher": {
+    "flag": "0x14a2e8bac",
+    "writer": "0x1408535c3",
+    "function": "0x140853ac0",
+    "read_site": "0x140853bd6",
+    "cache_site": "0x140853c2f",
+    "sync_gate": "0x140853caf-0x140853cc6",
+    "reader_call": "0x140853ce4",
+    "counterexample": "cache updated before synchronization/read; identical next value need not retry a failed gate/read",
+    "activation_or_service_value_meaning_established": false
+  },
+  "trust": {
+    "udp_ca_argument_global": "0x149f80d90",
+    "typed_settings_join_to_ca_established": false,
+    "alternate_inspected_path": "TCP stream; no CA/store/verification identified within inspected transport ranges",
+    "whole_application_plaintext_or_no_upper_tls_proven": false,
+    "supported_private_ca_input_established": false,
+    "new_client_trial": false,
+    "current_game_dtls_completed": false,
+    "carrier_v3_or_spawn_enabled": false
+  },
+  "archive_observation": {
+    "archive_relative_path": "assets/DataStrm.pak",
+    "schemaVersion": 1,
+    "observedAtUtc": "2026-10-03T19:12:03.328952+00:00",
+    "archiveBytes": 1085098995,
+    "archiveFullyHashed": false,
+    "indexEntries": 19331,
+    "indexBytes": 2507248,
+    "indexSha256": "a4f4eb2a38f769f9feae305e6503a104202a7b426008cce5917ef8491778a7ea",
+    "member": "client.json",
+    "memberFound": true,
+    "contentDecoded": false,
+    "rawContentExported": false,
+    "runtimeLoadingObserved": false,
+    "memberMetadata": {
+      "declaredBytes": 1952,
+      "compressedBytes": 619,
+      "compressionMethod": 15,
+      "declaredCrc32": "326fd32b",
+      "crcVerified": false,
+      "encrypted": false,
+      "compressedReadSha256": "3ae3a596cde72f8b88f9b2bf612b1ca5eafc6497aa2e66a332eca39cba6090c9"
+    },
+    "sourceStableDuringRead": true
+  },
+  "focused_verification": {
+    "python_passed": 36,
+    "new_archive_controls": 19,
+    "runner_cases": 17,
+    "initial_failure": "old reviewed module-count assertion27; updated28 then all36 passed",
+    "complete_workspace_validation": "recorded separately after source handoff"
+  },
+  "retained_failures_and_corrections": [
+    "modezero/client.json reader join withdrawn",
+    "earlier18-byte provider entry/callback interpretation withdrawn",
+    "type literal VA corrected; decompiler byte argument corrected from instruction dataflow",
+    "watcher retry and RET return-value overclaims withdrawn",
+    "Python/7-Zip did not decode archive method15; no codec guessed",
+    "first sparse Ghidra save/close failed consumer ownership; corrected retry succeeded",
+    "first byte-flag runner used wrong parameter and failed before Python; corrected runner passed"
+  ],
+  "operational_scope": {
+    "new_game_launches": 0,
+    "game_memory_bytes_read": 0,
+    "process_writes": false,
+    "client_or_launcher_or_eac_edits": false,
+    "trust_or_routing_edits": false,
+    "credentials_or_raw_asset_content_exported": false,
+    "amazon_endpoints_contacted": false,
+    "retained_ca": "untouched in this continuation",
+    "remote_publication": false
+  },
+  "furthest_live_checkpoint": "Historical stock Play -> queue HTTP200 (829 bytes) ->127.0.0.1:64003 ->fatal unknown_ca;8 alerts/4 runs; no new live trial",
+  "next_boundary": "evidenced normal input/initialization affecting the separate UDP CA argument with verification/intact EAC; then actual DTLS and unrelated-root rejection before genuine Carrier/V3",
+  "limits": [
+    "Conditional source-supported control/dataflow only, not current runtime loading or configuration values.",
+    "Common-encoding scans validate selected .pdata starts; aliases/other encodings/unmapped leaves remain outside absence coverage.",
+    "Sparse decompilation is secondary to instruction dataflow; recovered types/arguments may be incorrect.",
+    "Archive is index/compressed-read metadata only; no codec/CRC/full-archive/runtime-loading claim.",
+    "Historical upstream/live evidence remains separately dated; Milestone1 not achieved."
+  ],
+  "bindings": {
+    ".scratch/provider-to-rep-20261003-1836/evidence-map.md": "ab53e1e973f0a385685ea1f2e4da589fa8767c33e6211917587e40fe4fdd13d8",
+    ".scratch/provider-to-rep-20261003-1836/final-manifest.json": "ed308393ba665911fd1617df70f5d8463fded5e6a385a04beec9ef8059b437f9",
+    ".scratch/provider-to-rep-20261003-1857-alternate/evidence-map.md": "4dfdc4aaa3f8d695acfb69ac67559699789903c50aed2cf0729305f342fac74b",
+    ".scratch/provider-to-rep-20261003-1857-alternate/manifest.json": "eacde3f82b8d27dd76749ec547b86755f94aedaa1cb3a975162c4366481f5a00",
+    ".scratch/provider-publiclegacy-20261003-1906/evidence-map.md": "3966dab9cb7854f4d29af06177448989eed9c529297e6baf53b161477193ddfc",
+    ".scratch/provider-publiclegacy-20261003-1906/final-manifest.json": "b158e47342f68e3d91608b64f4ed2ea304706d47c9620f623c47c2b98a1367fe",
+    ".scratch/filecfg-challenge-20261003T1854Z/CHALLENGE_RESULTS.md": "cde6cc879fb653ea22b4810ef33d1ec2ae3d108ce56505908518f16f8859e983",
+    ".scratch/filecfg-challenge-20261003T1854Z/receipt3.json": "0978379953e97da4ee2eb904414194fd33341c14858f7fb90eac47712f153973",
+    ".scratch/filecfg-challenge-20261003T1925Z/CHALLENGE_RESULTS.md": "26f85b4dfa0c7ba2438dcbd724e31c50ce14a10a1bd2588aa0b0e5c66f0e563b",
+    ".scratch/filecfg-challenge-20261003T1925Z/receipt.json": "a9f694a8e4ad44fb2c9829e39807eaeac122ab702da26345847f2edf440ad6c8",
+    ".scratch/filecfg-consumer-20261003T1837Z/source-final-manifest.json": "bbe7c3a0ae6e1e380944976c1f937d7e4786f6ac78e047bed421a47835234c6d"
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/client_config_archive_metadata.py",
+      "sha256": "1e283c588bc7a6652edd03444f124343a4f8698ca094a5049c5db8f07e41bc80"
+    },
+    {
+      "path": "tests/test_client_config_archive_metadata.py",
+      "sha256": "d9bf9a84c82607e12322ecf4e94924de846a10ae664d6be98fc300d58823ebc3"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "86b305f7e0190e12e38be152e95986a05e27b55e3e475ffdac2d58cf5e963f9d"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "7654424c4a31636ac300e3e8299ae0acaed7dcbcda2ff58ca42b4d794e19a638"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "8df7f279db8dea8df9ac18d281dddfad6214750d8134c386c8a3ece866ac7009"
+    }
+  ]
+}

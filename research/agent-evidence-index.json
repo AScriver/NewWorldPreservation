@@ -372,7 +372,13 @@
         "K53",
         "K54",
         "K55",
-        "K56"
+        "K56",
+        "K57",
+        "K58",
+        "K59",
+        "K60",
+        "K61",
+        "K62"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -383,6 +389,7 @@
         "scripts/dtls_transport_probe.py",
         "scripts/rep_anchor_candidate.py",
         "scripts/windows_rep_readonly_probe.py",
+        "scripts/client_config_archive_metadata.py",
         "scripts/RepAnchorImageTransaction.psm1",
         "scripts/Set-RepAnchorTrialImage.ps1",
         "scripts/Invoke-RepAnchorTrialWindow.ps1"
@@ -391,10 +398,21 @@
         "tests/test_dtls_transport_probe.py",
         "tests/test_rep_anchor_candidate.py",
         "tests/test_windows_rep_readonly_probe.py",
+        "tests/test_client_config_archive_metadata.py",
         "tests/test_rep_anchor_transaction.ps1",
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-filecfg-validation.json",
+          "classification": "offline-executed",
+          "scope": "Final workspace367 Python cases,21 archive controls,three synthetic PowerShell suites and loopback lifecycle; no real game trust or registration"
+        },
+        {
+          "path": "research/evidence/current-rep-filecfg-provider.json",
+          "classification": "source-inference",
+          "scope": "Conditional reader/insertion/merge and separately labeled offline archive metadata; modezero loading withdrawn, runtime values/private CA route unproved"
+        },
         {
           "path": "research/evidence/current-rep-readonly-preparation.json",
           "classification": "offline-executed",
@@ -604,6 +622,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-filecfg-validation.json",
+    "research/evidence/current-rep-filecfg-provider.json",
     "research/evidence/current-rep-readonly-validation.json",
     "research/evidence/current-rep-readonly-access.json",
     "research/evidence/current-rep-provider-callback.json",
