@@ -114,3 +114,36 @@ summary and final check references are in
 [agent-workflow-validation](../research/evidence/agent-workflow-validation.json).
 Preflight reports stale or unchecked historical receipts without upgrading their
 scope. These checks neither operate a real game client nor establish Milestone 1.
+
+## Agent analysis toolchain — October 3, 2026
+
+**TOOLS-01 completed:** installed shared Ghidra12.1.4/PyGhidra3.1.0, private
+Temurin JDK21, Wireshark/TShark4.6.9, Frida17.22.0/tools14.11.0 and a locally
+named Cheat Engine7.5 x64 build under
+`C:\Users\Austin\.codex\tools\reverse-engineering`. Global/project `AGENTS.md`
+and [TOOLS](TOOLS.md) document exact paths, validated invocation and project
+boundaries. `manifest.json`, `verification.json` and per-download/build receipts
+in that shared root record hashes, source identity and verification scope. Tool
+binaries, upstream source and analysis databases remain outside tracked files.
+
+Executed tool checks: publisher SHA256 matches for Ghidra/JDK; Authenticode
+publisher validation for both Wireshark executables; Frida/TShark versions;
+PyGhidra CLI help and JVM/API/decompiler-interface construction; a
+program-independent Ghidra headless Java script; Python dependency consistency;
+and the official pinned Cheat Engine x64 project compiled with Lazarus2.2.2/FPC3.2.2.
+The deployed `NWPreservation-CE-x64.exe` matches the build hash and x64 PE identity;
+its GUI/Lua/scanning/debugging remain unexercised. Only the output filename is
+intentionally customized, with upstream application identity retained. Renaming
+does not establish compatibility with other games. Native build warnings and
+Lazarus-generated project metadata remain in private build records.
+
+The first headless check rejected `.scratch` as a database path; the corrected
+check uses ignored `private/`, and instructions retain that restriction. A direct
+tool-switch forwarding attempt through the validator's `pwsh -File` boundary also
+failed; the documented and verified pattern passes native argument arrays inside
+a validated task script. Earlier failures remain in task scratch and are not
+relabeled successful. No installers, target attaches, client launches, capture,
+drivers, hosts/trust changes or game endpoint requests occurred. Existing protocol
+tests were not rerun for this external-tool/documentation change, and previous
+game/verification claims retain their original identities. Milestone1 remains
+unachieved. Actionables was not updated: no governing `workItemId` was supplied.

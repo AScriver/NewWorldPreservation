@@ -12,3 +12,9 @@
 - Run tests with explicit scope, isolated temp resources, and loopback-only listeners. Do not stop unrelated processes.
 - Do not publish, push, or message contributors without explicit authorization.
 - Record tasks and verification in docs/ROADMAP.md. No Actionables work item was supplied; do not browse or claim unrelated items.
+
+## Agent analysis toolchain
+
+- Shared tools are at `C:\Users\Austin\.codex\tools\reverse-engineering`: Ghidra/PyGhidra, private JDK 21, Wireshark/TShark, Frida and a local Cheat Engine x64 build. Read [docs/TOOLS.md](docs/TOOLS.md) and the shared `manifest.json`/`verification.json` before use; those receipts distinguish installed tools from executed checks.
+- Use the validated `Run-Tool.ps1` entry point with explicit native argument arrays. Prefer Ghidra headless/PyGhidra for pinned-image static analysis and TShark for existing authorized private captures. Ghidra rejects project paths containing a segment starting with a dot: put its databases under ignored `private/ghidra/`, not `.scratch/` or the shared `.codex` tool folder. Other client-derived output stays under ignored `.scratch/` or `private/`.
+- Tool availability preserves the existing offline/client boundaries above. Frida attachment, Cheat Engine process reads, packet capture and debugger use require a separately authorized owned-client procedure; installation and smoke checks do not authorize them. Preserve intact launcher/EAC and report denied access. The local build's name is not proof that other games will accept it.
