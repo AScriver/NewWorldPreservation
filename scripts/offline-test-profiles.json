@@ -32,6 +32,7 @@
       "tests/test_windows_udp_owner.py"
     ],
     "tooling": [
+      "tests/test_client_config_archive_metadata.py",
       "tests/test_project_preflight.py",
       "tests/test_offline_runner.py"
     ],

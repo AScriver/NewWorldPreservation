@@ -12,6 +12,8 @@ Private-server language scope: **English only**, per the October3 user clarifica
 
 ## Current status
 
+- **Archive metadata tool added:** original `client_config_archive_metadata.py` inspects only the exact `client.json` ZIP entry, with bounded index/payload reads, ambiguity/header/change rejection and ignored non-overwritten output. Twenty synthetic controls and sixteen runner cases passed. Actual `assets/DataStrm.pak` index reports1952 declared bytes,619 compressed bytes, method15; no content decoded/exported, CRC verification, runtime loading or CA setting established. Complete workspace validation follows this focused increment.
+
 - **Final offline workspace validation:**345 Python cases passed, including25 new observer controls; three synthetic PowerShell suites and owned loopback HTTPS lifecycle passed at tested HEAD `437aacf`, with no selected-input changes. No real client or upstream rerun in this profile. [Executed checkpoint](../research/evidence/current-rep-readonly-validation.json). Private game trust, Carrier and actors remain gated.
 
 - **Elevated access observation executed:** actual stock client's exact image path and FILETIME verified; module lookup returned `ERROR_ACCESS_DENIED`(5), then the observer stopped with0direct game-memory bytes read/no VM_READ request. No input, recorded DTLS datagrams or newly observed world/actor state; all owned resources restored and the same CA retained. [Current procedure/result](CURRENT_CLIENT_CONNECTIVITY.md#october-3-elevated-read-only-access-observation), [25-binding receipt](../research/evidence/current-rep-readonly-access.json). The existing private-trust blocker is unchanged; no EAC-cause inference or permission bypass.
