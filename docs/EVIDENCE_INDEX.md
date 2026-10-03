@@ -70,3 +70,6 @@ reviewed offline test/module or direct input changes. The complete workspace pro
 refuses unreviewed test modules rather than silently selecting them. The reviewed
 REP read-only fake-API test is included in the complete profile and has its own
 focused profile; its live probe CLI remains outside the offline command.
+When adding/removing a group member, update the reviewed inventory count in
+`validate_offline.py` as part of the same reviewed change. The upstream helper's
+zero-case exception is pinned explicitly; unexpected empty modules remain errors.

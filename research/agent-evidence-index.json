@@ -364,7 +364,15 @@
         "K45",
         "K46",
         "K47",
-        "K48"
+        "K48",
+        "K49",
+        "K50",
+        "K51",
+        "K52",
+        "K53",
+        "K54",
+        "K55",
+        "K56"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -391,6 +399,16 @@
           "path": "research/evidence/current-rep-readonly-preparation.json",
           "classification": "offline-executed",
           "scope": "Fake-API/admission preparation tests; actual game process access and private DTLS acceptance remain unproved"
+        },
+        {
+          "path": "research/evidence/current-rep-readonly-access.json",
+          "classification": "observed-metadata",
+          "scope": "Recorded elevated query/image identity and module access boundary; no game memory read or new DTLS acceptance"
+        },
+        {
+          "path": "research/evidence/current-rep-provider-callback.json",
+          "classification": "source-inference",
+          "scope": "Bounded callback/holder initialization trace; runtime lifetime, configuration loading and private CA control remain unproved"
         },
         {
           "path": "research/evidence/current-dtls-trust-rejection.json",
@@ -581,6 +599,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-readonly-access.json",
+    "research/evidence/current-rep-provider-callback.json",
     "research/evidence/current-rep-readonly-preparation.json",
     "research/evidence/connectivity-cli-control.json",
     "research/evidence/connectivity-validation.json",

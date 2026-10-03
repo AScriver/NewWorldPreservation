@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "recordedAtUtc": "2026-10-03T17:40:26.720634+00:00",
+  "purpose": "Agent onboarding, read-only preflight and offline validation verification",
+  "mode": "offline-tooling-verification",
+  "status": "passed",
+  "newWorldClientTested": false,
+  "milestone1": "not tested",
+  "completeProfile": {
+    "path": ".scratch/offline-validation/run-y3viw1w_/receipt.json",
+    "sha256": "f0126a000b04b0528438669554457b04eb240ab1b2c1262cbda84701b1b16f5f",
+    "status": "passed",
+    "startedAtUtc": "2026-10-03T17:22:35.272200+00:00",
+    "finishedAtUtc": "2026-10-03T17:23:57.777914+00:00",
+    "preparationHead": "fc853a76587463b76db17cb0ba797c0894818045",
+    "profile": "all",
+    "python": {
+      "selectedFiles": 27,
+      "collected": 345,
+      "executed": 345,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "changedInputsDuringRun": [],
+    "powershell": [
+      {
+        "file": "tests/test_observe_current_client.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_anchor_transaction.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_launch_lifecycle.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      }
+    ],
+    "cli": {
+      "status": "passed",
+      "httpStatus": 200,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "bind": "127.0.0.1",
+      "port": 61620
+    },
+    "upstream": {
+      "status": "passed",
+      "reference": {
+        "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "sourceWorktree": "clean",
+        "fixtureSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+        "fixtureBytes": 6910608
+      },
+      "dtlsCapability": {
+        "serverContext": "constructed",
+        "memoryBio": "constructed",
+        "certificate": "ephemeral self-generated; deleted",
+        "handshake": "not tested"
+      },
+      "selectedFiles": [
+        "server/javelin/test_parser.py",
+        "server/javelin/test_codecs.py",
+        "server/javelin/test_replay_substitution.py",
+        "server/test_chunking.py",
+        "server/test_loopback.py",
+        "server/test_captures.py",
+        "server/test_vlq32.py",
+        "server/test_piggyback_ack.py",
+        "server/test_multi_peer.py",
+        "server/javelin/test_shadow_decode.py",
+        "server/javelin/test_heartbeat_encode_validate.py"
+      ],
+      "collected": 456,
+      "executed": 456,
+      "passed": 455,
+      "expectedSkips": 1,
+      "zeroCaseModules": [
+        "server/test_loopback.py"
+      ]
+    }
+  },
+  "finalFocusedProfile": {
+    "path": ".scratch/offline-validation/run-btr07ffm/receipt.json",
+    "sha256": "75ebfba041ce41f2263020982db24a5c054683420c30429433c1d637b855eac1",
+    "status": "passed",
+    "startedAtUtc": "2026-10-03T17:34:25.196610+00:00",
+    "finishedAtUtc": "2026-10-03T17:34:26.508397+00:00",
+    "preparationHead": "437aacfbedddf4bfd651f20ea4d2557277cf8a6c",
+    "profile": "tooling",
+    "python": {
+      "selectedFiles": 2,
+      "collected": 35,
+      "executed": 35,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "changedInputsDuringRun": []
+  },
+  "documentationAudit": {
+    "status": "passed",
+    "guideCount": 4,
+    "localLinksChecked": 61,
+    "roadmapTasks": 18,
+    "taskBriefs": 18,
+    "errors": []
+  },
+  "runtime": {
+    "ready": true,
+    "python": "3.11.9",
+    "isolatedVenv": true,
+    "lockSha256": "483b751596cad95721288c403d87f45d8417b7cbef8679eb2a32ae818e98a4b2",
+    "packages": {
+      "cffi": {
+        "expected": "2.1.1",
+        "installed": "2.1.1",
+        "matches": true
+      },
+      "colorama": {
+        "expected": "0.4.6",
+        "installed": "0.4.6",
+        "matches": true
+      },
+      "cryptography": {
+        "expected": "50.0.2",
+        "installed": "50.0.2",
+        "matches": true
+      },
+      "iniconfig": {
+        "expected": "2.3.0",
+        "installed": "2.3.0",
+        "matches": true
+      },
+      "packaging": {
+        "expected": "26.3",
+        "installed": "26.3",
+        "matches": true
+      },
+      "pluggy": {
+        "expected": "1.6.0",
+        "installed": "1.6.0",
+        "matches": true
+      },
+      "pycparser": {
+        "expected": "3.0",
+        "installed": "3.0",
+        "matches": true
+      },
+      "pygments": {
+        "expected": "2.21.0",
+        "installed": "2.21.0",
+        "matches": true
+      },
+      "pyopenssl": {
+        "expected": "26.4.0",
+        "installed": "26.4.0",
+        "matches": true
+      },
+      "pytest": {
+        "expected": "9.1.1",
+        "installed": "9.1.1",
+        "matches": true
+      },
+      "typing-extensions": {
+        "expected": "4.16.0",
+        "installed": "4.16.0",
+        "matches": true
+      }
+    },
+    "problems": []
+  },
+  "sourceSha256": {
+    "scripts/project_preflight.py": "9294e423486f22bb782e22df2ee6ced4a36f4f2c7d50ee4ae5bee6a42e74394b",
+    "scripts/Get-ProjectPreflight.ps1": "a249c57bd1e4448fbf986f7bb8b98928dfec049c69040f6ff3d0e0301244ca6e",
+    "tests/test_project_preflight.py": "d30dda4c55a5ad818038c44a6a5a90234c144cadb5f58a40b298b5189eb7f7cc",
+    "scripts/validate_offline.py": "b3649e44ab9c63c6446280060302d330b35be35e5dfe05fd69fdf0218c62e826",
+    "scripts/Test-Offline.ps1": "c8510932cfd3777bcf13c9f9f0284fc922a4f5f184107b4eed2773ab1432381e",
+    "scripts/offline-test-profiles.json": "bdd953178c9b95528f20b3c8a43f93ad29a89f93b2a102728b004e5454d308b8",
+    "tests/test_offline_runner.py": "74b7d71a383ff35729af9884fbd44164965578ce639505ba13f0f36746e28451",
+    "research/agent-evidence-index.json": "c7671c9e0f9adcf54dc67bb1577f22df6b16441b7ae423d632a04c0b328d2298",
+    "docs/EVIDENCE_INDEX.md": "2daa29bec1eb7bf5c5747eb709069162a34965181a9d46f86b1fee3adf5f6da1",
+    "docs/AGENT_START.md": "d8da1ee9de5a57beebff599502474d82b76c4eeabb303e785403c421ecf41636",
+    "docs/TASK_BRIEFS.md": "8166804aaf7e947521c2989f16b06c862ad5b76f735e2ee273a49d15f7390316",
+    "docs/AGENT_HANDOFF.md": "af82546b8bf608978f8f906ad31b2e73d835bfc7faf9488a5e0e5c2d0c547f9f",
+    "README.md": "8c8998f2a0ee3650ddda19faafd2f7a1516b9b6e1a8f044c698cfe10b0c26e2d"
+  },
+  "changedBindingsAfterCompleteRun": [
+    "docs/EVIDENCE_LEDGER.md",
+    "docs/ROADMAP.md",
+    "research/agent-evidence-index.json"
+  ],
+  "executableAndFixtureBindingsStillMatch": true,
+  "counterEvidence": [
+    {
+      "path": ".scratch/offline-validation/run-qpyopbr4/receipt.json",
+      "sha256": "bb08d59108121b8009f9dd2b352a19caafccee9d426df55688fdfcf5817d55b8",
+      "status": "failed",
+      "reason": "Per-module upstream gate rejected pinned zero-case helper; explicit exception added and complete profile rerun"
+    },
+    {
+      "challenge": "Inherited PYTEST_ADDOPTS omitted a passing test",
+      "outcome": "Cleared inherited filters; two-case reproduction now executes both"
+    },
+    {
+      "challenge": "Malformed public hash or dependency lock could be ignored",
+      "outcome": "Malformed hash remains unknown; malformed/unhashed lock fails readiness"
+    },
+    {
+      "challenge": "Public receipt inputs omitted from snapshots",
+      "outcome": "Catalogued public receipts are now input bindings"
+    }
+  ],
+  "limits": [
+    "Execution receipts preserve their exact then-current input/Git/runtime identities",
+    "Subsequent public navigation/result-document changes received focused tooling and documentation checks",
+    "This summary binds executable/navigation artifacts; it does not self-bind the result file or roadmap result text",
+    "Raw stdout/JUnit stays ignored in per-run scratch; no client assets, keys or raw captures are copied",
+    "No game client/endpoint/hosts/trust-store/capture/instrumentation operations by these checks",
+    "Local TLS/DTLS controls and context construction are not current-client/gameplay acceptance"
+  ]
+}

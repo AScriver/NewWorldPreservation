@@ -83,3 +83,32 @@ Run the scripts in [README](../README.md). Current original receipt: `research/e
 Every future packet change must record: upstream/source dirty-state identity, exact client build, fixture hash, direction/state/channel/type, input/output relationships, positive and rejection cases, and remaining unknowns. Relevant edits stale affected evidence only. Add structured transition logs when implementing connection behavior; no tokens/keys/raw bodies in normal logs.
 
 Repository history is local-only; no remote was created and no code/asset/capture was published. Actionables was not updated because no governing `workItemId` was supplied.
+
+## Agent workflow improvements — October 3
+
+Completed the agent workflow task: [start guide](AGENT_START.md), complete/focused
+offline validation, separate read-only preflight, [briefs for all 18 milestone
+tasks](TASK_BRIEFS.md), [searchable evidence/fixture catalog](EVIDENCE_INDEX.md), and
+[handoff format](AGENT_HANDOFF.md). Current milestone status remains in this roadmap.
+Shared REP/observation work was preserved; onboarding/tooling commits use explicit
+owned-file lists. No Actionables task, publication or contributor message was made.
+
+Executed the validated `Test-Offline -Profile all` command at preparation HEAD
+`fc853a7`: **345 workspace Python cases passed**, **three PowerShell suites passed**,
+owned CA-verified loopback CLI health200/exit0/listener-close passed, and **455 pinned
+First Light tests passed with the one exact expected skip**. Eleven upstream files
+are selected; the known helper `server/test_loopback.py` has zero pytest cases and
+is recorded explicitly. Context/memory-BIO capability is construction only.
+[Immutable local receipt](../.scratch/offline-validation/run-y3viw1w_/receipt.json),
+SHA256 `f0126a000b04b0528438669554457b04eb240ab1b2c1262cbda84701b1b16f5f`,
+records exact inputs, runtime, Git states and no input changes during that run.
+The first combined run's failed upstream empty-module gate remains in its separate
+receipt; it was corrected and the complete profile rerun, not relabeled green.
+
+The documentation audit checked 61 local links and a complete 18/18 task-brief map.
+Subsequent navigation/catalog/result-document edits receive focused tooling/docs
+checks; prior execution keeps its original documentation/input identity. Public
+summary and final check references are in
+[agent-workflow-validation](../research/evidence/agent-workflow-validation.json).
+Preflight reports stale or unchecked historical receipts without upgrading their
+scope. These checks neither operate a real game client nor establish Milestone 1.
