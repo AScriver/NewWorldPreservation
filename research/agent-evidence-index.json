@@ -384,7 +384,13 @@
         "K65",
         "K66",
         "K67",
-        "K68"
+        "K68",
+        "K69",
+        "K70",
+        "K71",
+        "K72",
+        "K73",
+        "K74"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -423,6 +429,11 @@
           "path": "research/evidence/current-rep-ca-input-boundary.json",
           "classification": "source-inference",
           "scope": "Pinned CA initialization, transport ownership/APIs and direct ex-data registration; supported private-CA input and runtime acceptance remain unknown"
+        },
+        {
+          "path": "research/evidence/current-rep-default-config-boundary.json",
+          "classification": "source-inference",
+          "scope": "Ordinary OPENSSL_CONF ingress, compiled default certificate-command rejection, named direct caller topology and adjacent owner extent; no private CA or live acceptance"
         },
         {
           "path": "research/evidence/current-rep-readonly-preparation.json",
@@ -633,6 +644,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-default-config-boundary.json",
     "research/evidence/current-rep-ca-input-boundary.json",
     "research/evidence/current-rep-filecfg-validation.json",
     "research/evidence/current-rep-filecfg-provider.json",

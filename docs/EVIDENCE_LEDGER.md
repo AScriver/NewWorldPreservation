@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## October 3 default SSL configuration and CA-command gate
+
+[Receipt](../research/evidence/current-rep-default-config-boundary.json) binds original ignored queries and bounded role reports at clean `e2c78951` for the same stock EXE. No new game trial, process access, client/system/config/environment mutation or test execution. Prior367-case code checkpoint is preserved with84 matching executable/test/fixture/lock bindings.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K69|CA-pointer slot lies outside the concrete adjacent settings object|Strongly source-supported sized deleting destructor1407cf450 releases0xb8 for base149f80cd8; adjusted secondary receivers join it. Extent ends at149f80d90, exactly the CA slot. Typed write is byte+5c. Other aggregates/aliases remain unknown|Architect extent report/manifest; primary owner/alias metadata|
+|K70|Mapped normal initialization can load an OPENSSL_CONF-selected file and ssl_conf module|Strongly source-supported load-bit40, shared once, CRT getenv, file open/parser and module callback join. Runtime first-once/env/file/parse unknown; flags32 can mask missing/failed configuration|Architect autoload report/manifest with import/module dispatch metadata|
+|K71|SSL context construction applies fixed system_default with flags2/6/a/e|Strongly source-supported1478efceb→147910620..802 across six unwind fragments, zero-created command context, same-context binding and flag OR. No certificate bit20 in that helper; loaded section still conditional|Primary full ranges/selected literals; architect complete helper topology|
+|K72|Default configuration rejects VerifyCAFile/Path before their handlers|Strongly source-supported48-record table1495c6fd0 requiredflags20; lookup147927d0b..13 skips records lacking config permission before name match; dispatcher missing-record return-2. Proposed default CA route falsified within this path, not a live trial or global impossibility proof|Primary command-table receipt, complete lookup/dispatcher ranges and adjudication|
+|K73|No certificate-enabled named configuration input established in direct graph|Only recognized direct callers of finder/applier/new/bind/flag-OR are fixed default helper; only direct helper caller is context success tail. Indirect, aliased, cloned/inlined and other-section implementations remain unexcluded|Architect named topology report/manifest; all exact direct scans had zero no-pdata candidates|
+|K74|Concrete allocation/binding/finalization challenges preserve the default gate|Strongly source-supported allocator zeroes successful storage, binder leaves permission flags, mapped option/verify callbacks write bound SSL fields. Finalizer requires40+20 for implicit private-key loading; denied request-CA handlers populate a different SSL field. No broader handler/global absence claim|Adversarial bounded logical-range report/manifest; hypothesis-informed review, not independent initial evidence|
+
+These findings preserve the positive ordinary file-input path while rejecting the unsupported CA-loading extension. Public OpenSSL is semantic corroboration, not exact shipped revision evidence. K68's private-trust uncertainty remains; genuine game DTLS/unrelated-root rejection, Carrier/V3 and actors are still unachieved.
+
 ## October 3 CA-source ownership and callback follow-up
 
 [Receipt](../research/evidence/current-rep-ca-input-boundary.json) binds original ignored queries/reports at clean69c213b and the same stock EXE. No new live trial or process/system/client changes. Prior367-case code checkpoint is preserved with84 matching executable/test/fixture/lock bindings.

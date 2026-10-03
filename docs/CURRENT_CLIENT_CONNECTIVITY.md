@@ -1,5 +1,11 @@
 # Current-client connectivity
 
+## October 3 default SSL configuration — static continuation
+
+The unchanged Steam22469132/client1.400.6031.6004151 image contains an ordinary `OPENSSL_CONF` filename-to-parser/`ssl_conf` module path. Its same-context `system_default` helper enables file/client/server commands but omits certificate permission0x20. The compiled `VerifyCAFile`/`VerifyCAPath` records require that bit and are rejected before their loaders. No certificate-enabled named configuration caller was established by the bounded direct graph. The adjacent settings object's sized extent also ends before the CA-pointer slot. [Findings and limits](REP_TRUST_POLICY.md#default-ssl-configuration-and-certificate-command-gate--october-3-continuation), [receipt](../research/evidence/current-rep-default-config-boundary.json).
+
+No game was launched and no client/config/environment/trust/routing state changed in this continuation. It provides no new live acceptance result: the furthest verified state remains Play → private queue829-byte200 →127.0.0.1:64003 →fatal `unknown_ca`, eight alerts across four stock runs. A supported unchanged-client private-CA input is still missing; actual DTLS completion and unrelated-root rejection must precede genuine Carrier/V3. Actor/spawn work remains gated. The prior367-case code checkpoint is preserved by exact source/test/fixture/lock hash checks; tests were not rerun for these recording-only changes.
+
 ## October 3 elevated read-only access observation
 
 **Administrator access improved live process identity readback, not REP trust.** At preparation commit `f9f9de0`, the original launcher started stock Steam22469132 / client1.400.6031.6004151, SHA8654f01d…, signatureValid. Fresh game PID41260/start `16:57:24.4188974Z` had the recorded launcher as direct parent. The normal tool shell was non-admin; a normal elevated helper under the same user/root ran the original [bounded observer](../scripts/windows_rep_readonly_probe.py).
