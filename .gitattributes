@@ -57,3 +57,6 @@
 /research/evidence/private-rep-anchor-attempts.json text eol=lf
 /research/evidence/private-rep-anchor-eac-control.json text eol=lf
 /research/evidence/current-rep-settings-boundary.json text eol=lf
+/scripts/windows_rep_readonly_probe.py text eol=lf
+/tests/test_windows_rep_readonly_probe.py text eol=lf
+/research/evidence/current-rep-readonly-preparation.json text eol=lf

@@ -8,7 +8,11 @@ Two legitimate PC clients, distinct **private** accounts and characters, same Ae
 
 No Amazon service, credentials or asset redistribution should be necessary for the final private backend. Existing local client assets remain with their legitimate owners. Ignore the Trading Post/MMO-scale systems listed in [architecture](ARCHITECTURE.md).
 
+Private-server language scope: **English only**, per the October3 user clarification. No multilingual backend is required. Endpoint prefixes such as `syd`, `gru` and `pdx` are not treated as language selectors without evidence; their locale/region semantics are not a prerequisite to resolving REP trust.
+
 ## Current status
+
+- **Read-only observation prepared:** original fixed-range Windows observer plus25 fault/admission tests; current explicit `pytest tests` regression **310passed**, no failures/skips. Offline tests use only fake APIs/temp files and do not open a game process. Administrator-helper context was observed under the same user/root; real game memory permissions/private DTLS remain unproved at this preparation checkpoint. [Scope/procedure](REP_TRUST_POLICY.md#bounded-read-only-observation-preparation).
 
 - Research completed for the publicly accessible pinned First Light/Aeternum sources and visible forks. Private OpenWorld implementation remains uninspectable.
 - **M1-00 completed:** reproducible development/reference/test environment. Original scripts pin source and redacted fixture, hash-lock dependencies, guard verification and log test transitions.

@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-03T16:54:26.405879+00:00",
+  "phase": "read-only observer preparation, before actual game observation",
+  "base_commit": "d7d56cff197ae13067611ef35f038da139103cac",
+  "entire_shared_workspace_status": [
+    " M .gitattributes",
+    " M docs/REP_TRUST_POLICY.md",
+    " M docs/ROADMAP.md",
+    "?? research/agent-evidence-index.json",
+    "?? scripts/Get-ProjectPreflight.ps1",
+    "?? scripts/Test-Offline.ps1",
+    "?? scripts/offline-test-profiles.json",
+    "?? scripts/project_preflight.py",
+    "?? scripts/validate_offline.py",
+    "?? scripts/windows_rep_readonly_probe.py",
+    "?? tests/test_offline_runner.py",
+    "?? tests/test_windows_rep_readonly_probe.py"
+  ],
+  "dirty_scope": [
+    ".gitattributes",
+    "docs/REP_TRUST_POLICY.md",
+    "docs/ROADMAP.md",
+    "scripts/windows_rep_readonly_probe.py",
+    "tests/test_windows_rep_readonly_probe.py",
+    "research/evidence/current-rep-readonly-preparation.json"
+  ],
+  "client": {
+    "steam_build": 22469132,
+    "version": "1.400.6031.6004151",
+    "installed_executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests -q --junitxml=.scratch/readonly-probe-preparation-tests.xml",
+    "passed": 310,
+    "errors": 0,
+    "failed": 0,
+    "skipped": 0,
+    "new_readonly_fault_admission_tests": 25,
+    "real_game_process_access_in_unit_tests": false
+  },
+  "independent_review": {
+    "first_output_failure_handle_gaps": "fixed and regression tested",
+    "loaded_module_not_main_image_gap": "query image path now mandatory before VM_READ",
+    "tested_scope": "fake APIs and mocked module adapter, not real game"
+  },
+  "actual_windows_abi_control": "own Python process known local buffer only; passed; no game access",
+  "context": {
+    "ordinary_tool_shell_administrator": false,
+    "elevated_helper_administrator": true,
+    "helper_same_user_sid_as_shell": true,
+    "retained_current_user_root_count": 1,
+    "context_helper_game_access": false,
+    "certificate_mutation": false
+  },
+  "maximum_read_bytes": 1370,
+  "raw_game_bytes_saved": false,
+  "arbitrary_heap_traversal": false,
+  "process_memory_writes": false,
+  "debugger_attachment": false,
+  "privilege_adjustment": false,
+  "game_observer_executed": false,
+  "dtls_trust_solved": false,
+  "carrier_registration": false,
+  "actor_work_allowed": false,
+  "milestone_1_achieved": false,
+  "static_scope": {
+    "holder_slot_rva": "0xa2e5e98",
+    "key_source_rva": "0x9e7c890",
+    "actual_holder_callback": "direct [holder+0x40], copied from object behind global 0x14a314628 +0x30",
+    "withdrawn_inference": "vtable+0x10 -> 0x1405c6ab0 as registry getter",
+    "runtime_callback_and_provider_population": "unknown"
+  },
+  "bindings": {
+    "scripts/windows_rep_readonly_probe.py": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74",
+    "tests/test_windows_rep_readonly_probe.py": "979d242b4546e1bbf6b012a22657aa7412617423b286674b19410d7a20429253",
+    ".scratch/readonly-probe-preparation-tests.xml": "6ef9d243f35564f61fdbdee6c34f8cc1ca736d9466e66f9e8fd0897d26a55f18",
+    ".scratch/descriptor-provider-20261003T1635Z-a50f/manifest.json": "ecd90e7e0488f90b200d7ea9daeb36a3358d8e12852a1e52e82803054ba30bd5",
+    ".scratch/descriptor-provider-20261003T1635Z-a50f/selected-disassembly.txt": "39d002e50f9e4f8d4ba11e6e388f238e70d118cbccd303ab0a0e6a73edf15075",
+    ".scratch/descriptor-provider-correction-20261003T1642Z-b732/manifest.json": "d5605bfe49d369f11023c68c7f7d6d4c394ce23e4751c4e40d4a75a1026f372b",
+    ".scratch/descriptor-provider-correction-20261003T1642Z-b732/correction.md": "bf6377da2d14f0be2223c8c41e9c1c0e5e420b3d3b9b6304a2fcff97abfdcb1d",
+    ".scratch/descriptor-provider-correction-20261003T1642Z-b732/correction-disassembly.txt": "b5f95cad285fea48b837fead412d371fe6b5b9949ee9c676428a248ab1b42c19",
+    ".scratch/admin-context-20261003/dispatch.json": "6cfe5d9646ad60d4c9bc86debf6fb757344aafd93604d05049644e9607a39b14",
+    ".scratch/admin-context-20261003/elevated-context.json": "ebfe5fe8c112896b43ee55fd2a45d7e1d2e635397cd04fe1b2819a96879062a1",
+    ".scratch/admin-context-20261003/probe.ps1": "fc76b2525991e1681fe5f978dc8766897c9d9d3467e28d284aadc4e5e0da59dd",
+    ".scratch/admin-context-20261003/dispatch.ps1": "e1ab17ac387b61018775a5cf5891e0f5e022669d06b9e02fd9a2a56134f2b46e",
+    ".scratch/readonly-rep-observe-20261003/self-abi.py": "a809a8f63acb095d9b30d59fdd026ea9f16632e312292d8a59703dbb38773b54",
+    ".scratch/readonly-rep-observe-20261003/self-abi-result.json": "0b8123f898bcfc28f343fff23124e8072bfd37d89bfbcd074d5cb5885ffa9020",
+    ".scratch/readonly-rep-observe-20261003/run.ps1": "abce8dab827f831f4f187338f100abaaadac6f2044127fdabe175f1c1da56724",
+    ".scratch/readonly-rep-observe-20261003/dispatch.ps1": "b0f2bf8b628ae7e8d3d7db448168cc105c25cf84d76d082d718c1d0e93b00611"
+  }
+}
