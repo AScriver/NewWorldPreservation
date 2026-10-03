@@ -378,7 +378,13 @@
         "K59",
         "K60",
         "K61",
-        "K62"
+        "K62",
+        "K63",
+        "K64",
+        "K65",
+        "K66",
+        "K67",
+        "K68"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -412,6 +418,11 @@
           "path": "research/evidence/current-rep-filecfg-provider.json",
           "classification": "source-inference",
           "scope": "Conditional reader/insertion/merge and separately labeled offline archive metadata; modezero loading withdrawn, runtime values/private CA route unproved"
+        },
+        {
+          "path": "research/evidence/current-rep-ca-input-boundary.json",
+          "classification": "source-inference",
+          "scope": "Pinned CA initialization, transport ownership/APIs and direct ex-data registration; supported private-CA input and runtime acceptance remain unknown"
         },
         {
           "path": "research/evidence/current-rep-readonly-preparation.json",
@@ -622,6 +633,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-ca-input-boundary.json",
     "research/evidence/current-rep-filecfg-validation.json",
     "research/evidence/current-rep-filecfg-provider.json",
     "research/evidence/current-rep-readonly-validation.json",

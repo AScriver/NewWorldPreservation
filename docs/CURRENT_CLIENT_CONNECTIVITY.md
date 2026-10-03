@@ -209,6 +209,8 @@ Reusable: channel loader/route scaffolding as a reference, HTTP/TLS concepts, se
 
 Subsequent non-destructive controls: original launcher/default and launcher-scoped SSL_CERT_FILE=retainedCA both yield two fatal unknown_ca/no app. Game parent matches launcher, runtime environment consumption unknown. Initial default-path/embedded-certificate inspection did not join the trust implementation; the newer positive source map above supersedes that initial gap without proving live context contents. [Control/inspection evidence](DTLS_REGISTRATION.md#non-destructive-trust-controls-after-the-first-rejection). User reported VPN disabled, but timing/state/causality were not independently captured. All runs cleaned client-first; same CA retained. Carrier/V3 cannot be exercised until this trust gate passes.
 
+The later [CA-source ownership/callback review](REP_TRUST_POLICY.md#ca-source-ownership-and-callbacks--october-3-follow-up) finds no normal private-CA input in the demonstrated global initialization, direct constructors, primary/secondary APIs or direct ex-data registrations. The pump does consume CA bytes for an expiration metric; callback unreachability and whole-program immutability are not claimed. Indirect initialization/aliases and live state remain unknown. No new game trial or trust/client mutation occurred; the queue200 → fatal unknown_ca checkpoint is unchanged.
+
 ## Capture Before Shutdown
 
 Only our own legitimate normal sessions. Prioritize:

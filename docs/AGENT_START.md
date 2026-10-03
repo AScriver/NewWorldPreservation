@@ -65,7 +65,7 @@ read-only inspection.
 | Queue/UDP handoff | `queue_contract_probe`, `udp_handoff_probe`, `windows_udp_owner`; queue/handoff/owner tests | [Game handoff](PRIVATE_GAME_HANDOFF.md) |
 | Local DTLS / current REP trust | `dtls_transport_probe`; DTLS controls; synthetic candidate/transaction/lifecycle tests | [DTLS](DTLS_REGISTRATION.md), [trust](REP_TRUST_POLICY.md) |
 | Carrier, spawn, actor replication | Current contracts/fixtures are still gated; read source evidence before implementation | [Spawn](SPAWN_SEQUENCE.md), [architecture](ARCHITECTURE.md) |
-| Agent tooling | `project_preflight`, `validate_offline`; two tooling test modules | [Catalog](EVIDENCE_INDEX.md), [handoff](AGENT_HANDOFF.md) |
+| Agent tooling | `project_preflight`, `validate_offline`, `client_config_archive_metadata`; three tooling test modules | [Catalog](EVIDENCE_INDEX.md), [handoff](AGENT_HANDOFF.md) |
 
 The catalog carries exact filenames; the table above is a reading map, not an
 invocation list for live procedures. Existing redirect/trust/client/anchor scripts

@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## October 3 CA-source ownership and callback follow-up
+
+[Receipt](../research/evidence/current-rep-ca-input-boundary.json) binds original ignored queries/reports at clean69c213b and the same stock EXE. No new live trial or process/system/client changes. Prior367-case code checkpoint is preserved with84 matching executable/test/fixture/lock bindings.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K63|CA-pointer slot has embedded on-disk initialization; broadened scan retains two exact-slot reads|Observed writable .data qword149f80d90→148590460/DIR64. Strongly source-supported broad ModRM/pdata-start scan31candidates/27neighbor refs; nearby vector writes do not overlap CA. No runtime value, aliases or immutability claim|Primary slot/broad-reference receipts|
+|K64|The adjacent initializer is declared Windows lock initialization|Strongly source-supported14027acca passes149f80d88 to KERNEL32 InitializeSRWLock IAT147ec9348; documented pointer-sized lock precedes CA slot. Runtime IAT not observed|Pinned import declarations/function range and Microsoft API contract|
+|K65|Known UDP construction owns CA text; primary string setter targets a different member|Strongly source-supported two direct callers, constructor+80 copy, setup borrowing and shutdown-before-release. Primary setter targets+a8; no direct CA setter there. Indirect callers/holders remain unknown|Architect38-artifact ownership manifest/report|
+|K66|Secondary APIs supply no direct CA setter; published pump reads existing CA for a metric|Strongly source-supported adjusted receiver/table boundaries and CA-byte consumer146b3c250→146b392c0. Callback unreachability falsified as a hypothetical extension; source-byte replacement and trust-store input not demonstrated. Nested parse interval remains uninspected|Adversarial43-artifact manifest/report|
+|K67|Direct ex-data registrations supply null construction callbacks|Strongly source-supported store class4/context class1→1477893e0 registry snapshots/unlock/callback; registrar147789270 gets new_fn fromr9. Seven direct registrations zeror9. No root loader in that set; indirect/aliased registry writers and runtime state unknown|Architect27-artifact ex-data manifest/report|
+|K68|Supported unchanged-client private-CA input remains unresolved|No positive ordinary setting/initializer-to-CA material or root insertion edge; not an impossibility claim. Actual game DTLS acceptance/unrelated-root rejection still precede genuine Carrier/V3 and actors|Primary adjudicated ledger; historical queue200/unknown_ca checkpoint unchanged|
+
 ## October 3 descriptor/provider continuation
 
 [Source and archive receipt](../research/evidence/current-rep-filecfg-provider.json) pins the same stock image plus original private ranges/reports and separate metadata-only inspection. Investigation began at clean1928216; original tooling increment is b7e61d7. Concurrent documentation/tooling state is recorded per artifact. No new live game, process-memory read/write, trust/routing change or protocol/gameplay change.
