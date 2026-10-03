@@ -390,7 +390,13 @@
         "K71",
         "K72",
         "K73",
-        "K74"
+        "K74",
+        "K75",
+        "K76",
+        "K77",
+        "K78",
+        "K79",
+        "K80"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -434,6 +440,11 @@
           "path": "research/evidence/current-rep-default-config-boundary.json",
           "classification": "source-inference",
           "scope": "Ordinary OPENSSL_CONF ingress, compiled default certificate-command rejection, named direct caller topology and adjacent owner extent; no private CA or live acceptance"
+        },
+        {
+          "path": "research/evidence/current-rep-store-loader-boundary.json",
+          "classification": "source-inference",
+          "scope": "Explicit loader topology, real default environment lookup capabilities, memory PEM classification and separate gRPC context/store ownership; no supported REP root input or live acceptance"
         },
         {
           "path": "research/evidence/current-rep-readonly-preparation.json",
@@ -644,6 +655,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-store-loader-boundary.json",
     "research/evidence/current-rep-default-config-boundary.json",
     "research/evidence/current-rep-ca-input-boundary.json",
     "research/evidence/current-rep-filecfg-validation.json",

@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## October 3 trust loaders, default callbacks and PEM ownership
+
+[Receipt](../research/evidence/current-rep-store-loader-boundary.json) binds primary ignored queries and hypothesis-informed role follow-ups at clean `8f77f48`, same pinned stock EXE. All95 role artifacts and84 validated code/test/fixture/lock bindings match. Static-only source evidence; no game/system changes, private-CA insertion, new test execution or live acceptance.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K75|Mapped explicit file/path store loading remains behind the certificate-command gate|Strongly source-supported: one recognized direct caller147927bc1→147bcf990; six direct lookup install/control/getter calls all in that loader, using explicit type1. K72 gate applies to default command invocation. Exact .text E8/E9/.pdata scope; indirect/alias/inline/other-section paths unknown|Primary direct scans and complete147bcf990..147bcfa56; previous default-config receipt|
+|K76|Lookup methods support SSL_CERT_FILE/DIR, without implicit default activation in mapped bodies|Strongly source-supported: controls branch on type3 to actual environment getters; dispatcher preserves type; file constructorNULL and directory constructor starts empty. Full lazy subject lookup uses registered entries. Categorical lack of environment capability is falsified; ordinary type3 invocation into REP not established|Adversarial full logical callback ranges, method tables, import receipts and challenge matrix|
+|K77|Additional certificate insertion includes a memory-buffer PEM parser|Strongly source-supported: complete147ba7f90..147ba81ba across three unwind fragments; two recognized direct callers. Initial tentative directory classification corrected in a separate adjudication, original ledger preserved. Neighbor147bcf7f0 is CRL-file loading, not evidence of default paths|Primary full memory/file/own-chain bodies, buffer caller scan and adjudicated ledger|
+|K78|Memory-loader consumers have fresh gRPC context/store ownership|Strongly source-supported: logical147ba7770..147ba7b14 creates its own context at147ba77bd and retains wrapper+10;147ba7e60..147ba7f85 creates a fresh store. Concrete embedded component labels support gRPC attribution, not exact upstream revision. No immediate join to REP145dce750 or alternateconstructor146b3de50|Architect complete split logical ranges, immediate callers, lifetime/owner map and import bindings|
+|K79|A positive roots-file environment input exists for those gRPC contexts|Strongly source-supported: concrete key uppercased→GetEnvironmentVariableA→fopen/fread→cached PEM/store14a82c830/14a82c828 under shared once14a82c868. Missing roots in connector options select this cache. Runtime first use/env/cache and other fallback bodies unobserved; this is not REP root sharing|Architect descriptor/getter/file/cache graph; public gRPC docs only semantic corroboration|
+|K80|Required private REP trust input remains unresolved in the checked surfaces|Unknown/unresolved supported input; historical8fatal unknown_ca alerts/4stock runs remain furthest live result. Same blocker across three consecutive source-progress goal turns; current candidates adjudicated without a testable REP configuration change. No global impossibility/pinning claim; broader indirect aliases unknown|Primary adjudication and goal-turn audit; prior live receipts; unchanged exact target and validated code hashes|
+
+Positive library capabilities are retained with their activation and owner boundaries. Actual current-client DTLS success and unrelated-root rejection must precede genuine Carrier/V3; actor/spawn and Milestone1 remain gated.
+
 ## October 3 default SSL configuration and CA-command gate
 
 [Receipt](../research/evidence/current-rep-default-config-boundary.json) binds original ignored queries and bounded role reports at clean `e2c78951` for the same stock EXE. No new game trial, process access, client/system/config/environment mutation or test execution. Prior367-case code checkpoint is preserved with84 matching executable/test/fixture/lock bindings.

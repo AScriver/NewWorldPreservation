@@ -1,5 +1,13 @@
 # Current-client connectivity
 
+## October 3 trust loaders and PEM ownership — static continuation
+
+At clean `8f77f48`, the same Steam22469132/client1.400.6031.6004151 image has real `SSL_CERT_FILE`/`SSL_CERT_DIR` lookup capabilities, activated by default-loading type3. The mapped explicit file/path loader selects type1 and remains behind the previously established certificate-command permission gate; installing lookup methods does not load defaults. A separate memory-PEM path exposes `GRPC_DEFAULT_SSL_ROOTS_FILE_PATH`, but its consumers create their own gRPC contexts/stores. The immediate graph establishes no transfer to REP's context. [Findings and limits](REP_TRUST_POLICY.md#store-loaders-default-callbacks-and-separate-pem-owners--october-3-continuation), [receipt](../research/evidence/current-rep-store-loader-boundary.json).
+
+No supported REP root input became testable. The same required-input blocker persisted across three consecutive goal turns, each of which added source evidence; the remaining actual trust trial needs new evidence of a supported path into REP. This is not a global impossibility or pinning claim. Last live state remains Play →POST `/prod/game/login/queue/v2/<redacted>/omni` →829-byte HTTP200 →127.0.0.1:64003 →fatal `unknown_ca`, eight alerts/four stock runs. No actual DTLS completion, unrelated-root rejection, Carrier/V3 or actor/Milestone1.
+
+This continuation changed recording files only. Exact84 validated code/test/fixture/lock hashes and95 role artifacts match; prior367 Python cases/three synthetic PowerShell suites/loopback lifecycle remain the executed checkpoint. Tests were not rerun. No game/process/client/EAC/config/environment/trust/routing changes or live resources; retained CA untouched.
+
 ## October 3 default SSL configuration — static continuation
 
 The unchanged Steam22469132/client1.400.6031.6004151 image contains an ordinary `OPENSSL_CONF` filename-to-parser/`ssl_conf` module path. Its same-context `system_default` helper enables file/client/server commands but omits certificate permission0x20. The compiled `VerifyCAFile`/`VerifyCAPath` records require that bit and are rejected before their loaders. No certificate-enabled named configuration caller was established by the bounded direct graph. The adjacent settings object's sized extent also ends before the CA-pointer slot. [Findings and limits](REP_TRUST_POLICY.md#default-ssl-configuration-and-certificate-command-gate--october-3-continuation), [receipt](../research/evidence/current-rep-default-config-boundary.json).
