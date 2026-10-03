@@ -1,0 +1,612 @@
+{
+  "schema": 1,
+  "purpose": "Navigation and public fixture identity; current status belongs exclusively to docs/ROADMAP.md",
+  "currentStatus": "docs/ROADMAP.md",
+  "claimsSource": "docs/EVIDENCE_LEDGER.md",
+  "classificationNotes": {
+    "observed-metadata": "Sanitized prior own-session/public metadata, not a new live run",
+    "offline-executed": "Prior offline execution at receipt-pinned inputs; consult preflight for local freshness",
+    "source-inference": "Bounded static source evidence; runtime behavior remains limited",
+    "historical-upstream": "Pinned external historical reference, no current-build guarantee",
+    "synthetic": "Original controlled fixture or endpoint; not real-client proof"
+  },
+  "boundaries": [
+    {
+      "id": "reference-environment",
+      "roadmapTasks": [
+        "M1-00"
+      ],
+      "claimIds": [
+        "E02",
+        "E03",
+        "E12",
+        "E13",
+        "E14"
+      ],
+      "docs": [
+        "docs/FIRST_LIGHT_ANALYSIS.md",
+        "docs/PROTOCOL_NOTES.md"
+      ],
+      "scripts": [
+        "scripts/Get-FirstLightReference.ps1",
+        "scripts/Initialize-DevEnvironment.ps1",
+        "scripts/validate_first_light.py",
+        "scripts/Test-FirstLight.ps1"
+      ],
+      "tests": [
+        "tests/test_validation_gate.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/latest-validation.json",
+          "classification": "offline-executed",
+          "scope": "Pinned historical upstream test profile; no current game acceptance"
+        },
+        {
+          "path": "research/evidence/fixture-summary.json",
+          "classification": "historical-upstream",
+          "scope": "Public redacted reference fixture provenance/hash; raw fixture remains external"
+        },
+        {
+          "path": "research/evidence/ecosystem-summary.json",
+          "classification": "observed-metadata",
+          "scope": "Bounded public repository discovery; private community implementation unknown"
+        }
+      ],
+      "fixtures": [],
+      "limit": ""
+    },
+    {
+      "id": "bootstrap-https-ownership",
+      "roadmapTasks": [
+        "M1-01",
+        "M1-02A"
+      ],
+      "claimIds": [
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "docs": [
+        "docs/CLIENT_FLOW.md",
+        "docs/CURRENT_CLIENT_CONNECTIVITY.md"
+      ],
+      "scripts": [
+        "scripts/connectivity_probe.py",
+        "scripts/game_log_metadata.py",
+        "scripts/windows_tcp_owner.py",
+        "scripts/Inspect-CurrentClient.ps1",
+        "scripts/Observe-CurrentClient.ps1",
+        "scripts/Set-ConnectivityHosts.ps1",
+        "scripts/Use-ConnectivityTrust.ps1"
+      ],
+      "tests": [
+        "tests/test_connectivity_probe.py",
+        "tests/test_game_log_metadata.py",
+        "tests/test_hosts_redirect.py",
+        "tests/test_windows_tcp_owner.py",
+        "tests/test_probe_controls.py",
+        "tests/test_current_client_fixture.py",
+        "tests/test_observe_current_client.ps1"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-client-connectivity.json",
+          "classification": "observed-metadata",
+          "scope": "Attributed bootstrap HTTPS differential on recorded build; live image path not verified"
+        },
+        {
+          "path": "research/evidence/connectivity-validation.json",
+          "classification": "offline-executed",
+          "scope": "Synthetic CA/SAN/HTTP privacy controls"
+        },
+        {
+          "path": "research/evidence/instrumentation-validation.json",
+          "classification": "offline-executed",
+          "scope": "Offline metadata and ownership controls"
+        },
+        {
+          "path": "research/evidence/connectivity-cli-control.json",
+          "classification": "offline-executed",
+          "scope": "Owned loopback probe child lifecycle"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/connectivity/requests.json",
+        "tests/fixtures/connectivity/current-client-bootstrap.json"
+      ],
+      "limit": "HTTPS does not establish REP trust or a game session."
+    },
+    {
+      "id": "channel-token-request",
+      "roadmapTasks": [
+        "M1-02B",
+        "M1-02B1"
+      ],
+      "claimIds": [
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15"
+      ],
+      "docs": [
+        "docs/BOOTSTRAP_CHANNEL.md",
+        "docs/TOKEN_SESSION_CONTRACT.md"
+      ],
+      "scripts": [
+        "scripts/channel_descriptor.py",
+        "scripts/bootstrap_probe.py",
+        "scripts/bootstrap_log_metadata.py",
+        "scripts/Invoke-BootstrapTrialWindow.ps1"
+      ],
+      "tests": [
+        "tests/test_channel_descriptor.py",
+        "tests/test_bootstrap_probe.py",
+        "tests/test_bootstrap_log_metadata.py",
+        "tests/test_current_token_flow.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-client-channel.json",
+          "classification": "observed-metadata",
+          "scope": "Descriptor parsed and owned token endpoint reached"
+        },
+        {
+          "path": "research/evidence/current-client-token.json",
+          "classification": "observed-metadata",
+          "scope": "Observed token-request route; historical deliberate 501"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/connectivity/local-channel.json",
+        "tests/fixtures/connectivity/local-channel-token-hostnames.json",
+        "tests/fixtures/connectivity/current-client-channel-result.json",
+        "tests/fixtures/connectivity/current-client-token-result.json"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "token-envelope",
+      "roadmapTasks": [
+        "M1-02B2"
+      ],
+      "claimIds": [
+        "K16",
+        "K17",
+        "K18",
+        "K19",
+        "K20",
+        "K21"
+      ],
+      "docs": [
+        "docs/TOKEN_SESSION_CONTRACT.md"
+      ],
+      "scripts": [
+        "scripts/token_contract_probe.py"
+      ],
+      "tests": [
+        "tests/test_token_contract_probe.py",
+        "tests/test_current_token_contract.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-token-contract.json",
+          "classification": "observed-metadata",
+          "scope": "Synthetic envelope advanced recorded client; parser observations are source-supported"
+        },
+        {
+          "path": "research/evidence/current-token-contract-validation.json",
+          "classification": "offline-executed",
+          "scope": "Contract builders and sanitized transition fixtures"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/connectivity/current-token-parser-candidate.json",
+        "tests/fixtures/connectivity/current-token-contract-result.json"
+      ],
+      "limit": "Envelope compatibility does not establish secure private authentication."
+    },
+    {
+      "id": "credentials-selection-queue",
+      "roadmapTasks": [
+        "M1-02B3",
+        "M1-04",
+        "M1-05"
+      ],
+      "claimIds": [
+        "E05",
+        "K22",
+        "K23",
+        "K24",
+        "K25",
+        "K26",
+        "K27",
+        "K28",
+        "K29",
+        "K30",
+        "K31",
+        "K32",
+        "K33",
+        "K34",
+        "K35"
+      ],
+      "docs": [
+        "docs/CREDENTIALS_SESSION_HANDOFF.md",
+        "docs/LOGIN_INFO_CONTRACT.md",
+        "docs/PRIVATE_GAME_HANDOFF.md",
+        "docs/ARCHITECTURE.md"
+      ],
+      "scripts": [
+        "scripts/credentials_contract_probe.py",
+        "scripts/session_handoff_probe.py",
+        "scripts/queue_contract_probe.py",
+        "scripts/udp_handoff_probe.py",
+        "scripts/windows_udp_owner.py"
+      ],
+      "tests": [
+        "tests/test_credentials_contract_probe.py",
+        "tests/test_credentials_log_metadata.py",
+        "tests/test_current_credentials_contract.py",
+        "tests/test_session_handoff_probe.py",
+        "tests/test_current_login_info.py",
+        "tests/test_queue_contract_probe.py",
+        "tests/test_udp_handoff_probe.py",
+        "tests/test_windows_udp_owner.py",
+        "tests/test_current_queue_handoff.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-credentials-contract.json",
+          "classification": "observed-metadata",
+          "scope": "Synthetic credentials accepted; private identity/security not proved"
+        },
+        {
+          "path": "research/evidence/current-login-info.json",
+          "classification": "observed-metadata",
+          "scope": "Synthetic frontend preview and queue request"
+        },
+        {
+          "path": "research/evidence/current-queue-handoff.json",
+          "classification": "observed-metadata",
+          "scope": "Selected owned UDP endpoint; secure ticket binding unproved"
+        },
+        {
+          "path": "research/evidence/current-credentials-contract-validation.json",
+          "classification": "offline-executed",
+          "scope": "Contract and metadata tests"
+        },
+        {
+          "path": "research/evidence/current-login-info-validation.json",
+          "classification": "offline-executed",
+          "scope": "Login-info contract and regression tests"
+        },
+        {
+          "path": "research/evidence/current-queue-handoff-validation.json",
+          "classification": "offline-executed",
+          "scope": "Queue/UDP/native ownership regression tests"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/connectivity/current-credentials-parser-candidate.json",
+        "tests/fixtures/connectivity/current-credentials-contract-result.json",
+        "tests/fixtures/connectivity/current-login-info-candidate.json",
+        "tests/fixtures/connectivity/current-login-info-result.json",
+        "tests/fixtures/connectivity/current-queue-parser-candidate.json",
+        "tests/fixtures/connectivity/current-queue-handoff-result.json"
+      ],
+      "limit": "M1-04/05 require new private identity and ticket security work; no implemented account backend is indexed."
+    },
+    {
+      "id": "local-dtls",
+      "roadmapTasks": [
+        "M1-03"
+      ],
+      "claimIds": [
+        "E06",
+        "C08",
+        "K33"
+      ],
+      "docs": [
+        "docs/DTLS_REGISTRATION.md",
+        "docs/PRIVATE_GAME_HANDOFF.md"
+      ],
+      "scripts": [
+        "scripts/dtls_transport_probe.py"
+      ],
+      "tests": [
+        "tests/test_dtls_transport_probe.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/dtls-local-validation.json",
+          "classification": "offline-executed",
+          "scope": "Independent CA-verified synthetic DTLS peers and negative/lifecycle controls"
+        },
+        {
+          "path": "research/evidence/current-dtls-trust-controls.json",
+          "classification": "observed-metadata",
+          "scope": "Local controls and recorded stock-client rejections have separate scopes"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Synthetic peers are not New World clients; prolonged current-client transport remains unknown."
+    },
+    {
+      "id": "rep-trust-settings",
+      "roadmapTasks": [
+        "M1-02C"
+      ],
+      "claimIds": [
+        "K36",
+        "K37",
+        "K38",
+        "K39",
+        "K40",
+        "K41",
+        "K42",
+        "K43",
+        "K44",
+        "K45",
+        "K46",
+        "K47",
+        "K48"
+      ],
+      "docs": [
+        "docs/REP_TRUST_POLICY.md",
+        "docs/DTLS_REGISTRATION.md",
+        "docs/PRIVATE_REP_ANCHOR_TRIAL.md"
+      ],
+      "scripts": [
+        "scripts/dtls_transport_probe.py",
+        "scripts/rep_anchor_candidate.py",
+        "scripts/windows_rep_readonly_probe.py",
+        "scripts/RepAnchorImageTransaction.psm1",
+        "scripts/Set-RepAnchorTrialImage.ps1",
+        "scripts/Invoke-RepAnchorTrialWindow.ps1"
+      ],
+      "tests": [
+        "tests/test_dtls_transport_probe.py",
+        "tests/test_rep_anchor_candidate.py",
+        "tests/test_windows_rep_readonly_probe.py",
+        "tests/test_rep_anchor_transaction.ps1",
+        "tests/test_rep_launch_lifecycle.ps1"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-rep-readonly-preparation.json",
+          "classification": "offline-executed",
+          "scope": "Fake-API/admission preparation tests; actual game process access and private DTLS acceptance remain unproved"
+        },
+        {
+          "path": "research/evidence/current-dtls-trust-rejection.json",
+          "classification": "observed-metadata",
+          "scope": "Recorded incoming fatal unknown_ca; no completed game DTLS"
+        },
+        {
+          "path": "research/evidence/current-dtls-trust-rejection-validation.json",
+          "classification": "offline-executed",
+          "scope": "Transport and fixed error/privacy controls"
+        },
+        {
+          "path": "research/evidence/current-rep-trust-policy.json",
+          "classification": "source-inference",
+          "scope": "Bounded current-build trust path; live store/private override unproved"
+        },
+        {
+          "path": "research/evidence/current-rep-settings-boundary.json",
+          "classification": "source-inference",
+          "scope": "File/provider descriptor assembly; loading/merge/private CA route unknown"
+        },
+        {
+          "path": "research/evidence/private-rep-anchor-offline.json",
+          "classification": "offline-executed",
+          "scope": "Synthetic interval/candidate preparation controls, not game admission"
+        },
+        {
+          "path": "research/evidence/private-rep-anchor-attempts.json",
+          "classification": "observed-metadata",
+          "scope": "Historical failed observation/elevation attempts and cleanup"
+        },
+        {
+          "path": "research/evidence/private-rep-anchor-eac-control.json",
+          "classification": "observed-metadata",
+          "scope": "Intact-EAC candidate refusal and matched stock rejection; retired route"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/connectivity/current-dtls-trust-rejection.json"
+      ],
+      "limit": "Live/configuration trials require their own authorization; do not repeat the refused substitution or bypass EAC."
+    },
+    {
+      "id": "registration-spawn",
+      "roadmapTasks": [
+        "M1-06",
+        "M1-07"
+      ],
+      "claimIds": [
+        "E07",
+        "E09",
+        "E10",
+        "E11",
+        "K33",
+        "K45"
+      ],
+      "docs": [
+        "docs/SPAWN_SEQUENCE.md",
+        "docs/CLIENT_FLOW.md",
+        "docs/PROTOCOL_NOTES.md",
+        "docs/ARCHITECTURE.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [],
+      "fixtures": [],
+      "limit": "Current Carrier/V3 and generated actor/spawn contracts lack accepted current-client fixtures. Historical three-message minimum is unproved."
+    },
+    {
+      "id": "replication-reconnect-acceptance",
+      "roadmapTasks": [
+        "M1-08",
+        "M1-09",
+        "M1-10",
+        "M1-11",
+        "M1-12"
+      ],
+      "claimIds": [
+        "E06",
+        "E07",
+        "E08",
+        "E09",
+        "E11"
+      ],
+      "docs": [
+        "docs/SPAWN_SEQUENCE.md",
+        "docs/PROTOCOL_NOTES.md",
+        "docs/ARCHITECTURE.md",
+        "docs/ROADMAP.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [],
+      "fixtures": [],
+      "limit": "No current actor/baseline/delta/reconnect fixture or implementation; bilateral real-client acceptance is mandatory."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/connectivity/current-client-bootstrap.json",
+      "classification": "observed-metadata",
+      "sha256": "26a41712e83e0f667171a2bd68ea4d03678992697b2698b9f5a8f053725c05ac",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-client-channel-result.json",
+      "classification": "observed-metadata",
+      "sha256": "cb690b7796df094637dfe0ef8eb658d0439f8037e3b56e0b561567efd77c0034",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-client-token-result.json",
+      "classification": "observed-metadata",
+      "sha256": "cf8c0b3379c8eb6428b9b4cd33a31b5592de39e87db322dcc833c58e1f37162b",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-credentials-contract-result.json",
+      "classification": "observed-metadata",
+      "sha256": "6ac19bdbe85ccf51aef7cb5ff051db231542a7f6a76a1609cc09accdc0289507",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-credentials-parser-candidate.json",
+      "classification": "synthetic",
+      "sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-dtls-trust-rejection.json",
+      "classification": "observed-metadata",
+      "sha256": "a41510b40337dc79652a2a53fd23556064d6e60a39688de1c3d335bf0f9548a7",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-login-info-candidate.json",
+      "classification": "synthetic",
+      "sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-login-info-result.json",
+      "classification": "observed-metadata",
+      "sha256": "745161b87827ddfc65f2976162be18669a2115dd3b1003d5d026c8839940821a",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-handoff-result.json",
+      "classification": "observed-metadata",
+      "sha256": "2502def556fa1cd94740d96535e36abac9d50d806588ae4249ac65a5e4aa4aa8",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-parser-candidate.json",
+      "classification": "synthetic",
+      "sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-token-contract-result.json",
+      "classification": "observed-metadata",
+      "sha256": "f88be3878e16720c404bcd12f32a0ff15ddc07a5d13e92eb441f484ab9e46a92",
+      "scope": "Sanitized historical observation; test replay is offline evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-token-parser-candidate.json",
+      "classification": "synthetic",
+      "sha256": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/local-channel-token-hostnames.json",
+      "classification": "synthetic",
+      "sha256": "ce1282e82d1cb9d9c546ad86b080abf9d43e0d0af2bc6f53c5c0e35c908b071b",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/local-channel.json",
+      "classification": "synthetic",
+      "sha256": "0345c3259f5782d1c6e33065ee7a0f7a642168747bea73b67df515e5ddf5e7a2",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    },
+    {
+      "path": "tests/fixtures/connectivity/requests.json",
+      "classification": "synthetic",
+      "sha256": "4b2954607e02e40652ae7ec5b0e16487b8efc1f4472e794ef01180c3a809ba54",
+      "scope": "Original synthetic request/response/model; compatibility requires separate observed evidence"
+    }
+  ],
+  "receipts": [
+    "research/evidence/current-rep-readonly-preparation.json",
+    "research/evidence/connectivity-cli-control.json",
+    "research/evidence/connectivity-validation.json",
+    "research/evidence/current-client-channel.json",
+    "research/evidence/current-client-connectivity.json",
+    "research/evidence/current-client-token.json",
+    "research/evidence/current-credentials-contract-validation.json",
+    "research/evidence/current-credentials-contract.json",
+    "research/evidence/current-dtls-trust-controls.json",
+    "research/evidence/current-dtls-trust-rejection-validation.json",
+    "research/evidence/current-dtls-trust-rejection.json",
+    "research/evidence/current-login-info-validation.json",
+    "research/evidence/current-login-info.json",
+    "research/evidence/current-queue-handoff-validation.json",
+    "research/evidence/current-queue-handoff.json",
+    "research/evidence/current-rep-settings-boundary.json",
+    "research/evidence/current-rep-trust-policy.json",
+    "research/evidence/current-token-contract-validation.json",
+    "research/evidence/current-token-contract.json",
+    "research/evidence/dtls-local-validation.json",
+    "research/evidence/ecosystem-summary.json",
+    "research/evidence/fixture-summary.json",
+    "research/evidence/instrumentation-validation.json",
+    "research/evidence/latest-validation.json",
+    "research/evidence/private-rep-anchor-attempts.json",
+    "research/evidence/private-rep-anchor-eac-control.json",
+    "research/evidence/private-rep-anchor-offline.json"
+  ]
+}
