@@ -113,6 +113,16 @@ def test_list_style_and_nested_legacy_bindings_are_checked(workspace):
     assert result["mismatchCount"] == 1
 
 
+def test_root_document_binding_is_checked_without_directory_separator(workspace):
+    (workspace / "README.md").write_text("new navigation\n")
+    name = receipt(workspace, {"sourceSha256": {"README.md": "0" * 64,
+                                               "scripts/control.py": preflight.file_hash(workspace / "scripts/control.py")}})
+    result = preflight.receipt_report(workspace, name)
+    assert result["freshness"] == "stale-local-inputs"
+    assert result["checkedBindings"] == 2
+    assert result["mismatches"] == ["README.md"]
+
+
 def test_runtime_lock_or_package_drift_is_stale(workspace):
     name = receipt(workspace, {"runtime": {"python": "3.11.9", "lockSha256": "0" * 64,
                                           "packages": {"pytest": "9.1.1"}}})

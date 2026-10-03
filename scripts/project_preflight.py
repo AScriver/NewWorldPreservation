@@ -190,7 +190,7 @@ def hash_bindings(value, prefix=""):
             yield value["path"], value["sha256"], prefix
         for key, item in value.items():
             field = f"{prefix}.{key}" if prefix else key
-            path_key = "/" in key or "\\" in key
+            path_key = "/" in key or "\\" in key or key in PUBLIC_FILES
             hash_map = "sha" in prefix.lower() or prefix.lower().endswith("sources")
             if path_key and ((isinstance(item, str) and SHA256.fullmatch(item)) or hash_map):
                 yield key, item, field
