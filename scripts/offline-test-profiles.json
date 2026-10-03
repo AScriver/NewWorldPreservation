@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "groups": {
+    "fixtures-static": [
+      "tests/test_bootstrap_log_metadata.py",
+      "tests/test_channel_descriptor.py",
+      "tests/test_credentials_log_metadata.py",
+      "tests/test_current_client_fixture.py",
+      "tests/test_current_credentials_contract.py",
+      "tests/test_current_login_info.py",
+      "tests/test_current_queue_handoff.py",
+      "tests/test_current_token_contract.py",
+      "tests/test_game_log_metadata.py",
+      "tests/test_rep_anchor_candidate.py",
+      "tests/test_validation_gate.py"
+    ],
+    "protocol-loopback": [
+      "tests/test_bootstrap_probe.py",
+      "tests/test_connectivity_probe.py",
+      "tests/test_credentials_contract_probe.py",
+      "tests/test_current_token_flow.py",
+      "tests/test_dtls_transport_probe.py",
+      "tests/test_queue_contract_probe.py",
+      "tests/test_session_handoff_probe.py",
+      "tests/test_token_contract_probe.py",
+      "tests/test_udp_handoff_probe.py"
+    ],
+    "windows-native": [
+      "tests/test_hosts_redirect.py",
+      "tests/test_probe_controls.py",
+      "tests/test_windows_tcp_owner.py",
+      "tests/test_windows_udp_owner.py"
+    ],
+    "tooling": [
+      "tests/test_project_preflight.py",
+      "tests/test_offline_runner.py"
+    ],
+    "powershell": [
+      "tests/test_observe_current_client.ps1",
+      "tests/test_rep_anchor_transaction.ps1",
+      "tests/test_rep_launch_lifecycle.ps1"
+    ],
+    "rep-readonly": ["tests/test_windows_rep_readonly_probe.py"]
+  },
+  "profiles": {
+    "workspace": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "cli-lifecycle"],
+    "fixtures-static": ["fixtures-static"],
+    "protocol-loopback": ["protocol-loopback"],
+    "windows-native": ["windows-native"],
+    "tooling": ["tooling"],
+    "powershell": ["powershell"],
+    "rep-readonly": ["rep-readonly"],
+    "upstream": ["upstream"],
+    "all": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "cli-lifecycle", "upstream"]
+  },
+  "upstream": {
+    "name": "firstLight",
+    "expectedTests": 456,
+    "expectedSkips": 1
+  }
+}
