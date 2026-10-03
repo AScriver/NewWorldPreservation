@@ -1,5 +1,32 @@
 # Current-client connectivity
 
+## October 3 elevated read-only access observation
+
+**Administrator access improved live process identity readback, not REP trust.** At preparation commit `f9f9de0`, the original launcher started stock Steam22469132 / client1.400.6031.6004151, SHA8654f01d…, signatureValid. Fresh game PID41260/start `16:57:24.4188974Z` had the recorded launcher as direct parent. The normal tool shell was non-admin; a normal elevated helper under the same user/root ran the original [bounded observer](../scripts/windows_rep_readonly_probe.py).
+
+| UTC / state | Observed result | Limit |
+|---|---|---|
+|16:58:01.286 / QUERY_LIMITED handle | Opened, Win32error0 | Not a VM_READ handle or debug attachment |
+|16:58:01.287 / creation FILETIME | Exact owned-start match, error0 | PID-reuse guard, not a call stack |
+|16:58:01.288 / image-path query | Exact installed stock executable path, error0 | Live image path now verified; module contents not read |
+|16:58:01.288 / module lookup | Not observed, Win32error5 `ERROR_ACCESS_DENIED` | Snapshot/first/next substage not separately recorded. Cause unknown; do not claim EAC causality |
+|16:58:01.289 / observer stopped | Fail-closed, no later read step | **No VM_READ request, no ReadProcessMemory call, zero game memory read**, no writes/privilege adjustment/bypass |
+
+The service recorded five HTTPS request/response chains, including channel, token, credentials and login-info fixtures. All five exact TCP-owner observations recorded PID41260, matching the owned game; the probe's separate generic `client_identity` label remained **unattributed**. No UI/input/screenshot observation was performed. No queue or DTLS datagram event was recorded; the observer's purpose was process access, not another trust comparison. Services were controller-terminated, so these are recorded-event counts, not graceful final counters. The furthest *previously verified* client state remains selectable synthetic character → private queue829-byte200 → loopback REP handshake → certificate rejection. No new world/Carrier/actor state is claimed.
+
+Exact run/source/manifest/error/cleanup bindings: [access receipt](../research/evidence/current-rep-readonly-access.json). [Preparation receipt](../research/evidence/current-rep-readonly-preparation.json) records25 new fake-API/admission tests and the executed310-pass regression, plus an actual Windows ABI check on the helper's own known buffer—not game memory. Parallel untracked repository work was explicitly recorded and never executed by this trial; relevant tracked sources were clean/pinned.
+
+### Reproducible procedure and remaining blocker
+
+1. Execute strict stock/resource readback through the PowerShell validator: pinned stock SHA/signature, no game/listeners/rules, original hosts, retained Root1.
+2. Prepare a fresh existing queue/DTLS profile with the **same retained** CA/full chain. Do not reimport the certificate or apply the retired on-disk candidate.
+3. Bind current committed observer/hash, proven unchanged-stock owner/source and fresh manifest. If unrelated untracked work exists, record it explicitly; refuse tracked source drift and never execute those files. The ignored `readonly-rep-observe-20261003/attach-stock-run.ps1` reproduces this run's preparation; its commit/hash gates deliberately require review for a later checkpoint.
+4. Start owned loopback HTTPS/DTLS listeners and dispatch the existing unchanged-stock original-launcher containment owner. Require its fresh `owned-client.json` before observation.
+5. Validate then run `.scratch/readonly-rep-observe-20261003/dispatch.ps1`, which starts the ordinary elevated helper with the committed source hash. It invokes `scripts/windows_rep_readonly_probe.py --run-directory <fresh private run>` once. No game input is needed. An unavailable/incorrect path or module result ends the probe; do not relax checks or bypass protection. Logs are CreateNew, timestamped structured JSON.
+6. Request client-first stop; verify client absence before hosts/firewall release, then terminate only owned listeners. Execute strict cleanup readback. This run's final `17:00:58.887Z` queries all succeeded: stockValid/originalhosts, zero game+launcher/443/64003/projectrules, retained Root1. Snapshot is sequential, not atomic.
+
+**Next technical blocker remains a supported unchanged-client private-CA loading boundary, then actual game DTLS acceptance.** Elevated metadata queries do not supply trust anchors. Static callback ownership/return tracing helps locate settings access; it has not demonstrated the fileCfg reader/provider population or a REP CA option. Neither Carrier/V3 nor actor/spawn work can begin from this result.
+
 ## October 3 live comparison — EAC refusal and stock DTLS rejection
 
 **HTTPS trust is solved for the tested endpoints; private game DTLS trust is not.** A fresh trial at clean HEAD `bd1be58` substituted only the mapped certificate-data interval. The user supplied an EAC screenshot: “Unrecognized game client. Cannot continue.” and “Unknown file version (NewWorld.exe)”. No HTTP request or UDP datagram was logged in that candidate trial. This is a demonstrated launch refusal, **not** a test of the candidate's runtime verifier. The executable was restored byte-exact with a valid signature before routing was released. That substitution route is retired; EAC is not bypassed.

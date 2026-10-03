@@ -60,3 +60,5 @@
 /scripts/windows_rep_readonly_probe.py text eol=lf
 /tests/test_windows_rep_readonly_probe.py text eol=lf
 /research/evidence/current-rep-readonly-preparation.json text eol=lf
+/research/evidence/current-rep-readonly-access.json text eol=lf
+/research/evidence/current-rep-provider-callback.json text eol=lf

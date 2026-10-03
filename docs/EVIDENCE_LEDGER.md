@@ -1,5 +1,29 @@
 # Evidence ledger
 
+## October 3 elevated read-only access — preparation HEADf9f9de0
+
+[Access receipt](../research/evidence/current-rep-readonly-access.json) binds25 original/private inputs, manifests, logs and strict cleanup. Stock Steam22469132 / version1.400.6031.6004151 / SHA8654f01d… / signatureValid; same retained CA, original launcher/EAC. Relevant tracked sources clean; unrelated parallel untracked work recorded and not executed. No game input, debugger, memory/executable write, privilege adjustment, trust mutation, protocol change or remote publication.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K49|Ordinary elevated helper works under same user/root|Observed admin role enabled, same hashed SID as non-admin tool shell, retained Root1; not game memory/trust proof|Preparation receipt and separate context/self-ABI controls|
+|K50|Elevated process queries verify the live stock image identity|Observed QUERY_LIMITED open, exact creation FILETIME and QueryFullProcessImageName stock-path match at16:58:01UTC, PID41260; direct launcher parent recorded separately|Fresh manifests + structured observer/context logs|
+|K51|Module lookup is an access boundary|Observed adapter module result false/error5; exact snapshot/first/next substage and cause unknown. Observer stops before VM_READ request/ReadProcessMemory; **no game memory read**. Not proof all possible memory reads are denied or EAC is the cause|Hash-pinned source and six-event observation log|
+|K52|This observation does not advance the verified game state|Five HTTPS chains have exact TCP-owner PID41260 observations matching the game, but the separate client_identity label remains unattributed; no queue/DTLS datagram events or UI observation. Event counts, not graceful final counters. Earlier selectable-character/private-queue/unknown_ca evidence preserved|Private bootstrap/DTLS logs; new access receipt; previous comparison receipt|
+|K53|Cleanup preserves stock/install/routing and approved CA|Observed own client stopped before routing/rule release; final17:00:58.887UTC all strict enumerations succeed, stockValid/originalhosts, zero game+launcher/443/64003/projectrules, Root1. Sequential snapshot; own services controller-terminated|Pinned per-run cleanup and strict readback|
+|K54|Observer controls preserve the workspace test snapshot|Executed310pass/no failures/errors/skips,25new fault/admission tests, plus own-Python Windows ABI known-buffer control. Fake APIs/temp files only in unit tests; no game memory/test traffic. Later parallel test additions are not claimed by this receipt|[Preparation receipt](../research/evidence/current-rep-readonly-preparation.json), fixed-source hashes/private JUnit|
+
+K51 replaces the blanket assumption that elevation makes process memory available. It does **not** imply an exhaustive access prohibition. Private trust remains unproved; Carrier/V3 and actors remain gated. Relevant static findings are separate from these live observations.
+
+### Source-only callback continuation
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K55|Direct holder callback initialization is traced|Strongly source-supported through address-taking caller, aliased write to0x14a314628 and owner+30→holder+40 copy. Callback address141412f20/store1411f3452 correct earlier manual-address errors; no runtime execution/branch/ownership proof|[24-binding source receipt](../research/evidence/current-rep-provider-callback.json); preserved initializer/leaf/correction bundles|
+|K56|Callback return expression is a nested GS-indexed pointer lookup|Strongly source-supported29-byte leaf/no `.pdata` range: read index14a829d10, GS58 array, QWORD selected block, QWORD block+2700 return. No OS-thread lifetime, provider population, fileCfg reader or CA control established|Source receipt; selected leaf bytes/disassembly private; [adjudicated scope](REP_TRUST_POLICY.md#unchanged-client-settings-boundary--october-3-static-follow-up)|
+
+No protocol codec or gameplay change follows from K55/K56. Earlier private vtable/1405c6ab0 and manual LEA/store interpretations are preserved as falsified, not silently reused. Relevant exact-file hashes remain the evidence authority despite concurrent unrelated tooling commits.
+
 ## October 3 settings/provider boundary — static, not a live control
 
 [Receipt](../research/evidence/current-rep-settings-boundary.json) pins17 inspected source/private artifact hashes (initial13 plus four file-layer addendum bindings). Binary/build unchanged; inspection basebd1be58 had primary-owned docs/receipt changes, synthesis at9a4a811. Proprietary decoded output/config contents stay ignored.
