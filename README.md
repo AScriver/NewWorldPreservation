@@ -4,6 +4,7 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 
 ## Start here
 
+- [Agent start guide: reading order, complete offline checks, task briefs and handoff](docs/AGENT_START.md)
 - [First Light / OpenWorld findings](docs/FIRST_LIGHT_ANALYSIS.md)
 - [Architecture and diagram](docs/ARCHITECTURE.md)
 - [Protocol notes and Capture Before Shutdown](docs/PROTOCOL_NOTES.md)

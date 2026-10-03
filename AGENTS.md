@@ -1,5 +1,6 @@
 # New World preservation scope
 
+- Start with `docs/AGENT_START.md` for the reading order, safe offline/preflight commands, task briefs, evidence index and handoff format. Current task status stays in `docs/ROADMAP.md`.
 - Preserve the existing legitimately owned PC client; do not remake its presentation or assets.
 - Milestone 1 is two private clients entering one world and seeing each other's movement. Do not claim it from offline tests.
 - Distinguish current executed evidence, source inference, historical upstream reports, proposals, and unknowns. Pin upstream commits and relevant dirty-file state.
