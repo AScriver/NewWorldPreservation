@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-03T17:42:52.597150+00:00",
+  "mode": "executed-offline-workspace-validation",
+  "status": "passed",
+  "profile": "workspace",
+  "started_at_utc": "2026-10-03T17:31:55.192444+00:00",
+  "finished_at_utc": "2026-10-03T17:33:03.269654+00:00",
+  "test_checkout": {
+    "status": "observed",
+    "head": "437aacfbedddf4bfd651f20ea4d2557277cf8a6c",
+    "branch": "main",
+    "totalChanges": 2,
+    "changes": [
+      {
+        "status": " M",
+        "path": "AGENTS.md",
+        "sha256": "f370f8435cbf93440d2c15f5c004e595f2b4bcea568c904a57ffe9c2e15324d8"
+      },
+      {
+        "status": "??",
+        "path": "docs/TOOLS.md",
+        "sha256": "aa546bfdedee0cfdda4777021ec815a0ee0707b40902114dfb4496a635994bb0"
+      }
+    ],
+    "truncated": false
+  },
+  "test_checkout_after": {
+    "status": "observed",
+    "head": "437aacfbedddf4bfd651f20ea4d2557277cf8a6c",
+    "branch": "main",
+    "totalChanges": 2,
+    "changes": [
+      {
+        "status": " M",
+        "path": "AGENTS.md",
+        "sha256": "f370f8435cbf93440d2c15f5c004e595f2b4bcea568c904a57ffe9c2e15324d8"
+      },
+      {
+        "status": "??",
+        "path": "docs/TOOLS.md",
+        "sha256": "7dc7d362eccd5437e541aee9978e7564ae71be6bc9742a48719d5e084cb88848"
+      }
+    ],
+    "truncated": false
+  },
+  "recording_checkout": "34278dc08c9c437e8a190aa05ce43e502a17cc6c",
+  "runtime": {
+    "python": "3.11.9",
+    "isolated_venv": true,
+    "lock_sha256": "483b751596cad95721288c403d87f45d8417b7cbef8679eb2a32ae818e98a4b2"
+  },
+  "python": {
+    "selectedFiles": 27,
+    "collected": 345,
+    "executed": 345,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 345,
+    "new_readonly_observer_cases_passed": 25
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 49937
+  },
+  "selected_input_changes_during_run": [],
+  "new_world_client_tested": false,
+  "upstream_rerun": false,
+  "milestone_1": "not tested or achieved by this validation",
+  "limits": [
+    "Fake APIs, temporary fixtures, synthetic PowerShell checks and owned loopback HTTPS only.",
+    "No game launch, process-memory read/write, routing/firewall/trust-store mutation or Amazon endpoint contact.",
+    "The earlier 310-case checkpoint remains historical; this run also includes parallel tooling tests.",
+    "Parallel documentation edits after the measured checkpoint do not redate its evidence.",
+    "This receipt does not establish REP trust, Carrier registration, world loading or actor creation."
+  ],
+  "source_bindings": [
+    {
+      "path": "scripts/windows_rep_readonly_probe.py",
+      "sha256": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74"
+    },
+    {
+      "path": "tests/test_windows_rep_readonly_probe.py",
+      "sha256": "979d242b4546e1bbf6b012a22657aa7412617423b286674b19410d7a20429253"
+    },
+    {
+      "path": "scripts/Test-Offline.ps1",
+      "sha256": "c8510932cfd3777bcf13c9f9f0284fc922a4f5f184107b4eed2773ab1432381e"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "b3649e44ab9c63c6446280060302d330b35be35e5dfe05fd69fdf0218c62e826"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "bdd953178c9b95528f20b3c8a43f93ad29a89f93b2a102728b004e5454d308b8"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "483b751596cad95721288c403d87f45d8417b7cbef8679eb2a32ae818e98a4b2"
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/receipt.json",
+      "sha256": "98957c914c45c971306c2ecea7a4d363c610093253c402f0f0e20c2d9dec9e66"
+    },
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/workspace-junit.xml",
+      "sha256": "8b79499c1f435bbdfa894a1c67eb20db978449f805975cc3b235ebf858acad64"
+    },
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/workspace-pytest.log",
+      "sha256": "1537ed58eeca44280917bc2813a68890fc104ab36220c0a0089e8aa0aed73d87"
+    },
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/powershell-1.log",
+      "sha256": "1b6e37906df0dead05c5144f462be17b0440f10d28c42e967c104bb0acd8d3a2"
+    },
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/powershell-2.log",
+      "sha256": "d84b4fbe3001b88b726d6036960bc3dad6973c4ddf2799dd20caa0a10cc2909e"
+    },
+    {
+      "path": ".scratch/offline-validation/run-h92tcsc7/powershell-3.log",
+      "sha256": "79d6b5a7deee1f143286ff18f1003c4806807d1a1e48c62ce8194d1dfa71c28b"
+    }
+  ],
+  "live_result_bindings": [
+    {
+      "path": "research/evidence/current-rep-readonly-access.json",
+      "sha256": "1e96ed3f374b7435f8bf2b9b45c2f2e19a4466218f963ee9fee93ff2a651c523"
+    },
+    {
+      "path": "research/evidence/current-rep-provider-callback.json",
+      "sha256": "ab1a820d10f4fbf141f954092d899f818dda72837cf59d889cc67a971ee7cba8"
+    }
+  ]
+}

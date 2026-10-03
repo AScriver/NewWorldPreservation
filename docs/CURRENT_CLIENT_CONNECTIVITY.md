@@ -16,6 +16,10 @@ The service recorded five HTTPS request/response chains, including channel, toke
 
 Exact run/source/manifest/error/cleanup bindings: [access receipt](../research/evidence/current-rep-readonly-access.json). [Preparation receipt](../research/evidence/current-rep-readonly-preparation.json) records25 new fake-API/admission tests and the executed310-pass regression, plus an actual Windows ABI check on the helper's own known buffer—not game memory. Parallel untracked repository work was explicitly recorded and never executed by this trial; relevant tracked sources were clean/pinned.
 
+### Final offline regression
+
+The validated default `scripts/Test-Offline.ps1` **workspace** profile ran at HEAD `437aacf` from `17:31:55.192Z` through `17:33:03.269Z`: **345 Python cases passed**, including the25 new read-only observer cases; all three synthetic PowerShell suites and the owned loopback HTTPS200/exit0/listener-close check passed. No selected input changed during the run. This supersedes the310-case *test-count checkpoint*, not its live/static evidence. Parallel tooling accounts for the additional cases. The profile did not rerun upstream tests or operate a New World client, routing, trust stores or game memory. [Hash-bound validation receipt](../research/evidence/current-rep-readonly-validation.json) preserves the exact tested checkout, parallel documentation state, runtime and private JUnit/log bindings.
+
 ### Reproducible procedure and remaining blocker
 
 1. Execute strict stock/resource readback through the PowerShell validator: pinned stock SHA/signature, no game/listeners/rules, original hosts, retained Root1.
