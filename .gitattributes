@@ -52,3 +52,6 @@
 /tests/test_rep_anchor_candidate.py text eol=lf
 /tests/test_rep_anchor_transaction.ps1 text eol=lf
 /research/evidence/private-rep-anchor-offline.json text eol=lf
+/scripts/Invoke-RepAnchorTrialWindow.ps1 text eol=lf
+/tests/test_rep_launch_lifecycle.ps1 text eol=lf
+/research/evidence/private-rep-anchor-attempts.json text eol=lf

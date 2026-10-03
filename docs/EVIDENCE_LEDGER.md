@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## October 3 private-anchor attempts — clean preparation HEAD0c18036
+
+[Receipt](../research/evidence/private-rep-anchor-attempts.json) pins both private runs, unchanged earlier script/test identities and new original recovery sources. Steam22469132 / client1.400.6031.6004151. First v1 runtime SHA56773b1a…; v2 SHA92b900c7…; the promoted tracked owner has its own test/receipt identity. No source-level verifier inference is upgraded to a live trust claim.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K36 | First data-only certificate interval applied and restored | Observed candidate full hash/Authenticode HashMismatch; stock full hash/Valid restored before hosts/rule release. No instruction/launcher/EAC/process-memory change. Loaded-image/private-anchor use not observed | Receipt first image/window events00:19–00:20UTC;1350-byte transaction |
+| K37 | First client trial stopped in instrumentation | Observed PropertyNotFoundException00:19:51.692UTC, no published owned-game identity, zero HTTP requests and explicit zero received UDP datagrams. Exact property/line unknown. Neither EAC refusal nor certificate rejection demonstrated | Receipt first attempt; immutable v1 private logs/hashes |
+| K38 | Guarded metadata reads preserve lifecycle invariants in controlled cases | Executed9 inert AST-loaded function checks against v2 and promoted owner: path getter throws, CIM record/parent absent plus prior6 cases. Missing identity still fails closed. Not real Steam/EAC, concurrent cleanup or system containment proof | New tracked test; receipt hashes/private9-case results |
+| K39 | V2 retry never reached client/routing admission | Windows Start-Process reported cancellation on both elevation dispatches; no window/dispatch/image/game records; listener-only logs. Native error code/exit timestamp not retained. Not a game trust test | Receipt second attempt; preparation cleanHEAD0c18036/v2 source |
+| K40 | Owned runtime resources safely closed and CA retained | Observed04:54:29.310UTC readback: stock hash/Valid, original hosts, no game/443/64003/project rule, Root count1. Services stopped by guarded ownership, not graceful probe exit; no input/memory/CA-store action | Receipt cleanup/UDP metadata and private hashes |
+
+**Next gate:** fresh Windows elevation admission, then actual candidate-client DTLS/application data and same-candidate unrelated-root rejection. No current Carrier/V3, world actor or Milestone1; no raw credential/proprietary capture exported. [Procedure](PRIVATE_REP_ANCHOR_TRIAL.md).
+
 Research date: 2026-10-01 America/Phoenix (2026-10-02 UTC). Initial evidence was offline source review/public metadata/isolated tests; no game/hosts/trust mutations occurred **then**. The actual current-client slice is at the end, with cleanup verified. No hooks, process-memory inspection or EAC/binary changes.
 
 ## Evidence identities

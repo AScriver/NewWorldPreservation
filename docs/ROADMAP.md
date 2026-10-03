@@ -1,6 +1,6 @@
 # Milestone 1 roadmap
 
-Latest offline increment: [private REP anchor trial](PRIVATE_REP_ANCHOR_TRIAL.md). Exact-build certificate-data candidate prepared without editing the installed client; 285 Python tests,14 interval transaction checks and6 synthetic launch fault checks pass. Actual owned-client acceptance/rejection trial is next; no supported CA override, Carrier/V3 or actor acceptance follows from preparation.
+Latest recovery increment: [private REP anchor attempts](PRIVATE_REP_ANCHOR_TRIAL.md). First certificate-data trial applied/restored exact bytes but failed in metadata collection before HTTP/DTLS; v2 retry was not admitted through Windows elevation. Nine current synthetic lifecycle checks pass. Stock hash/signature/routing restored, CA retained. Prior285 Python/14 interval checks remain historical. Actual game acceptance is unknown; no Carrier/V3 or actor work is enabled.
 
 ## Acceptance boundary
 
@@ -49,6 +49,8 @@ Tasks are bounded outcomes, not assignments to layers. Dependencies identify act
 Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **when required by observed target traffic**, not a speculative rewrite. The known wrap/channel/scheduling limits in [First Light analysis](FIRST_LIGHT_ANALYSIS.md) deserve targeted falsification before they affect long-running sessions. A TCP/UDP socket count is not an actor count.
 
 ## Exact next blocker
+
+**Immediate operational gate:** fresh Windows elevation for the bounded original-launcher trial. Both v2 dispatches reported canceled; no v2 client trial occurred. [Attempt receipt](../research/evidence/private-rep-anchor-attempts.json). The tracked owner safely logs unavailable process metadata and failure line numbers; synthetic proof is not runtime acceptance.
 
 **Private-anchor loading boundary preserving verification, followed by actual game acceptance.** Local CA-verified DTLS peers exchange data; the stock client still rejects our owned configured full-chain response with fatal unknown_ca. Current REP wrapper/interface source joining is complete; both known connect branches converge on the factory, whose UDP cases have an embedded-certificate→transport→connection→secure-driver→store path, standard verifier and parameter-gated identity checks. This does not establish live context contents, all aliases/callbacks or a supported override. [REP_TRUST_POLICY](REP_TRUST_POLICY.md). Carrier/V3 waits for actual current-client transport acceptance.
 

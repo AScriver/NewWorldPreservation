@@ -1,5 +1,7 @@
 # Current REP DTLS trust and Carrier/V3 registration
 
+> October 3 update: [private anchor attempts](PRIVATE_REP_ANCHOR_TRIAL.md) applied/restored a certificate-data interval; the attempt ended with a metadata exception and no game traffic was observed. Hardened retry was not admitted through Windows elevation. No DTLS acceptance or Carrier/V3 result is inferred. Nine synthetic lifecycle checks pass; stock hash/signature/routing restored, same CA retained. Previous stock `unknown_ca` observations below remain historical evidence.
+
 ## Scope and current evidence boundary
 
 Continuation of [private queue handoff](PRIVATE_GAME_HANDOFF.md), clean parent HEAD `4bf6511468fa66d3935fca5859b2657c3ca3183b`. Target unchanged stock Steam22469132 / version1.400.6031.6004151 / installed SHA256 `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e`. Prior own client reached selected127.0.0.1:64003 and sent ClientHello-header observations; prior observer sent no replies. This alone did not test certificate trust.

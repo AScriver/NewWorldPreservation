@@ -1,5 +1,11 @@
 # Current-client connectivity
 
+## October 3 trial update
+
+[Private REP anchor attempts](PRIVATE_REP_ANCHOR_TRIAL.md) do **not** advance the furthest client state. The first certificate-data-only disk substitution was read back, then restored with valid stock signature after a PowerShell metadata exception; zero HTTP requests/DTLS datagrams and no verified game identity. Its precise failing property is unknown, not an EAC verdict. Hardened retry stopped at two canceled elevation dispatches, with no routing/client mutation. Nine current synthetic lifecycle checks pass; no game inputs or process-memory accesses occurred. [Receipt](../research/evidence/private-rep-anchor-attempts.json).
+
+**Immediate gate:** accept fresh Windows elevation for the bounded retry. **Technical gate:** actual current-game private-anchor handshake and genuine application data, with unrelated-root rejection. HTTPS trust remains solved; game DTLS unproven. Carrier/V3 and actors cannot yet begin.
+
 ## Result — October 2, 2026 UTC
 
 **The legitimate, unchanged current client reached our private HTTPS endpoint and sent its bootstrap request.** Correct local CA/SAN succeeds; removing CA trust or serving a wrong-name certificate prevents HTTP. No executable patch, process-memory inspection or Easy Anti-Cheat change was needed.

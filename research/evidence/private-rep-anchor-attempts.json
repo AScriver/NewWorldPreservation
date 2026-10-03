@@ -1,0 +1,325 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-03T05:07:14.131470+00:00",
+  "state": "ANCHOR_METADATA_FAILURE_RECOVERED_RETRY_NOT_ADMITTED",
+  "base_head": "0c180367a29a2e75d940708d3325c39345051927",
+  "steam_build_id": "22469132",
+  "file_version": "1.400.6031.6004151",
+  "stock_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "candidate_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+  "first_attempt": {
+    "run_directory": "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c",
+    "tracked_tree_clean_at_preparation": true,
+    "installed_certificate_interval_applied": true,
+    "interval_bytes": 1350,
+    "candidate_authenticode_status_observed": "HashMismatch",
+    "original_launcher_created": true,
+    "owned_game_identity_recorded": false,
+    "failure_type": "PropertyNotFoundException",
+    "failing_property_or_line": null,
+    "instrumentation_failure_before_network_evidence": true,
+    "http_requests_logged": 0,
+    "received_udp_datagrams_logged": 0,
+    "client_dtls_acceptance": "unknown",
+    "eac_or_launcher_refusal": "not_demonstrated",
+    "image_events": [
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:01.0178581+00:00",
+        "state": "ANCHOR_APPLY_PRECONDITIONS_VERIFIED",
+        "metadata": {
+          "game_absent": true,
+          "original_signature_status": "Valid",
+          "effective_nonloopback_guard": true,
+          "journal_sha256": "837095e1641d71e737f28df2a8394698f4ed1d0cda3e153e67728a28af335c29",
+          "ca_reused": true
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:36.4727493+00:00",
+        "state": "ANCHOR_APPLY_WRITE_INTENT",
+        "metadata": {
+          "capacity": 1350,
+          "prior_image_state": "stock",
+          "expected_image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "offset": 140045408
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:45.1587656+00:00",
+        "state": "ANCHOR_APPLY_HASH_VERIFIED",
+        "metadata": {
+          "process_memory_written": false,
+          "target_handle_exclusive": true,
+          "image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:46.6625570+00:00",
+        "state": "ANCHOR_APPLY_SIGNATURE_READBACK",
+        "metadata": {
+          "memory_written": false,
+          "launcher_or_eac_modified": false,
+          "authenticode_status": "HashMismatch",
+          "image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:20:16.1667841+00:00",
+        "state": "ANCHOR_RESTORE_WRITE_INTENT",
+        "metadata": {
+          "expected_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "offset": 140045408,
+          "prior_image_state": "candidate",
+          "capacity": 1350
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:20:24.2404552+00:00",
+        "state": "ANCHOR_RESTORE_HASH_VERIFIED",
+        "metadata": {
+          "process_memory_written": false,
+          "target_handle_exclusive": true,
+          "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:20:25.2328893+00:00",
+        "state": "ANCHOR_RESTORE_SIGNATURE_READBACK",
+        "metadata": {
+          "authenticode_status": "Valid",
+          "launcher_or_eac_modified": false,
+          "memory_written": false,
+          "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+        }
+      }
+    ],
+    "window_events": [
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:18:56.5327450Z",
+        "state": "GAME_OUTBOUND_CONTAINMENT_CONFIGURED",
+        "metadata": {
+          "program": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+          "protocol": "Any",
+          "profile": "Any",
+          "evidence_source": "ActiveStore_configuration_not_packet_trace",
+          "remote_addresses": [
+            "0.0.0.0-127.0.0.0",
+            "127.0.0.2-255.255.255.255",
+            "::2-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"
+          ],
+          "helper_processes_filtered": false,
+          "rule_name": "NewWorldPreservation-Bootstrap-173164813c4d4c899ae32bb9c7316d36"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:18:57.2856737Z",
+        "state": "BOOTSTRAP_TRIAL_READY",
+        "metadata": {
+          "endpoint_profile": "TokenServices",
+          "resolutions": {
+            "tokenservice.amazongames.com": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "prod.newworld.com": [
+              "::1",
+              "127.0.0.1"
+            ],
+            "d2c74t4zimux3r.cloudfront.net": [
+              "::1",
+              "127.0.0.1"
+            ]
+          },
+          "seconds": 480,
+          "hostname": "d2c74t4zimux3r.cloudfront.net",
+          "evidence_source": "operator_resolver_not_client_dns"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:47.0862407Z",
+        "state": "REP_ANCHOR_TRIAL_READY",
+        "metadata": {
+          "candidate_image_sha256": "dff94b76032fdd528c936e9f9313dea1736ad5432d32cb068933b8a3d5ed8096",
+          "candidate_journal_sha256": "837095e1641d71e737f28df2a8394698f4ed1d0cda3e153e67728a28af335c29",
+          "anchor_policy_substituted": true,
+          "same_verifier_instructions": true,
+          "launcher_eac_unchanged": true
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:47.3219291Z",
+        "state": "OWNED_ANCHOR_LAUNCHER_CREATED",
+        "metadata": {
+          "process_id": 28928,
+          "start_time_utc": "2026-10-03T00:19:47.3035863Z",
+          "method": "Serial containment-owner original installed launcher; certificate-data-only candidate; EAC intact"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:51.6927188Z",
+        "state": "BOOTSTRAP_TRIAL_FAILED",
+        "metadata": {
+          "exception_type": "PropertyNotFoundException"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:19:51.7252229Z",
+        "state": "OWNED_ANCHOR_LAUNCHER_STOPPED",
+        "metadata": {
+          "process_id": 28928,
+          "identity_basis": "retained_created_Process_object_in_serial_owner"
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:20:25.6339139Z",
+        "state": "STOCK_CLIENT_RESTORED_BEFORE_ROUTING_RELEASE",
+        "metadata": {
+          "stock_image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+          "stock_signature_valid": true,
+          "game_absent": true
+        }
+      },
+      {
+        "schema": 1,
+        "timestamp_utc": "2026-10-03T00:20:26.9837806Z",
+        "state": "BOOTSTRAP_TRIAL_CLOSED",
+        "metadata": {
+          "owned_firewall_rule_absent": true,
+          "client_absent": true,
+          "hosts_restoration_requested": true,
+          "trust_cleanup_is_parent_owned": true
+        }
+      }
+    ],
+    "stock_restored_before_hosts_and_firewall_release": true
+  },
+  "second_attempt": {
+    "run_directory": "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f",
+    "tracked_tree_clean_at_preparation": true,
+    "ignored_v2_runtime_sha256": "92b900c7086835b330738d0cd3aafc181bffec0068dd29d9bece846c987dcf18",
+    "elevation_dispatch_attempts": 2,
+    "dispatch_outcome_source": "operator tool output: Windows Start-Process operation canceled",
+    "native_error_code_and_exit_timestamp_not_captured": true,
+    "routing_or_client_trial_admitted": false,
+    "installed_image_mutated": false,
+    "launcher_or_game_created_by_trial": false,
+    "http_requests_logged": 0,
+    "dtls_input_events_logged": 0,
+    "client_dtls_acceptance": "not_tested",
+    "controlled_service_shutdown_not_graceful": true
+  },
+  "cleanup_readback": {
+    "schema": 1,
+    "timestamp_utc": "2026-10-03T04:54:29.3104229+00:00",
+    "state": "REP_ANCHOR_RETRY_NOT_ADMITTED_CLEANED",
+    "run_directory": "C:\\Code\\NewWorldPreservation\\private\\connectivity\\token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f",
+    "elevation_dispatch_attempts": 2,
+    "dispatch_result": "Windows_StartProcess_operation_canceled_reported",
+    "dispatch_error_timestamp_not_captured": true,
+    "installed_image_mutated": false,
+    "client_launched": false,
+    "inputs_sent": false,
+    "process_memory_accessed": false,
+    "certificate_store_mutated": false,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "stock_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "stock_signature_valid": true,
+    "games_absent": true,
+    "listeners_absent": true,
+    "project_rules_absent": true,
+    "retained_root_count": 1,
+    "owned_https_stops": [
+      {
+        "state": "OWNED_UNADMITTED_HTTPS_STOPPED",
+        "start_time_utc": "2026-10-03T04:47:03.2568597Z",
+        "process_id": 9796
+      },
+      {
+        "state": "OWNED_UNADMITTED_HTTPS_STOPPED",
+        "start_time_utc": "2026-10-03T04:47:03.2567778Z",
+        "process_id": 39208
+      }
+    ]
+  },
+  "verification": {
+    "promoted_production_function_fault_checks": 9,
+    "v2_private_source_fault_checks": 9,
+    "environment": "AST-loaded actual function bodies; inert process/hash/CIM mocks; fresh ignored case files",
+    "limits": "No real launcher/EAC, game trust, actual concurrent cleanup or system containment-release proof from mocks.",
+    "historical_python_tests": {
+      "passed": 285,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "new_candidate_tests": 12
+    },
+    "python_regression_rerun": false,
+    "historical_native_interval_checks": 14,
+    "upstream": "historical 455 pass / 1 deliberate skip; unchanged, not rerun",
+    "unchanged_prior_script_test_sha256": {
+      "scripts/rep_anchor_candidate.py": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1",
+      "scripts/RepAnchorImageTransaction.psm1": "c35db5c8dbf0278eb4f3d3e81b898524a980820ad310f68ac91abbc2ab9f0588",
+      "scripts/Set-RepAnchorTrialImage.ps1": "eff56e764a35902c3483b7e991ae12bcaaf2ac0a83828227c54e232902af3d1e",
+      "tests/test_rep_anchor_candidate.py": "416787834d1c909b7e7e3ad66ff7687c8ba76dfc8dc06dbdea0261902d40d702",
+      "tests/test_rep_anchor_transaction.ps1": "2c83795d0a1624be26a5945538d120e9ed19b29fa89eba8273a91c637d9b7434"
+    }
+  },
+  "process_memory_accessed": false,
+  "launcher_or_eac_modified": false,
+  "game_inputs_sent": false,
+  "own_window_helper": "prepared and type-compiled only; no window/input operation",
+  "same_retained_ca_reused": true,
+  "certificate_store_mutated": false,
+  "private_dtls_acceptance_proven": false,
+  "carrier_v3_registration": false,
+  "world_loading": false,
+  "world_actor": false,
+  "milestone_1": false,
+  "exact_next_blocker": "Fresh Windows elevation admission, then actual candidate-client private-anchor DTLS/app-data and same-candidate unrelated-root control.",
+  "actor_work_may_begin": false,
+  "artifact_sha256": {
+    "scripts/Invoke-RepAnchorTrialWindow.ps1": "811e9dc11ce1ef8c1304fb3cc8a0098c208a1bc1a7078c31711060fcb61736e0",
+    "tests/test_rep_launch_lifecycle.ps1": "773880bb0b45451d57ce57bce60c02f8c88273d8576c3078d25fe5bfd9b24d50",
+    ".scratch/rep-anchor-trial/Invoke-AnchorWindow.ps1": "56773b1ae29fcef67fd6fe72424fd036095b626dbd84dfb760c7d95d1a662a23",
+    ".scratch/rep-anchor-trial-v2/Invoke-AnchorWindow.ps1": "92b900c7086835b330738d0cd3aafc181bffec0068dd29d9bece846c987dcf18",
+    ".scratch/rep-anchor-fault-tests-v2/Invoke-SerialFaultTests.ps1": "16624494b572795d40742d258e5b72193fda722adde94f1e0506017b62ce3b29",
+    ".scratch/rep-anchor-fault-tests-v2/results.json": "a89a4f97978935a0f6240a50ca351c7f1a046ab9aa04ba05cfff2a87e7aeb2d2",
+    ".scratch/rep-anchor-fault-tests-v2/experiment-report.md": "f2c5a5faac83c728657f63b05a344a7040b514d86cad469224ddfa452a9a7315",
+    ".scratch/rep-anchor-trial-v2/Own-GameWindow.ps1": "6b3317020ab00d9fccae525872b442b418e270fd1963fd68d829c41d91405f9b",
+    ".scratch/rep-anchor-trial-v2/close-unadmitted.ps1": "704eff845eeb99b9b57d2be6cf8d4657528eb6b70716a606e94557dd5e870f5d",
+    ".scratch/rep-anchor-trial-v3/attach-run.ps1": "fed7923aa52e1a54a5c051446d01b205ef15046448ec3016bec6bf51066c98db",
+    ".scratch/rep-anchor-trial-v3/dispatch.ps1": "ea6b2d0fa2cac99fba30713fcda0c60d30fddd4018349ddb9a75240a0190aca9",
+    ".scratch/rep-launch-lifecycle-ae751096bdae462b9286049f1a44f0b2/results.json": "6f485aa5c8c32f0ab10aac95189e4fb688593a29c6ed95b8f38c1e38613b134d"
+  },
+  "private_log_sha256": {
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/run-manifest.json": "01afab527b92a9f719511d9d7648d38344e390a0b947ed15eaca5032a5692631",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/anchor-launch-intent.json": "390472c7b3131f5bd1a75b2591eca6e963eb96fc6e375d93408ef7b38c8e3dcf",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/anchor-launch-manifest.json": "8a3e68f63cf1bf09d3f8c3570c836f61d7c9cefed035e5117a32e45a693c1276",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/trial-window.jsonl": "17083d39bf98133adf9f922624e96e8f132ffc86ffbb87fcd0fb1fda9fb39889",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/anchor-image-transaction.jsonl": "ad9c006f63906388eeac953d83e4adcc28ce2674e57df3130cf55a69aa70c923",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/bootstrap-v4.jsonl": "4106ff465cecaf48f38cde34a6cc9ab5b26f995ea39d728f8c2b11e22e3acef9",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/bootstrap-v6.jsonl": "19c0f849003a750f536be650bdec07406304284e6a39f826dc7269a9987874af",
+    "private/connectivity/token-contract-credentials-fc22e12750024cbbb3d1841da271cd2c/dtls-transport.jsonl": "ad8e108c1614b7c803ce432a0ed2bcce32e941f3d2d1da7880cc5a2fa10ba4a3",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/run-manifest.json": "a2dc3542d5b6c82a2e4ce6cfbb992d52280cc7803a4996f19b451191515adc9f",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/bootstrap-v4.jsonl": "663fe91793c2c64139d7e92937b244ab6edd2b2e2d05e1b0fab4c0a2ba4095f2",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/bootstrap-v6.jsonl": "568ce27eb80541786a7190de333ab97b3146a4750c4ab8a92130078aa952ef92",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/dtls-transport.jsonl": "a1df6727aec084fce83b40f5f4758e55f2296df37e65df442e7cbd5f466e089b",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/dtls-ownership.json": "b24c216339326112b35dfcb820520a73a1703397fd9fbd66c793738de0c1c072",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/dtls-cleanup.json": "5394b22baf2e2a15af88d7eb009ec6fce7ba952a101658db7183bf9a42669b0c",
+    "private/connectivity/token-contract-credentials-09b3b742cc944bf6b73a0f97aeaa550f/unadmitted-cleanup.json": "a5603cb695833484bb18560c9234ae1f2974c5dd802beee88237aa3d8ffd5a26"
+  }
+}
