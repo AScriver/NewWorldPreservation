@@ -1,23 +1,23 @@
 {
   "schema": 1,
-  "recordedAtUtc": "2026-10-03T17:40:26.720634+00:00",
+  "recordedAtUtc": "2026-10-03T17:54:13.786578+00:00",
   "purpose": "Agent onboarding, read-only preflight and offline validation verification",
   "mode": "offline-tooling-verification",
   "status": "passed",
   "newWorldClientTested": false,
   "milestone1": "not tested",
   "completeProfile": {
-    "path": ".scratch/offline-validation/run-y3viw1w_/receipt.json",
-    "sha256": "f0126a000b04b0528438669554457b04eb240ab1b2c1262cbda84701b1b16f5f",
+    "path": ".scratch/offline-validation/run-lp09s2p8/receipt.json",
+    "sha256": "1cad8ae92da163a6a216e78b7f960aa7a8cc81f326f2dd70f2ccf5721204df46",
     "status": "passed",
-    "startedAtUtc": "2026-10-03T17:22:35.272200+00:00",
-    "finishedAtUtc": "2026-10-03T17:23:57.777914+00:00",
-    "preparationHead": "fc853a76587463b76db17cb0ba797c0894818045",
+    "startedAtUtc": "2026-10-03T17:51:56.991963+00:00",
+    "finishedAtUtc": "2026-10-03T17:53:24.113515+00:00",
+    "preparationHead": "b97281df8955287e057bd45317b5885006a6aa9a",
     "profile": "all",
     "python": {
       "selectedFiles": 27,
-      "collected": 345,
-      "executed": 345,
+      "collected": 346,
+      "executed": 346,
       "failed": 0,
       "errors": 0,
       "skipped": 0
@@ -46,7 +46,7 @@
       "listenerClosed": true,
       "childExitCode": 0,
       "bind": "127.0.0.1",
-      "port": 61620
+      "port": 50247
     },
     "upstream": {
       "status": "passed",
@@ -85,17 +85,17 @@
     }
   },
   "finalFocusedProfile": {
-    "path": ".scratch/offline-validation/run-btr07ffm/receipt.json",
-    "sha256": "75ebfba041ce41f2263020982db24a5c054683420c30429433c1d637b855eac1",
+    "path": ".scratch/offline-validation/run-bxqkheh0/receipt.json",
+    "sha256": "c2c8f6791404cc2dfe902f7f43cb10b153886d5bb7e0ca1159b75e3dd2a4e792",
     "status": "passed",
-    "startedAtUtc": "2026-10-03T17:34:25.196610+00:00",
-    "finishedAtUtc": "2026-10-03T17:34:26.508397+00:00",
-    "preparationHead": "437aacfbedddf4bfd651f20ea4d2557277cf8a6c",
+    "startedAtUtc": "2026-10-03T17:46:01.623157+00:00",
+    "finishedAtUtc": "2026-10-03T17:46:02.968326+00:00",
+    "preparationHead": "34278dc08c9c437e8a190aa05ce43e502a17cc6c",
     "profile": "tooling",
     "python": {
       "selectedFiles": 2,
-      "collected": 35,
-      "executed": 35,
+      "collected": 36,
+      "executed": 36,
       "failed": 0,
       "errors": 0,
       "skipped": 0
@@ -175,25 +175,21 @@
     "problems": []
   },
   "sourceSha256": {
-    "scripts/project_preflight.py": "9294e423486f22bb782e22df2ee6ced4a36f4f2c7d50ee4ae5bee6a42e74394b",
+    "scripts/project_preflight.py": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee",
     "scripts/Get-ProjectPreflight.ps1": "a249c57bd1e4448fbf986f7bb8b98928dfec049c69040f6ff3d0e0301244ca6e",
-    "tests/test_project_preflight.py": "d30dda4c55a5ad818038c44a6a5a90234c144cadb5f58a40b298b5189eb7f7cc",
+    "tests/test_project_preflight.py": "b743a3333c56e4017b5e12aa19e549c6bae7abe5ee0ab237ecc6da8c992fe48a",
     "scripts/validate_offline.py": "b3649e44ab9c63c6446280060302d330b35be35e5dfe05fd69fdf0218c62e826",
     "scripts/Test-Offline.ps1": "c8510932cfd3777bcf13c9f9f0284fc922a4f5f184107b4eed2773ab1432381e",
     "scripts/offline-test-profiles.json": "bdd953178c9b95528f20b3c8a43f93ad29a89f93b2a102728b004e5454d308b8",
     "tests/test_offline_runner.py": "74b7d71a383ff35729af9884fbd44164965578ce639505ba13f0f36746e28451",
-    "research/agent-evidence-index.json": "c7671c9e0f9adcf54dc67bb1577f22df6b16441b7ae423d632a04c0b328d2298",
+    "research/agent-evidence-index.json": "584a46f0e84e713cacf5d3fd9b7afc59afa23fdeda3c353dfa059eb5605256cf",
     "docs/EVIDENCE_INDEX.md": "2daa29bec1eb7bf5c5747eb709069162a34965181a9d46f86b1fee3adf5f6da1",
     "docs/AGENT_START.md": "d8da1ee9de5a57beebff599502474d82b76c4eeabb303e785403c421ecf41636",
     "docs/TASK_BRIEFS.md": "8166804aaf7e947521c2989f16b06c862ad5b76f735e2ee273a49d15f7390316",
     "docs/AGENT_HANDOFF.md": "af82546b8bf608978f8f906ad31b2e73d835bfc7faf9488a5e0e5c2d0c547f9f",
     "README.md": "8c8998f2a0ee3650ddda19faafd2f7a1516b9b6e1a8f044c698cfe10b0c26e2d"
   },
-  "changedBindingsAfterCompleteRun": [
-    "docs/EVIDENCE_LEDGER.md",
-    "docs/ROADMAP.md",
-    "research/agent-evidence-index.json"
-  ],
+  "changedBindingsAfterCompleteRun": [],
   "executableAndFixtureBindingsStillMatch": true,
   "counterEvidence": [
     {
@@ -201,6 +197,12 @@
       "sha256": "bb08d59108121b8009f9dd2b352a19caafccee9d426df55688fdfcf5817d55b8",
       "status": "failed",
       "reason": "Per-module upstream gate rejected pinned zero-case helper; explicit exception added and complete profile rerun"
+    },
+    {
+      "path": ".scratch/offline-validation/run-3uucs2qr/receipt.json",
+      "sha256": "93ad46eaad9464ca2a10c4f7ad6166c4fb0d5e7c4dd928a0d95c86a8cc907fd5",
+      "status": "failed",
+      "reason": "345 workspace cases, three PowerShell suites and owned CLI passed, but concurrent ROADMAP edit invalidated the input snapshot; retained as a failed receipt"
     },
     {
       "challenge": "Inherited PYTEST_ADDOPTS omitted a passing test",

@@ -401,6 +401,11 @@
           "scope": "Fake-API/admission preparation tests; actual game process access and private DTLS acceptance remain unproved"
         },
         {
+          "path": "research/evidence/current-rep-readonly-validation.json",
+          "classification": "offline-executed",
+          "scope": "Recorded workspace/Fake-API checks at their bound input state; no client memory read, REP trust or gameplay acceptance"
+        },
+        {
           "path": "research/evidence/current-rep-readonly-access.json",
           "classification": "observed-metadata",
           "scope": "Recorded elevated query/image identity and module access boundary; no game memory read or new DTLS acceptance"
@@ -599,6 +604,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-readonly-validation.json",
     "research/evidence/current-rep-readonly-access.json",
     "research/evidence/current-rep-provider-callback.json",
     "research/evidence/current-rep-readonly-preparation.json",
