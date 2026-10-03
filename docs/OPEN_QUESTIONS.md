@@ -1,5 +1,7 @@
 # Open questions
 
+Newest offline checkpoint: [private anchor candidate](PRIVATE_REP_ANCHOR_TRIAL.md) is prepared with verified backup and guarded recovery. Installed image unchanged; no actual candidate-client acceptance tested. The next discriminator is an isolated original-launcher/EAC-intact trial, including same-candidate unrelated-root rejection if positive.
+
 Unknowns are explicit work inputs, not invented protocol behavior. [Ledger](EVIDENCE_LEDGER.md) separates tests from live evidence. Environment and current bootstrap HTTPS are established; private authentication/REP/world/spawn/movement are not.
 
 Latest [live DTLS checkpoint](DTLS_REGISTRATION.md): synthetic selection/queue200 ->our loopback responder's full-chain flight ->**incoming fatal unknown_ca**, with matching secure-connection error(2), six attempts across three runs. CurrentUserRoot trust works for private HTTPS but is insufficient here. [New static trust map](REP_TRUST_POLICY.md) establishes embedded-certificate loading, standard-verifier/identity inputs and same-object transport setup; actual session context/private-root override remain unproven. No completed DTLS, Carrier/V3, world loading or actor. Secure private accounts/tickets, queue follow-ups and cold-cache equivalence remain open; no request/query values retained. Earlier501/receive-only stops are historical.

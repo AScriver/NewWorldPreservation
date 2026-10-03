@@ -1,5 +1,7 @@
 # Milestone 1 roadmap
 
+Latest offline increment: [private REP anchor trial](PRIVATE_REP_ANCHOR_TRIAL.md). Exact-build certificate-data candidate prepared without editing the installed client; 285 Python tests,14 interval transaction checks and6 synthetic launch fault checks pass. Actual owned-client acceptance/rejection trial is next; no supported CA override, Carrier/V3 or actor acceptance follows from preparation.
+
 ## Acceptance boundary
 
 Two legitimate PC clients, distinct **private** accounts and characters, same Aeternum world/map, two distinct visible players and bilateral position/movement updates. Test both roles, stop/turn/reverse direction, logout and reconnect. For acceptance, record at least ten minutes together and one reconnect without a duplicate/stale actor. Ten minutes is **our test criterion**, not a discovered protocol timeout.

@@ -46,3 +46,9 @@
 /tests/fixtures/connectivity/current-dtls-trust-rejection.json text eol=lf
 /research/evidence/current-dtls-trust-controls.json text eol=lf
 /research/evidence/current-rep-trust-policy.json text eol=lf
+/scripts/rep_anchor_candidate.py text eol=lf
+/scripts/RepAnchorImageTransaction.psm1 text eol=lf
+/scripts/Set-RepAnchorTrialImage.ps1 text eol=lf
+/tests/test_rep_anchor_candidate.py text eol=lf
+/tests/test_rep_anchor_transaction.ps1 text eol=lf
+/research/evidence/private-rep-anchor-offline.json text eol=lf

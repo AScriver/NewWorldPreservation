@@ -97,4 +97,6 @@ The positive static source/object join is complete for these known implementatio
 
 If stronger runtime attribution is needed during that test, observe only the owned session's selected transport/context/verify mode/store fingerprints/expected-identity metadata. If a read-only process query is denied, report that denial rather than bypassing EAC. No raw memory/token capture or write is needed by this plan. Any client interoperability change is a separate evidence-constrained implementation, not part of this analysis.
 
+**Next engineering checkpoint:** [private anchor trial](PRIVATE_REP_ANCHOR_TRIAL.md) adds bounded pointer/configuration findings, an offline exact-build certificate-data candidate and guarded interval recovery. No supported normal override or actual acceptance is established by preparation.
+
 **Current outcome unchanged:** synthetic character selection → private queue → DTLS certificate rejection. No world-loading state, completed game DTLS, decrypted Carrier/V3 record, actor or Milestone1. Carrier/V3 can proceed only after an actual current-client handshake and genuine application data are observed; actor/spawn work remains gated.
