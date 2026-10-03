@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-03T08:54:14.954096+00:00",
+  "state": "STATIC_SETTINGS_LAYERS_IDENTIFIED_INPUT_TO_REP_TRUST_UNPROVEN",
+  "synthesis_head": "9a4a811b0c9769e73aef718709c496d0a93de152",
+  "inspection_base_head": "bd1be5804acb5e940f691fcab043643306398c42",
+  "inspection_start_worktree": "Tracked primary-owned edits existed in .gitattributes, docs/CURRENT_CLIENT_CONNECTIVITY.md, docs/DTLS_REGISTRATION.md, docs/OPEN_QUESTIONS.md, docs/ROADMAP.md; untracked research/evidence/private-rep-anchor-eac-control.json. No edits from this investigator.",
+  "steam_build_id": "22469132",
+  "file_version": "1.400.6031.6004151",
+  "client_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "private_original_analysis_directory": ".scratch/settings-provider-trace-20261003T083500Z-0ce3",
+  "source_and_private_sha256": {
+    ".scratch/settings-provider-filelayer-f276326dc9e2/file-layer-evidence.md": "9ee3688d4cdc01c9768edad146d92c1937012b3e3407eca06c69353c2fcc317e",
+    ".scratch/settings-provider-filelayer-f276326dc9e2/decoded-layer-boundary.txt": "85eddf86f678b582050eae70be4ff01fcfc816334f1f01e1c3b8e05a7c30c7e3",
+    ".scratch/settings-provider-filelayer-f276326dc9e2/manifest.json": "36dea476b9568c9f7b3cfdc5fb1365f934bdbfb6746db6c2cd002a6c98e91f35",
+    ".scratch/settings-provider-filelayer-f276326dc9e2/inspect_layer_file.py": "3bf703805682acbb8e65a21c76916b2c25ed17a1e13672b1f9329bcd5227c371",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\bootstrap.cfg": "b512b92acc30fe41b2dd7d5072a9dbb19fac1c4d226a78999ee2bcc0d73a7d71",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\engine.json": "9c40575c4cbd58a0fdd3466ef1d723dec07408048d5c9256ecfdf7cb7c6a7486",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\system_windows_pc.cfg": "a748c58f4743ca7ced5ff356ba926028a1ec90d9cb4606e038b2d33d84f5128a",
+    "private/connectivity/current-token-symbols.json": "362297c638c202a9b098141e9d89f4aad2ba7f5d58abad1f7827c522e5098f2e",
+    ".scratch/rep-verify-policy/analyze_policy.py": "dc4ecfc84c9bbd7816ca30c68a4a45b6d9fd7c2c301e5d8477f1c148bf3274ea",
+    ".scratch/rep-verify-policy/fn-146b6a270.txt": "f529f42fec0e3fe039d6c632128ae27ac1289668420632d9637a88a61b3c9287",
+    ".scratch/rep-verify-policy/fn-146b6d600.txt": "c7fa40e7d7d963da39af591bd7ead581a0fabaf7bb96c30b8c3e7989719bb0f6",
+    ".scratch/current-dtls-trust-path/xrefs.json": "537f55f9a41f1a85c7cf838aa1ece252b0ec3a6de20a81d20a6ab0424b41946a",
+    ".scratch/settings-provider-trace-20261003T083500Z-0ce3/evidence-map.md": "48719d5b5f68035f18720e33c6a28407dead804538f638a6e38652ab8d3b990e",
+    ".scratch/settings-provider-trace-20261003T083500Z-0ce3/decoded-boundaries.txt": "28a4e46b41d978f0531b7fd0fb84a22ffbfade2af41b26a63f591c0a0756de61",
+    ".scratch/settings-provider-trace-20261003T083500Z-0ce3/manifest.json": "c43b83ac48e3114414f366f38fa6accb515dea5ebdf85401088e3683067dd1a3",
+    ".scratch/settings-provider-trace-20261003T083500Z-0ce3/record-evidence.ps1": "36e7e34ea6480e9263dadec97e247a268f372d929717bcef2e962a38947e0be7"
+  },
+  "settings_reads": {
+    "factory": "0x146b6a270",
+    "connection_entry": "0x146b6d600",
+    "key_prefix": "client-connection.transport-options.",
+    "keys": [
+      "transport-type",
+      "enable-backoff-resends",
+      "tick-frequency-ms",
+      "delay-for-disconnects-ms",
+      "rep-default-port"
+    ],
+    "typed_helper_examples": [
+      "0x140fcb0f0",
+      "0x14033d610",
+      "0x140fc7f90"
+    ],
+    "shared_accessor": "0x1406d17b0",
+    "accessor_global_object_initializer": "0x140359be0",
+    "untraced_value_provider_calls": [
+      "0x140fc5e28: call r12",
+      "0x140fc5fec: call rax"
+    ],
+    "initial_optional_provider_list_null_is_not_runtime_absence": true,
+    "registry_index_or_per_thread_lifetime_established": false,
+    "external_input_and_precedence_established": false,
+    "sdk_plus_0x50_value_is_not_established_user_options_storage": true
+  },
+  "remote_configuration": {
+    "enable_key": "client-connection.enable-remoteCfg",
+    "default_true_getter": "0x1464456f0",
+    "conditional_processing": [
+      "0x1410376e0",
+      "0x14643f0a0",
+      "0x146468370"
+    ],
+    "s3_key_query_function": "0x140852f90",
+    "untraced_service_call": "0x140853148: call [rax+0x3b0]",
+    "endpoint_proven": false,
+    "payload_model_proven": false,
+    "merge_into_rep_option_provider_proven": false
+  },
+  "file_configuration": {
+    "file_layer_assembly": "0x140fec750",
+    "descriptor_initializer": "0x140089350",
+    "mode_zero_stores_client_path_at_output_plus_0x28": true,
+    "path_copy_helper": "0x1402c43b0",
+    "unclassified_descriptor_label_helper": "0x1412f4730",
+    "descriptor_label_helper_receives_output_plus_0x8_before_path_copy": true,
+    "unclassified_initializer_tail_helper": "0x147aa687c -> 0x147aa6840",
+    "reader_parser_or_registration_proven": false,
+    "referenced_asset_paths": [
+      "@assets@/client.json",
+      "@assets@/ServerAssets/config/server.json",
+      "@assets@/../../../../Assets/ServerAssets/config/stack.server.override.json"
+    ],
+    "remote_layer_reference": "0x140fecbc0",
+    "actual_current_session_load_proven": false,
+    "asset_alias_resolution_proven": false,
+    "rep_option_or_ca_override_proven": false
+  },
+  "limits": [
+    "Static source inspection, not a launched configuration experiment or live enum/context/store readback.",
+    "File and remote layers are source-supported; mode-zero descriptor construction is not file loading. Unclassified helper effects, registry index/lifetime, provider population, merge/precedence, endpoint/schema and supported private CA input remain unknown.",
+    "Three inspected top-level installed config files contain no observed transport keys; their absence/retail CFG comment does not exclude JSON, asset, remote or other provider paths.",
+    "Earlier independent metadata labels the alternate constructor LibUV; this trace did not classify its wire/trust behavior or prove a selectable supported alternative.",
+    "OpenSSL environment getters elsewhere are not established callers of REP's descriptor-driven secure initializer.",
+    "No private-CA override found in the bounded trace is not proof of global immutability or all normal settings absent.",
+    "No client/config/install/EAC/launcher/network/trust-store/process-memory mutation, live game trial or new tests in this static slice.",
+    "Proprietary decoded output/config contents remain ignored; only original functional notes and source/hash metadata exported."
+  ],
+  "next_boundary": "Resolve provider callback population and file-layer read/parse/merge path before any owned-client configuration trial; no guessed CA key",
+  "game_dtls_acceptance_proven": false,
+  "carrier_v3_can_begin": false,
+  "actor_work_can_begin": false
+}

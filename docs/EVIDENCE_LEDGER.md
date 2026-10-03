@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## October 3 settings/provider boundary — static, not a live control
+
+[Receipt](../research/evidence/current-rep-settings-boundary.json) pins17 inspected source/private artifact hashes (initial13 plus four file-layer addendum bindings). Binary/build unchanged; inspection basebd1be58 had primary-owned docs/receipt changes, synthesis at9a4a811. Proprietary decoded output/config contents stay ignored.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K46 | REP typed option reads reach shared registry/provider dispatch | Strongly source-supported through1406d17b0 and callback sites140fc5e28/140fc5fec. Provider-list initially null is not proof of runtime absence. SDK+50 not established editable settings storage; value origin/registration/precedence unresolved | Original private evidence-map/decoded-boundaries/manifest plus prior mapped factory/entry hashes |
+| K47 | File and default-enabled remote configuration layers exist | Strongly source-supported references/fileCfg assembly140fec750 and remoteCfg/S3 query140852f90; remote enable getter1464456f0 defaulttrue. Concrete endpoint/schema/provider merge, current-session loading and private-CA/alternate-transport control remain unknown | Receipt; [boundary table](REP_TRUST_POLICY.md#unchanged-client-settings-boundary--october-3-static-follow-up) |
+| K48 | Mode-zero initializer constructs the client file-config descriptor | Strongly source-supported140089350→140fec750, path copied at output+28 via1402c43b0. Construction is not loading. Descriptor-label helper1412f4730/tail147aa687c unclassified; physical alias/file presence, reader/parser/provider insertion and REP/CA bridge unknown | Separate immutable file-layer addendum/decoded region/analyzer/manifest, four additional hash bindings in receipt |
+
+No normal private-CA override was demonstrated; this is **not** global absence proof. No configuration/client/system mutation, live experiment, protocol change or new tests. Continue at concrete provider/file-read/merge boundaries; do not create a guessed config or bypass the EAC refusal.
+
+Targeted read-only review matched13/13 bindings and independently decoded selected typed-getter/accessor/callback, remote-default/service-slot and file-path references from the pinned image. K46/K47 survived within scope. “Per-thread registry” was weakened: immediate1413fb8c0 lookup is indexed, but thread identity/lifetime is unproven; public wording now says indexed registry lookup/allocation. Shared accessor does not establish identical provider populations. The original private notes remain unchanged; the narrowed public adjudication takes precedence over that lifetime inference.
+
+File-layer review matched the four additional bindings and independently decoded the mode0 call/output+28 copy; K48 survived. Private addendum's “path helper” inference was **falsified**:1412f4730 receives formatted label at output+8 before path copying, at call140fec8be. Public notes/receipt now say descriptor-label helper with unknown effects. The private addendum remains immutable; do not reuse its incorrect argument attribution when seeking the reader.
+
 ## October 3 admitted private-anchor/stock comparison — clean preparation HEADbd1be58
 
 [Live comparison receipt](../research/evidence/private-rep-anchor-eac-control.json) pins exact run/source/ownership/log identities. Steam22469132 / client1.400.6031.6004151 / stock SHA8654f01d…; original launcher unchanged. Previous K36–K40 remain historical; no earlier inference is upgraded retroactively.
