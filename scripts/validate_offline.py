@@ -60,6 +60,8 @@ def load_manifest(path: Path = MANIFEST) -> dict:
         raise ValueError("Test module appears in multiple groups")
     if groups["rep-readonly"] != ["tests/test_windows_rep_readonly_probe.py"]:
         raise ValueError("REP readonly test was reclassified")
+    if manifest["upstream"].get("zeroCaseModules") != ["server/test_loopback.py"]:
+        raise ValueError("Pinned upstream helper coverage exception changed")
     return manifest
 
 
@@ -263,8 +265,11 @@ def upstream_validation(root: Path, run: Path, manifest: dict) -> dict:
                  if line.strip().startswith("server/") and "::" in line]
     if len(collected) != EXPECTED_TESTS or len(set(collected)) != EXPECTED_TESTS:
         raise ValueError("Upstream collection differs from pinned expected case count")
-    if {nodeid.strip().split("::", 1)[0].replace("\\", "/") for nodeid in collected} != set(files):
-        raise ValueError("Upstream collection omitted a selected module")
+    collected_modules = {nodeid.strip().split("::", 1)[0].replace("\\", "/") for nodeid in collected}
+    zero_case_modules = sorted(set(files) - collected_modules)
+    if (zero_case_modules != sorted(manifest["upstream"]["zeroCaseModules"])
+            or collected_modules - set(files)):
+        raise ValueError("Upstream collection has unexpected empty selected modules")
     junit = run / "upstream-junit.xml"
     run_command([*base, "-ra", "--junitxml", str(junit), *files], reference,
                 run / "upstream-pytest.log", PYTHON_TIMEOUT, env=subprocess_env())
@@ -275,7 +280,8 @@ def upstream_validation(root: Path, run: Path, manifest: dict) -> dict:
     verify_reference(reference, pin)
     return {"status": "passed", "reference": identity, "dtlsCapability": capability,
             "selectedFiles": files, "collected": len(collected), "executed": outcome["total"],
-            "passed": outcome["passed"], "expectedSkips": outcome["skipped"]}
+            "passed": outcome["passed"], "expectedSkips": outcome["skipped"],
+            "zeroCaseModules": zero_case_modules}
 
 
 def validate(root: Path, profile: str, *, manifest_path: Path | None = None) -> tuple[int, Path]:

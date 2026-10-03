@@ -14,6 +14,36 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import validate_offline as runner
 
 
+@pytest.mark.parametrize("omit_test_module", [False, True])
+def test_upstream_allows_pinned_helper_but_rejects_unexpected_empty_module(tmp_path, monkeypatch, omit_test_module):
+    import validate_first_light as reference_runner
+    reference = tmp_path / "research/upstream/reference"
+    reference.mkdir(parents=True)
+    (tmp_path / "research/upstreams.json").write_text(json.dumps({"firstLight": {"directory": "research/upstream/reference"}}))
+    files = ("server/test_loopback.py", "server/test_wire.py")
+    calls = []
+    monkeypatch.setattr(reference_runner, "TEST_FILES", files)
+    monkeypatch.setattr(reference_runner, "EXPECTED_TESTS", 2)
+    monkeypatch.setattr(reference_runner, "EXPECTED_SKIPS", {"expected": "deliberate"})
+    monkeypatch.setattr(reference_runner, "verify_reference", lambda *a: calls.append("verified") or {"commit": "pinned"})
+    monkeypatch.setattr(reference_runner, "verify_environment", lambda *a: {})
+    monkeypatch.setattr(reference_runner, "probe_dtls_context", lambda *a: {"constructed": True})
+    monkeypatch.setattr(reference_runner, "parse_junit", lambda *a: {"total": 2, "passed": 1, "skipped": 1,
+                                                                  "failed": 0, "errors": 0, "unexpectedSkips": []})
+    def command(arguments, cwd, log, timeout, **keywords):
+        module = "server/test_loopback.py" if omit_test_module else "server/test_wire.py"
+        log.write_text(f"{module}::test_one\n{module}::test_two\n")
+    monkeypatch.setattr(runner, "run_command", command)
+    manifest = {"upstream": {"expectedTests": 2, "expectedSkips": 1, "zeroCaseModules": ["server/test_loopback.py"]}}
+    if omit_test_module:
+        with pytest.raises(ValueError, match="unexpected empty"):
+            runner.upstream_validation(tmp_path, tmp_path, manifest)
+    else:
+        result = runner.upstream_validation(tmp_path, tmp_path, manifest)
+        assert result["zeroCaseModules"] == ["server/test_loopback.py"]
+        assert calls == ["verified", "verified"]
+
+
 def workspace_tree(tmp_path: Path) -> tuple[Path, dict]:
     manifest = runner.load_manifest()
     for group in manifest["groups"].values():
