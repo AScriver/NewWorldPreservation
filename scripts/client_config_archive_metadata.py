@@ -96,7 +96,8 @@ def inspect_archive(path):
                 infos = archive.infolist()
                 if len(infos) != entries or archive.start_dir != index_offset:
                     raise MetadataError("index_count_or_offset_mismatch")
-                matches = [info for info in infos if info.filename == MEMBER]
+                # ZipInfo.filename may truncate at NUL; preserve exact identity.
+                matches = [info for info in infos if info.orig_filename == MEMBER]
                 if len(matches) > 1:
                     raise MetadataError("ambiguous_member")
                 result = {"schemaVersion": 1, "observedAtUtc": datetime.now(timezone.utc).isoformat(),

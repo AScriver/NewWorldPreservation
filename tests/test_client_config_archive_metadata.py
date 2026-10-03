@@ -65,6 +65,24 @@ def test_duplicate_exact_member_rejected(tmp_path):
         metadata.inspect_archive(make_archive(tmp_path, ("client.json", "client.json")))
 
 
+@pytest.mark.parametrize("encrypted", [False, True])
+def test_normalized_nonexact_member_is_not_selected(tmp_path, encrypted):
+    path = make_archive(tmp_path, ("client.jsonXprivate-tail",))
+    data = bytearray(path.read_bytes())
+    local = data.index(b"PK\x03\x04")
+    central = data.index(b"PK\x01\x02")
+    data[local + 30 + len(metadata.MEMBER)] = 0
+    data[central + 46 + len(metadata.MEMBER)] = 0
+    if encrypted:
+        struct.pack_into("<H", data, local + 6, 1)
+        struct.pack_into("<H", data, central + 8, 1)
+    path.write_bytes(data)
+    result = metadata.inspect_archive(path)
+    assert result["memberFound"] is False
+    assert "memberMetadata" not in result
+    assert "private-tail" not in json.dumps(result)
+
+
 def test_encrypted_member_is_not_read(tmp_path, monkeypatch):
     path = make_archive(tmp_path)
     data = bytearray(path.read_bytes())
@@ -144,13 +162,14 @@ def test_changed_source_rejected(tmp_path, monkeypatch):
         metadata.inspect_archive(path)
 
 
-def test_cli_output_guard_and_no_overwrite(tmp_path, capsys):
+def test_cli_output_guard_and_no_overwrite(tmp_path, capsys, monkeypatch):
     source = make_archive(tmp_path)
+    root = tmp_path / "tool-workspace"
+    monkeypatch.setattr(metadata, "__file__", str(root / "scripts" / "client_config_archive_metadata.py"))
     with pytest.raises(SystemExit):
         metadata.main(["--archive", str(source), "--output", str(tmp_path / "public-output.json")])
     assert not (tmp_path / "public-output.json").exists()
-    root = Path(__file__).parents[1]
-    output = root / ".scratch" / "archive-metadata-test-output" / f"{tmp_path.name}.json"
+    output = root / ".scratch" / "new-output.json"
     try:
         assert metadata.main(["--archive", str(source), "--output", str(output)]) == 0
         before = output.read_bytes()
@@ -162,10 +181,12 @@ def test_cli_output_guard_and_no_overwrite(tmp_path, capsys):
         output.unlink(missing_ok=True)
 
 
-def test_cli_fixed_errors_do_not_echo_raw_member_data(tmp_path, capsys):
+def test_cli_fixed_errors_do_not_echo_raw_member_data(tmp_path, capsys, monkeypatch):
     source = tmp_path / "private-secret.pak"
     source.write_bytes(b"private-secret")
-    output = Path(__file__).parents[1] / ".scratch" / "archive-metadata-test-output" / f"{tmp_path.name}.json"
+    root = tmp_path / "tool-workspace"
+    monkeypatch.setattr(metadata, "__file__", str(root / "scripts" / "client_config_archive_metadata.py"))
+    output = root / ".scratch" / "new-output.json"
     assert metadata.main(["--archive", str(source), "--output", str(output)]) == 1
     assert not output.exists()
     assert json.loads(capsys.readouterr().out) == {"state": "ARCHIVE_METADATA_REJECTED", "code": "missing_zip_index"}
