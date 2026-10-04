@@ -1,5 +1,15 @@
 # Current-client connectivity
 
+## October 4 fresh resumed audit — static findings and fresh offline validation
+
+The user resumed the full preservation goal; earlier blocked audits are historical. Starting from clean `d088ef9`, fresh installed-file/resource readback confirms Steam22469132/version1.400.6031.6004151, expected stock image hash and valid signature, retained Root1, original hosts, and no game process,443/64003 listener or project routing rule. No client was launched or changed.
+
+New bounded traces close the previously omitted nested stream interval and inspect the connection's retained transport consumers. Receiver adjustment distinguishes connection identifier writes from transport replacement; client and listen-style descriptors use existing certificate text for different roles. The nested helper can pass original CA-byte aliases to callbacks even after a nonpositive method result. Callback effects and live ownership/order remain unknown; no supported ordinary root value reaches the actual REP verification store. Original report wording and targeted challenge corrections are preserved. [Findings](REP_TRUST_POLICY.md#fresh-resumed-audit-nested-parser-and-retained-transport--october-4), [source receipt](../research/evidence/current-rep-callback-alias-boundary.json).
+
+Fresh workspace validation passed **367 Python cases/28 modules**, three synthetic PowerShell suites and owned loopback HTTPS200/exit0/listener-close, with unchanged selected inputs. [Receipt](../research/evidence/current-rep-fresh-audit-validation.json). Source helpers exited; game/EAC/client/settings/environment/trust/routing and retained CA were not mutated. Offline listener cleanup is executed; game acceptance remains untested.
+
+The last **historical live** result remains Play →POST `/prod/game/login/queue/v2/<redacted>/omni` →829-byte HTTP200 →127.0.0.1:64003 →fatal `unknown_ca` (eight alerts/four stock runs). Actual current-game DTLS completion, game unrelated-root rejection, Carrier/V3, world entry and actors remain unverified. The missing evidence is supported normal root input plus actual REP owner/store activation and timing. No further blind trial is admitted. The fresh goal remains active and incomplete; this is its first turn.
+
 ## October 4 settings accessor/ownership boundary — static continuation
 
 At clean `63646f1`, the targeted settings-map scan identifies13head references,3count references and5direct caller edges in lifecycle/loader code. Controlled falsification found three prefix-width misses; the corrected locator passes11RIP cases plus overlappingE8 and namespace-closure checks, with byte-identical image results. Adversarial review exposed three finite passed-pointer helpers; complete bodies retain/transfer contents inside the caller's tree or destroy them. Cleanup closes through147ec6624. No supported root option, actual REP store transfer or relevant runtime timing was established. [Findings](REP_TRUST_POLICY.md#settings-accessors-and-pointer-ownership--october-4), [receipt](../research/evidence/current-rep-settings-accessor-boundary.json).

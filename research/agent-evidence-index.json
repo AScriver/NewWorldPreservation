@@ -423,7 +423,16 @@
         "K104",
         "K105",
         "K106",
-        "K107"
+        "K107",
+        "K108",
+        "K109",
+        "K110",
+        "K111",
+        "K112",
+        "K113",
+        "K114",
+        "K115",
+        "K116"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -448,6 +457,16 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-callback-alias-boundary.json",
+          "classification": "source-inference",
+          "scope": "Fresh resumed nested-helper/retained-transport traces, targeted challenge and constructor initialization; raw alias effects remain bounded unknowns, no supported ordinary root activation or game acceptance"
+        },
+        {
+          "path": "research/evidence/current-rep-fresh-audit-validation.json",
+          "classification": "offline-executed",
+          "scope": "Fresh workspace367 cases/28 modules, three synthetic PowerShell suites and owned loopback HTTPS lifecycle; unchanged selected inputs, no real game or upstream rerun"
+        },
         {
           "path": "research/evidence/current-rep-settings-accessor-boundary.json",
           "classification": "source-inference",
@@ -702,6 +721,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-callback-alias-boundary.json",
+    "research/evidence/current-rep-fresh-audit-validation.json",
     "research/evidence/current-rep-settings-accessor-boundary.json",
     "research/evidence/current-rep-registration-settings.json",
     "research/evidence/current-rep-control-activation.json",
