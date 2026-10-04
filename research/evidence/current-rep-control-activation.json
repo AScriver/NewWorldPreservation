@@ -1,0 +1,462 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-04T02:02:40.778150+00:00",
+  "analysis": "Corrected literal-control scan and bounded receiver adjudication; supported REP root input unresolved",
+  "steam_build": 22469132,
+  "client_version": "1.400.6031.6004151",
+  "executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "investigation_checkout": {
+    "head": "12f0c449d9a73f77b16726d794ae788d8eacce9c",
+    "tracked_state": "clean"
+  },
+  "recording_checkout": {
+    "head": "12f0c449d9a73f77b16726d794ae788d8eacce9c",
+    "status": " M docs/CURRENT_CLIENT_CONNECTIVITY.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REP_TRUST_POLICY.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n"
+  },
+  "correction": {
+    "old_negative_inference": "Withdrawn: query shadows parser PDATA starts before candidate validation",
+    "preserved_failed_query_and_result": true,
+    "scope": "Only faulty candidate validation superseded; raw BA count remains valid"
+  },
+  "executed_static_scan": {
+    "section": ".text",
+    "raw_bytes": 132936192,
+    "encodings": [
+      "BA imm32",
+      "C7 C2 imm32"
+    ],
+    "values": [
+      "0x6a",
+      "0x6b"
+    ],
+    "raw_BA": 97,
+    "validated_EDX": 97,
+    "C7_raw": 0,
+    "independent_sets_equal_by_address_register_value_bytes": true,
+    "scanner_controls": 13,
+    "no_pdata_candidates": 0
+  },
+  "receiver_adjudication": {
+    "immediate_calls": 91,
+    "immediate_jumps": 5,
+    "remaining_split_fragment_resolves_to": "VCRUNTIME strchr character argument",
+    "source_supported_categories": [
+      "event/record",
+      "observer/formatting",
+      "bitset",
+      "string",
+      "file-stream handler"
+    ],
+    "unresolved_immediate_indirect_transfers": 18,
+    "runtime_callback_target_unknown": "0x14a829480 virtual zero-fill slot",
+    "normal_input_to_REP_owner_join_established": false
+  },
+  "bounded_parser_integrity": {
+    "prior_shared_global_scripts_checked": 5,
+    "matching_module_writes_to_starts_ranges": 0,
+    "limit": "AST module-level writes only; no whole-query or whole-pipeline safety proof"
+  },
+  "limits": [
+    "Two encodings/two values in raw-backed .text only",
+    "Containing PDATA linear decoding is not whole-program proof",
+    "Runtime receivers, other encodings, register-derived commands and broader aliases remain unknown",
+    "No current game DTLS acceptance or unrelated-root rejection"
+  ],
+  "verification": {
+    "state": "ADJUDICATED_SOURCE_BINDINGS_PASSED",
+    "analysis_head": "12f0c449d9a73f77b16726d794ae788d8eacce9c",
+    "executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "candidate_sets_equal_by_address_register_value_bytes": true,
+    "validated_assignments": 97,
+    "values": {
+      "0x6a": 41,
+      "0x6b": 56
+    },
+    "C7_raw_candidates": 0,
+    "corrected_manifest_artifacts_verified": 26,
+    "tester_manifest_artifacts_verified": 6,
+    "executed_scanner_controls": 13,
+    "prior_queries_bounded_ast_checked": 5,
+    "preserved_code_bindings": 84,
+    "historical_python_cases": 367,
+    "workspace_tests_rerun": false,
+    "live_resources_created": false,
+    "supported_rep_root_input_established": false
+  },
+  "cleanup": "Static analysis processes exited; no client, listener, service, configuration, trust/routing or retained-CA changes",
+  "next_gate": "Concrete ordinary input and activation joined to actual REP store with ownership/timing; then actual game DTLS success plus unrelated-root rejection before Carrier/V3 and actors",
+  "bindings": {
+    ".scratch/inlined-rep-store-controls-corrected-20261004T0126Z/report.md": "d0301fd10ed709fbf8ab0c4732b4e921c6109c3ea2b768a9714bf2fb1359a40b",
+    ".scratch/inlined-rep-store-controls-corrected-20261004T0126Z/manifest.json": "d22084603f766ea7cdd32a70318074cb61108188d081383e21a5aeb83755075f",
+    ".scratch/inlined-rep-store-controls-corrected-20261004T0126Z/adjudication-result.json": "a79e2b2cb1a937c9d427d872fb233eae96d39259f214c82f3376b3f5884c6f46",
+    ".scratch/mov-scan-verification-20261004T0121Z/result.json": "1f2f080986439b91b7ced6bab68aca12dce03250d534c72640a06f74df305043",
+    ".scratch/mov-scan-verification-20261004T0121Z/controls-result.json": "d1e1a5da15b09882410624ee44aaddda0af4061749eb3a45693f0bc8e3a85e72",
+    ".scratch/inlined-rep-store-controls-20261003T2336Z/query.py": "e9a7cc281a2420bb3d6571928f2d5d56914a872496082b414b449b9365a7117e",
+    ".scratch/inlined-rep-store-controls-20261003T2336Z/scan-result.json": "da0daf3d905e1225f7d09fa3887c30a42c0158d8842680003fd020eb9c3f40df",
+    ".scratch/mov-scan-verification-20261004T0121Z/manifest.json": "c3225cb618d90120724ef731e91ff07e8454a262fb672e71df3f42152132d8ed",
+    ".scratch/mov-scan-verification-20261004T0121Z/report.md": "b60ed34d117e23b69a5153fa6eeafc94f9fc4e7415608f44ee0e905b9d4386eb",
+    ".scratch/rep-control-activation-20261004T0121Z/query-scope-audit.json": "a89297b55a4f3f21c412ce3a7a08bd0e9449504af25f228698476acce1ee005f",
+    ".scratch/rep-control-activation-20261004T0121Z/adjudication-readback.json": "be3c3f2b0859af49b6f556843af1dd17702a1918b159fb9b61b7e9bf6aec5910",
+    ".scratch/rep-control-activation-20261004T0121Z/adjudicated-ledger.md": "143d017b8442b317697acff0d8fb50658fc0c7919e3866d653c7a83ffbb0c9fe"
+  },
+  "source_bindings": [
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "483b751596cad95721288c403d87f45d8417b7cbef8679eb2a32ae818e98a4b2"
+    },
+    {
+      "path": "research/upstreams.json",
+      "sha256": "30d3dd244973e7105d1a58e9567ca3b6aa9c5394d8430ad067cb73e6a5e36780"
+    },
+    {
+      "path": "scripts/Get-FirstLightReference.ps1",
+      "sha256": "0dc2029731ef19c5b05cea48420d282d8014da4bf9e1c1cfc2926162983e8d3e"
+    },
+    {
+      "path": "scripts/Get-ProjectPreflight.ps1",
+      "sha256": "a249c57bd1e4448fbf986f7bb8b98928dfec049c69040f6ff3d0e0301244ca6e"
+    },
+    {
+      "path": "scripts/Initialize-DevEnvironment.ps1",
+      "sha256": "146eab23ae0385ba3718a6ac3d5ffd4569cb60fb4c530e42d35fbab85547d5bc"
+    },
+    {
+      "path": "scripts/Inspect-CurrentClient.ps1",
+      "sha256": "00113874bc50bfedbc039f119aebe8a2af3f8ab0aa94ca2e1aba510329127239"
+    },
+    {
+      "path": "scripts/Invoke-BootstrapTrialWindow.ps1",
+      "sha256": "0f87e3b07b48e6bee50039ac077c76a0818cb0a2708a96020c84ab5f7d85d61f"
+    },
+    {
+      "path": "scripts/Invoke-ConnectivityRedirectWindow.ps1",
+      "sha256": "4b80e4577efee5e188c90df0bfa7c51e8a09d944ac1a5a29b63323cba139f338"
+    },
+    {
+      "path": "scripts/Invoke-RepAnchorTrialWindow.ps1",
+      "sha256": "811e9dc11ce1ef8c1304fb3cc8a0098c208a1bc1a7078c31711060fcb61736e0"
+    },
+    {
+      "path": "scripts/Observe-CurrentClient.ps1",
+      "sha256": "6892e83c673b45a3f4c2e932095f13cacb94250f7faa792365190c8c8cc839ab"
+    },
+    {
+      "path": "scripts/RepAnchorImageTransaction.psm1",
+      "sha256": "c35db5c8dbf0278eb4f3d3e81b898524a980820ad310f68ac91abbc2ab9f0588"
+    },
+    {
+      "path": "scripts/Set-ConnectivityHosts.ps1",
+      "sha256": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f"
+    },
+    {
+      "path": "scripts/Set-RepAnchorTrialImage.ps1",
+      "sha256": "eff56e764a35902c3483b7e991ae12bcaaf2ac0a83828227c54e232902af3d1e"
+    },
+    {
+      "path": "scripts/Test-ConnectivityProbe.ps1",
+      "sha256": "91f3530eae3cd747499aef58894938b221195c2755b2bc1479698012fbf2de95"
+    },
+    {
+      "path": "scripts/Test-FirstLight.ps1",
+      "sha256": "a1d1b0fdc5206933c08c9487e2e9e369ae6dfa31c95be16a818b59da5963d0b9"
+    },
+    {
+      "path": "scripts/Test-Offline.ps1",
+      "sha256": "c8510932cfd3777bcf13c9f9f0284fc922a4f5f184107b4eed2773ab1432381e"
+    },
+    {
+      "path": "scripts/Use-ConnectivityTrust.ps1",
+      "sha256": "8bed313bb1126903db58b0f1d319b5a5420b36fb2b414d503d22ec2cb695ba48"
+    },
+    {
+      "path": "scripts/bootstrap_log_metadata.py",
+      "sha256": "ff2ffc5e1f5cae70131e80635031567fc2377c1b00001bf03836418789fe8f56"
+    },
+    {
+      "path": "scripts/bootstrap_probe.py",
+      "sha256": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f"
+    },
+    {
+      "path": "scripts/channel_descriptor.py",
+      "sha256": "12849224c266f705889ee33a31bc3f0fcd38252542e204fb2c08f88e63f2b217"
+    },
+    {
+      "path": "scripts/client_config_archive_metadata.py",
+      "sha256": "bcbb7dec2613ef108bef0377324ae7080dcac9e8748a4d82b21c9c5b13208430"
+    },
+    {
+      "path": "scripts/connectivity_probe.py",
+      "sha256": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c"
+    },
+    {
+      "path": "scripts/credentials_contract_probe.py",
+      "sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611"
+    },
+    {
+      "path": "scripts/game_log_metadata.py",
+      "sha256": "cd1c13f4e59292339021ab5d9257261cf0e1d26458c9f8ec78de930ad5ae94c3"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "86b305f7e0190e12e38be152e95986a05e27b55e3e475ffdac2d58cf5e963f9d"
+    },
+    {
+      "path": "scripts/project_preflight.py",
+      "sha256": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee"
+    },
+    {
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2"
+    },
+    {
+      "path": "scripts/rep_anchor_candidate.py",
+      "sha256": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1"
+    },
+    {
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611"
+    },
+    {
+      "path": "scripts/token_contract_probe.py",
+      "sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11"
+    },
+    {
+      "path": "scripts/udp_handoff_probe.py",
+      "sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919"
+    },
+    {
+      "path": "scripts/validate_connectivity.py",
+      "sha256": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "7654424c4a31636ac300e3e8299ae0acaed7dcbcda2ff58ca42b4d794e19a638"
+    },
+    {
+      "path": "scripts/verify_probe_cli.py",
+      "sha256": "51dce48f02e28e0d3b368ae273432f8ce01af3b2cb160b2747a2a56e3d238ddb"
+    },
+    {
+      "path": "scripts/windows_rep_readonly_probe.py",
+      "sha256": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74"
+    },
+    {
+      "path": "scripts/windows_tcp_owner.py",
+      "sha256": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58"
+    },
+    {
+      "path": "scripts/windows_udp_owner.py",
+      "sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-client-bootstrap.json",
+      "sha256": "26a41712e83e0f667171a2bd68ea4d03678992697b2698b9f5a8f053725c05ac"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-client-channel-result.json",
+      "sha256": "cb690b7796df094637dfe0ef8eb658d0439f8037e3b56e0b561567efd77c0034"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-client-token-result.json",
+      "sha256": "cf8c0b3379c8eb6428b9b4cd33a31b5592de39e87db322dcc833c58e1f37162b"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-credentials-contract-result.json",
+      "sha256": "6ac19bdbe85ccf51aef7cb5ff051db231542a7f6a76a1609cc09accdc0289507"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-credentials-parser-candidate.json",
+      "sha256": "8037b377a2c2f27f714d5a539a154ea84af27ef9647c8add38796c92096caa03"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-dtls-trust-rejection.json",
+      "sha256": "a41510b40337dc79652a2a53fd23556064d6e60a39688de1c3d335bf0f9548a7"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-login-info-candidate.json",
+      "sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-login-info-result.json",
+      "sha256": "745161b87827ddfc65f2976162be18669a2115dd3b1003d5d026c8839940821a"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-handoff-result.json",
+      "sha256": "2502def556fa1cd94740d96535e36abac9d50d806588ae4249ac65a5e4aa4aa8"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-parser-candidate.json",
+      "sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-token-contract-result.json",
+      "sha256": "f88be3878e16720c404bcd12f32a0ff15ddc07a5d13e92eb441f484ab9e46a92"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-token-parser-candidate.json",
+      "sha256": "fd171e24ae71c6d1e1329bba3e926c6c8dfe1c65b4497d97a2bee952d79c81d9"
+    },
+    {
+      "path": "tests/fixtures/connectivity/local-channel-token-hostnames.json",
+      "sha256": "ce1282e82d1cb9d9c546ad86b080abf9d43e0d0af2bc6f53c5c0e35c908b071b"
+    },
+    {
+      "path": "tests/fixtures/connectivity/local-channel.json",
+      "sha256": "0345c3259f5782d1c6e33065ee7a0f7a642168747bea73b67df515e5ddf5e7a2"
+    },
+    {
+      "path": "tests/fixtures/connectivity/requests.json",
+      "sha256": "4b2954607e02e40652ae7ec5b0e16487b8efc1f4472e794ef01180c3a809ba54"
+    },
+    {
+      "path": "tests/test_bootstrap_log_metadata.py",
+      "sha256": "051965c12a3a4bd2450e10cb784983a534a01d0ceebdabbc95ecf6b176ac89bc"
+    },
+    {
+      "path": "tests/test_bootstrap_probe.py",
+      "sha256": "dafa2f18bcd3ef06221d94b9e9abccdf826e1c52e7cb84b2879ea7bf35f7fd03"
+    },
+    {
+      "path": "tests/test_channel_descriptor.py",
+      "sha256": "197eb3df02353824f26022da340a7ac76b1ed2af0ac03b80264b5efd038dc3f7"
+    },
+    {
+      "path": "tests/test_client_config_archive_metadata.py",
+      "sha256": "cdabde50957cc33a2c536c71365e36590eee85b38021c8e6786d12134888a9e8"
+    },
+    {
+      "path": "tests/test_connectivity_probe.py",
+      "sha256": "106cc0d6c942e5078bcf93053bfdfad09eff383c9feafe06b3dce2c30dc3d886"
+    },
+    {
+      "path": "tests/test_credentials_contract_probe.py",
+      "sha256": "f96760d61237e46a18856e5d1747755bb477e8631fb7eba1c83738744fca3969"
+    },
+    {
+      "path": "tests/test_credentials_log_metadata.py",
+      "sha256": "3245f19378b5c9220c66d98eb607ece9f5081f5044bbe1146affdaa3bbe08bd5"
+    },
+    {
+      "path": "tests/test_current_client_fixture.py",
+      "sha256": "124120f4c34d3556b4a90f06d076dd37fee43ed2aed5bc316aba268ce38513d5"
+    },
+    {
+      "path": "tests/test_current_credentials_contract.py",
+      "sha256": "7c31d77b55ddaeb060af1557baaa61ceab0ec5ae34f7fc7e03b9b41e2ed30442"
+    },
+    {
+      "path": "tests/test_current_login_info.py",
+      "sha256": "3ec429e095d45b86a27c14fc185cf9280b12a790afbefc123179e9b288ec651d"
+    },
+    {
+      "path": "tests/test_current_queue_handoff.py",
+      "sha256": "4a49ddda1975d3b8b43704459a8875afd97de56d4246ff4976286bacb0c466db"
+    },
+    {
+      "path": "tests/test_current_token_contract.py",
+      "sha256": "09747c36e654d2fa87e99ec7f4d9155cb835c0b4f13601b2366a220ed847906d"
+    },
+    {
+      "path": "tests/test_current_token_flow.py",
+      "sha256": "dff990c7275ad877338540296a46773a0ba446cf40488958cb077dfc049a9e42"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "e39be801b27032e107ca4dc8ce4684abe099df3ea712ccf9444d736e828ad5c7"
+    },
+    {
+      "path": "tests/test_game_log_metadata.py",
+      "sha256": "ac9783b12611e1dba92c75cc0850bb7a9bafa23a0a347188f6822dd28b0bf62b"
+    },
+    {
+      "path": "tests/test_hosts_redirect.py",
+      "sha256": "b27f22b0f2756c45647c11b49494107163f35bbfb04b06f9c3be71a27af6233e"
+    },
+    {
+      "path": "tests/test_observe_current_client.ps1",
+      "sha256": "d2b361a2ce4858d899c5ef231128947239a1c28de35ade12574d02d93dda2a68"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "8df7f279db8dea8df9ac18d281dddfad6214750d8134c386c8a3ece866ac7009"
+    },
+    {
+      "path": "tests/test_probe_controls.py",
+      "sha256": "1b4960b475cb419cc0f1e47837b9e442137fb205ae056a6565fa3b1e4f5a5ff2"
+    },
+    {
+      "path": "tests/test_project_preflight.py",
+      "sha256": "b743a3333c56e4017b5e12aa19e549c6bae7abe5ee0ab237ecc6da8c992fe48a"
+    },
+    {
+      "path": "tests/test_queue_contract_probe.py",
+      "sha256": "7521214391c6e20af27040e3f96a37d44e4ca2d85c0fcfbf748710bba82a0e5a"
+    },
+    {
+      "path": "tests/test_rep_anchor_candidate.py",
+      "sha256": "416787834d1c909b7e7e3ad66ff7687c8ba76dfc8dc06dbdea0261902d40d702"
+    },
+    {
+      "path": "tests/test_rep_anchor_transaction.ps1",
+      "sha256": "2c83795d0a1624be26a5945538d120e9ed19b29fa89eba8273a91c637d9b7434"
+    },
+    {
+      "path": "tests/test_rep_launch_lifecycle.ps1",
+      "sha256": "773880bb0b45451d57ce57bce60c02f8c88273d8576c3078d25fe5bfd9b24d50"
+    },
+    {
+      "path": "tests/test_session_handoff_probe.py",
+      "sha256": "42583e7c5de18e1b1549ababefc8a03c40fd9b54b4c96f2fc390d52da7149f6c"
+    },
+    {
+      "path": "tests/test_token_contract_probe.py",
+      "sha256": "8b04450855e630cdec476f0c81ffe80c5faed88f2931b0bd3673da98884241ae"
+    },
+    {
+      "path": "tests/test_udp_handoff_probe.py",
+      "sha256": "4cb623a55024036e5869d502e67bffa575d2b4e714277388661e75dd84327056"
+    },
+    {
+      "path": "tests/test_validation_gate.py",
+      "sha256": "2538972d308b54ed48a6d52541492061274a1e1f4068abf9d7f794939fd0a9a7"
+    },
+    {
+      "path": "tests/test_windows_rep_readonly_probe.py",
+      "sha256": "979d242b4546e1bbf6b012a22657aa7412617423b286674b19410d7a20429253"
+    },
+    {
+      "path": "tests/test_windows_tcp_owner.py",
+      "sha256": "dcd1b80c91f69ebfb5e8de3d022c9a0b1308d4b2e1364cef7d98a98a12b1b513"
+    },
+    {
+      "path": "tests/test_windows_udp_owner.py",
+      "sha256": "235e5f427e24cf3f841ae28a7e417508512dfe32baf9973be9124eee1d706148"
+    }
+  ],
+  "recording_bindings": [
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "8d240363b2389f468040cd7f519ef50ba9e7733b655fd2526081ac9fd85f7a8b"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "54fb70fcdcdd275c315098b58e846e7c609b42ddb4e22528020863d0c2021e46"
+    },
+    {
+      "path": "docs/REP_TRUST_POLICY.md",
+      "sha256": "0988afeb4cad9d66861af148f9e6d719990dca31e68ece1e222d55e694539be3"
+    },
+    {
+      "path": "docs/CURRENT_CLIENT_CONNECTIVITY.md",
+      "sha256": "eeee5f8bad16b53c81deeb12d06ced9d6bfb5aaeaecd0ed00be81e72450b1f03"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "fead9b6de4dc540069a92ad3428596f2e2ee15ad4ddc1e8d362687ee384d0bec"
+    }
+  ]
+}

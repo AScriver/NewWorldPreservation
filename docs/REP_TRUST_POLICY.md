@@ -152,6 +152,18 @@ The primary-owned adjudication preserves the additional callback consumer and th
 
 **Remaining gate:** a supported ordinary input or initializer supplying replacement CA material or adding the retained private CA to this secure context, followed by actual game DTLS completion and unrelated-root rejection. None of the mapped direct surfaces supplies that input. No speculative configuration change or live trial was applied. Prior367 Python cases, three synthetic PowerShell suites and loopback lifecycle remain the executed code checkpoint;84 executable/test/fixture/lock hashes are rechecked, not represented as a new game or test run. Carrier/V3 and actors remain gated.
 
+### Corrected immediate-control scan — October 4
+
+[Source receipt](../research/evidence/current-rep-control-activation.json) binds this static pass at clean `12f0c44`, Steam22469132/client1.400.6031.6004151 and unchanged EXE hash. The initial query overwrote the parser's PDATA index before validation; its zero-validation/no-PDATA conclusion is withdrawn. Original failed query/result and the separate C7 follow-up remain preserved.
+
+Independent isolated-parser scans agree by address, register, value and bytes on97 actual `mov edx` assignments:41 value0x6a and56 value0x6b. Equivalent C7 candidates number0. Thirteen synthetic controls accepted legitimate EDX/RDX forms and rejected alternate destinations, truncated values and patterns embedded inside other instructions. Coverage is two encodings/two values in raw-backed .text with containing-PDATA linear decoding; it is not whole-program proof.
+
+Bounded receiver analysis classifies several paths as event/record, observer/formatting, bitset, imported string, or file-stream handling. The final contiguous PDATA fragment passes0x6b to imported `strchr` as its character argument. Eighteen immediate transfers through dynamic object/register dispatches remain unresolved. Another receiver preserves EDX for a callback loaded from virtual zero-fill slot0x14a829480; its runtime target and REP/input relationship are unknown. No ordinary root-input-to-REP owner join is established; unresolved receivers are not evidence of absence.
+
+A bounded AST audit of five earlier manifest-listed shared-global scripts found no subsequent module-level writes to the parser's starts/ranges names. It does not prove nested/dynamic/other-name/alternate-parser safety. Prior K81–K86 capacity, certificate-command gate and copied-holder findings remain usable. All84 executable/test/fixture/lock bindings match; prior367-case workspace execution was not rerun. No client, launcher/EAC, retained-CA, configuration/environment/trust/routing changes or live resources.
+
+**Next required evidence:** concrete registration/receiver ownership and an ordinary input activating roots in the actual REP store at the relevant construction/verification time. Goal remains active for those bounded source questions. Actual game DTLS success plus unrelated-root rejection still precede Carrier/V3; actors/spawn/Milestone1 remain gated.
+
 ### Actual REP store ownership and root-input activation — October 3 resumed investigation
 
 [Source receipt](../research/evidence/current-rep-supported-root-input.json) records static observations at clean `3e642b6`, same pinned Steam22469132/client1.400.6031.6004151 image. **The actual REP method supports verification-store replacement, and a certificate-command helper can populate its preferred verification store. A supported ordinary input activating that path is still missing.** No configuration/environment change or client trial was performed.

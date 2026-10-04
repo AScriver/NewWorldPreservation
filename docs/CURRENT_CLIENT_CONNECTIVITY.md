@@ -1,5 +1,13 @@
 # Current-client connectivity
 
+## October 4 corrected literal-control scan — static continuation
+
+At clean `12f0c44`, independent scans agree on97 actual EDX assignments of0x6a/0x6b, after exposing a parser-global overwrite that invalidated the initial zero-validation conclusion. Original failed artifacts are preserved. Thirteen synthetic locator controls pass; bounded receiver analysis maps several record, formatting, string, bitset and file paths, while18 immediate indirect transfers and a runtime callback remain unknown. No ordinary root-input-to-REP join is established. [Findings and limits](REP_TRUST_POLICY.md#corrected-immediate-control-scan--october-4), [receipt](../research/evidence/current-rep-control-activation.json).
+
+All84 previously validated executable/test/fixture/lock inputs still match. Prior367 Python cases/three synthetic PowerShell suites/loopback lifecycle remain historical execution; workspace tests were not rerun. This continuation changed recording files only, with no live resources or client/EAC/config/environment/trust/routing/retained-CA changes. Goal remains active for concrete unresolved receiver/registration work.
+
+Last actual client result remains Steam22469132/version1.400.6031.6004151: Play →POST `/prod/game/login/queue/v2/<redacted>/omni` →829-byte HTTP200 →127.0.0.1:64003 →fatal `unknown_ca` (eight alerts/four stock runs). Actual DTLS success and unrelated-root rejection are still required before Carrier/V3; actor/spawn and Milestone1 remain unachieved.
+
 ## October 3 actual REP store ownership — resumed static investigation
 
 At clean `3e642b6`, the pinned Steam22469132/client1.400.6031.6004151 image has verification-store replacement capacity in the actual method selected by REP. Peer verification selects the SSL certificate object's preferred store, then its retained context's fallback store. A certificate-command helper directly creates/populates that preferred store, bypassing the replacement control. Its `VerifyCAFile`/`VerifyCAPath` activation remains behind certificate permission0x20; the full table confirms all12 file/directory commands require it. The mapped default configuration omits it. All26 recognized generic-control call arguments select other commands. [Findings and limits](REP_TRUST_POLICY.md#actual-rep-store-ownership-and-root-input-activation--october-3-resumed-investigation), [receipt](../research/evidence/current-rep-supported-root-input.json).

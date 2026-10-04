@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## October 4 corrected literal-control scan and receiver adjudication
+
+[Receipt](../research/evidence/current-rep-control-activation.json) binds static observations at clean `12f0c44`, the unchanged pinned client, preserved failed artifacts, a fresh independent Tester experiment, and hypothesis-informed Investigator receiver follow-ups. Primary exact-set comparison and hash readback passed;26 corrected-manifest and6 tester-manifest artifacts checked. No new workspace test run or live trial.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K88|Initial BA zero-validation/no-PDATA conclusion is invalid|Falsified and withdrawn: query assigns parser-global starts before candidate bounds checks. Raw97 count survives; original query/result preserved|Tester independent parser setup and controls; primary AST audit and exact artifact hashes|
+|K89|Targeted immediate scans identify97 actual EDX assignments|Observed pinned-file execution:41 value0x6a,56 value0x6b; both scans agree by address/register/value/bytes. Equivalent C7 raw count0.13 synthetic scanner controls passed. Two encodings/two values/raw .text/PDATA linear decoding only|Corrected adjudication-result.json; independent result/controls; primary adjudication-readback.json|
+|K90|Bounded receiver analysis supplies no ordinary REP root activation|Strongly source-supported receiver classifications include event/record, formatting, bitset, string and file-stream paths; final split fragment reaches imported strchr.18 immediate indirect transfers plus runtime callback target remain unknown, not globally excluded|Corrected report/manifest binding receiver, vtable, import and contiguous-fragment analysis|
+|K91|Five earlier shared-global queries lack the same module-level overwrite pattern|Observed bounded AST audit finds no later starts/ranges writes in those five pinned scripts. Nested functions, comprehensions, dynamic exec, other names and alternate parsers are outside this check; not a whole-pipeline proof|Primary query-scope-audit.json and exact input hashes|
+|K92|Supported normal input into actual REP remains unresolved|Unknown activation/input/ownership/timing; K81–K86 unaffected and84 validated code bindings match. Concrete dynamic receiver/registration questions remain. No game DTLS success, unrelated-root rejection, Carrier/V3 or actor evidence|Primary adjudicated ledger, source readback and current source receipt; live checkpoint remains historical|
+
+The goal remains active. Next work must join a concrete ordinary input and activation to REP's actual verification store at the relevant time. No blind configuration trial or global no-route/pinning claim follows. Prior367 Python cases/three synthetic PowerShell suites/loopback lifecycle remain historical execution; the13 controls above test the locator, not game trust.
+
 ## October 3 actual REP store ownership and root activation — resumed investigation
 
 [Receipt](../research/evidence/current-rep-supported-root-input.json) binds clean `3e642b6` source observations for the same pinned stock image. Initial Investigator/Architect passes used distinct fresh briefs; follow-ups and adversarial review were hypothesis-informed.105 manifest entries (including overlapping tool/input bindings) and84 prior validated code/test/fixture/lock hashes match. Static-only evidence; no new tests, client changes, root insertion or live acceptance. Primary R01–R07 ledger and subsequent adjudication remain ignored.

@@ -403,7 +403,12 @@
         "K84",
         "K85",
         "K86",
-        "K87"
+        "K87",
+        "K88",
+        "K89",
+        "K90",
+        "K91",
+        "K92"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -428,6 +433,11 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-control-activation.json",
+          "classification": "source-inference",
+          "scope": "Corrected literal-control scan, independent scanner controls and bounded receiver adjudication; dynamic receivers and supported REP root input remain unresolved"
+        },
         {
           "path": "research/evidence/current-rep-supported-root-input.json",
           "classification": "source-inference",
@@ -667,6 +677,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-control-activation.json",
     "research/evidence/current-rep-supported-root-input.json",
     "research/evidence/current-rep-store-loader-boundary.json",
     "research/evidence/current-rep-default-config-boundary.json",
