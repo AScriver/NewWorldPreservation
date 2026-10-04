@@ -408,7 +408,14 @@
         "K89",
         "K90",
         "K91",
-        "K92"
+        "K92",
+        "K93",
+        "K94",
+        "K95",
+        "K96",
+        "K97",
+        "K98",
+        "K99"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -433,6 +440,11 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-registration-settings.json",
+          "classification": "source-inference",
+          "scope": "Concrete callback registration, bounded indirect receiver provenance and persistent launcher JSON settings input; root value and actual REP ownership/timing join remain unknown"
+        },
         {
           "path": "research/evidence/current-rep-control-activation.json",
           "classification": "source-inference",
@@ -677,6 +689,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-registration-settings.json",
     "research/evidence/current-rep-control-activation.json",
     "research/evidence/current-rep-supported-root-input.json",
     "research/evidence/current-rep-store-loader-boundary.json",

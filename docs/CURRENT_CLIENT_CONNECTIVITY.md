@@ -1,5 +1,13 @@
 # Current-client connectivity
 
+## October 4 registration and persistent settings input — static continuation
+
+At clean `88874f6`, bounded callback/receiver work and targeted adversarial review exposed a concrete registration string consumer. Its compiled APPDATA/launcher directory reaches file checks, reset/read/write, JSON parsing and a process-global local settings cache. This establishes an ordinary settings input; its filename, namespace value, certificate-related key, actual REP store transfer and live ordering remain unresolved. All18 immediate indirect receivers still lack concrete runtime implementation/lifetime owners. [Findings and limits](REP_TRUST_POLICY.md#ordinary-registration-and-persistent-settings-input--october-4), [receipt](../research/evidence/current-rep-registration-settings.json).
+
+Primary readback checks143 role-manifest entries and all84 validated executable/test/fixture/lock inputs. Prior367 Python cases/three synthetic PowerShell suites/loopback lifecycle remain historical execution; no workspace or game rerun. Only static private evidence and recording files changed; no real APPDATA/settings/environment values or credentials read, and no client/EAC/config/trust/routing/retained-CA changes or live resources.
+
+Last actual result remains Steam22469132/version1.400.6031.6004151: Play →POST `/prod/game/login/queue/v2/<redacted>/omni` →829-byte HTTP200 →127.0.0.1:64003 →fatal `unknown_ca` (8alerts/4stock runs). Actual DTLS success plus unrelated-root rejection still precede Carrier/V3; actors/spawn and Milestone1 remain gated. Goal remains active for the concrete settings accessor/REP ownership question.
+
 ## October 4 corrected literal-control scan — static continuation
 
 At clean `12f0c44`, independent scans agree on97 actual EDX assignments of0x6a/0x6b, after exposing a parser-global overwrite that invalidated the initial zero-validation conclusion. Original failed artifacts are preserved. Thirteen synthetic locator controls pass; bounded receiver analysis maps several record, formatting, string, bitset and file paths, while18 immediate indirect transfers and a runtime callback remain unknown. No ordinary root-input-to-REP join is established. [Findings and limits](REP_TRUST_POLICY.md#corrected-immediate-control-scan--october-4), [receipt](../research/evidence/current-rep-control-activation.json).

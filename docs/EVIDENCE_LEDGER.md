@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## October 4 registration and ordinary persistent settings input
+
+[Receipt](../research/evidence/current-rep-registration-settings.json) binds source analysis at clean `88874f6`, the unchanged pinned Steam22469132/client1.400.6031.6004151 image and hypothesis-informed role follow-ups. Primary readback checks143 manifest entries across five reports, the challenge report,12 prior private bindings and84 validated code/test/fixture/lock inputs. These are overlapping artifact checks, not143 independent experiments. No new workspace test or game trial.
+
+|ID|Claim|Classification / limit|Evidence|
+|---|---|---|---|
+|K93|The compiled callback registration/reset path is identified|Strongly source-supported: leaf setter1479d4c10 writes slot14a829480/context+8; mapped record supplies145a92480/null; reset zeroes both. Immediate event/record helpers establish no root join; live order and broader effects unknown|Callback report19 entries; bounded setter/caller receipts|
+|K94|All18 indirect transfers have bounded argument provenance|Strongly source-supported:9 caller-object,8 embedded-state,1 virtual-returned-state receivers. Concrete runtime implementation/lifetime owners remain unknown for all18; no blanket non-REP inference|Receiver report54 entries; targeted fragile-edge challenge|
+|K95|Registration consumes an ordinary namespace/string input beyond the callback|Strongly source-supported: source object+68 becomes record+0;1479bc060 receives it and global object14a8290f0 dispatches method+8 to1479bc430. Initializer14028fb90 installs vtable1495d8b20. Namespace value and ordinary runtime activation remain unresolved|Adversary concrete consumer challenge; string report14 entries; primary import readback|
+|K96|The launcher path is a persistent local JSON settings input|Strongly source-supported: compiled APPDATA lookup/directory format leads to filesystem checks, reset{}, input/output streams, bounded reader1479bb310, JSON wrapper1479d58d0 and global map14a829088/count14a829090. Files above2MiB reset; cached stat-time gates parsing. Filename14a129fd8, namespace value and live use/order unresolved. No trust key or REP transfer established|Launcher report43 entries; complete logical bodies; PE-import bindings|
+|K97|Global registration modules derive separately retained state from the shared string|Strongly source-supported allocation/field ownership in1479bc430 and immediate constructors; names/namespace/shared library do not prove shared REP roots. No real settings, credentials, registry or environment values read|Launcher receiver/factory/constructor report and exact query receipt|
+|K98|Source bindings and prior validation remain preserved despite a reported hash typo|Observed readback:143 role entries, challenge report,12 prior private bindings and84 code bindings match. Initial callback manifest hash was transcribed incorrectly; actual file agrees across independent reads. Failed audits/original claim preserved; no artifact mutation established. Prior367 cases/three PowerShell suites/loopback lifecycle remain historical|Primary final adjudication/readback; binding discrepancy and preserved failed audits|
+|K99|Supported root activation into actual REP remains unresolved, with a concrete next source question|Unknown required settings/root value, activation, REP owner/store join and timing. The ordinary settings consumer weakens the earlier conditional impasse; goal stays active for bounded accessor/consumer work. No actual DTLS acceptance, unrelated-root rejection, Carrier/V3 or actors|Primary G01–G10 ledger; current receipt; preserved live unknown_ca checkpoint|
+
+Next: trace bounded map accessors and source-backed root consumers to actual REP construction/verification ownership. No filename/key guess, blind client trial, global no-route conclusion or protection bypass follows.
+
 ## October 4 corrected literal-control scan and receiver adjudication
 
 [Receipt](../research/evidence/current-rep-control-activation.json) binds static observations at clean `12f0c44`, the unchanged pinned client, preserved failed artifacts, a fresh independent Tester experiment, and hypothesis-informed Investigator receiver follow-ups. Primary exact-set comparison and hash readback passed;26 corrected-manifest and6 tester-manifest artifacts checked. No new workspace test run or live trial.
