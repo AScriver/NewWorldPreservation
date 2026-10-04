@@ -415,7 +415,15 @@
         "K96",
         "K97",
         "K98",
-        "K99"
+        "K99",
+        "K100",
+        "K101",
+        "K102",
+        "K103",
+        "K104",
+        "K105",
+        "K106",
+        "K107"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -440,6 +448,11 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-settings-accessor-boundary.json",
+          "classification": "source-inference",
+          "scope": "Corrected settings accessor coverage and finite map ownership/disposal; required supported root-to-REP input/activation/timing still missing"
+        },
         {
           "path": "research/evidence/current-rep-registration-settings.json",
           "classification": "source-inference",
@@ -689,6 +702,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-rep-settings-accessor-boundary.json",
     "research/evidence/current-rep-registration-settings.json",
     "research/evidence/current-rep-control-activation.json",
     "research/evidence/current-rep-supported-root-input.json",

@@ -1,5 +1,13 @@
 # Current-client connectivity
 
+## October 4 settings accessor/ownership boundary — static continuation
+
+At clean `63646f1`, the targeted settings-map scan identifies13head references,3count references and5direct caller edges in lifecycle/loader code. Controlled falsification found three prefix-width misses; the corrected locator passes11RIP cases plus overlappingE8 and namespace-closure checks, with byte-identical image results. Adversarial review exposed three finite passed-pointer helpers; complete bodies retain/transfer contents inside the caller's tree or destroy them. Cleanup closes through147ec6624. No supported root option, actual REP store transfer or relevant runtime timing was established. [Findings](REP_TRUST_POLICY.md#settings-accessors-and-pointer-ownership--october-4), [receipt](../research/evidence/current-rep-settings-accessor-boundary.json).
+
+Primary readback checks111overlapping role-manifest entries and all84 validated executable/test/fixture/lock inputs. Prior367Pythoncases/threePowerShell suites/loopback lifecycle remain historical; no workspace or game rerun. Static helpers exited; private evidence retained. No client/EAC/realsettings/environment/credentials/trust/routing/retained-CA changes or live resources.
+
+Last actual result is unchanged: build22469132/version1.400.6031.6004151, Play →POST `/prod/game/login/queue/v2/<redacted>/omni` →829-byte HTTP200 →127.0.0.1:64003 →fatal `unknown_ca` (8alerts/4stockruns). The current required-input impasse needs concrete new supported root-input/activation evidence joined to actual REP ownership/timing. Actual DTLS success plus unrelated-root rejection still gate Carrier/V3; actors/spawn/Milestone1 remain unachieved. Broader unobserved aliases are uncertainty, not whole-program absence or a testable trial.
+
 ## October 4 registration and persistent settings input — static continuation
 
 At clean `88874f6`, bounded callback/receiver work and targeted adversarial review exposed a concrete registration string consumer. Its compiled APPDATA/launcher directory reaches file checks, reset/read/write, JSON parsing and a process-global local settings cache. This establishes an ordinary settings input; its filename, namespace value, certificate-related key, actual REP store transfer and live ordering remain unresolved. All18 immediate indirect receivers still lack concrete runtime implementation/lifetime owners. [Findings and limits](REP_TRUST_POLICY.md#ordinary-registration-and-persistent-settings-input--october-4), [receipt](../research/evidence/current-rep-registration-settings.json).
