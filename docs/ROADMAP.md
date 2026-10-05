@@ -266,6 +266,21 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
+October5 tooling improvement: function-scoped Ghidra is now the default for
+bounded native questions. The original helper imports selected PDATA/chained-unwind
+code ranges plus static data, with image/private-path/no-overwrite/time guards and
+no whole-image automatic analysis. All three player-construction entries from the
+earlier failed whole-image attempt decompiled successfully in a fresh private
+project. This closes that tooling failure; concrete member/class-to-player joins
+and gameplay acceptance remain unknown. [Procedure](TOOLS.md#function-scoped-ghidra-default),
+[verification](../research/evidence/ghidra-function-slice-validation.json).
+Verification passed469 Python cases/33 files, three PowerShell suites and the
+owned loopback HTTPS lifecycle. The first workspace run exposed three synthetic
+fixture-path failures; isolated system-temp fixtures fixed them without relaxing
+the production path guard. Static tool output and selected source hashes were
+rechecked; raw decompilation/database remains private.
+No existing Actionable matched this tooling improvement; Actionables was not updated.
+
 **Fresh live-player construction and designation.** Private response receipt,
 actor-connection success, sustained heartbeat echoes and context initialization/
 activation are observed in the0655 result. The player-wait predicate requires

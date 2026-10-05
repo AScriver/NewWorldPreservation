@@ -12,6 +12,23 @@
   },
   "boundaries": [
     {
+      "id": "ghidra-function-slices",
+      "roadmapTasks": [],
+      "claimIds": [],
+      "docs": ["docs/TOOLS.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_ghidra_function_slice.py"],
+      "evidence": [
+        {
+          "path": "research/evidence/ghidra-function-slice-validation.json",
+          "classification": "offline-executed",
+          "scope": "Guarded sparse static Ghidra helper and three completed current player-construction function queries; synthetic safety and workspace checks recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Tooling verification only; sparse decompiler types require instruction checks. No concrete member schema, executed player creation, client launch, process observation or Milestone1 claim."
+    },
+    {
       "id": "current-initial-registration-contract",
       "roadmapTasks": [
         "M1-06B"
@@ -913,6 +930,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/ghidra-function-slice-validation.json",
     "research/evidence/current-player-designation-join.json",
     "research/evidence/current-player-construction-join.json",
     "research/evidence/carrier-registration-client-progress.json",

@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `ghidra-function-slices` | Offline tooling | [Function-scoped Ghidra](TOOLS.md#function-scoped-ghidra-default) |
 | `reference-environment` | M1-00 | [First Light analysis](FIRST_LIGHT_ANALYSIS.md) |
 | `historical-client-setup` | M1-02H | [Historical review](FIRST_LIGHT_HISTORICAL_CLIENT.md), [executed owned-copy Frida/DTLS trial](FRIDA_PRIVATE_DTLS_TRIAL.md) |
 | `bootstrap-https-ownership` | M1-01 / 02A | [Connectivity](CURRENT_CLIENT_CONNECTIVITY.md) |

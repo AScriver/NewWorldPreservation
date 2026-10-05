@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "classification": "offline-executed",
+  "outcome": "Reusable sparse Ghidra helper completed all three selected current player-construction functions without whole-image analysis",
+  "baselineHead": "ec5597277dd4c56a9abde8e337edbb527f3b6f32",
+  "executionGitStatus": " M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? scripts/ghidra_function_slice.py\n?? tests/test_ghidra_function_slice.py\n",
+  "client": {
+    "appId": 1063730,
+    "buildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "tools": {
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "python": "3.11.9"
+  },
+  "script": {
+    "path": "scripts/ghidra_function_slice.py",
+    "sha256": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341"
+  },
+  "staticQuery": {
+    "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/ghidra-slice-improvement-20261005T2313Z/query-player-functions.ps1 -Execute",
+    "parserValidation": "Passed",
+    "automaticVariableValidation": "Passed",
+    "exitCode": 0,
+    "wallSecondsIncludingPowerShellValidation": 9.5827353,
+    "automaticAnalysis": false,
+    "timeoutSecondsPerFunction": 30,
+    "functions": [
+      {
+        "entry": "0x141717fc0",
+        "ranges": [
+          {
+            "start": "0x141717fc0",
+            "end": "0x141719d86",
+            "sha256": "a943c9d1f31dd4bd4afe92e7785e4c8b416ab77908bc1e44af3ec1fa083f1623"
+          }
+        ]
+      },
+      {
+        "entry": "0x146af2340",
+        "ranges": [
+          {
+            "start": "0x146af2340",
+            "end": "0x146af283f",
+            "sha256": "2f60b210c52227218f799d6871260feb545e131c2faf35673ddc350172b863a8"
+          }
+        ]
+      },
+      {
+        "entry": "0x1461ad130",
+        "ranges": [
+          {
+            "start": "0x1461ad130",
+            "end": "0x1461ad1a9",
+            "sha256": "de9008a9a51506ec2b051e4793859d893f30503624f3ad7d98a133c1f1a7b8dc"
+          },
+          {
+            "start": "0x1461ad1a9",
+            "end": "0x1461ad1b3",
+            "sha256": "4e2100e3062469146c45bfbbdf3fa036e174401734fa895c3cf33d99d5467659"
+          },
+          {
+            "start": "0x1461ad1b3",
+            "end": "0x1461ad213",
+            "sha256": "f23788af9592994bf76fc03e8d8f5bdd0437e5bbfc9c0a584b49229bb0a80203"
+          },
+          {
+            "start": "0x1461ad213",
+            "end": "0x1461ad229",
+            "sha256": "4f403bd5b73de91c0d764e40606c978114cf6ee83bfbfd3581076fce802ed303"
+          },
+          {
+            "start": "0x1461ad229",
+            "end": "0x1461ad25e",
+            "sha256": "46fe9ccd6223914b88798de8004293745fda60e010515a33468e63d7541535c7"
+          },
+          {
+            "start": "0x1461ad25e",
+            "end": "0x1461ad28d",
+            "sha256": "94db4d98a97b0f481d52c8fdd2c09d44fe3744f251c9bd758b244f12d8fee4a4"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "entry": "0x141717fc0",
+        "completed": true,
+        "path": "function-141717fc0.c",
+        "sha256": "887c92ed38912112ffa3315b598d3172e615c50a6f91620f57b8e82922b1bf3a"
+      },
+      {
+        "entry": "0x146af2340",
+        "completed": true,
+        "path": "function-146af2340.c",
+        "sha256": "791075f01a87a257878df3b9061b5c77ed41cf8e80993d6146b15129f396be94"
+      },
+      {
+        "entry": "0x1461ad130",
+        "completed": true,
+        "path": "function-1461ad130.c",
+        "sha256": "d5c965880066954f93bf03f24f77aa2bec33df182162a6a195b2f0ecb901c512"
+      }
+    ],
+    "sourceStable": true,
+    "privateReceipt": ".scratch/ghidra-slice-improvement-20261005T2313Z/player-output/receipt.json",
+    "privateReceiptSha256": "f8491781778dcf0c697532d65d7d84194a7840a36ae5d4af65825ded7be05dfb",
+    "privateDatabase": "private/ghidra/slice-improvement-20261005T2313Z-player",
+    "earlierFailure": ".scratch/construction-208-member-20261005T1929Z/ghidra-attempt.json"
+  },
+  "validation": {
+    "status": "passed",
+    "command": "Invoke-CodexPowerShell.ps1 -Path scripts/Test-Offline.ps1 -Execute",
+    "privateReceipt": ".scratch/offline-validation/run-qlmzc4h5/receipt.json",
+    "privateReceiptSha256": "476a0bbddb501cade5662ee2515268075362cdb981ea685acbfa5d624797d45e",
+    "finishedAtUtc": "2026-10-05T23:26:00.536273+00:00",
+    "python": {
+      "selectedFiles": 33,
+      "collected": 469,
+      "executed": 469,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "powershell": [
+      {
+        "file": "tests/test_observe_current_client.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_anchor_transaction.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_launch_lifecycle.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      }
+    ],
+    "loopbackLifecycle": {
+      "status": "passed",
+      "httpStatus": 200,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "bind": "127.0.0.1"
+    },
+    "changedInputs": [],
+    "inputFreshnessBeforeFinalization": "All recorded public input hashes matched before metadata-only receipt/ROADMAP finalization; helper and tests unchanged.",
+    "retainedEarlierFailure": {
+      "privateReceipt": ".scratch/offline-validation/run-z50g1vyp/receipt.json",
+      "pythonPassed": 466,
+      "pythonFailed": 3,
+      "cause": "The offline pytest basetemp inherited .scratch and correctly triggered the production database path guard in three mocked-backend tests.",
+      "correction": "Own/clean separate system-temp synthetic workspaces; production guard and successful native query unchanged."
+    }
+  },
+  "actionables": {
+    "workItemId": 164,
+    "matchedToolingTask": false,
+    "updated": false
+  },
+  "limits": [
+    "Completed decompilation is static evidence; material types and joins still need instruction checks.",
+    "No concrete member wire schema or runtime player creation is established by this tooling run.",
+    "Raw client-derived code/database stays ignored; only original scripts and sanitized metadata are committed."
+  ],
+  "resources": {
+    "clientExecuted": false,
+    "processMemoryAccess": false,
+    "packetCapture": false,
+    "gameEndpointsContacted": false,
+    "sharedServicesOrPorts": false,
+    "staticHelperExitCode": 0,
+    "privateDatabaseRetained": true
+  },
+  "milestone1Proved": false
+}

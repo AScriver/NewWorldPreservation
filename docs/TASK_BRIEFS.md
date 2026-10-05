@@ -1,5 +1,29 @@
 # Bounded task briefs
 
+## Function-slice tooling improvement — October5
+
+- Outcome: make the successful sparse Ghidra procedure reusable for remaining
+  player-construction/member questions; avoid the previous stalled whole-image
+  import. No gameplay contract or completed research task is reopened.
+- Baseline: clean main `ec5597277dd4c56a9abde8e337edbb527f3b6f32`; shared
+  Ghidra12.1.4/PyGhidra3.1.0/Python3.11.9; pinned Steam22469132 image8654f01d….
+- Owner/files: original `ghidra_function_slice.py`, synthetic safety tests,
+  reviewed offline inventory/count, project tool/start instructions, this brief,
+  ROADMAP, evidence navigation and one sanitized validation receipt. Preserve unrelated changes.
+- Permitted: file-backed pinned static reads and unique ignored output/database;
+  explicit functions141717fc0/146af2340/1461ad130 from #208's failed Ghidra attempt.
+  No client execution, process access, capture, endpoint, payload or publishing work.
+- Resources: `.scratch/ghidra-slice-improvement-20261005T2313Z/` and
+  `private/ghidra/slice-improvement-20261005T2313Z-player`; no shared service/port.
+  Native helpers exit; partial databases are preserved rather than overwritten.
+- Checks: split-body inclusion, guessed/malformed/unsafe/oversized selection and
+  private-path refusal, failure/timeout/source-drift receipts, three actual scoped
+  decompilations, instruction-bound provenance and complete offline workspace.
+- Result/evidence: [tool procedure](TOOLS.md#function-scoped-ghidra-default) and
+  [original receipt](../research/evidence/ghidra-function-slice-validation.json).
+  Milestone1/player creation remain unproved. Scoped Actionables lists returned
+  no matching tooling task; no adjacent task was claimed or updated.
+
 ## #210 — current initial registration framing/type/retry (workItemId164)
 
 - Outcome recorded before work: actual pinned current initial registration framing,

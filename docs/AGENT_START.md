@@ -13,7 +13,9 @@ blockers and Milestone 1 acceptance belong to [ROADMAP](ROADMAP.md), not this gu
 4. Find your boundary in the [evidence index](EVIDENCE_INDEX.md) or
    [JSON catalog](../research/agent-evidence-index.json). Read its specific slice doc,
    then the referenced claim rows in [EVIDENCE_LEDGER](EVIDENCE_LEDGER.md).
-5. Fill the [task brief](TASK_BRIEFS.md#task-brief-template), including exact files,
+5. For bounded native-function questions, use the [function-scoped Ghidra procedure](TOOLS.md#function-scoped-ghidra-default)
+   with exact entries, current hash and instruction checks; whole-image automatic
+   analysis is not the default. Fill the [task brief](TASK_BRIEFS.md#task-brief-template), including exact files,
    permitted operations, input identity and rejection checks. Run the matching
    focused profile; use the complete workspace profile before handing off.
 6. Finish with the [handoff format](AGENT_HANDOFF.md). Record the task/verification
@@ -69,7 +71,11 @@ read-only inspection.
 | Queue/UDP handoff | `queue_contract_probe`, `udp_handoff_probe`, `windows_udp_owner`; queue/handoff/owner tests | [Game handoff](PRIVATE_GAME_HANDOFF.md) |
 | Local DTLS / current REP trust | `dtls_transport_probe`; DTLS controls; synthetic candidate/transaction/lifecycle tests | [DTLS](DTLS_REGISTRATION.md), [trust](REP_TRUST_POLICY.md) |
 | Carrier, spawn, actor replication | `carrier_registration_probe` metadata/privacy tests; live scoped trial is separate from offline validation | [Carrier trial](CARRIER_REGISTRATION_TRIAL.md), [spawn](SPAWN_SEQUENCE.md), [architecture](ARCHITECTURE.md) |
-| Agent tooling | `project_preflight`, `validate_offline`, `client_config_archive_metadata`; three tooling test modules | [Catalog](EVIDENCE_INDEX.md), [handoff](AGENT_HANDOFF.md) |
+| Agent tooling | `project_preflight`, `validate_offline`, `client_config_archive_metadata`, `ghidra_function_slice`; four offline tooling test modules | [Catalog](EVIDENCE_INDEX.md), [tools](TOOLS.md), [handoff](AGENT_HANDOFF.md) |
+
+The tooling profile includes synthetic function-slice safety tests; it never
+starts Ghidra or reads a client image. Explicit static queries follow
+[TOOLS](TOOLS.md#function-scoped-ghidra-default).
 
 The catalog carries exact filenames; the table above is a reading map, not an
 invocation list for live procedures. Existing redirect/trust/client/anchor scripts

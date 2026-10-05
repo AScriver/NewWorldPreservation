@@ -38,9 +38,60 @@ The path above is an example, not an existing capture. PyGhidra code runs throug
 `pyghidra.start()` in the script to start the headless API. The wrapper sets
 `GHIDRA_INSTALL_DIR` and `JAVA_HOME` and restores the invoking environment.
 
+## Function-scoped Ghidra default
+
+For a small static question, use [ghidra_function_slice.py](../scripts/ghidra_function_slice.py)
+instead of importing the entire image with automatic analysis. This original helper
+promotes the successful sparse registration procedure into a reviewed entry point.
+It selects one to eight explicit function entries from AMD64 PE PDATA, follows
+chained unwind ownership to retain split bodies, and caps selected code at one MiB.
+It imports only that code plus `.rdata`/`.data` for static references; it never invokes
+whole-image analysis. Leaf bodies without evidenced PDATA ownership are rejected
+rather than inferred from an address. Concrete types and external callees can remain
+unresolved in the sparse program.
+
+Record the bounded question, pinned build/hash, exact entries, and instruction
+cross-checks in the task brief. Use fresh, separate ignored output and database
+directories. Save an invocation like the following in a task-specific `.ps1`, then
+validate/execute that entire script through `Invoke-CodexPowerShell.ps1`. Substitute
+a unique run identifier for `my-new-run`; existing destinations are rejected.
+
+```powershell
+$toolRunner = 'C:\Users\Austin\.codex\tools\reverse-engineering\Run-Tool.ps1'
+$queryArguments = @(
+    'C:\Code\NewWorldPreservation\scripts\ghidra_function_slice.py',
+    '--image', 'C:\Program Files (x86)\Steam\steamapps\common\New World\Bin64\NewWorld.exe',
+    '--expected-sha256', '8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e',
+    '--functions', '0x141717fc0', '0x146af2340', '0x1461ad130',
+    '--output', 'C:\Code\NewWorldPreservation\.scratch\my-new-run\output',
+    '--project', 'C:\Code\NewWorldPreservation\private\ghidra\my-new-run',
+    '--timeout', '30'
+)
+& $toolRunner -Tool python -ArgumentList $queryArguments
+if ($LASTEXITCODE -ne 0) { throw 'Static query failed or was partial; inspect its private receipt.' }
+```
+
+The example entries belong to the pinned current player-construction investigation;
+they are not universal addresses for other builds. Each decompile has a one-to-sixty
+second timeout (default30); import/JVM/project-save time is additional. The helper
+refuses a mismatched image hash, ambiguous/unbacked or overlapping code, excessive
+selection, non-private destinations, dot-prefixed database segments, and output
+reuse. It rechecks the image after analysis. `receipt.json` retains exact code-span,
+script and output hashes, Git state, tool versions and completed/partial/failed
+results. Failed or partial output does not qualify as successful decompilation.
+Raw `.c`, errors and the analysis database remain ignored; publish only original
+sanitized receipts. Whole-image analysis requires a concrete reason and bounded
+resource/time plan in the task brief.
+
+Verification on October5 completed all three example functions in the shared
+Ghidra12.1.4/PyGhidra3.1.0 environment; the earlier whole-image attempt for those
+entries had produced no decompilation. [Original validation receipt](../research/evidence/ghidra-function-slice-validation.json).
+This establishes the helper's static operation, not a member wire schema, player
+construction at runtime, or Milestone1.
+
 ## Evidence and project boundaries
 
-Start static work at the [current configuration/provider-to-REP boundary](ROADMAP.md#exact-next-blocker).
+Start static work at the [current player-construction/member boundary](ROADMAP.md#exact-next-blocker).
 Pin the client build/hash, analyzed functions and script/database identity. A
 decompiler result is source inference and can contain incorrect recovered types;
 check material joins against instructions and data flow. Static findings do not

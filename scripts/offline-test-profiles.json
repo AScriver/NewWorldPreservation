@@ -36,6 +36,7 @@
     ],
     "tooling": [
       "tests/test_client_config_archive_metadata.py",
+      "tests/test_ghidra_function_slice.py",
       "tests/test_project_preflight.py",
       "tests/test_offline_runner.py"
     ],
