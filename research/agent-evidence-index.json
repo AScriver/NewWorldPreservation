@@ -12,6 +12,33 @@
   },
   "boundaries": [
     {
+      "id": "current-player-construction-contract",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K186",
+        "K187",
+        "K188",
+        "K189",
+        "K190"
+      ],
+      "docs": [
+        "docs/PLAYER_CONSTRUCTION_JOIN.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-construction-join.json",
+          "classification": "source-inference",
+          "scope": "#208 exact current replication-member application and separate PlayerComponent/facet/registry paths, precise missing entity/ownership joins and separately recorded offline verification"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Static missing-join research outcome only; concrete member implementation, fresh gameplay entity binding, allocation/guard authority and lifecycle order remain unknown. No codec/payload/client trial;209 designation/readiness and generic subscriber route deferred."
+    },
+    {
       "id": "current-type8-recipient-member-parser",
       "roadmapTasks": [
         "M1-06A"
@@ -823,6 +850,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-construction-join.json",
     "research/evidence/carrier-registration-client-progress.json",
     "research/evidence/current-self-ident-default-contract.json",
     "research/evidence/current-actor-callback-validation.json",

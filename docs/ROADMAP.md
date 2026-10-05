@@ -1,5 +1,17 @@
 # Milestone 1 roadmap
 
+#208 source result, October5: current replication members are joined through their
+resolved factory, decoder and retained entry to application141717fc0. A separate
+fresh PlayerComponent factory/facet/general PlayerRegistry route is now pinned.
+The exact connecting member implementation, fresh gameplay entity binding,
+component/guard authority and lifecycle order remain unknown. This satisfies
+#208's bounded missing-join research outcome; it establishes no current player
+schema, encoding or gameplay. [Construction report](PLAYER_CONSTRUCTION_JOIN.md),
+claims K186-K190 and [original receipt](../research/evidence/current-player-construction-join.json)
+record corrected counter-evidence and fresh source/offline verification. Only208
+was worked under workItemId164;209 designation/readiness and the generic subscriber
+route stay deferred. Parent177/164 acceptance remains open; no further task begins.
+
 #207 source result, October5: the pinned current type8 decoder now has an exact
 conditional static join through GameMessagePort's dedicated descriptor branch to
 owner consumer `0x14175ccc0`, record parser `0x146af20d0` and member parser

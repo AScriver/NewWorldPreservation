@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current player construction/registry contract — October5, #208 only
+
+Current fixed-image reads at main HEADbe1a1d2e plus24 pending-file snapshots.
+Static factory/construction and member application paths are joined separately;
+their connection and authoritative entity/lifetime binding remain unknown.
+This refines K184/K176 for the selected path without changing historical trials.
+
+| ID | Claim | Classification and limits | Evidence |
+|---|---|---|---|
+| K186 | The actual factory-created replication member reaches application141717fc0 | Strongly source-supported: descriptor+48 yields factory object; create+8 returns member, decode+90 uses it;24-byte entry8 retains same pointer;14175d28b calls application, which uses member+60; reconciler uses+38/+48/+60. Member index and class selector are separate; inline state+608 slots are not the member receiver. Concrete member class/implementation remains unknown | [Construction report](PLAYER_CONSTRUCTION_JOIN.md), J208-1/2; [original receipt](../research/evidence/current-player-construction-join.json) |
+| K187 | Concrete PlayerComponent and its facet have exact fresh allocation paths | Strongly source-supported: getter1467d0250 miss branch installs factory148537160; slot0→1467ca760 alloc580→146711440. Component+B8→1467c7140 allocb20→146711870, stores component80/facet8. Cached factory identity unknown; slot8 is name getter, so parser create+8 is a different interface. Component allocation is not fresh gameplay entity construction; no mapping-file UUID match excludes no raw/adapter/transitive route | Same report J208-3/4; fixed literal/table controls and independent challenge |
+| K188 | Fresh reference defaults and lazy resolution leave entity/guard binding unjoined | Strongly source-supported defaults: component40/48/50 and60/68/70 empty,58=00000000ffffffff; resolver1417da5a0 compares same zero-extended sentinel and returns null before map lookup. Non-sentinel invalid cache uses separate-owner/map1416aecc0. Fresh entity allocator, key/tuple/map writers and guard authority remain unknown; defaults supply no gameplay identity or wire schema | Same report J208-5/8, field table and precise missing joins; seven-check width repair |
+| K189 | General PlayerRegistry retains a tuple without establishing validity or component-memory ownership | Strongly source-supported: facet1468760d0 calls registry+20=146769980 with existing component; resolver return ignored; helper1466c82a0 retains guard control but stores raw tuple even when invalid. Removal/reset/facet disposal are distinct; live?pointer:null hashing makes invalidation/removal order consequential. Synthetic1000/mask7 gives buckets5/0; no runtime bug observed. General membership is separate from209 local designation; allocation/guard owners and order remain unknown | Same report J208-6/7; fresh registry/helper/hash reads and arithmetic challenge |
+| K190 | Adjudicated bounded source checks preserve corrections and precise missing construction joins | Executed source/hash controls:79 selected functions, zero undecoded bytes,127 sealed private artifacts,43 primary checks,15 adversarial controls, seven repair checks; refreshed207/image/mapping/dirty identities. Source/document preservation and fresh workspace verification are separately recorded in receipt. Ghidra produced no used decompilation; no indirect absence proof or live creation result. Only208 research alternative closes; parent gameplay acceptance remains open | Same original receipt, final primary ledger, corrected role reports and offline run |
+
 ## Current type8 recipient/member parser join — October5, #207 only
 
 Current fixed-image read at HEAD `85becb68f5df661415e4a8642984145ce5e8bb06`, plus

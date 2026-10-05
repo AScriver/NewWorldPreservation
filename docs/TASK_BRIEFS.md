@@ -38,6 +38,40 @@ directory, and record executed cleanup versus unknown cleanup. Shared hosts, tru
 clients or fixed ports require serialization with the actual owner. A source review
 is not an experiment, and an offline test does not unlock real-client acceptance.
 
+## #208 — member to fresh player construction/registry (workItemId164)
+
+- Outcome: exact concrete member/class→fresh entity/player→general PlayerRegistry
+  construction/ownership contract with fields/lifetimes, or precise missing joins.
+- Pre-work contract: recorded in208 before source analysis, after claim/Researching.
+  C1 refreshed identities; C2 exact joins/required fields; C3 independent evidence
+  and falsification; C4 source/document/full workspace checks, preservation and
+  task-only local commit; C5 actual validation/status/claim release and stop.
+- Input: main HEADbe1a1d2e plus24 snapshotted pending files; owned image8654f01d…,
+  mappingf1e2385f…, source map07cb671a… and unchanged207 handoff. Full input hashes
+  and selected source seals are in [report](PLAYER_CONSTRUCTION_JOIN.md) and
+  [receipt](../research/evidence/current-player-construction-join.json).
+- Owner/files: primary owns that report/receipt plus only208 insertions into this
+  brief, ROADMAP, EVIDENCE_LEDGER and evidence catalog. Preserve original dirty bytes.
+- Permitted: bounded static/source inspection, private ignored helpers/databases,
+  original metadata/documents and necessary isolated offline verification.
+- Excluded:209 designation/asynchronous readiness, generic subscriber route unless
+  necessary here, other tasks/dependencies, codecs/guessed payloads/replay, clients,
+  process reads/hooks/capture/live trials/endpoints, system/trust/EAC changes,
+  upstream edits, publication/push and contributor messages.
+- Resources: distinct ignored primary/member/registry/challenge scratch; no game,
+  shared services/databases or fixed ports. Full workspace harness owns temp data
+  and its loopback child and verifies cleanup; private raw output stays ignored.
+- Rejection: generic member allocation promoted to player/entity creation; factory
+  object/table or ABI conflation; member index substituted for class selector;
+  cached branch promoted to fresh proof; retained guard promoted to memory owner;
+  defaults/insertion promoted to valid identity;32-bit sentinel sign extension.
+- Result: K186-K190 pin both static paths. Missing concrete member implementation,
+  fresh entity binding producer, memory/guard authority and lifecycle order remain
+  precise prerequisites. No encoding/gameplay unlocked;209/generic route deferred.
+- Failed approaches and cleanup: original reports/corrections and nondiagnostic
+  Ghidra attempt retained privately; exact owned helper absence checked. Verification
+  command is Test-Offline.ps1 default workspace through Invoke-CodexPowerShell.ps1.
+
 ## #207 — current type8 recipient/member parser join (workItemId164)
 
 - Outcome: exact decoder→descriptor/key→registration/recipient→member parser join,

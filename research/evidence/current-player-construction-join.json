@@ -1,0 +1,1204 @@
+{
+  "schema": 1,
+  "task": {
+    "id": 208,
+    "workItemId": 164,
+    "parentId": 177,
+    "roadmapTask": "M1-06A.2",
+    "outcome": "bounded static missing-join research completed; positive player construction remains unproved"
+  },
+  "createdUtc": "2026-10-05T20:00:06.497048+00:00",
+  "classification": "source-inference",
+  "preWorkContract": {
+    "recordedBeforeAnalysis": true,
+    "onlyClaimedTask": 208,
+    "initialPhase": "Researching",
+    "outcome": "join concrete current member/class/factory to fresh entity/player and general PlayerRegistry construction/ownership, or isolate precise missing joins with fields/lifetimes",
+    "permitted": [
+      "pinned owned-image disk/static reads",
+      "necessary read-only reference/source inspection",
+      "isolated ignored analysis output",
+      "original sanitized metadata/documents",
+      "necessary offline verification"
+    ],
+    "completionChecks": [
+      "C1 refresh build/image/mapping/relevant dirty/report identities",
+      "C2 exact joins or precise missing boundaries and required fields/lifetimes",
+      "C3 independent forward/backward source evidence and adversarial falsification",
+      "C4 source/document/full-workspace verification, preservation and task-only local commit",
+      "C5 reconcile validation/status/claim release and stop"
+    ],
+    "excluded": [
+      "209 designation/asynchronous readiness",
+      "generic subscriber route unless necessary here",
+      "other tasks/dependencies/implementation",
+      "codecs/guessed payloads/replay",
+      "clients/process reads/hooks/capture/live trials/endpoints",
+      "hosts/certificates/EAC/upstream changes",
+      "publishing/push/contributor messages"
+    ]
+  },
+  "checkout": {
+    "branch": "main",
+    "analysisHead": "be1a1d2e2c129e85c3d6506146e6b6bb3a606838",
+    "initialStagedPaths": [],
+    "preExistingPendingCount": 24,
+    "baseline": {
+      "path": ".scratch/construction-208-primary-20261005T1927Z/baseline.json",
+      "sha256": "043e593fd7b0cdb2aa0f8d588a220ed7c764518c48e58c590e5b65f73e8a42c5"
+    },
+    "pendingFileIdentities": [
+      {
+        "path": "AGENTS.md",
+        "status": " M",
+        "bytes": 8266,
+        "sha256": "e79c71c4c52e25ff42fcd4577305d24274a7071dd45552a2a2ea5053e40e8f49"
+      },
+      {
+        "path": "docs/CARRIER_REGISTRATION_TRIAL.md",
+        "status": " M",
+        "bytes": 28281,
+        "sha256": "0dc5aa42fc76b45db623b546b4af0b16560fb7ef2544987e8ca24c3cea14212b"
+      },
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "status": " M",
+        "bytes": 120372,
+        "sha256": "1ab72d240c6933f4aba0db51f615e92c2f81c3cdfd97e113fb4698c55898212f"
+      },
+      {
+        "path": "docs/FRIDA_PRIVATE_DTLS_TRIAL.md",
+        "status": " M",
+        "bytes": 9763,
+        "sha256": "ec67398c6afa7a308f0687877fc247d5f4553880ed0ae59a9458ac94f03bf39d"
+      },
+      {
+        "path": "docs/REGISTRATION_MAINTAINER_QUESTION.md",
+        "status": " M",
+        "bytes": 9190,
+        "sha256": "31697e72d53753c5f021cfa54cda25101747fe6362bdab0f964e767f3c56106a"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "status": " M",
+        "bytes": 61857,
+        "sha256": "39004033d497dad5ef7d6f7d182f88cb72959577b6ed7eb835b4a849eb88e8aa"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "status": " M",
+        "bytes": 23517,
+        "sha256": "856ba6e072ed4c949e59ac8f5aa7f2e1d517a47cc4d8090d24920393e0a641dc"
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "status": " M",
+        "bytes": 40665,
+        "sha256": "fa54d96759499298db875fe1f4bc7c276983722c292f933eb1b4bfc9d47ee44d"
+      },
+      {
+        "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+        "status": " M",
+        "bytes": 29600,
+        "sha256": "fd6f5911d6b2e2eb622ac471d374d1118af052571e4d6541c1e43c1bdfed66c8"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "status": " M",
+        "bytes": 38675,
+        "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+      },
+      {
+        "path": "scripts/current_self_ident_default.py",
+        "status": " M",
+        "bytes": 1144,
+        "sha256": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22"
+      },
+      {
+        "path": "scripts/frida_client_trial.py",
+        "status": " M",
+        "bytes": 25714,
+        "sha256": "f38bbb4f79ee9edcac93dadc59bef023e15c0a84b878b261b85028c9e9132b1a"
+      },
+      {
+        "path": "scripts/frida_trial_observer.js",
+        "status": " M",
+        "bytes": 5346,
+        "sha256": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1"
+      },
+      {
+        "path": "tests/carrier_registration_smoke.py",
+        "status": " M",
+        "bytes": 14387,
+        "sha256": "f144bb979d2f9333e8f9cd1a3e90a4fdf366b3a4ec62dc8b90d4fa4e6005065c"
+      },
+      {
+        "path": "tests/test_carrier_registration_probe.py",
+        "status": " M",
+        "bytes": 38961,
+        "sha256": "4866e892a7661c9e798626ba804c5c10db13b2b787f23aa3a279f929f9bcc5a8"
+      },
+      {
+        "path": "tests/test_frida_client_trial.py",
+        "status": " M",
+        "bytes": 16601,
+        "sha256": "a26479ca424538d066592b0d340cc6e5dcfc3d8f10b0dc0c53ff29a8943349a9"
+      },
+      {
+        "path": "research/evidence/current-context-gate-contract.json",
+        "status": "??",
+        "bytes": 3342,
+        "sha256": "db686d1cce9387ca10575a881a4f4e23ccc16fee00fee295416a285308d91317"
+      },
+      {
+        "path": "research/evidence/current-context-gate-trial.json",
+        "status": "??",
+        "bytes": 19798,
+        "sha256": "5668910de6b7053327e630db55378557a209fd91b3c5f02875db6b52ceba70ee"
+      },
+      {
+        "path": "research/evidence/current-context-gate-validation.json",
+        "status": "??",
+        "bytes": 4916,
+        "sha256": "0d749322db4e4e15ed902e302eae2b86ab40e67ae3952bdd8426b8c62d8e603e"
+      },
+      {
+        "path": "research/evidence/current-player-spawn-source-map.json",
+        "status": "??",
+        "bytes": 9937,
+        "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-contract.json",
+        "status": "??",
+        "bytes": 2373,
+        "sha256": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-trial.json",
+        "status": "??",
+        "bytes": 22962,
+        "sha256": "16615564497c82f6b8f3fa1ab766d7145cce7236869335b515cc5cbd18925cf9"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-validation.json",
+        "status": "??",
+        "bytes": 5492,
+        "sha256": "d965463569871ca9fd5c2eaf8ac740940e72dd97ee046ececd45b5dfc88299d7"
+      },
+      {
+        "path": "tests/frida_context_gate_observer.test.cjs",
+        "status": "??",
+        "bytes": 6781,
+        "sha256": "850f4624e46b72b4e58630021556640a6d490c31fed4c0cb38c3bea74cae3f4c"
+      }
+    ],
+    "preservationRule": "unchanged private baseline bytes after removing only208 insertions from four shared documents"
+  },
+  "image": {
+    "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "bytes": 179204176,
+    "fileVersion": "1.400.6031.6004151",
+    "steamAppId": 1063730,
+    "steamBuildId": "22469132",
+    "steamMetadataSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "checkedUtc": "2026-10-05T19:55:17.496009+00:00",
+    "scope": "on-disk image; no client execution/process observation"
+  },
+  "mapping": {
+    "privateFile": "private/frida-trials/run-20261004T1733/client/typeindex.json",
+    "sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "nullFirst": true,
+    "uniqueBundleIndex": 8,
+    "componentAndFacetUuidAbsentFromThisFileOnly": true,
+    "limit": "raw UUID class path/another registry/adapter/transitive construction not excluded or proved"
+  },
+  "inputs": [
+    {
+      "path": "docs/TYPE8_RECIPIENT_JOIN.md",
+      "sha256": "3419498faccba24c59799bcf395beb6512056fdedf656298d6c1df5a9e4807f4"
+    },
+    {
+      "path": "research/evidence/current-type8-recipient-join.json",
+      "sha256": "83b55f90333ea2603d5b692203909702ec9b355163bdaf6b78953f0d2561d7d5"
+    },
+    {
+      "path": "research/evidence/current-player-spawn-source-map.json",
+      "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "20bdf5009f6c9a2bd2a140631b4d4a1961ad97e3b458e423fcd5098ada8cb8f2"
+    }
+  ],
+  "references": [
+    {
+      "name": "firstLight",
+      "expectedCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+      "status": "ready",
+      "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+      "commitMatches": true,
+      "originMatches": true,
+      "clean": true,
+      "fixture": {
+        "path": "info/nw-login-safe-20260502-153840/messages-redacted.txt",
+        "expectedSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+        "sha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+        "matches": true
+      }
+    },
+    {
+      "name": "aeternumWorld",
+      "expectedCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+      "status": "ready",
+      "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+      "commitMatches": true,
+      "originMatches": true,
+      "clean": true
+    }
+  ],
+  "runtime": {
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "powershell": "7.6.6",
+    "dependencyLockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "game": "not run or observed"
+  },
+  "claimIds": [
+    "K186",
+    "K187",
+    "K188",
+    "K189",
+    "K190"
+  ],
+  "claims": [
+    {
+      "id": "J208-1",
+      "ledgerId": "K186",
+      "status": "strongly source-supported",
+      "join": "separate member index and class selector;146af2340\u21921461ad130/1461acfe0\u21921461650e0\u2192descriptor48/getter1406d97d0\u2192factory+8; member+90 decode"
+    },
+    {
+      "id": "J208-2",
+      "ledgerId": "K186",
+      "status": "strongly source-supported",
+      "join": "same created pointer\u219224-byte entry8\u2192consumer14175ccc0 call14175d28b\u2192141717fc0 member+60;14172ce70+38/+48/+60",
+      "limit": "concrete callbacks unknown; inline state608 slots separate"
+    },
+    {
+      "id": "J208-3",
+      "ledgerId": "K187",
+      "status": "strongly source-supported",
+      "join": "PlayerComponent getter1467d0250 fresh branch\u2192factory148537160/slot0\u21921467ca760 alloc580/align10\u2192146711440",
+      "limit": "slot8 name getter146824820; different member ABI; cached object identity unknown; not gameplay entity allocation"
+    },
+    {
+      "id": "J208-4",
+      "ledgerId": "K187",
+      "status": "strongly source-supported",
+      "join": "component148536b70+B8\u21921467c7140 allocb20/align10\u2192146711870/facet148535728;component80=facet/facet8=component"
+    },
+    {
+      "id": "J208-5",
+      "ledgerId": "K188",
+      "status": "strongly source-supported",
+      "join": "1416184e0 empty reference defaults and key58=00000000ffffffff;1417da5a0 same sentinel; separate owner14100a290/map1416aecc0 for non-sentinel invalid cache",
+      "limit": "entity/map/key/guard producers unknown"
+    },
+    {
+      "id": "J208-6",
+      "ledgerId": "K189",
+      "status": "strongly source-supported",
+      "join": "facet1468760d0 call146876d30\u2192registry+20=146769980\u21921466c82a0 raw tuple/control retention",
+      "limit": "ignored resolver result; storage does not enforce validity or prove component-memory ownership"
+    },
+    {
+      "id": "J208-7",
+      "ledgerId": "K189",
+      "status": "strongly source-supported effects; order unknown",
+      "join": "general removal14690b000; local clear146916bc0; reference reset1417abef0; facet cleanup14686fac0 general removal at14686fe21; component disposal14164b5a0",
+      "limit": "guard invalidation/removal/disposal ordering unjoined"
+    },
+    {
+      "id": "J208-8",
+      "ledgerIds": [
+        "K188",
+        "K189",
+        "K190"
+      ],
+      "status": "unknown",
+      "join": "member callback\u2192fresh PlayerComponent; fresh gameplay entity binding; component/guard authority; lifecycle order"
+    }
+  ],
+  "classes": {
+    "component": {
+      "name": "PlayerComponent",
+      "uuid": "D50340CF-A082-4B90-9933-8C42387C0C77",
+      "primaryTable": "0x148536b70",
+      "factoryTable": "0x148537160"
+    },
+    "facet": {
+      "name": "PlayerComponentClientFacet",
+      "uuid": "68AF28ED-E426-49C1-9502-B1E97F6EA047",
+      "primaryTable": "0x148535728"
+    },
+    "replicationMember": null,
+    "validPlayerWireSchema": null
+  },
+  "requiredMissingJoins": [
+    {
+      "id": "MJ208-1",
+      "boundary": "selected class descriptor48/factory create8/member decoder90/application38/48/60\u2192PlayerComponent create1467ca760",
+      "prerequisite": "concrete class selection and callback implementation or adapter, not member index alone"
+    },
+    {
+      "id": "MJ208-2",
+      "boundary": "fresh gameplay entity allocation\u2192component58 key/40/48/50 tuple\u2192owner map writer/context",
+      "prerequisite": "valid key and binding producer with object/context identity"
+    },
+    {
+      "id": "MJ208-3",
+      "boundary": "component allocation/control/guard\u2192authoritative memory owner and guard invalidation writer",
+      "prerequisite": "allocation owner, guard creation and control semantics"
+    },
+    {
+      "id": "MJ208-4",
+      "boundary": "construction/binding/facet activation\u2192general registration\u2192invalidation/removal/reset/disposal",
+      "prerequisite": "callback/order invariant or compensating reindex/removal"
+    }
+  ],
+  "verification": {
+    "source": {
+      "status": "passed",
+      "receipt": {
+        "path": ".scratch/construction-208-primary-20261005T1927Z/source-verification.json",
+        "sha256": "cc388c977a8c469332a52f13a21335a3d555499492b85f7d5f56dc5918bbc46b"
+      },
+      "script": {
+        "path": ".scratch/construction-208-primary-20261005T1927Z/verify-sources.py",
+        "sha256": "f94653bcda55126956175022aebd39e888bb153e24b3b8379a8ff6f2e45ce3be"
+      },
+      "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/construction-208-primary-20261005T1927Z/run-verify-sources.ps1 -Execute",
+      "checkedUtc": "2026-10-05T19:55:17.496009+00:00",
+      "uniqueFunctions": 79,
+      "undecodedSelectedBytes": 0,
+      "sealedArtifactsVerified": 127,
+      "primaryControls": 43,
+      "adversarialControls": 15,
+      "sentinelRepairControls": 7,
+      "preEditPendingBytesPreserved": 24,
+      "functions": [
+        {
+          "target": "0x146154ed0",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-146154ed0.txt",
+          "sha256": "49dfa7901bda6bf5a1e3d24162b02c1a608931f7c2753296a7f302dda22f583f"
+        },
+        {
+          "target": "0x1461673b0",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-1461673b0.txt",
+          "sha256": "cfee47c61260edb23f7fe05528fb67c78058fe7fd898a8498da0d873bd6d8504"
+        },
+        {
+          "target": "0x146b6e190",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-146b6e190.txt",
+          "sha256": "334eab48a4276d03a24ea4b9ebd52ff23ba679b0c8287214e269d5ff0ba8e9e2"
+        },
+        {
+          "target": "0x146162150",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-146162150.txt",
+          "sha256": "ce7b4cc5cdd1e5d71ba9c03ef814e57aa0cd563e98647b880eb91b6cd672c4f8"
+        },
+        {
+          "target": "0x1461650e0",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-1461650e0.txt",
+          "sha256": "308353a549fda25a7aab2bf95d2e033f3e23496d14419989e87d58a32b739f2b"
+        },
+        {
+          "target": "0x1461acfe0",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-1461acfe0.txt",
+          "sha256": "b26bf49cb4b725ceba17035328cf29331da1afc85ce8c6c8d2e22ee169e2044c"
+        },
+        {
+          "target": "0x1461ad130",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1461ad130.txt",
+          "sha256": "715655b376754d66edec10b05d86f5d52367ee5a6100c502a7005c807e7971f3"
+        },
+        {
+          "target": "0x1406d97d0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1406d97d0.txt",
+          "sha256": "61a71cece4c5e4d3a25bffad7bd98ba7443aa3cd4458d74d96407d52be80934f"
+        },
+        {
+          "target": "0x1465827c0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1465827c0.txt",
+          "sha256": "5152159ace3d9d1e2057bf2668cb6b4d06409720bfe0ed883f7ff7f5746a5eb1"
+        },
+        {
+          "target": "0x141048fe0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-141048fe0.txt",
+          "sha256": "9d485f1ff690da4a94e5e05d802366f9f66d2bdc3f5678decf924b489afc5b91"
+        },
+        {
+          "target": "0x146824820",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146824820.txt",
+          "sha256": "a66d055a2290d40d59abe146981fb4bf40d9d80323682027ad70606471826fcf"
+        },
+        {
+          "target": "0x1469480d0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1469480d0.txt",
+          "sha256": "4237182c9191ba00526ff813e96418446111618e77e8f4097ecf7153cf7adcfb"
+        },
+        {
+          "target": "0x1468bec90",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1468bec90.txt",
+          "sha256": "530e72fc41a5e8849b6da22a07ef400752768e646f35aad4e81f649bb52b3149"
+        },
+        {
+          "target": "0x1407f7d80",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-1407f7d80.txt",
+          "sha256": "5c3ee85d145b52e3c1523b192ca7e72f110bd331c215e9e3383c2d3cb3aa857f"
+        },
+        {
+          "target": "0x140878610",
+          "path": ".scratch\\construction-208-primary-20261005T1927Z\\fn-140878610.txt",
+          "sha256": "58904a1e157a18528121f89b3fb2e2b6856895016e6b8282e987e7245317a462"
+        },
+        {
+          "target": "0x146711870",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-146711870.txt",
+          "sha256": "126a6d791e944e805db07774e78547f573f99ebd627d25052efcf72be7655526"
+        },
+        {
+          "target": "0x1467308a0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1467308a0.txt",
+          "sha256": "f2ec465573456fbde42233971399f4c8c03637e50c6d185a090a28aae6fad84b"
+        },
+        {
+          "target": "0x146710760",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146710760.txt",
+          "sha256": "7aa36f872b0b3b5940c839300d39ccd7d08cfbd6d7aba9f60fd92eb1f294d740"
+        },
+        {
+          "target": "0x146710e20",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146710e20.txt",
+          "sha256": "7aeb622d1518fd129419c400efa719daf7ebb3982a8bb94efe2964831e7b5f8d"
+        },
+        {
+          "target": "0x146711440",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-146711440.txt",
+          "sha256": "03f77d34d50f2cf3995daa4337cfc7458001a7b230956f0e78ee8ab5f73b9327"
+        },
+        {
+          "target": "0x1467d0250",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1467d0250.txt",
+          "sha256": "9eda545d2f1b97cd52bfdfb704b2819713b2b1eb26f26d7c888e1c8ea2eef4c2"
+        },
+        {
+          "target": "0x1417abfc0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1417abfc0.txt",
+          "sha256": "7d1a7b41d2e5b98fff5ec28d780acc6a5084c90edc106d3f629475dc5f380700"
+        },
+        {
+          "target": "0x1467ca760",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1467ca760.txt",
+          "sha256": "8f81525161e79df01e66a645b81b3891d520b047b8ec40f29b92c053a774cb30"
+        },
+        {
+          "target": "0x1416184e0",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1416184e0.txt",
+          "sha256": "9b575c95adec83ebd6c68a6032dc015f408b58e83ef1c1aea4113365702aedce"
+        },
+        {
+          "target": "0x14675f260",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14675f260.txt",
+          "sha256": "e225cd16476103902ece5204db48f6bfb6ff4daab7ae168872abd01d50aaaf6f"
+        },
+        {
+          "target": "0x1468760d0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1468760d0.txt",
+          "sha256": "49de7d5c23ac323f1ea506bae80387d3d210643c100052ef50e1f662b1d8aa19"
+        },
+        {
+          "target": "0x14686fac0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14686fac0.txt",
+          "sha256": "a4848c5727f0af9b1f6ee3e849193ff2dccf1473e2034775c8cae0884ae58907"
+        },
+        {
+          "target": "0x14656aaf0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14656aaf0.txt",
+          "sha256": "f5e2171dc8e69a3a5f6296fde88098d17a478d608b13a10dc6e9ebebe03161ee"
+        },
+        {
+          "target": "0x1406ec930",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1406ec930.txt",
+          "sha256": "a24c5794b8470a81b54871edab053fb530b999a59a23b6dc1d90a375d7b22779"
+        },
+        {
+          "target": "0x14656ff00",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14656ff00.txt",
+          "sha256": "b9fb5492e099bcbfba211182820fb5246bea1a2d15d19a041906731955a9b372"
+        },
+        {
+          "target": "0x1467bf0c0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1467bf0c0.txt",
+          "sha256": "837af47d2016ca440f20258d207aec8c83cd2cd9c5b82168d49923f371f79c5e"
+        },
+        {
+          "target": "0x1467c7140",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1467c7140.txt",
+          "sha256": "232b17a73648f83b38bb67973007af3cc48c560a4d56b34b88120c3fef9c6df7"
+        },
+        {
+          "target": "0x1416183d0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416183d0.txt",
+          "sha256": "4708b43c20170a18f4eed3719c08497069ae53c7d977c5f757e3826435db659f"
+        },
+        {
+          "target": "0x14688d000",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14688d000.txt",
+          "sha256": "82646c6ea31fff1e9382276ac40ae6ddbc2652d98ddbc35ca548cd8b345e3bee"
+        },
+        {
+          "target": "0x14689ce20",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14689ce20.txt",
+          "sha256": "8f0de0ff8eb5edef22a014d32ec3482e339224df8f56fd751e2218ecb485482f"
+        },
+        {
+          "target": "0x146875ea0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146875ea0.txt",
+          "sha256": "456d3f73b1b0f565e3f0b38f69734043c28361b34c0244ef345e4ce988e8d437"
+        },
+        {
+          "target": "0x14686f9b0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14686f9b0.txt",
+          "sha256": "7bfb4976a90eb111047bad20024a9687d91f1db71ed9835bebb95f89f55c899c"
+        },
+        {
+          "target": "0x146730530",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146730530.txt",
+          "sha256": "ed0de2910afa9da5f4ff63eb68e9fe0753ffd167441466df6884affadf5844a6"
+        },
+        {
+          "target": "0x1416af4b0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416af4b0.txt",
+          "sha256": "eab7a9b7b09fae3389fbc5435eee48b8c8bb98b5895825aae8e3fa2dddefbddb"
+        },
+        {
+          "target": "0x14171a8b0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14171a8b0.txt",
+          "sha256": "9fa19a083ee9c0e55e74d52780f3e97003fceccc8f2a5f52d1c6f1a95f45886f"
+        },
+        {
+          "target": "0x1416a1340",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416a1340.txt",
+          "sha256": "dd5d70f7c5108ef44882da5bb2fa8eff7b8c84d97062b78b068b7021c5d25aab"
+        },
+        {
+          "target": "0x1417be340",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1417be340.txt",
+          "sha256": "3fde535a9a97782f7cd1d4d738c9c771894b1152fef0f3909012e524f9639401"
+        },
+        {
+          "target": "0x1416b69c0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416b69c0.txt",
+          "sha256": "632d7dbbd6a90d22f10eb7c1d308c895df611bd641af94d8c876a6a12a3ff763"
+        },
+        {
+          "target": "0x1416b6940",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416b6940.txt",
+          "sha256": "f71e92b278867c4616cd3e796d0decb0aeea2d7e76d5981e97658aa7dec0a40d"
+        },
+        {
+          "target": "0x141677290",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-141677290.txt",
+          "sha256": "0e420e2e11255cec0a727e9ac45d63ccd8b29825d0b804575d72c1a2d886ebbe"
+        },
+        {
+          "target": "0x1417aae90",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1417aae90.txt",
+          "sha256": "5b9f5e5d6b5f6f9518709ff84fc04c7f5da2ff07d196361bd2ceb14541cca8f8"
+        },
+        {
+          "target": "0x1417aaec0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1417aaec0.txt",
+          "sha256": "b00ce6e26cdab5bf481faa5c5dc415e06102d0c3702802929f21414c5f34ed23"
+        },
+        {
+          "target": "0x1417abef0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1417abef0.txt",
+          "sha256": "66e52e4115b9f2e5b6b984f9b38109a1b0a812d400a23fe9d01da7ae0c42cfc1"
+        },
+        {
+          "target": "0x14670fa60",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14670fa60.txt",
+          "sha256": "654ef37af349c66de25d4e86ea59e47461e424a61eba35ca80d876e625b06145"
+        },
+        {
+          "target": "0x14164b5a0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14164b5a0.txt",
+          "sha256": "185a056bb371b7f5d1605bd99c81ba6b6c9addbe697bf50b378daa5a6c472d94"
+        },
+        {
+          "target": "0x1416aecc0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1416aecc0.txt",
+          "sha256": "2f3ec8a813833073b5392dcb148bd3b62b96aa38451f4c0e73d35340f35c6ca6"
+        },
+        {
+          "target": "0x14100a7a0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14100a7a0.txt",
+          "sha256": "a1b21c58b408f392e2cfe17b6725aaf78a4b94ab386ff81b251ff98b6975c525"
+        },
+        {
+          "target": "0x141026080",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-141026080.txt",
+          "sha256": "3e9890b36a4f6cb745836f928513b2e3fe176515377c95d5ca9974bdee08d7ff"
+        },
+        {
+          "target": "0x146869b30",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146869b30.txt",
+          "sha256": "389cf45e59b47accad795577315a9c0e7c2894178e5cde16d38e9001ce7d5302"
+        },
+        {
+          "target": "0x14689d070",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14689d070.txt",
+          "sha256": "b4761f111dc47e47ec4f63bd42e04c2aef337f77921de6a04a6ffd33f9093f3b"
+        },
+        {
+          "target": "0x146583010",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146583010.txt",
+          "sha256": "6f7b70c23a06e11dbdba24d89e3f85f5c2a4221273907a8a5fec42a2468d2603"
+        },
+        {
+          "target": "0x146583020",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146583020.txt",
+          "sha256": "2f377f8ae7e7e59bb5a32f2aa0c0ad41cef0530cec27c636bd3b61f484ff81b9"
+        },
+        {
+          "target": "0x146769980",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-146769980.txt",
+          "sha256": "5b8428cab82a52e4adc1104e3bbda7a5f5f2cc1b6194a7203c5a350a72272e43"
+        },
+        {
+          "target": "0x14690b000",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-14690b000.txt",
+          "sha256": "ad654efd91ecdc19dd75b056f7ce13946a9e54d55272ddcd0161abd4befdd83b"
+        },
+        {
+          "target": "0x14675f3f0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14675f3f0.txt",
+          "sha256": "b03a02c5274a8be604c399b8b086674f3f0cef2e850f1b838538c1ce3c6a479a"
+        },
+        {
+          "target": "0x146928d80",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146928d80.txt",
+          "sha256": "939bd2bd80d61f3abb400e76c93592520ed15be8615281cfa7c9dbcc3115497e"
+        },
+        {
+          "target": "0x146800d10",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146800d10.txt",
+          "sha256": "204af9686f167e5569ab4dced7440ea143dd79a1a9be6c6b2d25332b33144738"
+        },
+        {
+          "target": "0x14683c8d0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-14683c8d0.txt",
+          "sha256": "bb0ea12c5794d958022b78ba348726d8a4f49b3271d62bc7fd8de8f72e008625"
+        },
+        {
+          "target": "0x146764cd0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146764cd0.txt",
+          "sha256": "00dfde8c59f84662b28cb05de2c940b520d591c1b859530116ad8ac6379e56c2"
+        },
+        {
+          "target": "0x146713f00",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146713f00.txt",
+          "sha256": "8ab9131946ad2918ddc1bee6a74f133202dafe28a7aaf18e1fd3c7e020622aff"
+        },
+        {
+          "target": "0x146916bc0",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-146916bc0.txt",
+          "sha256": "3d62b02a7dca8ce32f03c125b78fe080514270b88c0b1bbb812f8cc3bab4f7e4"
+        },
+        {
+          "target": "0x1417da5a0",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1417da5a0.txt",
+          "sha256": "8b85779177d847352a77d0d7f551ded1db1756bffc7c426fdba7051ae7028b57"
+        },
+        {
+          "target": "0x1406c6a00",
+          "path": ".scratch\\construction-208-registry-20261005T1929Z\\fn-1406c6a00.txt",
+          "sha256": "32768e0a42dba169ef9a75cff3659393d106971de91970163f89e9c5559c7f68"
+        },
+        {
+          "target": "0x14178db00",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-14178db00.txt",
+          "sha256": "28be2675631e76ddf6148acb79e4a5d337a78aff5e147e3a3eea1172d948bea9"
+        },
+        {
+          "target": "0x1416b71e0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1416b71e0.txt",
+          "sha256": "c442672db85cf75b078971c368cfb6f57ad46d052661edb7fe7da02861dc0efa"
+        },
+        {
+          "target": "0x14172ce70",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-14172ce70.txt",
+          "sha256": "2c1c9005b1edc95ef642896e6f01d5593fe59e6f596535b8c5f349d8daf4a83b"
+        },
+        {
+          "target": "0x14175ccc0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-14175ccc0.txt",
+          "sha256": "f4f5ce9eda66d067325be00777d81a824038a1ea3057a531e39ebcc24c4ea97b"
+        },
+        {
+          "target": "0x141717fc0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-141717fc0.txt",
+          "sha256": "d8c4af3d2b1757360fa71df8dfaed4b70944dfa05cffd05fd55633f00a24d426"
+        },
+        {
+          "target": "0x146af2340",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-146af2340.txt",
+          "sha256": "d5cf717af27917ba3872190bdcdcba04f8db478c13ec9426daffe66840f56640"
+        },
+        {
+          "target": "0x1406d97b0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1406d97b0.txt",
+          "sha256": "f2812223cb6721b1bed80328b8d2e97eeecb70a81411e9ce344ff24c422de1b5"
+        },
+        {
+          "target": "0x1406c10a0",
+          "path": ".scratch\\construction-208-member-20261005T1929Z\\fn-1406c10a0.txt",
+          "sha256": "dc255c342d50edc1be45444eb8424942d904c604e21e25228e25d7fad62ac4f7"
+        },
+        {
+          "target": "0x1466c82a0",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1466c82a0.txt",
+          "sha256": "b50db85d89b74dbeca54921f9fa67d18a1d79d23ac3f414fc34585d00fdb595b"
+        },
+        {
+          "target": "0x1412f3d40",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1412f3d40.txt",
+          "sha256": "0e3572d3ad9f44fa05d496123999308b1a436796522c95374fead5b387515292"
+        },
+        {
+          "target": "0x1414a0fa0",
+          "path": ".scratch\\construction-208-challenge-20261005T1940Z\\fn-1414a0fa0.txt",
+          "sha256": "c4f008f022d544de1fd66ca569c8253490091a4e186353ce39cc263308dddf64"
+        }
+      ],
+      "extractionAndSealReceipts": [
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/extraction-4bd3e0fef7e6.json",
+          "sha256": "c3d36726cb42f1ad9f3d7133ae4bd7be39c471b30f2e11e5f7ce85af4aecd1e2"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/extraction-7293335d2e99.json",
+          "sha256": "124056a022e333db16a244f459ce0b9b1845e069941db6ed354d096fd111cefe"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/extraction-8a32087148dc.json",
+          "sha256": "55732c689aea02fcdbaa1d3dc9b9ef85afa101e57236c91efa839617df56ba4f"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/extraction-a9a40a7dca12.json",
+          "sha256": "1c8f8812eb06f406323f1bafaeb309ffa1814c6288f1affb2fbf391a564e7025"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-2f98dfad54d5.json",
+          "sha256": "c4a10e5f2b03d066b140daa461eae02a1c45242c40244805b033af8a3334dba1"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-379ce983af71.json",
+          "sha256": "0580c735cb9ff84fbbea56bc9c7a55c43418d15cc7fadb6a1e9f4ae7816f12ec"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-386dafcbe61d.json",
+          "sha256": "273e9b4759e9388f0f4dafd2b9e9e9671371623f82549ae017c2f02e652ac319"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-5ba62e21891c.json",
+          "sha256": "1b85963b6a17b88675bb0f1a9e1b51ef2fc39a4a31b1e48477b87b64fbba040c"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-790a67a30dd0.json",
+          "sha256": "5d5f2f04354e3feec9cb44531827e7037536dd4660bed32d2fce13deb29a4732"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-92084d3f1036.json",
+          "sha256": "a9a1b86f625052dd0091c433eda03c6a788b39752d985dc07493e397fe149f1a"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-b00dbbb9029a.json",
+          "sha256": "e19586ab9280e5441096364fc6516ca6a14a2b32e11372132815e2e32836b3b4"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-b9e6bd2b5ca3.json",
+          "sha256": "e97bdc64f0d507c5cef28a8bfc7e7295149586adff91867388b07d568d535a7a"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-c0e4a336fbcd.json",
+          "sha256": "8692399724873c902d9424b0204b7fe295253fb5e9a567698381962e561ce601"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-e1a0fdb54600.json",
+          "sha256": "b8c93c50ba76f5bbd0f16e704cf617372e42ff6ab2d6354457543f867fd34f37"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-ef2fc09f94b7.json",
+          "sha256": "354556c50b9bb72bd5f5debd0d193c75350144c17d6c46f8cd15d14ffa33e881"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-f26f7d30aa6d.json",
+          "sha256": "ad43b28c9179ef8de4a2919b2fc4acf6f4efc3cfa3a772ff431f26ad5f0019b0"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/extraction-f4a06ad2fb4c.json",
+          "sha256": "46fa548f05629dece8fd4050a7efbfa2a19abfc070b4574d9718cc58b61f8a0f"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-1653541077c5.json",
+          "sha256": "926693e46926fa8ad01b32d521760273d0bff39ba744e868de12e3c0be5ad7b4"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-47c6227f30c8.json",
+          "sha256": "6200781de1947724f2386bf2f56907db04156038e837596244b800a35d4dcfdf"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-5182d84b8dbf.json",
+          "sha256": "745b947940124ae278c8260b8992b91269dac5241bfcf3536f6d7690bbc05add"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-5f2e585c5167.json",
+          "sha256": "7bfa0155cb830787892d2227dc21a2457db8c2579a5d9248f0261d7073e253cf"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-96955aa9c2b3.json",
+          "sha256": "b1de62fff9746b1e7c9cd88cefbf35f319b0d7e459de3cb0629b8628f13e2bde"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-b7680f1323a9.json",
+          "sha256": "c73955344d8079978b693b4875ee042004c1ffe5eb9096c7207a331490729925"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/extraction-d20f7177efab.json",
+          "sha256": "f8bb804134bbcbe13d6604ca86eca363f57317798b6dbbf3a58c0ca2b9b1e6f0"
+        },
+        {
+          "path": ".scratch/construction-208-challenge-20261005T1940Z/extraction-202c499c3ccf.json",
+          "sha256": "7b4bc4bdde1c07f626a938b44f13e013dceb3c52e3e2e13a2a35c96d4b80199d"
+        },
+        {
+          "path": ".scratch/construction-208-challenge-20261005T1940Z/extraction-6a17bfa086ab.json",
+          "sha256": "62d27074ba5b65877cc49117a9f6f824986ab6ad9c794f0d722811fee26f8896"
+        },
+        {
+          "path": ".scratch/construction-208-challenge-20261005T1940Z/extraction-92d0191b9d2d.json",
+          "sha256": "5f0cf88ed36bb8aa0f0e6a8ce8f422223fdcbd5de65f7467324c4f6df66ffaed"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/seal.json",
+          "sha256": "7c4068b0f306e67a7149f28d7390a694650ec6ce8e445bfb609044e922f13335"
+        },
+        {
+          "path": ".scratch/construction-208-registry-20261005T1929Z/seal-v2.json",
+          "sha256": "0483ad10bd212b3a3a30e7f75c27372cac443dde8bb8f9745d15f88beb578d1f"
+        },
+        {
+          "path": ".scratch/construction-208-challenge-20261005T1940Z/seal.json",
+          "sha256": "487099fff69ee2a773f5e0e3de49c033ec5e0730421e4f71a75d4eb578b96aae"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/followup-evidence-map.md",
+          "sha256": "b600878705ea4da437c7178e73d198a93f026631ccecd5e29f365f6d6a4975e7"
+        },
+        {
+          "path": ".scratch/construction-208-member-20261005T1929Z/ghidra-cleanup-proof.json",
+          "sha256": "7a12e564c7db129f4016cce018b23de68e11b2162c8b7653b8f8f2ea22d172e6"
+        },
+        {
+          "path": "docs/TYPE8_RECIPIENT_JOIN.md",
+          "sha256": "3419498faccba24c59799bcf395beb6512056fdedf656298d6c1df5a9e4807f4"
+        },
+        {
+          "path": "research/evidence/current-type8-recipient-join.json",
+          "sha256": "83b55f90333ea2603d5b692203909702ec9b355163bdaf6b78953f0d2561d7d5"
+        },
+        {
+          "path": "research/evidence/current-player-spawn-source-map.json",
+          "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+        },
+        {
+          "path": "requirements-dev.lock",
+          "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/primary-ledger.md",
+          "sha256": "88c51c2536c15c97751f9e1127261654ee98188e1d92afb8a5c6bb345f929891"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/primary-ledger-v2.md",
+          "sha256": "daec0c799fd2e1c62cb194dee3f08c5284f898146a1d8aa3fc309393abc20ed5"
+        },
+        {
+          "path": ".scratch/construction-208-primary-20261005T1927Z/primary-ledger-final.md",
+          "sha256": "2990d7ca3a3130c1d43b51ab00389dccdaf092a2e51aaefa8eb3d2efc9311833"
+        }
+      ],
+      "limit": "executed disk/hash/literal/synthetic checks; all game behavior static inference"
+    },
+    "document": {
+      "status": "passed",
+      "receipt": {
+        "path": ".scratch/construction-208-primary-20261005T1927Z/document-verification-sealed.json",
+        "sha256": "a88590024ce7f84dad505e89fb80ee6f6095cd68170418bafe9f9bffb12ca4b7"
+      },
+      "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/construction-208-primary-20261005T1927Z/run-verify-handoff.ps1 -Execute",
+      "preExistingFilesPreserved": 24,
+      "sharedInsertions": 5,
+      "claimIds": [
+        "K186",
+        "K187",
+        "K188",
+        "K189",
+        "K190"
+      ],
+      "relativeLinksChecked": 8,
+      "sourceFunctionsBound": 79,
+      "sourceSealedArtifactsRehashed": 127,
+      "note": "Sealed document check before attaching its metadata; report/claims/source unchanged. A final separate private rerun checks the attached receipt without a self-hash cycle."
+    },
+    "workspace": {
+      "status": "passed",
+      "profile": "workspace",
+      "command": "C:\\Users\\Austin\\.codex\\tools\\Invoke-CodexPowerShell.ps1 -Path scripts/Test-Offline.ps1 -Execute",
+      "receipt": {
+        "path": ".scratch/offline-validation/run-0aw1nfe9/receipt.json",
+        "sha256": "bdab8ed3a08cc05f7f65a75e1acb29a38d4249f205b5b485e356568cb9f7d489"
+      },
+      "startedUtc": "2026-10-05T20:01:07.928727+00:00",
+      "finishedUtc": "2026-10-05T20:02:09.384935+00:00",
+      "python": {
+        "selectedFiles": 32,
+        "collected": 445,
+        "executed": 445,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "loopbackHttps": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 64231
+      },
+      "changedInputsDuringRun": [],
+      "inputCount": 167,
+      "runtime": {
+        "ready": true,
+        "python": "3.11.9",
+        "isolatedVenv": true,
+        "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+        "packages": {
+          "cffi": {
+            "expected": "2.1.1",
+            "installed": "2.1.1",
+            "matches": true
+          },
+          "colorama": {
+            "expected": "0.4.6",
+            "installed": "0.4.6",
+            "matches": true
+          },
+          "cryptography": {
+            "expected": "50.0.2",
+            "installed": "50.0.2",
+            "matches": true
+          },
+          "iniconfig": {
+            "expected": "2.3.0",
+            "installed": "2.3.0",
+            "matches": true
+          },
+          "packaging": {
+            "expected": "26.3",
+            "installed": "26.3",
+            "matches": true
+          },
+          "pluggy": {
+            "expected": "1.6.0",
+            "installed": "1.6.0",
+            "matches": true
+          },
+          "pycparser": {
+            "expected": "3.0",
+            "installed": "3.0",
+            "matches": true
+          },
+          "pygments": {
+            "expected": "2.21.0",
+            "installed": "2.21.0",
+            "matches": true
+          },
+          "pyopenssl": {
+            "expected": "26.4.0",
+            "installed": "26.4.0",
+            "matches": true
+          },
+          "pytest": {
+            "expected": "9.1.1",
+            "installed": "9.1.1",
+            "matches": true
+          },
+          "typing-extensions": {
+            "expected": "4.16.0",
+            "installed": "4.16.0",
+            "matches": true
+          },
+          "lz4": {
+            "expected": "4.4.5",
+            "installed": "4.4.5",
+            "matches": true
+          }
+        },
+        "problems": []
+      },
+      "newWorldClientTested": false,
+      "limit": "workspace/synthetic/owned-loopback harness only; no game client or player creation executed"
+    }
+  },
+  "privateEvidence": {
+    "forward": [
+      {
+        "path": ".scratch/construction-208-member-20261005T1929Z/evidence-map.md",
+        "sha256": "1631b29132881f48c8f7817ac3fae8f25c79532e3092d6df4760c53fd327e0c9"
+      },
+      {
+        "path": ".scratch/construction-208-member-20261005T1929Z/followup-evidence-map.md",
+        "sha256": "b600878705ea4da437c7178e73d198a93f026631ccecd5e29f365f6d6a4975e7"
+      },
+      {
+        "path": ".scratch/construction-208-member-20261005T1929Z/ghidra-attempt.json",
+        "sha256": "6477c5d6e638b324a2fcfd091e77a415a73d38e866b9ed82e68f65343ecbd466"
+      },
+      {
+        "path": ".scratch/construction-208-member-20261005T1929Z/ghidra-cleanup-proof.json",
+        "sha256": "7a12e564c7db129f4016cce018b23de68e11b2162c8b7653b8f8f2ea22d172e6"
+      }
+    ],
+    "backward": [
+      {
+        "path": ".scratch/construction-208-registry-20261005T1929Z/REPORT.md",
+        "sha256": "d697f86a23afb45e9abb527ef25a819273a1760f4b8647367560fc4fb1799bc4"
+      },
+      {
+        "path": ".scratch/construction-208-registry-20261005T1929Z/REPORT-ADDENDUM-1.md",
+        "sha256": "e6235565bc2636bf503ed6629750d446ccc7ff10e74b5953d135b2f7824d69de"
+      },
+      {
+        "path": ".scratch/construction-208-registry-20261005T1929Z/seal.json",
+        "sha256": "7c4068b0f306e67a7149f28d7390a694650ec6ce8e445bfb609044e922f13335"
+      },
+      {
+        "path": ".scratch/construction-208-registry-20261005T1929Z/seal-v2.json",
+        "sha256": "0483ad10bd212b3a3a30e7f75c27372cac443dde8bb8f9745d15f88beb578d1f"
+      },
+      {
+        "path": ".scratch/construction-208-registry-20261005T1929Z/sentinel-repair.json",
+        "sha256": "4b0bf6c0b375ae9e1976946933577a87c1a07b19dc4c2d68c65a0b365b9be185"
+      }
+    ],
+    "adversary": [
+      {
+        "path": ".scratch/construction-208-challenge-20261005T1940Z/REPORT.md",
+        "sha256": "c04fa090aed615e702671ab6bb8269a59774f204e75d8f445f8a87e5b2ee1f9d"
+      },
+      {
+        "path": ".scratch/construction-208-challenge-20261005T1940Z/seal.json",
+        "sha256": "487099fff69ee2a773f5e0e3de49c033ec5e0730421e4f71a75d4eb578b96aae"
+      }
+    ]
+  },
+  "counterEvidence": [
+    "local designation corrected to general registry endpoint",
+    "state608 inline slots separated from exact member receiver",
+    "member index separated from class selector",
+    "consumer call read-selection mismatch corrected by full call/byte check",
+    "both32-bit sentinel writes zero-extend to same00000000ffffffff; original erroneous reports/addendum retained",
+    "factory final-table proof narrowed to fresh branch",
+    "invalid tuples can be stored; guard retention is not allocation ownership",
+    "synthetic pointer1000/mask7 live bucket5 vs dead0; lifecycle ordering prerequisite, no runtime bug",
+    "Ghidra attempt produced no used decompile; owned-helper absence audited",
+    "field scan nondiagnostic; no indirect absence claim",
+    "metadata output drift repaired; report hash typo superseded by refreshed input identity",
+    "First document-insertion attempt rejected a newline anchor before shared-file edits; corrected to preserve each existing byte format"
+  ],
+  "resources": {
+    "staticScratch": [
+      ".scratch/construction-208-primary-20261005T1927Z",
+      ".scratch/construction-208-member-20261005T1929Z",
+      ".scratch/construction-208-registry-20261005T1929Z",
+      ".scratch/construction-208-challenge-20261005T1940Z"
+    ],
+    "staticHelpers": "completed; exact Ghidra project-path process query returned0",
+    "privateDatabases": "partial task-unique Ghidra database retained ignored",
+    "gameProcessesReadOrLaunched": false,
+    "codecsOrSerializedPayloadsConstructed": false,
+    "hooksOrTrialsAdded": false,
+    "liveGameEndpointsContacted": false,
+    "upstreamFilesModified": false,
+    "publishedOrPushed": false,
+    "workspaceCleanup": {
+      "ownedBind": "127.0.0.1",
+      "ownedPort": 64231,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "status": "observed by workspace lifecycle check"
+    }
+  },
+  "deferred": [
+    "209 local designation/identity/asynchronous readiness",
+    "separate generic subscriber writer/drainer: unnecessary for selected type8 path",
+    "cached factory registration/other catalogs/broader field meanings beyond bounded contract"
+  ],
+  "report": {
+    "path": "docs/PLAYER_CONSTRUCTION_JOIN.md",
+    "sha256": "8a7f71f67cfb9af03b9eed0787b6b84ccd6f2a0624c37aec282c934f30f7bd24"
+  },
+  "ownedEdits": [
+    "docs/PLAYER_CONSTRUCTION_JOIN.md",
+    "research/evidence/current-player-construction-join.json",
+    "docs/ROADMAP.md",
+    "docs/TASK_BRIEFS.md",
+    "docs/EVIDENCE_LEDGER.md",
+    "research/agent-evidence-index.json"
+  ],
+  "limit": "bounded208 research alternative only; parent177/164 and actual player/world acceptance remain open; no another task begun",
+  "metadataFinalization": {
+    "atUtc": "2026-10-05T20:03:47.492924+00:00",
+    "preFinalReceiptSha256": "b68b15f7945c9d134d5e23388afeb06d9ff74c53666a209423f93d619ab56756",
+    "scope": "actual verification metadata and report verification paragraph only; construction claims/source unchanged",
+    "postRunPaths": [
+      "docs/PLAYER_CONSTRUCTION_JOIN.md",
+      "research/evidence/current-player-construction-join.json"
+    ],
+    "note": "The workspace run binds its earlier selected input hashes. Source/function/dirty-byte checks and final document checks remain separate; this metadata does not rerun game behavior.",
+    "documentEvidenceAttachedUtc": "2026-10-05T20:04:33.020131+00:00"
+  }
+}
