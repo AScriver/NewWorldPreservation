@@ -12,6 +12,34 @@
   },
   "boundaries": [
     {
+      "id": "current-initial-registration-contract",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K197",
+        "K198",
+        "K199",
+        "K200",
+        "K201",
+        "K202"
+      ],
+      "docs": [
+        "docs/INITIAL_REGISTRATION_CONTRACT.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-initial-registration-contract.json",
+          "classification": "source-inference",
+          "scope": "#210 conditional current registration producer/classes, pre-transport writer and compact receive/typed decoder, separate retry/lifetime authorities and precise missing joins; verification recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Historical860 request discriminator, sender queue/buffer/Carrier framing inverse, concrete body codec and exact resend/ACK-retirement remain unjoined. No auth211, gameplay followups, codec/replay/client/capture/hook/endpoints/messages or other task."
+    },
+    {
       "id": "current-player-designation-contract",
       "roadmapTasks": [
         "M1-06A"

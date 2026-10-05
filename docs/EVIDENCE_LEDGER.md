@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current initial registration framing/type/retry contract — October5, #210 only
+
+Owned disk image8654f01d…/build22469132 and mappingf1e2385f…; initial main580b4a44
+plus24 pending snapshots, then external same-byte commits62d1998/fa515834. Static
+conditional contract with precise missing joins, no new game/runtime experiment.
+
+| ID | Claim | Classification and limits | Evidence |
+|---|---|---|---|
+| K197 | Imported retry parsing recognizes a shape, not the observed request type | Strongly source-supported reference/parser review; historical channel0/0x21/860 metadata only. Unchecked32 prelude, six bounded ID/string records and opaque tail; exact_request_type_known=false. Local reply/send/ACK/later behavior separate | [Registration report](INITIAL_REGISTRATION_CONTRACT.md), J210-1/6; [original receipt](../research/evidence/current-initial-registration-contract.json) |
+| K198 | Current conditional producer and class identities are joined | Strongly source-supported: connection-result closure→builder, V3 UUID/map19, alternative V2/map2, selected response class/map3; same owner sender. Actual runtime branch/index/UUID fallback/860 discriminator unknown | Same report J210-2 and exact image/table/map seals |
+| K199 | Concrete pre-transport writer and typed wrapper have selected framing steps | Strongly source-supported: reserve8, write16 descriptor, wrapper, calculated BE32 value/BE32 length patch; scalar conversion resolved. Flags/context conditional, compact class index or zero/UUID, descriptor field+48 serializer. Queue consumer/physical buffer/compression/Carrier placement/inverse and checksum algorithm missing; no fixed32 prelude inferred | Same report J210-3; instruction/data/import and adapter seals |
+| K200 | Current receive compact framing and dynamic typed decoder reach the response handler | Strongly source-supported: exact-length reader/callback→native wrapper/presence/type lookup→dynamic factory+10/decoder+28→response handler. Native V3 interface236 passes five pointers/two scalars. Concrete type-specific codec and sender/receiver framing reconciliation unjoined | Same report J210-4 and independent followup seal |
+| K201 | Construction, response flags, Carrier retry and local lifetime budget are distinct | Strongly source-supported local contracts: gateway160 gate;600 handled before conditions/reset after dispatch;601 accepted/getter; callback unregister/disposal/local clear ordering. No universal5b rejection/final post-callback state/500ms retry proved. Exact Carrier resend/ACK retirement remains unknown | Same report J210-5; independent lifetime/adversarial review |
+| K202 | Missing joins and historical/runtime limits are explicit acceptance outcomes | Source-supported conditional research; actual860 discriminator, sendqueue/buffer/inverse, concrete codec, resend/retirement and runtime callback guarantees unresolved. Historical24 ACK events include16 covering envelope4 across8 peers; none proves accepted601.211/gameplay excluded; source/document/workspace verification separately recorded | Same report J210-6/verification and original receipt |
+
 ## Current identity/readiness/designation contract — October5, #209 only
 
 Pinned disk image8654f01d…/build22469132; main HEAD9dfd8202 plus24 pending-file

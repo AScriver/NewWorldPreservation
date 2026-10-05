@@ -1,5 +1,21 @@
 # Milestone 1 roadmap
 
+#210 source result, October5: a conditional current V3 producer/class UUID joins
+owned map19 (0x13), with a separate V2/map2 branch and response class/map3. The
+gateway's pre-transport writer and compact-length receive/typed decoder are traced
+separately. Their stream/sendqueue-to-Carrier framing bridge and concrete body
+codecs remain missing; historical channel0/0x21/860 recognition still proves no
+request discriminator. Connection-result construction, handled600, accepted601,
+Carrier ACK/retransmission and adapter lifetime budget have separate authorities.
+No exact500ms application retry or retry-stop contract is established. External
+callback effects prevent turning direct flag stores into final lifetime postconditions.
+[Registration report](INITIAL_REGISTRATION_CONTRACT.md), K197-K202 and
+[original receipt](../research/evidence/current-initial-registration-contract.json)
+record exact joins, challenges, current seals and verification. This closes only210's
+bounded missing-join research alternative under workItemId164. Parent178/164 and
+Milestone1 remain open. Authentication/ticket/peer-binding211 and all excluded
+player/designation/member/generic-subscriber work stay deferred. No other task begins.
+
 #209 source result, October5: the exact connection character-id storage/provider,
 replicated string comparison/update, entity-related lookup latch, local designation
 and guarded PlayerRegistry result are now joined conditionally. Missing local

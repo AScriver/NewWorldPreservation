@@ -1,5 +1,42 @@
 # Bounded task briefs
 
+## #210 — current initial registration framing/type/retry (workItemId164)
+
+- Outcome recorded before work: actual pinned current initial registration framing,
+  discriminator/type, serializer/decoder and retry/lifetime contract, or precise
+  missing joins. Only210 was claimed and began Researching; later Ready/In progress
+  preceded tracked report edits.
+- Inputs: initial main580b4a44 with24 pending-file snapshots/empty index; independent
+  commits62d1998/fa515834 then clean, relevant bytes unchanged. Owned image8654f01d…,
+  app1063730/build22469132/version1.400.6031.6004151, mappingf1e2385f…,
+  clean FirstLight63756a3f/Aeternum820156db. Exact hashes/source seals in
+  [report](INITIAL_REGISTRATION_CONTRACT.md) and
+  [receipt](../research/evidence/current-initial-registration-contract.json).
+- Owner/files: those two new files and only210 insertions here, ROADMAP,
+  EVIDENCE_LEDGER and evidence catalog. Preserve unrelated snapshot bytes/history;
+  task-only local commit, no upstream edits or publishing.
+- Permitted: bounded disk/current source and approved metadata inspection, ignored
+  private static output, original sanitized research documents and offline checks.
+- Excluded: codecs/responses/guessed framing/historical body replay/credentials,
+  client launch/capture/hooks/process access/endpoints/messages,211 auth/tickets/peer
+  binding, player construction/designation/member fixtures/generic subscriber and
+  unrelated tasks. Deferred findings do not authorize new work.
+- Resources: unique ignored primary/lifetime/followup scratch and private Ghidra
+  databases; no shared services/db/fixed ports. Offline harness owns isolated temp
+  data/loopback child and verifies cleanup. No live cleanup exists.
+- C1 exact build/ref/dirty identities and preservation; C2 exact framing/type/codec/
+  retry joins or missing edges; C3 independent evidence and targeted falsification;
+  C4 document/source and full Test-Offline workspace checks plus scoped local commit;
+  C5 Resolution/qualifying validation/Done/released claim and stop.
+- Rejection: recognition/flags/length promoted to type; native offset/interface236
+  promoted to schema; writer/reader framing conflated before queue/buffer bridge;
+  Carrier resend equated to application retry; send/ACK equated to accepted601;
+  local stores treated as post-callback state; historical results called current.
+- Result: conditional V3/map19, V2/map2, response/map3, concrete writer/receive route,
+  separate state/lifetime authorities and five explicit missing joins. No current
+  compatible codec, observed860 discriminator, retry-stop predicate or gameplay
+  claimed. Failed leads/counter-evidence remain in report; no other task begins.
+
 These are starting questions and candidate scopes, not current task status or an
 automatic assignment. [ROADMAP](ROADMAP.md) owns progress, dependencies and acceptance.
 Before work, select one ID, check its gates, and fill the template with exact files
