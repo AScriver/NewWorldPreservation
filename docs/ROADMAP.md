@@ -326,3 +326,11 @@ three pre-existing connectivity/trust/audit file hashes. Code bindings remain va
 this documentation/catalog receipt recording occurs after validation. The76GB
 physical copy remains ignored for reproducibility. No commit, push or contributor
 message; Actionables was not updated because no work item was supplied.
+
+## Incremental commit instruction — October 5
+
+At the user's request, AGENTS now requires local commits as coherent changes finish
+and relevant validation passes. Commits include associated documentation/evidence,
+use Conventional Commit messages and stage only task-owned files or hunks. Existing
+private-output and explicit publishing boundaries remain in force. This instruction
+update is documentation-only; validation is a scoped diff/commit-content check.

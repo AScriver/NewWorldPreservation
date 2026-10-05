@@ -17,6 +17,11 @@
 - Do not publish, push, or message contributors without explicit authorization.
 - Record tasks and verification in docs/ROADMAP.md. No Actionables work item was supplied; do not browse or claim unrelated items.
 
+## Incremental commits
+
+- Commit each completed, coherent unit of work after its relevant validation passes, including associated tests, documentation and original evidence receipts. Commit increments as they finish during long tasks instead of accumulating all changes until the end.
+- Review Git status and the staged diff before each commit. Stage only task-owned files or hunks, preserve unrelated pending work, and use focused Conventional Commit messages. Keep private captures, credentials and ignored client-derived output out of commits. Local commits do not authorize pushing or publishing.
+
 ## Agent analysis toolchain
 
 - Shared tools are at `C:\Users\Austin\.codex\tools\reverse-engineering`: Ghidra/PyGhidra, private JDK 21, Wireshark/TShark, Frida and a local Cheat Engine x64 build. Read [docs/TOOLS.md](docs/TOOLS.md) and the shared `manifest.json`/`verification.json` before use; those receipts distinguish installed tools from executed checks.
