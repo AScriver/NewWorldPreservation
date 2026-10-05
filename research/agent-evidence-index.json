@@ -12,6 +12,34 @@
   },
   "boundaries": [
     {
+      "id": "current-player-designation-contract",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K191",
+        "K192",
+        "K193",
+        "K194",
+        "K195",
+        "K196"
+      ],
+      "docs": [
+        "docs/PLAYER_DESIGNATION_JOIN.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-designation-join.json",
+          "classification": "source-inference",
+          "scope": "#209 exact conditional identity/provider, native replicated setter/classification, readiness, designation/guarded registry and cleanup joins with separately executed verification"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Conditional static missing-contract result only; #208 concrete callbacks, fresh entity/context binding, memory/guard authority and lifecycle order remain unknown. No schema/codec/payload/client/runtime or generic subscriber investigation."
+    },
+    {
       "id": "current-player-construction-contract",
       "roadmapTasks": [
         "M1-06A"
@@ -850,6 +878,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-designation-join.json",
     "research/evidence/current-player-construction-join.json",
     "research/evidence/carrier-registration-client-progress.json",
     "research/evidence/current-self-ident-default-contract.json",

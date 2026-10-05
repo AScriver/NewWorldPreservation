@@ -1,5 +1,19 @@
 # Milestone 1 roadmap
 
+#209 source result, October5: the exact connection character-id storage/provider,
+replicated string comparison/update, entity-related lookup latch, local designation
+and guarded PlayerRegistry result are now joined conditionally. Missing local
+optional writes classification2; designation latches before registry storage;
+neither retained flags nor general insertion proves a fresh valid live player.
+All four #208 concrete callback/entity binding/guard authority/lifecycle joins remain
+hard prerequisites and were not resolved. Context readiness is a separate final
+wait condition. [Designation report](PLAYER_DESIGNATION_JOIN.md), K191-K196 and
+[original receipt](../research/evidence/current-player-designation-join.json) record
+the corrections, current input seals and verification. This closes only209's bounded
+static research alternative under workItemId164; parent177/164 gameplay remains open.
+Earlier deferred209/source-map wording below is superseded for these selected paths.
+The generic subscriber route and all client/encoding work remain outside this task.
+
 #208 source result, October5: current replication members are joined through their
 resolved factory, decoder and retained entry to application141717fc0. A separate
 fresh PlayerComponent factory/facet/general PlayerRegistry route is now pinned.

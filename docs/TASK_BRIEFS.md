@@ -38,6 +38,39 @@ directory, and record executed cleanup versus unknown cleanup. Shared hosts, tru
 clients or fixed ports require serialization with the actual owner. A source review
 is not an experiment, and an offline test does not unlock real-client acceptance.
 
+## #209 — character identity/readiness to local designation (workItemId164)
+
+- Outcome: exact source-backed character-id/provider/comparison, replicated setters,
+  entity/context readiness and designation/guarded-result joins, or precise missing
+  prerequisites. Only209 was claimed; its pre-work Research contract preceded analysis.
+- Input: main HEAD9dfd8202 plus24 baseline pending-file snapshots, owned image8654f01d…,
+  mappingf1e2385f…, unchanged #208 handoff/receipt and dirty source map07cb671a….
+  Exact hashes/source references are in [report](PLAYER_DESIGNATION_JOIN.md) and
+  [receipt](../research/evidence/current-player-designation-join.json).
+- Owner/files: primary owns that report/receipt and only209 insertions here, ROADMAP,
+  EVIDENCE_LEDGER, evidence catalog and the unsent REGISTRATION_MAINTAINER_QUESTION.
+  Preserve baseline bytes and initial empty index; stage only the named additions.
+- Permitted: bounded disk/static/source reads, ignored private output, original
+  sanitized documents/evidence and necessary offline verification.
+- Excluded: resolving #208 gaps, generic subscriber investigation, other tasks or
+  dependency changes, codecs/guessed payloads/replay, clients/live/process/hook/capture/
+  endpoints/system/trust/EAC work, upstream edits, push/publication or messages.
+- Resources: isolated ignored primary/identity/gates/challenge scratch; no shared
+  database/services/fixed ports. Workspace harness owns temp data/loopback child and
+  verifies cleanup. Static helpers exit naturally; raw client output remains ignored.
+- C1 refresh image/build/mapping/HEAD/dirty identities; C2 exact joins or missing
+  prerequisites; C3 independent source evidence and targeted falsification;
+  C4 source/document/preservation and Test-Offline.ps1 default workspace checks plus
+  task-only local commit; C5 actual validation/Resolution/status/claim release and stop.
+- Rejection: missing provider promoted to unchanged classification; absent branch
+  called side-effect-free; raw string setters confused; classification/ready/latch/
+  tuple storage equated with valid player; native fields promoted to wire schema;
+  direct no-clear claim extended to unknown handlers; #208 gates silently removed.
+- Result: conditional native contract, missing-provider class2 correction and exact
+  retained-latch/guard limits. #208's four joins stop any positive fresh-player claim.
+  Failed approaches/remaining prerequisites/deferred findings stay in the report;
+  no other task begins and no measured game behavior is asserted.
+
 ## #208 — member to fresh player construction/registry (workItemId164)
 
 - Outcome: exact concrete member/class→fresh entity/player→general PlayerRegistry

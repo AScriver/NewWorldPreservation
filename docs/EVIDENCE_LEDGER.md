@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current identity/readiness/designation contract — October5, #209 only
+
+Pinned disk image8654f01d…/build22469132; main HEAD9dfd8202 plus24 pending-file
+snapshots. Conditional native-source contract and precise missing prerequisites;
+no live player or construction schema. Existing #208 gates remain authoritative.
+
+| ID | Claim | Classification and limits | Evidence |
+|---|---|---|---|
+| K191 | Connection character-id copy/storage/provider is joined to the classifier's exact bus | Strongly source-supported: CharacterId token30→model60→wrapper1140→tagged12f0; classifier callback1405717f0→virtual248 on bus141027e40; base/derived game tables select1464354f0. Nonempty wrapper/length and nonzero state required; existing nonempty impersonate-character-id override can replace local storage. Runtime identity/registration/order/override values unmeasured | [Designation report](PLAYER_DESIGNATION_JOIN.md), J209-1; [original receipt](../research/evidence/current-player-designation-join.json) |
+| K192 | Replicated string update has exact changed gates, setters and classification | Strongly source-supported: either native changed field7c0/870 invokes classifier with7d0/880; local optional equal length/bytes→1, mismatch→2, absent→2. Present first string writes component1f0 using NUL-scanned length; second conditionally writes198; retry follows. Absence skips that block but still notifies. Concrete member schema/delivery remains #208 unknown; no UUID/gameplay-validity proof | Same report J209-2; independent source and adversarial checks |
+| K193 | Entity-related readiness is a distinct keyed lookup latch | Strongly source-supported: facet1e0 callback+8, component60/68 live reference or fallback structure, returned structure20 key, matched handler list/nonzero first result; only then31c=1/retry. Failure does not directly clear prior31c. Fresh binding/list registration/fallback contents/dispatch unknown; this is not port/context readiness | Same report J209-3 and exact readiness prerequisites |
+| K194 | Designation entry, registry tuple storage and guarded getter are separate | Strongly source-supported: class1/31c1/31d0;31d set before external calls; setter ignores resolver result, retains/transfers component guard/control then general registration. Getter tests pointer/guard/live byte only. Retained latches, strings/insertion/control do not prove fresh component memory ownership or valid live player | Same report J209-4 and conditional rejection cases |
+| K195 | Final wait independently requires context readiness and guarded local result | Strongly source-supported: state13 selects exact predicate; actor252=portb0+1a2; setter writes ready before drain; activation1a1 is separate; defaults/reset clear ready. Registry singleton and getter must then succeed before state14. Actual asynchronous readiness/tuple values and inter-call stability unknown | Same report J209-5; exact bytes/table checks and labeled synthetic models |
+| K196 | Conditional cleanup and unresolved construction/lifecycle gates remain explicit | Strongly source-supported direct cleanup: component2b8 resolution and guarded identity equality before local clear, later general removal. Unknown notification/reset/order/thread/guard authority preserved. Source seal and document/full-workspace results are separately recorded. #208's four gaps not resolved; only209 bounded research closes | Same report J209-6, missing joins, verification/corrections and receipt |
+
 ## Current player construction/registry contract — October5, #208 only
 
 Current fixed-image reads at main HEADbe1a1d2e plus24 pending-file snapshots.

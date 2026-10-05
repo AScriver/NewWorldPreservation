@@ -1,0 +1,641 @@
+{
+  "schema": 1,
+  "task": {
+    "id": 209,
+    "workItemId": 164,
+    "parentId": 177,
+    "roadmapTask": "M1-06A.3",
+    "outcome": "conditional static designation contract plus precise missing prerequisites; positive fresh-player construction unproved"
+  },
+  "createdUtc": "2026-10-05T21:21:07.016898+00:00",
+  "classification": "source-inference",
+  "preWorkContract": {
+    "recordedBeforeAnalysis": true,
+    "onlyClaimedTask": 209,
+    "initialPhase": "Researching",
+    "outcome": "join identity/provider/comparison, replicated updates, entity/context readiness and guarded local designation or precise missing joins; preserve #208 gates",
+    "permitted": [
+      "bounded owned-image disk/static/source reads",
+      "ignored private analysis output",
+      "original sanitized documentation/evidence",
+      "necessary offline verification"
+    ],
+    "completionChecks": [
+      "C1 refreshed image/build/mapping/HEAD/dirty inputs",
+      "C2 exact comparisons/setters/transitions/prerequisites or missing joins",
+      "C3 independent evidence and targeted falsification",
+      "C4 source/document/preservation/full workspace and task-only local commit",
+      "C5 actual validation/Resolution/status/claim release and stop"
+    ],
+    "excluded": [
+      "resolving #208 construction gaps",
+      "generic subscriber investigation",
+      "other task/dependency work",
+      "codecs/guessed/replayed payloads",
+      "clients/process reads/live observation/hooks/capture/game endpoints",
+      "system/trust/EAC/upstream changes",
+      "publish/push/contributor messages"
+    ]
+  },
+  "checkout": {
+    "analysisHead": "9dfd820220331655a573304efb38ac294f45b1c0",
+    "branch": "main",
+    "initialStagedPaths": [],
+    "preExistingPendingCount": 24,
+    "baseline": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/baseline.json",
+      "sha256": "0ea7ec2ddd121e72e8f86bf8472b8ce48b4c454a2ec8cf68e808fb7d94e228f3"
+    },
+    "inputIdentity": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/input-identity.json",
+      "sha256": "661bf72eeb27811a0db7ab4274bf140796bf31599d45690419a050eea35d5068"
+    },
+    "pendingFileIdentities": [
+      {
+        "path": "AGENTS.md",
+        "status": " M",
+        "bytes": 8266,
+        "sha256": "e79c71c4c52e25ff42fcd4577305d24274a7071dd45552a2a2ea5053e40e8f49"
+      },
+      {
+        "path": "docs/CARRIER_REGISTRATION_TRIAL.md",
+        "status": " M",
+        "bytes": 28281,
+        "sha256": "0dc5aa42fc76b45db623b546b4af0b16560fb7ef2544987e8ca24c3cea14212b"
+      },
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "status": " M",
+        "bytes": 123941,
+        "sha256": "d08d9062df1ee9275726d5038388a4472fe83b8b362b34454bcba1ba3df8ce65"
+      },
+      {
+        "path": "docs/FRIDA_PRIVATE_DTLS_TRIAL.md",
+        "status": " M",
+        "bytes": 9763,
+        "sha256": "ec67398c6afa7a308f0687877fc247d5f4553880ed0ae59a9458ac94f03bf39d"
+      },
+      {
+        "path": "docs/REGISTRATION_MAINTAINER_QUESTION.md",
+        "status": " M",
+        "bytes": 9190,
+        "sha256": "31697e72d53753c5f021cfa54cda25101747fe6362bdab0f964e767f3c56106a"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "status": " M",
+        "bytes": 62764,
+        "sha256": "55ce276ccd0465deeacd4ad49da9f6059b31939ad2746123a8b2d9834537e309"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "status": " M",
+        "bytes": 26112,
+        "sha256": "9e8e20f065bdbcd1e27d7bb46a218ff85a2752993ca0931265cbe14e1a7d7396"
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "status": " M",
+        "bytes": 41770,
+        "sha256": "b515df06cca4abaa1cc25589c7a27c7d1b3163875c9d610b70618eaac56d3457"
+      },
+      {
+        "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+        "status": " M",
+        "bytes": 29600,
+        "sha256": "fd6f5911d6b2e2eb622ac471d374d1118af052571e4d6541c1e43c1bdfed66c8"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "status": " M",
+        "bytes": 38675,
+        "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+      },
+      {
+        "path": "scripts/current_self_ident_default.py",
+        "status": " M",
+        "bytes": 1144,
+        "sha256": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22"
+      },
+      {
+        "path": "scripts/frida_client_trial.py",
+        "status": " M",
+        "bytes": 25714,
+        "sha256": "f38bbb4f79ee9edcac93dadc59bef023e15c0a84b878b261b85028c9e9132b1a"
+      },
+      {
+        "path": "scripts/frida_trial_observer.js",
+        "status": " M",
+        "bytes": 5346,
+        "sha256": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1"
+      },
+      {
+        "path": "tests/carrier_registration_smoke.py",
+        "status": " M",
+        "bytes": 14387,
+        "sha256": "f144bb979d2f9333e8f9cd1a3e90a4fdf366b3a4ec62dc8b90d4fa4e6005065c"
+      },
+      {
+        "path": "tests/test_carrier_registration_probe.py",
+        "status": " M",
+        "bytes": 38961,
+        "sha256": "4866e892a7661c9e798626ba804c5c10db13b2b787f23aa3a279f929f9bcc5a8"
+      },
+      {
+        "path": "tests/test_frida_client_trial.py",
+        "status": " M",
+        "bytes": 16601,
+        "sha256": "a26479ca424538d066592b0d340cc6e5dcfc3d8f10b0dc0c53ff29a8943349a9"
+      },
+      {
+        "path": "research/evidence/current-context-gate-contract.json",
+        "status": "??",
+        "bytes": 3342,
+        "sha256": "db686d1cce9387ca10575a881a4f4e23ccc16fee00fee295416a285308d91317"
+      },
+      {
+        "path": "research/evidence/current-context-gate-trial.json",
+        "status": "??",
+        "bytes": 19798,
+        "sha256": "5668910de6b7053327e630db55378557a209fd91b3c5f02875db6b52ceba70ee"
+      },
+      {
+        "path": "research/evidence/current-context-gate-validation.json",
+        "status": "??",
+        "bytes": 4916,
+        "sha256": "0d749322db4e4e15ed902e302eae2b86ab40e67ae3952bdd8426b8c62d8e603e"
+      },
+      {
+        "path": "research/evidence/current-player-spawn-source-map.json",
+        "status": "??",
+        "bytes": 9937,
+        "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-contract.json",
+        "status": "??",
+        "bytes": 2373,
+        "sha256": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-trial.json",
+        "status": "??",
+        "bytes": 22962,
+        "sha256": "16615564497c82f6b8f3fa1ab766d7145cce7236869335b515cc5cbd18925cf9"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-validation.json",
+        "status": "??",
+        "bytes": 5492,
+        "sha256": "d965463569871ca9fd5c2eaf8ac740940e72dd97ee046ececd45b5dfc88299d7"
+      },
+      {
+        "path": "tests/frida_context_gate_observer.test.cjs",
+        "status": "??",
+        "bytes": 6781,
+        "sha256": "850f4624e46b72b4e58630021556640a6d490c31fed4c0cb38c3bea74cae3f4c"
+      }
+    ],
+    "preservationRule": "remove only209 insertion blocks to recover all baseline bytes; stage additions against original HEAD"
+  },
+  "image": {
+    "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "bytes": 179204176,
+    "fileVersion": "1.400.6031.6004151",
+    "steamAppId": 1063730,
+    "steamBuildId": "22469132",
+    "steamMetadataSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "checkedUtc": "2026-10-05T20:55:53.246623+00:00",
+    "scope": "disk/static only; no process observed"
+  },
+  "mapping": {
+    "privateFile": "private/frida-trials/run-20261004T1733/client/typeindex.json",
+    "sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "e79c71c4c52e25ff42fcd4577305d24274a7071dd45552a2a2ea5053e40e8f49"
+    },
+    {
+      "path": "docs/AGENT_START.md",
+      "sha256": "2b79de34ca4445860cbc72130e5f32782c2a7797742f0ed754e9faf4d3b919d1"
+    },
+    {
+      "path": "docs/PLAYER_CONSTRUCTION_JOIN.md",
+      "sha256": "8a7f71f67cfb9af03b9eed0787b6b84ccd6f2a0624c37aec282c934f30f7bd24"
+    },
+    {
+      "path": "research/evidence/current-player-construction-join.json",
+      "sha256": "2cbca0b1ec27d31c15ee4d8a61e8cd2f580f6cf56da014ed0e51f55255b40d3c"
+    },
+    {
+      "path": "research/evidence/current-player-spawn-source-map.json",
+      "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "20bdf5009f6c9a2bd2a140631b4d4a1961ad97e3b458e423fcd5098ada8cb8f2"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "55ce276ccd0465deeacd4ad49da9f6059b31939ad2746123a8b2d9834537e309"
+    },
+    {
+      "path": "docs/TASK_BRIEFS.md",
+      "sha256": "9e8e20f065bdbcd1e27d7bb46a218ff85a2752993ca0931265cbe14e1a7d7396"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "d08d9062df1ee9275726d5038388a4472fe83b8b362b34454bcba1ba3df8ce65"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "b515df06cca4abaa1cc25589c7a27c7d1b3163875c9d610b70618eaac56d3457"
+    },
+    {
+      "path": "docs/REGISTRATION_MAINTAINER_QUESTION.md",
+      "sha256": "31697e72d53753c5f021cfa54cda25101747fe6362bdab0f964e767f3c56106a"
+    }
+  ],
+  "references": [
+    {
+      "name": "firstLight",
+      "expectedCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+      "status": "ready",
+      "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+      "commitMatches": true,
+      "originMatches": true,
+      "clean": true,
+      "fixture": {
+        "path": "info/nw-login-safe-20260502-153840/messages-redacted.txt",
+        "expectedSha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+        "sha256": "d79dd2d3c0348fd0f4169dd5e12c20d6a4da77d47bcf5b4a687221fe92fa5899",
+        "matches": true
+      }
+    },
+    {
+      "name": "aeternumWorld",
+      "expectedCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+      "status": "ready",
+      "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+      "commitMatches": true,
+      "originMatches": true,
+      "clean": true
+    }
+  ],
+  "runtime": {
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "powershell": "7.6.6",
+    "dependencyLockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "game": "not run or observed"
+  },
+  "claimIds": [
+    "K191",
+    "K192",
+    "K193",
+    "K194",
+    "K195",
+    "K196"
+  ],
+  "claims": [
+    {
+      "id": "J209-1",
+      "ledgerId": "K191",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    },
+    {
+      "id": "J209-2",
+      "ledgerId": "K192",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    },
+    {
+      "id": "J209-3",
+      "ledgerId": "K193",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    },
+    {
+      "id": "J209-4",
+      "ledgerId": "K194",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    },
+    {
+      "id": "J209-5",
+      "ledgerId": "K195",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    },
+    {
+      "id": "J209-6",
+      "ledgerId": "K196",
+      "status": "strongly source-supported conditional static effects",
+      "source": {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "section": "Exact source-backed joins"
+      }
+    }
+  ],
+  "missingPrerequisites": [
+    {
+      "id": "P209-1",
+      "boundary": "#208",
+      "join": "concrete decoded member/factory/schema/application callback to PlayerComponent/facet property delivery",
+      "status": "unknown; not investigated further"
+    },
+    {
+      "id": "P209-2",
+      "boundary": "#208",
+      "join": "fresh gameplay entity/context allocation and reference/key/map/list binding; readiness separate reference60/68 and returned structure20 key/fallback",
+      "status": "unknown; not investigated further"
+    },
+    {
+      "id": "P209-3",
+      "boundary": "#208",
+      "join": "component allocation owner, control semantics, guard creation/invalidation and readable lifetime",
+      "status": "unknown; not investigated further"
+    },
+    {
+      "id": "P209-4",
+      "boundary": "#208",
+      "join": "authoritative lifecycle/thread/reset order from construction through provider/delivery/readiness/designation/teardown",
+      "status": "unknown; not investigated further"
+    }
+  ],
+  "counterEvidence": [
+    "absent local optional writes classification2, bypasses present-path retry but continues nonlocal notification",
+    "first string setter uses NUL-scanned length; identity comparator uses stored length/content",
+    "setter/latch/general registration do not enforce guard validity",
+    "selected mismatch/readiness/cleanup bodies do not directly clear prior flags; unknown downstream handlers may",
+    "readiness uses separate reference/key/fallback; not automatically component58 or a fresh live entity",
+    "context activation and facet readiness are separate from final port-ready predicate",
+    "wait contains56-byte embedded switch table, excluded from code decoding and independently checked",
+    "early identity helper/provider uncertainty resolved by exact bounded copy/bus/table joins; report corruption/absence misstatement corrected before final seal",
+    "Private disk verifier initially rejected Windows backslash path spelling; separator normalization corrected its guard without changing source or pending files",
+    "Workspace wrapper initial PowerShell array parameter binding refused before any tests; named script parameters corrected the wrapper and the full run then passed"
+  ],
+  "privateEvidence": {
+    "ledger": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/primary-ledger-final.md",
+      "sha256": "33bbd286c178f21d717f21b7bf4e417916c733a3482d6c1d50cabe9586837903"
+    },
+    "reports": [
+      {
+        "path": ".scratch/designation-209-identity-20261005T2056Z/REPORT.md",
+        "sha256": "ec1a65b0f030587aab74e20e311952ed9c5faf3bf75b33d21f5e6ea740030cf6"
+      },
+      {
+        "path": ".scratch/designation-209-gates-20261005T2056Z/REPORT.md",
+        "sha256": "7ebf294cb97022267a39e13b7d3af94b660d6d5bbe93df44b9fa51472e2cc498"
+      },
+      {
+        "path": ".scratch/designation-209-challenge-20261005T2105Z/REPORT.md",
+        "sha256": "2433ce9a238af1644850a1e43b143557abff8bc11f35dc172a8244260ddcf4a5"
+      }
+    ],
+    "selection": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/source-selection.json",
+      "sha256": "d10ce38892c5ed3355d16d3ba1f447a0b671ae65cc8ed404b6fcd6e27244d1aa"
+    },
+    "sourceVerification": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/source-verification.json",
+      "sha256": "851f5a5541a41d833daa6b046eab20411fae9d09d82d12e79e7906153adb9b11"
+    },
+    "preChallengeLedger": {
+      "path": ".scratch/designation-209-primary-20261005T2055Z/primary-ledger.md",
+      "sha256": "e93b4cd1e9b66c54c12abf0730e1601cd8943029d2a17ad842e94cb27a0b0696"
+    }
+  },
+  "verification": {
+    "source": {
+      "status": "passed",
+      "uniqueFunctionsVerified": 63,
+      "sealedArtifactsVerified": 151,
+      "receipt": {
+        "path": ".scratch/designation-209-primary-20261005T2055Z/source-verification.json",
+        "sha256": "851f5a5541a41d833daa6b046eab20411fae9d09d82d12e79e7906153adb9b11"
+      },
+      "primaryDiskTableChecks": 22,
+      "independentGateChecks": 12,
+      "adversarialDiskTableChecks": 20,
+      "syntheticCases": {
+        "primaryGetter": 8,
+        "primaryWait": 32,
+        "adversarial": 10
+      },
+      "scope": "executed exact disk/hash/table and source-derived synthetic checks; no game code executed"
+    },
+    "document": {
+      "status": "passed",
+      "receipt": {
+        "path": ".scratch/designation-209-primary-20261005T2055Z/document-verification-before-attachment.json",
+        "sha256": "69d3e796a51ba395f9ad0ecd69afa0041b6e1e277fa43455b4e526aa3fd9293d"
+      },
+      "script": {
+        "path": ".scratch/designation-209-primary-20261005T2055Z/verify-handoff.py",
+        "sha256": "b2c159bfa8cbad52021c8ce02d752bae61bf1ec5357e7cc9dc387daf9a3a1e34"
+      },
+      "preExistingFilesPreserved": 24,
+      "sharedInsertions": 6,
+      "relativeLinksChecked": 10,
+      "scope": "claim/catalog/link/source seals and baseline preservation; final private receipt repeated after metadata attachment without a self-hash cycle"
+    },
+    "workspace": {
+      "status": "passed",
+      "profile": "workspace",
+      "command": "C:\\Users\\Austin\\.codex\\tools\\Invoke-CodexPowerShell.ps1 -Path scripts/Test-Offline.ps1 -Execute (default workspace)",
+      "receipt": {
+        "path": ".scratch/offline-validation/run-6nzzm6l_/receipt.json",
+        "sha256": "41716887fd143d21b9a616c7d7dc8272c63b2219a2b1daa8bb7160b286178d91"
+      },
+      "invocation": {
+        "path": ".scratch/designation-209-primary-20261005T2055Z/workspace-invocation.json",
+        "sha256": "9ac40195157a7994001845b670f91cc2e287b47c1f3a9b62045df535e0873f4e"
+      },
+      "startedUtc": "2026-10-05T21:21:46.152429+00:00",
+      "finishedUtc": "2026-10-05T21:22:48.602010+00:00",
+      "python": {
+        "selectedFiles": 32,
+        "collected": 445,
+        "executed": 445,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "loopbackHttps": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 51947
+      },
+      "changedInputsDuringRun": [],
+      "inputCount": 168,
+      "runtime": {
+        "ready": true,
+        "python": "3.11.9",
+        "isolatedVenv": true,
+        "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+        "packages": {
+          "cffi": {
+            "expected": "2.1.1",
+            "installed": "2.1.1",
+            "matches": true
+          },
+          "colorama": {
+            "expected": "0.4.6",
+            "installed": "0.4.6",
+            "matches": true
+          },
+          "cryptography": {
+            "expected": "50.0.2",
+            "installed": "50.0.2",
+            "matches": true
+          },
+          "iniconfig": {
+            "expected": "2.3.0",
+            "installed": "2.3.0",
+            "matches": true
+          },
+          "packaging": {
+            "expected": "26.3",
+            "installed": "26.3",
+            "matches": true
+          },
+          "pluggy": {
+            "expected": "1.6.0",
+            "installed": "1.6.0",
+            "matches": true
+          },
+          "pycparser": {
+            "expected": "3.0",
+            "installed": "3.0",
+            "matches": true
+          },
+          "pygments": {
+            "expected": "2.21.0",
+            "installed": "2.21.0",
+            "matches": true
+          },
+          "pyopenssl": {
+            "expected": "26.4.0",
+            "installed": "26.4.0",
+            "matches": true
+          },
+          "pytest": {
+            "expected": "9.1.1",
+            "installed": "9.1.1",
+            "matches": true
+          },
+          "typing-extensions": {
+            "expected": "4.16.0",
+            "installed": "4.16.0",
+            "matches": true
+          },
+          "lz4": {
+            "expected": "4.4.5",
+            "installed": "4.4.5",
+            "matches": true
+          }
+        },
+        "problems": []
+      },
+      "newWorldClientTested": false,
+      "limit": "workspace/synthetic/owned-loopback harness only; no client or player creation executed"
+    }
+  },
+  "report": {
+    "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+    "sha256": "812663f17b5b10606e627d7029168382c2b7942e7c9efc2b075b320f8628dc0c"
+  },
+  "ownedEdits": [
+    "docs/PLAYER_DESIGNATION_JOIN.md",
+    "research/evidence/current-player-designation-join.json",
+    "docs/ROADMAP.md",
+    "docs/TASK_BRIEFS.md",
+    "docs/EVIDENCE_LEDGER.md",
+    "research/agent-evidence-index.json",
+    "docs/REGISTRATION_MAINTAINER_QUESTION.md"
+  ],
+  "resources": {
+    "staticScratch": [
+      ".scratch/designation-209-primary-20261005T2055Z",
+      ".scratch/designation-209-identity-20261005T2056Z",
+      ".scratch/designation-209-gates-20261005T2056Z",
+      ".scratch/designation-209-challenge-20261005T2105Z"
+    ],
+    "staticHelpers": "completed naturally; no background/static runtime resource",
+    "gameProcessesReadOrLaunched": false,
+    "codecsOrPayloadsConstructed": false,
+    "hooksOrTrialsAdded": false,
+    "genericSubscriberInvestigated": false,
+    "systemOrUpstreamChanged": false,
+    "publishedOrPushed": false,
+    "workspaceCleanup": {
+      "ownedBind": "127.0.0.1",
+      "ownedPort": 51947,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "status": "observed by workspace lifecycle check"
+    }
+  },
+  "deferred": [
+    "31e query/retry meaning and initial/provider trigger",
+    "31f probation presentation is not tested in selected designation/getter gates",
+    "broader frontend selection and notification semantics",
+    "runtime provider overrides/availability and asynchronous dispatch measurement",
+    "generic subscriber route"
+  ],
+  "limit": "only209 bounded research alternative closes; #208 gates and parent177/164/gameplay acceptance remain open; no other task begins",
+  "metadataFinalization": {
+    "atUtc": "2026-10-05T21:24:23.443630+00:00",
+    "preFinalReceiptSha256": "0cae9d1b5c6c027ca0f0ee108f678dfd8f5780f172dcf5780bb8d5784e3eaced",
+    "scope": "actual verification metadata and report verification paragraph only; all source claims unchanged",
+    "postRunPaths": [
+      "docs/PLAYER_DESIGNATION_JOIN.md",
+      "research/evidence/current-player-designation-join.json"
+    ],
+    "note": "Workspace binds pre-attachment inputs. Final source-artifact/preservation/document checks remain separately executed; metadata does not rerun game behavior."
+  }
+}

@@ -6,6 +6,23 @@ launch/provenance question remains in
 successful binary identity is still unknown; the owned-build mechanism has now
 been reproduced independently.
 
+## Source correction — #209, October5 (unsent)
+
+The current conditional [designation contract](PLAYER_DESIGNATION_JOIN.md) and
+[receipt](../research/evidence/current-player-designation-join.json) supersede the
+older identity/designation wording below. Connection CharacterId storage/provider
+and exact native string updates are joined. Missing local optional explicitly
+classifies2 and still notifies. Entity-related lookup, early designation latch,
+guarded local tuple and separate context-ready predicate have different owners.
+Retained state or registry insertion proves no fresh valid live player.
+
+The unresolved question stops at #208's concrete replication callbacks, fresh
+entity/context binding, memory/guard authority and lifecycle order. #209 neither
+resolves these nor establishes a current wire schema. All runtime identities,
+readiness/guard values, provider overrides and callback order remain unmeasured.
+The exact direct type8/member path from #207 is separate from the deferred generic
+subscriber route. This is an updated unsent source report, not contributor contact.
+
 ## Current question — unsent
 
 On our legitimately owned1.400.6031.6004151 client, isolated on loopback with the
