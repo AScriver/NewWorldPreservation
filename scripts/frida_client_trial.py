@@ -27,6 +27,16 @@ OBSERVER = ROOT / "scripts" / "frida_trial_observer.js"
 EXE_SHA256 = "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
 HOOK_SHA256 = "42ebaa8fe9804588a5c41a26cd1d2bbf7c0492845a114dfbb4e15c16d236811d"
 RVA = 0x5DCE750
+CONTEXT_GATE_TARGETS = (
+    ("self_identification", 0x6454C00, 0x990),
+    ("level_info", 0x6446800, 0x990),
+    ("context_load", 0x6448CD0, 0),
+)
+CONTEXT_GATE_FLAGS = (
+    "self_identified", "activation_latched", "context_ready", "level_pending",
+    "jav_context_present", "client_sdk_present", "game_present",
+)
+CONTEXT_GATE_EVENT_LIMIT = 96
 PROCESS_TERMINATE = 0x0001
 PROCESS_SET_QUOTA = 0x0100
 PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
@@ -128,7 +138,7 @@ def hold_copy_use(source_run: Path):
             msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
 
 
-def admit(run: Path, exe: Path, admission: Path) -> dict:
+def admit(run: Path, exe: Path, admission: Path, *, context_gate_observer=False) -> dict:
     staged_real, _ = selected_copy(run, exe, admission)
     if sha256(staged_real) != EXE_SHA256 or sha256(HOOK) != HOOK_SHA256:
         raise ValueError("executable or upstream hook hash mismatch")
@@ -143,7 +153,37 @@ def admit(run: Path, exe: Path, admission: Path) -> dict:
     offset = file_offset_for_rva(image, RVA)
     if image[offset:offset + len(expected)] != expected:
         raise ValueError("disk initializer entry bytes mismatch")
-    return {"path": str(staged_real), "hex": entry_hex.lower(), "bytes": list(expected)}
+    result = {"path": str(staged_real), "hex": entry_hex.lower(), "bytes": list(expected)}
+    if context_gate_observer:
+        targets = []
+        for site, rva, adjustment in CONTEXT_GATE_TARGETS:
+            offset = file_offset_for_rva(image, rva)
+            prefix = image[offset:offset + 16]
+            if len(prefix) != 16:
+                raise ValueError("context-gate entry bytes unavailable")
+            targets.append({"site": site, "rva": rva, "adjustment": adjustment,
+                            "hex": prefix.hex(), "bytes": list(prefix)})
+        result["context_gate_targets"] = targets
+    return result
+
+
+def context_gate_metadata(payload: dict) -> dict | None:
+    """Accept only fixed site/phase enums, ephemeral tags and boolean state."""
+    keys = {"type", "site", "phase", "port_tag", *CONTEXT_GATE_FLAGS}
+    if set(payload) != keys or payload.get("type") != "context-gate":
+        return None
+    if (type(payload["site"]) is not str or
+            payload["site"] not in {site for site, _, _ in CONTEXT_GATE_TARGETS}):
+        return None
+    if type(payload["phase"]) is not str or payload["phase"] not in ("entry", "return"):
+        return None
+    tag = payload["port_tag"]
+    if type(tag) is not int or not 1 <= tag <= 16:
+        return None
+    if any(payload[key] is not None and type(payload[key]) is not bool
+           for key in CONTEXT_GATE_FLAGS):
+        return None
+    return {key: payload[key] for key in ("site", "phase", "port_tag", *CONTEXT_GATE_FLAGS)}
 
 
 class JOBOBJECT_BASIC_LIMIT_INFORMATION(ctypes.Structure):
@@ -278,7 +318,7 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
     session = None
     opened_process = False
     state = {"observer": None, "upstream": None, "child_error": None, "detached": None,
-             "cleanup_started": False}
+             "cleanup_started": False, "context_gate_events": 0}
     condition = threading.Condition()
 
     def on_child(child):
@@ -328,6 +368,12 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
                            after_zero_at_return=payload.get("after_zero_at_return"),
                            retval_hex=payload.get("retval_hex"),
                            retval_zero=payload.get("retval_zero"))
+                elif (source == "observer" and kind == "context-gate" and
+                      "context_gate_targets" in admission):
+                    fields = context_gate_metadata(payload)
+                    if fields is not None and state["context_gate_events"] < CONTEXT_GATE_EVENT_LIMIT:
+                        state["context_gate_events"] += 1
+                        record("context_gate", **fields)
         return receive
 
     def on_detached(reason, _crash):
@@ -428,6 +474,8 @@ def main(argv=None) -> int:
     parser.add_argument("--exe", type=Path, required=True)
     parser.add_argument("--admission", type=Path, required=True)
     parser.add_argument("--seconds", type=int, default=120)
+    parser.add_argument("--context-gate-observer", action="store_true",
+                        help="observe only three pinned callback/gate sites and boolean state")
     args = parser.parse_args(argv)
     if not 1 <= args.seconds <= 300:
         parser.error("seconds must be 1..300")
@@ -443,7 +491,8 @@ def main(argv=None) -> int:
     with lock_path.open("a+b"):
         staged_real, source_run = selected_copy(run, args.exe, args.admission)
         with hold_copy_use(source_run):
-            admission = admit(run, staged_real, args.admission)
+            admission = admit(run, staged_real, args.admission,
+                              context_gate_observer=args.context_gate_observer)
             events = run / "frida-events.jsonl"
             with events.open("x", encoding="utf-8") as stream:
                 event_lock = threading.Lock()

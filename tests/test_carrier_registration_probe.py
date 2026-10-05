@@ -126,7 +126,8 @@ class FakeHeartbeat:
 
 def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                   server_version=None, heartbeat_15d=False, self_ident_default=False,
-                  spawn_point_notification=False, world_activation=False, clock=None):
+                  spawn_point_notification=False, world_activation=False,
+                  self_ident_current_length=False, clock=None):
     events, frame, response = Events(), FakeFrame(), FakeResponse()
     class FakeWire:
         @staticmethod
@@ -157,6 +158,7 @@ def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                                                server_version=server_version,
                                                heartbeat_15d=heartbeat_15d,
                                                self_ident_default=self_ident_default,
+                                               self_ident_current_length=self_ident_current_length,
                                                spawn_point_notification=spawn_point_notification,
                                                world_activation=world_activation,
                                                clock=clock), events, frame, response
@@ -634,12 +636,14 @@ def test_reference_admission_rejects_wrong_path_dirty_tree_and_hash(tmp_path, mo
         adapter_module.verify_reference(reference)
 
 
-def _ready_current_actor_candidate(*, spawn_point_notification=False, world_activation=False):
+def _ready_current_actor_candidate(*, spawn_point_notification=False, world_activation=False,
+                                   self_ident_current_length=False):
     adapter, events, frame, _response = setup_adapter(
         server_version=adapter_module.OWNED_SERVER_VERSION,
         heartbeat_15d=True, self_ident_default=True,
         spawn_point_notification=spawn_point_notification,
-        world_activation=world_activation, clock=lambda: 0.0)
+        world_activation=world_activation, self_ident_current_length=self_ident_current_length,
+        clock=lambda: 0.0)
     peer = Peer("actor-candidate")
     adapter.on_tick(peer, 2.0)
     assert not peer.sent
@@ -648,6 +652,50 @@ def _ready_current_actor_candidate(*, spawn_point_notification=False, world_acti
     frame.records = [Record(channel=0, payload=b"private-registration")]
     adapter.on_app(peer, b"\x02registration")
     return adapter, events, frame, peer
+
+
+def test_current_length_option_is_default_off_and_requires_current_actor():
+    arguments = ["--certificates", "private/certs", "--log", "private/events", "--first-light", "reference"]
+    assert adapter_module.parse_options(arguments).self_ident_current_length is False
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(arguments + ["--self-ident-current-length"])
+    with pytest.raises(ValueError, match="current default actor"):
+        setup_adapter(self_ident_current_length=True)
+    options = adapter_module.parse_options(arguments + ["--self-ident-current-length", "--self-ident-default",
+        "--heartbeat-15d", "--server-version", adapter_module.OWNED_SERVER_VERSION])
+    assert options.self_ident_current_length is True
+
+
+def test_current_length_candidate_preserves_body_and_smaller_stage_prefixes():
+    adapter, events, frame, peer = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True, self_ident_current_length=True)
+    for tick in (1.0, 2.0, 3.0, 4.0):
+        adapter.on_tick(peer, tick)
+    fixed = [record for record in frame.marshaled if record.payload[2:6] == b"\x00\x01\x9c\x19"]
+    assert len(fixed) == 1 and fixed[0].payload == b"\x83\x02" + adapter_module.current_self_ident_default.encode_default()
+    candidates = [row for row in events.rows if row["event"].endswith("_SENT") and "length_prefix_variant" in row]
+    assert [row["length_prefix_variant"] for row in candidates] == [
+        "owned_compact_131_candidate", "pinned_leb128", "pinned_leb128", "pinned_leb128"]
+
+
+@pytest.mark.parametrize("body", [bytes(131), b"\x00\x01\x9c\x19" + bytes(126),
+    b"\x00\x01\x9c\x19" + bytes(126) + b"\x01"])
+def test_current_length_candidate_rejects_non_default_body_without_advancing_cursors(body):
+    adapter, events, _frame, peer = _ready_current_actor_candidate(self_ident_current_length=True)
+    state = adapter.peers[peer.id]
+    before = dict(state.__dict__)
+    sent_before = len(peer.sent)
+    assert adapter._send_fixed_actor_message(peer, state, body, 1628, "SELF_IDENT_DEFAULT") is False
+    assert state.__dict__ == before and len(peer.sent) == sent_before
+    assert events.rows[-1]["reason"] == "length_candidate_body_mismatch"
+
+
+def test_current_length_candidate_does_not_apply_to_another_type_of_same_size():
+    adapter, _events, frame, peer = _ready_current_actor_candidate(self_ident_current_length=True)
+    state = adapter.peers[peer.id]
+    body = adapter_module.current_self_ident_default.encode_default()
+    assert adapter._send_fixed_actor_message(peer, state, body, 1, "OTHER_CANDIDATE") is True
+    assert frame.marshaled[-1].payload == b"\x83\x01" + body
 
 
 def test_world_activation_stages_once_and_preserves_shared_cursors():

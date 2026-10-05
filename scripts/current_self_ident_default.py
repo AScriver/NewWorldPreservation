@@ -10,6 +10,9 @@ OWNED_MAPPING_SHA256 = "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c0
 TYPE_ID = 0x65C
 TYPE_HEADER = b"\x00\x01\x9c\x19"
 BODY_BYTES = 127
+# Current compact-writer encoding of 131. Its outer-length placement is a
+# separately admitted comparison candidate, not an established framing fix.
+CURRENT_TYPED_LENGTH_PREFIX = b"\x83\x02"
 
 
 def encode_default() -> bytes:

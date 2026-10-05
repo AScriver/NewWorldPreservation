@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline-validation",
+  "status": "passed",
+  "recordedAtUtc": "2026-10-05T06:53:21.871084+00:00",
+  "finishedAtUtc": "2026-10-05T06:51:15.756491+00:00",
+  "workspaceHead": "0e4382c027a3138487e5eeae11800b730abebcd6",
+  "workspaceDirty": true,
+  "profile": "workspace",
+  "python": {
+    "selectedFiles": 32,
+    "collected": 445,
+    "executed": 445,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 60711
+  },
+  "changedInputs": [],
+  "newWorldClientTested": false,
+  "privateReceipt": {
+    "path": ".scratch/offline-validation/run-moodboh0/receipt.json",
+    "sha256": "dafe0f91fe114e576ffcffed2a8d5f6d418768b604cd49c08108d8ec779b41cb"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+    },
+    {
+      "path": "scripts/current_self_ident_default.py",
+      "sha256": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "fd6f5911d6b2e2eb622ac471d374d1118af052571e4d6541c1e43c1bdfed66c8"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "4866e892a7661c9e798626ba804c5c10db13b2b787f23aa3a279f929f9bcc5a8"
+    },
+    {
+      "path": "tests/carrier_registration_smoke.py",
+      "sha256": "f144bb979d2f9333e8f9cd1a3e90a4fdf366b3a4ec62dc8b90d4fa4e6005065c"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "f38bbb4f79ee9edcac93dadc59bef023e15c0a84b878b261b85028c9e9132b1a"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "sha256": "b5fc7cc326286b301c76e4357f9ee5a63234cb235adf1ee1b973c60bf1e7d12c"
+    },
+    {
+      "path": "scripts/current_spawn_point.py",
+      "sha256": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "a26479ca424538d066592b0d340cc6e5dcfc3d8f10b0dc0c53ff29a8943349a9"
+    },
+    {
+      "path": "tests/test_current_self_ident_default.py",
+      "sha256": "72740e3103ba16a90e1e9b01f5fe42267ad1a935715e9af325b1fc9d73b39ddf"
+    },
+    {
+      "path": "tests/test_current_world_activation.py",
+      "sha256": "dfcbae3529c99f34ef7a6e15155fd2e9c3e3b55a2fc57b9d1fd697d9941c018b"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "07395cad7dd8be73e2b26e3cae382af8366e2661852e5cd4501cb5b0a3702fc0"
+    },
+    {
+      "path": "research/evidence/current-self-length-prefix-contract.json",
+      "sha256": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+    }
+  ],
+  "matchedWorkspaceInputs": [
+    "scripts/carrier_registration_probe.py",
+    "scripts/current_self_ident_default.py",
+    "scripts/Invoke-FridaPrivateTrial.ps1",
+    "tests/test_carrier_registration_probe.py",
+    "tests/carrier_registration_smoke.py",
+    "scripts/frida_client_trial.py",
+    "scripts/frida_trial_observer.js",
+    "scripts/current_world_activation.py",
+    "scripts/current_spawn_point.py",
+    "scripts/dtls_transport_probe.py",
+    "tests/test_frida_client_trial.py",
+    "tests/test_current_self_ident_default.py",
+    "tests/test_current_world_activation.py",
+    "tests/test_dtls_transport_probe.py",
+    "research/evidence/current-self-length-prefix-contract.json",
+    "requirements-dev.lock"
+  ],
+  "focusedPythonChecks": {
+    "passed": 85,
+    "script": ".scratch/self-length-comparison-20261005T0649/Test-Comparison.ps1"
+  },
+  "pinnedCodeSyntheticChecks": {
+    "passed": 7,
+    "script": ".scratch/self-length-comparison-20261005T0649/Test-Comparison.ps1",
+    "newCase": "Full plaintext Carrier/ACK datagrams from identical synthetic state differ at exactly one Self length-prefix byte; default off is byte-identical; body/cursors/state preserved"
+  },
+  "unchangedObserverValidation": "research/evidence/current-context-gate-validation.json",
+  "review": "Adversary found no implementation blocker; outer reader remains unjoined; fresh manifest/dispatch must be reconciled before live admission",
+  "limits": [
+    "Source-derived prefix candidate placement remains an experiment.",
+    "No live Self callback or gameplay result established by these checks.",
+    "No general length encoder is implemented."
+  ]
+}

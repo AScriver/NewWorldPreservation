@@ -66,6 +66,13 @@ The upstream hook writes that pointer in memory, selecting a permissive policy.
 This intentionally changes certificate verification for the trial; it is not a stock
 CA configuration fix or evidence of unrelated-root rejection.
 
+The subsequent bounded map/context diagnostic may opt into the three exact
+callback/gate sites in [its contract](../research/evidence/current-context-gate-contract.json).
+All additional entry prefixes are verified before resume. It records only
+entry/return, seven booleans or unknown values and ephemeral tags, capped at96 events;
+it adds no memory writes. Follow the separate admission and source bindings in
+[the registration procedure](CARRIER_REGISTRATION_TRIAL.md).
+
 The single October4 attempt allows240 seconds after resume. If the private character
 preview appears, Play may trigger the existing queue contract and DTLS initializer.
 The existing metadata-only services discard incoming authorization/body values and

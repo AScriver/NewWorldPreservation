@@ -26,6 +26,41 @@ class Peer:
         return len(value)
 
 
+def test_pinned_carrier_self_length_candidate_changes_exactly_one_final_datagram_byte():
+    if os.environ.get("CARRIER_REGISTRATION_SMOKE") != "1":
+        raise RuntimeError("set CARRIER_REGISTRATION_SMOKE=1 for explicit pinned smoke")
+    codecs = adapter_module.load_codecs(adapter_module.REFERENCE)
+    body = adapter_module.current_self_ident_default.encode_default()
+
+    def render(option):
+        events, peer = Events(), Peer()
+        kwargs = {} if option is None else {"self_ident_current_length": option}
+        adapter = adapter_module.RegistrationAdapter(events, codecs,
+            server_version=adapter_module.OWNED_SERVER_VERSION,
+            heartbeat_15d=True, self_ident_default=True, **kwargs)
+        state = adapter_module._PeerState()
+        state.next_out_envelope_seq = 7
+        state.next_ch0_seq = state.next_ch0_rel = 2
+        state.last_inbound_nonack = 9
+        state.acked_through = 4
+        state.ack_sequence = 12
+        assert adapter._send_fixed_actor_message(peer, state, body, 1628, "SELF_IDENT_DEFAULT") is True
+        return peer.sent[0], state.__dict__, events.rows[-1]
+
+    historical, historical_state, historical_event = render(None)
+    disabled, disabled_state, _ = render(False)
+    candidate, candidate_state, candidate_event = render(True)
+    assert historical == disabled and historical_state == disabled_state == candidate_state
+    assert len(candidate) == len(historical)
+    changed = [index for index, (old, new) in enumerate(zip(historical, candidate)) if old != new]
+    assert len(changed) == 1
+    offset = historical.index(b"\x83\x01" + body)
+    assert changed == [offset + 1] and historical[offset + 1] == 1 and candidate[offset + 1] == 2
+    assert candidate[offset + 2:offset + 2 + len(body)] == body
+    assert historical_event["length_prefix_variant"] == "pinned_leb128"
+    assert candidate_event["length_prefix_variant"] == "owned_compact_131_candidate"
+
+
 def test_pinned_code_synthetic_connect_ack_round_trip():
     if os.environ.get("CARRIER_REGISTRATION_SMOKE") != "1":
         raise RuntimeError("set CARRIER_REGISTRATION_SMOKE=1 for explicit pinned smoke")

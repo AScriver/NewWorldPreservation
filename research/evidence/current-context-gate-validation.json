@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline-validation",
+  "status": "passed",
+  "recordedAtUtc": "2026-10-05T06:26:43.620891+00:00",
+  "finishedAtUtc": "2026-10-05T06:25:31.459851+00:00",
+  "workspaceHead": "0e4382c027a3138487e5eeae11800b730abebcd6",
+  "workspaceDirty": true,
+  "profile": "workspace",
+  "python": {
+    "selectedFiles": 32,
+    "collected": 439,
+    "executed": 439,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 51554
+  },
+  "changedInputs": [],
+  "newWorldClientTested": false,
+  "privateReceipt": {
+    "path": ".scratch/offline-validation/run-6mdqlyg1/receipt.json",
+    "sha256": "98935d08c60af4bf5fa1413b83c28c1094aa8233d9483ab21f5b71bfa3cb30e1"
+  },
+  "inputs": [
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "f38bbb4f79ee9edcac93dadc59bef023e15c0a84b878b261b85028c9e9132b1a"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "895470ffc4db9d9f62a5a80946c69cd56739e6590b959b28599c7b24bcb3aee0"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "a26479ca424538d066592b0d340cc6e5dcfc3d8f10b0dc0c53ff29a8943349a9"
+    },
+    {
+      "path": "tests/frida_context_gate_observer.test.cjs",
+      "sha256": "850f4624e46b72b4e58630021556640a6d490c31fed4c0cb38c3bea74cae3f4c"
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "d3ca7efb74e2f6ea1b5dc2b33a1b76c3d8a57ec1e4522006ac12af94e7d21982"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "sha256": "b5fc7cc326286b301c76e4357f9ee5a63234cb235adf1ee1b973c60bf1e7d12c"
+    },
+    {
+      "path": "scripts/current_self_ident_default.py",
+      "sha256": "13b0ff0dd39738aadf56a288f8bb4f24aed14395613b74dcaa56e96dc015bfa6"
+    },
+    {
+      "path": "scripts/current_spawn_point.py",
+      "sha256": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+    },
+    {
+      "path": "research/evidence/current-context-gate-contract.json",
+      "sha256": "db686d1cce9387ca10575a881a4f4e23ccc16fee00fee295416a285308d91317"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "20bdf5009f6c9a2bd2a140631b4d4a1961ad97e3b458e423fcd5098ada8cb8f2"
+    }
+  ],
+  "matchedWorkspaceInputs": [
+    "scripts/frida_client_trial.py",
+    "scripts/frida_trial_observer.js",
+    "scripts/Invoke-FridaPrivateTrial.ps1",
+    "tests/test_frida_client_trial.py",
+    "tests/frida_context_gate_observer.test.cjs",
+    "scripts/carrier_registration_probe.py",
+    "scripts/current_world_activation.py",
+    "scripts/current_self_ident_default.py",
+    "scripts/current_spawn_point.py",
+    "scripts/dtls_transport_probe.py",
+    "research/evidence/current-context-gate-contract.json",
+    "requirements-dev.lock",
+    "scripts/offline-test-profiles.json"
+  ],
+  "focusedPythonChecks": {
+    "passed": 79,
+    "script": ".scratch/context-gate-continuation-20261005T0557/Test-Observer.ps1"
+  },
+  "explicitNodeSyntheticChecks": {
+    "passed": 7,
+    "nodeVersion": "24.14.1",
+    "test": "tests/frida_context_gate_observer.test.cjs",
+    "scope": "fake Frida facade, target/prefix refusal, adjusted receivers, boolean privacy, unreadable/game-null state, event/tag caps; no process/backend"
+  },
+  "review": {
+    "roles": [
+      "architect",
+      "investigator",
+      "adversary"
+    ],
+    "result": "no demonstrated blocker in bounded observer; game-pointer join survived narrow follow-up",
+    "limits": [
+      "reads are not atomic",
+      "tags have no allocation generation",
+      "live dispatch opt-in must be reconciled before admission"
+    ]
+  },
+  "limits": [
+    "No live callback flags observed by these checks.",
+    "No gameplay, map completion or PlayerRegistry creation established."
+  ]
+}

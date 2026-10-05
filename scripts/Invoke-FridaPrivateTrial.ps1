@@ -95,6 +95,20 @@ if ($manifest.PSObject.Properties.Name -contains 'application_contract') {
         $requiredBindings += $versionEvidencePath
     }
 }
+if ($manifest.PSObject.Properties.Name -contains 'context_gate_observer') {
+    if ($manifest.context_gate_observer -isnot [bool]) { throw 'Context-gate observation admission must be an explicit boolean.' }
+    if ($manifest.context_gate_observer) {
+        if ($manifest.PSObject.Properties.Name -notcontains 'world_activation' -or -not $manifest.world_activation) { throw 'Context-gate observation requires the admitted current world candidate.' }
+        $requiredBindings += Join-Path $workspaceRoot 'research\evidence\current-context-gate-contract.json'
+    }
+}
+if ($manifest.PSObject.Properties.Name -contains 'self_ident_current_length') {
+    if ($manifest.self_ident_current_length -isnot [bool]) { throw 'Current length comparison admission must be an explicit boolean.' }
+    if ($manifest.self_ident_current_length) {
+        if ($manifest.PSObject.Properties.Name -notcontains 'self_ident_default' -or -not $manifest.self_ident_default -or $manifest.PSObject.Properties.Name -notcontains 'context_gate_observer' -or -not $manifest.context_gate_observer) { throw 'Current length comparison requires the current actor candidate and guarded observer.' }
+        $requiredBindings += Join-Path $workspaceRoot 'research\evidence\current-self-length-prefix-contract.json'
+    }
+}
 foreach ($requiredBinding in $requiredBindings) {
     if (@($manifest.files | Where-Object { $_.path -ieq $requiredBinding }).Count -ne 1) { throw 'Mandatory trial input missing or duplicated in bindings.' }
 }
@@ -228,6 +242,9 @@ try {
         }
         if ($manifest.PSObject.Properties.Name -contains 'self_ident_default' -and $manifest.self_ident_default) {
             $dtlsArguments += '--self-ident-default'
+        }
+        if ($manifest.PSObject.Properties.Name -contains 'self_ident_current_length' -and $manifest.self_ident_current_length) {
+            $dtlsArguments += '--self-ident-current-length'
         }
         if ($manifest.PSObject.Properties.Name -contains 'spawn_point_notification' -and $manifest.spawn_point_notification) {
             $dtlsArguments += '--spawn-point-notification'

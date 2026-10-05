@@ -117,12 +117,14 @@ class FakeDevice:
         self.killed.append(pid)
 
 
-def run_fake(tmp_path, device, owner, record=None):
+def run_fake(tmp_path, device, owner, record=None, *, context_gate_observer=False):
     exe = tmp_path / "client" / "Bin64" / "NewWorld.exe"
     if record is None:
         record = lambda *args, **kwargs: None
-    trial.execute(device, owner, tmp_path, exe, {"path": str(exe), "bytes": [0] * 16,
-                                                "hex": "00" * 16}, 1, record)
+    admission = {"path": str(exe), "bytes": [0] * 16, "hex": "00" * 16}
+    if context_gate_observer:
+        admission["context_gate_targets"] = []  # FakeScript bypasses runtime entry guards.
+    trial.execute(device, owner, tmp_path, exe, admission, 1, record)
 
 
 def test_attach_denied_never_resumes_and_owned_job_closes(tmp_path):
@@ -277,6 +279,64 @@ def test_admission_rejects_wrong_path_hash_rva_or_bytes(admission_case, monkeypa
     metadata.write_text(json.dumps(data), encoding="utf-8")
     with pytest.raises(ValueError, match="entry bytes"):
         trial.admit(run, exe, metadata)
+
+
+def test_context_gate_admission_is_opt_in_and_uses_only_fixed_image_sites(admission_case):
+    run, exe, metadata = admission_case
+    assert "context_gate_targets" not in trial.admit(run, exe, metadata)
+    targets = trial.admit(run, exe, metadata, context_gate_observer=True)["context_gate_targets"]
+    assert [(item["site"], item["rva"], item["adjustment"]) for item in targets] == list(trial.CONTEXT_GATE_TARGETS)
+    assert all(item["bytes"] == list(range(16)) and item["hex"] == bytes(range(16)).hex()
+               for item in targets)
+
+
+def gate_payload(**updates):
+    payload = {"type": "context-gate", "site": "self_identification", "phase": "entry",
+               "port_tag": 1, **{key: False for key in trial.CONTEXT_GATE_FLAGS}}
+    payload.update(updates)
+    return payload
+
+
+@pytest.mark.parametrize("updates", [
+    {"address": "secret-sentinel"}, {"site": "arbitrary"}, {"site": []},
+    {"phase": "elsewhere"}, {"port_tag": True}, {"port_tag": 0}, {"port_tag": 17},
+    {"self_identified": 1}, {"client_sdk_present": "secret-sentinel"},
+])
+def test_context_gate_logger_rejects_non_allowlisted_metadata(updates):
+    assert trial.context_gate_metadata(gate_payload(**updates)) is None
+
+
+def test_context_gate_logger_accepts_boolean_and_unknown_values():
+    payload = gate_payload(client_sdk_present=None, self_identified=True, phase="return")
+    assert trial.context_gate_metadata(payload) == {key: value for key, value in payload.items()
+                                                    if key != "type"}
+
+
+@pytest.mark.parametrize("enabled,expected", [(False, 0), (True, 96)])
+def test_context_gate_events_require_opt_in_and_respect_budget(tmp_path, enabled, expected):
+    device, owner = FakeDevice(), FakeOwner()
+    original_create = device.session.create_script
+
+    def create(source, name):
+        script = original_create(source, name)
+        original_load = script.load
+
+        def load():
+            original_load()
+            if name == "bounded-trial-observer":
+                script.callback({"type": "send", "payload": gate_payload(address="secret-sentinel")}, None)
+                for _ in range(110):
+                    script.callback({"type": "send", "payload": gate_payload()}, None)
+        script.load = load
+        return script
+
+    device.session.create_script = create
+    events = []
+    run_fake(tmp_path, device, owner, lambda event, **fields: events.append({"event": event, **fields}),
+             context_gate_observer=enabled)
+    assert len([item for item in events if item["event"] == "context_gate"]) == expected
+    assert "secret-sentinel" not in json.dumps(events)
+    assert owner.closed
 
 
 @pytest.fixture

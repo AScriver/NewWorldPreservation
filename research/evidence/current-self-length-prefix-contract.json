@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "mode": "owned-image-source-derived-length-prefix-comparison",
+  "workspace_head": "0e4382c027a3138487e5eeae11800b730abebcd6",
+  "workspace_dirty": true,
+  "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "static_seal": {"path": ".scratch/self-callback-dispatch-20261005T0631/evidence-seal-v1.json", "sha256": "1dbb5b316f8654f74380875b8b1db62974d603c087226853cb3d7d267a274202"},
+  "current_writer_rva_hex": "0x877970",
+  "known_writer_rule": "below128 one byte;128..16383 two bytes: low6 bits OR0x80, then value shifted right6",
+  "baseline": {"type_id": 1628, "typed_bytes": 131, "body_bytes": 127, "length_prefix_hex": "8301", "encoder": "pinned First Light seven-bit LEB128"},
+  "candidate": {"length_prefix_hex": "8302", "changed_bytes": 1, "changed_value": "second prefix byte01 to02"},
+  "admission": "explicit self_ident_current_length boolean and --self-ident-current-length, default off, current type and exact original fixed-default131-byte typed body, current world candidate and guarded observer",
+  "unchanged": ["typed header", "all127 body bytes", "other messages", "configured timing", "Carrier sizes/cursors/ACKs", "trust hook", "observer sites", "containment", "cleanup"],
+  "required_offline_check": "using identical synthetic states and pinned Carrier/ACK codecs, default-off datagrams are identical and candidate final plaintext datagram differs at exactly the second Self length-prefix byte",
+  "classification": "current compact writer derivation is source-supported; outer application-reader placement remains unjoined; live result untested",
+  "interpretation": {
+    "self_callback_entry": "supports this changed framing boundary enabling dispatch, without identifying the actual reader implementation",
+    "self_flag_false_to_true": "also supports reaching the current callback's flag write",
+    "no_callback_entry": "inconclusive because decode/recipient/other earlier gates remain",
+    "invalid_observation": "crash, missing transmission, observer failure or budget exhaustion cannot be treated as a prefix result"
+  },
+  "limits": ["one fixed131-byte candidate, no general length encoder", "fresh-process timing/recipient lifecycle may differ", "no gameplay or player creation proven", "no new wire body or identity values", "no raw captures, addresses or client content exported"]
+}

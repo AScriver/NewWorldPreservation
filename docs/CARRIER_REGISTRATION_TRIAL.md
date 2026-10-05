@@ -50,6 +50,81 @@ removal, original hosts and intact installed images/signatures. The next questio
 is context-load prerequisites/ordering and fresh PlayerRegistry creation.
 [Closed world trial](../research/evidence/current-world-activation-trial.json).
 
+## Current callback/gate diagnostic continuation
+
+Fresh static analysis at clean HEAD `0e4382c` confirms that the current0x65c callback
+writes the port's self-identification flag after its prerequisites. The default
+identity does not itself prevent that write. The empty bundle matches the current
+decoder and reaches the context-load call on the inspected matching-context route.
+The bundle diagnostic is unconditional after that call. More consequentially, the
+four load-failure branches use a helper that formats text but never emits it;
+missing failure labels cannot exclude those gates. These are static findings,
+not observations of flags in the closed0440 process.
+
+Use one fresh admission with `context_gate_observer=true` and runner flag
+`--context-gate-observer`; keep all protocol messages and timing unchanged. The
+[contract](../research/evidence/current-context-gate-contract.json) permits only
+the three pinned callback/load sites, entry/return, seven booleans or unknown values,
+and ephemeral object tags1..16. Derive16-byte entry prefixes from the hash-pinned
+copy, verify them in memory before resume, and cap both observer and logger at96
+events. No pointer values, packet contents or player identities enter logs. The
+observer reads state and performs no additional writes. Admission/attachment
+failure keeps the client suspended until owned-job termination. This diagnostic
+is a separate scoped exception; the map message candidate adds no hooks itself.
+
+The game-pointer presence check covers the remaining named early pointer gate.
+Fields are sampled individually and are not atomic. Tags correlate addresses
+within the run, without allocation generations; pointer presence does not prove
+object validity or complete initialization.
+
+Bind the diagnostic contract, original observer/runner/controller, private static
+seals and all existing trial inputs. Preserve the same containment and cleanup.
+Callback entry, flag transitions, activation and context readiness remain separate
+results; none alone proves world entry or a live PlayerRegistry player.
+
+The closed0627 run enabled the manifest/CLI observer and passed all entry guards.
+Fresh process23088 resumed06:28:32 UTC. It recorded LevelInfo entry/return with
+pending=false→true and the direct loader entry/return with self=false, latch/ready
+false, pending=true and JavContext/SDK/game pointers present. No SelfIdentification
+callback entry was observed within the four-event diagnostic window. There were234
+matching heartbeat ACKs and all five message envelopes were covered by Carrier ACKs.
+The user reported loading; collection was stopped after the diagnostic. Cleanup
+06:32:03/readback06:32:46 verified resource absence and installed images/signatures.
+[Closed diagnostic receipt](../research/evidence/current-context-gate-trial.json).
+The body/layout and shared recipient-interface inspection found no contradictory
+field; current outer application-length decoding is the next source question.
+
+## Bounded SelfIdentification length-prefix comparison
+
+The current source helper encodes131 as `83 02`; the imported7-bit helper emits
+`83 01`. Its use at the outer application-length boundary remains unjoined. Test
+that one source-derived placement candidate rather than declaring a framing fix.
+Follow [the prefix contract](../research/evidence/current-self-length-prefix-contract.json):
+explicit manifest `self_ident_current_length=true` and adapter flag
+`--self-ident-current-length`, default off. Admit only current0x65c and the exact
+original131-byte fixed-default typed body. Change only the second length-prefix
+byte and require a pinned-codec final-datagram comparison proving the one-byte
+delta/default-off identity. Keep all messages, configured timing, observer guards,
+loopback containment, ownership and cleanup. Prefix variant is allowlisted metadata.
+
+The closed0655 comparison used a fresh manifest and process19228. The actual Self
+callback entered and changed self=false→true. The fixed actor-connection success marker and
+ClientContext Initialize were logged; loader return latched activation and consumed
+pending LevelInfo.238 heartbeat echoes matched, and all five envelope transmissions
+were covered by client ACKs. The user saw world loading, brief black, character select
+and a later server-spawn timeout. Immediate context readiness remained false; later
+asynchronous readiness and a live player were not observed. The empty bundle carries
+no entities. Cleanup07:00:25/readback07:02:56 verified resources absent and installed
+images/signatures intact. This supports only the admitted131-byte Self prefix; keep
+its default-off option and source-placement uncertainty explicit. A new experiment
+needs a current original entity/create/register contract before adding any payload.
+[Closed prefix result](../research/evidence/current-self-length-prefix-trial.json).
+
+Observe transmission, observer health and SelfIdentification entry/return/flag
+transition. A positive entry supports the changed boundary enabling dispatch;
+it does not identify the reader or generalize to other sizes. Absence remains
+inconclusive, and map completion/player creation/gameplay require their own proof.
+
 New fixed markers from the stable owned common Game.log correlate the previous
 eight replies with client response receipt, actor-connection START and a disconnect
 about10 seconds later. START does not mean actor success. Current-image static

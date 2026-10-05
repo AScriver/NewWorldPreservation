@@ -174,7 +174,8 @@ class _PeerState:
 class RegistrationAdapter:
     def __init__(self, events, codecs, *, decompressor=None, compression_guard=None,
                  server_version=None, heartbeat_15d=False, self_ident_default=False,
-                 spawn_point_notification=False, world_activation=False, clock=None):
+                 spawn_point_notification=False, world_activation=False,
+                 self_ident_current_length=False, clock=None):
         if server_version is not None and server_version != OWNED_SERVER_VERSION:
             raise ValueError("unsupported server version selection")
         if self_ident_default and (not heartbeat_15d or server_version != OWNED_SERVER_VERSION):
@@ -183,6 +184,8 @@ class RegistrationAdapter:
             raise ValueError("spawn notification requires the current default actor candidate")
         if world_activation and not spawn_point_notification:
             raise ValueError("world activation requires the current spawn notification")
+        if self_ident_current_length and not self_ident_default:
+            raise ValueError("current length comparison requires the current default actor candidate")
         self.events = events
         self.frame, self.v3_request, self.v3_response, self.wire, self.rep, self.dispatch = codecs
         self._server_version = server_version
@@ -191,6 +194,7 @@ class RegistrationAdapter:
         self._self_ident_enabled = self_ident_default
         self._spawn_point_enabled = spawn_point_notification
         self._world_activation_enabled = world_activation
+        self._self_ident_current_length = self_ident_current_length
         self._clock = clock or time.monotonic
         self._heartbeat = getattr(self.dispatch, "heartbeat_15d", None)
         if heartbeat_15d and self._heartbeat is None:
@@ -386,8 +390,17 @@ class RegistrationAdapter:
         if state.next_out_envelope_seq is None:
             self._emit(event_prefix + "_REJECTED", peer, reason="cursor_unavailable")
             return False
+        prefix = self.wire.encode_vlq32(len(body))
+        prefix_kind = "pinned_leb128"
+        if (self._self_ident_current_length and type_id == current_self_ident_default.TYPE_ID and
+                event_prefix == "SELF_IDENT_DEFAULT"):
+            if body != current_self_ident_default.encode_default():
+                self._emit(event_prefix + "_REJECTED", peer, reason="length_candidate_body_mismatch")
+                return False
+            prefix = current_self_ident_default.CURRENT_TYPED_LENGTH_PREFIX
+            prefix_kind = "owned_compact_131_candidate"
         record = self.frame.MessageRecord(
-            channel=0, payload=self.wire.encode_vlq32(len(body)) + body,
+            channel=0, payload=prefix + body,
             sequence=state.next_ch0_seq, reliable_sequence=state.next_ch0_rel,
             reliable=True, flags_override=0x21)
         ack = self.rep.build_sm_ct_acks_record(state.ack_sequence,
@@ -409,6 +422,7 @@ class RegistrationAdapter:
         self._emit(event_prefix + "_SENT", peer, envelope_sequence=envelope_sequence,
                    record_sequence=record.sequence, reliable_sequence=record.reliable_sequence,
                    type_id=type_id, typed_bytes=len(body),
+                   length_prefix_variant=prefix_kind,
                    **{body_kind + "_body_bytes": len(body) - header_bytes},
                    client_acceptance_proven=False, world_entry_proven=False)
         return True
@@ -683,6 +697,7 @@ def parse_options(argv=None):
     parser.add_argument("--server-version", choices=(OWNED_SERVER_VERSION,))
     parser.add_argument("--heartbeat-15d", action="store_true")
     parser.add_argument("--self-ident-default", action="store_true")
+    parser.add_argument("--self-ident-current-length", action="store_true")
     parser.add_argument("--spawn-point-notification", action="store_true")
     parser.add_argument("--world-activation", action="store_true")
     options = parser.parse_args(argv)
@@ -695,6 +710,8 @@ def parse_options(argv=None):
         parser.error("Spawn notification requires the current default actor candidate")
     if options.world_activation and not options.spawn_point_notification:
         parser.error("World activation requires the current spawn notification")
+    if options.self_ident_current_length and not options.self_ident_default:
+        parser.error("Current length comparison requires the current default actor candidate")
     return options
 
 
@@ -713,6 +730,7 @@ def main(argv=None):
         adapter = RegistrationAdapter(events, codecs, server_version=options.server_version,
                                       heartbeat_15d=options.heartbeat_15d,
                                       self_ident_default=options.self_ident_default,
+                                      self_ident_current_length=options.self_ident_current_length,
                                       spawn_point_notification=options.spawn_point_notification,
                                       world_activation=options.world_activation)
         Responder(directory, events, port=options.port, chain=options.chain,

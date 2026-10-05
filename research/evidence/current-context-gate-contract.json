@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "mode": "owned-image-static-context-gate-observation-contract",
+  "source_head": "0e4382c027a3138487e5eeae11800b730abebcd6",
+  "source_tree": "clean at the two independent static inspections; diagnostic implementation is a subsequent dirty state",
+  "image_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "type_mapping_sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+  "static_seals": [
+    {"path": ".scratch/context-gate-owner-20261005T0559/evidence-seal-v1.json", "sha256": "7037e1033e0a5416dc8b5464ce31c6d932bf82eab87d3fd474fdb73322bff7c4"},
+    {"path": ".scratch/bundle-gate-20261005T0604/evidence-seal.json", "sha256": "c75d1bbb3b7501d05c552574f1b25f8827a92f5af215f54e050e008d9ea4897e"}
+  ],
+  "sites": [
+    {"site": "self_identification", "rva_hex": "0x6454c00", "receiver_adjustment_hex": "0x990"},
+    {"site": "level_info", "rva_hex": "0x6446800", "receiver_adjustment_hex": "0x990"},
+    {"site": "context_load", "rva_hex": "0x6448cd0", "receiver_adjustment_hex": "0x0"}
+  ],
+  "entry_guard": "derive16 bytes from the hash-pinned copy at each fixed RVA; compare all entries in the admitted main module before attaching and before resume",
+  "observations": {
+    "self_identified": "port+0x1a0 !=0",
+    "activation_latched": "port+0x1a1 !=0",
+    "context_ready": "port+0x1a2 !=0",
+    "level_pending": "optional LevelInfo engagement byte at port+0x190 !=0",
+    "jav_context_present": "pointer at port+0x48 is nonnull",
+    "client_sdk_present": "nonnull JavContext has a nonnull pointer at+8; false if JavContext is null; unknown if unreadable",
+    "game_present": "nonnull pointer at image-base+0xa7ba0e0 has a nonnull game pointer at+0x60; false when either is null; unknown if unreadable"
+  },
+  "output": {"phases": ["entry", "return"], "port_tag_range": [1, 16], "global_event_limit": 96, "state_values": "boolean or null when unreadable"},
+  "authorization": "user's October4 continuation and explicit direction to change obstructing repository boundaries; separate opt-in metadata-only diagnostic within the existing isolated owned-copy trial",
+  "controls": ["default off", "same protocol candidates and timing", "unchanged pinned trust hook", "loopback containment before resume", "exact job/process ownership", "terminate before releasing containment", "no extra writes", "no addresses or contents in events"],
+  "static_findings": [
+    "current SelfIdentification callback writes the self flag after its prerequisite checks; null/default identity does not itself prevent that write",
+    "the empty bundle matches the inspected current decoder",
+    "the bundle diagnostic is unconditional after the matching-context loader call",
+    "the four loader-failure branches call a formatter/category-level checker that does not emit their formatted text"
+  ],
+  "limits": ["static source inference is not a prior live flag observation", "pointer presence is not object validity", "fields are sampled individually rather than atomically", "ephemeral tags correlate addresses within this run and do not identify allocation generations", "callback return and flags are not gameplay proof", "async map completion and PlayerRegistry creation remain unknown", "no wire contents or player identity construction is authorized by this contract"]
+}
