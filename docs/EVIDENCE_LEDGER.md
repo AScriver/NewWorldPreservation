@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current type8 recipient/member parser join — October5, #207 only
+
+Current fixed-image read at HEAD `85becb68f5df661415e4a8642984145ce5e8bb06`, plus
+24 preserved pre-existing dirty/untracked files. The report and receipt pin all
+inputs and distinguish static source, synthetic controls and offline execution.
+K179/K181's generic-route limitation remains historical; it does not describe the
+newly joined dedicated type8 branch. Player construction/designation remain separate.
+
+| ID | Claim | Classification and limits | Evidence |
+|---|---|---|---|
+| K182 | Current type8 descriptor selects the inspected decoder and decoded object's descriptor getter | Strongly source-supported: unique mapping index8/UUID8a40aec2; getter146437070 stores a factory object at descriptor+48, table148502a48/+28 selects14646c2b0→146b07870, object table1484ff1d8/+30 returns the same getter. Wrapper return is a result/status pointer. Runtime registration/invocation remains unmeasured | [Type8 join report](TYPE8_RECIPIENT_JOIN.md), J207-1/2; [original receipt](../research/evidence/current-type8-recipient-join.json) |
+| K183 | A dedicated descriptor branch joins the default bundle object to its actual owner recipient | Adjudicated source-supported and synthetic: initial guard UUID differs from default base, selecting14643e9af under ordinary initialization/default table after existing gates. Incoming+30 matches bundle descriptor through complete146158ba0; same object reaches14175ccc0 at14643eb15/eb83 after context/sequence/order gates. No generic key/map insertion is required on this branch. Static handler installation and separate lazy owner are identified; actual delivery/gates remain unmeasured | Same report J207-3/4; private independent recipient and adversarial reports sealed in receipt |
+| K184 | The decoder payload view reaches concrete record and member parsers | Adjudicated source-supported: buffer owner message+110 has children+118/+948, identical to146adf6a0's selected view;14175ccc0 calls146af20d0→146af2340. Member parser resolves descriptor through1461ad130, reads factory object via1406d97d0, invokes generic factory+8 and member decoder+90, conditionally appends24-byte entry. Application boundary141717fc0 is uninspected. Concrete class schema, player construction/registry and designation are unknown/deferred | Same report J207-5..8; corrected complete fixed slices/private seals in receipt |
+| K185 | Bounded evidence review retained counter-evidence and verified the corrected static route | Executed source extraction:37 unique selected functions, zero undecoded selected bytes, eight fixed literal/table controls, complete comparator success-leaf guard. Adversary falsified the generic-only missing-join rationale and confirmed the revised branch/aliases/parser dispatch; factory-pointer and optional-header/copy-gate wording corrected. Workspace verification is recorded separately in receipt and proves no runtime/gameplay result | Same original receipt, source seal, document/preservation checks and workspace run |
+
 ## Current actor and map/context continuation — October4/5
 
 Dirty HEAD `8c877be640ceebefdc451d21b9454a092b1d948d`, owned EXE

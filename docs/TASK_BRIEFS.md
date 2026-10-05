@@ -38,6 +38,33 @@ directory, and record executed cleanup versus unknown cleanup. Shared hosts, tru
 clients or fixed ports require serialization with the actual owner. A source review
 is not an experiment, and an offline test does not unlock real-client acceptance.
 
+## #207 — current type8 recipient/member parser join (workItemId164)
+
+- Outcome: exact decoder→descriptor/key→registration/recipient→member parser join,
+  or precise missing edges/blocker/handoff. Generic queue structure is insufficient.
+- Pre-work contract: recorded in #207 before analysis; C1 input identity, C2 exact
+  or falsified edges, C3 sanitized evidence/unknowns/handoff, C4 source/document
+  checks plus complete workspace profile and local task-only commit.
+- Input: HEAD85becb68 plus24 pre-existing dirty/untracked file hashes; image8654f01d…,
+  mappingf1e2385f…, existing source map07cb671a…; full identities in
+  [report](TYPE8_RECIPIENT_JOIN.md) and [receipt](../research/evidence/current-type8-recipient-join.json).
+- Owner/files: primary owns that report/receipt and only this brief plus minimal
+  ROADMAP/EVIDENCE_LEDGER/evidence-catalog additions. Preserve all unrelated work.
+- Permitted: pinned read-only static analysis and original docs/evidence; narrowly
+  needed offline checks. Each extra inspection must be necessary to C1-C4.
+- Excluded: #208 construction/PlayerRegistry, #209 designation/readiness/identity,
+  other tasks/dependencies, codecs/messages/replay, live/game/system/network work,
+  upstream changes, publishing/pushing or contributor contact.
+- Resources: unique ignored primary/recipient/challenge scratch directories; no
+  game/services/databases/shared ports. Workspace harness owns isolated temp data
+  and loopback listeners and must verify cleanup.
+- Rejection: wrong descriptor/table/object alias; initial and inner guards conflated;
+  truncated comparator success leaf; generic map/ring substituted for direct type8
+  branch; claimed unconditional copy or runtime acceptance from static checks.
+- Result/handoff: K182-K185 establish the conditional static direct route. Stop at
+  application141717fc0 and generic member decoding; #208/#209 remain deferred.
+  Exact counter-evidence, unknowns and verification are retained in the report.
+
 ## M1-00 — reference and environment
 
 - Question: Can the named pinned public implementation/profile be reproduced?

@@ -1,5 +1,18 @@
 # Milestone 1 roadmap
 
+#207 source result, October5: the pinned current type8 decoder now has an exact
+conditional static join through GameMessagePort's dedicated descriptor branch to
+owner consumer `0x14175ccc0`, record parser `0x146af20d0` and member parser
+`0x146af2340`. The decoder and consumer use the same payload-buffer children.
+This branch has no generic subscriber-key registration prerequisite. Source and
+synthetic checks passed; full offline verification is recorded in the
+[original receipt](../research/evidence/current-type8-recipient-join.json).
+[Bounded report and handoff](TYPE8_RECIPIENT_JOIN.md), claims K182-K185.
+The older type8-route/member-parser unknowns below are superseded for this selected
+branch only. Runtime dispatch/gates, concrete player construction (#208) and
+designation (#209) remain unproved. Only #207 was worked under workItemId164;
+no encoding, game trial, other task, push or contributor contact was started.
+
 Active October4 continuation: **map/context activation after a sustained private connection**.
 The closed0417 trial completed one DTLS session, registration response receipt and
 234 matching local heartbeat acknowledgements over about120 seconds. Carrier ACK

@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-type8-recipient-member-parser",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K182",
+        "K183",
+        "K184",
+        "K185"
+      ],
+      "docs": [
+        "docs/TYPE8_RECIPIENT_JOIN.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-type8-recipient-join.json",
+          "classification": "source-inference",
+          "scope": "#207 pinned static decoder/descriptor/direct recipient/payload view/member-parser join, synthetic falsification and separately recorded offline validation"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Conditional static route only; runtime gates and concrete class/player construction/designation remain unknown. No codec, payload or game trial implemented; #208/#209 deferred."
+    },
+    {
       "id": "historical-client-setup",
       "roadmapTasks": ["M1-02H"],
       "claimIds": ["K120", "K121", "K122", "K123", "K124", "K125", "K126", "K127", "K128", "K129", "K130", "K131", "K132", "K133", "K134"],
