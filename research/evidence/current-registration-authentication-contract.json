@@ -1,0 +1,1982 @@
+{
+  "schema": 1,
+  "taskId": 211,
+  "workItemId": 164,
+  "date": "2026-10-05",
+  "createdUtc": "2026-10-05T23:31:49.783613+00:00",
+  "classification": "source-inference",
+  "outcome": "Bounded current authentication/identity/ticket/peer ownership source contract with exact missing authoritative joins",
+  "mode": "Static disk/source/AST and necessary offline verification only",
+  "liveClientExecuted": false,
+  "authenticationAcceptanceTestExecuted": false,
+  "credentialsOrHistoricalBodiesRetained": false,
+  "authenticatedGameplayProved": false,
+  "milestone1Proved": false,
+  "inputs": {
+    "checkedUtc": "2026-10-05T23:44:03.624831+00:00",
+    "head": "3639461249aca4a7a80bfebab94d71d60396b641",
+    "branch": "main",
+    "image": {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176
+    },
+    "mapping": {
+      "path": "C:\\Code\\NewWorldPreservation\\private\\frida-trials\\run-20261004T1733\\client\\typeindex.json",
+      "sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+    },
+    "steamAppId": 1063730,
+    "steamBuildId": "22469132",
+    "steamMetadataSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "runtime": {
+      "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+      "pythonExecutable": "C:\\Code\\NewWorldPreservation\\.venv\\Scripts\\python.exe",
+      "liveClientTested": false
+    },
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirtyStatus": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirtyStatus": ""
+      }
+    ],
+    "sourceFiles": [
+      {
+        "path": "research/upstream/first-light/server/auth_mock.py",
+        "sha256": "bb7137917c6214c700d2a4be7fcdd07a0be8cc34e63b8fbd3d40dd175eb78844"
+      },
+      {
+        "path": "research/upstream/first-light/server/rep_responder.py",
+        "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_request.py",
+        "sha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_response.py",
+        "sha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba"
+      }
+    ],
+    "inputFiles": [
+      {
+        "path": "AGENTS.md",
+        "sha256": "e7a575483c89b85d49b01a1c758b96ebb0d63391dab3a83324a075bec110915b"
+      },
+      {
+        "path": "docs/AGENT_START.md",
+        "sha256": "bd956e944cfd212e330e88a45acfb1a5dc6ca374c0852a1634b1d86c3728c492"
+      },
+      {
+        "path": "docs/INITIAL_REGISTRATION_CONTRACT.md",
+        "sha256": "9bdf404ee70272f3db2f986bacb1ae0ec01cebebf975a77d97d074a7f7e6b074"
+      },
+      {
+        "path": "research/evidence/current-initial-registration-contract.json",
+        "sha256": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8"
+      },
+      {
+        "path": "docs/PRIVATE_GAME_HANDOFF.md",
+        "sha256": "fb452d094ceac9c8ff1fe8174e9697bc7983a5c5bcdf45f3a326da0717c7c7ea"
+      },
+      {
+        "path": "docs/REGISTRATION_MAINTAINER_QUESTION.md",
+        "sha256": "0ce34cdecf79bcb4632cbee7cb5e1ddcb3a77100b83a3cab5f1fccad50cce9f7"
+      },
+      {
+        "path": "docs/TOOLS.md",
+        "sha256": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07"
+      },
+      {
+        "path": "docs/ACTIONABLES.md",
+        "sha256": "89dfd7c4fa8eade8914262ed00cc65a2a203e76ae89fbf32015ebbcb3f75ddb5"
+      },
+      {
+        "path": "requirements-dev.lock",
+        "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+      },
+      {
+        "path": "research/upstreams.json",
+        "sha256": "30d3dd244973e7105d1a58e9567ca3b6aa9c5394d8430ad067cb73e6a5e36780"
+      },
+      {
+        "path": "scripts/offline-test-profiles.json",
+        "sha256": "4a28c452c112d5521fd1b026f4b639ead1267163cb3c4250ab5e4071e5b859a6"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+      },
+      {
+        "path": "scripts/dtls_transport_probe.py",
+        "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "sha256": "6faa210589c048d9fc5931d14548fc40969ba9434217e850168170c52fede8d9"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "sha256": "edb6cb70a53ed2f74e52b5bf6a3e32a74f7c8fd2325180f0ecb67a313758a1c4"
+      },
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "sha256": "a36075efb02b40915e6b03efeccf810bce4ecf01da2287041ec48770a56e1174"
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "sha256": "b3432dc6a6f1528cdd78d77f6f4fe2f53c2ddc345a0519594631512dbca2dbe3"
+      }
+    ],
+    "toolReceipts": [
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\README.md",
+        "sha256": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\manifest.json",
+        "sha256": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\verification.json",
+        "sha256": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\Run-Tool.ps1",
+        "sha256": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+      }
+    ],
+    "baselineSha256": "35c16ad53e7b0d69636466eddbe8a9e18d0086f8388abc4f7de820b183750462",
+    "dirtyFiles": [
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "sha256": "a36075efb02b40915e6b03efeccf810bce4ecf01da2287041ec48770a56e1174"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "sha256": "6faa210589c048d9fc5931d14548fc40969ba9434217e850168170c52fede8d9"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "sha256": "edb6cb70a53ed2f74e52b5bf6a3e32a74f7c8fd2325180f0ecb67a313758a1c4"
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "sha256": "b3432dc6a6f1528cdd78d77f6f4fe2f53c2ddc345a0519594631512dbca2dbe3"
+      }
+    ],
+    "phase": "Current bindings after independently committed tooling3639461 and task-only artifact integration; static source/native evidence unaffected by shared-document changes"
+  },
+  "initialWorkspace": {
+    "head": "ec5597277dd4c56a9abde8e337edbb527f3b6f32",
+    "branch": "main",
+    "dirtyFiles": [],
+    "trackedSnapshotCount": 216,
+    "baselinePrivatePath": ".scratch\\registration-211-primary-20261005T2309Z\\baseline.json",
+    "baselineSha256": "35c16ad53e7b0d69636466eddbe8a9e18d0086f8388abc4f7de820b183750462"
+  },
+  "beforeIntegrationWorkspace": {
+    "checkedUtc": "2026-10-05T23:31:49.616442+00:00",
+    "head": "3639461249aca4a7a80bfebab94d71d60396b641",
+    "status": "",
+    "files": [
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "beforeSha256": "ef9ffc2949200c7668fb6dd3f0abb922e1cc95fb3e5963e30c3e9a5d236af758",
+        "bytes": 130553
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "beforeSha256": "f700dc8f97605e3d66e45001b081e698f1f700d3b1e0298fbcff399afa398404",
+        "bytes": 66754
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "beforeSha256": "b308cb06c7c740944923892f8518d964207487ff2404fa31e76f8ffee6564c43",
+        "bytes": 33113
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "beforeSha256": "1a19fa529ebdd015bcf1de0b9a156aeb0d5895fead1f3486d9c9cb263d983f85",
+        "bytes": 44841
+      }
+    ]
+  },
+  "tools": {
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "powershellValidator": "parser and PSAvoidAssignmentToAutomaticVariable; all task PS scripts validated before execution"
+  },
+  "nativeTypes": [
+    {
+      "name": "RegistrationRequestV3Msg",
+      "uuid": "0B826B33-89F5-49E0-B8CB-FE4433427778",
+      "mapIndex": 19,
+      "wireDiscriminatorProved": false
+    },
+    {
+      "name": "RegistrationRequestV2Msg",
+      "uuid": "DA4E5889-A65C-4480-8642-0278160125A7",
+      "mapIndex": 2,
+      "runtimeSelectionProved": false
+    },
+    {
+      "name": "RegistrationResponseMsg",
+      "uuid": "104145a7-ff95-44f1-9468-21fb41c8ac2b",
+      "mapIndex": 3,
+      "descriptor": "0x1407f2e80",
+      "selectedFactory": "0x1407cbe90",
+      "selectedDecoder": "0x1407cd040",
+      "fullCodecProved": false
+    }
+  ],
+  "authResultInterpretation": [
+    {
+      "status": -10,
+      "category": "connection-ticket claim failed",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    },
+    {
+      "status": -110,
+      "category": "login-token signature invalid",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    },
+    {
+      "status": -120,
+      "category": "login token expired",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    },
+    {
+      "status": -160,
+      "category": "login ticket invalid",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    },
+    {
+      "status": -310,
+      "category": "auth-token credentials invalid",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    },
+    {
+      "status": -340,
+      "category": "platform ID invalid",
+      "mapper": "0x146b70d00",
+      "authority": "client interpretation only; remote verifier unjoined"
+    }
+  ],
+  "responseTransfers": [
+    {
+      "source": "response+0x10",
+      "target": "owner+0x130 via0x146afed90/0x146afedb0",
+      "role": "clock arithmetic; units/policy unknown"
+    },
+    {
+      "source": "response+0x18",
+      "target": "owner+0x598",
+      "ownership": "copied owner string; issuer/identity/ticket semantics unknown"
+    },
+    {
+      "source": "response+0x38",
+      "target": "owner+0x110 virtual+0x10 after601 set",
+      "ownership": "borrowed field address; downstream copy/retention and semantics unknown"
+    }
+  ],
+  "claims": [
+    {
+      "id": "K203",
+      "title": "Current producer inputs and conditional request construction have immediate provenance",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported current static route; two setup callers/structured copy and global configuration helper joined. Upstream semantic labels/provider90 assignment/runtime V3/V2 remain unknown",
+      "reportSection": "J211-1"
+    },
+    {
+      "id": "K204",
+      "title": "Authentication results and conditional local gate have distinct authority",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported client status interpretation and final-subscriber-string condition. Labels do not implement validators; owner768/subscriber48 authority unresolved",
+      "reportSection": "J211-2"
+    },
+    {
+      "id": "K205",
+      "title": "Accepted response copy, borrowed callback input and clock roles are separated",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported native field/decoder provenance;18→owner598 string copy,38 borrowed tocallback110,10→clock state. Semantic names/issuer/retention unjoined; complete codec remains unknown",
+      "reportSection": "J211-3"
+    },
+    {
+      "id": "K206",
+      "title": "Connection association and local lifetime are joined without account binding",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported connection→gateway→owner route and selected reset/unregister/release order. Authenticated principal/peer, callback quiescence/generation and final postconditions unknown; no race shown",
+      "reportSection": "J211-4"
+    },
+    {
+      "id": "K207",
+      "title": "Reference queue identity and ticket ownership remain a shared mock context",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported pinned reference methods/AST only: one context, UUID-keyed ticket map, no explicit principal/expiry/consumption fields or direct REP queue-store join. Source-reasoned persona-change counterexample was not executed",
+      "reportSection": "J211-5"
+    },
+    {
+      "id": "K208",
+      "title": "Original adapter peer association and send state do not supply authentication",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Strongly source-supported current local code: UUID/SSL/address maps, separate lifetime adapter state, parsed request discarded, local send setsv3_sent; client certificates unauthenticated. No current account/ticket validation implied",
+      "reportSection": "J211-5"
+    },
+    {
+      "id": "K209",
+      "title": "Precise missing joins preserve #210 dependencies and #211 completion limits",
+      "classification": "strongly source-supported within bounded current/reference scope",
+      "limit": "Source-supported bounded missing-contract outcome; selected response factory/decoder narrows210, while actual860 discriminator/framing/full codecs, remote validator/issuer/principalpeer and callback authority remain unproved. Focused/workspace validation separate from auth/gameplay",
+      "reportSection": "J211-6/verification"
+    }
+  ],
+  "missingJoins": {
+    "currentIndependent": [
+      "Upstream calls/semantic input owners of0x146b6d580/0x146b6d9a0 and provider90 assignment/class/ownership",
+      "Remote issuer/validator/claim-store signature/expiry/principal/character/world/use authority",
+      "Concrete response5b subscriber48/router and owner768 source/result contract",
+      "Response18/38 semantic field names/issuer and callback110 downstream retention/identity consumption",
+      "Authoritative accepted principal/ticket to exact connection/peer and cancellation/generation/revocation scope"
+    ],
+    "dependency210": [
+      {
+        "join": "actual historical860 discriminator/runtime branch/index or UUID fallback",
+        "sourceBoundary": "J210-2 native class vs discarded parser-compatible record",
+        "conclusionsGated": "Current request identity and any comparison to historical860 candidates"
+      },
+      {
+        "join": "sender queue consumer/physical stream/Carrier placement and inverse",
+        "sourceBoundary": "J210-3 pre-transport writer vs J210-4 compact-length receive",
+        "conclusionsGated": "Wire placement/transport accepted message and binding fixture"
+      },
+      {
+        "join": "concrete current request/response helper encodings and schemas",
+        "sourceBoundary": "V3 interface236; response factory/decoder now joined but field helpers remain unproved",
+        "conclusionsGated": "Ticket-to-wire authorization or synthetic authentication acceptance/rejection"
+      }
+    ]
+  },
+  "challengeResults": {
+    "report": ".scratch\\registration-211-adversary-20261005T2320Z\\REPORT.md",
+    "reportSha256": "833dd6a0ea812043a869d275b0a943470d083445f6d6200fb1545e35c6edb423",
+    "claimIds": [
+      "P211-3",
+      "P211-4",
+      "P211-5",
+      "P211-6",
+      "P211-7",
+      "P211-8",
+      "P211-9",
+      "P211-10"
+    ],
+    "outcome": "Survived within stated bounded static scope",
+    "verifiedInstructionLines": 2987,
+    "verifiedInstructionArtifacts": 22,
+    "verifiedStatusBranches": 28,
+    "verifiedSourceHashes": 6,
+    "retainedQualifications": [
+      "Only final subscriber string controls5b; later subscribers overwrite prior result",
+      "Callback effects/removal do not establish final lifetime state or quiescence",
+      "Selected response factory/decoder narrows210; complete codecs/framing/discriminator remain unproved",
+      "Mock persona-change counterexample is source reasoning, never executed as auth test"
+    ]
+  },
+  "sourceSpans": [
+    {
+      "target": "0x146b69ad0",
+      "parts": [
+        {
+          "start": "0x146b69ad0",
+          "endExclusive": "0x146b69e79",
+          "rawSha256": "0450f7ac67fb2b74b8cad12cce864bbe078320754afcb491c877d9d04be8a3d7"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d600",
+      "parts": [
+        {
+          "start": "0x146b6d600",
+          "endExclusive": "0x146b6d996",
+          "rawSha256": "536cb6b64f19db42f7d1f281ca46e9750c14159b7f2f7c055b4fbb96dcf611e2"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6e190",
+      "parts": [
+        {
+          "start": "0x146b6e190",
+          "endExclusive": "0x146b6e7b4",
+          "rawSha256": "12ebacf5b1a308580f88bce6277b55a2aabf48658189e0ac38b72524c93b7f5d"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6c500",
+      "parts": [
+        {
+          "start": "0x146b6c500",
+          "endExclusive": "0x146b6c8f3",
+          "rawSha256": "c46abec549f2dc3a53678d375cf6054729d0ae33f6bc73db63fc87792d7f8af6"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b66820",
+      "parts": [
+        {
+          "start": "0x146b66820",
+          "endExclusive": "0x146b66a57",
+          "rawSha256": "4612119511bb32613517e2b0e938973bdc1c4400742ddde30501cf22e14eb41b"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json"
+      ]
+    },
+    {
+      "target": "0x146b66a60",
+      "parts": [
+        {
+          "start": "0x146b66a60",
+          "endExclusive": "0x146b66bdc",
+          "rawSha256": "eb0c8883d2f658ade3da09a1052cfa2cf68199ea4a2e43c81360187b8d500cc7"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json"
+      ]
+    },
+    {
+      "target": "0x1407cfd10",
+      "parts": [
+        {
+          "start": "0x1407cfd10",
+          "endExclusive": "0x1407cfdad",
+          "rawSha256": "f0747e5cfcff49ef8b83a4b9a94b752526d6eb560156db09c0008b7ef82f51cd"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json"
+      ]
+    },
+    {
+      "target": "0x146b67c70",
+      "parts": [
+        {
+          "start": "0x146b67c70",
+          "endExclusive": "0x146b67f1f",
+          "rawSha256": "20f6615f0c6129b274b3f37eae509164a5ad6307631ad4d7ad543711e27ddd54"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json"
+      ]
+    },
+    {
+      "target": "0x146b6df50",
+      "parts": [
+        {
+          "start": "0x146b6df50",
+          "endExclusive": "0x146b6e185",
+          "rawSha256": "16c2e5f7c2c9c5bc00626ff199251c8da07cbcf39aed4abd858171d629d54393"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json"
+      ]
+    },
+    {
+      "target": "0x147aad055",
+      "parts": [
+        {
+          "start": "0x147aad055",
+          "endExclusive": "0x147aad05b",
+          "rawSha256": "75e1403a3f8be64b0b32d512ba5c2df98312c8ad0944ec4d40b9a427dac6fd38"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-followup-20261005T2314Z\\extraction-9978998cece6.json"
+      ]
+    },
+    {
+      "target": "0x146b6d580",
+      "parts": [
+        {
+          "start": "0x146b6d580",
+          "endExclusive": "0x146b6d5fe",
+          "rawSha256": "754338826c18e511cdc0b42546b64f5f4e8eadf4018f6a305bab0ae85587bc0d"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-followup-20261005T2314Z\\extraction-a2c1f6f58d81.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d9a0",
+      "parts": [
+        {
+          "start": "0x146b6d9a0",
+          "endExclusive": "0x146b6dbd3",
+          "rawSha256": "dc4e099928672e7245ff778b5c0469ab795301284ca67273c981b4a27fcd4741"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-followup-20261005T2314Z\\extraction-a2c1f6f58d81.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d3e0",
+      "parts": [
+        {
+          "start": "0x146b6d3e0",
+          "endExclusive": "0x146b6d574",
+          "rawSha256": "c6cfa3d1e3db45164b1b022e79bc4fe07c2b0e15e0fa70abfa5de2ebedf8cdbb"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-followup-20261005T2314Z\\extraction-a2c1f6f58d81.json",
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6b930",
+      "parts": [
+        {
+          "start": "0x146b6b930",
+          "endExclusive": "0x146b6ba83",
+          "rawSha256": "bad39efe0cbe3d7762417e474b81aea5c1f60e34b908d8f966b3c3aa0c2691bd"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-followup-20261005T2314Z\\extraction-f22111ae0d5d.json"
+      ]
+    },
+    {
+      "target": "0x146b6f190",
+      "parts": [
+        {
+          "start": "0x146b6f190",
+          "endExclusive": "0x146b6fe1b",
+          "rawSha256": "ba70a0b78f7d0d115e3c24449656ea1e58af3630d950247e1dc76b2dbaf10a82"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6eb70",
+      "parts": [
+        {
+          "start": "0x146b6eb70",
+          "endExclusive": "0x146b6f02e",
+          "rawSha256": "c2536c0523d643a8d587d2f23b9cc04263c26aa4ae77d4fd1713332f25b7cf4a"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b714b0",
+      "parts": [
+        {
+          "start": "0x146b714b0",
+          "endExclusive": "0x146b714c7",
+          "rawSha256": "d3020d3071adbf941a78e0024f4869038623dc7614d93d9ac5072fc98c8bfd77"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b71590",
+      "parts": [
+        {
+          "start": "0x146b71590",
+          "endExclusive": "0x146b71599",
+          "rawSha256": "db054f062db24a7faa0b103511ab703fa00ad1a459238ecfad28e842647d6544"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6a270",
+      "parts": [
+        {
+          "start": "0x146b6a270",
+          "endExclusive": "0x146b6a9a3",
+          "rawSha256": "eb23687f2907e9b994794cd0ed96616125b34b295a4d4b1f2fe707a821c8bd47"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b27180",
+      "parts": [
+        {
+          "start": "0x146b27180",
+          "endExclusive": "0x146b2729c",
+          "rawSha256": "2c9957b72db5487fd307d8613c8b826c023e6c8fe5bd328529be3ba95791b645"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b28390",
+      "parts": [
+        {
+          "start": "0x146b28390",
+          "endExclusive": "0x146b283a4",
+          "rawSha256": "48eb4285bf8c061c099c6973583bb42e49c72124a4b883aab2a1737a4d941f7d"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6b6f0",
+      "parts": [
+        {
+          "start": "0x146b6b6f0",
+          "endExclusive": "0x146b6b882",
+          "rawSha256": "4459a0a8712bc48d34417c6d73991f69d7195b3dc3e1c14cffb68917c99e3aeb"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b71530",
+      "parts": [
+        {
+          "start": "0x146b71530",
+          "endExclusive": "0x146b7157e",
+          "rawSha256": "e28ffa85ec66e45703b3120aed30fcaa46fe68338502d9ea1165a5b27d34069a"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6e7c0",
+      "parts": [
+        {
+          "start": "0x146b6e7c0",
+          "endExclusive": "0x146b6eb70",
+          "rawSha256": "5003dfbf480afea32621451b3489e4eb81ba168ac342f6b37146c8bc13990033"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b70be0",
+      "parts": [
+        {
+          "start": "0x146b70be0",
+          "endExclusive": "0x146b70cf5",
+          "rawSha256": "938afa9941dba6e06599a1685d1c57210a7ffe34bde90857839ba077804d8db6"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b70d00",
+      "parts": [
+        {
+          "start": "0x146b70d00",
+          "endExclusive": "0x146b71272",
+          "rawSha256": "c4ea71cfd514fe2da899071d2b9991d2868cbbf564e25feffd6162880d4ffb7e"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b679f0",
+      "parts": [
+        {
+          "start": "0x146b679f0",
+          "endExclusive": "0x146b67c65",
+          "rawSha256": "fd2b7d8d289b10d03b4c762b355a6177ff7c7108b7176322bb28f469ff6413bf"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b713e0",
+      "parts": [
+        {
+          "start": "0x146b713e0",
+          "endExclusive": "0x146b7145a",
+          "rawSha256": "319bb756c085c03b97ae56ce6d98c51b906d6958a4731dbb83de40b116a8eae1"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b27ca0",
+      "parts": [
+        {
+          "start": "0x146b27ca0",
+          "endExclusive": "0x146b27dcc",
+          "rawSha256": "7595428045e4bb71883c05353793795bf0c3d79df557f78b174c21688029afdc"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x1407f2e80",
+      "parts": [
+        {
+          "start": "0x1407f2e80",
+          "endExclusive": "0x1407f30be",
+          "rawSha256": "3c670c92f6f8871d0a41ed1cdfc56c66b29cc3721601bbc7229f1f65ea698d3b"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146afedb0",
+      "parts": [
+        {
+          "start": "0x146afedb0",
+          "endExclusive": "0x146afef15",
+          "rawSha256": "30c421cadc56d2f081fc282552c311c9cbd1c411bbd35df69fcb958cf704491b"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d050",
+      "parts": [
+        {
+          "start": "0x146b6d050",
+          "endExclusive": "0x146b6d06c",
+          "rawSha256": "d0947f96c747ca79f88d403d1478c3b142691632b6ffe1bd53847c715fd456a9"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d070",
+      "parts": [
+        {
+          "start": "0x146b6d070",
+          "endExclusive": "0x146b6d08c",
+          "rawSha256": "dfcc029e3cf887e69aadd89e11847ebf022c6cff129df293a8b6727230d721e1"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d090",
+      "parts": [
+        {
+          "start": "0x146b6d090",
+          "endExclusive": "0x146b6d0ca",
+          "rawSha256": "3aca14e838e35515ffabadaa83b1118f5fcd25a5018bf796180d2e03b5672a5f"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d0d0",
+      "parts": [
+        {
+          "start": "0x146b6d0d0",
+          "endExclusive": "0x146b6d13b",
+          "rawSha256": "9e0cacf878a5fcc2895ff6dcb19863e335475cf6fc6b9d618759f369f8f87266"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6d150",
+      "parts": [
+        {
+          "start": "0x146b6d150",
+          "endExclusive": "0x146b6d158",
+          "rawSha256": "7bf4b32c3d7bb7063c0f1adf8db63e62c0b4985f033f42ccda70c4c62b19b97a"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6cb40",
+      "parts": [
+        {
+          "start": "0x146b6cb40",
+          "endExclusive": "0x146b6cb61",
+          "rawSha256": "dc021aac202889f7ed7fbc932efa7a53c02bc25ef9bea92b9198c39e45be6a9e"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6c4f0",
+      "parts": [
+        {
+          "start": "0x146b6c4f0",
+          "endExclusive": "0x146b6c4fe",
+          "rawSha256": "6fb2fd068cf6d6d6cfef78139d377a02e2ca7fa1e46b7f8b1a296ba51f6fec5c"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b713a0",
+      "parts": [
+        {
+          "start": "0x146b713a0",
+          "endExclusive": "0x146b713b6",
+          "rawSha256": "e12ab548b14182c49356b6d4cf2e849a3b41b5c7ce2572f39154b23331550d68"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6b230",
+      "parts": [
+        {
+          "start": "0x146b6b230",
+          "endExclusive": "0x146b6b611",
+          "rawSha256": "4b02962143c614346de91cd1279e4467f92416f15ddd8a31a58a185007d9470d"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x1407cd040",
+      "parts": [
+        {
+          "start": "0x1407cd040",
+          "endExclusive": "0x1407cd1c8",
+          "rawSha256": "45999dd0358cf2ade35b5f5541aef32759dda2c80507ca61be1878b8b412a368"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x1407cbe90",
+      "parts": [
+        {
+          "start": "0x1407cbe90",
+          "endExclusive": "0x1407cbe9a",
+          "rawSha256": "93b817735b136273ed4be7184fd4456e3a8f1a6d49b314b38c4f4bd3a1d2a2d2"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x1407cbea0",
+      "parts": [
+        {
+          "start": "0x1407cbea0",
+          "endExclusive": "0x1407cbead",
+          "rawSha256": "0a2931f1b9cbb2a6128d73e81a1cbfd1fb873b890befda61d5bc889e02b9509f"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6cb70",
+      "parts": [
+        {
+          "start": "0x146b6cb70",
+          "endExclusive": "0x146b6cb79",
+          "rawSha256": "56f0e76f634a8548d0747a472bc3b6971c6796e708cff52673f147b5f7eb2c55"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6cb80",
+      "parts": [
+        {
+          "start": "0x146b6cb80",
+          "endExclusive": "0x146b6cb89",
+          "rawSha256": "e34d73fd32711048e152c7ee889d7156505706b2393f690e06889c5c9855a650"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6cbb0",
+      "parts": [
+        {
+          "start": "0x146b6cbb0",
+          "endExclusive": "0x146b6cc98",
+          "rawSha256": "ed3fa218575d2994374cb3bef3a8f7e320180d55746ba7c595e3416ce100ef77"
+        },
+        {
+          "start": "0x146b6cc98",
+          "endExclusive": "0x146b6cca0",
+          "rawSha256": "cea5b5349d299dead10990f989e04f589f0939e2175b84aef9834b44d72b3dc8"
+        },
+        {
+          "start": "0x146b6cca0",
+          "endExclusive": "0x146b6ce52",
+          "rawSha256": "982793fd33b7b82280f73648be102ac696a3fa0c386e40c7436f183e3337f787"
+        },
+        {
+          "start": "0x146b6ce52",
+          "endExclusive": "0x146b6ce76",
+          "rawSha256": "c875b334629411466e86d6a7107766d02d10005ea226245de0d1455f6ff84636"
+        },
+        {
+          "start": "0x146b6ce76",
+          "endExclusive": "0x146b6ce84",
+          "rawSha256": "98eb42e9eb9b5301397a885c2db3e900ec6361a95e40ba9b10ad2beeeeb0abdc"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6b170",
+      "parts": [
+        {
+          "start": "0x146b6b160",
+          "endExclusive": "0x146b6b227",
+          "rawSha256": "23b4fe84a16812c12de3e0e6c764ed190aecb24f64fbfdb06e5e4e899c6fe994"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b714d0",
+      "parts": [
+        {
+          "start": "0x146b714d0",
+          "endExclusive": "0x146b7151e",
+          "rawSha256": "a471c368d6745f2a8d84c6260f6de6051c41b31e5006fa3242f90ccd7e4c9aae"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6ba90",
+      "parts": [
+        {
+          "start": "0x146b6ba90",
+          "endExclusive": "0x146b6bbfd",
+          "rawSha256": "5b81ebb03792909648b37dd63bd975a46ac36115733f4a1ce34488d732795b47"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6de20",
+      "parts": [
+        {
+          "start": "0x146b6de20",
+          "endExclusive": "0x146b6de2b",
+          "rawSha256": "721312c80abebdb4f925b13d6323fe786bfc378ea381c8103717bfc0881a7555"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6de30",
+      "parts": [
+        {
+          "start": "0x146b6de30",
+          "endExclusive": "0x146b6ded8",
+          "rawSha256": "6eedb7e0bd043f3ffd9ca116e7da7e557c1d6412a07ba636d2cc30b56d0535f0"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6dc50",
+      "parts": [
+        {
+          "start": "0x146b6dc50",
+          "endExclusive": "0x146b6dd2a",
+          "rawSha256": "12b920de09b9daa827c9ea3c4563b4f309b3401a617a277b350ab44dbccbd1bb"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6df10",
+      "parts": [
+        {
+          "start": "0x146b6df10",
+          "endExclusive": "0x146b6df27",
+          "rawSha256": "b5f4bbc3c2bd87ad9a5b94e6437632be06004288b749e73bfd7805f173c3d8b1"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6df40",
+      "parts": [
+        {
+          "start": "0x146b6df40",
+          "endExclusive": "0x146b6df48",
+          "rawSha256": "9fd714a2074d60abbc13dd4ca9af9c8f95f1234b624654f2b13c38d0e02511c9"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b70ba0",
+      "parts": [
+        {
+          "start": "0x146b70ba0",
+          "endExclusive": "0x146b70bdd",
+          "rawSha256": "bd5f68dc421e8529362e17d2a2882d761847b06566e81fcf74f94c847afee7c4"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x140875770",
+      "parts": [
+        {
+          "start": "0x140875770",
+          "endExclusive": "0x14087577a",
+          "rawSha256": "705c9e01b392374cd64927b9b31da557c7e17d682e7dfb111bf0e1b3876fdeb2"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146afed90",
+      "parts": [
+        {
+          "start": "0x146afed90",
+          "endExclusive": "0x146afedaa",
+          "rawSha256": "b7cbb8a09bb988e3097b8bbed9ece7ab304e645b552043480c39325441403ec8"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x140571494",
+      "parts": [
+        {
+          "start": "0x140571494",
+          "endExclusive": "0x14057149a",
+          "rawSha256": "d4bb9f7bbd0b0d63e707ee7f7d5865b2060efa59d0aae615ab7541da5971f511"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x1444f77d0",
+      "parts": [
+        {
+          "start": "0x1444f77d0",
+          "endExclusive": "0x1444f7843",
+          "rawSha256": "c77496963b01d3c9fced07e03e5f87c1814730259fb57655b0207e621debc274"
+        },
+        {
+          "start": "0x1444f7843",
+          "endExclusive": "0x1444f78c0",
+          "rawSha256": "01cad25cba5d4a5389c81f2655579b87801e900d1436449a52142aa3cd3818a6"
+        },
+        {
+          "start": "0x1444f78c0",
+          "endExclusive": "0x1444f78cb",
+          "rawSha256": "a6144a37e2af3bc7f8aa7bba66ebd249e573b659913fd138f6ff42d3ae8c243e"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b684b0",
+      "parts": [
+        {
+          "start": "0x146b684b0",
+          "endExclusive": "0x146b68686",
+          "rawSha256": "8e687055f505c9e903710470e1d9f3a68d159f8250faa805a0b366a29d6d9eb8"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b66e70",
+      "parts": [
+        {
+          "start": "0x146b66e70",
+          "endExclusive": "0x146b670dd",
+          "rawSha256": "618eb128e6ade2996be9022212b5006524f1a3526d164ac24df8fbbc5e659fc7"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b71580",
+      "parts": [
+        {
+          "start": "0x146b71580",
+          "endExclusive": "0x146b71589",
+          "rawSha256": "503619a42d0da488c7167069772d3493800cd38a7935f5d2e0490699324ba135"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b714a0",
+      "parts": [
+        {
+          "start": "0x146b714a0",
+          "endExclusive": "0x146b714a9",
+          "rawSha256": "46ff6dd92455f882b2d0ee2026fa9d6bf74e388ea0431563ad109118c8ee9556"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    },
+    {
+      "target": "0x146b6df30",
+      "parts": [
+        {
+          "start": "0x146b6df30",
+          "endExclusive": "0x146b6df38",
+          "rawSha256": "0f14153cbe0d20def2c057fee6caacbb2653fcafd25f945c37d65a3d24789db4"
+        }
+      ],
+      "evidenceSources": [
+        ".scratch\\registration-211-architect-20261005T2310Z\\seal.json"
+      ]
+    }
+  ],
+  "exactThunkSpans": [
+    {
+      "start": "0x146b714b0",
+      "endExclusive": "0x146b714c8",
+      "rawSha256": "3fb9e15ca6c0df13fd2c61be4c793589b043b19e77eaec3b1f45436a4de94a89",
+      "privateOutput": ".scratch\\registration-211-architect-20261005T2310Z\\exact-146b714b0.txt",
+      "sha256": "719acfb9befaec96df567fabee0390581fece264eb585e8ed93b504d7861219e"
+    },
+    {
+      "start": "0x146b71590",
+      "endExclusive": "0x146b71599",
+      "rawSha256": "db054f062db24a7faa0b103511ab703fa00ad1a459238ecfad28e842647d6544",
+      "privateOutput": ".scratch\\registration-211-architect-20261005T2310Z\\exact-146b71590.txt",
+      "sha256": "0b55c69811265f2727586e745aba23be1590af26da9a068ebc238de64e464bcd"
+    }
+  ],
+  "sourceSymbolRanges": [
+    {
+      "path": "research/upstream/first-light/server/auth_mock.py",
+      "sha256": "bb7137917c6214c700d2a4be7fcdd07a0be8cc34e63b8fbd3d40dd175eb78844",
+      "symbols": [
+        {
+          "symbol": "Ctx.__init__",
+          "startLine": 423,
+          "endLineInclusive": 448,
+          "sourceSpanSha256": "cd92507a4a775fcbe152926c3d929d722cb097b5fe7b2f75179325db931a36dd"
+        },
+        {
+          "symbol": "Ctx.set_persona",
+          "startLine": 450,
+          "endLineInclusive": 456,
+          "sourceSpanSha256": "98ec9a1822b9babe50b526e56a4f29efb7745330f6de34f0c287946cad9b0466"
+        },
+        {
+          "symbol": "Ctx.issue_queue_ticket",
+          "startLine": 547,
+          "endLineInclusive": 577,
+          "sourceSpanSha256": "ef06da6ec84e21421d5a46c7e5b68570d5b9be90d7a54f30431666d60c67abf2"
+        },
+        {
+          "symbol": "Ctx.refresh_queue_ticket",
+          "startLine": 579,
+          "endLineInclusive": 589,
+          "sourceSpanSha256": "8ca05e05fbd120fdc9dd9bdc0817eeb66e13e984d08259af118bd1d41bfc7db3"
+        },
+        {
+          "symbol": "handle_login_queue",
+          "startLine": 777,
+          "endLineInclusive": 892,
+          "sourceSpanSha256": "6ece35e4eef7b0262543c6d6ced6c25a01fdb85b976d203852211849c32b289a"
+        },
+        {
+          "symbol": "handle_omni_token",
+          "startLine": 1153,
+          "endLineInclusive": 1240,
+          "sourceSpanSha256": "bd6e0f5988a6fc8e007e8eb75a71eae5a6898b6549132d321194405f3ffbd622"
+        },
+        {
+          "symbol": "make_fake_login_ticket",
+          "startLine": 258,
+          "endLineInclusive": 314,
+          "sourceSpanSha256": "e3e46351e1ecf50514c068f3b4c93f08fc33223af095d44ac275191554471239"
+        },
+        {
+          "symbol": "AuthHandler._dispatch",
+          "startLine": 1471,
+          "endLineInclusive": 1495,
+          "sourceSpanSha256": "ab0f61a10c205f9bf1eb0b48d6734abfe9a4e9767348370a9d6b64f95c5a0701"
+        },
+        {
+          "symbol": "ThreadedHTTPSServer.__init__",
+          "startLine": 1519,
+          "endLineInclusive": 1523,
+          "sourceSpanSha256": "52ade664dc367134f06b95c14d6a823cf6a41da1448814afc549ea32e377c87e"
+        },
+        {
+          "symbol": "main",
+          "startLine": 1554,
+          "endLineInclusive": 1611,
+          "sourceSpanSha256": "a1003e75d1a16f83676a4e62148b8a111082e808e866f349d292220ab359b0f9"
+        }
+      ]
+    },
+    {
+      "path": "research/upstream/first-light/server/rep_responder.py",
+      "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73",
+      "symbols": [
+        {
+          "symbol": "PeerSession.__init__",
+          "startLine": 182,
+          "endLineInclusive": 312,
+          "sourceSpanSha256": "fee525bedac2e8df7dca5a1ed69fc460061b11e77871ad892fc7ed5424d34c26"
+        },
+        {
+          "symbol": "PeerSession._handle_v3_data_record_inner",
+          "startLine": 597,
+          "endLineInclusive": 774,
+          "sourceSpanSha256": "456cd4b8e4831b0a1ef6ab021423ed9f3741c14fb4871be7747a77ac1613b190"
+        },
+        {
+          "symbol": "PeerSession.feed",
+          "startLine": 316,
+          "endLineInclusive": 326,
+          "sourceSpanSha256": "c1219ad85b2f9daa4f2f9b2a647ced3fb861badcbf4c5884e2283ea16b0cd884"
+        },
+        {
+          "symbol": "PeerSession.is_idle",
+          "startLine": 328,
+          "endLineInclusive": 330,
+          "sourceSpanSha256": "f9bd93412802536fbdb3df5f89441843d84f22c7b119ff3cbf4ce4589aea95de"
+        },
+        {
+          "symbol": "main",
+          "startLine": 1144,
+          "endLineInclusive": 1350,
+          "sourceSpanSha256": "a0676532808464531c553790d5fbffd8dc25409ff517818682cce31c6a053828"
+        }
+      ]
+    },
+    {
+      "path": "research/upstream/first-light/server/javelin/v3_request.py",
+      "sha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb",
+      "symbols": [
+        {
+          "symbol": "parse_v3_request_retry",
+          "startLine": 175,
+          "endLineInclusive": 258,
+          "sourceSpanSha256": "fb5a2c3789aac5a6a969103979f369c0641d2d334a607e0c85388a6bce2db3a0"
+        }
+      ]
+    },
+    {
+      "path": "research/upstream/first-light/server/javelin/v3_response.py",
+      "sha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba",
+      "symbols": [
+        {
+          "symbol": "make_session_token",
+          "startLine": 169,
+          "endLineInclusive": 175,
+          "sourceSpanSha256": "8c76da5d04e6fab3dd06cd08916a071240a723acb4f0ef752d75bb6da3b5f7a2"
+        }
+      ]
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe",
+      "symbols": [
+        {
+          "symbol": "_PeerState.__init__",
+          "startLine": 140,
+          "endLineInclusive": 171,
+          "sourceSpanSha256": "5a1ce4cb89a3253a07d2bccc8f766df2a12ed264b7288c0d3ed4eecea5950024"
+        },
+        {
+          "symbol": "RegistrationAdapter.on_app",
+          "startLine": 246,
+          "endLineInclusive": 258,
+          "sourceSpanSha256": "b33411ada85f76e23d5e4cb855c9ba2c5ea8af716987a172f62582a9fce98c3f"
+        },
+        {
+          "symbol": "RegistrationAdapter._registration_schema",
+          "startLine": 442,
+          "endLineInclusive": 465,
+          "sourceSpanSha256": "8bae0f245070afae7438d4c57c3038dec1e50094032d8469920ebdaab998c48c"
+        },
+        {
+          "symbol": "RegistrationAdapter._handle",
+          "startLine": 467,
+          "endLineInclusive": 686,
+          "sourceSpanSha256": "57b5426cbd74cf6847afe054fd8685a4a5b0fb879499108284dc6cca1a0de71c"
+        }
+      ]
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d",
+      "symbols": [
+        {
+          "symbol": "Peer.__init__",
+          "startLine": 71,
+          "endLineInclusive": 79,
+          "sourceSpanSha256": "4eb725896c737947a54fc4ed03456c2685b589741578aff91a191c13f91db512"
+        },
+        {
+          "symbol": "Responder.__init__",
+          "startLine": 90,
+          "endLineInclusive": 130,
+          "sourceSpanSha256": "104c3d198cb7ef0e1c4f1842447d7d11091f7246bab176b952d998cf41b5d340"
+        },
+        {
+          "symbol": "Responder._close_peer",
+          "startLine": 173,
+          "endLineInclusive": 178,
+          "sourceSpanSha256": "250c11741e916b0fec2357808cb6d8e00abada6cb562c3c6782bae4dc8a8dd3d"
+        },
+        {
+          "symbol": "Responder._advance",
+          "startLine": 180,
+          "endLineInclusive": 210,
+          "sourceSpanSha256": "71b9e369749a8c96dafd555f360c42571634d824bc13945bee0a419403772011"
+        },
+        {
+          "symbol": "Responder.run",
+          "startLine": 212,
+          "endLineInclusive": 303,
+          "sourceSpanSha256": "4ecab573950ed8706ed3834cb51761dd3468e6f918066796a8328792c44fd470"
+        }
+      ]
+    }
+  ],
+  "privateEvidenceSeals": [
+    {
+      "path": ".scratch\\registration-211-investigator-20261005T2310Z\\extraction-9e0091625928.json",
+      "sha256": "4ab38b2b59ca7253a9efb74d24f869843f75ec435b6526d39d3363aeae3c45e4"
+    },
+    {
+      "path": ".scratch\\registration-211-followup-20261005T2314Z\\extraction-9978998cece6.json",
+      "sha256": "149593572b9c3f962b06a889731851bd0d5303783b5c55a130ca2dac6cf7b85c"
+    },
+    {
+      "path": ".scratch\\registration-211-followup-20261005T2314Z\\extraction-a2c1f6f58d81.json",
+      "sha256": "979b47212d1a3baf95782b2c19109610ffc1b82e82a9f3010286e11b76833831"
+    },
+    {
+      "path": ".scratch\\registration-211-followup-20261005T2314Z\\extraction-f22111ae0d5d.json",
+      "sha256": "c4b2b10bd48b737701427e9a29874e7c70739ca69f6a74c6a72ba5b932357067"
+    },
+    {
+      "path": ".scratch\\registration-211-architect-20261005T2310Z\\seal.json",
+      "sha256": "55a47696b7529dc39cf96fbf8bd4b3b1e69bffe137bf50f815d31cb39379f517"
+    },
+    {
+      "path": ".scratch\\registration-211-investigator-20261005T2310Z\\REPORT.md",
+      "sha256": "be045e6c457635c1e5eed3d3d68852f782ff0cc912c49c1c4c414ba6defbb847"
+    },
+    {
+      "path": ".scratch\\registration-211-followup-20261005T2314Z\\REPORT.md",
+      "sha256": "b6eb2c651b48698f0c6c9bb46a3d3c5d3c0062ca0f378e58f0ff8aa8eaaf8fc9"
+    },
+    {
+      "path": ".scratch\\registration-211-followup-20261005T2314Z\\followup-static.json",
+      "sha256": "fbb22734abf0ddeaf1ec943690180ccd71d8a6f4b149ffdb43013f09f928a61b"
+    },
+    {
+      "path": ".scratch\\registration-211-architect-20261005T2310Z\\REPORT.md",
+      "sha256": "c858f9982ccb29b644b1248c7b673cf21b73a4e44e314f240bf309be77dc3fb3"
+    },
+    {
+      "path": ".scratch\\registration-211-architect-20261005T2310Z\\status-labels.json",
+      "sha256": "36301cc9fec4ddcd65807340d93168baef361de958f5f972fcafc28426f65699"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\reference-review.json",
+      "sha256": "309f9fb7afff190b94916506ff23c2a7e18f401f0b8cf73ae8bb22913b5d8c2f"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\reference-findings.md",
+      "sha256": "b1972f9765293bf9f5e82902f33dd8f2220790c8647490529cf690f834bc7f51"
+    },
+    {
+      "path": ".scratch\\registration-211-adversary-20261005T2320Z\\REPORT.md",
+      "sha256": "833dd6a0ea812043a869d275b0a943470d083445f6d6200fb1545e35c6edb423"
+    },
+    {
+      "path": ".scratch\\registration-211-adversary-20261005T2320Z\\verification.json",
+      "sha256": "89c4381f64c57d40193c37d5a417c6aa2734b14a2eae2df0a931da6d84e243fd"
+    },
+    {
+      "path": ".scratch\\registration-211-adversary-20261005T2320Z\\seal.json",
+      "sha256": "1438dc17b8ce50cb681b0efd5a40f898efcc27e133ee9fc1d4d1fa6181774980"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\primary-ledger.md",
+      "sha256": "8d8dd805e585030211393d5bb86f872b8003913206a841ff059b23952ed67ab0"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\input-identity.json",
+      "sha256": "1becd7f4d13f2526d6e7609f1fd69a3e676cb018d4ea4689c559f11210cb174d"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\native-verification.json",
+      "sha256": "fc9c38617558d9e9815c35d0c5142f3a3bf21089f5210dc4d8578fbfc75a7e65"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\reference-review.py",
+      "sha256": "df20100625c69b63f32bde2529a6cf9b37a3ba847631af387e619ffd696bc2b5"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\run-reference-review.ps1",
+      "sha256": "1eb2857bbd8456c98a376bda78a273b39f3c601ea01cae2e6d1a8d8fb0db2f9e"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\verify-native.py",
+      "sha256": "102a24ab9cd30944ade4402acd59daef38dc33f29e2e81f61abac1748b58918b"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\run-native-verification.ps1",
+      "sha256": "1ed557b668fb88a6c8f6f9e22a6d17bf11125f60f17bb6f78f5ad53ed1802cd0"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\snapshot.py",
+      "sha256": "a4451f75ab0fbd52074b3772295ed81c39a36c96b224bb64b94fb6869162fca8"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\run-snapshot.ps1",
+      "sha256": "d56325485379376443f978567ccb71d5cdc5941dad4bde1de356617bb62f63ce"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\pre-edit.json",
+      "sha256": "af44e6db8ee60f9f30f1612e90cac1af5f27a0d24437919ef0ba819859b7909a"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\insertions.json",
+      "sha256": "3945ca9d4ceb0430befc6384c16fe8bdc34cb5c536865da4298aea9aebf95d13"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\refine-integration.py",
+      "sha256": "4e407aa93de67fb1d62e4a9387196103dfa356822b30a0ad963a5258809dcbd2"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\register-receipt.py",
+      "sha256": "2bd28e7db6d1703f62b8f7a092cc9c318b8ed87919ae0c7587451c1be1522bf3"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\source-document-verification.json",
+      "sha256": "8d69136b848489a6cf9fcd02b2c17019600151b0ada13c1b5e76f744129d7033"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\post-integration-preflight.json",
+      "sha256": "380d9a2a149582d561927c7965257851a4e23d035c42a9716c2409355fbe0fa8"
+    },
+    {
+      "path": ".scratch\\offline-validation\\run-52xm2jaj\\receipt.json",
+      "sha256": "3d4122078b766a61514c4751d906f53e3e36352b0901785cdd13ebc3e1f18c03"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\verify-artifacts.py",
+      "sha256": "15da97e3cedd61eb1c5fb2c4d6d3eba2d71be616d356e15de7e28c56cae6e501"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\run-artifact-verification.ps1",
+      "sha256": "52433fe500aefd484519cc19fe7d5cd128cb88fd38c587b78a24e01d812becc4"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\run-workspace.ps1",
+      "sha256": "ef699e670a9352bb01854bdb6623bfbd567dbcabe51fb107a8e049398da5686c"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\workspace.log",
+      "sha256": "64497fc08f795fc8c5c00f363d9f4516d95136b54f77cdfadc0786c5c56bbdfe"
+    },
+    {
+      "path": ".scratch\\registration-211-primary-20261005T2309Z\\record-verification.py",
+      "sha256": "bba9e4759cb195a69ad11fd72a0d2803b9c5396a5e86cd936e6ef208d17b7eca"
+    }
+  ],
+  "report": {
+    "path": "docs/REGISTRATION_AUTHENTICATION_CONTRACT.md",
+    "sha256": "a589b8317c66ec86218e46b23f224f4e65d79728f571ffccaa8eb531d7566c67"
+  },
+  "excludedWork": [
+    "Solving framing/codecs or implementing tickets/private authentication",
+    "Synthetic auth acceptance/rejection before semantics and concrete codecs",
+    "Client/process launches, hooks, captures, process memory or game endpoints",
+    "Credential collection, guessed formats, historical bodies/replay or upstream edits",
+    "Publishing, pushing, contributor messaging or another Actionable"
+  ],
+  "verification": {
+    "nativeByteChecks": {
+      "outcome": "Passed",
+      "uniqueFunctions": 64,
+      "functionChecks": 71,
+      "primarySpanParts": 70,
+      "completeTinyThunks": 2,
+      "privateReceipt": ".scratch\\registration-211-primary-20261005T2309Z\\native-verification.json",
+      "sha256": "fc9c38617558d9e9815c35d0c5142f3a3bf21089f5210dc4d8578fbfc75a7e65"
+    },
+    "referenceAstChecks": {
+      "outcome": "Passed",
+      "sourceFiles": 6,
+      "symbols": 26,
+      "queueMapDirectReferences": [
+        447,
+        576,
+        581
+      ],
+      "privateReceipt": ".scratch\\registration-211-primary-20261005T2309Z\\reference-review.json",
+      "sha256": "309f9fb7afff190b94916506ff23c2a7e18f401f0b8cf73ae8bb22913b5d8c2f",
+      "limit": "AST/direct references only; no native or synthetic auth execution"
+    },
+    "documentSourceChecks": {
+      "outcome": "Passed",
+      "checkedUtc": "2026-10-05T23:41:04.701690+00:00",
+      "command": "Validated run-artifact-verification.ps1: verify-artifacts.py and scripts/Get-ProjectPreflight.ps1 -OutputFormat Json",
+      "privateReceipt": ".scratch\\registration-211-primary-20261005T2309Z\\source-document-verification.json",
+      "sha256": "8d69136b848489a6cf9fcd02b2c17019600151b0ada13c1b5e76f744129d7033",
+      "uniqueFunctions": 64,
+      "nativeSpanHashChecks": 72,
+      "sourceSymbols": 26,
+      "currentSourceBindings": 21,
+      "privateEvidenceSeals": 28,
+      "unchangedInitialTrackedFiles": 205,
+      "sharedFilesWithExactTaskInsertionRemoval": 4,
+      "navigationLinks": 20,
+      "authFixturesAdded": false,
+      "preflight": {
+        "privateReceipt": ".scratch\\registration-211-primary-20261005T2309Z\\post-integration-preflight.json",
+        "sha256": "380d9a2a149582d561927c7965257851a4e23d035c42a9716c2409355fbe0fa8",
+        "workspaceReady": true,
+        "indexReady": true,
+        "taskReceiptFreshness": "local-bindings-match"
+      },
+      "limit": "Snapshot before verification-only receipt metadata; report/native/reference/current source bindings unchanged. Final task-specific verification runs again before staging."
+    },
+    "workspaceProfile": {
+      "outcome": "Passed",
+      "command": "Invoke-CodexPowerShell.ps1 -Path scripts/Test-Offline.ps1 -Execute (default workspace)",
+      "privateReceipt": ".scratch\\offline-validation\\run-52xm2jaj\\receipt.json",
+      "sha256": "3d4122078b766a61514c4751d906f53e3e36352b0901785cdd13ebc3e1f18c03",
+      "startedAt": "2026-10-05T23:41:15.349793+00:00",
+      "finishedAt": "2026-10-05T23:42:29.151458+00:00",
+      "python": {
+        "selectedFiles": 33,
+        "collected": 469,
+        "executed": 469,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 52475
+      },
+      "changedInputs": [],
+      "inputCount": 173,
+      "sourceHead": "3639461249aca4a7a80bfebab94d71d60396b641",
+      "runtime": {
+        "ready": true,
+        "python": "3.11.9",
+        "isolatedVenv": true,
+        "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+        "packages": {
+          "cffi": {
+            "expected": "2.1.1",
+            "installed": "2.1.1",
+            "matches": true
+          },
+          "colorama": {
+            "expected": "0.4.6",
+            "installed": "0.4.6",
+            "matches": true
+          },
+          "cryptography": {
+            "expected": "50.0.2",
+            "installed": "50.0.2",
+            "matches": true
+          },
+          "iniconfig": {
+            "expected": "2.3.0",
+            "installed": "2.3.0",
+            "matches": true
+          },
+          "packaging": {
+            "expected": "26.3",
+            "installed": "26.3",
+            "matches": true
+          },
+          "pluggy": {
+            "expected": "1.6.0",
+            "installed": "1.6.0",
+            "matches": true
+          },
+          "pycparser": {
+            "expected": "3.0",
+            "installed": "3.0",
+            "matches": true
+          },
+          "pygments": {
+            "expected": "2.21.0",
+            "installed": "2.21.0",
+            "matches": true
+          },
+          "pyopenssl": {
+            "expected": "26.4.0",
+            "installed": "26.4.0",
+            "matches": true
+          },
+          "pytest": {
+            "expected": "9.1.1",
+            "installed": "9.1.1",
+            "matches": true
+          },
+          "typing-extensions": {
+            "expected": "4.16.0",
+            "installed": "4.16.0",
+            "matches": true
+          },
+          "lz4": {
+            "expected": "4.4.5",
+            "installed": "4.4.5",
+            "matches": true
+          }
+        },
+        "problems": []
+      },
+      "allRunInputHashesMatchedBeforeRecording": true,
+      "afterRunMetadataChange": {
+        "path": "research/evidence/current-registration-authentication-contract.json",
+        "inputSha256": "5a5cc7ce2f658217d5732cbd480f912dd5cac0e9611f16bec4a0883adafc9c8b",
+        "reason": "Only this receipt gains actual verification metadata after the run. Original claims, source spans and all other run input bytes remain unchanged."
+      },
+      "newWorldClientTested": false,
+      "authenticationAcceptanceTestExecuted": false,
+      "upstreamExecuted": false,
+      "limit": "Existing synthetic/mocked/loopback regressions only; no client/game endpoints/hooks/capture/credential collection or current authentication/gameplay evidence."
+    },
+    "integrationAttempts": [
+      {
+        "outcome": "Failed",
+        "reason": "Source/document checks passed; new boundary was present but separate catalog receipts list omitted #211 receipt, so task-specific preflight assertion failed.",
+        "privateReceipt": ".scratch\\registration-211-primary-20261005T2309Z\\missing-receipt-preflight.json",
+        "sha256": "0aaeb5e61c20381849de961555984dc229487192623269dfa44dc159b8199c78",
+        "correction": "Added the exact new receipt to the catalog receipts list; all original catalog bytes retained. Current checks must pass again."
+      }
+    ],
+    "acceptance": {
+      "C1": "Passed: refreshed pinned input identities and exact unrelated byte preservation",
+      "C2": "Passed bounded alternative: source-supported semantics and precise missing authoritative joins",
+      "C3": "Passed: conditional challenge results retained and #210 dependencies explicit",
+      "C4": "Passed source/document/preflight/workspace; scoped staging/commit still required",
+      "C5": "Pending external transaction: complete only #211 with Resolution/Passed validation, release claim, verify terminal state, stop",
+      "notClaimed": "Authoritative auth/ticket implementation, historical860 discriminator/framing/full codec, current-client acceptance, authenticated gameplay and Milestone1"
+    }
+  },
+  "deferredNotes": [
+    "Pinned reference logging/raw-request persistence and optional replay; source inspected only, no hardening/upstream edits/additional task",
+    "Concurrent Ghidra helper/tooling/docs/catalog work has separate ownership; preserve and validate selected current inputs only"
+  ],
+  "taskLifecycleAtArtifactCreation": {
+    "id": 211,
+    "workItemId": 164,
+    "status": "In progress",
+    "completionTarget": "Done/claim released after validated scoped local commit; final Actionables handoff owns actual terminal state"
+  },
+  "initialInputs": {
+    "checkedUtc": "2026-10-05T23:12:33.197252+00:00",
+    "head": "ec5597277dd4c56a9abde8e337edbb527f3b6f32",
+    "branch": "main",
+    "image": {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176
+    },
+    "mapping": {
+      "path": "C:\\Code\\NewWorldPreservation\\private\\frida-trials\\run-20261004T1733\\client\\typeindex.json",
+      "sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+    },
+    "steamAppId": 1063730,
+    "steamBuildId": "22469132",
+    "steamMetadataSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "runtime": {
+      "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+      "pythonExecutable": "C:\\Code\\NewWorldPreservation\\.venv\\Scripts\\python.exe",
+      "liveClientTested": false
+    },
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirtyStatus": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirtyStatus": ""
+      }
+    ],
+    "sourceFiles": [
+      {
+        "path": "research/upstream/first-light/server/auth_mock.py",
+        "sha256": "bb7137917c6214c700d2a4be7fcdd07a0be8cc34e63b8fbd3d40dd175eb78844"
+      },
+      {
+        "path": "research/upstream/first-light/server/rep_responder.py",
+        "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_request.py",
+        "sha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_response.py",
+        "sha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba"
+      }
+    ],
+    "inputFiles": [
+      {
+        "path": "AGENTS.md",
+        "initialSha256": "e79c71c4c52e25ff42fcd4577305d24274a7071dd45552a2a2ea5053e40e8f49"
+      },
+      {
+        "path": "docs/AGENT_START.md",
+        "initialSha256": "2b79de34ca4445860cbc72130e5f32782c2a7797742f0ed754e9faf4d3b919d1"
+      },
+      {
+        "path": "docs/INITIAL_REGISTRATION_CONTRACT.md",
+        "initialSha256": "9bdf404ee70272f3db2f986bacb1ae0ec01cebebf975a77d97d074a7f7e6b074"
+      },
+      {
+        "path": "research/evidence/current-initial-registration-contract.json",
+        "initialSha256": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8"
+      },
+      {
+        "path": "docs/PRIVATE_GAME_HANDOFF.md",
+        "initialSha256": "fb452d094ceac9c8ff1fe8174e9697bc7983a5c5bcdf45f3a326da0717c7c7ea"
+      },
+      {
+        "path": "docs/REGISTRATION_MAINTAINER_QUESTION.md",
+        "initialSha256": "0ce34cdecf79bcb4632cbee7cb5e1ddcb3a77100b83a3cab5f1fccad50cce9f7"
+      },
+      {
+        "path": "docs/TOOLS.md",
+        "initialSha256": "0079fd760da200df43f13dfefc570a7db7624033abacf6656420672875eebe79"
+      },
+      {
+        "path": "docs/ACTIONABLES.md",
+        "initialSha256": "89dfd7c4fa8eade8914262ed00cc65a2a203e76ae89fbf32015ebbcb3f75ddb5"
+      },
+      {
+        "path": "requirements-dev.lock",
+        "initialSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+      },
+      {
+        "path": "research/upstreams.json",
+        "initialSha256": "30d3dd244973e7105d1a58e9567ca3b6aa9c5394d8430ad067cb73e6a5e36780"
+      },
+      {
+        "path": "scripts/offline-test-profiles.json",
+        "initialSha256": "20bdf5009f6c9a2bd2a140631b4d4a1961ad97e3b458e423fcd5098ada8cb8f2"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "initialSha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+      },
+      {
+        "path": "scripts/dtls_transport_probe.py",
+        "initialSha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "initialSha256": "ba083233cddc866401c9052466097ba948783f1efc1d9bed06170ca575d52a42"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "initialSha256": "9e510eb19d1ba95579f7e2c6438004899260839ffb8a4534211e13aaa4ca2ae8"
+      },
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "initialSha256": "ef9ffc2949200c7668fb6dd3f0abb922e1cc95fb3e5963e30c3e9a5d236af758"
+      },
+      {
+        "path": "research/agent-evidence-index.json",
+        "initialSha256": "baef44d99d714c3ea50811d840415147570d387e675493ee84ae7e8ea9c11d00"
+      }
+    ],
+    "toolReceipts": [
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\README.md",
+        "sha256": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\manifest.json",
+        "sha256": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\verification.json",
+        "sha256": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4"
+      },
+      {
+        "path": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering\\Run-Tool.ps1",
+        "sha256": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+      }
+    ],
+    "baselineSha256": "35c16ad53e7b0d69636466eddbe8a9e18d0086f8388abc4f7de820b183750462",
+    "dirtyFiles": []
+  },
+  "concurrentHistory": [
+    {
+      "commit": "3639461249aca4a7a80bfebab94d71d60396b641",
+      "classification": "independent external tooling commit, not211",
+      "effect": "Earlier unowned changes were committed before integration; current shared/tooling bindings refreshed. Native/reference sources unchanged; initial evidence preserved."
+    }
+  ]
+}

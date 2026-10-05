@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current registration authentication/peer ownership — October 5, #211 only
+
+Fresh pinned owned image8654f01d…/build22469132/mapf1e2385f…; initial clean
+ec559727 with later separately owned tooling changes. Static missing-contract
+research outcome; no current authentication/gameplay or wire implementation inferred.
+
+| ID | Claim | Classification and limits | Evidence |
+|---|---|---|---|
+| K203 | Current producer inputs and conditional request construction have immediate provenance | Strongly source-supported current static route; two setup callers/structured copy and global configuration helper joined. Upstream semantic labels/provider90 assignment/runtime V3/V2 remain unknown | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-1; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K204 | Authentication results and conditional local gate have distinct authority | Strongly source-supported client status interpretation and final-subscriber-string condition. Labels do not implement validators; owner768/subscriber48 authority unresolved | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-2; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K205 | Accepted response copy, borrowed callback input and clock roles are separated | Strongly source-supported native field/decoder provenance;18→owner598 string copy,38 borrowed tocallback110,10→clock state. Semantic names/issuer/retention unjoined; complete codec remains unknown | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-3; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K206 | Connection association and local lifetime are joined without account binding | Strongly source-supported connection→gateway→owner route and selected reset/unregister/release order. Authenticated principal/peer, callback quiescence/generation and final postconditions unknown; no race shown | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-4; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K207 | Reference queue identity and ticket ownership remain a shared mock context | Strongly source-supported pinned reference methods/AST only: one context, UUID-keyed ticket map, no explicit principal/expiry/consumption fields or direct REP queue-store join. Source-reasoned persona-change counterexample was not executed | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-5; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K208 | Original adapter peer association and send state do not supply authentication | Strongly source-supported current local code: UUID/SSL/address maps, separate lifetime adapter state, parsed request discarded, local send setsv3_sent; client certificates unauthenticated. No current account/ticket validation implied | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-5; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+| K209 | Precise missing joins preserve #210 dependencies and #211 completion limits | Source-supported bounded missing-contract outcome; selected response factory/decoder narrows210, while actual860 discriminator/framing/full codecs, remote validator/issuer/principalpeer and callback authority remain unproved. Focused/workspace validation separate from auth/gameplay | [Authentication report](REGISTRATION_AUTHENTICATION_CONTRACT.md), J211-6/verification; [original receipt](../research/evidence/current-registration-authentication-contract.json) |
+
 ## Current initial registration framing/type/retry contract — October5, #210 only
 
 Owned disk image8654f01d…/build22469132 and mappingf1e2385f…; initial main580b4a44

@@ -12,6 +12,36 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-authentication-contract",
+      "roadmapTasks": [
+        "M1-06B",
+        "M1-05"
+      ],
+      "claimIds": [
+        "K203",
+        "K204",
+        "K205",
+        "K206",
+        "K207",
+        "K208",
+        "K209"
+      ],
+      "docs": [
+        "docs/REGISTRATION_AUTHENTICATION_CONTRACT.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-authentication-contract.json",
+          "classification": "source-inference",
+          "scope": "#211 current producer/auth-result/conditional acceptance/response ownership/connection lifetime joins and exact missing authoritative auth/principalpeer contract; verification recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Source inference only. #210 actual860 discriminator, transport bridge and full body codecs remain unproved; remote issuer/validator/ticketprincipalpeer and callbacks/generation/quiescence unknown. No auth fixtures/tickets/protocol/client/hooks/captures/endpoints/credentials/replay/upstream/publishing/other task or gameplay."
+    },
+    {
       "id": "ghidra-function-slices",
       "roadmapTasks": [],
       "claimIds": [],
@@ -930,6 +960,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-authentication-contract.json",
     "research/evidence/ghidra-function-slice-validation.json",
     "research/evidence/current-player-designation-join.json",
     "research/evidence/current-player-construction-join.json",

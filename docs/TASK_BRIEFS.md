@@ -1,5 +1,37 @@
 # Bounded task briefs
 
+## #211 — current registration authentication/peer ownership (workItemId164)
+
+- Outcome/scope recorded before work in the Researching claim: establish current
+  authentication, identity/ticket ownership and peer-binding/lifetime semantics,
+  or exact missing joins. #210 Done supplies a missing-join report, not a wire contract.
+- Inputs: initial clean main ec559727; image8654f01d…/build22469132/version1.400.6031.6004151,
+  existing mappingf1e2385f…; clean FirstLight63756a3f/Aeternum820156db. Concurrent
+  tooling/docs/catalog changes are independently owned and preserved; exact input,
+  dirty-byte snapshots and current native/source seals are in the
+  [report](REGISTRATION_AUTHENTICATION_CONTRACT.md) and
+  [receipt](../research/evidence/current-registration-authentication-contract.json).
+- Owned: those two new files and only211 insertions here, ROADMAP, EVIDENCE_LEDGER
+  and JSON catalog. Scratch/native output/private Ghidra remain ignored; only scoped
+  local commit. Ready/In progress precede tracked edits; no other Actionable claimed.
+- Permitted: bounded disk/static source/AST analysis and necessary offline checks.
+  Excluded: solving framing/codecs, tickets/auth design, synthetic auth tests before
+  semantics+codecs, client launches/hooks/captures/process memory/endpoints/credentials,
+  guessed formats/historical replay/upstream edits/publishing/messages/other tasks.
+- Resources: unique per-role ignored scratch/private databases; no shared services,
+  data or fixed ports. Offline harness owns unique temp/loopback children and cleanup.
+- C1: refresh exact image/map/reference/relevant state and preserve unrelated bytes.
+  C2: current provenance/auth checks/ownership/peer/lifetime or exact missing edges.
+  C3: conditional branch challenges and explicit210 dependencies. C4: original report,
+  receipt/navigation/source/document/full workspace validation and scoped local commit.
+  C5: Resolution/qualifying validation/Done/released claim; stop.
+- Reject: client error labels as verifier; object route as account binding;600/601/send
+  as auth; imported names as native semantics; all5b rejection; callback stores as
+  final state; factory/object shape as full codec; synthetic/offline as live gameplay.
+- Result: bounded missing-contract alternative, K203–K209; exact joins and
+  remaining authorities in J211-1..6. Parent178/164/Milestone1 not completed. Deferred
+  upstream privacy/replay discoveries remain notes, without edits/tasks.
+
 ## Function-slice tooling improvement — October5
 
 - Outcome: make the successful sparse Ghidra procedure reusable for remaining

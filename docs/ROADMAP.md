@@ -1,5 +1,20 @@
 # Milestone 1 roadmap
 
+#211 source result, October 5: current registration source joins immediate producer
+provenance, client authentication-result interpretation, conditional final-subscriber
+acceptance, response copy/borrow/clock ownership and connection→gateway→owner
+association/lifetime. Authoritative ticket/principal-to-peer authentication remains
+unestablished: upstream semantic producers/provider90, remote issuer/validator/claim
+store, subscriber48/owner768, callback110 and cancellation/generation joins are
+explicit. The selected response factory/field decoder narrows one #210 gap; the
+actual historical860 request discriminator, transport/framing bridge and complete
+codecs remain unproved. [Authentication/ownership report](REGISTRATION_AUTHENTICATION_CONTRACT.md),
+K203–K209 and [original receipt](../research/evidence/current-registration-authentication-contract.json)
+record exact current evidence and verification. Only211's bounded missing-join
+research alternative is completed after validation/local commit/task release.
+Parent178/164 and Milestone1 remain open; no ticket implementation, auth protocol,
+synthetic auth acceptance test, game/client activity or another task begins.
+
 #210 source result, October5: a conditional current V3 producer/class UUID joins
 owned map19 (0x13), with a separate V2/map2 branch and response class/map3. The
 gateway's pre-transport writer and compact-length receive/typed decoder are traced
