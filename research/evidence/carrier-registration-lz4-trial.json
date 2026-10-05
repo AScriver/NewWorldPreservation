@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-copy-carrier-lz4-trial",
+  "recordedAtUtc": "2026-10-04T21:51:14.344096+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261004T2141-lz4",
+  "target": {
+    "steamAppId": "1063730",
+    "steamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "pid": 3712,
+    "creationFiletime": 134356240124249085
+  },
+  "reference": {
+    "firstLightCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "aeternumCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+    "aeternumDecoderSha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b",
+    "lz4Version": "4.4.5"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "af642c7644b2dd3e77962c747f477124d0c5123597852deff9b640f2f445a275",
+      "executedSnapshot": "private/frida-trials/run-20261004T2141-lz4/executed-source/carrier_registration_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f",
+      "executedSnapshot": "private/frida-trials/run-20261004T2141-lz4/executed-source/frida_client_trial.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef",
+      "executedSnapshot": "private/frida-trials/run-20261004T2141-lz4/executed-source/dtls_transport_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "b15608498edce129804f66695a4206651e0df3a18686b8767f9e19dd98bbfeed",
+      "executedSnapshot": "private/frida-trials/run-20261004T2141-lz4/executed-source/Invoke-FridaPrivateTrial.ps1",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+      "executedSnapshot": "private/frida-trials/run-20261004T2141-lz4/executed-source/frida_trial_observer.js",
+      "currentBytesMatch": true
+    }
+  ],
+  "boundFileCount": 128,
+  "eventCounts": {
+    "CARRIER_ACK_SENT": 2,
+    "CARRIER_DECOMPRESSED": 1,
+    "CARRIER_PARSED": 98,
+    "CARRIER_RECORD": 103,
+    "CONNECT_ACK_SENT": 2,
+    "DTLS_APPLICATION_DISCARDED": 98,
+    "DTLS_DATAGRAM_RECEIVED": 102,
+    "DTLS_HANDSHAKE_ESTABLISHED": 1,
+    "DTLS_HANDSHAKE_STATE": 13,
+    "DTLS_PEER_CLOSED": 1,
+    "DTLS_PEER_OPENED": 1,
+    "DTLS_PROBE_LISTENING": 1,
+    "DTLS_SERVER_OUTPUT": 6,
+    "DTLS_SNI": 1
+  },
+  "applicationRecords": 98,
+  "applicationBytes": 2145,
+  "dataChannelRecords": [
+    {
+      "channel": 0,
+      "envelope_sequence": 4,
+      "event_sequence": 44,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    }
+  ],
+  "transitions": [
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "64ecb8bb-0a20-43a2-b41c-6ea17e5d89f0",
+      "event_sequence": 22,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T21:47:29.454Z"
+    },
+    {
+      "connection_id": "64ecb8bb-0a20-43a2-b41c-6ea17e5d89f0",
+      "envelope_sequence": 2,
+      "event_sequence": 31,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T21:47:29.454Z"
+    },
+    {
+      "connection_id": "64ecb8bb-0a20-43a2-b41c-6ea17e5d89f0",
+      "envelope_sequence": 3,
+      "event_sequence": 38,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T21:47:29.456Z"
+    },
+    {
+      "compressed_bytes": 733,
+      "connection_id": "64ecb8bb-0a20-43a2-b41c-6ea17e5d89f0",
+      "envelope_sequence": 4,
+      "event_sequence": 41,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T21:47:29.574Z"
+    },
+    {
+      "connection_id": "64ecb8bb-0a20-43a2-b41c-6ea17e5d89f0",
+      "event_sequence": 430,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T21:48:10.062Z"
+    }
+  ],
+  "runtimeTrust": [
+    {
+      "event": "observer_status",
+      "time_ns": 1791150412553486600,
+      "ok": true,
+      "observer_event": "admitted_and_attached"
+    },
+    {
+      "event": "upstream_hook_status",
+      "time_ns": 1791150412554989100,
+      "installed": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791150449428481900,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791150449428481900,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    }
+  ],
+  "ownerBasis": "IPv4 bound UDP endpoint owner; exact HTTPS tuple lookup; no packet capture",
+  "userObservation": "Clicked Play once; loading symbol beside Play for about16 seconds before Connection Error.",
+  "acceptance": {
+    "privateDtlsCompleted": true,
+    "carrierConnectAckSent": 2,
+    "rawLz4DecodeObserved": true,
+    "registrationCandidateRecognized": false,
+    "registrationResponseSent": false,
+    "registrationAccepted": false,
+    "worldEntry": false,
+    "milestone1": false
+  },
+  "interpretationLimits": [
+    "Successful LZ4 expansion and pinned framing parse do not establish message-specific body validity.",
+    "The single channel0 reliable record was flags0x21, length860 and had no validated generic typed wrapper. Contents discarded.",
+    "No V3 candidate was emitted under the record-flags0x40 gate; exact initial registration recognition remains unresolved.",
+    "Connect ACK and Carrier ACK transmissions do not independently prove semantic acceptance."
+  ],
+  "cleanup": {
+    "hosts_after_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "timestamp_utc": "2026-10-04T21:48:41.0655839+00:00",
+    "firewall_rules_absent": true,
+    "schema": 1,
+    "staged_copy_retained_ignored": true,
+    "ports_closed": true,
+    "trust_store_modified": false,
+    "installed": [
+      {
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+        "unchanged": true
+      },
+      {
+        "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe",
+        "unchanged": true
+      },
+      {
+        "unchanged": false,
+        "change_cause": "unknown when metadata differs",
+        "preserved": true,
+        "appid": "1063730",
+        "sha256": "710e6d51a789c811da1a36514b1804394192d78a4739b866e9ea74eee2083641",
+        "buildid": "22469132",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf"
+      }
+    ],
+    "retained_root_count": 1,
+    "game_absent": true,
+    "owned_children_stopped": true,
+    "hosts_before_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "hosts_byte_exact": true
+  },
+  "independentCleanupReadback": {
+    "no_processes_stopped": true,
+    "game_absent": true,
+    "installed_images_and_signatures_intact": true,
+    "hosts_byte_exact": true,
+    "copy_retained": true,
+    "timestamp_utc": "2026-10-04T21:51:12.9770882+00:00",
+    "ports_closed": true,
+    "retained_root_count": 1,
+    "firewall_rules_absent": true
+  },
+  "privateLogs": [
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/dtls.jsonl",
+      "sha256": "a6356db84e560aad91499a5d1df9fc57d0c00873f38683446a75b4f5c82b564f"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/frida-events.jsonl",
+      "sha256": "f0a76e08d0ed200584eea0149902b6895b9bbb94b2b28b0c0540dd637f42af43"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/https-v4.jsonl",
+      "sha256": "bf676d535ff4956a7a8cb3426435e171fe7712d51e82a3487f72512af7945d74"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/https-v6.jsonl",
+      "sha256": "6b820af24db8739bea3dda3f505540f5f716098f1cff46af2cfa6e19e56f4dc3"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/containment-events.jsonl",
+      "sha256": "8af0b649328d3ecf1e3ca2b2b0eeebe404de2731993e7099c1178a4aa73d2fc8"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/trial-inputs.json",
+      "sha256": "5a297f110ce68838d4389681e857864e1ac95f5ac6bab9fb6ad2fbb9acb520d3"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/cleanup.json",
+      "sha256": "e94e96d227119b2ed251d67cf580f03e29389bb73596d31bb1e89761c663ee4e"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2141-lz4/cleanup-readback.json",
+      "sha256": "bf0f59f4ebcb980e129ab5a2036c8fdd69c3ffb56634c43bf0c7bfef407628c5"
+    }
+  ]
+}

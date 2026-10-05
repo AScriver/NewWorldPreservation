@@ -8,13 +8,14 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 | Boundary ID | Tasks | Read first |
 |---|---|---|
 | `reference-environment` | M1-00 | [First Light analysis](FIRST_LIGHT_ANALYSIS.md) |
+| `historical-client-setup` | M1-02H | [Historical review](FIRST_LIGHT_HISTORICAL_CLIENT.md), [executed owned-copy Frida/DTLS trial](FRIDA_PRIVATE_DTLS_TRIAL.md) |
 | `bootstrap-https-ownership` | M1-01 / 02A | [Connectivity](CURRENT_CLIENT_CONNECTIVITY.md) |
 | `channel-token-request` | M1-02B / 02B1 | [Channel](BOOTSTRAP_CHANNEL.md) |
 | `token-envelope` | M1-02B2 | [Token session contract](TOKEN_SESSION_CONTRACT.md) |
 | `credentials-selection-queue` | M1-02B3 / 04 / 05 | [Private handoff](PRIVATE_GAME_HANDOFF.md) |
 | `local-dtls` | M1-03 | [DTLS](DTLS_REGISTRATION.md) |
 | `rep-trust-settings` | M1-02C | [Trust policy](REP_TRUST_POLICY.md) |
-| `registration-spawn` | M1-06 / 07 | [Spawn evidence](SPAWN_SEQUENCE.md) |
+| `registration-spawn` | M1-06 / 07 | [Carrier trial](CARRIER_REGISTRATION_TRIAL.md), [spawn evidence](SPAWN_SEQUENCE.md) |
 | `replication-reconnect-acceptance` | M1-08 through 12 | [Architecture](ARCHITECTURE.md) and [ROADMAP acceptance](ROADMAP.md#acceptance-boundary) |
 
 ## Search and freshness

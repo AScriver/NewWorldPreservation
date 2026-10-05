@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline-validation",
+  "status": "passed",
+  "recordedAtUtc": "2026-10-04T22:03:09.425242+00:00",
+  "finishedAtUtc": "2026-10-04T22:02:40.837484+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "profile": "workspace",
+  "python": {
+    "selectedFiles": 30,
+    "collected": 406,
+    "executed": 406,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 49212
+  },
+  "changedInputs": [],
+  "newWorldClientTested": false,
+  "privateReceipt": {
+    "path": ".scratch/offline-validation/run-cx69wa__/receipt.json",
+    "sha256": "fbbfccb6e68c032bf21dd75f55fdc86d2c8fee6418c81bc26bd64a038a84c8e3"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "037a71aecaa198dca34184b647b17a1a9846cbb38b35488714011996f3a4c207"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "b15608498edce129804f66695a4206651e0df3a18686b8767f9e19dd98bbfeed"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "a59ddc2aa7a1ba860444dadf1003d90afd931d6742fee592009fbae7d96861de"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "9111a69329cae7a697b44dee1918a1e8ed915acbb9e5848e22cd6a379c7d7184"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "9c6228e1c90078ad17607e4b21c1c287346561a9e792f115edf979c40c3e28d1"
+    },
+    {
+      "path": "tests/carrier_registration_smoke.py",
+      "sha256": "2a50ef8e31bcb8a558b046fc55fe86e3d7fd6f9a7ac93166ad72faeb969bbd6c"
+    },
+    {
+      "path": "requirements-dev.in",
+      "sha256": "10e8db3fc0732368e02e0331e9ea3710e95172778bf5073cdac7388b215f9d15"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+    }
+  ],
+  "pinnedSourceSyntheticSmoke": {
+    "executed": true,
+    "passed": 3,
+    "commandScript": ".scratch/registration-schema-20261004/Run-Source-Smoke.ps1",
+    "scope": "synthetic ACK, raw-block decode and strict request schema classification using clean First Light63756a3 and Aeternum820156d plus lz4==4.4.5; no listener/game"
+  },
+  "limits": [
+    "Synthetic state, privacy and codec checks do not establish current client acceptance.",
+    "No world/actor/movement acceptance tested."
+  ]
+}

@@ -57,7 +57,10 @@ The tools do not change the existing live-observation gates. Do not launch clien
 attach Frida/Cheat Engine/debuggers, enable capture, change hosts/certificate stores
 or contact game endpoints during offline validation. Any live trial needs the
 existing separately authorized ownership and cleanup procedure. Preserve intact
-launcher/EAC; an access denial is a result, not permission to bypass protections.
+installed launcher/EAC. The user's October 4 authorization admits direct Frida
+startup of a separate physical client copy and the pinned runtime trust hook under
+[this bounded private procedure](FRIDA_PRIVATE_DTLS_TRIAL.md). It does not permit
+protection evasion following an access denial, game endpoint traffic or capture hooks.
 
 Wireshark was unpacked as a portable tool; no capture-driver installer was run.
 Check capture prerequisites separately for any future authorized capture. The

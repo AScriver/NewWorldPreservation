@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-copy-carrier-registration-trial",
+  "recordedAtUtc": "2026-10-04T21:35:29.887899+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261004T2015-registration",
+  "target": {
+    "steamAppId": "1063730",
+    "steamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "pid": 28164,
+    "creationFiletime": 134356227845496574
+  },
+  "reference": {
+    "firstLightCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "cd7a83c545b9ab9d6040fd688c0857d246e9531f5086901db8d191a138a303ce",
+      "executedSnapshot": "private/frida-trials/run-20261004T2015-registration/executed-source/carrier_registration_probe.py",
+      "currentBytesMatch": false
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f",
+      "executedSnapshot": "private/frida-trials/run-20261004T2015-registration/executed-source/frida_client_trial.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef",
+      "executedSnapshot": "private/frida-trials/run-20261004T2015-registration/executed-source/dtls_transport_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "9e7a9e5a329fc66db22ba11d901a18609f9eaa2b1296ec22cbeeb6b998a2bf3b",
+      "executedSnapshot": "private/frida-trials/run-20261004T2015-registration/executed-source/Invoke-FridaPrivateTrial.ps1",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+      "executedSnapshot": "private/frida-trials/run-20261004T2015-registration/executed-source/frida_trial_observer.js",
+      "currentBytesMatch": true
+    }
+  ],
+  "eventCounts": {
+    "CARRIER_ACK_SENT": 1,
+    "CARRIER_PARSED": 95,
+    "CARRIER_RECORD": 99,
+    "CARRIER_REJECTED": 10,
+    "CLIENT_DATA_AFTER_CONNECT_ACK": 1,
+    "CONNECT_ACK_SENT": 2,
+    "DTLS_APPLICATION_DISCARDED": 105,
+    "DTLS_DATAGRAM_RECEIVED": 109,
+    "DTLS_HANDSHAKE_ESTABLISHED": 1,
+    "DTLS_HANDSHAKE_STATE": 13,
+    "DTLS_PEER_CLOSED": 1,
+    "DTLS_PEER_OPENED": 1,
+    "DTLS_PROBE_LISTENING": 1,
+    "DTLS_SERVER_OUTPUT": 5,
+    "DTLS_SNI": 1
+  },
+  "applicationRecords": 105,
+  "applicationBytes": 8721,
+  "compressedRejected": [
+    {
+      "event_sequence": 41,
+      "timestamp_utc": "2026-10-04T21:28:13.786Z",
+      "application_bytes": 739
+    },
+    {
+      "event_sequence": 80,
+      "timestamp_utc": "2026-10-04T21:28:14.811Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 119,
+      "timestamp_utc": "2026-10-04T21:28:15.837Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 158,
+      "timestamp_utc": "2026-10-04T21:28:16.862Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 197,
+      "timestamp_utc": "2026-10-04T21:28:17.888Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 236,
+      "timestamp_utc": "2026-10-04T21:28:18.913Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 275,
+      "timestamp_utc": "2026-10-04T21:28:19.939Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 314,
+      "timestamp_utc": "2026-10-04T21:28:20.965Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 353,
+      "timestamp_utc": "2026-10-04T21:28:21.991Z",
+      "application_bytes": 734
+    },
+    {
+      "event_sequence": 392,
+      "timestamp_utc": "2026-10-04T21:28:23.017Z",
+      "application_bytes": 734
+    }
+  ],
+  "carrierSystemIds": {
+    "1": 3,
+    "6": 95,
+    "3": 1
+  },
+  "transitions": [
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "connection_id": "15816b27-071c-450a-9efb-16eb86de72e4",
+      "event_sequence": 22,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T21:28:13.783Z"
+    },
+    {
+      "connection_id": "15816b27-071c-450a-9efb-16eb86de72e4",
+      "envelope_sequence": 2,
+      "event_sequence": 31,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T21:28:13.783Z"
+    },
+    {
+      "connection_id": "15816b27-071c-450a-9efb-16eb86de72e4",
+      "envelope_sequence": 3,
+      "event_sequence": 38,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T21:28:13.784Z"
+    },
+    {
+      "connection_id": "15816b27-071c-450a-9efb-16eb86de72e4",
+      "envelope_sequence": 102,
+      "event_sequence": 426,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T21:28:23.803Z"
+    },
+    {
+      "connection_id": "15816b27-071c-450a-9efb-16eb86de72e4",
+      "event_sequence": 445,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T21:28:54.255Z"
+    }
+  ],
+  "runtimeTrust": [
+    {
+      "event": "observer_status",
+      "time_ns": 1791149184689495400,
+      "ok": true,
+      "observer_event": "admitted_and_attached"
+    },
+    {
+      "event": "upstream_hook_status",
+      "time_ns": 1791149184691496000,
+      "installed": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791149293756341200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791149293756843000,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    }
+  ],
+  "ownerBasis": "IPv4 bound UDP endpoint owner; exact HTTPS tuple lookup; no packet capture",
+  "userObservation": "Same instance after delayed UAC acceptance; clicked Play and received Connection Error.",
+  "acceptance": {
+    "privateDtlsCompleted": true,
+    "carrierConnectAckSent": 2,
+    "registrationCandidateDecoded": false,
+    "registrationResponseSent": false,
+    "registrationAccepted": false,
+    "worldEntry": false,
+    "milestone1": false
+  },
+  "interpretationLimits": [
+    "Valid compressed-envelope marker observed; compressed content was not decoded.",
+    "CLIENT_DATA_AFTER_CONNECT_ACK is a broad historical event: only system records followed, including disconnect. It does not prove application progress.",
+    "Sending connect ACKs does not independently prove their acceptance.",
+    "The next compression path requires a fresh live run; old discarded plaintext cannot be recovered."
+  ],
+  "cleanup": {
+    "game_absent": true,
+    "hosts_byte_exact": true,
+    "ports_closed": true,
+    "hosts_before_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "installed": [
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+        "unchanged": true,
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+      },
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe",
+        "unchanged": true,
+        "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec"
+      },
+      {
+        "preserved": true,
+        "change_cause": "unknown when metadata differs",
+        "unchanged": false,
+        "sha256": "6e4d2d508e2e7abc40f53ad9cac37cf48a63841ae2144f25cec57d7953f7a8e6",
+        "buildid": "22469132",
+        "appid": "1063730",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf"
+      }
+    ],
+    "trust_store_modified": false,
+    "firewall_rules_absent": true,
+    "timestamp_utc": "2026-10-04T21:29:46.7141731+00:00",
+    "retained_root_count": 1,
+    "staged_copy_retained_ignored": true,
+    "hosts_after_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "owned_children_stopped": true,
+    "schema": 1
+  },
+  "privateLogs": [
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/dtls.jsonl",
+      "sha256": "890789ee06d6b2a2ee0eb53a27ae1c60db08c9ef37398e0a5f68be849d995783"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/frida-events.jsonl",
+      "sha256": "e6c4720f5dabd41b3832e5aa51582f4562b584394d716241421e59692475d46c"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/https-v4.jsonl",
+      "sha256": "d6c56b304ef7b20e44ec7dd174f66811d24613771599c9bd0593c9d01456d332"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/https-v6.jsonl",
+      "sha256": "1dea9911442b041a0cce24ff5ecfbd8cd4f075b3e1da2d1ffbca279afcddca8a"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/containment-events.jsonl",
+      "sha256": "f3412a4fe07641e4ed134e451b5599fc199e0d57afcd165fbde3473c24e0d44a"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/trial-inputs.json",
+      "sha256": "126c8ed5b5c97a69ddcf8674b89f1df9aec79e00a26cbd630f22977b327a56d7"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2015-registration/cleanup.json",
+      "sha256": "2a6ba01e1f1d181cc9a09efb71f7a65cfa4a948155192b826b6e146f0b730cb7"
+    }
+  ]
+}

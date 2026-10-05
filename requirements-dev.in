@@ -1,3 +1,5 @@
 # Match the upstream Python/pytest/pyOpenSSL stack; resolution is pinned below.
 pytest>=8.4,<10
 pyOpenSSL>=25,<27
+# Match the pinned adjacent Carrier decoder's raw-block dependency.
+lz4==4.4.5

@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-04T16:57:23.4295830Z",
+  "task": "M1-02H",
+  "analysis": "Historical First Light non-EAC/private-DTLS recipe; read-only source/history, owned installation identity and public metadata",
+  "status": "MISSING_BOUNDARY_COMPATIBLE_LAUNCH_AND_TRUST_RECIPE_QUESTION_DRAFTED",
+  "current_status_source": "docs/ROADMAP.md",
+  "checkout": {
+    "head": "8c877be640ceebefdc451d21b9454a092b1d948d",
+    "initial_dirty_status": [
+      " M docs/CURRENT_CLIENT_CONNECTIVITY.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/REP_TRUST_POLICY.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? research/evidence/current-rep-fresh-blocked-audit.json"
+    ],
+    "initial_input_bindings": [
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\CURRENT_CLIENT_CONNECTIVITY.md",
+        "bytes": 48362,
+        "sha256": "0a28c8679aca644d6dcf1968e2e7d9dd8fb773abb64df620244a26c0751e8a06"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\EVIDENCE_LEDGER.md",
+        "bytes": 80372,
+        "sha256": "40e5167fe49ae5d8a964dc37e697b8809b974b39a0184928dbcc152b636ad53c"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\REP_TRUST_POLICY.md",
+        "bytes": 72449,
+        "sha256": "35b98c2daadc9447b50ab20b7177f263909ba6fc390826c27ab9eb8338b0bd80"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\ROADMAP.md",
+        "bytes": 38740,
+        "sha256": "7f1c656237de5516ad6326d7289c818815b1d48a46971d1867cd5a36c54eb7cd"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\TASK_BRIEFS.md",
+        "bytes": 16537,
+        "sha256": "8166804aaf7e947521c2989f16b06c862ad5b76f735e2ee273a49d15f7390316"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\docs\\EVIDENCE_INDEX.md",
+        "bytes": 4529,
+        "sha256": "2daa29bec1eb7bf5c5747eb709069162a34965181a9d46f86b1fee3adf5f6da1"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\research\\agent-evidence-index.json",
+        "bytes": 29680,
+        "sha256": "8748b5e5cdd32c7ec179f7fc4c15994b1e346e111e0b16b2100a7e83bd20eb29"
+      },
+      {
+        "path": "C:\\Code\\NewWorldPreservation\\research\\evidence\\current-rep-fresh-blocked-audit.json",
+        "bytes": 9230,
+        "sha256": "fc4fe177fa8823eb627acaae29582640e694bc22de322a9007e1d56339a3efee"
+      }
+    ]
+  },
+  "upstream": {
+    "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "dirty_status": [],
+    "reachable_commit_count": 608,
+    "shallow": false,
+    "sparse_checkout": true,
+    "source_bindings": [
+      {
+        "path": "research/upstream/first-light/tools/client-hooks/frida_dtls_trust_patch.py",
+        "sha256": "3011e8adcb796a28e17f6f5c763c33b7557e37c25b450d6bd0e5213bef238457"
+      },
+      {
+        "path": "research/upstream/first-light/README.md",
+        "sha256": "4368bd9ae0b66d9a1a209f0072b700224eceed4243b9ab1bece5ec16019c5352"
+      },
+      {
+        "path": "research/upstream/first-light/tools/client-hooks/README.md",
+        "sha256": "e00b5180217d54f261f4012c0139d68cf0294bceb8acd11b71c40faecf851ec7"
+      },
+      {
+        "path": "research/upstream/first-light/tools/client-hooks/frida_capture.py",
+        "sha256": "60f3c9e8d7b62c7d04b5bf1393fc00fe47be81368dcc4bec983fa262bfc395c9"
+      },
+      {
+        "path": "research/upstream/first-light/tools/client-hooks/frida_dtls_trust_patch.js",
+        "sha256": "42ebaa8fe9804588a5c41a26cd1d2bbf7c0492845a114dfbb4e15c16d236811d"
+      },
+      {
+        "path": "research/upstream/first-light/docs/non-eac-capture-plan.md",
+        "sha256": "30a5ce3d829b9a560ed48e851737bcdb1817770250d149644376829d6be75f8a"
+      },
+      {
+        "path": "research/upstream/first-light/docs/capture-routes.md",
+        "sha256": "a67928c0589bcf8c60ccd1f26c67ce78adbc27831902b6c244a85371f5390e39"
+      },
+      {
+        "path": "research/upstream/first-light/docs/dtls-trust-bypass.md",
+        "sha256": "6d9401efc878757c95bde3814ccc2107e61eae7ac25427af2a969ec3826b8be7"
+      },
+      {
+        "path": "research/upstream/first-light/docs/faq.md",
+        "sha256": "007d55dd6aa60da8582afee59ea0a46fe2f9c66b0a1215ab7d420f01619749f8"
+      },
+      {
+        "path": "research/upstream/first-light/info/nw-login-safe-20260502-153840/README.md",
+        "sha256": "2a54b9ccd03672e1bbfbeaf87197f68b872fb01e855330f62384d1c7a804a50b"
+      },
+      {
+        "path": "research/upstream/first-light/analysis/v3_request/BODY_DECODE.md",
+        "sha256": "4f9d8def920ff070a231d9dac8b6cf3cdcf2f01b30f1fdc07b801cec5b1b3bff"
+      }
+    ]
+  },
+  "owned_install_observation": {
+    "observed_at_utc": "2026-10-04T16:45:41.2953348Z",
+    "installs": [
+      {
+        "steam_app_id": 1063730,
+        "steam_build_id": "22469132",
+        "install_directory": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World",
+        "manifest": {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf",
+          "bytes": 1048,
+          "sha256": "c7bf799131de8ae372082e2cfef494b8d56080443f854887ab40284abf1f1dc6"
+        },
+        "selected_executables": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+            "bytes": 179204176,
+            "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+            "file_version": "1.400.6031.6004151",
+            "product_version": "1.400.6031.6004151",
+            "signature_status": "Valid"
+          },
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe",
+            "bytes": 3923144,
+            "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+            "file_version": "",
+            "product_version": "",
+            "signature_status": "Valid"
+          }
+        ],
+        "steam_appid_file_present": false
+      }
+    ],
+    "case_alias_records_deduplicated": true,
+    "scope": "Registered/conventional Steam libraries for app1063730; selected executable metadata only. Not an exhaustive disk/archive search or a whole-installation integrity check."
+  },
+  "public_metadata": {
+    "observed_at_utc": "2026-10-04T16:48:17.1693139Z",
+    "first_page_requests": [
+      {
+        "resource": "branches",
+        "url": "https://api.github.com/repos/nw-private-server/first-light/branches?per_page=20&page=1",
+        "item_count_on_first_page": 1
+      },
+      {
+        "resource": "tags",
+        "url": "https://api.github.com/repos/nw-private-server/first-light/tags?per_page=20&page=1",
+        "item_count_on_first_page": 0
+      },
+      {
+        "resource": "releases",
+        "url": "https://api.github.com/repos/nw-private-server/first-light/releases?per_page=20&page=1",
+        "item_count_on_first_page": 0
+      },
+      {
+        "resource": "issues",
+        "url": "https://api.github.com/repos/nw-private-server/first-light/issues?state=all&per_page=20&page=1",
+        "item_count_on_first_page": 20
+      }
+    ],
+    "issue_page_two_url": "https://api.github.com/repos/nw-private-server/first-light/issues?state=all&per_page=20&page=2",
+    "complete_issue_and_pr_body_count": 25,
+    "selected_comment_issue_numbers": [
+      5,
+      21,
+      25
+    ],
+    "branch_head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "branch_count": 1,
+    "tag_count": 0,
+    "release_count": 0,
+    "scope": "Unauthenticated public GitHub GET; private/unindexed sources not inspected. No contributor messaging."
+  },
+  "historical_identity": {
+    "exact_client_build": null,
+    "exact_depot_manifest": null,
+    "executable_sha256": null,
+    "reported_download": "SteamCMD on2026-05-06, reported by guide; not a release identity",
+    "reported_capture": "May2 reference metadata6031/Javelin600415/retail/AppID1063730; not linked to private launch",
+    "checksum_absence_is_independent_blocker": false
+  },
+  "adjudication": {
+    "claim_ids": [
+      "K120",
+      "K121",
+      "K122",
+      "K123",
+      "K124",
+      "K125",
+      "K126"
+    ],
+    "historical_private_result": "Unreplicated maintainer assertion",
+    "source_mechanics": "Capture tool writes adjacent AppID file, Frida-spawns outside launcher and loads trust/capture hooks by default",
+    "faq_distinction": "Live-private connection uses post-EAC runtime patch; archived/pre-EAC target used for full decrypted capture",
+    "targeted_challenge": "FAQ-named standalone wrapper resolves to missing tools/tools hook and attaches before reading it; actual adjacent hook uses interceptor/pointer write, not FAQ's older rewrite. Current mechanics are source support only, not deployment proof.",
+    "runtime_acceptance_with_owned_install": "Unknown, not disproved by build/hash difference",
+    "boundary_compatible_recipe": "Not established in reviewed evidence; not global impossibility",
+    "material_missing_input": "Target/source relationship, successful launch/protection context, private-trust dependency, sanitized completed-private-handshake observation",
+    "no_stock_ca_reinvestigation": true,
+    "question_drafted": true,
+    "question_sent": false
+  },
+  "operations": {
+    "game_launched": false,
+    "game_or_amazon_endpoint_contact": false,
+    "hooks_or_capture_executed": false,
+    "process_memory_read_or_written": false,
+    "client_assets_copied_or_redistributed": false,
+    "steam_install_modified": false,
+    "hosts_trust_firewall_modified": false,
+    "reference_modified": false,
+    "pushed_or_published": false,
+    "actionables_updated": false
+  },
+  "verification": {
+    "input_inspection_script_validated": true,
+    "public_metadata_scripts_validated": true,
+    "private_run_directory": ".scratch/first-light-historical-20261004",
+    "workspace_validation_and_final_readback": "Recorded separately after documentation/catalog recording; no client trial"
+  }
+}

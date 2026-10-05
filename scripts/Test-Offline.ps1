@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('workspace','fixtures-static','protocol-loopback','windows-native','tooling','powershell','rep-readonly','upstream','all')]
+    [ValidateSet('workspace','fixtures-static','protocol-loopback','windows-native','tooling','powershell','rep-readonly','frida-trial','upstream','all')]
     [Alias('Profile')]
     [string]$OfflineProfile = 'workspace',
     [switch]$ListProfiles

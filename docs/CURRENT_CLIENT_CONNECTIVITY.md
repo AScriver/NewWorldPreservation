@@ -1,5 +1,9 @@
 # Current-client connectivity
 
+## October 4 fresh blocked audit — unchanged live checkpoint
+
+After three fresh resumed root turns, supported ordinary root input plus actual REP store activation/timing remains missing. [Audit receipt](../research/evidence/current-rep-fresh-blocked-audit.json), [current gate](REP_TRUST_POLICY.md#fresh-three-turn-required-input-impasse--october-4). Final readback at clean8c877be confirms unchanged stock client/build/signature, retained Root1, original hosts and no game/443/64003/project rules. The final two turns ran no tests, source scans or game trials and made no client/system changes. Prior source/offline execution remains historical with unchanged code. Last live Play result is still fatal unknown_ca; actual DTLS, unrelated-root rejection, Carrier/V3/world/actors and M1 are unproven. Select blocked status without changing the full objective; resume on a concrete supported normal input/initializer whose REP owner/store/timing can be traced.
+
 ## October 4 fresh resumed audit — static findings and fresh offline validation
 
 The user resumed the full preservation goal; earlier blocked audits are historical. Starting from clean `d088ef9`, fresh installed-file/resource readback confirms Steam22469132/version1.400.6031.6004151, expected stock image hash and valid signature, retained Root1, original hosts, and no game process,443/64003 listener or project routing rule. No client was launched or changed.

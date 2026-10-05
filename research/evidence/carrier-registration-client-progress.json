@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-client-log-and-static-registration-frontier",
+  "recordedAtUtc": "2026-10-04T23:00:54.047957+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261004T2216-version",
+  "ownedImageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "ownedImageVersion": "1.400.6031.6004151",
+  "ownedProcessId": 40344,
+  "ownedCommonLogSha256": "533c9e0b2c9926e8db362179f0f9513bc80bc8068bbff89740ede24e0442948d",
+  "rawLinesExported": false,
+  "requestContentsRetained": false,
+  "eventJoins": [
+    {
+      "connectionId": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "replyEventSequence": 51,
+      "replySentUtc": "2026-10-04T22:23:19.093Z",
+      "receiveLogLine": 464,
+      "receiveSourceTime": "2026-10-04 22:23:19.095",
+      "actorStartLogLine": 466,
+      "actorStartSourceTime": "2026-10-04 22:23:19.102",
+      "disconnectLogLine": 567,
+      "disconnectSourceTime": "2026-10-04 22:23:29.107",
+      "secondsFromActorStartToDisconnect": 10.005
+    },
+    {
+      "connectionId": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "replyEventSequence": 470,
+      "replySentUtc": "2026-10-04T22:23:29.483Z",
+      "receiveLogLine": 612,
+      "receiveSourceTime": "2026-10-04 22:23:29.484",
+      "actorStartLogLine": 613,
+      "actorStartSourceTime": "2026-10-04 22:23:29.486",
+      "disconnectLogLine": 619,
+      "disconnectSourceTime": "2026-10-04 22:23:39.498",
+      "secondsFromActorStartToDisconnect": 10.012
+    },
+    {
+      "connectionId": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "replyEventSequence": 881,
+      "replySentUtc": "2026-10-04T22:23:40.010Z",
+      "receiveLogLine": 664,
+      "receiveSourceTime": "2026-10-04 22:23:40.011",
+      "actorStartLogLine": 666,
+      "actorStartSourceTime": "2026-10-04 22:23:40.025",
+      "disconnectLogLine": 671,
+      "disconnectSourceTime": "2026-10-04 22:23:50.034",
+      "secondsFromActorStartToDisconnect": 10.009
+    },
+    {
+      "connectionId": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "replyEventSequence": 1292,
+      "replySentUtc": "2026-10-04T22:23:50.542Z",
+      "receiveLogLine": 716,
+      "receiveSourceTime": "2026-10-04 22:23:50.543",
+      "actorStartLogLine": 718,
+      "actorStartSourceTime": "2026-10-04 22:23:50.558",
+      "disconnectLogLine": 723,
+      "disconnectSourceTime": "2026-10-04 22:24:00.560",
+      "secondsFromActorStartToDisconnect": 10.002
+    },
+    {
+      "connectionId": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "replyEventSequence": 1704,
+      "replySentUtc": "2026-10-04T22:24:01.088Z",
+      "receiveLogLine": 768,
+      "receiveSourceTime": "2026-10-04 22:24:01.090",
+      "actorStartLogLine": 770,
+      "actorStartSourceTime": "2026-10-04 22:24:01.104",
+      "disconnectLogLine": 775,
+      "disconnectSourceTime": "2026-10-04 22:24:11.108",
+      "secondsFromActorStartToDisconnect": 10.004
+    },
+    {
+      "connectionId": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "replyEventSequence": 2116,
+      "replySentUtc": "2026-10-04T22:24:11.618Z",
+      "receiveLogLine": 820,
+      "receiveSourceTime": "2026-10-04 22:24:11.619",
+      "actorStartLogLine": 822,
+      "actorStartSourceTime": "2026-10-04 22:24:11.635",
+      "disconnectLogLine": 827,
+      "disconnectSourceTime": "2026-10-04 22:24:21.641",
+      "secondsFromActorStartToDisconnect": 10.006
+    },
+    {
+      "connectionId": "62703079-a6b6-429f-8511-e27f389ce975",
+      "replyEventSequence": 2528,
+      "replySentUtc": "2026-10-04T22:24:22.135Z",
+      "receiveLogLine": 872,
+      "receiveSourceTime": "2026-10-04 22:24:22.136",
+      "actorStartLogLine": 874,
+      "actorStartSourceTime": "2026-10-04 22:24:22.151",
+      "disconnectLogLine": 879,
+      "disconnectSourceTime": "2026-10-04 22:24:32.149",
+      "secondsFromActorStartToDisconnect": 9.998
+    },
+    {
+      "connectionId": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "replyEventSequence": 2940,
+      "replySentUtc": "2026-10-04T22:24:32.636Z",
+      "receiveLogLine": 924,
+      "receiveSourceTime": "2026-10-04 22:24:32.638",
+      "actorStartLogLine": 925,
+      "actorStartSourceTime": "2026-10-04 22:24:32.638",
+      "disconnectLogLine": 931,
+      "disconnectSourceTime": "2026-10-04 22:24:42.647",
+      "secondsFromActorStartToDisconnect": 10.009
+    }
+  ],
+  "actorSuccessMarkersObserved": 0,
+  "currentImageStaticFindings": [
+    {
+      "classification": "source-supported static inference",
+      "function": "0x14644a070",
+      "finding": "Wrapper case10 reaches actor START only after a true REP-interface slot0xa8 check, then enters actor wait11."
+    },
+    {
+      "classification": "source-supported static inference",
+      "function": "0x145a92370",
+      "finding": "Actor success predicate tests actor state0xa0==2; start initializes state1."
+    },
+    {
+      "classification": "source-supported static inference",
+      "function": "0x146454c00",
+      "finding": "A current SelfIdentification handler calls actor completion, which writes state2; required wire decode and identity values remain unresolved."
+    }
+  ],
+  "interpretation": "Client-side registration response receipt and entry into actor wait are observed; reply delivery alone is no longer the only evidence. Actor connection success, world entry and Milestone1 remain unproven.",
+  "limits": [
+    "Common log has no explicit launch PID marker; association uses the exclusive owned trial window/image and eight reply-to-receive/start time correlations.",
+    "Source clock interpreted as UTC by matching all eight numeric times against known UTC responder events; not a general log timezone assertion.",
+    "Fixed receive marker is at callback entry; the later actor-start branch adds evidence of passing a REP interface check, not complete private account or actor ownership.",
+    "Absent success marker is only absence in noncredential allowlisted lines; no global absence proof.",
+    "Historical heartbeat behavior supports a candidate trial but does not establish current disconnect causation.",
+    "Sparse/static analysis does not establish SelfIdentification wire schema; all instruction/decompiler output remains ignored."
+  ],
+  "privateEvidence": [
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/client-log-markers.json",
+      "sha256": "fc150d5d188da62726a7a2051534e307366b95831064e28f1681275c8482dad8"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/client-log-timing.json",
+      "sha256": "75bee10e24592e59693f557ee4bcec52dcc28d13c831a43d211e6f2fae9101a5"
+    },
+    {
+      "path": ".scratch/registration-marker-20261004T2250/evidence-seal-v1.json",
+      "sha256": "02f0a63211a2c75fa12b4491a0ae689778615a260c184f33fe577f19f7843563"
+    }
+  ],
+  "newWorldClientLaunched": false,
+  "clientMemoryRead": false,
+  "worldEntry": false,
+  "milestone1": false
+}

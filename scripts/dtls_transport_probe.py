@@ -88,9 +88,15 @@ class Peer:
 
 class Responder:
     def __init__(self, certificates, events, *, port=64003, chain="full",
-                 lookup=owner_of_bound_port, on_app=None):
+                 lookup=owner_of_bound_port, on_app=None, on_tick=None,
+                 max_datagrams=MAX_DATAGRAMS, max_peer_datagrams=MAX_PEER_DATAGRAMS):
         if not 0 <= port <= 65535 or chain not in ("full", "leaf"):
             raise ValueError("Invalid port or chain mode")
+        if (type(max_datagrams) is not int or not 1 <= max_datagrams <= 4096 or
+                type(max_peer_datagrams) is not int or not 1 <= max_peer_datagrams <= 2048 or
+                max_peer_datagrams > max_datagrams):
+            raise ValueError("Invalid bounded datagram limits")
+        self.max_datagrams, self.max_peer_datagrams = max_datagrams, max_peer_datagrams
         directory = Path(certificates)
         manifest = json.loads((directory / "certificate-manifest.json").read_text(encoding="utf-8"))
         leaf = x509.load_pem_x509_certificate((directory / "server.pem").read_bytes())
@@ -111,7 +117,7 @@ class Responder:
             self.context.add_extra_chain_cert(root)
         self.context.set_info_callback(self._info)
         self.context.set_tlsext_servername_callback(self._sni)
-        self.events, self.lookup, self.on_app = events, lookup, on_app
+        self.events, self.lookup, self.on_app, self.on_tick = events, lookup, on_app, on_tick
         self.chain = chain
         self.peers = {}
         self.by_connection = {}
@@ -214,9 +220,10 @@ class Responder:
                          chain=self.chain, configured_leaf_sha256=self.leaf_fingerprint,
                          configured_chain_root_sha256=self.root_fingerprint if self.chain == "full" else None,
                          client_certificate_authenticated=False, game_authentication=False,
-                         world_entry=False)
+                         world_entry=False, max_datagrams=self.max_datagrams,
+                         max_peer_datagrams=self.max_peer_datagrams)
         try:
-            while not stop.is_set() and time.monotonic() < deadline and count < MAX_DATAGRAMS:
+            while not stop.is_set() and time.monotonic() < deadline and count < self.max_datagrams:
                 now = time.monotonic()
                 for peer in list(self.peers.values()):
                     if now - peer.created >= MAX_HANDSHAKE_SECONDS and not peer.established:
@@ -235,6 +242,14 @@ class Responder:
                                 self.events.emit("DTLS_FAILURE", connection_id=peer.id,
                                                  error_class=kind, openssl_reason=reason)
                                 self._close_peer(peer, "timer_failure")
+                    if (peer.established and self.on_tick is not None and
+                            self.peers.get(peer.address) is peer):
+                        try:
+                            self.on_tick(peer, now)
+                        except Exception:
+                            self.events.emit("DTLS_TICK_FAILURE", connection_id=peer.id,
+                                             reason="application_tick_failure")
+                            self._close_peer(peer, "tick_failure")
                 try:
                     self.socket.settimeout(min(0.05, max(0.001, deadline - time.monotonic())))
                     data, address = self.socket.recvfrom(65535)
@@ -268,7 +283,7 @@ class Responder:
                 self.events.emit("DTLS_DATAGRAM_RECEIVED", connection_id=peer.id,
                                  datagram_bytes=len(data), process_id=self.lookup(*address),
                                  owner_basis="IPv4_bound_endpoint_owner_not_exact_flow", **metadata)
-                if peer.packets > MAX_PEER_DATAGRAMS:
+                if peer.packets > self.max_peer_datagrams:
                     self._close_peer(peer, "packet_limit")
                     continue
                 try:

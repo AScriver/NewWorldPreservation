@@ -4,13 +4,40 @@
   "currentStatus": "docs/ROADMAP.md",
   "claimsSource": "docs/EVIDENCE_LEDGER.md",
   "classificationNotes": {
-    "observed-metadata": "Sanitized prior own-session/public metadata, not a new live run",
+    "observed-metadata": "Sanitized own-session/public metadata; the named receipt distinguishes current live execution from retained prior observations",
     "offline-executed": "Prior offline execution at receipt-pinned inputs; consult preflight for local freshness",
     "source-inference": "Bounded static source evidence; runtime behavior remains limited",
     "historical-upstream": "Pinned external historical reference, no current-build guarantee",
     "synthetic": "Original controlled fixture or endpoint; not real-client proof"
   },
   "boundaries": [
+    {
+      "id": "historical-client-setup",
+      "roadmapTasks": ["M1-02H"],
+      "claimIds": ["K120", "K121", "K122", "K123", "K124", "K125", "K126", "K127", "K128", "K129", "K130", "K131", "K132", "K133", "K134"],
+      "docs": ["docs/FIRST_LIGHT_HISTORICAL_CLIENT.md", "docs/FRIDA_PRIVATE_DTLS_TRIAL.md"],
+      "scripts": ["scripts/Invoke-FridaPrivateTrial.ps1", "scripts/frida_client_trial.py", "scripts/frida_trial_observer.js"],
+      "tests": ["tests/test_frida_client_trial.py"],
+      "evidence": [
+        {
+          "path": "research/evidence/first-light-historical-client-review.json",
+          "classification": "source-inference",
+          "scope": "Pinned source/history review and read-only on-disk/public metadata; historical private-DTLS claims remain unreplicated"
+        },
+        {
+          "path": "research/evidence/first-light-frida-private-dtls.json",
+          "classification": "observed-metadata",
+          "scope": "Executed owned-copy direct Frida startup, entry/return pointer observations, two private DTLS completions and decrypted counts; cleanup reconciled. Runtime policy is permissive and world/application semantics unproven."
+        },
+        {
+          "path": "research/evidence/first-light-frida-trial-validation.json",
+          "classification": "offline-executed",
+          "scope": "Current378-case workspace regression, synthetic PowerShell and loopback HTTPS lifecycle; final resource readback. The repaired logging code was not rerun on the game."
+        }
+      ],
+      "fixtures": [],
+      "limit": "Historical successful binary identity remains unknown. Scoped October4 live authorization admits direct Frida and runtime pointer changes on a physical owned copy; exact write causality, unchanged-stock trust, application/Carrier/world acceptance remain unproven. Offline profile never starts clients."
+    },
     {
       "id": "reference-environment",
       "roadmapTasks": [
@@ -432,7 +459,10 @@
         "K113",
         "K114",
         "K115",
-        "K116"
+        "K116",
+        "K117",
+        "K118",
+        "K119"
       ],
       "docs": [
         "docs/REP_TRUST_POLICY.md",
@@ -457,6 +487,11 @@
         "tests/test_rep_launch_lifecycle.ps1"
       ],
       "evidence": [
+        {
+          "path": "research/evidence/current-rep-fresh-blocked-audit.json",
+          "classification": "offline-executed",
+          "scope": "Fresh three-turn required-input impasse and current image/code/evidence/resource readbacks; no test/source/game rerun or global absence proof"
+        },
         {
           "path": "research/evidence/current-rep-callback-alias-boundary.json",
           "classification": "source-inference",
@@ -585,19 +620,60 @@
         "E10",
         "E11",
         "K33",
-        "K45"
+        "K45",
+        "K135",
+        "K136",
+        "K137",
+        "K138",
+        "K139",
+        "K140",
+        "K141",
+        "K142",
+        "K143",
+        "K144",
+        "K145",
+        "K146",
+        "K147",
+        "K148",
+        "K149",
+        "K150",
+        "K151",
+        "K152",
+        "K153",
+        "K154",
+        "K155",
+        "K156",
+        "K157", "K158", "K159", "K160", "K161", "K162", "K163", "K164", "K165", "K166"
       ],
       "docs": [
+        "docs/CARRIER_REGISTRATION_TRIAL.md",
+        "docs/REGISTRATION_MAINTAINER_QUESTION.md",
         "docs/SPAWN_SEQUENCE.md",
         "docs/CLIENT_FLOW.md",
         "docs/PROTOCOL_NOTES.md",
         "docs/ARCHITECTURE.md"
       ],
-      "scripts": [],
-      "tests": [],
-      "evidence": [],
+      "scripts": ["scripts/carrier_registration_probe.py", "scripts/dtls_transport_probe.py", "scripts/frida_client_trial.py", "scripts/Invoke-FridaPrivateTrial.ps1", "scripts/current_self_ident_default.py", "scripts/current_spawn_point.py", "scripts/current_world_activation.py"],
+      "tests": ["tests/test_carrier_registration_probe.py", "tests/test_frida_client_trial.py", "tests/test_dtls_transport_probe.py", "tests/test_current_self_ident_default.py", "tests/test_current_world_activation.py", "tests/carrier_registration_smoke.py"],
+      "evidence": [
+        {"path": "research/evidence/carrier-registration-offline-validation.json", "classification": "offline-executed", "scope": "Historical uncompressed adapter:394 workspace cases and synthetic pinned-source ACK smoke; no live registration acceptance"},
+        {"path": "research/evidence/carrier-registration-uncompressed-trial.json", "classification": "observed-metadata", "scope": "Same delayed-UAC owned-copy instance:private DTLS, connect ACK transmissions and ten unhandled compressed envelopes; cleaned; no registration accepted"},
+        {"path": "research/evidence/carrier-registration-lz4-validation.json", "classification": "offline-executed", "scope": "399 workspace cases, three synthetic PowerShell suites and HTTPS lifecycle; two explicit pinned-codec/LZ4 synthetic checks; no current-client acceptance inferred"},
+        {"path": "research/evidence/carrier-registration-lz4-trial.json", "classification": "observed-metadata", "scope": "One actual LZ4 expansion and pinned Carrier parse; reliable channel0 record flags0x21 length860 has unknown type; no registration response; cleanup verified"},
+        {"path": "research/evidence/carrier-registration-schema-validation.json", "classification": "offline-executed", "scope": "Tightened single-channel0/prior-connect candidate gate:406 workspace Python cases, three PowerShell suites/HTTPS lifecycle; three explicit synthetic pinned-codec/schema checks; no current-client schema acceptance inferred"},
+        {"path": "research/evidence/carrier-registration-schema-trial.json", "classification": "observed-metadata", "scope": "Eight actual structured-retry compatible records and source88B replies; client auto-reconnect/error4; ninth peer rejected by adapter lifetimecap; no post-registration data or acceptance proven; cleanup independently verified"},
+        {"path": "research/evidence/carrier-registration-version-validation.json", "classification": "offline-executed", "scope": "412 workspace cases, three PowerShell suites/HTTPS lifecycle; four pinned synthetic codec/schema/one-field-version/ACK checks; no version-matching requirement inferred"},
+        {"path": "research/evidence/carrier-registration-version-trial.json", "classification": "observed-metadata", "scope": "Eight structured-retry candidates/source replies with owned version; later Carrier ACK ranges cover all eight reply envelopes; client error4 persists, no semantic registration/world proof; ninth peer locally budget-rejected; cleanup independently verified"},
+        {"path": "research/evidence/carrier-registration-client-progress.json", "classification": "observed-metadata", "scope": "Earlier version-trial response receipt and actor START timestamps; not actor success"},
+        {"path": "research/evidence/current-self-ident-default-contract.json", "classification": "source-inference", "scope": "Current owned-image mapping and original complete default actor/spawn codecs; conditional completion only"},
+        {"path": "research/evidence/current-actor-callback-validation.json", "classification": "offline-executed", "scope": "Historical421-case callback implementation and six explicit pinned synthetic checks"},
+        {"path": "research/evidence/current-actor-callback-trial.json", "classification": "observed-metadata", "scope": "234 matching private heartbeat replies; callback ACK coverage; gameplay timeout; cleanup verified"},
+        {"path": "research/evidence/current-world-activation-contract.json", "classification": "source-inference", "scope": "Current LevelInfo/empty-bundle candidate using owned map and explicit default/counter values; no player creation proof"},
+        {"path": "research/evidence/current-world-activation-validation.json", "classification": "offline-executed", "scope": "426 workspace cases,50 focused controls and six pinned synthetic framing checks; no live world proof"},
+        {"path": "research/evidence/current-world-activation-trial.json", "classification": "observed-metadata", "scope": "LevelInfo/bundle handler labels and234 matching heartbeat echoes; gameplay timeout persists; cleanup independently verified"}
+      ],
       "fixtures": [],
-      "limit": "Current Carrier/V3 and generated actor/spawn contracts lack accepted current-client fixtures. Historical three-message minimum is unproved."
+      "limit": "Private response receipt, heartbeat echo and current map/bundle handler labels are observed; context initialization, actor success and fresh player/world creation remain unproven. Exact initial request/security semantics remain unknown. Captured replay or invented packets do not establish generated state."
     },
     {
       "id": "replication-reconnect-acceptance",
@@ -721,6 +797,14 @@
     }
   ],
   "receipts": [
+    "research/evidence/carrier-registration-client-progress.json",
+    "research/evidence/current-self-ident-default-contract.json",
+    "research/evidence/current-actor-callback-validation.json",
+    "research/evidence/current-actor-callback-trial.json",
+    "research/evidence/current-world-activation-contract.json",
+    "research/evidence/current-world-activation-validation.json",
+    "research/evidence/current-world-activation-trial.json",
+    "research/evidence/current-rep-fresh-blocked-audit.json",
     "research/evidence/current-rep-callback-alias-boundary.json",
     "research/evidence/current-rep-fresh-audit-validation.json",
     "research/evidence/current-rep-settings-accessor-boundary.json",

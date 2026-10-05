@@ -1,0 +1,1510 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-copy-carrier-version-trial",
+  "recordedAtUtc": "2026-10-04T22:36:32.042170+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261004T2216-version",
+  "target": {
+    "steamAppId": "1063730",
+    "steamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "pid": 40344,
+    "creationFiletime": 134356261654280739
+  },
+  "reference": {
+    "firstLightCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "aeternumCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+    "aeternumDecoderSha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b",
+    "lz4Version": "4.4.5"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "acbd8e4d4784f482d5451a398f0afcf6067d33311ec5ef032dcc6d584c3929c4",
+      "executedSnapshot": "private/frida-trials/run-20261004T2216-version/executed-source/carrier_registration_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f",
+      "executedSnapshot": "private/frida-trials/run-20261004T2216-version/executed-source/frida_client_trial.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef",
+      "executedSnapshot": "private/frida-trials/run-20261004T2216-version/executed-source/dtls_transport_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "2c96e708dc66502690a65e66e739b8d8df6bf8b52cf928be36b7db9c17b4b1f2",
+      "executedSnapshot": "private/frida-trials/run-20261004T2216-version/executed-source/Invoke-FridaPrivateTrial.ps1",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+      "executedSnapshot": "private/frida-trials/run-20261004T2216-version/executed-source/frida_trial_observer.js",
+      "currentBytesMatch": true
+    }
+  ],
+  "boundFileCount": 129,
+  "serverVersionCandidate": {
+    "value": "[RETAIL].Javelin.1.400.6031.6004151",
+    "provenance": "Exact ASCII literal in hash-pinned legitimately owned executable",
+    "staticReceipt": "private/frida-trials/run-20261004T2154-schema/javelin-version-literals.json",
+    "staticReceiptSha256": "5e70f020bface613b208fde756a91a4701dfbd1a8dc447eaa3169f8d98eed94d",
+    "matchingRequirementProven": false,
+    "changeScope": "Only the existing 35-byte version field in the 88-byte source response"
+  },
+  "eventCounts": {
+    "CARRIER_ACK_SENT": 8,
+    "CARRIER_DECOMPRESSED": 8,
+    "CARRIER_PARSED": 738,
+    "CARRIER_RECORD": 778,
+    "CARRIER_REJECTED": 140,
+    "CLIENT_CARRIER_ACK_RANGE": 24,
+    "CLIENT_DATA_AFTER_CONNECT_ACK": 8,
+    "CONNECT_ACK_SENT": 16,
+    "DTLS_APPLICATION_DISCARDED": 878,
+    "DTLS_DATAGRAM_RECEIVED": 914,
+    "DTLS_HANDSHAKE_ESTABLISHED": 9,
+    "DTLS_HANDSHAKE_STATE": 117,
+    "DTLS_PEER_CLOSED": 9,
+    "DTLS_PEER_OPENED": 9,
+    "DTLS_PROBE_LISTENING": 1,
+    "DTLS_SERVER_OUTPUT": 50,
+    "DTLS_SNI": 9,
+    "REGISTRATION_SCHEMA_RESULT": 8,
+    "V3_CANDIDATE": 8,
+    "V3_PARSER_RESULT": 8,
+    "V3_RESPONSE_SENT": 8
+  },
+  "adapterLifetimePeerBudget": 8,
+  "carrierRejectionReasons": {
+    "peer_limit": 140
+  },
+  "schemaCompatibilityModes": {
+    "structured_retry": 8
+  },
+  "applicationRecords": 878,
+  "applicationBytes": 18919,
+  "dataChannelRecords": [
+    {
+      "channel": 0,
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 45,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 464,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 875,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1286,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1698,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2110,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2522,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2934,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    }
+  ],
+  "transitions": [
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "event_sequence": 22,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:23:18.989Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 2,
+      "event_sequence": 31,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:18.990Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 3,
+      "event_sequence": 38,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:18.990Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 41,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 44,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 46,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 47,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 48,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 49,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 4,
+      "event_sequence": 51,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:23:19.093Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 5,
+      "event_sequence": 56,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:19.094Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "envelope_sequence": 6,
+      "event_sequence": 61,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:19.206Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "event_sequence": 441,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:23:29.479Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 2,
+      "event_sequence": 450,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:29.480Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 3,
+      "event_sequence": 457,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:29.481Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 460,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:23:29.482Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 463,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 465,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 466,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 467,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 468,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 4,
+      "event_sequence": 470,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:23:29.483Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 5,
+      "event_sequence": 475,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:29.596Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "envelope_sequence": 6,
+      "event_sequence": 480,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:29.708Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "event_sequence": 852,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:23:40.005Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 2,
+      "event_sequence": 861,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:40.006Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 3,
+      "event_sequence": 868,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:40.006Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 871,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 874,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 876,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 877,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 878,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 879,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 4,
+      "event_sequence": 881,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:23:40.010Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 5,
+      "event_sequence": 886,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:40.123Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "envelope_sequence": 6,
+      "event_sequence": 891,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:40.236Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "event_sequence": 1263,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:23:50.538Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 2,
+      "event_sequence": 1272,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:50.539Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 3,
+      "event_sequence": 1279,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:23:50.539Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1282,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1285,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 1287,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1288,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1289,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1290,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 4,
+      "event_sequence": 1292,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:23:50.542Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 5,
+      "event_sequence": 1297,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:50.655Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "envelope_sequence": 6,
+      "event_sequence": 1302,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:23:50.769Z"
+    },
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "event_sequence": 1599,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:23:59.135Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "event_sequence": 1675,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:24:01.083Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 2,
+      "event_sequence": 1684,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:01.084Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 3,
+      "event_sequence": 1691,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:01.085Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1694,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1697,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 1699,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1700,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1701,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1702,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 4,
+      "event_sequence": 1704,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:24:01.088Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 5,
+      "event_sequence": 1709,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:01.202Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "envelope_sequence": 6,
+      "event_sequence": 1714,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:01.314Z"
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "event_sequence": 2007,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:24:09.535Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "event_sequence": 2087,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:24:11.615Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 2,
+      "event_sequence": 2096,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:11.615Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 3,
+      "event_sequence": 2103,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:11.616Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2106,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2109,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2111,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2112,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2113,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2114,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 4,
+      "event_sequence": 2116,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:24:11.618Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 5,
+      "event_sequence": 2121,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:11.730Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "envelope_sequence": 6,
+      "event_sequence": 2126,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:11.843Z"
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "event_sequence": 2419,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:24:20.070Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "event_sequence": 2499,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:24:22.131Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 2,
+      "event_sequence": 2508,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:22.131Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 3,
+      "event_sequence": 2515,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:22.132Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2518,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:24:22.134Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2521,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:22.134Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2523,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:24:22.134Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2524,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:22.135Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2525,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:24:22.135Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2526,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:22.135Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 4,
+      "event_sequence": 2528,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:24:22.135Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 5,
+      "event_sequence": 2533,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:22.248Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "envelope_sequence": 6,
+      "event_sequence": 2538,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:22.360Z"
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "event_sequence": 2831,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:24:30.595Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "event_sequence": 2911,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:24:32.634Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 2,
+      "event_sequence": 2920,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:32.634Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 3,
+      "event_sequence": 2927,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:24:32.635Z"
+    },
+    {
+      "compressed_bytes": 734,
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2930,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2933,
+      "first_to_ack": 2,
+      "last_to_ack": 3,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2935,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2936,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2937,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2938,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 4,
+      "event_sequence": 2940,
+      "response_body_bytes": 88,
+      "response_record_sequence": 0,
+      "response_reliable_sequence": 0,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:24:32.636Z",
+      "version_choice": "owned_image"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 5,
+      "event_sequence": 2945,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:32.750Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "envelope_sequence": 6,
+      "event_sequence": 2950,
+      "first_to_ack": 2,
+      "last_to_ack": 4,
+      "state": "CLIENT_CARRIER_ACK_RANGE",
+      "timestamp_utc": "2026-10-04T22:24:32.863Z"
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "event_sequence": 3243,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:24:41.108Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "1e64ae6f-5d3b-4173-b6fe-945cb5fc1155",
+      "event_sequence": 3323,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:24:43.134Z"
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "event_sequence": 3568,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:24:51.690Z"
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "event_sequence": 3746,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:25:02.164Z"
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "event_sequence": 3747,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:25:12.662Z"
+    },
+    {
+      "connection_id": "1e64ae6f-5d3b-4173-b6fe-945cb5fc1155",
+      "event_sequence": 3748,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:25:28.251Z"
+    }
+  ],
+  "responseAckCoverage": [
+    {
+      "connection_id": "3a7b93df-94bc-4070-8a1f-749a6998997e",
+      "responseEventSequence": 51,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 56,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "b9166ec3-90d4-4b8e-88e2-41ef0d1c3154",
+      "responseEventSequence": 470,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 475,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "b15529dd-dd0d-4a22-8070-b7bdbee2b7bd",
+      "responseEventSequence": 881,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 886,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "855456cf-44bc-4b04-8022-dd27a4ee625f",
+      "responseEventSequence": 1292,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 1297,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "744b602b-6884-4f94-9374-77d5a9fd15b8",
+      "responseEventSequence": 1704,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 1709,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "7626123b-89f3-4da3-bfa4-e89ebebec098",
+      "responseEventSequence": 2116,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 2121,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "62703079-a6b6-429f-8511-e27f389ce975",
+      "responseEventSequence": 2528,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 2533,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    },
+    {
+      "connection_id": "6bce43ca-3422-4259-aaeb-7f84708497a7",
+      "responseEventSequence": 2940,
+      "responseEnvelopeSequence": 4,
+      "firstCoveringAckEventSequence": 2945,
+      "firstCoveringAckRange": [
+        2,
+        4
+      ],
+      "carrierEnvelopeCovered": true,
+      "registrationSemanticallyAccepted": false
+    }
+  ],
+  "runtimeTrust": [
+    {
+      "event": "observer_status",
+      "time_ns": 1791152565560189600,
+      "ok": true,
+      "observer_event": "admitted_and_attached"
+    },
+    {
+      "event": "upstream_hook_status",
+      "time_ns": 1791152565562189900,
+      "installed": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152598963063000,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152598963063000,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152609452644400,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152609453145400,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152619981145100,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152619981145100,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152630513412100,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152630513412100,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152641059424000,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152641059424000,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152651590071800,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152651590071800,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152662106183500,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152662106183500,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152672610566200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152672610566200,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791152683110301200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791152683110301200,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    }
+  ],
+  "ownerBasis": "IPv4 bound UDP endpoint owner; exact HTTPS tuple lookup; no packet capture",
+  "userObservation": "Clicked Play once; Reconnecting error (4) again. Multiple automatic transport attempts observed; no additional manual Play click asserted.",
+  "acceptance": {
+    "privateDtlsCompleted": true,
+    "carrierConnectAckSent": 16,
+    "rawLz4DecodeObserved": true,
+    "registrationCandidateRecognized": true,
+    "registrationResponseSent": true,
+    "responseEnvelopeCarrierAckCovered": 8,
+    "registrationAccepted": false,
+    "worldEntry": false,
+    "milestone1": false
+  },
+  "interpretationLimits": [
+    "Reliable channel0 records were flags0x21, length860, with structured_retry raw schema compatibility and no validated generic typed wrapper. Fields and contents discarded.",
+    "Eight schema-compatible candidates received existing88-byte responses; exact request wire type and response semantic acceptance remain unresolved.",
+    "Later ACK ranges2..4 cover the response-bearing Carrier envelope4, not semantic readiness, reliable message consumption or world entry.",
+    "No later non-system data or POST_REGISTRATION_CLIENT_DATA was observed in admitted peers.",
+    "The ninth DTLS peer exceeded the adapter lifetime8-peer budget; peer_limit is a local admission rejection, not a schema failure.",
+    "Changing only the version field did not remove the reported Reconnecting(4) in this configuration; version requirements remain unknown."
+  ],
+  "cleanup": {
+    "hosts_before_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "installed": [
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+        "unchanged": true,
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+      },
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe",
+        "unchanged": true,
+        "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec"
+      },
+      {
+        "sha256": "38b6de707d0a1bb145e354fc39b5fbcb86151c09a1598c8494e7a9aba1e16101",
+        "appid": "1063730",
+        "unchanged": false,
+        "change_cause": "unknown when metadata differs",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf",
+        "preserved": true,
+        "buildid": "22469132"
+      }
+    ],
+    "retained_root_count": 1,
+    "timestamp_utc": "2026-10-04T22:26:15.5384238+00:00",
+    "staged_copy_retained_ignored": true,
+    "schema": 1,
+    "firewall_rules_absent": true,
+    "ports_closed": true,
+    "hosts_after_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "hosts_byte_exact": true,
+    "trust_store_modified": false,
+    "owned_children_stopped": true,
+    "game_absent": true
+  },
+  "independentCleanupReadback": {
+    "timestamp_utc": "2026-10-04T22:30:23.2732010+00:00",
+    "game_absent": true,
+    "retained_root_count": 1,
+    "copy_retained": true,
+    "no_processes_stopped": true,
+    "ports_closed": true,
+    "hosts_byte_exact": true,
+    "firewall_rules_absent": true,
+    "installed_images_and_signatures_intact": true
+  },
+  "privateLogs": [
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/dtls.jsonl",
+      "sha256": "730037af1d5d7f6f75770276bb281da9c6626d2414b9b108c163e01156482856"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/frida-events.jsonl",
+      "sha256": "9ccf86ee7fae551e04aa967d2d44c5d91568164f051829960e97e3ee0485d34c"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/https-v4.jsonl",
+      "sha256": "53ef474a83e954ef8a25175f79bfc5011532a313e31f68a03be077ff1c49b8b6"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/https-v6.jsonl",
+      "sha256": "9b008ea67aef94a4a7b6d29ba37d489852c3f4998b80c0201b3236cdd6200356"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/containment-events.jsonl",
+      "sha256": "afea511a0d842192249f0d764973cac31e7086b3cc5e1283f8a75af2cc79d703"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/trial-inputs.json",
+      "sha256": "613ac745ee32f14ebbe97e42aced98f93147448e213e26e5edd70ae123f9fbcc"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/cleanup.json",
+      "sha256": "69b06d744cc62273383ef01d2dc3e2fb55dbbcba379028079de4bebd6899c3a7"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2216-version/cleanup-readback.json",
+      "sha256": "00d06b608810fcc4982275a52255de168e4998e978110ee35d9a949c7631745e"
+    }
+  ]
+}

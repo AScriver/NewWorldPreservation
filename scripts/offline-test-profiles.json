@@ -16,9 +16,12 @@
     ],
     "protocol-loopback": [
       "tests/test_bootstrap_probe.py",
+      "tests/test_carrier_registration_probe.py",
       "tests/test_connectivity_probe.py",
       "tests/test_credentials_contract_probe.py",
       "tests/test_current_token_flow.py",
+      "tests/test_current_self_ident_default.py",
+      "tests/test_current_world_activation.py",
       "tests/test_dtls_transport_probe.py",
       "tests/test_queue_contract_probe.py",
       "tests/test_session_handoff_probe.py",
@@ -41,18 +44,20 @@
       "tests/test_rep_anchor_transaction.ps1",
       "tests/test_rep_launch_lifecycle.ps1"
     ],
-    "rep-readonly": ["tests/test_windows_rep_readonly_probe.py"]
+    "rep-readonly": ["tests/test_windows_rep_readonly_probe.py"],
+    "frida-trial": ["tests/test_frida_client_trial.py"]
   },
   "profiles": {
-    "workspace": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "cli-lifecycle"],
+    "workspace": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "frida-trial", "cli-lifecycle"],
     "fixtures-static": ["fixtures-static"],
     "protocol-loopback": ["protocol-loopback"],
     "windows-native": ["windows-native"],
     "tooling": ["tooling"],
     "powershell": ["powershell"],
     "rep-readonly": ["rep-readonly"],
+    "frida-trial": ["frida-trial"],
     "upstream": ["upstream"],
-    "all": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "cli-lifecycle", "upstream"]
+    "all": ["fixtures-static", "protocol-loopback", "windows-native", "tooling", "powershell", "rep-readonly", "frida-trial", "cli-lifecycle", "upstream"]
   },
   "upstream": {
     "name": "firstLight",

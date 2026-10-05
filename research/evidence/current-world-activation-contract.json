@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-image-static-contract",
+  "classification": "source-supported candidate; live acceptance untested",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+  "privateEvidenceSeal": {
+    "path": ".scratch/world-bootstrap-current-20261005T0419/evidence-seal-v1.json",
+    "sha256": "b4f0849fb3ffe2187ff0407e4cccb7dae6242d3c4195815e6a1164e5ab66a35a"
+  },
+  "ownedMapAsset": {
+    "path": "private/frida-trials/run-20261004T1733/client/assets/levels/newworld_vitaeeterna/level.pak",
+    "bytes": 179364,
+    "sha256": "2a951aae4be9ce83baebee88d6b64875af249641e51de2f38f35541126ee09b9"
+  },
+  "levelInfo": {
+    "currentTypeId": 1635,
+    "typedHeaderBytes": 4,
+    "bodyBytes": 59,
+    "mapName": "newworld_vitaeeterna",
+    "secondaryName": "",
+    "fourF32": [0, 0, 0, 0],
+    "u64At60": 0,
+    "entries": [],
+    "boolA0": false,
+    "contextByteA1": 0,
+    "boolA2": false,
+    "boolA3": false,
+    "deduplicationCounter": 1,
+    "numericEncoding": "network byte order; strings/vector compact counts without string tags",
+    "source": "Current factory/writer/decoder/dispatch and listener-checked LevelInfo handler; final u64 is a deduplication key, distinct from context byte."
+  },
+  "emptyBundle": {
+    "currentTypeId": 8,
+    "typedHeaderBytes": 3,
+    "bodyBytes": 6,
+    "sequence": "absent sentinel-1",
+    "contextByte": 0,
+    "secondByte": 0,
+    "unreliable": false,
+    "optionalStructurePresent": false,
+    "payloadLength": 0,
+    "source": "Current default decoder and unexpected-message queue; matching context can call pending context/level initialization."
+  },
+  "experimentOrder": ["registration reply", "SelfIdentification", "spawn notification", "LevelInfo", "empty bundle"],
+  "prerequisites": ["Existing game/SDK/context prerequisites for actor callbacks", "Accepted LevelInfo after listener veto check", "Self-identification flag for context load", "Existing owned map assets"],
+  "expectedFixedLogMarkers": ["LevelInfoChanged", "Calling clientContext->Initialize", "ClientContext Initialize()", "LoadContextAndLevel failed - missing LevelInfo"],
+  "limits": [
+    "Map name is an existing owned asset identity; counter1 is an explicit local experiment choice differing from initialized0.",
+    "Constructor defaults do not establish useful gameplay values or valid player/world identities.",
+    "Bundle carries no replicas; PlayerRegistry requires an existing live player, whose creation contract remains unknown.",
+    "Async map completion and world entry require live evidence; invocation or Carrier acknowledgement does not establish success.",
+    "Only original contract metadata is exported; private analysis output and copyrighted assets remain ignored."
+  ]
+}

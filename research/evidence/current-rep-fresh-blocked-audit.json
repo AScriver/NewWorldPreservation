@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-04T08:21:07.213054+00:00",
+  "analysis": "Fresh three-turn required ordinary REP root-input impasse; current on-disk/resource checks only",
+  "steam_build": 22469132,
+  "client_version": "1.400.6031.6004151",
+  "executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "audit_checkout": {
+    "head": "8c877be640ceebefdc451d21b9454a092b1d948d",
+    "status": "clean before and after sequential checks"
+  },
+  "recording_checkout": {
+    "head": "8c877be640ceebefdc451d21b9454a092b1d948d",
+    "status": "M docs/CURRENT_CLIENT_CONNECTIVITY.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REP_TRUST_POLICY.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json",
+    "code_inputs_changed": false
+  },
+  "fresh_goal_audit": {
+    "turns": [
+      {
+        "turn": 1,
+        "classification": "progress",
+        "result": "Finite ownership/parser/callback gaps closed; supported ordinary REP root input still missing"
+      },
+      {
+        "turn": 2,
+        "classification": "no progress",
+        "result": "Current image/bindings and bounded public-source search supplied no new normal root candidate"
+      },
+      {
+        "turn": 3,
+        "classification": "no progress",
+        "result": "Current image/code/evidence/resources unchanged; no unexecuted concrete root candidate or live experiment"
+      }
+    ],
+    "old_blocked_audit_counts_reused": false,
+    "same_condition_in_all_three_turns": "Supported normal root input/activation into actual REP SSL/X509 owner/store with pre-verification timing remains missing",
+    "threshold_met": true,
+    "meaningful_safe_progress_available_without_new_evidence": false,
+    "selected_status": "blocked",
+    "app_status_at_observation": "active",
+    "app_status_mutated_by_this_script": false,
+    "full_objective_achieved": false
+  },
+  "available_action_audit": {
+    "closed_work": "CA-slot/default-config/gRPC/setter/literal/table/settings/parser/finite transport scans retain their exact bounded scopes; no source drift justifies rerunning them",
+    "remaining_aliases_callbacks": "Unknown outer aliases/class registry/callback effects lack a concrete ordinary root-value edge; arbitrary tours are not a supported candidate",
+    "live_trial": "No evidence-backed normal input to implement; blind configuration trial cannot prove supported activation",
+    "runtime_observation": "Earlier module lookup access denial is preserved; no new authorization or access-state evidence permits a retry/bypass",
+    "pending_handles": "Collaboration listing observed all three delegated roles completed; offline validation terminal; no confirmed live experiment to wait on",
+    "scope": "Technical impasse within current evidence/authorization, not whole-program absence or impossibility proof"
+  },
+  "verification": {
+    "current_binding_counts_before_recording": {
+      "code_test_fixture_lock": 84,
+      "recording": 6,
+      "private_evidence": 32
+    },
+    "preserved_code_inputs_rechecked_after_recording": 84,
+    "pre_recording_docs_now_historical": true,
+    "tests_source_scans_game_rerun": false,
+    "prior_offline_execution": "367 Python cases/28 modules, three synthetic PS suites, owned loopback lifecycle at d088ef9; unchanged code but recording docs later edited",
+    "artifact_hash_readback_is_runtime_store_proof": false
+  },
+  "resources": {
+    "schema": 1,
+    "timestamp_utc": "2026-10-04T08:16:57.1462021+00:00",
+    "phase": "final",
+    "executable_file_version": "1.400.6031.6004151",
+    "executable_signature": "Valid",
+    "newworld_process_count": 0,
+    "tcp_443_listener_count": 0,
+    "udp_64003_listener_count": 0,
+    "project_bootstrap_rule_count": 0,
+    "retained_ca_root_count": 1,
+    "original_hosts_hash_matches": true,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "query_errors_suppressed": false,
+    "sequential_nonatomic_snapshot": true,
+    "process_memory_accessed": false,
+    "resources_mutated_by_this_script": false
+  },
+  "goal_status_application": {
+    "selected_status": "blocked",
+    "app_status_at_audit": "active",
+    "applied_by_this_receipt": false,
+    "tool_update": "Apply blocked after final recording/scope verification; no completion claim"
+  },
+  "furthest_live_checkpoint": "Historical Play -> private queueHTTP200 -> loopback64003 ->fatal unknown_ca;8alerts/4stockruns. Actual game DTLS/unrelated-root/Carrier/V3/world/actors/M1 not established",
+  "next_concrete_step": "Supply or discover a documented/source-backed ordinary root option/initializer for this exact owned build, or a relevant newly owned build/input. Pin it and trace value/activation/REP store/pre-verification timing; then implement smallest retained-CA change and paired actual-game positive/unrelated-root checks",
+  "full_objective": "Original English client/assets and private backend independent of Amazon services/credentials; actual DTLS, Carrier/V3, world and two distinct private clients with10-minute bilateral movement and clean logout/reconnect",
+  "operational_scope": "Current on-disk/Git/certificate/process/listener/firewall readback only; no tests/source scan/game rerun, client/system mutation, memory access, credential collection, endpoints, push or messages",
+  "limits": [
+    "Current file/resource snapshots are sequential, not atomic or runtime REP-store readbacks",
+    "No test rerun or new game proof; previous offline test execution remains historical",
+    "Three fresh resumed root turns only; historical blocked/stop instructions not counted",
+    "Technical impasse is not whole-program absence, pinning or EAC-causality proof",
+    "Old blocked audits and stop instructions remain historical; no authorization is expanded",
+    "Current lookup/action audit offers no meaningful safe next implementation without new evidence; arbitrary aliases do not supply a supported root value"
+  ],
+  "bindings": {
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/audit.py": "23bbaa770e7dd30b4282b2733e861bfbb83c6fa312477eb5b17a9c96ac989d28",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/audit.ps1": "77fdd1cb83385080a5fe9317431bc166fb55db5d095e7565c838ee37388ec24b",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/resource-readback.ps1": "689e01c1f2c2d6b59cbe437c8a13faac11c41101290b4f18b0c514abf7c8575e",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/final-resources.json": "49be127df11fbce6784f0a866dfb60ce0fd6a6112329529c5525ade72b2d8d7e",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/blocked-audit-readback.json": "c4ac4688377543abcc85ec35bdb417b3ebf647ae6ff24f17807d3f670b9c1bf3",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/handoff.md": "b0485b8e05a2890988e067eb7f6452973e7a62c3cd14414625b7978e2d332cf4",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/record_audit.py": "ffddada8df29804cfae00c5071a31df9e01ea173942c41a41e68338dc8b7b55b",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/record-audit.ps1": "1f363eed7e623c7258e556061c12dcc7a0d72291bfb2763f10db5462d25923d5",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/record-audit-failed-catalog-schema.py": "0a3b26a63f0a56f43481a5e5de7b8fca02c5ee4adf27f9c856af0e81cb2aff6b",
+    ".scratch/rep-fresh-blocked-audit-20261004T0815Z/recording-schema-correction.md": "d7797752123ca11654616c70d668ab13f57b1cd8ba18d6f5b99a6f715a5ef98b",
+    ".scratch/rep-resume-checkpoint-20261004T0813Z/checkpoint.json": "3b09d54a15d190423ae2dbfc3cb4a02857aec754df99a08d8879a3f26f10b19b"
+  },
+  "source_bindings": [
+    {
+      "path": "research/evidence/current-rep-callback-alias-boundary.json",
+      "sha256": "a98449da1dabd8053882535fa0bdc397802bf7433a708057a4ac9304cda9dfbb"
+    },
+    {
+      "path": "research/evidence/current-rep-supported-root-input.json",
+      "sha256": "cf2fa9dde9286ec8afe8257dd7ea4dacddde1a98c7041ccbd4d3a9c18b9b9f86"
+    },
+    {
+      "path": "research/evidence/current-rep-fresh-audit-validation.json",
+      "sha256": "7a7c0d8e2d8e21a443184544e816d3083d433b5a3d4a68d5d3c739cfc234affe"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "e99cba3b682eed2263e1f0c415523e07dcd5a9f54b413c6ff9d4b2f2a3628724"
+    },
+    {
+      "path": "docs/AGENT_START.md",
+      "sha256": "aa89841fda98029cd6a5ec76e2380b375b93a13aff46f2606028e11f11e73591"
+    }
+  ],
+  "recording_bindings": [
+    {
+      "path": "docs/CURRENT_CLIENT_CONNECTIVITY.md",
+      "sha256": "0a28c8679aca644d6dcf1968e2e7d9dd8fb773abb64df620244a26c0751e8a06"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "40e5167fe49ae5d8a964dc37e697b8809b974b39a0184928dbcc152b636ad53c"
+    },
+    {
+      "path": "docs/REP_TRUST_POLICY.md",
+      "sha256": "35b98c2daadc9447b50ab20b7177f263909ba6fc390826c27ab9eb8338b0bd80"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "f819667f852a2d3e26e5d267c792cadd2055c630feed193b777887caf5dab458"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "8748b5e5cdd32c7ec179f7fc4c15994b1e346e111e0b16b2100a7e83bd20eb29"
+    }
+  ]
+}

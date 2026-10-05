@@ -24,10 +24,10 @@ PS_VALIDATOR = Path(r"C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1")
 PYTHON_TIMEOUT = 180
 PS_TIMEOUT = 120
 CLI_TIMEOUT = 20
-REVIEWED_GROUP_SIZES = {"fixtures-static": 11, "protocol-loopback": 9, "windows-native": 4,
-                        "tooling": 3, "powershell": 3, "rep-readonly": 1}
+REVIEWED_GROUP_SIZES = {"fixtures-static": 11, "protocol-loopback": 12, "windows-native": 4,
+                        "tooling": 3, "powershell": 3, "rep-readonly": 1, "frida-trial": 1}
 WORKSPACE_MEMBERS = ["fixtures-static", "protocol-loopback", "windows-native",
-                     "tooling", "powershell", "rep-readonly", "cli-lifecycle"]
+                     "tooling", "powershell", "rep-readonly", "frida-trial", "cli-lifecycle"]
 
 
 def utc_now() -> str:
@@ -108,6 +108,7 @@ def input_files(root: Path, chosen: dict) -> list[str]:
                  if path.name not in {"windows_rep_readonly_probe.py", "validate_first_light.py"})
     names.update(path.relative_to(root).as_posix() for path in (root / "scripts").glob("*.ps1"))
     names.update(path.relative_to(root).as_posix() for path in (root / "scripts").glob("*.psm1"))
+    names.update(path.relative_to(root).as_posix() for path in (root / "scripts").glob("*.js"))
     names.update(path.relative_to(root).as_posix() for path in (root / "tests/fixtures").rglob("*.json"))
     if chosen["cli"]:
         names.add("scripts/connectivity_probe.py")

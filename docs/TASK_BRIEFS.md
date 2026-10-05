@@ -119,7 +119,35 @@ is not an experiment, and an offline test does not unlock real-client acceptance
 - Prior failures: raw-target matching failed on a query; preserve K27 and guard tests.
 - Cleanup: discard incoming signatures/bodies; release owned loopback services.
 
+## M1-02H — historical First Light client setup
+
+- Question: What launch/trust recipe produced historical private DTLS, and can
+  legitimately owned files reproduce it within current authorization?
+- Evidence: historical K120–K126; executed K127–K134; [review](FIRST_LIGHT_HISTORICAL_CLIENT.md), [trial](FRIDA_PRIVATE_DTLS_TRIAL.md).
+- Inputs: clean First Light63756a3; owned Steam22469132/version1.400.6031.6004151;
+  starting workspace8c877be and preserved pre-existing edits; receipt source hashes.
+- Owner/files: primary owns review, ROADMAP, brief, ledger/catalog, original serial
+  controller and sanitized receipts. Implementer owns original Frida runner/observer
+  and focused tests. Pinned reference is unmodified; installed game files are not written.
+- Complete/reject: one admitted isolated private-DTLS procedure or exact missing
+  information and maintainer question. Checksum absence alone is not a gate; historical
+  reports and source mechanics are not current-client transport acceptance.
+- Resources: one fresh ignored full-copy run; serial elevated containment owner,
+  all actual interpreter/game images covered by loopback rules; retained exact service
+  handles, owned game job, closed-admission file lock and transactional hosts journal.
+  User-authorized direct Frida startup and runtime pointer substitution, no capture hooks.
+- Prior failures: conflicting archived/pre-EAC/direct-spawn descriptions;
+  checked-in hook changes memory/trust; stock CA work stays parked without new evidence.
+- Check/cleanup: scoped fake tests and inert owner smoke remain separate from the
+  live two-Play result. Exact game/launcher hashes/signatures and AppID absence verified;
+  services/job exited, hosts byte-exact, owned rules absent, retained CA unchanged.
+  Steam manifest hash changed with app/build unchanged; guarded recovery preserved it.
+  Runtime pointer changes disposed by game exit. No EAC service/driver alteration,
+  contributor message, public assets, raw capture or official credential storage.
+
 ## M1-02C — unchanged-client REP trust
+
+This slice is parked without concrete new evidence. M1-02H is the next task.
 
 - Question: Is there an evidenced normal private-anchor input preserving verification?
 - Evidence: K36–K48 and later ledger updates; [trust policy](REP_TRUST_POLICY.md).
@@ -171,13 +199,50 @@ is not an experiment, and an offline test does not unlock real-client acceptance
 
 ## M1-06 — current registration/world-entry contract
 
+Current checkpoint: both0417 and0440 trials are closed. The first sustained234
+matching private heartbeat replies; the second additionally logged current
+LevelInfoChanged and the bundle diagnostic, then again timed out waiting for
+gameplay. Current mapped callback/LevelInfo/empty-bundle codecs are source-supported;
+context initialization, actor success and fresh PlayerRegistry creation remain
+unproven. Next bounded work is the actual context-load prerequisites/ordering,
+followed by source-supported fresh player state. Maintain the owned-copy/loopback
+resource controls; do not replay historical entities or invent packets.
+[Latest trial](../research/evidence/current-world-activation-trial.json),
+[current validation](../research/evidence/current-world-activation-validation.json),
+[current missing-contract question](REGISTRATION_MAINTAINER_QUESTION.md).
+
+The following version-only checkpoint and its missing-codec list are historical;
+later K157–K166 supersede the affected parts.
+
+October4 [Carrier/registration trial](CARRIER_REGISTRATION_TRIAL.md) is closed.
+Final run `run-20261004T2216-version` bound129 inputs and changed only the source
+response's server_version field to the exact owned-image literal. Eight raw860-byte
+channel0/flags0x21 records matched structured_retry, eight88-byte responses were
+sent and later ACK ranges covered all eight response-bearing Carrier envelopes.
+User again saw Reconnecting...(4); no later application data proved registration
+readiness. Nine DTLS sessions include one local lifetime-peer-budget rejection,
+which is distinct from schema failure. [Receipt](../research/evidence/carrier-registration-version-trial.json).
+Primary completed game/helper/listener/hosts/firewall cleanup and independent
+readback, preserving installed images/signatures, current same-build Steam metadata,
+the retained CA and ignored physical copy. Latest412-case offline validation plus
+three PowerShell suites/HTTPS lifecycle and four pinned synthetic checks passed.
+
+Next input: exact accepted current-build request/response and registration state
+transition, then validated SelfIdentification/LevelInfo/bootstrap ordering and
+fresh local identity/state fields. The pinned responder uses captured historical
+post-V3 replay; adjacent codecs explicitly retain unresolved layouts. Do not infer
+semantic readiness from ACK coverage, scan/repair opaque fields, replay world data
+or invent actor messages. The [maintainer question](REGISTRATION_MAINTAINER_QUESTION.md)
+specifies these missing contracts and remains unsent.
+
 - Question: What accepted current-build types/body order connect transport to world readiness?
 - Evidence: E07/E09/E10/E11/K33/K45; [spawn sequence](SPAWN_SEQUENCE.md).
 - Candidate files: independently original parsers/serializers, lawful sanitized fixtures,
   type/order/retry rejection tests and state-transition logs.
 - Complete/reject: versioned evidence for each boundary and positive/omission controls;
   reject a historical guessed three-message recipe or unvalidated registration body.
-- Check: new fixture-driven profiles; actual Carrier/V3 observation waits for REP acceptance.
+- Check: reviewed metadata/privacy/state controls plus the bounded live experiment;
+  actual Carrier/registration acceptance remains a separately observed gate.
 - Prior failures: historical retries/black screens had different configurations (E10).
 - Cleanup: isolate replay data; keep raw/proprietary observations private and ignored.
 

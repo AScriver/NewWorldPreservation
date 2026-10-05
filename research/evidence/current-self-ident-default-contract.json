@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "mode": "current-actor-callback-contract",
+  "recordedAtUtc": "2026-10-05T03:00:07.320787+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "ownedImageVersion": "1.400.6031.6004151",
+  "ownedImageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "ownedMappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+  "classification": "strongly source-supported static contract; live acceptance untested",
+  "messages": [
+    {
+      "name": "PlayerManagerSelfIdentificationMsg",
+      "mappedTypeId": 1628,
+      "bodyBytes": 127,
+      "typedBytes": 131,
+      "selectedEnvelope": {
+        "flags": 0,
+        "present": true
+      },
+      "bodyMembers": [
+        "empty tagged string",
+        "three null 36-byte identity records",
+        "zero u32, empty variable-count u32 vector, two false booleans, two +0f32",
+        "empty tagged string"
+      ],
+      "fieldSizes": [
+        2,
+        36,
+        36,
+        36,
+        15,
+        2
+      ],
+      "scalarByteOrder": "big endian",
+      "defaultValues": "current client construction defaults; not usable world identity proof",
+      "handlerEffect": "When existing game/context/actor are present, the inspected null-default path joins actor connection completion.",
+      "historicalCodec": "Pinned historical0x5d1/21-byte codec is incompatible with current serializer."
+    },
+    {
+      "name": "ReceivePlayerSpawnPointMsg",
+      "mappedTypeId": 1617,
+      "bodyBytes": 0,
+      "typedBytes": 4,
+      "selectedEnvelope": {
+        "flags": 0,
+        "present": true
+      },
+      "handlerEffect": "Current factory has no serialized body; handler sets the spawn-point notification flag for the next wrapper wait gate.",
+      "coordinatesOrWorldDataIncluded": false
+    }
+  ],
+  "mappingAuthority": "Current typeindex array positions -> descriptor u32+0x54 -> current mapped-ID writer; insertion-order+0x50 is not the wire ID.",
+  "review": {
+    "performed": true,
+    "scope": "independent narrow default/header/handler challenge",
+    "result": "No demonstrated null-default/layout blocker. Actor-context readiness remains conditional; dispatch success is not completion proof."
+  },
+  "privateSeals": [
+    {
+      "path": ".scratch/type-routing-20261005T0232/evidence-seal-v1.json",
+      "sha256": "267636a3c1ac524766cb640eceb7664ebb2e74949d7f3a1e78415b684f43037e",
+      "classification": "private static analysis"
+    },
+    {
+      "path": ".scratch/selfident-minimum-20261005T0243/evidence-seal-v1.json",
+      "sha256": "7d0debe3ee7bee7895f5aebd8b82decef9241f07a15c91c9da9accf85fa89556",
+      "classification": "private static analysis"
+    },
+    {
+      "path": ".scratch/spawnpoint-gate-20261005T0248/evidence-seal-v1.json",
+      "sha256": "91411b7e5e63a8dddda91c3e3bcf5bc26c5975a229da7ea0653b291eac3238c4",
+      "classification": "private static analysis"
+    }
+  ],
+  "rawDisassemblyExported": false,
+  "clientTested": false,
+  "worldEntryProven": false,
+  "limits": [
+    "One-shot timing is an experiment choice, not observed server ordering.",
+    "Missing game/context can cause early return; a negative trial cannot alone falsify the codec.",
+    "Default identities and notification do not supply LevelInfo, a player entity or valid world state.",
+    "Current case13 needs further client activation and PlayerRegistry evidence."
+  ]
+}

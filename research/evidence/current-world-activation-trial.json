@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-private-live-trial",
+  "status": "closed",
+  "recordedAtUtc": "2026-10-05T05:25:05.683026+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261005T0440-world-context",
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+  "sourceInputs": [
+    {
+      "path": "scripts/bootstrap_log_metadata.py",
+      "sha256": "ff2ffc5e1f5cae70131e80635031567fc2377c1b00001bf03836418789fe8f56"
+    },
+    {
+      "path": "scripts/bootstrap_probe.py",
+      "sha256": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f"
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "d3ca7efb74e2f6ea1b5dc2b33a1b76c3d8a57ec1e4522006ac12af94e7d21982"
+    },
+    {
+      "path": "scripts/channel_descriptor.py",
+      "sha256": "12849224c266f705889ee33a31bc3f0fcd38252542e204fb2c08f88e63f2b217"
+    },
+    {
+      "path": "scripts/client_config_archive_metadata.py",
+      "sha256": "bcbb7dec2613ef108bef0377324ae7080dcac9e8748a4d82b21c9c5b13208430"
+    },
+    {
+      "path": "scripts/connectivity_probe.py",
+      "sha256": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c"
+    },
+    {
+      "path": "scripts/credentials_contract_probe.py",
+      "sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff"
+    },
+    {
+      "path": "scripts/current_self_ident_default.py",
+      "sha256": "13b0ff0dd39738aadf56a288f8bb4f24aed14395613b74dcaa56e96dc015bfa6"
+    },
+    {
+      "path": "scripts/current_spawn_point.py",
+      "sha256": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "sha256": "b5fc7cc326286b301c76e4357f9ee5a63234cb235adf1ee1b973c60bf1e7d12c"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88"
+    },
+    {
+      "path": "scripts/game_log_metadata.py",
+      "sha256": "cd1c13f4e59292339021ab5d9257261cf0e1d26458c9f8ec78de930ad5ae94c3"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "4815f3dad209b978782610258f787ef9714e94f045b840e5f6ab5db1e2fa699a"
+    },
+    {
+      "path": "scripts/project_preflight.py",
+      "sha256": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee"
+    },
+    {
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2"
+    },
+    {
+      "path": "scripts/rep_anchor_candidate.py",
+      "sha256": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1"
+    },
+    {
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611"
+    },
+    {
+      "path": "scripts/Set-ConnectivityHosts.ps1",
+      "sha256": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f"
+    },
+    {
+      "path": "scripts/token_contract_probe.py",
+      "sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11"
+    },
+    {
+      "path": "scripts/udp_handoff_probe.py",
+      "sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919"
+    },
+    {
+      "path": "scripts/validate_connectivity.py",
+      "sha256": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e"
+    },
+    {
+      "path": "scripts/validate_first_light.py",
+      "sha256": "b0da03a9bb364c099d88b23489821240dbb7feceb33a22ae3969499466406407"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "b2401b5ae25d3a8cf2f7a39035dbabc25be807ae70bc08fafab6aa4cc8adbc53"
+    },
+    {
+      "path": "scripts/verify_probe_cli.py",
+      "sha256": "51dce48f02e28e0d3b368ae273432f8ce01af3b2cb160b2747a2a56e3d238ddb"
+    },
+    {
+      "path": "scripts/windows_rep_readonly_probe.py",
+      "sha256": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74"
+    },
+    {
+      "path": "scripts/windows_tcp_owner.py",
+      "sha256": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58"
+    },
+    {
+      "path": "scripts/windows_udp_owner.py",
+      "sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf"
+    }
+  ],
+  "eventCounts": {
+    "CARRIER_ACK_SENT": 235,
+    "CARRIER_DECOMPRESSED": 235,
+    "CARRIER_PARSED": 1180,
+    "CARRIER_RECORD": 1419,
+    "CLIENT_CARRIER_ACK_RANGE": 475,
+    "CLIENT_DATA_AFTER_CONNECT_ACK": 1,
+    "CONNECT_ACK_SENT": 2,
+    "DTLS_APPLICATION_DISCARDED": 1180,
+    "DTLS_DATAGRAM_RECEIVED": 1184,
+    "DTLS_HANDSHAKE_ESTABLISHED": 1,
+    "DTLS_HANDSHAKE_STATE": 13,
+    "DTLS_PEER_CLOSED": 1,
+    "DTLS_PEER_OPENED": 1,
+    "DTLS_PROBE_LISTENING": 1,
+    "DTLS_SERVER_OUTPUT": 538,
+    "DTLS_SNI": 1,
+    "DTLS_SOCKET_FAILURE": 58,
+    "EMPTY_STATE_BUNDLE_SENT": 1,
+    "HEARTBEAT_15D_ACK": 234,
+    "HEARTBEAT_15D_SENT": 294,
+    "LEVEL_INFO_CANDIDATE_SENT": 1,
+    "POST_REGISTRATION_CLIENT_DATA": 1,
+    "REGISTRATION_SCHEMA_RESULT": 1,
+    "SELF_IDENT_DEFAULT_SENT": 1,
+    "SPAWN_POINT_NOTIFICATION_SENT": 1,
+    "V3_CANDIDATE": 1,
+    "V3_PARSER_RESULT": 1,
+    "V3_RESPONSE_SENT": 1
+  },
+  "heartbeat": {
+    "sent": 294,
+    "acks": 234,
+    "matchedLocalPing": 234,
+    "unmatched": 0,
+    "firstAck": {
+      "state": "HEARTBEAT_15D_ACK",
+      "timestamp_utc": "2026-10-05T04:45:23.503Z",
+      "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+      "matched_local_ping": true,
+      "envelope_sequence": 10,
+      "type_id": 349,
+      "body_bytes": 36
+    },
+    "lastAck": {
+      "state": "HEARTBEAT_15D_ACK",
+      "timestamp_utc": "2026-10-05T04:47:23.049Z",
+      "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+      "matched_local_ping": true,
+      "envelope_sequence": 1175,
+      "type_id": 349,
+      "body_bytes": 36
+    }
+  },
+  "callbackEnvelopeCoverage": [
+    {
+      "transmitted": {
+        "state": "V3_RESPONSE_SENT",
+        "timestamp_utc": "2026-10-05T04:45:22.999Z",
+        "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+        "envelope_sequence": 4
+      },
+      "clientRangeCoveredEnvelope": true,
+      "firstCoverageUtc": "2026-10-05T04:45:23.111Z",
+      "limit": "Carrier envelope acknowledgement is not actor/context/world acceptance."
+    },
+    {
+      "transmitted": {
+        "state": "SELF_IDENT_DEFAULT_SENT",
+        "timestamp_utc": "2026-10-05T04:45:24.013Z",
+        "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+        "envelope_sequence": 7,
+        "record_sequence": 2,
+        "reliable_sequence": 2,
+        "typed_bytes": 131,
+        "default_body_bytes": 127,
+        "type_id": 1628
+      },
+      "clientRangeCoveredEnvelope": true,
+      "firstCoverageUtc": "2026-10-05T04:45:24.016Z",
+      "limit": "Carrier envelope acknowledgement is not actor/context/world acceptance."
+    },
+    {
+      "transmitted": {
+        "state": "SPAWN_POINT_NOTIFICATION_SENT",
+        "timestamp_utc": "2026-10-05T04:45:25.040Z",
+        "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+        "envelope_sequence": 12,
+        "record_sequence": 5,
+        "reliable_sequence": 5,
+        "typed_bytes": 4,
+        "default_body_bytes": 0,
+        "type_id": 1617
+      },
+      "clientRangeCoveredEnvelope": true,
+      "firstCoverageUtc": "2026-10-05T04:45:25.043Z",
+      "limit": "Carrier envelope acknowledgement is not actor/context/world acceptance."
+    },
+    {
+      "transmitted": {
+        "state": "LEVEL_INFO_CANDIDATE_SENT",
+        "timestamp_utc": "2026-10-05T04:45:26.068Z",
+        "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+        "envelope_sequence": 17,
+        "record_sequence": 8,
+        "reliable_sequence": 8,
+        "typed_bytes": 63,
+        "candidate_body_bytes": 59,
+        "type_id": 1635
+      },
+      "clientRangeCoveredEnvelope": true,
+      "firstCoverageUtc": "2026-10-05T04:45:26.071Z",
+      "limit": "Carrier envelope acknowledgement is not actor/context/world acceptance."
+    },
+    {
+      "transmitted": {
+        "state": "EMPTY_STATE_BUNDLE_SENT",
+        "timestamp_utc": "2026-10-05T04:45:27.095Z",
+        "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+        "envelope_sequence": 22,
+        "record_sequence": 11,
+        "reliable_sequence": 11,
+        "typed_bytes": 9,
+        "default_body_bytes": 6,
+        "type_id": 8
+      },
+      "clientRangeCoveredEnvelope": true,
+      "firstCoverageUtc": "2026-10-05T04:45:27.097Z",
+      "limit": "Carrier envelope acknowledgement is not actor/context/world acceptance."
+    }
+  ],
+  "closures": [
+    {
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-05T04:47:53.694Z",
+      "connection_id": "b0a42948-cf42-428e-be25-74e354cda67a",
+      "reason": "idle_deadline"
+    }
+  ],
+  "rejectionReasons": {},
+  "clientProgress": {
+    "recordedAtUtc": "2026-10-05T05:25:03.135965+00:00",
+    "expectedOwnerProcessId": 32628,
+    "expectedResumeUtc": "2026-10-05T04:44:48.728642+00:00",
+    "sourceReadSha256": "a80b50bacdf0f9e62f85f6d6ab528416bad4a2db0f7428f587f5bc7da56d6134",
+    "sourceStableDuringRead": true,
+    "sourceLastWriteTimeUtc": "2026-10-05T04:47:24.413810+00:00",
+    "rawLinesExported": false,
+    "credentialBearingLinesDiscarded": true,
+    "markerCounts": {
+      "REGISTRATION_RESPONSE_RECEIVED": 1,
+      "ACTOR_CONNECTION_START": 1,
+      "LEVEL_INFO_CHANGED": 2,
+      "BUNDLE_WITHOUT_CONTEXT": 1
+    },
+    "events": [
+      {
+        "lineNumber": 464,
+        "marker": "REGISTRATION_RESPONSE_RECEIVED",
+        "sourceTimes": [
+          "2026-10-05 04:45:23.000"
+        ]
+      },
+      {
+        "lineNumber": 466,
+        "marker": "ACTOR_CONNECTION_START",
+        "sourceTimes": [
+          "2026-10-05 04:45:23.003"
+        ]
+      },
+      {
+        "lineNumber": 536,
+        "marker": "LEVEL_INFO_CHANGED",
+        "sourceTimes": [
+          "2026-10-05 04:45:26.072"
+        ]
+      },
+      {
+        "lineNumber": 537,
+        "marker": "LEVEL_INFO_CHANGED",
+        "sourceTimes": [
+          "2026-10-05 04:45:26.072"
+        ]
+      },
+      {
+        "lineNumber": 633,
+        "marker": "BUNDLE_WITHOUT_CONTEXT",
+        "sourceTimes": [
+          "2026-10-05 04:45:27.100"
+        ]
+      }
+    ],
+    "attributionLimit": "Common owned log; correlate numeric times against this exclusive owned trial, do not infer global absence from filtered lines."
+  },
+  "fridaEvents": [
+    {
+      "event": "selected_copy",
+      "time_ns": 1791175488482621400,
+      "source_run": "run-20261004T1733"
+    },
+    {
+      "event": "spawn_suspended",
+      "time_ns": 1791175488596995100,
+      "pid": 32628
+    },
+    {
+      "event": "owner_claimed",
+      "time_ns": 1791175488597494900,
+      "pid": 32628,
+      "creation_filetime": 134356490885947336,
+      "job_active_limit": 1
+    },
+    {
+      "event": "attached",
+      "time_ns": 1791175488712962100
+    },
+    {
+      "event": "child_gating_enabled",
+      "time_ns": 1791175488713462800
+    },
+    {
+      "event": "observer_status",
+      "time_ns": 1791175488726962300,
+      "ok": true,
+      "observer_event": "admitted_and_attached",
+      "error": null
+    },
+    {
+      "event": "upstream_hook_status",
+      "time_ns": 1791175488728137200,
+      "installed": true
+    },
+    {
+      "event": "resumed",
+      "time_ns": 1791175488728642200
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791175522856364700,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791175522856364700,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "lifetime_expired",
+      "time_ns": 1791175788942605700
+    },
+    {
+      "event": "trial_complete",
+      "time_ns": 1791175789483371700
+    }
+  ],
+  "cleanup": {
+    "installed": [
+      {
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe",
+        "unchanged": true
+      },
+      {
+        "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe",
+        "unchanged": true
+      },
+      {
+        "buildid": "22469132",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf",
+        "unchanged": false,
+        "preserved": true,
+        "change_cause": "unknown when metadata differs",
+        "sha256": "c87092d91081cd34cc58573f614d60a8daa7f9cb587336483360efe00cfdd2ed",
+        "appid": "1063730"
+      }
+    ],
+    "trust_store_modified": false,
+    "hosts_byte_exact": true,
+    "retained_root_count": 1,
+    "game_absent": true,
+    "staged_copy_retained_ignored": true,
+    "schema": 1,
+    "hosts_after_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "timestamp_utc": "2026-10-05T04:49:58.0142936+00:00",
+    "firewall_rules_absent": true,
+    "hosts_before_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "ports_closed": true,
+    "owned_children_stopped": true
+  },
+  "cleanupReadback": {
+    "timestamp_utc": "2026-10-05T05:25:01.8833068+00:00",
+    "ports_closed": true,
+    "installed_images_and_signatures_intact": true,
+    "firewall_rules_absent": true,
+    "no_processes_stopped": true,
+    "retained_root_count": 1,
+    "game_absent": true,
+    "copy_retained": true,
+    "hosts_byte_exact": true
+  },
+  "userObservation": {
+    "playClicked": true,
+    "loading": true,
+    "eventualFixedDialog": "Timed out while waiting for gameplay on the server."
+  },
+  "evidenceFiles": [
+    {
+      "path": "private/frida-trials/run-20261005T0440-world-context/trial-inputs.json",
+      "sha256": "f18708606d773033719dd61ec066806754c107ca73a525e2814cef0e46a82529"
+    },
+    {
+      "path": "private/frida-trials/run-20261005T0440-world-context/dtls.jsonl",
+      "sha256": "7c5f731e5212a5e95368406673db03e88f88a9696230dc4a909928383ac92dcd"
+    },
+    {
+      "path": "private/frida-trials/run-20261005T0440-world-context/client-progress.json",
+      "sha256": "de564cfdf0a1474d883ec69cc398f53ea5f14d8af3fad4717bbbf04f3c21df77"
+    },
+    {
+      "path": "private/frida-trials/run-20261005T0440-world-context/cleanup.json",
+      "sha256": "11ec15344fa7a4590bdfa275d393d187c16ad50e545c4ec8cc5c2d58a3864ebb"
+    },
+    {
+      "path": "private/frida-trials/run-20261005T0440-world-context/cleanup-readback.json",
+      "sha256": "0ef6c90789c848f60167054f4f8efc2e99eef9a7f523094b59bd4e20930592c2"
+    }
+  ],
+  "limits": [
+    "Matched heartbeat acknowledgements verify private application traffic on this connection.",
+    "Null identity callbacks and envelope ACKs do not establish actor completion or world entry.",
+    "User reported loading then gameplay-wait timeout; two-client movement is untested.",
+    "No raw application bodies, client log lines, credentials or copyrighted assets exported."
+  ]
+}

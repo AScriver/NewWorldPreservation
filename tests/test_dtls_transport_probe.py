@@ -3,6 +3,7 @@ import socket
 import sys
 import threading
 import time
+from types import SimpleNamespace
 import warnings
 from pathlib import Path
 from unittest.mock import Mock
@@ -138,6 +139,44 @@ def test_two_independent_verified_peers_exchange_and_discard_secret(tmp_path, ce
                for item in records if item["state"] == "DTLS_DATAGRAM_RECEIVED")
 
 
+def test_established_peer_tick_runs_without_inbound_datagrams_on_fake_clock(
+        tmp_path, certdir, monkeypatch):
+    import dtls_transport_probe as probe_module
+
+    clock = [0.0]
+    monkeypatch.setattr(probe_module.time, "monotonic", lambda: clock[0])
+    stop = threading.Event()
+    ticks = []
+
+    def on_tick(peer, now):
+        ticks.append((peer.id, now))
+        clock[0] += 0.5
+        if len(ticks) == 3:
+            stop.set()
+
+    path = tmp_path / "tick-events.jsonl"
+    events = EventLog(path)
+    server = Responder(certdir, events, port=0, on_tick=on_tick)
+    real_socket = server.socket
+    real_socket.close()
+    fake_socket = Mock()
+    fake_socket.recvfrom.side_effect = socket.timeout
+    server.socket = fake_socket
+    connection = Mock()
+    connection.DTLSv1_get_timeout.return_value = None
+    peer = SimpleNamespace(id="owned-synthetic", address=("127.0.0.1", 10001),
+                           connection=connection, established=True, created=0.0,
+                           last_seen=0.0)
+    server.peers[peer.address] = peer
+    server.by_connection[connection] = peer
+    server.run(5, stop)
+    events.close()
+    assert ticks == [("owned-synthetic", 0.0), ("owned-synthetic", 0.5),
+                     ("owned-synthetic", 1.0)]
+    assert fake_socket.recvfrom.call_count == 3 and not server.peers
+    assert "DTLS_TICK_FAILURE" not in path.read_text()
+
+
 def test_wrong_ca_client_rejects_and_no_application_exchange(tmp_path, certdir):
     (complete, rejected, received), records = _run(tmp_path, certdir, trusted=False)
     assert rejected == {0} and not complete and not received
@@ -179,6 +218,10 @@ def test_bounds_and_fixed_loopback_bind(tmp_path, certdir):
             Responder(certdir, events, port=-1)
         with pytest.raises(ValueError):
             Responder(certdir, events, port=0, chain="invalid")
+        for total, per_peer in ((0, 1), (4097, 1), (4096, 2049), (1, 2), (True, 1)):
+            with pytest.raises(ValueError):
+                Responder(certdir, events, port=0, max_datagrams=total,
+                          max_peer_datagrams=per_peer)
         with warnings.catch_warnings():
             warnings.simplefilter("error", DeprecationWarning)
             server = Responder(certdir, events, port=0)
@@ -189,6 +232,29 @@ def test_bounds_and_fixed_loopback_bind(tmp_path, certdir):
     finally:
         events.close()
     assert MAX_PEERS == 8
+
+
+def test_selected_datagram_budget_stops_and_closes_socket(tmp_path, certdir):
+    path = tmp_path / "budget.jsonl"
+    events = EventLog(path)
+    server = Responder(certdir, events, port=0, max_datagrams=3, max_peer_datagrams=2)
+    thread = threading.Thread(target=server.run, args=(3,))
+    thread.start()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
+            for _ in range(3):
+                sock.sendto(b"SYNTHETIC-SECRET-DO-NOT-RETAIN", server.address)
+        thread.join(timeout=3)
+        assert not thread.is_alive()
+    finally:
+        thread.join(timeout=4)
+        events.close()
+    records = [json.loads(line) for line in path.read_text().splitlines()]
+    assert records[0]["max_datagrams"] == 3
+    assert records[0]["max_peer_datagrams"] == 2
+    assert records[-1]["received_datagrams"] == 3
+    assert records[-1]["sockets_closed"] and server.socket.fileno() == -1
+    assert "SYNTHETIC-SECRET" not in path.read_text()
 
 
 def test_retransmission_timer_and_peer_capacity(tmp_path, certdir):

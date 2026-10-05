@@ -1,6 +1,66 @@
 # Milestone 1 roadmap
 
-Latest live increment: [private REP comparison](PRIVATE_REP_ANCHOR_TRIAL.md). The admitted certificate-data trial was refused by intact EAC before HTTP/DTLS; exact stock hash/signature restored before routing release. Matched elevated unchanged-stock/original-launcher control reached queue200, then returned two fatal unknown_ca alerts. Eight stock alerts across four runs; no completed private game DTLS, Carrier/V3 or actor. Final cleanup verified and approved CA retained. [Receipt](../research/evidence/private-rep-anchor-eac-control.json). No protocol changes/new test execution; prior285 Python/14 interval/9 lifecycle and455 upstream/skip1 checks remain historical.
+Active October4 continuation: **map/context activation after a sustained private connection**.
+The closed0417 trial completed one DTLS session, registration response receipt and
+234 matching local heartbeat acknowledgements over about120 seconds. Carrier ACK
+ranges covered both current actor callbacks. The user stayed loading, then received
+"Timed out while waiting for gameplay on the server." No traffic-budget rejection
+occurred; the peer later closed on the probe's idle deadline. Filtered log metadata
+shows actor START, with actor success/world entry still unproven.
+[Closed live receipt](../research/evidence/current-actor-callback-trial.json).
+
+The closed isolated `run-20261005T0440-world-context` preserved heartbeat, current
+SelfIdentification0x65c and empty spawn notification0x651. It adds the source-supported
+current LevelInfo0x663 for the copy's existing `newworld_vitaeeterna` map and a default
+empty ReplicatedStateBundle0x8 that can trigger context initialization. Constructor
+defaults/context0 and fresh deduplication counter1 are explicit experiment values.
+No historical entity replay or invented player packet is sent. The candidate passed
+50 focused controls, six pinned-codec framing smokes and the complete workspace suite.
+[Static contract](../research/evidence/current-world-activation-contract.json),
+[validation](../research/evidence/current-world-activation-validation.json).
+It recorded234 matching heartbeat replies, Carrier ACK coverage for both added
+messages, two fixed LevelInfoChanged labels and one bundle-without-context diagnostic.
+The user again timed out waiting for gameplay. No context-initialization or actor-success
+marker was found in the filtered owned log. The bundle diagnostic is emitted after
+the inspected context-load call and does not identify which prerequisite failed.
+[Closed world trial](../research/evidence/current-world-activation-trial.json).
+
+0417 cleanup04:23:12 UTC and independent readback04:26:33 UTC verified no trial game,
+ports or rules, original hosts and intact installed executable/launcher/signatures.
+Steam remains available. The earlier heartbeat2255 UAC cancellation and0254 missing
+Steam prerequisite yielded no protocol result. Async map completion and creation of
+a live PlayerRegistry player remain unknown; full Milestone1 is incomplete.
+The latest run cleaned up04:49:58 UTC; independent readback05:25:01 UTC confirmed
+resource absence, original hosts and intact installed images/signatures.
+
+Closed registration checkpoint, October4: **M1-06 response delivery**.
+The closed `run-20261004T2216-version` changed only the existing88-byte response's
+historical server-version field to the exact owned-image literal. Nine private
+DTLS sessions completed after one Play click and automatic reconnects. Eight
+raw860-byte reliable channel0 records matched the pinned structured-retry schema;
+eight source-encoded replies were sent. Each reply-bearing Carrier envelope4 was
+covered by a later client ACK range2–4. User again observed Reconnecting...(4).
+Carrier delivery was observed at closure; the later owned-log finding above adds
+client response receipt and actor-connection START. No later non-system data was observed in
+the eight admitted peers. The ninth exceeded the local lifetime8-peer budget,
+producing140 admission rejections; it is not a schema failure.
+[Latest live receipt](../research/evidence/carrier-registration-version-trial.json).
+
+All trial resources are closed. Cleanup22:26:15 UTC and independent readback
+22:30:23 UTC verified game absence, closed ports, removed owned rules, byte-exact
+hosts and intact installed images/signatures. The retained CA and ignored physical
+copy remain; current Steam metadata was preserved with the same app/build.
+That historical implementation passed412 Python cases, three PowerShell
+suites/HTTPS lifecycle and four pinned synthetic checks.
+[Validation](../research/evidence/carrier-registration-version-validation.json).
+Next required input is the current LevelInfo/context/player bootstrap contract,
+after testing the now-concrete current actor callbacks. The pinned source's
+next-stage replay and speculative LevelInfo codec do not provide a validated
+constructor for fresh private world state.
+[Exact unsent maintainer question](REGISTRATION_MAINTAINER_QUESTION.md).
+No stock-CA retry, historical world replay or invented actor messages were used.
+
+Original transport increment: [owned-copy Frida trial](FRIDA_PRIVATE_DTLS_TRIAL.md), October4. Direct startup/attachment/resume with the pinned runtime trust hook succeeded on owned Steam22469132/version1.400.6031.6004151. Two Play attempts completed private DTLS1.2 and delivered124 decrypted application records each. At that checkpoint application/Carrier/V3 acceptance, world and actors remained unproven; subsequent Carrier delivery evidence is recorded above. Unchanged-stock trust remains unresolved. Exact installed EXE/launcher hashes/signatures preserved; hosts/rules/listeners cleaned and retained CA unchanged. Steam manifest hash changed with the same app/build and was preserved after guarded reconciliation. [Receipt](../research/evidence/first-light-frida-private-dtls.json). Earlier stock/EAC controls below remain historical.
 
 ## Acceptance boundary
 
@@ -11,6 +71,10 @@ No Amazon service, credentials or asset redistribution should be necessary for t
 Private-server language scope: **English only**, per the October3 user clarification. No multilingual backend is required. Endpoint prefixes such as `syd`, `gru` and `pdx` are not treated as language selectors without evidence; their locale/region semantics are not a prerequisite to resolving REP trust.
 
 ## Current status
+
+- **M1-02H — mechanism reproduced on the owned build, October4:** user-authorized boundary change admitted one physical-copy Frida experiment. Startup, attachment, runtime initializer entry/return pointer change and two private DTLS handshakes plus application data were observed. Historical successful binary identity remains unknown; it did not block this mechanism. [Procedure/results](FRIDA_PRIVATE_DTLS_TRIAL.md), [original historical review/question](FIRST_LIGHT_HISTORICAL_CLIENT.md), [live receipt](../research/evidence/first-light-frida-private-dtls.json). Both original Play attempts showed a generic Connection Error under a responder that discards application data and closes at128 datagrams; that UI cannot establish the next protocol failure. Subsequent Carrier/schema/version trials are recorded above; next input is the accepted current registration/bootstrap contract. No stock-CA investigation was repeated. Full M1 is incomplete.
+
+- **Fresh blocked audit — October 4, 08:17 UTC:** the required-input impasse persisted across three resumed root turns. Turn1 closed finite source gaps; turn2 revalidated the checkpoint and found no new candidate in a bounded public-source search; turn3 verified unchanged pinned image/build,84 code inputs,32 private bindings and retained resources. Earlier blocked counts are not reused. [Audit receipt](../research/evidence/current-rep-fresh-blocked-audit.json), [ledger](EVIDENCE_LEDGER.md#october-4-fresh-three-turn-blocked-audit). No concrete unexecuted root candidate or live experiment remains. Goal status selected: **blocked**, full objective incomplete. Missing: supported ordinary root input, activation into actual REP context/store and pre-verification timing. Resume upon a documented/source-backed normal root initializer/input for this owned build, or relevant owned-build/input change that can be pinned and traced. Existing authorization remains sufficient for that evidence-backed procedure. Actual game DTLS, unrelated-root rejection, Carrier/V3/world/actors and full M1 remain unproven. No game/test/source-scan rerun or client/system mutation in the final two audit turns.
 
 - **Fresh resumed audit — October 4:** the user explicitly resumed the full goal; previous blocked audits/stop instructions are historical. At clean `d088ef9`, two finite source traces and targeted challenge resolve connection receiver/descriptor roles and the formerly omitted nested parser interval. Callbacks can receive original CA-byte aliases, so their side effects remain unknown; no supported normal root value/activation into the actual REP store at the required time becomes testable. [Findings](REP_TRUST_POLICY.md#fresh-resumed-audit-nested-parser-and-retained-transport--october-4), [source receipt](../research/evidence/current-rep-callback-alias-boundary.json). Fresh workspace367 Python cases, three synthetic PowerShell suites and loopback HTTPS lifecycle passed with unchanged selected inputs. [Validation](../research/evidence/current-rep-fresh-audit-validation.json). Stock image/build/version and retained CA rechecked; no game/client/system/CA change or game trial. Full English private-backend/Milestone1 objective remains active and incomplete; this is the first turn of the new audit. Actual game DTLS plus unrelated-root rejection still gate Carrier/V3 and actors.
 
@@ -66,7 +130,8 @@ Tasks are bounded outcomes, not assignments to layers. Dependencies identify act
 | M1-02B1 **Done** | Observe Omni CreateSession token request on owned endpoint | M1-02B parsed descriptor | Three attributed POSTs, correct token SNI/Host, TLS1.3, deliberate501; metadata-only fixture, no credential replay |
 | M1-02B2 **Done: compatible envelope** | Establish a current-build token response that advances to the credentials API | M1-02B1 | Static parser checks; empty-model203 control; synthetic account-present and account-absent models bothSDK0/credentials GET; deterministic response/transition fixtures. Exhaustive error/refresh/optional-field validation remains open |
 | M1-02B3 **Done: compatible handoff only** | Establish current credentials/selection/queue response and selected private game endpoint | M1-02B2 | Numeric credentials200 ->synthetic character/world preview ->queue200 ->owned UDP attempt. No secure private accounts/ticket issue/validation, handshake or gameplay proof |
-| M1-02C **Blocked on unchanged-client private trust** | Separate current game REP/DTLS trust | M1-02B3 selected address + M1-03 transport | Eight fatal unknown_ca alerts in four stock runs; static embedded-certificate→store/standard-verifier mapped. Data-only executable substitution refused by intact EAC; route retired. Supported configuration/provider route unknown; no global no-pinning inference |
+| M1-02H **Done: owned-build mechanism/transport** | Reproduce direct Frida startup and runtime-trust/private-DTLS mechanism using isolated legitimately owned files | M1-00; explicit October4 authorization | One staged game process, two Play attempts, initializer pointer observations, two DTLS1.2 completions plus decrypted application counts; cleanup reconciled. Exact historical binary identity unknown; no stock-trust/world claim |
+| M1-02C **Parked; blocked on unchanged-client private trust** | Separate current game REP/DTLS trust | M1-02B3 selected address + M1-03 transport | Eight fatal unknown_ca alerts in four stock runs; static embedded-certificate→store/standard-verifier mapped. Data-only executable substitution refused by intact EAC; route retired. Supported configuration/provider route unknown; no global no-pinning inference. Resume only with concrete new evidence |
 | M1-03 **Partial: local exchange proven** | Exercise actual responder transport with two locally controlled protocol endpoints | M1-00 | Original responder7tests: two CA-verified independent peers/inert exchange, unrelated-CA alert, timer retransmission, capacity/socket-error/stop cleanup. Independent retained-CA normal/reversed control also passes. Full268test regression. These endpoints are **not** New World clients; prolonged/idle/reconnect contracts remain |
 | M1-04 | Implement two private account/character selections with client-compatible response schemas | M1-01's schema evidence; M1-02B3 game-auth handoff | Two logins return disjoint character ownership; wrong/expired credentials rejected locally; changing one identity cannot rewrite another; cold restart behavior explicitly defined |
 | M1-05 | Bind private world ticket to one authorized game peer/character/world | M1-03, M1-04 | Deterministic issue/consume/expiry/replay/wrong-account tests; registration logs identify a private character, not guessed identity from span length |
@@ -82,7 +147,23 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
-**Unchanged-client private REP trust/configuration compatible with intact launcher/EAC.** Windows elevation and metadata admission no longer block: the admitted data-only anchor trial hit an EAC launch refusal, and the matched stock control progressed through our private queue to unknown_ca. Do not repeat the refused substitution or bypass EAC. [Comparison receipt](../research/evidence/private-rep-anchor-eac-control.json). Earlier canceled runs remain historical.
+**Context activation and fresh player creation.** Private registration response
+receipt, actor START, sustained heartbeat echoes and the current LevelInfo/bundle
+handler labels are observed. Current SelfIdentification, spawn, LevelInfo and
+empty-bundle formats now have pinned owned-image contracts. The latest candidate
+still timed out waiting for gameplay; context initialization and actor success
+remain unproven. Determine the actual context-load prerequisite/ordering gate,
+then the source-supported way to create a fresh PlayerRegistry player. Do not
+substitute captured entity/world replay or invent an entity packet. Exact initial
+request type and security semantics also remain unknown, without blocking this
+bounded private progression. See the
+[unsent question and exact source boundaries](REGISTRATION_MAINTAINER_QUESTION.md).
+Historical binary identity no longer blocks the reproduced mechanism. The
+unchanged-stock trust route remains a separate parked task.
+
+### Parked stock-client trust blocker and historical findings
+
+**Unchanged-client private REP trust/configuration compatible with intact launcher/EAC remains unresolved.** Windows elevation and metadata admission no longer block: the admitted data-only anchor trial hit an EAC launch refusal, and the matched stock control progressed through our private queue to unknown_ca. Do not repeat the refused substitution or bypass EAC. [Comparison receipt](../research/evidence/private-rep-anchor-eac-control.json). Earlier canceled runs remain historical.
 
 **Private-anchor loading boundary preserving verification, followed by actual game acceptance.** Local CA-verified DTLS peers exchange data; the stock client still rejects our owned configured full-chain response with fatal unknown_ca. Current REP wrapper/interface source joining is complete; both known connect branches converge on the factory, whose UDP cases have an embedded-certificate→transport→connection→secure-driver→store path, standard verifier and parameter-gated identity checks. This does not establish live context contents, all aliases/callbacks or a supported override. [REP_TRUST_POLICY](REP_TRUST_POLICY.md). Carrier/V3 waits for actual current-client transport acceptance.
 
@@ -177,3 +258,71 @@ drivers, hosts/trust changes or game endpoint requests occurred. Existing protoc
 tests were not rerun for this external-tool/documentation change, and previous
 game/verification claims retain their original identities. Milestone1 remains
 unachieved. Actionables was not updated: no governing `workItemId` was supplied.
+
+## Archived-client trust-hook applicability — October 4
+
+The user is evaluating applying First Light's archived/non-EAC approach to this
+project. Read-only review used the clean external checkout at
+`63756a3f7ff0ae41752dcc7c80267802c3fa7548`; the primary checkout was at `8c877be`
+with existing connectivity/ledger/trust/roadmap edits, which were preserved.
+
+- Actual `tools/client-hooks/frida_dtls_trust_patch.js` installs a runtime hook
+  that changes client memory and selects the always-accept certificate callback.
+  It does not load our private CA or preserve unrelated-root rejection. The older
+  branch-rewrite instructions are superseded by the actual hook and historical
+  failed-rewrite report. This is a distinct experimental trust policy, not a
+  solution meeting the current stock-client verification criterion.
+- The standalone Python wrapper still resolves its JavaScript beneath a stale
+  nested `tools/tools` location after the move into `tools/client-hooks`; it
+  attaches before reading that missing file. The capture launcher resolves the
+  hook correctly but defaults to the current Steam executable, writes an App ID
+  file, and loads additional capture hooks. Neither is a guarded project runbook.
+- The hook uses fixed image-relative assumptions and no executable hash gate.
+  Matching addresses in the current static REP map do not prove compatibility
+  with an unidentified archived executable. Upstream's historical DTLS report
+  remains unreplicated here. No license file was found in the pinned tracked
+  tree; do not vendor the implementation pending provenance/license review.
+
+**Required next input:** exact path, provenance and build identity of a legitimate
+archived/non-EAC client candidate. Then assess its actual initializer and asset
+compatibility and prepare a separate bounded, reversible, private-endpoint
+procedure. No candidate was identified, no hook was executed, and no client,
+process memory, launcher/EAC, trust, routing or upstream source was changed by
+this review. Existing game/protocol evidence remains unchanged; no tests were
+rerun for this documentation-only applicability record.
+
+This earlier applicability checkpoint is historical. M1-02H supersedes its next-input
+wording: the user's October4 clarification makes the actual launch/trust recipe the
+material gate; checksum or exact SteamCMD build absence alone does not block evaluation.
+
+## Historical-client review verification — October 4
+
+The required `workspace` profile passed367 Python cases across28 modules, three
+synthetic PowerShell suites and owned loopback HTTPS lifecycle from16:58:08 through
+16:59:17UTC, with no selected-input changes. Raw receipt:
+`.scratch/offline-validation/run-q05_mqzs/receipt.json`.
+This is offline workspace evidence, not a stock-client CA retry or historical/client
+DTLS result. Later receipt/document recording is identified separately in
+[handoff verification](../research/evidence/first-light-historical-client-validation.json).
+No game/upstream-hook run, client copying or system-resource mutation. Actionables
+was not updated because no work item was supplied; ROADMAP records M1-02H.
+
+## Frida trial verification — October4
+
+The completed live result is [separately recorded](../research/evidence/first-light-frida-private-dtls.json)
+from its code regression. The full `workspace` profile passed378 Python cases in29
+modules, all three synthetic PowerShell suites and owned loopback HTTPS200/child-exit0/
+listener-close, with no failures/errors/skips or changed inputs. Raw receipt:
+`.scratch/offline-validation/run-m11ve7k7/receipt.json`; [validation and final resource
+readback](../research/evidence/first-light-frida-trial-validation.json).
+The eleven Frida fake tests include ownership failures, pre-spawn stop, admission
+checks and strict metadata-only logging. The inert Windows process-owner smoke
+passed earlier and remains separate from game evidence. No live game rerun followed
+the logger fix; exact executed runner bytes are retained with a matching hash.
+
+The read-only catalog/preflight is ready. Final readback confirms no game/443/64003,
+no owned rules, byte-exact hosts, retained Root1, unchanged staged executable, and the
+three pre-existing connectivity/trust/audit file hashes. Code bindings remain valid;
+this documentation/catalog receipt recording occurs after validation. The76GB
+physical copy remains ignored for reproducibility. No commit, push or contributor
+message; Actionables was not updated because no work item was supplied.

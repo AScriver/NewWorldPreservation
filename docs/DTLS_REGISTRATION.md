@@ -1,12 +1,37 @@
 # Current REP DTLS trust and Carrier/V3 registration
 
+**Current owned-copy checkpoint:** registration response receipt, actor START,
+234 matching private heartbeat echoes and current LevelInfo/bundle-handler labels
+are observed. The latest source-supported candidate still timed out waiting for
+gameplay; context activation and player/world readiness remain unproven. All
+trial resources are closed and cleanup was independently verified.
+[Latest receipt](../research/evidence/current-world-activation-trial.json).
+
+**October4 owned-copy route:** [the direct Frida trial](FRIDA_PRIVATE_DTLS_TRIAL.md)
+completed two private DTLS sessions and delivered application data. The historical
+stock-client rejection below remains valid for its tested configuration. The
+closed Carrier attempts transmitted connect ACKs and decoded compressed reliable
+records compatible with the structured-retry schema. The final version trial sent
+eight source88-byte replies and observed later Carrier ACK ranges covering all
+eight reply envelopes. Reconnecting...(4) persisted; exact request type, semantic
+registration acceptance and world entry remain unproven. The
+[bounded procedure/results](CARRIER_REGISTRATION_TRIAL.md) and
+[unsent maintainer question](REGISTRATION_MAINTAINER_QUESTION.md) record the missing
+current registration/bootstrap contract. All trial resources are closed.
+
 > Latest October 3 comparison: the certificate-data candidate was refused at launch by intact EAC (“Unrecognized game client” / “Unknown file version”). After exact stock restoration, a matched elevated original-launcher control reached private queue200 and returned two more fatal `unknown_ca` alerts. Eight alerts across four stock runs; **no private game DTLS, Carrier/V3 or actor**. Final stock hash/signature/hosts verified, temporary resources absent, same CA retained. [Live receipt](../research/evidence/private-rep-anchor-eac-control.json). Earlier metadata failure/canceled elevation remain separate historical outcomes, not explanations for this refusal. The on-disk substitution route is retired; investigate unchanged-client configuration instead.
 
-## Scope and current evidence boundary
+## Historical stock-route scope and evidence boundary
 
 Continuation of [private queue handoff](PRIVATE_GAME_HANDOFF.md), clean parent HEAD `4bf6511468fa66d3935fca5859b2657c3ca3183b`. Target unchanged stock Steam22469132 / version1.400.6031.6004151 / installed SHA256 `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e`. Prior own client reached selected127.0.0.1:64003 and sent ClientHello-header observations; prior observer sent no replies. This alone did not test certificate trust.
 
-Work in this slice: verified local DTLS peers, owned current-client handshake/trust, then current Carrier/V3 **only if transport succeeds**. No actor/gameplay implementation, memory writes, executable/EAC change, other-user traffic, official-system authentication bypass, remote publication or mouse/keyboard control.
+The stock-route work below admitted verified local DTLS peers, owned current-client
+handshake/trust, then Carrier/V3 only after transport success. Its original
+boundaries excluded memory writes and executable/EAC changes. October4 scoped
+runtime instrumentation is separately authorized in AGENTS and the linked
+owned-copy procedures; it does not revise these historical observations.
+Actor/gameplay implementation, other-user traffic, Amazon traffic, publication
+and native mouse/keyboard automation remain outside the current trial.
 
 **Newer static checkpoint:** [REP_TRUST_POLICY](REP_TRUST_POLICY.md) identifies current embedded-certificate transport→store initialization, the actual linked verifier/identity inputs and the same-object factory→connection→secure-setup path. This supersedes the initial unlinked-candidate findings below, not the live rejection. Actual REP context attribution/private-root configuration remain unproven. No additional game trial, bypass or protocol implementation;39 previously validated artifact hashes unchanged.
 

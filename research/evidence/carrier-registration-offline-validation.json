@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline-validation",
+  "status": "passed",
+  "recordedAtUtc": "2026-10-04T20:31:34.405724+00:00",
+  "finishedAtUtc": "2026-10-04T20:25:58.652485+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "profile": "workspace",
+  "python": {
+    "selectedFiles": 30,
+    "collected": 394,
+    "executed": 394,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 58081
+  },
+  "changedInputs": [],
+  "newWorldClientTested": false,
+  "privateReceipt": {
+    "path": ".scratch/offline-validation/run-o2myw_zm/receipt.json",
+    "sha256": "6ed2134d2f2cb46e9b553cf6fac60632eaa30e94399e3bdb853460ede5c7c868"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "cd7a83c545b9ab9d6040fd688c0857d246e9531f5086901db8d191a138a303ce"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "9e7a9e5a329fc66db22ba11d901a18609f9eaa2b1296ec22cbeeb6b998a2bf3b"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "623557037e02b456f1de0169ad0c94d698bcff40c95bdb50bc0958039076ded7"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "9111a69329cae7a697b44dee1918a1e8ed915acbb9e5848e22cd6a379c7d7184"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "9c6228e1c90078ad17607e4b21c1c287346561a9e792f115edf979c40c3e28d1"
+    },
+    {
+      "path": "tests/carrier_registration_smoke.py",
+      "sha256": "c294520ac4648e37451204da556c334e9ff850d3322eca22a1b239917a742ee6"
+    }
+  ],
+  "pinnedSourceSyntheticSmoke": {
+    "executed": true,
+    "passed": 1,
+    "commandScript": ".scratch/registration-trial-20261004/Run-Source-Smoke.ps1",
+    "scope": "synthetic connect ACK parse/encode using clean First Light63756a3; no listener/game"
+  },
+  "limits": [
+    "Fake state and privacy tests do not establish client acceptance.",
+    "No world/actor/movement acceptance tested."
+  ]
+}

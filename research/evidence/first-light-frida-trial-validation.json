@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "generated_at_utc": "2026-10-04T18:21:30.2398785+00:00",
+  "profile": "workspace",
+  "started_at_utc": "2026-10-04T11:15:54.242807-07:00",
+  "finished_at_utc": "2026-10-04T11:17:02.782048-07:00",
+  "head": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "python": {
+    "selectedFiles": 29,
+    "collected": 378,
+    "executed": 378,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 55038
+  },
+  "changed_inputs_during_run": [],
+  "code_bindings": [
+    {
+      "sha256": "09e8c404bfed78c8673eeadfa06c619c68e052165428655cd1ac09e87b9618ec",
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1"
+    },
+    {
+      "sha256": "6acbfe7250fdba765bb531d7416dd5e6c747438149829d89e01e1370a0db86e3",
+      "path": "scripts/frida_client_trial.py"
+    },
+    {
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+      "path": "scripts/frida_trial_observer.js"
+    },
+    {
+      "sha256": "d4c1db25c9579b37c38eb393b15cc49a9a8f8476b2d91ec71ac3f9aa779fd187",
+      "path": "scripts/Test-Offline.ps1"
+    },
+    {
+      "sha256": "84f5b79286f46361066c65ae537bb328cef287df2ca0aa10a0fa7920770aa532",
+      "path": "scripts/validate_offline.py"
+    },
+    {
+      "sha256": "85751a50658abe3fe9c42e5ba6c473705c1ad2fea176690ad1d66fc5c0639820",
+      "path": "scripts/offline-test-profiles.json"
+    },
+    {
+      "sha256": "799bbdeda54a31d7e0270578515011be0cf8e9d463d2367ce1bbb92488d52fd4",
+      "path": "tests/test_frida_client_trial.py"
+    },
+    {
+      "sha256": "181b46a8518035cabf2bed8b9c5121d62c4acac55fadf3223cd6d6867c4fb213",
+      "path": "tests/test_offline_runner.py"
+    }
+  ],
+  "raw_receipt": ".scratch/offline-validation/run-m11ve7k7/receipt.json",
+  "raw_receipt_sha256": "1130312180a70df702cc7deeb3c1850f26f7cf41c0d9ed453e4a97ffbcccf8f3",
+  "game_trial_not_repeated": true,
+  "live_trial_receipt": "research/evidence/first-light-frida-private-dtls.json",
+  "live_trial_receipt_sha256": "6ec7d807a3272af8c4ae860f6a1b01bf209da698bb6296396b481c9cc50699dc",
+  "later_recording": "ROADMAP/catalog will record this receipt after execution; only documentation/catalog freshness changes, source checks remain valid",
+  "final_resource_readback": {
+    "staged_image_unmodified": true,
+    "game_absent": true,
+    "ports_closed": true,
+    "owned_rules_absent": true,
+    "unrelated_preexisting_dirty_inputs_preserved": true,
+    "hosts_byte_exact": true,
+    "retained_root_count": 1
+  }
+}

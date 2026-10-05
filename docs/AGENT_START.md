@@ -39,6 +39,10 @@ Focused profiles are listed in [offline-test-profiles.json](../scripts/offline-t
 Light checkout and redacted fixture. The focused `rep-readonly` profile exercises
 the now-reviewed fake-API tests, which are also included in the complete workspace
 profile. The probe's live process-observation CLI remains separately gated.
+The `frida-trial` profile runs original fake-API ownership/failure/privacy tests and
+is included in `workspace`; it never imports Frida's live backend or starts a game.
+The explicit-only inert Windows owner smoke is outside default test collection.
+Live startup/runtime trust work follows [its own procedure](FRIDA_PRIVATE_DTLS_TRIAL.md).
 The pinned upstream profile selects eleven files; `server/test_loopback.py` is a
 helper with zero pytest cases. Its explicit exception is recorded in the manifest
 and receipt; the profile still requires all 456 cases and its one exact deliberate skip.
@@ -64,7 +68,7 @@ read-only inspection.
 | Token/credentials/login-info | `token_contract_probe`, `credentials_contract_probe`, `session_handoff_probe`; contract/fixture tests | [Token](TOKEN_SESSION_CONTRACT.md), [credentials](CREDENTIALS_SESSION_HANDOFF.md), [login-info](LOGIN_INFO_CONTRACT.md) |
 | Queue/UDP handoff | `queue_contract_probe`, `udp_handoff_probe`, `windows_udp_owner`; queue/handoff/owner tests | [Game handoff](PRIVATE_GAME_HANDOFF.md) |
 | Local DTLS / current REP trust | `dtls_transport_probe`; DTLS controls; synthetic candidate/transaction/lifecycle tests | [DTLS](DTLS_REGISTRATION.md), [trust](REP_TRUST_POLICY.md) |
-| Carrier, spawn, actor replication | Current contracts/fixtures are still gated; read source evidence before implementation | [Spawn](SPAWN_SEQUENCE.md), [architecture](ARCHITECTURE.md) |
+| Carrier, spawn, actor replication | `carrier_registration_probe` metadata/privacy tests; live scoped trial is separate from offline validation | [Carrier trial](CARRIER_REGISTRATION_TRIAL.md), [spawn](SPAWN_SEQUENCE.md), [architecture](ARCHITECTURE.md) |
 | Agent tooling | `project_preflight`, `validate_offline`, `client_config_archive_metadata`; three tooling test modules | [Catalog](EVIDENCE_INDEX.md), [handoff](AGENT_HANDOFF.md) |
 
 The catalog carries exact filenames; the table above is a reading map, not an

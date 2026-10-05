@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "generated_at_utc": "2026-10-04T18:15:53.672701+00:00",
+  "classification": "owned-client-live-executed",
+  "task": "M1-02H",
+  "objective": "bounded owned-copy direct Frida startup and private DTLS trial",
+  "workspace": {
+    "head": "8c877be640ceebefdc451d21b9454a092b1d948d",
+    "dirty_state": "preexisting connectivity/REP audit edits plus original trial code, docs and tests; private manifest pins executed bytes",
+    "preexisting_edits_preserved": true
+  },
+  "authorization": "2026-10-04 explicit user request to change repository boundaries and verify Frida startup/runtime trust changes",
+  "target": {
+    "steam_appid": 1063730,
+    "steam_buildid": 22469132,
+    "file_version": "1.400.6031.6004151",
+    "exe_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "provenance": "physical copy of user-owned Steam installation; valid installed Amazon signature",
+    "copied_files_before_adjacent_appid": 194,
+    "copied_bytes": 76416682357,
+    "exact_historical_successful_client_identity": "unknown; not required to test this mechanism"
+  },
+  "reference": {
+    "first_light_commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "trust_hook_unmodified": true,
+    "capture_launcher_executed": false
+  },
+  "runtime": {
+    "frida_version": "17.22.0",
+    "python_version": "3.11.9",
+    "windows_venv_redirector_observed": true,
+    "protocol_interpreter": "direct measured Python311 image with pinned repository venv site-packages",
+    "game_process_id": 5708,
+    "game_creation_filetime": 134356103640706298,
+    "launch_method": "Frida suspended spawn of isolated Bin64/NewWorld.exe; SteamAppId/SteamGameId1063730; Bin64 cwd; staged steam_appid.txt",
+    "installed_launcher_or_eac_modified": false,
+    "eac_bypass_after_denial_attempted": false,
+    "job_active_process_limit": 1,
+    "child_gating": true,
+    "one_game_process_two_Play_attempts": true
+  },
+  "startup": {
+    "spawn_suspended": true,
+    "exact_handle_image_identity_claimed": true,
+    "attached": true,
+    "resumed": true,
+    "access_denial_observed": false
+  },
+  "trust": {
+    "upstream_hook_registration_observed": true,
+    "initializer_invocations": [
+      {
+        "event": "hook_invocation",
+        "time_ns": 1791136800132021700,
+        "before_read": true,
+        "before_nonzero": true,
+        "after_zero_at_return": true,
+        "retval_hex": "0x0",
+        "retval_zero": true
+      },
+      {
+        "event": "hook_invocation",
+        "time_ns": 1791136842524841300,
+        "before_read": true,
+        "before_nonzero": true,
+        "after_zero_at_return": true,
+        "retval_hex": "0x0",
+        "retval_zero": true
+      }
+    ],
+    "policy": "experimental permissive runtime verification pointer substitution",
+    "exact_instantaneous_write_observed": false,
+    "entry_to_return_pointer_change_observed": true,
+    "matched_unhooked_control_executed": false,
+    "observer_registration_log_missing_reason": "executed callback set admission state then collided with logger event keyword; fixed future code only",
+    "raw_upstream_write_messages_saved": false,
+    "future_logging_fix_is_live_verified": false,
+    "unchanged_stock_trust_proven": false,
+    "unrelated_root_rejection_proven": false
+  },
+  "transport": {
+    "handshakes": [
+      {
+        "attempt": 1,
+        "handshake_timestamp_utc": "2026-10-04T18:00:00.159Z",
+        "protocol": "DTLSv1.2",
+        "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+        "associated_process_ids": [
+          5708
+        ],
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "decrypted_application_records": 124,
+        "decrypted_application_total_bytes": 2156,
+        "application_contents_saved": false,
+        "application_replies_sent": false,
+        "peer_closed_timestamp_utc": "2026-10-04T18:00:13.539Z",
+        "peer_close_reason": "packet_limit"
+      },
+      {
+        "attempt": 2,
+        "handshake_timestamp_utc": "2026-10-04T18:00:42.550Z",
+        "protocol": "DTLSv1.2",
+        "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+        "associated_process_ids": [
+          5708
+        ],
+        "owner_basis": "IPv4_bound_endpoint_owner_not_exact_flow",
+        "decrypted_application_records": 124,
+        "decrypted_application_total_bytes": 2156,
+        "application_contents_saved": false,
+        "application_replies_sent": false,
+        "peer_closed_timestamp_utc": "2026-10-04T18:00:55.931Z",
+        "peer_close_reason": "packet_limit"
+      }
+    ],
+    "https_exact_tuple_associated_process_ids": [
+      5708
+    ],
+    "fatal_unknown_ca_alerts": 0,
+    "application_protocol_decoded": false,
+    "carrier_v3_accepted": false,
+    "world_entry_proven": false,
+    "milestone_1_complete": false
+  },
+  "human_observation": {
+    "Play_clicks_reported": 2,
+    "private_character_preview_reported": true,
+    "screenshot_observed": "generic Connection Error on private character selection after both Play clicks",
+    "error_cause": "not established under receive-and-discard application responder and packet limits"
+  },
+  "containment": {
+    "non_loopback_block_rules": 11,
+    "evidence": "ActiveStore configuration/readback, not independent packet trace",
+    "private_listener_owner_readback": true,
+    "existing_steam_broker_contained": false,
+    "existing_steam_broker_modified": false,
+    "game_endpoints_intentionally_contacted": false,
+    "raw_packet_capture": false,
+    "credentials_or_plaintext_saved": false
+  },
+  "cleanup": {
+    "installed_executable_unchanged": true,
+    "retained_root_count": 1,
+    "schema": 1,
+    "installed_appid_absent": true,
+    "cleanup": "reconciled guarded release after manifest-only difference",
+    "installed_launcher_unchanged": true,
+    "steam_appid": "1063730",
+    "trust_store_modified": false,
+    "hosts_byte_exact": true,
+    "timestamp_utc": "2026-10-04T18:04:57.2167782+00:00",
+    "manifest_change_cause": "not established; ordinary Steam activity is plausible",
+    "steam_manifest_after_sha256": "db99ef5607df4fefd6e49ae3e820209eb27b2d411382ad1cae57023e1c9910b3",
+    "firewall_rules_absent": true,
+    "staged_copy_retained_ignored": true,
+    "steam_buildid": "22469132",
+    "ports_closed": true,
+    "installed_signatures_valid": true,
+    "hosts_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "steam_manifest_changed": true,
+    "steam_manifest_preserved": true,
+    "steam_manifest_before_sha256": "c7bf799131de8ae372082e2cfef494b8d56080443f854887ab40284abf1f1dc6",
+    "game_absent": true
+  },
+  "failed_preflight_retained": "venv redirector PID differed from actual service PID; no game start; exact cleanup completed before repair/retry",
+  "source_bindings": {
+    "scripts/Invoke-FridaPrivateTrial.ps1": "09e8c404bfed78c8673eeadfa06c619c68e052165428655cd1ac09e87b9618ec",
+    "scripts/frida_trial_observer.js": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+    "scripts/dtls_transport_probe.py": "13e73462791543f65bd0b328dc5f8d2d52c729e629df65f7d0cd244f204b8611",
+    "scripts/queue_contract_probe.py": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+    "scripts/windows_udp_owner.py": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf",
+    "scripts/windows_tcp_owner.py": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58",
+    "scripts/Set-ConnectivityHosts.ps1": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f",
+    "research/upstream/first-light/tools/client-hooks/frida_dtls_trust_patch.js": "42ebaa8fe9804588a5c41a26cd1d2bbf7c0492845a114dfbb4e15c16d236811d",
+    "scripts/frida_client_trial.py:executed": "3ef471825fd77461b481efd285f25a24f10a06eeb50d458c7584773f8034e941"
+  },
+  "private_run": "private/frida-trials/run-20261004T1733",
+  "private_receipt_bindings": {
+    "trial-inputs.json": "66c828eef5ee9cc3c99d6ce9806c00ed255b71a8830c09dfb2638405e90111cf",
+    "stage-complete.json": "730894ff04c883ef60adedde57b4da9b6d009804815e7d41fa4b08f87899f561",
+    "frida-events.jsonl": "b658d1e24c2417965250d57d8e76fcec053b61ce5b79913df4edef61f58e3ccb",
+    "https-v4.jsonl": "1897e823f170c03ac7a895ce88d6a213a78444a69960e6f7fccb399dadc427cb",
+    "https-v6.jsonl": "5d31980078241eb8d1c06ca5b875dcd03acf0ffbc2dc381091e66af5a03419c2",
+    "dtls.jsonl": "9fb2316acbde039a303852532398979466604191ad8e4ee8f20913b86a9138cf",
+    "containment-events.jsonl": "48fc3c615aacc834e3554ab1669bdbf88dd7a01a4b5e8308d18dd2841f9e3c77",
+    "cleanup-reconciled.json": "c9bb3b8de472d459813fc350a8a9c4db2c540af0a486a49a44a70b297c5953a8",
+    "service-preflight0/controller-result.json": "64820f921e7443452e953950379e2a780946b048b22931dacd1baed61a7b3bc0",
+    "service-preflight0/cleanup.json": "5dd635781a1451379c4864d76f2cc97ed9f382b9fe9198e0f8e7b851c90a7d03"
+  },
+  "next_boundary": "bounded metadata-safe private application/registration contract, under continued instrumented-copy authorization; stock root route remains separate"
+}

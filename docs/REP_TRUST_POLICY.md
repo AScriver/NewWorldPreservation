@@ -95,6 +95,10 @@ The positive static source/object join is complete for these known implementatio
 
 ## Exact next blocker and gate
 
+### Fresh three-turn required-input impasse — October 4
+
+The [fresh blocked audit](../research/evidence/current-rep-fresh-blocked-audit.json) verifies that the required supported ordinary root-input/activation/actual REP store/timing join remained missing across three resumed root turns. Earlier blocked counts are historical. The finite source findings below remain usable; current image/build and all84 code inputs match. Unknown aliases/class callbacks do not supply a normal root-value edge, and no live experiment is pending. Blocked status is selected; the full objective remains incomplete. Resume upon a documented/source-backed normal root initializer/input for the pinned owned build or a relevant owned-build/input change, then prove actual REP ownership and pre-verification timing before any retained-CA trial. Preserve verification, intact launcher/EAC and denied-access boundaries.
+
 ### Fresh resumed audit: nested parser and retained transport — October 4
 
 The user explicitly resumed the full preservation objective. The earlier blocked audit and stop instruction are historical; this is the first goal turn of a fresh audit. Analysis started at clean `d088ef9`. Fresh readback confirms Steam **22469132**, version **1.400.6031.6004151**, the stock image hash above and valid signature, the retained CA count of one, original hosts, and no game process, trial listeners or project routing rules. The full English private-backend objective and ten-minute/two-client/reconnect acceptance remain open.

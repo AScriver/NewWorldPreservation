@@ -1,0 +1,2129 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-copy-carrier-schema-trial",
+  "recordedAtUtc": "2026-10-04T22:09:22.236952+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "runDirectory": "private/frida-trials/run-20261004T2154-schema",
+  "target": {
+    "steamAppId": "1063730",
+    "steamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "pid": 11508,
+    "creationFiletime": 134356250580479094
+  },
+  "reference": {
+    "firstLightCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "aeternumCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+    "aeternumDecoderSha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b",
+    "lz4Version": "4.4.5"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "037a71aecaa198dca34184b647b17a1a9846cbb38b35488714011996f3a4c207",
+      "executedSnapshot": "private/frida-trials/run-20261004T2154-schema/executed-source/carrier_registration_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f",
+      "executedSnapshot": "private/frida-trials/run-20261004T2154-schema/executed-source/frida_client_trial.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "ad3d7e0df6a902b9e7b92795be3fcafc264cf69236b4b230ffb2594aee7dfcef",
+      "executedSnapshot": "private/frida-trials/run-20261004T2154-schema/executed-source/dtls_transport_probe.py",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "b15608498edce129804f66695a4206651e0df3a18686b8767f9e19dd98bbfeed",
+      "executedSnapshot": "private/frida-trials/run-20261004T2154-schema/executed-source/Invoke-FridaPrivateTrial.ps1",
+      "currentBytesMatch": true
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88",
+      "executedSnapshot": "private/frida-trials/run-20261004T2154-schema/executed-source/frida_trial_observer.js",
+      "currentBytesMatch": true
+    }
+  ],
+  "boundFileCount": 128,
+  "adapterLifetimePeerBudget": 8,
+  "carrierRejectionReasons": {"peer_limit": 140},
+  "schemaCompatibilityModes": {"structured_retry": 8},
+  "eventCounts": {
+    "CARRIER_ACK_SENT": 9,
+    "CARRIER_DECOMPRESSED": 8,
+    "CARRIER_PARSED": 742,
+    "CARRIER_RECORD": 783,
+    "CARRIER_REJECTED": 140,
+    "CLIENT_DATA_AFTER_CONNECT_ACK": 8,
+    "CONNECT_ACK_SENT": 16,
+    "DTLS_APPLICATION_DISCARDED": 882,
+    "DTLS_DATAGRAM_RECEIVED": 918,
+    "DTLS_HANDSHAKE_ESTABLISHED": 9,
+    "DTLS_HANDSHAKE_STATE": 117,
+    "DTLS_PEER_CLOSED": 8,
+    "DTLS_PEER_OPENED": 9,
+    "DTLS_PROBE_LISTENING": 1,
+    "DTLS_SERVER_OUTPUT": 51,
+    "DTLS_SNI": 9,
+    "REGISTRATION_SCHEMA_RESULT": 8,
+    "V3_CANDIDATE": 8,
+    "V3_PARSER_RESULT": 8,
+    "V3_RESPONSE_SENT": 8
+  },
+  "applicationRecords": 882,
+  "applicationBytes": 18995,
+  "dataChannelRecords": [
+    {
+      "channel": 0,
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 44,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 460,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 872,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1280,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1689,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2102,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2515,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    },
+    {
+      "channel": 0,
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2931,
+      "flags": 33,
+      "payload_bytes": 860,
+      "typed_id": null
+    }
+  ],
+  "transitions": [
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "event_sequence": 22,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:01.066Z"
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 2,
+      "event_sequence": 31,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:01.066Z"
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 3,
+      "event_sequence": 38,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:01.067Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 41,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:01.189Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 45,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:01.189Z"
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 46,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:01.190Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 47,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:01.190Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 48,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:01.190Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "envelope_sequence": 4,
+      "event_sequence": 50,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:01.190Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "event_sequence": 438,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:11.569Z"
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 2,
+      "event_sequence": 447,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:11.570Z"
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 3,
+      "event_sequence": 454,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:11.570Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 457,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 461,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z"
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 462,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 463,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 464,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "envelope_sequence": 4,
+      "event_sequence": 466,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:11.573Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "event_sequence": 850,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:22.082Z"
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 2,
+      "event_sequence": 859,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:22.082Z"
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 3,
+      "event_sequence": 866,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:22.083Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 869,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:22.085Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 873,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:22.085Z"
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 874,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:22.086Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 875,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:22.086Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 876,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:22.086Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "envelope_sequence": 4,
+      "event_sequence": 878,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:22.086Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "event_sequence": 1258,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:32.581Z"
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 2,
+      "event_sequence": 1267,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:32.582Z"
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 3,
+      "event_sequence": 1274,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:32.582Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1277,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:32.584Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 1281,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:32.585Z"
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1282,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:32.585Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1283,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:32.585Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1284,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:32.585Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "envelope_sequence": 4,
+      "event_sequence": 1286,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:32.585Z"
+    },
+    {
+      "connection_id": "c3e11176-2157-49eb-aa1f-fb40f5688f66",
+      "event_sequence": 1591,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:05:41.215Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "event_sequence": 1667,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:43.109Z"
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 2,
+      "event_sequence": 1676,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:43.110Z"
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 3,
+      "event_sequence": 1683,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:43.110Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1686,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:43.113Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 1690,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:43.114Z"
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1691,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:43.114Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1692,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:43.114Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1693,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:43.114Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "envelope_sequence": 4,
+      "event_sequence": 1695,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:43.114Z"
+    },
+    {
+      "connection_id": "867a58ba-4978-48eb-8c94-d925559af738",
+      "event_sequence": 2000,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:05:51.645Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "event_sequence": 2080,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:05:53.492Z"
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 2,
+      "event_sequence": 2089,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:53.492Z"
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 3,
+      "event_sequence": 2096,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:05:53.493Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2099,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2103,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z"
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2104,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2105,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2106,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "envelope_sequence": 4,
+      "event_sequence": 2108,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:05:53.495Z"
+    },
+    {
+      "connection_id": "f0f31d94-3f72-4f2f-b93e-6ad541f59f64",
+      "event_sequence": 2417,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:02.139Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "event_sequence": 2493,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:06:04.000Z"
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 2,
+      "event_sequence": 2502,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:06:04.000Z"
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 3,
+      "event_sequence": 2509,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:06:04.001Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2512,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:06:04.003Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2516,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:06:04.004Z"
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2517,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:06:04.004Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2518,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:06:04.004Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2519,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:06:04.004Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "envelope_sequence": 4,
+      "event_sequence": 2521,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:06:04.004Z"
+    },
+    {
+      "connection_id": "4d830237-619c-441c-96fa-a21fbaed8bca",
+      "event_sequence": 2826,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:12.617Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "event_sequence": 2909,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:06:14.503Z"
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 2,
+      "event_sequence": 2918,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:06:14.504Z"
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 3,
+      "event_sequence": 2925,
+      "source": "pinned_peer_session",
+      "state": "CONNECT_ACK_SENT",
+      "timestamp_utc": "2026-10-04T22:06:14.505Z"
+    },
+    {
+      "compressed_bytes": 735,
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2928,
+      "expanded_bytes": 882,
+      "size_hint": 1024,
+      "state": "CARRIER_DECOMPRESSED",
+      "timestamp_utc": "2026-10-04T22:06:14.507Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "data_class": "non_system_data",
+      "envelope_sequence": 4,
+      "event_sequence": 2932,
+      "state": "CLIENT_DATA_AFTER_CONNECT_ACK",
+      "timestamp_utc": "2026-10-04T22:06:14.507Z"
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2933,
+      "normalization": "raw",
+      "normalized_bytes": 860,
+      "parse_mode": "structured_retry",
+      "state": "REGISTRATION_SCHEMA_RESULT",
+      "timestamp_utc": "2026-10-04T22:06:14.508Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2934,
+      "payload_bytes": 860,
+      "recognition_basis": "schema_compatibility",
+      "state": "V3_CANDIDATE",
+      "timestamp_utc": "2026-10-04T22:06:14.508Z",
+      "type_unproven": true
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2935,
+      "exact_request_type_known": false,
+      "normalization": "raw",
+      "parse_mode": "structured_retry",
+      "state": "V3_PARSER_RESULT",
+      "timestamp_utc": "2026-10-04T22:06:14.508Z"
+    },
+    {
+      "client_acceptance_proven": false,
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "envelope_sequence": 4,
+      "event_sequence": 2937,
+      "response_body_bytes": 88,
+      "response_type_id": 3,
+      "state": "V3_RESPONSE_SENT",
+      "timestamp_utc": "2026-10-04T22:06:14.508Z"
+    },
+    {
+      "connection_id": "a17fabb9-b9bf-43a8-8e2f-cde941fcac3f",
+      "event_sequence": 3246,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:23.177Z"
+    },
+    {
+      "cipher": "ECDHE-RSA-AES256-GCM-SHA384",
+      "client_acceptance_proven": false,
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3318,
+      "protocol": "DTLSv1.2",
+      "state": "DTLS_HANDSHAKE_ESTABLISHED",
+      "timestamp_utc": "2026-10-04T22:06:25.024Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3322,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.024Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3325,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.025Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3328,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.042Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3331,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.083Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3334,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.163Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3337,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.276Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3340,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.323Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3343,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.436Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3346,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.550Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3349,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.645Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3352,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.758Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3355,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.870Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3358,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:25.983Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3361,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.096Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3364,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.209Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3367,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.286Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3370,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.398Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3373,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.511Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3376,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.623Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3379,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.736Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3382,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.848Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3385,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:26.960Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3388,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.073Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3391,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.185Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3394,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.287Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3397,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.400Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3400,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.513Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3403,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.626Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3406,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.738Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3409,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.851Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3412,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:27.963Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3415,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.075Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3418,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.188Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3421,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.287Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3424,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.401Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3427,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.513Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3430,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.626Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3433,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.740Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3436,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.852Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3439,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:28.965Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3442,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.078Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3445,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.191Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3448,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.288Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3451,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.400Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3454,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.512Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3457,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.625Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3460,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.737Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3463,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.850Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3466,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:29.962Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3469,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.076Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3472,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.189Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3475,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.288Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3478,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.402Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3481,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.514Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3484,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.626Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3487,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.738Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3490,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.852Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3493,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:30.964Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3496,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.078Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3499,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.191Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3502,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.289Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3505,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.401Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3508,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.514Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3511,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.626Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3514,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.738Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3517,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.851Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3520,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:31.964Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3523,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.077Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3526,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.190Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3529,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.289Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3532,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.402Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3535,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.515Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3538,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.627Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3541,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.740Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3544,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.852Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3547,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:32.965Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3550,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.077Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3553,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.190Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3556,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.290Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3559,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.402Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3562,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.515Z"
+    },
+    {
+      "connection_id": "1de63a59-0fff-4ab2-b694-bf0acb2caa7c",
+      "event_sequence": 3563,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:33.515Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3566,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.627Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3569,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.738Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3572,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.851Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3575,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:33.963Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3578,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.075Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3581,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.188Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3584,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.291Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3587,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.403Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3590,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.515Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3593,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.628Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3596,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.740Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3599,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.852Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3602,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:34.965Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3605,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.077Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3608,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.190Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3611,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.291Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3614,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.404Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3617,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.517Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3620,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.629Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3623,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.741Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3626,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.853Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3629,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:35.966Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3632,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.078Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3635,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.191Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3638,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.292Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3641,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.405Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3644,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.518Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3647,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.630Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3650,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.743Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3653,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.855Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3656,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:36.968Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3659,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.080Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3662,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.193Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3665,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.293Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3668,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.407Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3671,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.519Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3674,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.631Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3677,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.744Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3680,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.858Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3683,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:37.970Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3686,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.083Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3689,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.195Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3692,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.294Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3695,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.407Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3698,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.520Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3701,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.632Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3704,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.744Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3707,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.857Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3710,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:38.969Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3713,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.082Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3716,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.194Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3719,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.295Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3722,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.407Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3725,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.520Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3728,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.634Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3731,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.747Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3734,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.860Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3737,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:39.973Z"
+    },
+    {
+      "connection_id": "ecc7bc4c-112a-416b-9d8f-9da438402bda",
+      "event_sequence": 3740,
+      "reason": "peer_limit",
+      "state": "CARRIER_REJECTED",
+      "timestamp_utc": "2026-10-04T22:06:40.086Z"
+    },
+    {
+      "connection_id": "79e81061-9525-4b37-aa2a-7bcd5dbdb37b",
+      "event_sequence": 3741,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:44.053Z"
+    },
+    {
+      "connection_id": "35e222f3-6e5f-401a-a289-81e305d44c3e",
+      "event_sequence": 3742,
+      "handshake_established": true,
+      "reason": "idle_deadline",
+      "state": "DTLS_PEER_CLOSED",
+      "timestamp_utc": "2026-10-04T22:06:54.547Z"
+    }
+  ],
+  "runtimeTrust": [
+    {
+      "event": "observer_status",
+      "time_ns": 1791151458175695100,
+      "ok": true,
+      "observer_event": "admitted_and_attached"
+    },
+    {
+      "event": "upstream_hook_status",
+      "time_ns": 1791151458178203100,
+      "installed": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151501040083800,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151501040083800,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151511543095200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151511543095200,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151522055290200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151522055290200,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151532555512000,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151532556012700,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151543085256700,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151543085256700,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151553467214200,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151553467214200,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151563974431800,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151563974431800,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151574478588900,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151574478588900,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    },
+    {
+      "event": "trust_write_result",
+      "time_ns": 1791151584998469300,
+      "success": true
+    },
+    {
+      "event": "hook_invocation",
+      "time_ns": 1791151584998469300,
+      "before_read": true,
+      "before_nonzero": true,
+      "after_zero_at_return": true,
+      "retval_hex": "0x0",
+      "retval_zero": true
+    }
+  ],
+  "ownerBasis": "IPv4 bound UDP endpoint owner; exact HTTPS tuple lookup; no packet capture",
+  "userObservation": "Clicked Play once; changed error: unexpectedly disconnected from server, Reconnecting...(4). Multiple automatic transport attempts observed; no additional manual Play click asserted.",
+  "acceptance": {
+    "privateDtlsCompleted": true,
+    "carrierConnectAckSent": 16,
+    "rawLz4DecodeObserved": true,
+    "registrationCandidateRecognized": true,
+    "registrationResponseSent": true,
+    "registrationAccepted": false,
+    "worldEntry": false,
+    "milestone1": false
+  },
+  "interpretationLimits": [
+    "Successful LZ4 expansion and pinned framing parse do not establish message-specific body validity.",
+    "Reliable channel0 records were flags0x21, length860, with structured_retry raw schema compatibility and no validated generic typed wrapper. Fields and contents discarded.",
+    "Schema-compatible candidates and existing88-byte registration responses were observed; exact request wire type, response acceptance and next server transition remain unresolved.",
+    "Connect ACK and Carrier ACK transmissions do not independently prove semantic acceptance.",
+    "Eight peers reached schema parsing/response. The ninth completed DTLS but produced140 peer_limit rejections because the adapter retains at most8 lifetime peer states. These are budget rejections, not additional schema evidence."
+  ],
+  "cleanup": {
+    "game_absent": true,
+    "firewall_rules_absent": true,
+    "schema": 1,
+    "hosts_after_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "installed": [
+      {
+        "unchanged": true,
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\Bin64\\NewWorld.exe"
+      },
+      {
+        "unchanged": true,
+        "sha256": "5a9217fafb5656c0b72b516583287ca362c3e1a87e1b5b515ad64a6402b292ec",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\New World\\NewWorldLauncher.exe"
+      },
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\appmanifest_1063730.acf",
+        "sha256": "3d59abe09734c91aad0ccbdd6b08eef6b7b3b0723d759ec122bfb384a163b18d",
+        "appid": "1063730",
+        "buildid": "22469132",
+        "change_cause": "unknown when metadata differs",
+        "preserved": true,
+        "unchanged": false
+      }
+    ],
+    "hosts_byte_exact": true,
+    "retained_root_count": 1,
+    "timestamp_utc": "2026-10-04T22:07:12.9612507+00:00",
+    "owned_children_stopped": true,
+    "staged_copy_retained_ignored": true,
+    "ports_closed": true,
+    "trust_store_modified": false,
+    "hosts_before_sha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708"
+  },
+  "independentCleanupReadback": {
+    "firewall_rules_absent": true,
+    "hosts_byte_exact": true,
+    "game_absent": true,
+    "ports_closed": true,
+    "installed_images_and_signatures_intact": true,
+    "timestamp_utc": "2026-10-04T22:09:19.6472047+00:00",
+    "retained_root_count": 1,
+    "no_processes_stopped": true,
+    "copy_retained": true
+  },
+  "privateLogs": [
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/dtls.jsonl",
+      "sha256": "a0c2a2f52628716426cebfb6222cf3df42fae94f33a1165d66f297bdb2eac92e"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/frida-events.jsonl",
+      "sha256": "8a3fd2b370982bd6b190865c33dbe3eb3421e9277a0aae6468d8db9769ee5853"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/https-v4.jsonl",
+      "sha256": "2461b08b027ff46055227e730aeaded768521af7d4881df9c108e9d9d1a1187b"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/https-v6.jsonl",
+      "sha256": "e67e89d378df8f7e73a374032ad74e7aa31f7141975c5d9e1d18bc36654ced00"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/containment-events.jsonl",
+      "sha256": "66a388840222a9cd32751cbf09cdd163f58b4a3129300b3141a5c990b3c69402"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/trial-inputs.json",
+      "sha256": "e46c788032330aa617d1407ac7fbfbfce449a657df46272fe8b5dc73981374f5"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/cleanup.json",
+      "sha256": "e5c8f9e246f1df367a34200da2cb1e0b1c73d0d5158ead01ee32ac7a61bee363"
+    },
+    {
+      "path": "private/frida-trials/run-20261004T2154-schema/cleanup-readback.json",
+      "sha256": "80dda8bd00e6aa5a64b116fa6d3eeac1b4539b5c6e394a7290c7a0750efc96d1"
+    }
+  ]
+}

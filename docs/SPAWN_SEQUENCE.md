@@ -1,16 +1,45 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
-**Latest gate:** [DTLS_REGISTRATION](DTLS_REGISTRATION.md) records the stock game's **fatal unknown_ca** after our configured full-chain DTLS flights, six attempts across three runs. [REP_TRUST_POLICY](REP_TRUST_POLICY.md) now maps current embedded-certificate initialization/verifier/identity inputs statically; actual REP context/private-anchor configuration remain unproven. No established DTLS or current Carrier/V3. The frontend preview is not a world actor; Play spinner is not world loading. Private transport acceptance, secure ticket binding, registration and actor contract remain gates. Earlier receive-only stopping points are historical.
+**Current gate:** sustained private DTLS/heartbeat traffic and current LevelInfo/
+bundle-handler labels are observed on the isolated owned client. It still times
+out waiting for gameplay. Current codecs are in the [contract](../research/evidence/current-world-activation-contract.json);
+context-load prerequisites and fresh player creation remain unresolved. No
+context-init, actor-success or playable-world claim follows from these labels.
+[Closed trial](../research/evidence/current-world-activation-trial.json).
+
+**Earlier checkpoint:** the [October4 owned-copy Frida route](FRIDA_PRIVATE_DTLS_TRIAL.md)
+completed private DTLS handshakes and delivered application data. The closed
+uncompressed Carrier attempt sent connect ACKs and rejected ten compressed
+envelopes. Subsequent runs decoded LZ4 and Carrier framing, exposing reliable
+channel0 records flags0x21/length860 compatible with structured_retry. The final
+version trial sent eight source88-byte responses; later client ACK ranges covered
+all eight reply-bearing envelopes. Client Reconnecting...(4) persisted, with no
+subsequent non-system data. Exact request type and semantic registration readiness
+remain unknown. [Trial/results](CARRIER_REGISTRATION_TRIAL.md).
+The earlier stock-client `unknown_ca` findings remain historical for that route.
+Private account/ticket ownership and the world/actor contract still need evidence;
+the frontend preview and Play spinner are not world entry.
 
 ## Gate and current stopping point
 
-Current build `1.400.6031.6004151` / Steam22469132 accepts original synthetic credentials/login-info/queue200 and attempts DTLS at selected127.0.0.1:64003. Our responder now answers, but the game rejects its configured full chain with **unknown_ca**. No completed handshake, world loading, in-world actor, initial transform or visibility. Offline spawn research remains separate; live actor implementation is gated.
+Current build `1.400.6031.6004151` / Steam22469132 accepts original synthetic
+credentials/login-info/queue200. Under the bounded owned-copy runtime hook it
+completed private DTLS at127.0.0.1:64003; the first responder discarded application
+data and supplied no Carrier replies. Later attempts supplied connect ACKs and
+schema-compatible registration replies with observed Carrier delivery, without
+proving registration readiness. No world, in-world actor,
+initial transform or visibility is claimed. Live actor implementation remains gated.
 
 Source map below: clean external First Light `63756a3f7ff0ae41752dcc7c80267802c3fa7548`. Its flow note is dated2025-12-27 and reports client `1.365.6030.5950962` (`docs/connection-flow.md:1,68`), **not our current build**. References are paths within that ignored source checkout. No source/code/captured actor bytes are vendored here.
 
 ## State machine
 
-The prefix through owned UDP attempt below is current observed ordering. Subsequent edges are historical source-supported ordering or explicitly future/unresolved hypotheses, not replay validated with our game. Numeric state labels refer to old static analysis, **not measured current-client state values**.
+The prefix through private DTLS and the Carrier reply-envelope ACK branch below
+are observed for the scoped instrumented-copy route. The stock-client rejection
+is a separate historical branch. Remaining
+edges are historical source ordering or future/unresolved hypotheses, not replay
+validated with our game. Numeric state labels refer to old static analysis,
+**not measured current-client state values**.
 
 ```mermaid
 stateDiagram-v2
@@ -23,9 +52,11 @@ stateDiagram-v2
     GatewayLoginInfo --> PrivatePreview: current synthetic login-info200
     PrivatePreview --> QueueV2: user selection and Play
     QueueV2 --> OwnedUDPAttempt: current synthetic829byte200 /selected REP
-    OwnedUDPAttempt --> DiagnosticStop: server flight then fatal unknown_ca (current)
+    OwnedUDPAttempt --> DiagnosticStop: historical stock route fatal unknown_ca
     DiagnosticStop --> [*]
-    OwnedUDPAttempt --> DTLSConnected: NEXT separate UDP DTLS handshake/trust
+    OwnedUDPAttempt --> DTLSConnected: observed scoped owned-copy Frida route
+    DTLSConnected --> ReplyEnvelopeAcknowledged: observed source reply / Carrier ACK coverage
+    ReplyEnvelopeAcknowledged --> RegistrationUnresolved: Reconnecting4 / semantic readiness unknown
     DTLSConnected --> PrivatePeerBound: future secure ticket-to-peer ownership
     PrivatePeerBound --> CarrierConnected: historical SM_CONNECT request / ACK
     CarrierConnected --> RegisteredV3: historical request0x13 / response0x03

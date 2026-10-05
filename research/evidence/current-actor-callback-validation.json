@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline-validation",
+  "status": "passed",
+  "recordedAtUtc": "2026-10-05T03:06:14.252422+00:00",
+  "finishedAtUtc": "2026-10-05T03:00:03.575774+00:00",
+  "workspaceHead": "8c877be640ceebefdc451d21b9454a092b1d948d",
+  "workspaceDirty": true,
+  "profile": "workspace",
+  "python": {
+    "selectedFiles": 31,
+    "collected": 421,
+    "executed": 421,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "powershell": [
+    {
+      "file": "tests/test_observe_current_client.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_anchor_transaction.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    },
+    {
+      "file": "tests/test_rep_launch_lifecycle.ps1",
+      "status": "passed",
+      "validator": "parser-and-automatic-variable"
+    }
+  ],
+  "cli": {
+    "status": "passed",
+    "httpStatus": 200,
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "bind": "127.0.0.1",
+    "port": 63054
+  },
+  "changedInputs": [],
+  "newWorldClientTested": false,
+  "privateReceipt": {
+    "path": ".scratch/offline-validation/run-l0chapbe/receipt.json",
+    "sha256": "0fe035684f0066ec1515e77eb63dc77ca85fa82785d591891b42fb8cc6c275d9"
+  },
+  "inputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "3e1fd84270a769914b7eea40f54418740efdc957733a6d7c68b15f320a6227cd"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "77bb5391d256a71e3e59f54915ac5c5bcfa823080c98def835680ecda504640f"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "91edb05f264618a194df136c774a999ef260ec6becaac702eff57e2df2e3e4ac"
+    },
+    {
+      "path": "scripts/frida_trial_observer.js",
+      "sha256": "794a887a73bd04f99d43b966d639d3adebb249426439930a8b42a63a70848d88"
+    },
+    {
+      "path": "scripts/current_self_ident_default.py",
+      "sha256": "13b0ff0dd39738aadf56a288f8bb4f24aed14395613b74dcaa56e96dc015bfa6"
+    },
+    {
+      "path": "scripts/current_spawn_point.py",
+      "sha256": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "c86b60657a81e0043753668ce757209efca96e5eaea4762ad7abb9b71c2cd245"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "0d25cbb1f2150894d98f17b09bd4d6c18d4cb45f862c86f8d9147b032fa8b3f6"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "a2e50f68f2d505260148f38588b29f423df204f3776e2567b14c1a48c1a624fb"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "9111a69329cae7a697b44dee1918a1e8ed915acbb9e5848e22cd6a379c7d7184"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "07395cad7dd8be73e2b26e3cae382af8366e2661852e5cd4501cb5b0a3702fc0"
+    },
+    {
+      "path": "tests/test_current_self_ident_default.py",
+      "sha256": "72740e3103ba16a90e1e9b01f5fe42267ad1a935715e9af325b1fc9d73b39ddf"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "4498be08ad4d29ce1a884daf12abeeb22d33274ddf368f6792e6884cd7654408"
+    },
+    {
+      "path": "tests/carrier_registration_smoke.py",
+      "sha256": "31c64b88268e6d691916adb112f8e54041d127ca8ac57ed86ed083438e0c6315"
+    },
+    {
+      "path": "requirements-dev.in",
+      "sha256": "10e8db3fc0732368e02e0331e9ea3710e95172778bf5073cdac7388b215f9d15"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+    }
+  ],
+  "inputBindingBasis": "Workspace selected-input/Git snapshots verified for sixteen inputs; explicit smoke source recorded separately after its six executed checks. Primary owned the source throughout.",
+  "focusedSyntheticChecks": {
+    "executed": true,
+    "passed": 45,
+    "commandScript": ".scratch/registration-liveness-20261004/Test-Actor-Candidate.ps1"
+  },
+  "pinnedSourceSyntheticSmoke": {
+    "executed": true,
+    "passed": 6,
+    "commandScript": ".scratch/registration-liveness-20261004/Test-Actor-Candidate.ps1",
+    "scope": "Existing clean pinned Carrier/ACK/LZ4/schema/version/heartbeat encoders and framing for current default SelfIdentification and empty spawn notification; no game/listener"
+  },
+  "limits": [
+    "Synthetic framing, state, timing and privacy controls do not establish current client acceptance.",
+    "Actor callback completion, usable identities, level loading and player replication remain live-unproven."
+  ]
+}
