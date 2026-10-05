@@ -16,6 +16,7 @@
 - Run tests with explicit scope, isolated temp resources, and loopback-only listeners. Do not stop unrelated processes.
 - Do not publish, push, or message contributors without explicit authorization.
 - Record current technical progress and verification in docs/ROADMAP.md. Pending Milestone 1 work uses Actionables `workItemId: 164`; the separate parked stock-client trust task uses `workItemId: 165`. See docs/ACTIONABLES.md for exact task IDs and creation scope; do not browse or claim unrelated items.
+- Break every Actionables task rated M–L or higher into smaller independently verifiable subtasks rated M or less. Retain large tasks as coordination parents with aggregate acceptance, preserve nested hierarchy and the original top-level workItemId, and split a leaf again if its scope grows above M.
 
 ## Incremental commits
 

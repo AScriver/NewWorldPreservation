@@ -356,3 +356,24 @@ contacted no game endpoint/contributor, and changed no client/system resources.
 Associated AGENTS/agent-start links record `workItemId: 164` and the independent
 parked `workItemId: 165`. Validation is creation/readback, source-link and scoped
 diff/commit-content checks; it adds no protocol or gameplay evidence.
+
+## Actionables effort breakdown — October 5
+
+At the user's request, split every previously large leaf (M–L or higher) into
+smaller independently verifiable outcomes. Thirteen explicit parent tasks gained
+**35 unclaimed Inbox subtasks (#180–#214)**; existing #164/#170 coordinators and
+their hierarchy were preserved. [Full split map](ACTIONABLES.md#effort-breakdown--october-5)
+records the outcomes and standing maximum-M leaf rule.
+
+Complete scoped readback verified **51 total tasks**, **36 leaves**, all Inbox
+and unclaimed, with **no remaining M–L-or-larger leaf**. Parent estimates remain
+aggregate estimates. The next bounded player-source task is **#207** beneath
+#177, using `workItemId: 164`; parked stock-client children #180/#181 use
+`workItemId: 165`.
+
+Validation covered unique keys/UUIDs, exact authorized parent/root placement,
+five baseline identities, twenty source references, both preview/apply batches,
+complete paged hierarchy/classification/status/claim readback and scoped
+documentation/commit-content checks. Prerequisites remain notes rather than
+persisted blocking edges. This planning operation started no implementation,
+client trial, endpoint/contributor contact or client/system-resource change.

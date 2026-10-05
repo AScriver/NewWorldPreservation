@@ -35,7 +35,8 @@ their top-level `workItemId` remains **164**, not 170.
 | M1-06B | #178 | identify initial registration type and authentication semantics |
 | M1-06C | #179 | validate current world-entry fixtures and phase transitions |
 
-The next source task is **#177**, the fresh player creation/designation contract.
+Fresh player creation/designation is coordinated by **#177**; its next
+bounded source task is **#207**, the current type8 decoder/member-recipient join.
 It investigates the actual current type8 decoder/subscriber/member/entity/registry
 joins before any new payload trial. **#178** separately resolves initial request
 and authentication semantics. **#179** turns established joins into current
@@ -113,3 +114,82 @@ Original creation plan, per-batch receipts and final readback stay in ignored
 `.scratch/actionables-20261005T1806Z/`; no credentials or claim tokens were created.
 The tracking-only validation checks source links, mapping coverage, lifecycle
 readback and the scoped staged diff; it makes no new protocol/runtime claim.
+
+## Effort breakdown — October 5
+
+The user requested that every M–L-or-larger task be broken into smaller subtasks.
+All original large tasks are now coordination parents; their estimates still
+describe aggregate work. Every executable leaf is **M or smaller**. Keep this
+rule when creating or refining future tasks: if a leaf grows above M, divide its
+complete outcome into independently verifiable children before execution.
+
+The existing #164 milestone and #170 registration hierarchy was preserved.
+Thirteen previously large leaves gained **35 subtasks (#180–#214)**. #166 was
+already M and remains a leaf. Creation-only readback confirmed **51 total tasks**,
+**36 leaves**, **Inbox** status and **no claims** throughout both scoped trees.
+There are no unsplit M–L/L/L–XL/XL leaves.
+
+| Coordination parent | New subtask | Effort | Bounded outcome |
+|---|---|---|---|
+| #165 | #180 | M | trace a new supported root input into the actual REP store |
+| #165 | #181 | M | verify supported stock-client trust with positive and negative controls |
+| #167 | #182 | M | verify prolonged transport and idle recovery |
+| #167 | #183 | M | verify transport reconnect, peer budgets and clean shutdown |
+| #168 | #184 | M | return disjoint character selections for two private accounts |
+| #168 | #185 | M | reject invalid private credentials and cross-account selection |
+| #168 | #186 | S–M | define and verify private account session restart behavior |
+| #169 | #187 | M | issue and consume one correctly bound private world ticket |
+| #169 | #188 | M | reject expired, replayed and wrongly bound world tickets |
+| #169 | #189 | S–M | bind accepted registration to the authorized peer lifetime |
+| #171 | #190 | M | construct one fresh source-backed player spawn payload |
+| #171 | #191 | M | register and designate the generated player for its private character |
+| #171 | #192 | M | verify one visible player with usable camera and map |
+| #172 | #193 | M | encode and decode the current actor identity baseline |
+| #172 | #194 | M | encode and apply verified transform deltas |
+| #172 | #195 | S–M | handle malformed and unknown actor members safely |
+| #173 | #196 | M | admit two distinct authorized players into one world |
+| #173 | #197 | M | replicate each fresh actor baseline to the other player |
+| #173 | #198 | S–M | reject wrong-world and duplicate-identity player joins |
+| #174 | #199 | M | apply authorized movement to the correct actor |
+| #174 | #200 | M | replicate accepted movement in both directions |
+| #174 | #201 | M | preserve stationary, turn and stop behavior during movement |
+| #175 | #202 | M | remove departed actors without disrupting the remaining player |
+| #175 | #203 | M | restore the authorized character on a fresh peer connection |
+| #175 | #204 | S–M | reject stale peer input after player reconnect |
+| #176 | #205 | M | document and verify the bounded hosting start/stop procedure |
+| #176 | #206 | M | verify the full ten-minute two-client milestone |
+| #177 | #207 | M | join the current type8 decoder to its member recipient |
+| #177 | #208 | M | join replication members to fresh entity and player construction |
+| #177 | #209 | M | join fresh character identity and readiness to player designation |
+| #178 | #210 | M | identify initial registration framing, type and retry contract |
+| #178 | #211 | M | establish registration authentication and peer binding semantics |
+| #179 | #212 | M | validate original current world-entry member fixtures |
+| #179 | #213 | M | validate transport, context and actor prerequisite ordering |
+| #179 | #214 | M | observe admitted current contract phase transitions |
+
+The next bounded static task is **#207** under #177, with `workItemId: 164`.
+Its siblings #208/#209 close the fresh constructor/registry and
+identity/readiness/designation joins. #180/#181 stay within the separate parked
+stock-client root, `workItemId: 165`.
+
+Each child retains its parent's original outcome and authorization limits, with
+its own completion/rejection boundary, prerequisite notes, planned checks and
+source references. Outcomes include their own implementation/research and
+verification; the split is not a separation into code and test layers.
+Parent prerequisite names refer to established evidence within the parent;
+do not invent an all-parent-Done cycle where static source/fixture work can
+proceed before separately admitted actual-client acceptance. Persisted blocking
+edges still have not been created.
+
+The baseline was HEAD `5ffc867646647fe557c560d673c020f08ef1a092` plus the existing
+dirty protocol/trial/documentation state. Split-plan validation checked thirteen
+explicit parents, thirty-five unique keys/UUIDs, five unchanged baseline inputs,
+twenty existing file references and leaf effort at most M. Both batches passed
+preview before ordered apply. Final scoped inspection exhausted two pages under
+#164 (47 descendants) and one under #165 (2 descendants), verifying exact task
+titles, hierarchy/root, priorities, tags, effort, lifecycle and claim state.
+
+The plan, applied receipts and complete readback are ignored under
+`.scratch/actionables-split-20261005T1823Z/`. No task was claimed, prepared,
+advanced or completed; no dependency mutation, implementation, client trial,
+game/system operation or contributor contact occurred.
