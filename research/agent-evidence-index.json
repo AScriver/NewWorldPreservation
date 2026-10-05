@@ -724,7 +724,7 @@
         "K154",
         "K155",
         "K156",
-        "K157", "K158", "K159", "K160", "K161", "K162", "K163", "K164", "K165", "K166"
+        "K157", "K158", "K159", "K160", "K161", "K162", "K163", "K164", "K165", "K166", "K167", "K168", "K169", "K170", "K171", "K172", "K173", "K174", "K175", "K176", "K177", "K178", "K179", "K180", "K181"
       ],
       "docs": [
         "docs/CARRIER_REGISTRATION_TRIAL.md",
@@ -734,8 +734,8 @@
         "docs/PROTOCOL_NOTES.md",
         "docs/ARCHITECTURE.md"
       ],
-      "scripts": ["scripts/carrier_registration_probe.py", "scripts/dtls_transport_probe.py", "scripts/frida_client_trial.py", "scripts/Invoke-FridaPrivateTrial.ps1", "scripts/current_self_ident_default.py", "scripts/current_spawn_point.py", "scripts/current_world_activation.py"],
-      "tests": ["tests/test_carrier_registration_probe.py", "tests/test_frida_client_trial.py", "tests/test_dtls_transport_probe.py", "tests/test_current_self_ident_default.py", "tests/test_current_world_activation.py", "tests/carrier_registration_smoke.py"],
+      "scripts": ["scripts/carrier_registration_probe.py", "scripts/dtls_transport_probe.py", "scripts/frida_client_trial.py", "scripts/frida_trial_observer.js", "scripts/Invoke-FridaPrivateTrial.ps1", "scripts/current_self_ident_default.py", "scripts/current_spawn_point.py", "scripts/current_world_activation.py"],
+      "tests": ["tests/test_carrier_registration_probe.py", "tests/test_frida_client_trial.py", "tests/frida_context_gate_observer.test.cjs", "tests/test_dtls_transport_probe.py", "tests/test_current_self_ident_default.py", "tests/test_current_world_activation.py", "tests/carrier_registration_smoke.py"],
       "evidence": [
         {"path": "research/evidence/carrier-registration-offline-validation.json", "classification": "offline-executed", "scope": "Historical uncompressed adapter:394 workspace cases and synthetic pinned-source ACK smoke; no live registration acceptance"},
         {"path": "research/evidence/carrier-registration-uncompressed-trial.json", "classification": "observed-metadata", "scope": "Same delayed-UAC owned-copy instance:private DTLS, connect ACK transmissions and ten unhandled compressed envelopes; cleaned; no registration accepted"},
@@ -751,10 +751,17 @@
         {"path": "research/evidence/current-actor-callback-trial.json", "classification": "observed-metadata", "scope": "234 matching private heartbeat replies; callback ACK coverage; gameplay timeout; cleanup verified"},
         {"path": "research/evidence/current-world-activation-contract.json", "classification": "source-inference", "scope": "Current LevelInfo/empty-bundle candidate using owned map and explicit default/counter values; no player creation proof"},
         {"path": "research/evidence/current-world-activation-validation.json", "classification": "offline-executed", "scope": "426 workspace cases,50 focused controls and six pinned synthetic framing checks; no live world proof"},
-        {"path": "research/evidence/current-world-activation-trial.json", "classification": "observed-metadata", "scope": "LevelInfo/bundle handler labels and234 matching heartbeat echoes; gameplay timeout persists; cleanup independently verified"}
+        {"path": "research/evidence/current-world-activation-trial.json", "classification": "observed-metadata", "scope": "LevelInfo/bundle handler labels and234 matching heartbeat echoes; gameplay timeout persists; cleanup independently verified"},
+        {"path": "research/evidence/current-context-gate-contract.json", "classification": "source-inference", "scope": "Three pinned callback/load sites and seven boolean observations, guarded and capped; no gameplay proof"},
+        {"path": "research/evidence/current-context-gate-validation.json", "classification": "offline-executed", "scope": "439 workspace Python cases,79 focused and seven explicit fake-Frida Node cases; source review with non-atomic/address-reuse limits"},
+        {"path": "research/evidence/current-context-gate-trial.json", "classification": "observed-metadata", "scope": "LevelInfo callback engaged pending state; loader self flag false; no Self callback entry in the bounded window;234 matched heartbeat echoes; cleanup independently verified"},
+        {"path": "research/evidence/current-self-length-prefix-contract.json", "classification": "source-inference", "scope": "Default-off one-byte prefix candidate for exact131-byte current Self body; outer-reader placement unjoined at admission"},
+        {"path": "research/evidence/current-self-length-prefix-validation.json", "classification": "offline-executed", "scope": "445 workspace Python cases,85 focused and seven pinned-codec smokes; native datagram control proves one prefix-byte delta and unchanged disabled mode"},
+        {"path": "research/evidence/current-self-length-prefix-trial.json", "classification": "observed-metadata", "scope": "Actual Self callback/flag transition, actor-connection success marker and context initialization/activation observed;238 heartbeat echoes; user loading screen then spawn-player timeout; cleanup independently verified"},
+        {"path": "research/evidence/current-player-spawn-source-map.json", "classification": "source-inference", "scope": "Current player wait/registry lifetime, conditional unchanged queue CharacterId and generic dispatch owners; type8 route/member/constructor and runtime readiness remain unjoined"}
       ],
       "fixtures": [],
-      "limit": "Private response receipt, heartbeat echo and current map/bundle handler labels are observed; context initialization, actor success and fresh player/world creation remain unproven. Exact initial request/security semantics remain unknown. Captured replay or invented packets do not establish generated state."
+      "limit": "Private response receipt, heartbeat echo, actual Self callback/flag transition, actor-connection success marker and immediate context initialization/activation are observed. Later asynchronous context readiness and fresh player/world creation remain unproven. Exact outer-reader implementation and initial request/security semantics remain unknown. Captured replay or invented packets do not establish generated state."
     },
     {
       "id": "replication-reconnect-acceptance",

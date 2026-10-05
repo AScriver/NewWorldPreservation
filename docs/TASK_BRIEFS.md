@@ -293,20 +293,23 @@ This slice is parked without concrete new evidence. M1-02H is the next task.
 
 ## M1-06 — current registration/world-entry contract
 
-Current checkpoint: both0417 and0440 trials are closed. The first sustained234
-matching private heartbeat replies; the second additionally logged current
-LevelInfoChanged and the bundle diagnostic, then again timed out waiting for
-gameplay. Current mapped callback/LevelInfo/empty-bundle codecs are source-supported;
-context initialization, actor success and fresh PlayerRegistry creation remain
-unproven. Next bounded work is the actual context-load prerequisites/ordering,
-followed by source-supported fresh player state. Maintain the owned-copy/loopback
-resource controls; do not replay historical entities or invent packets.
-[Latest trial](../research/evidence/current-world-activation-trial.json),
-[current validation](../research/evidence/current-world-activation-validation.json),
+Current checkpoint: the0655 fixed-prefix comparison is closed. Current default
+SelfIdentification reached its callback and changed self=false→true. Actor-connection success
+and ClientContext Initialize were logged; activation latched and pending LevelInfo
+was consumed.238 private heartbeat echoes matched. The client showed world loading,
+brief black, character select and a later server-spawn timeout. The empty bundle
+supplied no entities; asynchronous context readiness and fresh PlayerRegistry
+creation remain unproven. Next bounded work is the current member→entity creation
+and fresh identity/ownership→local-player registration contract. Maintain the
+owned-copy/loopback resource controls; do not replay historical entities or invent
+packets. The exact outer-reader implementation remains unknown despite acceptance
+of this narrow131-byte Self prefix candidate.
+[Latest trial](../research/evidence/current-self-length-prefix-trial.json),
+[current validation](../research/evidence/current-self-length-prefix-validation.json),
 [current missing-contract question](REGISTRATION_MAINTAINER_QUESTION.md).
 
 The following version-only checkpoint and its missing-codec list are historical;
-later K157–K166 supersede the affected parts.
+later K157–K176 supersede the affected parts.
 
 October4 [Carrier/registration trial](CARRIER_REGISTRATION_TRIAL.md) is closed.
 Final run `run-20261004T2216-version` bound129 inputs and changed only the source

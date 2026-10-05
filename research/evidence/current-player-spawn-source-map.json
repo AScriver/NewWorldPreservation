@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "mode": "owned-image-static-analysis",
+  "classification": "source-inference",
+  "status": "current-player-construction-wire-contract-unresolved",
+  "workspaceHead": "0e4382c027a3138487e5eeae11800b730abebcd6",
+  "workspaceDirty": true,
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+  "evidenceFiles": [
+    {
+      "path": ".scratch/player-spawn-owner-20261005T0701/evidence-seal-v1.json",
+      "sha256": "800a0e77d3e46d085b573d7168d50a0c4940423d504e3df8c826da4c92bafd64"
+    },
+    {
+      "path": ".scratch/fresh-player-wire-20261005T0701/evidence-seal-v1.json",
+      "sha256": "ba77cd880562fb471ed2235b12c6bfd41b76a968df19b7508366e4ad618c3ce2"
+    },
+    {
+      "path": ".scratch/local-player-identity-20261005T0716/evidence-seal-v1.json",
+      "sha256": "6cf59762da498424d36d13e9e7fd165322b83dead7a1cc399247edc527c2703d"
+    },
+    {
+      "path": ".scratch/fresh-player-member-20261005T0709/evidence-seal.json",
+      "sha256": "e372df272a8f0237dea5552d96430185787dc19c6d63e05dcc3d5b926b893f22"
+    },
+    {
+      "path": ".scratch/character-id-frontend-20261005T0732/evidence-seal-v1.json",
+      "sha256": "b4157606e234be9a351323d6ab16beeb9ebbc94256738792c70fefc80404ed23"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-parser-candidate.json",
+      "sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99"
+    },
+    {
+      "path": ".scratch/bundle-subscription-owner-20261005T0731/evidence-seal.json",
+      "sha256": "d516fe398cb10fd71e1858ca08c7ad979568e66a5faed5988d1125034085e6e8"
+    }
+  ],
+  "playerWaitPredicate": {
+    "sourceRange": "0x14644a8bd..0x14644a948",
+    "transition": "case13_to_case14",
+    "requires": [
+      "embedded_GameMessagePort_context_ready",
+      "PlayerRegistry_singleton_present",
+      "PlayerRegistry_live_local_player_getter_nonnull"
+    ],
+    "readyAlias": "actor+0x252 equals embedded port+0x1a2 because port is constructed at actor+0xb0",
+    "readySetter": "0x145a95160",
+    "readySetterEffect": "set context-ready byte and drain buffered messages",
+    "activationSeparate": true,
+    "livePlayerGetter": "0x146800d10",
+    "livePlayerGetterRequires": [
+      "registry+0x8 player pointer",
+      "registry+0x10 lifetime guard pointer",
+      "nonzero guard byte"
+    ],
+    "getterPerformsUuidLookup": false,
+    "timeoutDistinguishesFailedCondition": false
+  },
+  "localPlayerDesignation": {
+    "registrySetter": "0x146928d80",
+    "registrySetterEffect": "retain and designate an existing player object and its lifetime guard",
+    "ownerDesignationFunction": "0x146764cd0",
+    "ownerDesignationRequires": [
+      "owner+0x318 equals1",
+      "owner+0x31c true",
+      "owner+0x31d false"
+    ],
+    "identityClassificationFunction": "0x146929df0",
+    "identityClassification": "incoming first string equals an available local string to set classification1; mismatch sets2; missing local optional skips update",
+    "localStringProvider": "bus virtual+0x248 via callback0x1405717f0",
+    "replicatedPropertyBoundary": "0x14683c8d0 passes changed strings at input+0x7d0 and input+0x880",
+    "objectReadinessBoundary": "0x14689b8f0 sets owner+0x31c after a successful entity-related lookup, then retries designation",
+    "currentObjectConstructor": "unknown",
+    "localIdentityRole": "connection character_id string",
+    "localIdentityRoleSource": "0x14643c570 serializes wrapper+0x1140 under literal character_id",
+    "localIdentityProvider": "0x1464354f0 returns wrapper+0x12f0 when nonempty and wrapper state+0x1530 is nonzero",
+    "providerRegistration": "game+0x28 registered on classifier's exact0x141027e40 bus; both base/derived tables retain provider at virtual+0x248",
+    "providerStorageSetter": "0x146425f20 copies wrapper+0x1140 into tagged wrapper+0x12f0, retaining the string bytes",
+    "upstreamStorageCopy": "0x146468640 reloads saved incoming RDX;0x1464686aa calls0x146411ae0 to copy incoming connection model+0x60 into wrapper+0x1140",
+    "previousSourceAliasCorrection": "The earlier matched auxiliary-vector source attribution is falsified; saved incoming RDX is the copy source.",
+    "frontendCharacterIdParserJoin": "0x1474e5990 reads JSON CharacterId into parsed Token+0x30;0x1464269d0 copies it as constructor0x1464040c0 argument5, which moves it into connection model+0x60",
+    "sourceSupportedFixtureIdentity": "00000000-0000-4000-8000-000000000020",
+    "fixtureIdentityLengthAsciiBytes": 36,
+    "uuidNormalizationInQueueConversion": false,
+    "conversionRequires": "nonempty token signature string to populate the optional model; this is not signature authenticity validation",
+    "completionCallbackRegistrationExpanded": false,
+    "loginListToSelectionTransformationTraced": false,
+    "runtimeStoredIdentityObserved": false,
+    "sourceReview": {
+      "performed": true,
+      "scope": "constructor argument5 stack calculation, saved incoming RDX alias, string ownership/copy for fixed NUL-free ASCII fixture",
+      "result": "survived; earlier auxiliary-vector attribution falsified",
+      "constructorPrologue": "five pushes equal0x28 bytes, then sub0x20; currentRSP+0x70 resolves to callerRSP+0x20 argument5",
+      "asyncCallbackRegistrationAndRuntimeOverrideReviewed": false
+    },
+    "selfIdentificationDependency": "not established; last Self string instead targets wrapper+0xc50",
+    "configOverrideEnabledByExperiment": false
+  },
+  "optionalSelfIdentificationBranch": {
+    "sourceFunction": "0x146454c00",
+    "singletonClass": "Javelin::BotUtils",
+    "requires": [
+      "non-null first UUID in argument5",
+      "BotUtils singleton present",
+      "settings+0x28 false"
+    ],
+    "callback": "0x14167c060",
+    "callbackEffectEstablished": "construct and send an outbound typed message through SDK virtual+0xf0",
+    "outboundCurrentTypeId": "0x681",
+    "outboundDescriptorUuid": "1a83734a-c54e-48b7-87f1-ce7139dbdeb8",
+    "outboundClassName": "not fully joined",
+    "defaultNullCandidateBypassesBranch": true,
+    "generalPlayerConstructorEstablished": false
+  },
+  "testedPayloads": {
+    "spawnNotification": {
+      "currentTypeId": "0x651",
+      "typedLength": 4,
+      "bodyLength": 0,
+      "sourceEffect": "set actor's earlier case12 spawn-point notification flag"
+    },
+    "replicatedStateBundle": {
+      "currentTypeId": "0x8",
+      "typedLength": 9,
+      "payloadLength": 0,
+      "explicitReplicationMembersSupplied": 0,
+      "currentBodyDecoder": "0x146b07870",
+      "bodyDecoderEffect": "read header and declared length, then copy payload into message+0x110",
+      "bodyDecoderWalksInnerMembers": false,
+      "type8DecoderToGenericSubscriberRouteJoined": false,
+      "contextInitializeType8RegistrationJoined": false,
+      "downstreamMemberToCreationJoin": "unknown"
+    }
+  },
+  "inspectedGenericIncomingRoute": {
+    "handler": "0x14643e7b0",
+    "receiver": "embedded GameMessagePort at outer actor+0xb0; constructor0x1463ff5f0 primary table0x1484fc680, handler slot+0x8",
+    "receiverAdjustedAtEntry": false,
+    "descriptorGuard": "0x1463e97a0 invokes incoming object's virtual+0x28; descriptor identity is unconfirmed in raw-unbacked PE data",
+    "key": "direct qword at guarded object+0x10; not a getter slot or established numeric wire type",
+    "mapOwner": "separate lazily initialized object constructed by0x141613a10/0x141614e30; holder stores owner+0x2c0 and handler subtracts0x2c0",
+    "mapStorage": "base initializer sets owner+0x110=0, owner+0x118=owner+0x130 and zeroes embedded storage; concrete key insertion not joined",
+    "recipientLookup": "0x141710770 returns matched entry+0x18 recipient",
+    "queueInsertion": "0x141748780 appends incoming shared message into distinct recipient+0x130 ring",
+    "type8WrapperObjectToDescriptorKeyRecipientJoined": false,
+    "concreteKeyRegistration": "unknown",
+    "queueConsumer": "unknown"
+  },
+  "missingFacts": [
+    "current nonempty bundle member format and class/entity create/register operation",
+    "fresh object constructor and initial identity/ownership fields",
+    "current type8 decoder object to descriptor/key/recipient route, concrete registration and member parser",
+    "client asynchronous context readiness and live registry state during the closed trial"
+  ],
+  "limits": [
+    "Static source ownership facts are separate from the0655 runtime observations.",
+    "The tested empty payloads contain no explicit player-construction body; their downstream side effects are not universally excluded.",
+    "Loader-return readiness=false establishes only that sampled instant.",
+    "The spawn timeout does not distinguish readiness, singleton presence or live-player lifetime conditions.",
+    "No current player-creation packet or valid fresh identity value is established by this source pass.",
+    "Designation compares connection character_id by byte length/content; UUID metadata is not compared at this boundary and Self default changes are not justified by it.",
+    "The fixed queue CharacterId conversion is source-supported on the known completion path/provider gates and subject to any existing config override; runtime identity was not read.",
+    "The identity conversion does not establish a wire member format, constructor or usable gameplay identity.",
+    "The subscriber-ring registration may be statically initialized; this source pass does not establish that live discovery is required.",
+    "The generic dispatch owner/container facts do not establish current type8 recipient delivery; the earlier bundle-specific route attribution is superseded.",
+    "No live process inspection, endpoints, capture or runtime writes were used in these source passes.",
+    "Private raw static output remains ignored; this record contains original analysis and allowlisted metadata."
+  ]
+}

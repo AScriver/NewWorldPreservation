@@ -25,6 +25,64 @@ subscriber route. This is an updated unsent source report, not contributor conta
 
 ## Current question — unsent
 
+Our legitimately owned Steam client1.400.6031.6004151 now reaches private actor
+connection success and ClientContext Initialize on loopback. A bounded comparison
+changed only the exact131-byte default SelfIdentification0x65c outer prefix from
+`83 01` to `83 02`. The callback changed self=false→true; the load return latched
+activation and consumed pending LevelInfo.238 local heartbeat echoes matched.
+The client displayed world loading, brief black, character select and then
+"Timed out while waiting for server to spawn the player." Later asynchronous
+context readiness and a live local player have not been verified.
+
+Our original current messages are default SelfIdentification0x65c, empty
+ReceivePlayerSpawnPoint0x651, LevelInfo0x663 for the owned `newworld_vitaeeterna` map
+with context0/defaults/fresh dedup counter1, and empty ReplicatedStateBundle0x8.
+The bundle contains no entities; the spawn notification contains no coordinates
+or entity body. We preserve the installed Steam client, launcher and EAC and do
+not replay historical personas.
+
+Current source requires context readiness plus a live guarded PlayerRegistry
+object. Local-player designation compares its first replicated identity string
+with the present connection `character_id` by byte length and content. Self's last
+string is stored elsewhere. Current queue parsing/conversion copies the fixed
+synthetic CharacterId unchanged into the connection storage. Its runtime value
+was not inspected, and this does not establish a replication member format.
+A generic incoming handler reaches a recipient ring, but the current type8 decoder
+object is not joined to that descriptor/key/recipient route. The actual bundle
+member parser, class/entity factory and concrete registration remain unidentified.
+
+What is the minimum current source-supported sequence that creates and registers
+one fresh server-generated live player? Please identify the current bundle member
+or message type, body fields, class/entity creation operation, fresh identity and
+ownership relationship, and prerequisites for local-player registration. An original
+credential-free server fixture or documented contract would suffice. We do not need
+client assets, credentials, historical session data or proprietary source.
+In particular, which current decoder/subscriber registration parses type8 payloads,
+and how does a fresh character ID reach a constructed, registered player member?
+[Current original source map](../research/evidence/current-player-spawn-source-map.json).
+
+[Observed result and cleanup](../research/evidence/current-self-length-prefix-trial.json).
+The positive prefix result supports that exact candidate; the outer-reader
+implementation and a general size-encoding contract remain unresolved.
+
+## Earlier framing question — historical0627 checkpoint
+
+The latest bounded metadata-only observer reached current LevelInfo and the
+context loader, with pending LevelInfo true and self-identification false, while
+game/SDK pointers were present. No actual SelfIdentification callback entry was
+observed. The current factory/decoder still support127 default body bytes and a
+131-byte typed message. Its outer prefix is imported First Light7-bit `83 01`;
+the current compact integer helper used for types/strings/counts encodes131 as
+`83 02`, but we have not joined it to the outer S→C application-length reader.
+
+Which exact size decoder/encoding does the current post-registration reliable
+channel0 path use for a typed message above127 bytes, and what establishes its
+recipient before SelfIdentification dispatch? A lawful source-supported contract
+or generated server-side fixture would suffice; no client assets, credentials,
+proprietary source or historical persona replay is needed.
+
+## Earlier context/player question — historical0417/0440 checkpoint
+
 On our legitimately owned1.400.6031.6004151 client, isolated on loopback with the
 pinned First Light startup/trust method, registration response receipt and actor
 START are logged and234 heartbeat acknowledgements match fresh local pings.

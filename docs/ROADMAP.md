@@ -39,7 +39,71 @@ branch only. Runtime dispatch/gates, concrete player construction (#208) and
 designation (#209) remain unproved. Only #207 was worked under workItemId164;
 no encoding, game trial, other task, push or contributor contact was started.
 
-Active October4 continuation: **map/context activation after a sustained private connection**.
+Active October5 continuation: **fresh player creation after private context initialization**.
+The closed0655 one-byte SelfIdentification prefix comparison reached the actual
+callback (self=false→true), fixed actor-connection success marker and ClientContext Initialize.
+The load return latched activation and consumed pending LevelInfo.238 fresh local
+heartbeat acknowledgements matched; Carrier ACKs covered all five messages. The
+user saw the world loading screen, a brief black screen, character select and then
+"Timed out while waiting for server to spawn the player." The empty bundle supplied
+no entities. Context readiness was false at the immediate load return; its later
+asynchronous value and a live PlayerRegistry player remain unproven. Cleanup
+07:00:25/readback07:02:56 UTC verified resource absence, original hosts and intact
+installed EXE/launcher/signatures. Steam app/build remained1063730/22469132; the
+manifest's metadata hash changed with cause unknown.
+[Closed prefix result](../research/evidence/current-self-length-prefix-trial.json).
+Next: join current nonempty replication members to a fresh entity creation and
+local-player registration contract, or record the exact missing schema in the
+unsent maintainer question. No historical persona replay or guessed packet.
+Current source ties the designation identity to the connection `character_id`
+string, independent of SelfIdentification defaults. The current queue parser and
+conversion copy its fixed synthetic CharacterId unchanged into that storage;
+runtime identity was not read. The current bundle decoder's subscriber route,
+member parser, registration and player constructor remain unjoined.
+[Source map](../research/evidence/current-player-spawn-source-map.json).
+
+October5 callback/gate diagnostic closed at HEAD `0e4382c` with a subsequent
+dirty observer/runner/controller state. Independent pinned-image analysis confirms
+the current SelfIdentification flag writer and empty-bundle load route; the four
+failure diagnostics are not actually emitted by their inspected helper. Therefore
+their absence in0440 cannot identify the failed gate. One fresh bounded admission
+keeps the protocol candidates/timing and adds seven boolean entry/return readings
+at three exact guarded sites, with96 events maximum. Validation passed439 Python
+cases/32 files, three PowerShell suites/loopback lifecycle,79 focused checks and
+seven explicit fake-Frida Node checks. Fresh process23088 passed all observer
+guards and resumed06:28:32 UTC. LevelInfo callback entry/return was observed:
+pending=false became true. At context-loader entry/return, self-identification
+remained false, activation/readiness false and pending LevelInfo true; JavContext,
+SDK and game pointers were present. No SelfIdentification callback entry was
+recorded in the four-event observation window.234 matching heartbeat echoes and
+Carrier ACK coverage continued. The user reported loading; the primary closed
+after collection. Cleanup06:32:03/readback06:32:46 UTC passed with installed images
+and signatures intact. Gameplay remains unproven.
+[Contract](../research/evidence/current-context-gate-contract.json),
+[validation](../research/evidence/current-context-gate-validation.json),
+[closed live receipt](../research/evidence/current-context-gate-trial.json).
+
+The0627 blocker was before the actual SelfIdentification callback. Current
+body/factory/dispatch inspection found no contradictory default field and both
+SelfIdentification/LevelInfo use the same recipient interface. The imported outer
+length helper emits `83 01` for131 bytes, while a current compact helper emits
+`83 02`; that helper is established for types/strings/counts, but its connection
+to the outer application length remains unverified. The separately admitted
+comparison below tested that narrow placement without declaring a general schema.
+
+The static outer-reader join remained unresolved. A separately admitted bounded
+comparison now tests the current compact writer's `83 02` for only that exact131-byte
+Self candidate. Body/header/messages/configured timing remain unchanged.445 workspace
+Python cases,85 focused controls and seven pinned-codec smokes passed; the native
+final-datagram test proves exactly one changed prefix byte and unchanged disabled
+output/state. The0655 run subsequently observed the callback and context initialization
+described above. This supports the fixed131-byte candidate; the exact outer-reader
+implementation and general framing remain unresolved.
+[Prefix contract](../research/evidence/current-self-length-prefix-contract.json),
+[validation](../research/evidence/current-self-length-prefix-validation.json),
+[closed live result](../research/evidence/current-self-length-prefix-trial.json).
+
+Earlier October4 continuation: **map/context activation after a sustained private connection**.
 The closed0417 trial completed one DTLS session, registration response receipt and
 234 matching local heartbeat acknowledgements over about120 seconds. Carrier ACK
 ranges covered both current actor callbacks. The user stayed loading, then received
@@ -186,15 +250,20 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
-**Context activation and fresh player creation.** Private registration response
-receipt, actor START, sustained heartbeat echoes and the current LevelInfo/bundle
-handler labels are observed. Current SelfIdentification, spawn, LevelInfo and
-empty-bundle formats now have pinned owned-image contracts. The latest candidate
-still timed out waiting for gameplay; context initialization and actor success
-remain unproven. Determine the actual context-load prerequisite/ordering gate,
-then the source-supported way to create a fresh PlayerRegistry player. Do not
-substitute captured entity/world replay or invent an entity packet. Exact initial
-request type and security semantics also remain unknown, without blocking this
+**Fresh live-player construction and designation.** Private response receipt,
+actor-connection success, sustained heartbeat echoes and context initialization/
+activation are observed in the0655 result. The player-wait predicate requires
+asynchronous context readiness and a guarded live PlayerRegistry object; their
+runtime values remain unknown. The current source joins designation to replicated
+identity strings and entity-related readiness. The local value is the stored
+connection character_id, source-joined to the queue's unchanged CharacterId. The
+fresh object constructor and member schema remain open. A generic incoming handler
+reaches a subscriber ring with separately mapped owners, but its descriptor/key/
+recipient are not joined to the current type8 decoder object. The current bundle
+parser, concrete registration and player constructor remain unknown.
+[Original source map](../research/evidence/current-player-spawn-source-map.json).
+Determine that current creation/identity contract before another payload trial.
+Exact initial request type and security semantics also remain unknown, without blocking this
 bounded private progression. See the
 [unsent question and exact source boundaries](REGISTRATION_MAINTAINER_QUESTION.md).
 Historical binary identity no longer blocks the reproduced mechanism. The
@@ -365,6 +434,70 @@ three pre-existing connectivity/trust/audit file hashes. Code bindings remain va
 this documentation/catalog receipt recording occurs after validation. The76GB
 physical copy remains ignored for reproducibility. No commit, push or contributor
 message; Actionables was not updated because no work item was supplied.
+
+## Community capture archive sample review — October 5
+
+Offline inspection of the user's Downloads archive `20261004-192144-732.rar`
+(SHA256 `c1b76945eabcf18eedcd67391cf514d1ae14e8988c7512798455455ce9b49e42`)
+found 43,344 complete plaintext ledger records spanning 464.735 seconds and 166,036
+hex-body fragment records across 58 numeric type IDs. The DTLS key file is empty.
+The clean pinned Aeternum-World decoder recognizes the envelope/LZ4 layer, but
+leaves unparsed trailers; full message correctness, action meaning, exact build
+and privacy are unverified. Preserve privately as a research reference, not live
+replay or authoritative player state. Original archive hash was unchanged; raw
+members were read in memory only, and no bundled code was executed. The original
+inspection wrapper passed PowerShell validation and exited 0. Private structural
+receipt/report: `.scratch/discord-capture-review-20261005T0715/summary.json` and
+`report.md`. No gameplay or Milestone 1 result is established by this review.
+
+## Private Discord submission preservation — October 5
+
+The user-authorized browser collection visited all 224 inventoried Open World
+file-sharing forum threads and retained 683 available messages with descriptions,
+authors, timestamps and source links. The private Documents archive holds 432
+attachment files totaling 4,182,107,150 bytes, including 350 archive files and two
+directly uploaded videos. All saved attachments passed a complete SHA256 recheck.
+The new Everfall reply posted during collection is included.
+
+Two opening posts were already deleted; available replies and attachments were
+preserved. Another 59 external video/file references have per-thread link files;
+those external videos are not downloaded copies. A representative YouTube stream
+export timed out, and browser security policy blocked MEGA. No workaround was
+attempted. The collection index, manifest, limitations and receipt remain outside
+Git under the user's private `NewWorldPreservationArchives` Documents folder.
+No submitted tools were executed, contributor messages sent, game endpoints
+contacted or gameplay/Milestone 1 result established. Actionables was not updated
+because no work item was supplied.
+
+## GUI capture tool offline review — October 5
+
+Both preserved GUI packages were inspected as ZIP/member data and rehashed. Their
+configuration and installer select Coldzer0/Aeternum-World without a commit pin.
+The clean local reference at `820156dbc44c86c9436af81aa0dba72e94cb636b` establishes
+Frida startup, SSL plaintext ledger hooks, WinHTTP header/body logging and a separate
+offline LZ4/Carrier decoder. Outgoing ledger records are write attempts; unknown
+decoder trailers do not cause errors. Full HTTPS logs can contain credentials and
+remain private. The additional fragment-log producer and exact contributor source
+versions remain unknown; GUI control flow/runtime were not validated.
+
+Original notes and package/member/eight-source hashes are saved beside the private
+tool packages as `TOOL-REVIEW.md` and `tool-review-receipt.json`. Local helpers and
+inventories remain in `.scratch/gui-capture-review-20261005T1655/`. PowerShell parser
+and automatic-variable validation passed; originals and copied review files passed
+hash readback. No submitted code, hook, game client or installer ran; no network or
+live gameplay observation occurred. Existing milestone status is unchanged.
+
+Reuse assessment: the current dirty `carrier_registration_probe.py` already uses
+the pinned Aeternum decoder's LZ4 body/size-hint model and checks its source identity;
+it does not import the complete decoder. The strongest proposed addition is an
+original offline ledger importer/analyzer for the privately preserved archives,
+with strict record boundaries, explicit unknown bytes and action/video annotations
+to narrow world-entry/player-construction evidence. Ledger timestamps/direction and
+batched writes are useful design references. This is a proposal, not implemented
+functionality or proven gameplay decoding. The capture reference declares AGPL-3.0;
+the separate GUI package supplies an MIT license. Any source integration must
+account for the applicable license and provenance. This comparison used source
+inspection only; no new runtime validation or code integration occurred.
 
 ## Incremental commit instruction — October 5
 
