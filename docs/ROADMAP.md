@@ -119,7 +119,7 @@ Private-server language scope: **English only**, per the October3 user clarifica
 
 ## Small independently testable tasks
 
-Tasks are bounded outcomes, not assignments to layers. Dependencies identify actual prerequisites; independent offline checks can proceed separately. No Actionables scope was supplied, so this Markdown is the task record.
+Tasks are bounded outcomes, not assignments to layers. Dependencies identify actual prerequisites; independent offline checks can proceed separately. Pending Milestone 1 work now uses Actionables `workItemId: 164`; the separate parked unchanged-stock trust task uses `workItemId: 165`. [Task IDs and creation scope](ACTIONABLES.md) map this table to the queue. This Markdown retains current technical progress and acceptance.
 
 | ID | Outcome / scope | Depends on | Independent verification / completion criterion |
 |---|---|---|---|
@@ -195,7 +195,7 @@ Run the scripts in [README](../README.md). Current original receipt: `research/e
 
 Every future packet change must record: upstream/source dirty-state identity, exact client build, fixture hash, direction/state/channel/type, input/output relationships, positive and rejection cases, and remaining unknowns. Relevant edits stale affected evidence only. Add structured transition logs when implementing connection behavior; no tokens/keys/raw bodies in normal logs.
 
-Repository history is local-only; no remote was created and no code/asset/capture was published. Actionables was not updated because no governing `workItemId` was supplied.
+Repository history is local-only; no remote was created and no code/asset/capture was published. At that historical checkpoint, Actionables was not updated because no governing `workItemId` was supplied.
 
 ## Agent workflow improvements — October 3
 
@@ -334,3 +334,25 @@ and relevant validation passes. Commits include associated documentation/evidenc
 use Conventional Commit messages and stage only task-owned files or hunks. Existing
 private-output and explicit publishing boundaries remain in force. This instruction
 update is documentation-only; validation is a scoped diff/commit-content check.
+
+## Actionables pending-work creation — October 5
+
+At the user's request, created **sixteen Actionables (#164–#179)** from the pending
+Milestone 1 outcomes: parent **#164** with eleven immediate tasks and three nested
+registration slices, plus independent parked stock-client trust **#165**.
+[Exact mapping and scope](ACTIONABLES.md) identify the next player-construction
+research task **#177** and source/fixture/security prerequisites.
+
+Creation-plan validation verified sixteen unique keys/UUIDs, the intended
+hierarchy, seven current source hashes and twenty-four existing file references.
+All three bulk previews and applies succeeded. Complete scoped readback verified
+the intended repository, exact hierarchy/classification, **Inbox** status and
+**no claims** for every task. Prerequisites are task notes; no persisted blocking
+edges or lifecycle transitions were created.
+
+Current technical progress, prior trial results and Milestone 1 acceptance remain
+as recorded above. This tracking operation ran no implementation or game trial,
+contacted no game endpoint/contributor, and changed no client/system resources.
+Associated AGENTS/agent-start links record `workItemId: 164` and the independent
+parked `workItemId: 165`. Validation is creation/readback, source-link and scoped
+diff/commit-content checks; it adds no protocol or gameplay evidence.

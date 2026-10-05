@@ -87,4 +87,8 @@ The new runner creates a unique `.scratch/offline-validation/run-*/receipt.json`
 captures input hashes before/after and fails when selected inputs change during a
 run. Raw stdout/JUnit stays private in that run directory. Passing tests establish
 the named offline scope only; two actual clients and bilateral movement remain the
-Milestone 1 acceptance boundary. There is no Actionables workItemId: use ROADMAP.
+Milestone 1 acceptance boundary. Pending Milestone 1 work uses Actionables
+`workItemId: 164`; the separate parked stock-client trust task uses
+`workItemId: 165`. Resolve the exact task in [ACTIONABLES](ACTIONABLES.md),
+then follow the scoped workflow. ROADMAP retains current technical progress and
+acceptance; task creation alone does not authorize implementation or a live trial.

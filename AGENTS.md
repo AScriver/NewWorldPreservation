@@ -15,7 +15,7 @@
 - Validate PowerShell scripts using C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 before execution; use task-specific variables and native argument arrays.
 - Run tests with explicit scope, isolated temp resources, and loopback-only listeners. Do not stop unrelated processes.
 - Do not publish, push, or message contributors without explicit authorization.
-- Record tasks and verification in docs/ROADMAP.md. No Actionables work item was supplied; do not browse or claim unrelated items.
+- Record current technical progress and verification in docs/ROADMAP.md. Pending Milestone 1 work uses Actionables `workItemId: 164`; the separate parked stock-client trust task uses `workItemId: 165`. See docs/ACTIONABLES.md for exact task IDs and creation scope; do not browse or claim unrelated items.
 
 ## Incremental commits
 
