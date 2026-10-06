@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-registration-lookup-text` | M1-06B | [Offline verified lookup-text conversion](REGISTRATION_LOOKUP_TEXT_CODEC.md) |
 | `current-registration-setup-inputs` | M1-06B | [Actual setup input caller and tagged pair](REGISTRATION_SETUP_INPUTS.md) |
 | `current-registration-stream-framing` | M1-06B | [Current physical stream and queued backend join](REGISTRATION_STREAM_FRAMING.md) |
 | `current-registration-request-body-codec` | M1-06B | [Offline selected V3 BODY API and original fixtures](REGISTRATION_REQUEST_BODY_CODEC.md) |

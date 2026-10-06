@@ -1,0 +1,205 @@
+{
+  "purpose": "Original synthetic ASCII vectors for #228. Tags/raw16 manually specified from the #227 instruction contract; no client values or code execution.",
+  "vectors": [
+    {
+      "name": "compact-lower",
+      "text": "000102030405060708090a0b0c0d0e0f",
+      "tag": 1,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "compact-upper",
+      "text": "000102030405060708090A0B0C0D0E0F",
+      "tag": 9,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "hyphen-lower",
+      "text": "00010203-0405-0607-0809-0a0b0c0d0e0f",
+      "tag": 5,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "hyphen-upper",
+      "text": "00010203-0405-0607-0809-0A0B0C0D0E0F",
+      "tag": 13,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-compact-lower",
+      "text": "{000102030405060708090a0b0c0d0e0f}",
+      "tag": 3,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-compact-upper",
+      "text": "{000102030405060708090A0B0C0D0E0F}",
+      "tag": 11,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-hyphen-lower",
+      "text": "{00010203-0405-0607-0809-0a0b0c0d0e0f}",
+      "tag": 7,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-hyphen-upper",
+      "text": "{00010203-0405-0607-0809-0A0B0C0D0E0F}",
+      "tag": 15,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "digits-counts-as-no-lower",
+      "text": "01234567890123456789012345678901",
+      "tag": 9,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "digits-hyphenated",
+      "text": "01234567-8901-2345-6789-012345678901",
+      "tag": 13,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "brace-compact-unclosed",
+      "text": "{000102030405060708090a0b0c0d0e0f",
+      "tag": 3,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-hyphen-unclosed",
+      "text": "{00010203-0405-0607-0809-0A0B0C0D0E0F",
+      "tag": 15,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "brace-hyphen-arbitrary-last",
+      "text": "{00010203-0405-0607-0809-0A0B0C0D0E0FX",
+      "tag": 15,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "compact-stray-closing",
+      "text": "01234567890123456789012345678901}",
+      "tag": 9,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "compact-six-trailing-digits",
+      "text": "01234567890123456789012345678901000000",
+      "tag": 9,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "compact-seven-trailing-digits",
+      "text": "012345678901234567890123456789010000000",
+      "tag": 0
+    },
+    {
+      "name": "trailing-upper-flags",
+      "text": "01234567890123456789012345678901ZZ",
+      "tag": 9,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "trailing-lower-flags",
+      "text": "01234567890123456789012345678901aa",
+      "tag": 1,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "trailing-mixed-fallback",
+      "text": "01234567890123456789012345678901aA",
+      "tag": 0
+    },
+    {
+      "name": "lower-body-upper-suffix-fallback",
+      "text": "000102030405060708090a0b0c0d0e0fZ",
+      "tag": 0
+    },
+    {
+      "name": "upper-body-lower-suffix-fallback",
+      "text": "000102030405060708090A0B0C0D0E0Fz",
+      "tag": 0
+    },
+    {
+      "name": "trailing-space-accepted",
+      "text": "01234567890123456789012345678901 ",
+      "tag": 9,
+      "raw16": "01234567890123456789012345678901"
+    },
+    {
+      "name": "leading-space-fallback",
+      "text": " 01234567890123456789012345678901",
+      "tag": 0
+    },
+    {
+      "name": "short31",
+      "text": "1234567890123456789012345678901",
+      "tag": 0
+    },
+    {
+      "name": "missing-first-hyphen",
+      "text": "000102030405-0607-0809-0a0b0c0d0e0f",
+      "tag": 0
+    },
+    {
+      "name": "hex-nonmember",
+      "text": "G1234567890123456789012345678901",
+      "tag": 0
+    },
+    {
+      "name": "python-int-plus-disallowed",
+      "text": "+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1",
+      "tag": 0
+    },
+    {
+      "name": "python-int-space-disallowed",
+      "text": " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+      "tag": 0
+    },
+    {
+      "name": "python-int-underscore-disallowed",
+      "text": "_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1",
+      "tag": 0
+    },
+    {
+      "name": "empty",
+      "text": "",
+      "tag": 0
+    },
+    {
+      "name": "ordinary-text",
+      "text": "local text",
+      "tag": 0
+    },
+    {
+      "name": "first-nul-empty",
+      "text": "\u000001234567890123456789012345678901",
+      "tag": 0
+    },
+    {
+      "name": "first-nul-short",
+      "text": "0123456789012345\u00006789012345678901",
+      "tag": 0
+    },
+    {
+      "name": "first-nul-valid-ignores-mixed-suffix",
+      "text": "000102030405060708090a0b0c0d0e0f\u0000Z",
+      "tag": 1,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    },
+    {
+      "name": "first-nul-text",
+      "text": "local\u0000discarded",
+      "tag": 0
+    },
+    {
+      "name": "first-nul-hyphen-valid",
+      "text": "00010203-0405-0607-0809-0A0B0C0D0E0F\u0000lower",
+      "tag": 13,
+      "raw16": "000102030405060708090a0b0c0d0e0f"
+    }
+  ]
+}

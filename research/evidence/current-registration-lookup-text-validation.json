@@ -1,0 +1,285 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 228,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-06T12:12:28.663676+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "f5166334de14352f2843ba79f4ed488647a43953",
+    "initialDirty": "",
+    "currentDirty": "M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REGISTRATION_REQUEST_BODY_CODEC.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n M scripts/current_registration_request_body.py\n M tests/test_current_registration_request_body.py\n?? docs/REGISTRATION_LOOKUP_TEXT_CODEC.md\n?? research/evidence/current-registration-lookup-text-validation.json\n?? tests/fixtures/registration/current-lookup-text-original.json",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "steamManifestSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "toolRoot": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering",
+    "toolFiles": {
+      "README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
+      "manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
+      "verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
+      "Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+    },
+    "python": "3.11.9"
+  },
+  "claimIds": [
+    "K259",
+    "K260",
+    "K261",
+    "K262"
+  ],
+  "sourceClaims": [
+    "J228-1",
+    "J228-2",
+    "J228-3",
+    "J228-4"
+  ],
+  "sourceContracts": [
+    {
+      "path": "research\\evidence\\current-registration-setup-inputs.json",
+      "sha256": "e1841926a5289c35ef45f33c75ea78c3f32579a8547427174069bafd1ca27fbc"
+    },
+    {
+      "path": "research\\evidence\\current-registration-request-body-codec-validation.json",
+      "sha256": "487f9ef30f56d737dfca37c006a25c7378461acca821b6462f5ce4a1f54c1e0a"
+    }
+  ],
+  "historicalExtendedBindings": [
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "preEditSha256": "1ed7884575de6454963c484c2254617fbd76abdc9c654499e8f4af013b45d0b6",
+      "currentSha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+      "reason": "Task-owned implementation/test extended after prior source receipt was freshly revalidated"
+    },
+    {
+      "path": "tests/test_current_registration_request_body.py",
+      "preEditSha256": "723a24f835fc0f7ac6931880de72393c303541f4d971456a4cb2f9d5cdce18ff",
+      "currentSha256": "350a85221eb5033cb50f38745fc057975f04dceb84692221828a95b9cc54a1e6",
+      "reason": "Task-owned implementation/test extended after prior source receipt was freshly revalidated"
+    }
+  ],
+  "sourceBindings": [
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "tests/test_current_registration_request_body.py",
+      "sha256": "350a85221eb5033cb50f38745fc057975f04dceb84692221828a95b9cc54a1e6"
+    },
+    {
+      "path": "tests/fixtures/registration/current-lookup-text-original.json",
+      "sha256": "963c4f810893daa038855916e6be69d8709a415cf5b37f676a977a81efef8825"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "87994b99869788368a9b606867383fbe68b380ce824fa5c1a012a585edf9ca40"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "a11f9ddbd96cf128278e60705e14dcc8c3e07fb6f19f0260c9b80622240e4862"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "c3735a9865925f7ff30f27b632160813f6639047df62c333742936fd9d846802"
+    }
+  ],
+  "documentBindings": [
+    {
+      "path": "docs/EVIDENCE_INDEX.md",
+      "sha256": "37abdc61f7160b20eb95479d12de7bd4690ff3eeb14cdf86cb9b490f47a2882a"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "d5c0f139ff2da37d7d7e843473ff2be3005a5d8c66d44441631ea3ed5d971ee5"
+    },
+    {
+      "path": "docs/REGISTRATION_LOOKUP_TEXT_CODEC.md",
+      "sha256": "f725af26e8c0f3b33bc1751b4f194d7dc106f62a9361b796f9074719d7a27b8c"
+    },
+    {
+      "path": "docs/REGISTRATION_REQUEST_BODY_CODEC.md",
+      "sha256": "16af8f120721baedb24ae825a9204fe839263c218be43e0fc89435d664aa7b4f"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "74cbefc17ddd7469ca859682d308788b9030cba5b2e0a061517de19243da0a11"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "5c4246f502f27258c7d33a4f263dbb824e900da113a85d8c4af073f5dbcf52c4"
+    }
+  ],
+  "privateEvidenceSeals": [
+    {
+      "path": ".scratch/registration-lookup-text-228/baseline.json",
+      "sha256": "cb70fe97f9b21da00e55251c4f95fb91c09dc3f182cf3a58a54e6b398c4d7407"
+    },
+    {
+      "path": ".scratch/registration-lookup-text-228/BRIEF.md",
+      "sha256": "4e090a8f7375e89444da81ae2eaf58ce1b3f07102c1060d8b1a1f7a7a5fa82c7"
+    },
+    {
+      "path": ".scratch/registration-lookup-text-228/LEDGER-implementation.md",
+      "sha256": "f75fe79b8619c764c4b3a5510e89e7b0a31765e8ff23866888bc520cedc647bb"
+    },
+    {
+      "path": ".scratch/registration-lookup-text-228/focused.ps1",
+      "sha256": "e1ee56a9c29594de6f7cb4d811a79a2418804121d19c0c631ba75ed7652eeb63"
+    },
+    {
+      "path": ".scratch/registration-lookup-text-228/source-rehashed.json",
+      "sha256": "b9adbeb54fa942d4b9f6b1278ed5793a556009646c2f1ed74e6393b8f93cf06c"
+    },
+    {
+      "path": ".scratch/registration-lookup-text-228/receipt-preparation-failure.md",
+      "sha256": "6fac49664006ce90059cb17f70b938f87e63129c164ffd0555e7778754f827cd"
+    },
+    {
+      "path": ".scratch/test228-agent-1206/report.json",
+      "sha256": "d4f48c17412c9739f0d33cc988b64db68ae8feb100bef035df0befbae4e9407d"
+    },
+    {
+      "path": ".scratch/test228-agent-1206/verify_helper.py",
+      "sha256": "2c1d46d588d4356c375e5a20855c18b3a433202f6fe059d94921486b139dc0c4"
+    },
+    {
+      "path": ".scratch/test228-agent-1206/Run-VerifyHelper.ps1",
+      "sha256": "3c538d8464bbc21a5c318f39a3711d76871024b0fdedbc33c0037c6b77d0cd42"
+    }
+  ],
+  "verification": {
+    "sourceRehash": {
+      "status": "passed",
+      "codeSpans": 44,
+      "windows": 14,
+      "preEditBodyBindings": 6,
+      "receipt": ".scratch/registration-lookup-text-228/source-rehashed.json",
+      "sha256": "b9adbeb54fa942d4b9f6b1278ed5793a556009646c2f1ed74e6393b8f93cf06c"
+    },
+    "focused": {
+      "status": "passed",
+      "command": "validated focused.ps1: explicit request BODY/response BODY/offline runner modules",
+      "junit": ".scratch/registration-lookup-text-228/focused-junit.xml",
+      "sha256": "d977cc858c0135a0edad91416ebb296f16021872fd7eb7ddd9c403f815842f9d",
+      "tests": 433,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "independent": {
+      "status": "passed",
+      "receipt": ".scratch/test228-agent-1206/report.json",
+      "sha256": "d4f48c17412c9739f0d33cc988b64db68ae8feb100bef035df0befbae4e9407d",
+      "outcomes": {
+        "mutation": 26112,
+        "accepted": 4139,
+        "fallback": 21999,
+        "extra": 26,
+        "domain": 13,
+        "body": 2
+      },
+      "cleanup": "Owned synchronous file-only Python child exited; no service, database, port, native client, JVM, capture, or shared resource was started. Ignored scratch evidence retained.",
+      "domain": "Frozen227 ASCII branch model composed with firstNUL; independent synthetic BODY checks; no native client execution"
+    },
+    "workspace": {
+      "status": "passed; selected input hashes unchanged, final receipt annotations refreshed afterward",
+      "receipt": ".scratch/offline-validation/run-6e9c8v83/receipt.json",
+      "sha256": "47cc70148e67dc20d2e39838c3d08936807f8160b68a2e57bb372c880363ff02",
+      "startedAtUtc": "2026-10-06T12:09:50.019501+00:00",
+      "finishedAtUtc": "2026-10-06T12:11:02.025749+00:00",
+      "python": {
+        "selectedFiles": 35,
+        "collected": 885,
+        "executed": 885,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 62530
+      },
+      "changedInputs": []
+    },
+    "preservation": {
+      "status": "passed",
+      "unrelatedTrackedFiles": 247,
+      "unrelatedCatalogSemantics": "unchanged"
+    },
+    "fixturesStatic": {
+      "status": "passed",
+      "receipt": ".scratch/offline-validation/run-5vqgv4y3/receipt.json",
+      "sha256": "fd7ce6486a55c8b095bd0f77593c7b652632527bf299fa0cf9de187a1e0f199f",
+      "python": {
+        "selectedFiles": 13,
+        "collected": 517,
+        "executed": 517,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "changedInputs": []
+    }
+  },
+  "retainedFailures": [
+    {
+      "kind": "receipt harness/path error",
+      "evidence": ".scratch/registration-lookup-text-228/receipt-preparation-failure.md",
+      "scope": "Catalog written, original receipt not yet written; codec/test/fixture unchanged",
+      "correction": "Relative tool names resolved against shared reverse-engineering root; exact catalog insertion made rerunnable",
+      "correctedGuardsPassed": true
+    }
+  ],
+  "requirements": [
+    "FirstNUL prefix, length32..38, optional opening brace, conditional separators, sequential16 hexpairs; no closingbrace/exhaustion check.",
+    "Entire retained ASCII prefix sets upper/lower decision and flags; parsefailure/mixedcase keeps exact text/tag0.",
+    "Existing active wire-only TaggedField, persona-first3e0/character-second420 BODY integration.",
+    "Deliberate stronger full input<=0x2ffff and retained ASCII-only rule, invalid non-bytes rejected; ignored suffix afterNUL may be nonASCII."
+  ],
+  "limits": [
+    "Finite pure Python/source-derived checks do not execute native CRT/parser/allocator/client code.",
+    "Native inactive string/raw/context storage, partial state, faults, synchronization and Unicode/locale conversion are not modeled.",
+    "No current runtime handler selection/settings values/principal/credential/authority proof.",
+    "No framing/Carrier/live hookup, client/process/hook/capture/memory/game endpoint/replay/upstream/push/publication/messages.",
+    "#212 remainsBlocked; parent178/164/Milestone1 acceptance remains open."
+  ]
+}

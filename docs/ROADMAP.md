@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#228 offline implementation, October6: the verified lookup-text conversion now
+feeds the existing active TaggedField/BODY API. First-NUL truncation, permissive
+hex/separator/braces/suffix parsing and whole-prefix case flags are preserved in
+the proved ASCII domain. [API and original checks](REGISTRATION_LOOKUP_TEXT_CODEC.md),
+K259–K262 and [receipt](../research/evidence/current-registration-lookup-text-validation.json)
+record explicit size/domain strengthening and implementation identity. This
+chooses no configured identity/authority and supplies no native/live acceptance;
+#212, parent178/164 and Milestone1 remain open.
+
 #227 source closure, October6: an actual registration setup caller supplies a
 persona-first/character-second pair through two named settings lookups. The
 registered provider, concrete string getter, local UUID/text conversion and

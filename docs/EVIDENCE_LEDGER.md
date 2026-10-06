@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Offline registration lookup-text conversion — October6, #228
+
+Clean input main `f5166334de14352f2843ba79f4ed488647a43953`; relevant source/image
+pins revalidated before implementation. [Original validation receipt](../research/evidence/current-registration-lookup-text-validation.json)
+binds the current implementation, synthetic fixtures and executed check scope.
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K259 | Pure lookup-text helper implements the proved ASCII first-NUL/parser/case/flags composition | Offline implementation of K257; permissive braces/suffixes and sequential raw16 retained. No native locale/identity/authority proof | [API](REGISTRATION_LOOKUP_TEXT_CODEC.md), J228-1 |
+| K260 | Full-size/domain bounds and active-only output are explicit | Rejects full input>0x2ffff and nonASCII retained prefix; ignores suffix afterNUL. Active TaggedField omits native inactive storage/allocator/fault state | [API](REGISTRATION_LOOKUP_TEXT_CODEC.md), J228-2 |
+| K261 | Original vectors and exact two-field BODY integration exercise the conversion | Executed synthetic fixtures for produced tags, separators, case/suffix/NUL boundaries and persona3e0/character420 slots; no observed configured values | [API/tests](REGISTRATION_LOOKUP_TEXT_CODEC.md), J228-3 |
+| K262 | Verification binds current dirty inputs and preserves unrelated files | Named executed offline checks and independent finite model comparisons are recorded in receipt; repository regression is not current-client acceptance | [Receipt](../research/evidence/current-registration-lookup-text-validation.json), J228-4 |
+
 ## Current registration setup input producer — October6, #227
 
 Clean main `17807b1542af522607abb4268beb2ab6fa5e6ebf`; pinned image/build/map,

@@ -12,6 +12,38 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-lookup-text",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K259",
+        "K260",
+        "K261",
+        "K262"
+      ],
+      "docs": [
+        "docs/REGISTRATION_LOOKUP_TEXT_CODEC.md"
+      ],
+      "scripts": [
+        "scripts/current_registration_request_body.py"
+      ],
+      "tests": [
+        "tests/test_current_registration_request_body.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-lookup-text-validation.json",
+          "classification": "offline-executed",
+          "scope": "#228 original ASCII lookup-text conversion and active BODY integration; source rehash/model checks separately recorded"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/registration/current-lookup-text-original.json"
+      ],
+      "limit": "FirstNUL prefix, ASCII only, full input<=0x2ffff; deliberate stronger size/domain rules. Active payload omits native inactive storage/locale/allocator/fault state. No configured identity/authority, client/runtime/#212/M1 proof."
+    },
+    {
       "id": "current-registration-setup-inputs",
       "roadmapTasks": [
         "M1-06B"
@@ -201,9 +233,18 @@
     },
     {
       "id": "current-registration-request-serializer",
-      "roadmapTasks": ["M1-06B"],
-      "claimIds": ["K227", "K228", "K229", "K230"],
-      "docs": ["docs/REGISTRATION_REQUEST_SERIALIZER.md"],
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K227",
+        "K228",
+        "K229",
+        "K230"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_SERIALIZER.md"
+      ],
       "scripts": [],
       "tests": [],
       "evidence": [
@@ -234,8 +275,12 @@
       "docs": [
         "docs/REGISTRATION_RESPONSE_BODY_CODEC.md"
       ],
-      "scripts": ["scripts/current_registration_response_body.py"],
-      "tests": ["tests/test_current_registration_response_body.py"],
+      "scripts": [
+        "scripts/current_registration_response_body.py"
+      ],
+      "tests": [
+        "tests/test_current_registration_response_body.py"
+      ],
       "evidence": [
         {
           "path": "research/evidence/current-registration-response-body-codec.json",
@@ -248,7 +293,9 @@
           "scope": "#219 original body-only Python codec, hand-derived synthetic goldens, independent byte experiments and reviewed workspace checks; no native/client execution"
         }
       ],
-      "fixtures": ["tests/fixtures/registration/current-response-body-original.json"],
+      "fixtures": [
+        "tests/fixtures/registration/current-response-body-original.json"
+      ],
       "limit": "Selected native source contract and offline body codec only. Offline payload precheck/oversized input refusal are deliberate stronger policies. Carrier placement/sender-envelope inverse, authentication, #212 member/construction/framing gates and gameplay unproved. No native client execution."
     },
     {
@@ -312,9 +359,15 @@
       "id": "ghidra-function-slices",
       "roadmapTasks": [],
       "claimIds": [],
-      "docs": ["docs/TOOLS.md"],
-      "scripts": ["scripts/ghidra_function_slice.py"],
-      "tests": ["tests/test_ghidra_function_slice.py"],
+      "docs": [
+        "docs/TOOLS.md"
+      ],
+      "scripts": [
+        "scripts/ghidra_function_slice.py"
+      ],
+      "tests": [
+        "tests/test_ghidra_function_slice.py"
+      ],
       "evidence": [
         {
           "path": "research/evidence/ghidra-function-slice-validation.json",
@@ -436,11 +489,38 @@
     },
     {
       "id": "historical-client-setup",
-      "roadmapTasks": ["M1-02H"],
-      "claimIds": ["K120", "K121", "K122", "K123", "K124", "K125", "K126", "K127", "K128", "K129", "K130", "K131", "K132", "K133", "K134"],
-      "docs": ["docs/FIRST_LIGHT_HISTORICAL_CLIENT.md", "docs/FRIDA_PRIVATE_DTLS_TRIAL.md"],
-      "scripts": ["scripts/Invoke-FridaPrivateTrial.ps1", "scripts/frida_client_trial.py", "scripts/frida_trial_observer.js"],
-      "tests": ["tests/test_frida_client_trial.py"],
+      "roadmapTasks": [
+        "M1-02H"
+      ],
+      "claimIds": [
+        "K120",
+        "K121",
+        "K122",
+        "K123",
+        "K124",
+        "K125",
+        "K126",
+        "K127",
+        "K128",
+        "K129",
+        "K130",
+        "K131",
+        "K132",
+        "K133",
+        "K134"
+      ],
+      "docs": [
+        "docs/FIRST_LIGHT_HISTORICAL_CLIENT.md",
+        "docs/FRIDA_PRIVATE_DTLS_TRIAL.md"
+      ],
+      "scripts": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js"
+      ],
+      "tests": [
+        "tests/test_frida_client_trial.py"
+      ],
       "evidence": [
         {
           "path": "research/evidence/first-light-historical-client-review.json",
@@ -1066,7 +1146,31 @@
         "K154",
         "K155",
         "K156",
-        "K157", "K158", "K159", "K160", "K161", "K162", "K163", "K164", "K165", "K166", "K167", "K168", "K169", "K170", "K171", "K172", "K173", "K174", "K175", "K176", "K177", "K178", "K179", "K180", "K181"
+        "K157",
+        "K158",
+        "K159",
+        "K160",
+        "K161",
+        "K162",
+        "K163",
+        "K164",
+        "K165",
+        "K166",
+        "K167",
+        "K168",
+        "K169",
+        "K170",
+        "K171",
+        "K172",
+        "K173",
+        "K174",
+        "K175",
+        "K176",
+        "K177",
+        "K178",
+        "K179",
+        "K180",
+        "K181"
       ],
       "docs": [
         "docs/CARRIER_REGISTRATION_TRIAL.md",
@@ -1076,31 +1180,136 @@
         "docs/PROTOCOL_NOTES.md",
         "docs/ARCHITECTURE.md"
       ],
-      "scripts": ["scripts/carrier_registration_probe.py", "scripts/dtls_transport_probe.py", "scripts/frida_client_trial.py", "scripts/frida_trial_observer.js", "scripts/Invoke-FridaPrivateTrial.ps1", "scripts/current_self_ident_default.py", "scripts/current_spawn_point.py", "scripts/current_world_activation.py"],
-      "tests": ["tests/test_carrier_registration_probe.py", "tests/test_frida_client_trial.py", "tests/frida_context_gate_observer.test.cjs", "tests/test_dtls_transport_probe.py", "tests/test_current_self_ident_default.py", "tests/test_current_world_activation.py", "tests/carrier_registration_smoke.py"],
+      "scripts": [
+        "scripts/carrier_registration_probe.py",
+        "scripts/dtls_transport_probe.py",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js",
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/current_self_ident_default.py",
+        "scripts/current_spawn_point.py",
+        "scripts/current_world_activation.py"
+      ],
+      "tests": [
+        "tests/test_carrier_registration_probe.py",
+        "tests/test_frida_client_trial.py",
+        "tests/frida_context_gate_observer.test.cjs",
+        "tests/test_dtls_transport_probe.py",
+        "tests/test_current_self_ident_default.py",
+        "tests/test_current_world_activation.py",
+        "tests/carrier_registration_smoke.py"
+      ],
       "evidence": [
-        {"path": "research/evidence/carrier-registration-offline-validation.json", "classification": "offline-executed", "scope": "Historical uncompressed adapter:394 workspace cases and synthetic pinned-source ACK smoke; no live registration acceptance"},
-        {"path": "research/evidence/carrier-registration-uncompressed-trial.json", "classification": "observed-metadata", "scope": "Same delayed-UAC owned-copy instance:private DTLS, connect ACK transmissions and ten unhandled compressed envelopes; cleaned; no registration accepted"},
-        {"path": "research/evidence/carrier-registration-lz4-validation.json", "classification": "offline-executed", "scope": "399 workspace cases, three synthetic PowerShell suites and HTTPS lifecycle; two explicit pinned-codec/LZ4 synthetic checks; no current-client acceptance inferred"},
-        {"path": "research/evidence/carrier-registration-lz4-trial.json", "classification": "observed-metadata", "scope": "One actual LZ4 expansion and pinned Carrier parse; reliable channel0 record flags0x21 length860 has unknown type; no registration response; cleanup verified"},
-        {"path": "research/evidence/carrier-registration-schema-validation.json", "classification": "offline-executed", "scope": "Tightened single-channel0/prior-connect candidate gate:406 workspace Python cases, three PowerShell suites/HTTPS lifecycle; three explicit synthetic pinned-codec/schema checks; no current-client schema acceptance inferred"},
-        {"path": "research/evidence/carrier-registration-schema-trial.json", "classification": "observed-metadata", "scope": "Eight actual structured-retry compatible records and source88B replies; client auto-reconnect/error4; ninth peer rejected by adapter lifetimecap; no post-registration data or acceptance proven; cleanup independently verified"},
-        {"path": "research/evidence/carrier-registration-version-validation.json", "classification": "offline-executed", "scope": "412 workspace cases, three PowerShell suites/HTTPS lifecycle; four pinned synthetic codec/schema/one-field-version/ACK checks; no version-matching requirement inferred"},
-        {"path": "research/evidence/carrier-registration-version-trial.json", "classification": "observed-metadata", "scope": "Eight structured-retry candidates/source replies with owned version; later Carrier ACK ranges cover all eight reply envelopes; client error4 persists, no semantic registration/world proof; ninth peer locally budget-rejected; cleanup independently verified"},
-        {"path": "research/evidence/carrier-registration-client-progress.json", "classification": "observed-metadata", "scope": "Earlier version-trial response receipt and actor START timestamps; not actor success"},
-        {"path": "research/evidence/current-self-ident-default-contract.json", "classification": "source-inference", "scope": "Current owned-image mapping and original complete default actor/spawn codecs; conditional completion only"},
-        {"path": "research/evidence/current-actor-callback-validation.json", "classification": "offline-executed", "scope": "Historical421-case callback implementation and six explicit pinned synthetic checks"},
-        {"path": "research/evidence/current-actor-callback-trial.json", "classification": "observed-metadata", "scope": "234 matching private heartbeat replies; callback ACK coverage; gameplay timeout; cleanup verified"},
-        {"path": "research/evidence/current-world-activation-contract.json", "classification": "source-inference", "scope": "Current LevelInfo/empty-bundle candidate using owned map and explicit default/counter values; no player creation proof"},
-        {"path": "research/evidence/current-world-activation-validation.json", "classification": "offline-executed", "scope": "426 workspace cases,50 focused controls and six pinned synthetic framing checks; no live world proof"},
-        {"path": "research/evidence/current-world-activation-trial.json", "classification": "observed-metadata", "scope": "LevelInfo/bundle handler labels and234 matching heartbeat echoes; gameplay timeout persists; cleanup independently verified"},
-        {"path": "research/evidence/current-context-gate-contract.json", "classification": "source-inference", "scope": "Three pinned callback/load sites and seven boolean observations, guarded and capped; no gameplay proof"},
-        {"path": "research/evidence/current-context-gate-validation.json", "classification": "offline-executed", "scope": "439 workspace Python cases,79 focused and seven explicit fake-Frida Node cases; source review with non-atomic/address-reuse limits"},
-        {"path": "research/evidence/current-context-gate-trial.json", "classification": "observed-metadata", "scope": "LevelInfo callback engaged pending state; loader self flag false; no Self callback entry in the bounded window;234 matched heartbeat echoes; cleanup independently verified"},
-        {"path": "research/evidence/current-self-length-prefix-contract.json", "classification": "source-inference", "scope": "Default-off one-byte prefix candidate for exact131-byte current Self body; outer-reader placement unjoined at admission"},
-        {"path": "research/evidence/current-self-length-prefix-validation.json", "classification": "offline-executed", "scope": "445 workspace Python cases,85 focused and seven pinned-codec smokes; native datagram control proves one prefix-byte delta and unchanged disabled mode"},
-        {"path": "research/evidence/current-self-length-prefix-trial.json", "classification": "observed-metadata", "scope": "Actual Self callback/flag transition, actor-connection success marker and context initialization/activation observed;238 heartbeat echoes; user loading screen then spawn-player timeout; cleanup independently verified"},
-        {"path": "research/evidence/current-player-spawn-source-map.json", "classification": "source-inference", "scope": "Current player wait/registry lifetime, conditional unchanged queue CharacterId and generic dispatch owners; type8 route/member/constructor and runtime readiness remain unjoined"}
+        {
+          "path": "research/evidence/carrier-registration-offline-validation.json",
+          "classification": "offline-executed",
+          "scope": "Historical uncompressed adapter:394 workspace cases and synthetic pinned-source ACK smoke; no live registration acceptance"
+        },
+        {
+          "path": "research/evidence/carrier-registration-uncompressed-trial.json",
+          "classification": "observed-metadata",
+          "scope": "Same delayed-UAC owned-copy instance:private DTLS, connect ACK transmissions and ten unhandled compressed envelopes; cleaned; no registration accepted"
+        },
+        {
+          "path": "research/evidence/carrier-registration-lz4-validation.json",
+          "classification": "offline-executed",
+          "scope": "399 workspace cases, three synthetic PowerShell suites and HTTPS lifecycle; two explicit pinned-codec/LZ4 synthetic checks; no current-client acceptance inferred"
+        },
+        {
+          "path": "research/evidence/carrier-registration-lz4-trial.json",
+          "classification": "observed-metadata",
+          "scope": "One actual LZ4 expansion and pinned Carrier parse; reliable channel0 record flags0x21 length860 has unknown type; no registration response; cleanup verified"
+        },
+        {
+          "path": "research/evidence/carrier-registration-schema-validation.json",
+          "classification": "offline-executed",
+          "scope": "Tightened single-channel0/prior-connect candidate gate:406 workspace Python cases, three PowerShell suites/HTTPS lifecycle; three explicit synthetic pinned-codec/schema checks; no current-client schema acceptance inferred"
+        },
+        {
+          "path": "research/evidence/carrier-registration-schema-trial.json",
+          "classification": "observed-metadata",
+          "scope": "Eight actual structured-retry compatible records and source88B replies; client auto-reconnect/error4; ninth peer rejected by adapter lifetimecap; no post-registration data or acceptance proven; cleanup independently verified"
+        },
+        {
+          "path": "research/evidence/carrier-registration-version-validation.json",
+          "classification": "offline-executed",
+          "scope": "412 workspace cases, three PowerShell suites/HTTPS lifecycle; four pinned synthetic codec/schema/one-field-version/ACK checks; no version-matching requirement inferred"
+        },
+        {
+          "path": "research/evidence/carrier-registration-version-trial.json",
+          "classification": "observed-metadata",
+          "scope": "Eight structured-retry candidates/source replies with owned version; later Carrier ACK ranges cover all eight reply envelopes; client error4 persists, no semantic registration/world proof; ninth peer locally budget-rejected; cleanup independently verified"
+        },
+        {
+          "path": "research/evidence/carrier-registration-client-progress.json",
+          "classification": "observed-metadata",
+          "scope": "Earlier version-trial response receipt and actor START timestamps; not actor success"
+        },
+        {
+          "path": "research/evidence/current-self-ident-default-contract.json",
+          "classification": "source-inference",
+          "scope": "Current owned-image mapping and original complete default actor/spawn codecs; conditional completion only"
+        },
+        {
+          "path": "research/evidence/current-actor-callback-validation.json",
+          "classification": "offline-executed",
+          "scope": "Historical421-case callback implementation and six explicit pinned synthetic checks"
+        },
+        {
+          "path": "research/evidence/current-actor-callback-trial.json",
+          "classification": "observed-metadata",
+          "scope": "234 matching private heartbeat replies; callback ACK coverage; gameplay timeout; cleanup verified"
+        },
+        {
+          "path": "research/evidence/current-world-activation-contract.json",
+          "classification": "source-inference",
+          "scope": "Current LevelInfo/empty-bundle candidate using owned map and explicit default/counter values; no player creation proof"
+        },
+        {
+          "path": "research/evidence/current-world-activation-validation.json",
+          "classification": "offline-executed",
+          "scope": "426 workspace cases,50 focused controls and six pinned synthetic framing checks; no live world proof"
+        },
+        {
+          "path": "research/evidence/current-world-activation-trial.json",
+          "classification": "observed-metadata",
+          "scope": "LevelInfo/bundle handler labels and234 matching heartbeat echoes; gameplay timeout persists; cleanup independently verified"
+        },
+        {
+          "path": "research/evidence/current-context-gate-contract.json",
+          "classification": "source-inference",
+          "scope": "Three pinned callback/load sites and seven boolean observations, guarded and capped; no gameplay proof"
+        },
+        {
+          "path": "research/evidence/current-context-gate-validation.json",
+          "classification": "offline-executed",
+          "scope": "439 workspace Python cases,79 focused and seven explicit fake-Frida Node cases; source review with non-atomic/address-reuse limits"
+        },
+        {
+          "path": "research/evidence/current-context-gate-trial.json",
+          "classification": "observed-metadata",
+          "scope": "LevelInfo callback engaged pending state; loader self flag false; no Self callback entry in the bounded window;234 matched heartbeat echoes; cleanup independently verified"
+        },
+        {
+          "path": "research/evidence/current-self-length-prefix-contract.json",
+          "classification": "source-inference",
+          "scope": "Default-off one-byte prefix candidate for exact131-byte current Self body; outer-reader placement unjoined at admission"
+        },
+        {
+          "path": "research/evidence/current-self-length-prefix-validation.json",
+          "classification": "offline-executed",
+          "scope": "445 workspace Python cases,85 focused and seven pinned-codec smokes; native datagram control proves one prefix-byte delta and unchanged disabled mode"
+        },
+        {
+          "path": "research/evidence/current-self-length-prefix-trial.json",
+          "classification": "observed-metadata",
+          "scope": "Actual Self callback/flag transition, actor-connection success marker and context initialization/activation observed;238 heartbeat echoes; user loading screen then spawn-player timeout; cleanup independently verified"
+        },
+        {
+          "path": "research/evidence/current-player-spawn-source-map.json",
+          "classification": "source-inference",
+          "scope": "Current player wait/registry lifetime, conditional unchanged queue CharacterId and generic dispatch owners; type8 route/member/constructor and runtime readiness remain unjoined"
+        }
       ],
       "fixtures": [],
       "limit": "Private response receipt, heartbeat echo, actual Self callback/flag transition, actor-connection success marker and immediate context initialization/activation are observed. Later asynchronous context readiness and fresh player/world creation remain unproven. Exact outer-reader implementation and initial request/security semantics remain unknown. Captured replay or invented packets do not establish generated state."
@@ -1135,6 +1344,12 @@
     }
   ],
   "fixtures": [
+    {
+      "path": "tests/fixtures/registration/current-lookup-text-original.json",
+      "classification": "synthetic",
+      "sha256": "963c4f810893daa038855916e6be69d8709a415cf5b37f676a977a81efef8825",
+      "scope": "Original manually specified ASCII parser/case/format vectors; no client values or native execution"
+    },
     {
       "path": "tests/fixtures/registration/current-request-body-original.json",
       "classification": "synthetic",
@@ -1239,6 +1454,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-lookup-text-validation.json",
     "research/evidence/current-registration-setup-inputs.json",
     "research/evidence/current-registration-stream-framing.json",
     "research/evidence/current-registration-request-body-codec-validation.json",

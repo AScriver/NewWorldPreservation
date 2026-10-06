@@ -1,6 +1,7 @@
 """Original synthetic checks for the selected V3 request BODY only."""
 
 import json
+from dataclasses import replace
 from pathlib import Path
 import sys
 
@@ -10,11 +11,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from current_registration_request_body import (  # noqa: E402
     DecodeError, Field2C8, FieldC0, RegistrationRequestBody, TaggedField,
-    decode_body, encode_body,
+    MAX_STRING_BYTES, decode_body, encode_body, tagged_from_lookup_text,
 )
 
 FIXTURE = ROOT / "tests/fixtures/registration/current-request-body-original.json"
 VECTORS = json.loads(FIXTURE.read_text(encoding="utf-8"))["vectors"]
+LOOKUP_FIXTURE = ROOT / "tests/fixtures/registration/current-lookup-text-original.json"
+LOOKUP_VECTORS = json.loads(LOOKUP_FIXTURE.read_text(encoding="utf-8"))["vectors"]
 
 
 def _record(values):
@@ -229,3 +232,66 @@ def test_nested_records_reject_inactive_or_invalid_values():
         Field2C8(**{**_record({}).field_2c8.__dict__, "field_110": 1})
     with pytest.raises(TypeError):
         encode_body(object())
+
+
+@pytest.mark.parametrize("vector", LOOKUP_VECTORS, ids=lambda item: item["name"])
+def test_lookup_text_hand_derived_active_arm(vector):
+    text = vector["text"].encode("ascii")
+    tag = vector["tag"]
+    expected = (TaggedField(tag, field_20=bytes.fromhex(vector["raw16"])) if tag
+                else TaggedField(0, field_00=text.split(b"\x00", 1)[0]))
+    assert tagged_from_lookup_text(text) == expected
+
+
+@pytest.mark.parametrize("hyphens", range(16))
+def test_lookup_text_conditional_separator_positions(hyphens):
+    groups = (b"00010203", b"0405", b"0607", b"0809", b"0a0b0c0d0e0f")
+    text = groups[0] + b"".join((b"-" if hyphens & (1 << index) else b"") + group
+                               for index, group in enumerate(groups[1:]))
+    expected = (TaggedField(1 if hyphens == 0 else 5, field_20=bytes(range(16)))
+                if hyphens in (0, 15) else TaggedField(0, field_00=text))
+    assert tagged_from_lookup_text(text) == expected
+
+
+@pytest.mark.parametrize("text", [
+    b"", b"prefix", b"000102030405060708090a0b0c0d0e0f",
+    b"{00010203-0405-0607-0809-0A0B0C0D0E0F}",
+])
+def test_lookup_text_first_nul_ignores_non_ascii_suffix(text):
+    assert tagged_from_lookup_text(text + b"\x00\xffignored") == tagged_from_lookup_text(text)
+
+
+@pytest.mark.parametrize("text", [b"\xff", b"\x80\x00", b"0" * 32 + b"\xff"])
+def test_lookup_text_rejects_unproved_non_ascii_prefix(text):
+    with pytest.raises(ValueError, match="ASCII"):
+        tagged_from_lookup_text(text)
+
+
+@pytest.mark.parametrize("text", [None, "text", bytearray(b"text"), memoryview(b"text"), 3])
+def test_lookup_text_requires_owned_bytes(text):
+    with pytest.raises(ValueError, match="must be bytes"):
+        tagged_from_lookup_text(text)
+
+
+def test_lookup_text_full_input_bound_applies_before_nul():
+    maximum = b"\x00" + b"\xff" * (MAX_STRING_BYTES - 1)
+    assert tagged_from_lookup_text(maximum) == TaggedField(0, field_00=b"")
+    with pytest.raises(ValueError, match="must be bytes"):
+        tagged_from_lookup_text(maximum + b"x")
+    text = b"x" * MAX_STRING_BYTES
+    assert tagged_from_lookup_text(text) == TaggedField(0, field_00=text)
+
+
+def test_lookup_text_persona_character_body_slots_and_exact_wire():
+    # #227's caller uses persona first (3e0), character second (420).
+    persona = tagged_from_lookup_text(b"{00010203-0405-0607-0809-0A0B0C0D0E0F}suffix\x00tail")
+    character = tagged_from_lookup_text(b"{00010203-0405-0607-0809-0a0b0c0d0e0f}")
+    # The first prefix exceeds38 bytes and remains text. The second is raw/tag7.
+    prefix = b"{00010203-0405-0607-0809-0A0B0C0D0E0F}suffix"
+    assert persona == TaggedField(0, field_00=prefix)
+    assert character == TaggedField(7, field_20=bytes(range(16)))
+    record = replace(_record({}), field_3e0=persona, field_420=character)
+    golden = MINIMUM[:64] + b"\x00\x2c" + prefix + b"\x07" + bytes(range(16)) + b"\x00"
+    assert len(prefix) == 44
+    assert encode_body(record) == golden
+    assert decode_body(golden) == (record, len(golden))

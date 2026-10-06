@@ -124,6 +124,52 @@ class TaggedField:
             _check_bytes("field_00", self.field_00)
 
 
+def _parse_lookup_uuid(text: bytes) -> bytes | None:
+    if not 32 <= len(text) <= 38:
+        return None
+    cursor = int(text.startswith(b"{"))
+    hyphenated = False
+    raw = bytearray()
+    for index in range(16):
+        if index == 4 and text[cursor:cursor + 1] == b"-":
+            hyphenated = True
+            cursor += 1
+        elif hyphenated and index in (6, 8, 10):
+            if text[cursor:cursor + 1] != b"-":
+                return None
+            cursor += 1
+        pair = text[cursor:cursor + 2]
+        if len(pair) != 2 or any(byte not in b"0123456789ABCDEFabcdef" for byte in pair):
+            return None
+        raw.append(int(pair, 16))
+        cursor += 2
+    # The selected parser does not check a closing brace or full consumption.
+    return bytes(raw)
+
+
+def tagged_from_lookup_text(text: bytes) -> TaggedField:
+    """Convert a bounded owned lookup string in the proved ASCII domain.
+
+    Truncate at its first NUL. Invalid parses and mixed lettercase retain that
+    prefix as text; valid single-case parses produce the active raw16/tag arm.
+    Non-ASCII prefixes and full inputs over MAX_STRING_BYTES are rejected.
+    Native inactive storage, locale and allocation behavior are not modeled.
+    """
+    _check_bytes("lookup text", text)
+    prefix = text.split(b"\x00", 1)[0]
+    if not prefix.isascii():
+        raise ValueError("lookup text before its first NUL must be ASCII")
+    raw = _parse_lookup_uuid(prefix)
+    lower = any(97 <= byte <= 122 for byte in prefix)
+    upper = any(65 <= byte <= 90 for byte in prefix)
+    if raw is None or lower and upper:
+        return TaggedField(0, field_00=prefix)
+    tag = (1 | (2 if prefix.startswith(b"{") else 0)
+           | (4 if prefix[8] == 45 or prefix[9] == 45 else 0)
+           | (0 if lower else 8))
+    return TaggedField(tag, field_20=raw)
+
+
 @dataclass(frozen=True)
 class RegistrationRequestBody:
     field_08: int

@@ -1,5 +1,9 @@
 # Offline current V3 registration request body codec — #225
 
+Later offline implementation: [#228's optional lookup-text helper](REGISTRATION_LOOKUP_TEXT_CODEC.md)
+converts the #227 proved ASCII domain into this API's active `TaggedField`.
+Its first-NUL and permissive parser rules are separate from general BODY raw strings.
+
 Later source closure: [#227's setup input producer](REGISTRATION_SETUP_INPUTS.md)
 joins the actual persona/character lookup caller, registered string provider,
 local text/raw/tag conversion and request copies. Current values, authentication
