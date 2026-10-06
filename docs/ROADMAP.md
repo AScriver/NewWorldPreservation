@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#223 source result, October 6: selected V3 field+0x2c8 now joins three BE32
+bit fields, eight raw counted strings and a strict boolean. Writer/reader inline
+boundaries differ; exact tail/ABI joins and partial status/cursor behavior are
+closed. Fresh default scalar+0=15, nonoverlapping string/boolean layout and
+ordinary owned-string failure disposal are established. [2c8 contract](REGISTRATION_REQUEST_2C8_CODEC.md),
+J223-1–4 / K239–K242 and [receipt](../research/evidence/current-registration-request-2c8-codec.json)
+retain corrected PDATA/tail interpretations, semantic warnings, copy-before-bounds
+and lifetime limits. Separate +0x3e0 schema remains next; full request body/framing,
+field authority, #212 and Milestone 1 remain open. Continue the next eligible #164
+leaf after this scoped commit/completion/release.
+
 #222 source result, October 6: the selected V3 field+0xc0 now has a complete
 paired schema: fifteen raw counted strings, five BE32 bit fields, one raw byte
 and a presence-first optional boolean. Default construction/owned-string normal

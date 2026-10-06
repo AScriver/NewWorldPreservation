@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-2c8-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K239",
+        "K240",
+        "K241",
+        "K242"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_2C8_CODEC.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-2c8-codec.json",
+          "classification": "source-inference",
+          "scope": "#223 complete selected2c8 paired schema, exact ABI/tail and PDATA correction, incremental read/status, fresh defaults and ordinary owned-string disposal; executed static/offline checks separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Ordinary fresh construction/control flow only; folded/partial writer decompilations retained and corrected using instructions. Separate3e0/fullbody/framing/discriminator/authoritative meaning/#212/gameplay gates open. No native/client execution."
+    },
+    {
       "id": "current-registration-request-c0-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1097,6 +1123,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-2c8-codec.json",
     "research/evidence/current-registration-request-c0-codec.json",
     "research/evidence/current-registration-request-collection-codec.json",
     "research/evidence/current-registration-request-serializer.json",

@@ -109,3 +109,10 @@ writer/reader schema, followed by the other separately scoped nested fields.
 [Complete field+0xc0 schema](REGISTRATION_REQUEST_C0_CODEC.md) now closes that
 separate prerequisite at the same image. Field+0x2c8/+0x3e0 and full body/framing/
 authority remain open; #221 evidence above retains its original collection scope.
+
+## Follow-up #223
+
+[Complete field+0x2c8 schema](REGISTRATION_REQUEST_2C8_CODEC.md) now closes the
+next nested prerequisite at the same image. Exact PDATA and instructions correct
+the prior missing-metadata interpretation; #221 collection findings remain scoped.
+Separate +0x3e0, full body/framing and field authority remain open.

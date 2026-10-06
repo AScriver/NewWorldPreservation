@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current V3 field+0x2c8 codec — October 6, #223
+
+Clean input main `1249cd50ef1a27c5d0d0231b1484caf310b2163a`, refreshed pinned
+image/map/references; source, dirty report identities and executed checks:
+[original receipt](../research/evidence/current-registration-request-2c8-codec.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K239 | Actual 2c8 writer/reader close a paired schema | Instruction/ABI-supported three BE32 fields, eight strings and strict boolean; distinct inline boundaries and final tail chain. Field meanings unknown | [2c8 contract](REGISTRATION_REQUEST_2C8_CODEC.md), J223-1 |
+| K240 | Cursor/output effects are incremental and field-specific | Boolean missing3/invalid4, BE32 short2; eight strings code1/copy before extent; no rollback or meaningful success error byte. Native fault/exception behavior unexecuted | [2c8 contract](REGISTRATION_REQUEST_2C8_CODEC.md), J223-2 |
+| K241 | Fresh defaults and ordinary owned-string disposal have concrete owners | Scalar+0 defaults15; eight empty SSO strings/false boolean do not overlap. Selected top flag0 failure destroys strings and retains placement; corrupt/OOM/exception/success caller unknown | [2c8 contract](REGISTRATION_REQUEST_2C8_CODEC.md), J223-3 |
+| K242 | Selected field closure supplies only its schema prerequisite | Exact PDATA corrects historical refusal interpretation; folded decompiler tail checked against instructions. Separate3e0/fullbody/framing/authority/#212/world gates remain | [2c8 contract](REGISTRATION_REQUEST_2C8_CODEC.md), J223-4 |
+
 ## Current V3 field+0xc0 codec — October 6, #222
 
 Clean input main `45f2e47ea9992a616d5e653a41d9930f0597de66`, refreshed pinned
