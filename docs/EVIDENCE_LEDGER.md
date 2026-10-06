@@ -1,5 +1,14 @@
 # Evidence ledger
 
+## Selected local-character override inputs — October6, #255
+
+Baseline clean7af9934; disk-only observations with exact source pins in
+[the receipt](../research/evidence/current-character-identity-override.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K348 | Three selected loose files and exact packaged client.json contain no impersonation override spelling/property | Observed installed/copy/decoded disk inputs; absence is confined to these files, with runtime providers/precedence/availability unknown | Size/SHA/CRC pins, four original detection controls;254 candidate/manifest unchanged |
+
 ## Default-off fresh player trial preparation — October6, #254
 
 Baseline clean `0c97186`; task-owned integration/helper/test/controller/inventory

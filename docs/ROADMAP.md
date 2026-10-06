@@ -21,6 +21,12 @@ rendering and controls are unproved. The300s client cap includes loading and is
 insufficient for five minutes after spawn; the closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
 
+October6 #255 under247/164: [selected owned configurations](CHARACTER_IDENTITY_OVERRIDE.md)
+contain no local-character impersonation override spelling or JSON property.
+Installed/copy/package pins matched; prepared candidate/manifest are unchanged.
+Only this disk-input concern is removed; actual provider availability and player
+designation remain unknown. The admitted creation trial is still the next experiment.
+
 October6 #254 under248/164: one strict SHA-bound fresh record supplies both HTTPS
 children and the original107-byte indexed Carrier candidate. The option is off
 by default; canonical bytes, earlier predecessor/heartbeat failure, once-attempted

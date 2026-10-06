@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-character-identity-override",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K348"],
+      "docs": ["docs/CHARACTER_IDENTITY_OVERRIDE.md"],
+      "scripts": [],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-character-identity-override.json", "classification": "observed-metadata", "scope": "Selected owned disk configuration spelling/property absence; no runtime provider or player observation"}],
+      "limit": "Absence only in selected four file sources; runtime precedence/providers/availability and live creation remain pending. Prepared254 inputs unchanged."
+    },
+    {
       "id": "private-player-creation-trial-preparation",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K344", "K345", "K346", "K347"],

@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "classification": "bounded-owned-file-observation",
+  "workItemId": 164,
+  "actionableId": 255,
+  "parentActionableId": 247,
+  "recordedUtc": "2026-10-06T23:43:04.292688+00:00",
+  "input": {
+    "head": "7af9934ac2013588ab03e9b801f9e39fbcd218a1",
+    "workingTree": "",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "build": 22469132
+  },
+  "exactSetting": "javelin.impersonate-character-id",
+  "observations": [
+    {
+      "source": "installed",
+      "path": "bootstrap.cfg",
+      "bytes": 980,
+      "sha256": "b512b92acc30fe41b2dd7d5072a9dbb19fac1c4d226a78999ee2bcc0d73a7d71",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": null
+    },
+    {
+      "source": "installed",
+      "path": "system_windows_pc.cfg",
+      "bytes": 87,
+      "sha256": "a748c58f4743ca7ced5ff356ba926028a1ec90d9cb4606e038b2d33d84f5128a",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": null
+    },
+    {
+      "source": "installed",
+      "path": "engine.json",
+      "bytes": 66,
+      "sha256": "9c40575c4cbd58a0fdd3466ef1d723dec07408048d5c9256ecfdf7cb7c6a7486",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": []
+    },
+    {
+      "source": "isolated-owned-copy",
+      "path": "bootstrap.cfg",
+      "bytes": 980,
+      "sha256": "b512b92acc30fe41b2dd7d5072a9dbb19fac1c4d226a78999ee2bcc0d73a7d71",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": null
+    },
+    {
+      "source": "isolated-owned-copy",
+      "path": "system_windows_pc.cfg",
+      "bytes": 87,
+      "sha256": "a748c58f4743ca7ced5ff356ba926028a1ec90d9cb4606e038b2d33d84f5128a",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": null
+    },
+    {
+      "source": "isolated-owned-copy",
+      "path": "engine.json",
+      "bytes": 66,
+      "sha256": "9c40575c4cbd58a0fdd3466ef1d723dec07408048d5c9256ecfdf7cb7c6a7486",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": []
+    },
+    {
+      "source": "cached-CRC-verified-owned-package-decoding",
+      "path": ".scratch/preservation-spawn-20261006/owned-client-json.bin",
+      "member": "client.json",
+      "bytes": 1952,
+      "sha256": "efc639fc8ec84d405921136e36bc7510f2602da18e9473ba3d3df708ee85899d",
+      "exactKeyPresent": false,
+      "caseFoldKeyPresent": false,
+      "leafSpellingPresent": false,
+      "jsonSelectedProperties": []
+    }
+  ],
+  "packageSourcePins": [
+    {
+      "source": "installed",
+      "path": "assets/DataStrm.pak",
+      "bytes": 1085098995,
+      "sha256": "b043b639907a9e0dadba567b8d4995d5c50e5b2d2c51aeac4789867f22e60e9a"
+    },
+    {
+      "source": "isolated-owned-copy",
+      "path": "assets/DataStrm.pak",
+      "bytes": 1085098995,
+      "sha256": "b043b639907a9e0dadba567b8d4995d5c50e5b2d2c51aeac4789867f22e60e9a"
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "path": "research/evidence/current-player-designation-join.json",
+      "sha256": "f2ed323a76aaed81029691a42f10b11bc9a136d5d51c47a4f6bf045f570051dd"
+    },
+    {
+      "path": "research/evidence/owned-player-delivery-index-20261006.json",
+      "sha256": "505f35e21e88c7f3c280919f83ab4b842aff10d63b99e3480297fa5673a90afe"
+    },
+    {
+      "path": "research/evidence/private-player-creation-trial-preparation.json",
+      "sha256": "091c57bb98623b242d62a24a21062a413d9dcbc6c7ad1942ab20940df53dfd73"
+    }
+  ],
+  "preservedPreparation": {
+    "manifestSha256": "d93302581dfef7276153a0cb7785c2091a7c7c71723c69242c1632a49c0fab80",
+    "candidateSha256": "d836b1e3ae70e636bca5fe4d4050a23805154c203936b9074c4f9a232d4aed96",
+    "typedBytes": 107,
+    "approval": "pending"
+  },
+  "originalDetectionControls": 4,
+  "selectedOverrideSpellingOrPropertyMatches": 0,
+  "limits": [
+    "Absence only in three selected loose files and one exact packaged JSON, at recorded disk identities",
+    "No runtime provider/precedence/command-line/environment/profile or local-wrapper availability observation",
+    "Existing209 queue-ID-to-setter/provider/comparison join reused; no native function rerun",
+    "No config edit, native game code/client/controller/hook/listener/system action",
+    "New creation send and all actual player/network/control/restart acceptance remain pending"
+  ],
+  "clientStarted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "rawValuesExported": false,
+  "cleanup": "Synchronous disk-only helper; no runtime resources acquired. Original metadata remains ignored until reviewed.",
+  "claimIds": [
+    "K348"
+  ],
+  "sourceProbe": {
+    "path": ".scratch/one-player-20261006/check_character_override.py",
+    "sha256": "d5c5adf76150130d3ca7c856e627585414446e5459bfc18f6f0e423addc81033",
+    "scope": "original ignored disk-only observation helper"
+  },
+  "sourceInputs": [
+    {
+      "path": "docs/CHARACTER_IDENTITY_OVERRIDE.md",
+      "sha256": "a7bfef59e19d07742f9d435aeb7e753e2a5d3d52e251e0781b5f1394af24e351"
+    },
+    {
+      "path": "scripts/project_preflight.py",
+      "sha256": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee"
+    },
+    {
+      "path": "tests/test_project_preflight.py",
+      "sha256": "b743a3333c56e4017b5e12aa19e549c6bae7abe5ee0ab237ecc6da8c992fe48a"
+    }
+  ],
+  "verification": {
+    "workspaceReuse": {
+      "receipt": ".scratch/offline-validation/run-3hxu57pp/receipt.json",
+      "sha256": "56b2987b5e9f91b13f490c1c84275b13679d9d6ade71c13599b8aa09c0e5b368",
+      "python": {
+        "selectedFiles": 48,
+        "collected": 1388,
+        "executed": 1388,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 61068
+      },
+      "scope": "All selected executable/test inputs unchanged; metadata-only catalog/doc delta revalidated separately."
+    },
+    "fourOriginalDetectionControls": "passed",
+    "reviewCorrection": "The initial ledger review used the Windows default text encoding and failed on UTF8. Explicit UTF8 reading repaired the verifier; selected observations and prepared inputs were unaffected.",
+    "focusedPreflight": {
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "receipt": ".scratch/one-player-20261006/identity-override-preflight.xml",
+      "sha256": "fabe844fac3217e69cff04e47e94b0901e0eb6829a90867a06be065d883345e8"
+    }
+  }
+}

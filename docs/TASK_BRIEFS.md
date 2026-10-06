@@ -1,5 +1,17 @@
 # Bounded task briefs
 
+## #255 — selected identity-override inputs (S)
+
+- Removes a selected disk-setting mismatch concern before the fresh-player trial.
+  Reuse209's queue/setter/provider chain; no new native analysis or hooks.
+- Baseline clean7af9934. Own only concise observation receipt/doc/navigation;
+  check installed/copy three pinned loose files, cached packaged JSON/SHA/CRC and
+  source package hashes. Export no values/client text. Preserve254 preparation.
+- Original detection controls and current input/privacy/catalog/document review;
+  focused preflight checks for changed catalog, reuse unaffected workspace support.
+- No config/system/client/listener action. Runtime provider/precedence/local-player
+  designation and separate live-send grant remain pending. Commit/release this unit.
+
 ## #254 — default-off integrated creation trial preparation (M)
 
 - Removes the remaining omitted creation payload after context activation;
