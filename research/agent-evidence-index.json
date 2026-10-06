@@ -12,6 +12,34 @@
   },
   "boundaries": [
     {
+      "id": "current-player-member-application",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K287",
+        "K288",
+        "K289",
+        "K290",
+        "K291",
+        "K292"
+      ],
+      "docs": [
+        "docs/PLAYER_MEMBER_APPLICATION.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-member-application.json",
+          "classification": "source-inference",
+          "scope": "#235 conditional decoded pair/application/registered creation dispatch; role correction, source challenge and regressions distinct"
+        }
+      ],
+      "limit": "Nonempty1\u201332 ordering/empty-slot/predicate/active handler/interception/bothmapmiss/allocation/state/resource/reflection guards. Larger ordering, concrete member class/schema, runtime/player/world/M1 unknown."
+    },
+    {
       "id": "current-player-entity-clone",
       "roadmapTasks": [
         "M1-06A"
@@ -1600,6 +1628,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-member-application.json",
     "research/evidence/current-player-entity-clone.json",
     "research/evidence/current-player-entity-vector.json",
     "research/evidence/current-player-entity-binding.json",

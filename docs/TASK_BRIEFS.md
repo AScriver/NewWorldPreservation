@@ -1,5 +1,14 @@
 # Bounded task briefs
 
+## #235 — decoded-member application role correction (workItemId164, parent177)
+
+- Intended result expressly allowed concrete member selection or a supported correction of its presumed creation role. Positive conditional application/builder join meets the latter; selected class/schema remains open.
+- Pins/relevant dirty/source and original primary ledger recorded in Researching; independent initial forward/backward roles, targeted review and adjudication preceded Ready/In progress edits.
+- Owned: original application doc/receipt and small235 ROADMAP/ledger/index/brief/handoff/catalog entries. Exact spans versus bounded windows, initial/partial failures and larger-count unknown retained.
+- Checks: source/artifact seals, focused tooling and required workspace, preserved unrelated inputs, staged scope review and local incremental commit. Receipt carries exact results.
+- Excluded: native/client/live/process reads/hooks/captures/endpoints/credentials/replay, guessed codecs/auth design, upstream/push/publication/messages/165 or M1 claims.
+- Next: release and immediately select meaningful permitted164 work; registry member factory/schema and operation state/source guards remain source prerequisites.
+
 ## #234 — nested Entity clone and Id treatment (workItemId164, parent232/177)
 
 - Intended outcome and guards were recorded in Researching before work; exact

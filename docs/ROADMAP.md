@@ -1,5 +1,7 @@
 # Milestone 1 roadmap
 
+#235 source closure, October6: on the inspected nonempty1–32-entry route, sorted decoded member pairs reach the exact empty application slot. Separate guarded application dispatch now reaches the established GDEStreamer creation builder. [Application contract](PLAYER_MEMBER_APPLICATION.md), K287–K292 and [receipt](../research/evidence/current-player-member-application.json) retain sorting, predicate, registration, interception, freshness and lifetime conditions. The PlayerComponent descriptor belongs a module descriptor list. Concrete selected class/schema, larger-count ordering, #212, #232 aggregate, parent177/164 and bilateral movement remain open. Offline checks establish no native/gameplay acceptance.
+
 #234 source closure, October 6: the actual nested pointer adapter now reaches
 Entity allocation and destination storage, followed by original Id copying and
 the producer's conditional XOR/identity remapping. The reflected generator is

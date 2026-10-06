@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current decoded-member application and creation dispatch — October6, #235
+
+Clean input87c54b7. Instruction-supported inference and executed file-only checks; no native/client execution. [Contract](PLAYER_MEMBER_APPLICATION.md), [receipt](../research/evidence/current-player-member-application.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K287 | Decoded pair reaches exact empty application slot | Nonempty1–32 insertion ordering preserves pair, first decoded ordinal can change; truthy predicate and oldslotempty required; larger routes unknown | J235-1 |
+| K288 | Separate applier dispatch reaches registered GDEStreamer builder | False key predicate, live active handler, non-consuming interception and usable result; exact table/thunk/+40 adjustment | J235-2 |
+| K289 | Operation copies descriptor/value and conditionally creates fresh receiver | Both maps miss, allocations succeed; map retains operation, raw queue and weak job differ; state2/resource still required | J235-3 |
+| K290 | PlayerComponent descriptor belongs module list | Actual slot8 name getter differs from parser create slot; no concrete member factory or decoded schema | J235-4 |
+| K291 | Application inputs join existing conditional clone/binding continuation | Fresh receiver is not successful Entity/PlayerComponent creation; all earlier source/default/reflection/job guards retained | J235-5 |
+| K292 | Targeted review corrected ordinal and retained acceptance limits | First-decoded ordinal falsified;1–32 pair provenance/conditional dispatch survive; concrete registryNullType has empty factory, selected class/schema unknown | J235-6 |
+
 ## Current nested Entity clone and Id treatment — October 6, #234
 
 Clean input2097ac6; instruction-supported inference and executed file-only source
