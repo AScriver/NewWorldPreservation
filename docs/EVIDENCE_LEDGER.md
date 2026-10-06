@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Exact owned player resource — October6, #246
+
+Baseline clean0d2f93c, same pinned image; resolver/test/doc edits dirty during
+verification. [Contract/API](OWNED_PLAYER_RESOURCE.md) and
+[receipt](../research/evidence/owned-player-resource-20261006.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K320 | Current RASC v1 reader establishes40-byte rows and raw16/u32 keys |146367ca0/1462d6a30; fields and pool indices checked against instructions; unrelated dependency sections unparsed | Private source/instruction seals |
+| K321 | Exact player path supplies raw16 a660eeeb…1731 and suffix2 | Current catalog/package observation; corrected neighboring-row hypothesis; both key pairs agree; no native load | Catalog/ZIP hashes and exact row |
+| K322 | Creation AssetId reader/writer has the same raw16/u32 representation |1417b3670/141727250; BE32 on wire; candidate input, not gameplay validity | Source seals and synthetic literal |
+| K323 | Original lookup enforces file identity and ambiguity guards | Hashes before/after; bounded stored catalog only; no slice decompression; stricter offline policy | Resolver/focused/workspace checks |
+| K324 | Fresh player/runtime acceptance remains open | Path-provider+b8 target unjoined; nativeRAOCv2 branch corrected; GdeRef/identity/designation/world-entry unknown | Contract limits |
+
 ## Type8 bundle BODY and bounded payload — October6, #239
 
 Clean baseline d1b3bbd, pinned source/mapping and #238/#207 support refreshed.

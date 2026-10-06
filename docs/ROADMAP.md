@@ -1,5 +1,18 @@
 # Milestone 1 roadmap
 
+October6 player resource, #246 under190/164: the exact owned
+`slices/player.dynamicslice` RASC record supplies raw16
+`a660eeebebc75cb7be6bab11eb831731` and suffix2. The original file-only resolver
+pins the image, catalog and both packages, reconstructs the proved40-byte record
+grammar and checks exact ZIP metadata without decompressing the slice.
+[Source/API and limits](OWNED_PLAYER_RESOURCE.md),
+[receipt](../research/evidence/owned-player-resource-20261006.json), K320–K324.
+Focused91cases and required workspace1,204Python cases/42modules, four PowerShell
+suites and closed synthetic loopback lifecycle passed; results are in that receipt.
+Native path-provider binding, runtime asset loading, valid GdeRef/identity and
+player designation remain unobserved. Continue child247, then candidate248;
+parent190 and visible world-entry/Milestone1 acceptance remain open.
+
 October 6 Discord player-creation guidance retained: the user relayed
 `player.dynamicslice` as the resource target and a deterministic GdeRef recipe
 with nonzero halves and an even low64. [Attributed summary and local leads](COMMUNITY_PLAYER_CREATION_GUIDANCE.md)

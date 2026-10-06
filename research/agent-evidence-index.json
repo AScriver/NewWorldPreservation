@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "owned-player-resource",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K320", "K321", "K322", "K323", "K324"],
+      "docs": ["docs/OWNED_PLAYER_RESOURCE.md"],
+      "scripts": ["scripts/owned_player_resource.py"],
+      "tests": ["tests/test_owned_player_resource.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/owned-player-resource-20261006.json", "classification": "source-inference", "scope": "Current catalog/package observation, original guarded file lookup and explicit runtime limits"}],
+      "limit": "Resource input candidate only; native provider binding, load, GdeRef/identity/player/world-entry unobserved."
+    },
+    {
       "id": "current-type8-bundle-body",
       "roadmapTasks": [
         "M1-06A"

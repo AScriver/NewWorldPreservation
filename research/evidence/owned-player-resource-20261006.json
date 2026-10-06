@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "classification": "source-inference-and-file-only-observation",
+  "workItemId": 164,
+  "actionableId": 246,
+  "parentActionableId": 190,
+  "recordedUtc": "2026-10-06T20:55:39.974739+00:00",
+  "input": {
+    "head": "0d2f93cb94962e35c7e0f21ddab72bf8f4dea13b",
+    "workingTree": "Task-owned original lookup, tests, inventory and documentation additions dirty during checks; private source runs began clean at the same baseline.",
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "pinnedOwnedFiles": {
+      "Bin64/NewWorld.exe": {
+        "bytes": 179204176,
+        "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+      },
+      "assets/Engine.pak": {
+        "bytes": 673824605,
+        "sha256": "b5405246d9856acfdd8aa2d56f8d02d40a4b3d524542b7eaed182358a3d77329"
+      },
+      "assets/SharedDataStrm-part8.pak": {
+        "bytes": 138144760,
+        "sha256": "a914b6a834c5c7832b065955b8b8bfa2ab1b90004b26ff5bcef9d8397cc36751"
+      }
+    },
+    "catalog": {
+      "member": "Engine.pak/assetcatalog.catalog",
+      "bytes": 283026856,
+      "sha256": "7875baffb58ee5454507e5d6e4b035705cf28e2bf02ea1310ca6058dbfd34680"
+    }
+  },
+  "claimIds": [
+    "K320",
+    "K321",
+    "K322",
+    "K323",
+    "K324"
+  ],
+  "resource": {
+    "path": "slices/player.dynamicslice",
+    "package": "SharedDataStrm-part8.pak",
+    "raw16": "a660eeebebc75cb7be6bab11eb831731",
+    "field_20": 2,
+    "associatedIdMatches": true,
+    "rowOffset": 24364840,
+    "uuidIndex": 193616,
+    "raw16FileOffset": 162044480,
+    "directoryIndex": 407228,
+    "filenameIndex": 26393786,
+    "opaqueRow18": 367528,
+    "zip": {
+      "bytes": 367528,
+      "compressedBytes": 44796,
+      "method": 15,
+      "crc32": 2771195730
+    }
+  },
+  "sourceSpans": [
+    {
+      "entry": "0x146367ca0",
+      "ranges": [
+        {
+          "start": "0x146367ca0",
+          "endExclusive": "0x1463684b1",
+          "sha256": "7d678311474c8efe172407a4b6eaca8933d35dd59f6f7e15df749cba2f197125"
+        }
+      ]
+    },
+    {
+      "entry": "0x1462d6a30",
+      "ranges": [
+        {
+          "start": "0x1462d6a30",
+          "endExclusive": "0x1462d6b3e",
+          "sha256": "1fe201fca97ba8198b77303ffa3f7ea5311128f61831aa6f08ca922e6e8fdd54"
+        }
+      ]
+    },
+    {
+      "entry": "0x14639e9c0",
+      "ranges": [
+        {
+          "start": "0x14639e9c0",
+          "endExclusive": "0x14639eaa2",
+          "sha256": "4817672ad35f73e20ffc95731075e085f4399f28a116fcf12c245edb85c3ae2e"
+        }
+      ]
+    },
+    {
+      "entry": "0x1463686b0",
+      "ranges": [
+        {
+          "start": "0x1463686b0",
+          "endExclusive": "0x146368f12",
+          "sha256": "763e0bb19ca8b606871c3df93e4eb67a6eee27331d65e8518729fea6dc03cae3"
+        }
+      ]
+    },
+    {
+      "entry": "0x1417b3670",
+      "ranges": [
+        {
+          "start": "0x1417b3670",
+          "endExclusive": "0x1417b36fd",
+          "sha256": "03626dd6939fe32a3603c2c16748ae204c5680011129bdca98aa556c1cc1fbcb"
+        }
+      ]
+    },
+    {
+      "entry": "0x141727250",
+      "ranges": [
+        {
+          "start": "0x141727250",
+          "endExclusive": "0x141727294",
+          "sha256": "81f17663033b7dfc59ccaea93097b937221e17bf919e2b93133803dd3b1616b0"
+        }
+      ]
+    }
+  ],
+  "privateArtifacts": [
+    {
+      "path": ".scratch/preservation-catalog-native-20261006-agent/native-evidence.json",
+      "sha256": "daac6bc82165e8a2fffd0bddaf52a63f3047d78979a259445177a1aeb6c24c78"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/catalog-cross.json",
+      "sha256": "d2e2279f84449c6d5d2e442bedd1292cb245c155dcce78f0536dfd1939f6ec59"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/catalog-instructions.json",
+      "sha256": "5a9b717889ecbd77c10af0a8cc09af56f6895ef0990965f8c660f49f70e8f56e"
+    }
+  ],
+  "originalSources": {
+    "scripts/owned_player_resource.py": "2e34aa741fbc70bc464c833d17f0f3cba6e2cb815b2900da5a23b1ce9ee5316e",
+    "tests/test_owned_player_resource.py": "b2b125b13e43503b225c497bae05b731ce8230d0186c8839f440dfc78ac15662",
+    "scripts/offline-test-profiles.json": "0b109e95ee5a5e1ff8c3f74c08a8dae15da3e30969fc2b233450d632c0fd34ce",
+    "scripts/validate_offline.py": "b73800c467554634a0a836bb132476fa11bb6f32109e49ffd32fa58536ca953a",
+    "tests/test_offline_runner.py": "b458f01456c9d7fe93e0c516889e86edd3471090610d6b6d27e9c3b84efeb493",
+    "docs/OWNED_PLAYER_RESOURCE.md": "c154b2c4607993c71752ef7456a41de32e79d0554bd938141903c7e1fcaf0c3d"
+  },
+  "correctedEvidence": [
+    "Initial unproved record alignment mixed neighboring rows; native40-byte stride selects player suffix2 and367528. Suffix100/281325 belong to remoteplayer.dynamicslice.",
+    "Initial nativeRAOCversion2-rejection claim was falsified by the version2 branch at146368b9f and withdrawn; the original resolver only implementsRASC.",
+    "Instruction-check imports failed in workspace/shared Python before locating the existing private inspection-tools Capstone package; no installation or source mutation was needed."
+  ],
+  "verification": {
+    "ownedLookup": "Passed; exact pinned installed files checked before and after; resolved the stated key; no slice member read.",
+    "focused": "Passed91cases across test_owned_player_resource.py, test_current_creation_member_body.py and test_offline_runner.py; .scratch/preservation-spawn-20261006/resource-focused.xml.",
+    "workspace": {
+      "status": "passed",
+      "receipt": ".scratch/offline-validation/run-yi22pswy/receipt.json",
+      "sha256": "b086355516282239d5e646fcc20a46f8b6a4968486eb421ce744c26314fc3aa2",
+      "python": {
+        "selectedFiles": 42,
+        "collected": 1204,
+        "executed": 1204,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershellSuitesPassed": 4,
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 59764
+      },
+      "scope": "Executed against task-owned dirty code/fixtures/docs; code inputs unchanged since. Final receipt update records results only."
+    },
+    "static": "Four bounded Ghidra queries passed/sourceStable; primary finite instruction review corroborates RASC rows/key and AssetId field representation and correctsRAOC version claim.",
+    "focusedJUnitSha256": "a61563a65c7d2a34751cf62087a0e78e17c735c5757f456a86115771a131dc24"
+  },
+  "limits": [
+    "Native path-provider slot+b8 concrete target and method name remain unjoined; reconstructed representation is a creation input candidate, not proof of native resource load.",
+    "Opaque u64 semantics, unrelated dependency sections and runtime catalog selection are unproved.",
+    "GdeRef validity/local identity/player designation, visible private world entry and Milestone1 remain open."
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "sliceExtracted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "milestone1": "not tested"
+}
