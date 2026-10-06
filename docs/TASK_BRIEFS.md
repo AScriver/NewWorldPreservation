@@ -1,5 +1,27 @@
 # Bounded task briefs
 
+## #252 — original creation/identity composition (M)
+
+- Removes the first live-path payload omission after context initialization:
+  constructs one nonempty original candidate; actual player creation remains pending.
+- WorkItem164, parent248/190/171. Baseline clean e73121e; checkpoint6cee4dc;
+  pinned owned build22469132/image8654f01d/mappingf1e2385f and reused contracts.
+- Owns candidate/record code, synthetic tests, reviewed inventory, original receipt
+  and focused documentation/navigation. Preserve unrelated files. Raw source and
+  disposable probes remain in ignored unique task scratch.
+- Independent trial execution/identity ownership maps, primary ledger, targeted
+  challenge and original constraints preceded implementation. Original typed
+  composition selects two proved classes and requires explicit slot/keys/table,
+  owned asset, once-assigned reference, nonempty NUL-free identity and conditional
+  resource-index key9. Creation must sort before identity.
+- Verify literal/malformed/extent/fresh-assignment and old creation behavior,
+  independent focused checks, required workspace, source seals, task-only staged
+  diff/local increment and Actionables completion/release.
+- Excluded: new sends/hooks, client/runtime/native execution, game endpoints,
+  credential or historical actor replay, unrelated features, upstream edits,
+  publishing and Milestone1 claims. Fresh backend propagation and admitted
+  integrated experiment remain next work; over127 outer placement is unjoined.
+
 ## #239 — current type8 BODY and payload boundary (M)
 
 Under177/work164. Pre-work outcome/acceptance/exclusions recorded in Actionables

@@ -12,9 +12,23 @@ restarts. All remain pending; preserve the two-client acceptance below.
 Furthest private live behavior: the0655 trial reached SelfIdentification and
 context initialization, then selection/spawn timeout; its type8 bundle was empty.
 Current obstacle: no fresh creation/identity member reaches the live path.
-Next selected leaf252 composes the original nonempty candidate; fresh identity
-propagation, conditional component delivery and an admitted integrated trial
-follow. Native construction, designation, rendering and controls are unproved.
+Leaf252 now composes the original nonempty candidate offline. Next: fresh
+identity propagation, conditional component delivery and an admitted integrated
+trial. Native construction, designation, rendering and controls are unproved.
+
+October6 #252 under248/190/171/164: the original two-class record and
+[creation/identity type8 candidate](PLAYER_CREATION_CANDIDATE.md) are implemented.
+Explicit owned AssetId, assigned GdeRef/known collision set, nonempty NUL-free
+identity, slot/selectors/table and conditional resource-index key9 are required;
+strict key ordering keeps creation first on the examined native application route.
+Raw/indexed original test messages are139/107 bytes; no outer-length or new live
+send is added. Targeted345 checks, independent29 probes and required workspace
+passed; [receipt](../research/evidence/current-player-creation-candidate.json)
+records exact source/input identity. Historical real-client result is unchanged:
+context initialization, then spawn timeout. Next propagate one fresh backend
+character identity through login-info/queue/member before an admitted candidate
+trial. Native mode/selection/loading/designation and one-player acceptance remain
+pending; two-client roadmap is retained.
 
 October6 owned player delivery index, #251 under248/164: one CRC/hash-verified
 PlayerComponent in the decoded owned player slice has baked index9 under the
@@ -686,9 +700,9 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 October6 refocus is active: one fresh visible controllable private player is the
 immediate milestone. The last private trial initialized context but sent an empty
-bundle and timed out without a player. Child252 is composing the original bounded
-creation/identity candidate from the recorded resource, fresh-reference and
-identity BODY support. Resource index9 remains conditional on unobserved runtime
+bundle and timed out without a player. Child252 now constructs the original bounded
+creation/identity candidate offline from the recorded resource, fresh-reference
+and identity BODY support. Resource index9 remains conditional on unobserved runtime
 mode/native loading. Fresh identity must also propagate consistently through
 bootstrap/queue and the member. Composition does not admit a new live send;
 record/Carrier placement, runtime delivery, designation, context readiness,

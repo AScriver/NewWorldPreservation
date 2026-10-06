@@ -24,7 +24,7 @@ PS_VALIDATOR = Path(r"C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1")
 PYTHON_TIMEOUT = 180
 PS_TIMEOUT = 120
 CLI_TIMEOUT = 20
-REVIEWED_GROUP_SIZES = {"fixtures-static": 19, "protocol-loopback": 12, "windows-native": 4,
+REVIEWED_GROUP_SIZES = {"fixtures-static": 20, "protocol-loopback": 12, "windows-native": 4,
                         "tooling": 8, "powershell": 4, "rep-readonly": 1, "frida-trial": 1}
 WORKSPACE_MEMBERS = ["fixtures-static", "protocol-loopback", "windows-native",
                      "tooling", "powershell", "rep-readonly", "frida-trial", "cli-lifecycle"]

@@ -67,7 +67,9 @@ payload bits followed by little-order payload bytes. Decoding preserves native
 nonminimal encodings, f8–ff aliases and uint32 wrapping; record slot then narrows
 to16 bits. Decoding and re-encoding can therefore canonicalize bytes. The existing
 [BODY codec](CREATION_MEMBER_BODY.md) retains its stronger unsupported-mask and
-continuation gates. Only the selected creation class is decoded.
+continuation gates. The later [player candidate](PLAYER_CREATION_CANDIDATE.md)
+extends exact class selection to the separately proved identity BODY; arbitrary
+classes remain refused. Existing creation-only literal bytes stay unchanged.
 
 An unknown class cannot be skipped safely without its schema. Native member
 failure calls `140873220`/`140879590` to drain the current supplied stream before

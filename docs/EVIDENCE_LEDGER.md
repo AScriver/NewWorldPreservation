@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Original two-member player candidate — October6, #252
+
+Baseline clean e73121e; goal checkpoint6cee4dc then task-owned code/tests/inventory
+and documentation dirty. [Contract/API](PLAYER_CREATION_CANDIDATE.md) and
+[receipt](../research/evidence/current-player-creation-candidate.json) retain
+selected source/input hashes, offline checks and exact limits.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K337 | Current record codec composes the two proved creation/identity BODY classes | Original offline exact UUID/index selection; unknown classes refused, native outer slot/count writer unjoined | Existing paired key/selector/BODY contract plus original literal tests |
+| K338 | One explicit record can carry owned AssetId/GdeRef and identity text inside current type8 BODY | Original inert composition, two members, strict role ordering; no actual backend character creation, native decode/application or live sends | Composer and extent/malformed/ownership controls |
+| K339 | Candidate rejects unsupported resource/key/mode and inconsistent input domains | Stronger original candidate policy; baked9 and known collision set remain conditional on unobserved runtime state; NUL-free guard is not native BODY grammar | K320-K336 reused with fresh source seals; explicit input negatives |
+| K340 | Raw selector candidate exceeds127 while indexed test candidate does not | Observed synthetic129/136/139 versus98/104/107; no generalized outer-length or runtime table claim, no gameplay acceptance | Independently written literals and targeted size/extent checks |
+
 ## Owned player delivery index — October6, #251
 
 Pinned owned image/build22469132 and selected package/decoded-file hashes;

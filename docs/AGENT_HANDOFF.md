@@ -1,5 +1,24 @@
 # Agent handoff
 
+## #252 one-player priority and candidate — October6
+
+- Current goal/checkpoint: [one actual fresh controllable private player](ONE_PLAYER_MILESTONE.md),
+  five-minute networked control and restart-repeat; all live acceptance pending.
+  Goal/docs recovery checkpoint committed6cee4dc; no project restart.
+- Furthest private live behavior is the closed0655 context initialization and
+  subsequent selection/spawn timeout, under an empty bundle. Current behavior
+  has not advanced from offline checks.
+- Original two-class record and guarded creation/identity type8 composition now
+  implemented; explicit input policy and exact unknowns are in
+  [the candidate contract](PLAYER_CREATION_CANDIDATE.md), K337-K340 and its receipt.
+  Raw139/indexed107 typed test lengths; no new send or length exception.
+- Targeted345 cases, independent29 probes and required workspace passed;
+  source refresh193 spans/77 windows/361 private artifacts and owned pins passed.
+  No game/shared resources created. Complete validated local increment and
+  release252; continue fresh backend identity propagation under247/work164.
+- Next client experiment requires a concrete admitted nonempty candidate; do
+  not repeat the unchanged empty bundle or restart stock trust investigations.
+
 ## #239 type8 BODY — October6 continuation
 
 Outcome: actual paired type8 BODY grammar and fresh retained-payload extent/owner

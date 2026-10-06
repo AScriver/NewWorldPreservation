@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-player-creation-candidate",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K337", "K338", "K339", "K340"],
+      "docs": ["docs/PLAYER_CREATION_CANDIDATE.md"],
+      "scripts": ["scripts/current_player_creation_candidate.py", "scripts/current_creation_replication_record.py"],
+      "tests": ["tests/test_current_player_creation_candidate.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-player-creation-candidate.json", "classification": "synthetic", "scope": "Original exact two-class record/type8 composition with explicit conditional inputs; source seals and offline checks separate"}],
+      "limit": "No fresh backend owner, live sends or native acceptance. Runtime selectors/mode/slot, outer length, resource loading, designation and visible control remain unproved."
+    },
+    {
       "id": "owned-player-delivery-index",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K333", "K334", "K335", "K336"],
@@ -1816,6 +1827,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-creation-candidate.json",
     "research/evidence/current-type8-bundle-body-contract.json",
     "research/evidence/current-type8-bundle-body-validation.json",
     "research/evidence/current-creation-record-validation.json",

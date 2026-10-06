@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "classification": "original-offline-player-candidate",
+  "workItemId": 164,
+  "actionableId": 252,
+  "parentActionableId": 248,
+  "recordedUtc": "2026-10-06T22:50:20.642815+00:00",
+  "claimIds": [
+    "K337",
+    "K338",
+    "K339",
+    "K340"
+  ],
+  "input": {
+    "initialHead": "e73121e3b7b28aa433bd0286f6369e9fd0f6ef91",
+    "initialWorkingTree": "clean",
+    "head": "6cee4dc1038cb4a5e6937df45f5d9db61ff7a333",
+    "workingTree": "M docs/AGENT_HANDOFF.md\n M docs/AGENT_START.md\n M docs/CREATION_REPLICATION_RECORD.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ONE_PLAYER_MILESTONE.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/current_creation_replication_record.py\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/PLAYER_CREATION_CANDIDATE.md\n?? research/evidence/current-player-creation-candidate.json\n?? scripts/current_player_creation_candidate.py\n?? tests/test_current_player_creation_candidate.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "build": 22469132,
+    "version": "1.400.6031.6004151"
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/current_player_creation_candidate.py",
+      "sha256": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d"
+    },
+    {
+      "path": "scripts/current_creation_replication_record.py",
+      "sha256": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817"
+    },
+    {
+      "path": "scripts/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "scripts/current_player_identity_body.py",
+      "sha256": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df"
+    },
+    {
+      "path": "scripts/current_creation_trial_ref.py",
+      "sha256": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6"
+    },
+    {
+      "path": "scripts/current_type8_bundle_body.py",
+      "sha256": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "sha256": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc"
+    },
+    {
+      "path": "tests/test_current_player_creation_candidate.py",
+      "sha256": "8ec4da71c6d74d7bdc904c346e914abeb640d811b7d9308d1bdd3c6364c49d9f"
+    },
+    {
+      "path": "tests/test_current_creation_replication_record.py",
+      "sha256": "5e59e92351b3104d003130d673a49ecc9982cd1625e28afcc5ea3f2aa3ae6f5a"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "1fc36ce3f7814a4a800dca473289eba350b710af7c360630f01eba6185f83106"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "c3cfb9de9d17c2b58ea7ab37c2284d92769db98b0800698d748dedadd0424aa6"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "bede25cb59d7cea2014798f3abd26b91ec08a1aae0a4439b1ae5fcd4312be7bf"
+    },
+    {
+      "path": "docs/PLAYER_CREATION_CANDIDATE.md",
+      "sha256": "b12f3d6bcbb222f81d204a35b4da56f2202dfe10c47d2f18e273f691920e5018"
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "path": "research/evidence/current-creation-member-contract.json",
+      "sha256": "d006316b48dab00b7c3de8b96dabf77a08344a5568517458ec2584f8c85e3149"
+    },
+    {
+      "path": "research/evidence/current-creation-record-contract.json",
+      "sha256": "8134bd845db18adade015778e8198dbafac6a8d668c2989eab7e6e26aa3c5ab9"
+    },
+    {
+      "path": "research/evidence/current-type8-bundle-body-contract.json",
+      "sha256": "f8dd5c24c7786459ff687622838eed670401a3add3368856f28976565d7a46ce"
+    },
+    {
+      "path": "research/evidence/current-creation-trial-ref.json",
+      "sha256": "a02ec51ac463f4bf454bda6f711cd83322297a2f8f3dbd0b61460264a1b83865"
+    },
+    {
+      "path": "research/evidence/current-player-identity-body.json",
+      "sha256": "f6dd2bc5d137d87f8591aa8395412db02d7a861f715d044964ccde11fe5203c1"
+    },
+    {
+      "path": "research/evidence/owned-player-resource-20261006.json",
+      "sha256": "e4e309ff8736f672c8d624b81dcbbe8c19cf2d14b025d1013f3f21377dffa82b"
+    },
+    {
+      "path": "research/evidence/owned-player-delivery-index-20261006.json",
+      "sha256": "505f35e21e88c7f3c280919f83ab4b842aff10d63b99e3480297fa5673a90afe"
+    }
+  ],
+  "sourceRefresh": {
+    "exactNativeSpans": 193,
+    "nativeWindows": 77,
+    "privateArtifacts": 361,
+    "ownedFilePins": 4,
+    "publicReferenceFiles": 2,
+    "classIndexesChecked": [
+      10,
+      3935
+    ],
+    "mappingEntries": 7052
+  },
+  "privateSourceSeal": {
+    "path": ".scratch/one-player-20261006/source-seal.json",
+    "sha256": "655e08f67ea22ee1867e371fa76d673bc53099801a4a2e162b2eb21e5691ec68"
+  },
+  "candidate": {
+    "recordCount": 1,
+    "memberCount": 2,
+    "creationUuid": "203dc8c70c60454ba46f566114314b84",
+    "identityUuid": "bddda784a6e7416ba041449920d90fb6",
+    "assetRaw16": "a660eeebebc75cb7be6bab11eb831731",
+    "assetSuffix": 2,
+    "recordSlot": "explicit caller uint16; runtime suitability unobserved",
+    "creationKey": "explicit uint32, strictly below identity key",
+    "identityKey": 9,
+    "mode": "explicit conditional resource-index",
+    "reference": "caller-assigned once, unmodified, original low64/collision policy",
+    "character": "explicit nonempty NUL-free ID/name; no generated backend owner",
+    "selectors": "raw index0 or explicit matching nil-first class table",
+    "bundle": "constructor-default BODY with one record payload, existing current type8 header",
+    "outerRecord": "reader inverse; native slot/count producer unjoined",
+    "goldens": [
+      {
+        "selectors": "raw0/0",
+        "recordBytes": 129,
+        "bodyBytes": 136,
+        "typedBytes": 139
+      },
+      {
+        "selectors": "indexed10/3935",
+        "recordBytes": 98,
+        "bodyBytes": 104,
+        "typedBytes": 107
+      }
+    ]
+  },
+  "verification": {
+    "focused": {
+      "tests": 345,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "receipt": ".scratch/one-player-20261006/focused.xml"
+    },
+    "independentChecks": {
+      "passed": 29,
+      "failed": 0,
+      "scope": "pure public API: corrupt second/later members, numeric/policy guards, assigned ref retention, slot65535, raw/indexed payload127/128; no outer framing",
+      "scratch": ".scratch/candidate-verify-20261006"
+    },
+    "workspace": {
+      "status": "passed",
+      "profile": "workspace",
+      "receipt": ".scratch/offline-validation/run-dhhri8og/receipt.json",
+      "sha256": "5b79301228c97d2cc2b29856f30867a78788c0b129b2e36798e693762073c17c",
+      "python": {
+        "selectedFiles": 46,
+        "collected": 1351,
+        "executed": 1351,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 57525
+      },
+      "changedInputs": [],
+      "note": "Required workspace input hashes stable during executed run. Later ROADMAP/ledger/candidate-receipt validation-result updates are metadata only; protocol/source/test inputs unchanged."
+    }
+  },
+  "corrections": [
+    "Source-seal helper initially treated a recorded artifact count as a list; corrected schema handling, then rehash passed.",
+    "Initial synthetic golden transcription caused three implementation test failures; corrected literal, targeted repeat passed. Not native/protocol counterevidence."
+  ],
+  "limits": [
+    "Inert original candidate; no fresh backend session/character created by this helper",
+    "Mapping file/index and explicit caller mode are not runtime activation evidence",
+    "Native loading, construction, binding, provider readiness/designation and camera/input unobserved",
+    "Raw typed length139 crosses127; admitted131-byte Self prefix experiment cannot generalize",
+    "No new Carrier placement/ACK/send support or live-send authorization",
+    "Five-minute networked control, server position and restart-repeat acceptance remain pending"
+  ],
+  "clientStarted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "milestone1": "not-proven",
+  "cleanup": "No game/shared services/resources created by this unit; isolated required validation owns its loopback child"
+}

@@ -62,9 +62,10 @@ Verify this chain rather than assuming wire order:
 
 ## Current execution checkpoint
 
-First selected leaf: **#252** under248/190/171/164. It removes the inability to
-compose the already evidenced creation and identity BODYs into one bounded
-original nonempty type8 candidate. Use exact owned resource, a caller-assigned
+Completed offline leaf: **#252** under248/190/171/164 now
+[composes](PLAYER_CREATION_CANDIDATE.md) the already evidenced creation and
+identity BODYs into one bounded original nonempty type8 candidate. Targeted,
+independent and required workspace checks passed. It uses exact owned resource, a caller-assigned
 fresh reference and explicit character identity/record/class/delivery inputs.
 Resource index9 is conditional; reader-inverse record construction and live
 Carrier placement remain experimental. Candidate construction grants no new
