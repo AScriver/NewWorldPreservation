@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-setup-inputs",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K255",
+        "K256",
+        "K257",
+        "K258"
+      ],
+      "docs": [
+        "docs/REGISTRATION_SETUP_INPUTS.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-setup-inputs.json",
+          "classification": "source-inference",
+          "scope": "#227 actual caller/settings provider and concrete getter, tagged-pair producer/retained ownership; executed finite parser models separately classified"
+        }
+      ],
+      "fixtures": [],
+      "limit": "No native/client execution or runtime values. Source joins two named lookups and local representation, not authenticated identity/authority; parser is permissive, output Booleans do not imply absence. Other producers, router writers, #212 and M1 remain unproved."
+    },
+    {
       "id": "current-registration-stream-framing",
       "roadmapTasks": [
         "M1-06B"
@@ -1213,6 +1239,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-setup-inputs.json",
     "research/evidence/current-registration-stream-framing.json",
     "research/evidence/current-registration-request-body-codec-validation.json",
     "research/evidence/current-registration-request-3e0-codec.json",

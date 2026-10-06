@@ -1,5 +1,11 @@
 # Offline current V3 registration request body codec — #225
 
+Later source closure: [#227's setup input producer](REGISTRATION_SETUP_INPUTS.md)
+joins the actual persona/character lookup caller, registered string provider,
+local text/raw/tag conversion and request copies. Current values, authentication
+authority and other setup input producers remain unproved; earlier receipts stay
+historical.
+
 October 6, 2026; workItemId164 / parent178. The selected V3 request BODY now
 has an original pure Python encoder/decoder and synthetic byte fixtures. The
 implementation follows the current descriptor/caller and paired nested schemas

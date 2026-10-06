@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current registration setup input producer — October6, #227
+
+Clean main `17807b1542af522607abb4268beb2ab6fa5e6ebf`; pinned image/build/map,
+source ranges, dirty-file boundaries, failed queries and adjudication:
+[original receipt](../research/evidence/current-registration-setup-inputs.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K255 | Actual caller supplies persona thencharacter into retained/request tagged pair | Source inference, exact ABI/calls; current invocation/values/identity authority unobserved | [Input report](REGISTRATION_SETUP_INPUTS.md), J227-1 |
+| K256 | Registered provider and concrete string getter join the named input lookups | Source inference; same context/container, vtable+1b8, copied stored text or missing-tag empty result; actual receiver/map state and router state writers unknown | [Input report](REGISTRATION_SETUP_INPUTS.md), J227-2; carried K57 rehashed |
+| K257 | Local text conversion produces raw16/format tags or retains string arm | Source inference plus26,112 finite ASCII mutations/12 examples; parser admits trailing/incomplete forms, full-string mixed case can select fallback. No native/nonASCII/identity proof | [Input report](REGISTRATION_SETUP_INPUTS.md), J227-3 |
+| K258 | Owned copies, replacement/default behavior and snapshot limits are qualified | Source inference and targeted review; getter string differs from tagged record, output Boolean does not prove absence, normal cleanup joins. Faults/concurrency/atomic rollback unproved | [Input report](REGISTRATION_SETUP_INPUTS.md), J227-4 |
+
 ## Current registration stream and queued backend — October 6, #226
 
 Clean input main `040d7357dce67f4c98500e9a6e63f5339fc5ecb9`; current image/build,

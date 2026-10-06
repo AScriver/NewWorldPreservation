@@ -1,5 +1,11 @@
 # Current initial registration contract — #210
 
+Later source closure: [#227's setup input producer](REGISTRATION_SETUP_INPUTS.md)
+joins the actual persona/character lookup caller, registered string provider,
+local text/raw/tag conversion and request copies. Current values, authentication
+authority and other setup input producers remain unproved; earlier receipts stay
+historical.
+
 Later source closure: [#226's physical stream and queued backend join](REGISTRATION_STREAM_FRAMING.md)
 supplies concrete reserve/write/header/CRC, vector consumption and pooled chunk
 copying. Actual lower emission, a compact-record inverse, historical860 selection

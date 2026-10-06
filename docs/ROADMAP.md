@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#227 source closure, October6: an actual registration setup caller supplies a
+persona-first/character-second pair through two named settings lookups. The
+registered provider, concrete string getter, local UUID/text conversion and
+retained/request copies are joined. [Input report](REGISTRATION_SETUP_INPUTS.md),
+K255–K258 and [receipt](../research/evidence/current-registration-setup-inputs.json)
+distinguish exact source checks and pure parser models from runtime behavior.
+Current values, authority, other setup producers, #212 and bilateral movement
+remain unproved. Parent178/164 and Milestone1 stay open.
+
 #226 source closure, October 6: the registration sender's physical stream,
 IEEE CRC/header, locked queue consumer and installed backend chunk-copy/enqueue
 path are joined. The exact forwarding ABI separates a selected child pointer
