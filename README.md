@@ -18,12 +18,6 @@ Preserve the legitimately owned PC client and replace only the backend it needs.
 - [Open questions](docs/OPEN_QUESTIONS.md)
 - [Evidence ledger](docs/EVIDENCE_LEDGER.md)
 
-## Completed first task
-
-Reproduced pinned First Light on Windows with an isolated Python environment and existing public redacted fixture. **455 upstream tests passed, one deliberate skip; 9 original validation-gate tests passed.** DTLS context/memory-BIO construction works with an ephemeral self-generated certificate; **no game DTLS handshake, private account, spawn or multiplayer behavior tested**. The later private HTTPS result is separate below.
-
-Source stays clean/external at `63756a3`; no packet guesses or upstream rewrites. Newer Aeternum-World source (`820156d`) was inspected too. All eight visible First Light fork heads match the historical source. Current community lead: [Open World Discord](https://discord.gg/projectopenworld); no public current server source established. See analysis for limits and provenance.
-
 ## Current connectivity slice
 
 **Stock New World `1.400.6031.6004151` / Steam build22469132 reached our private HTTPS server.** Exact accepted-socket owner matched our recorded ordinary Steam launch. The client sent HTTP/1.1 `GET /STEAM_APP_ID.1063730.json` over TLS1.2 to IPv6 localhost443; probe returned deliberate501. Local CurrentUserRoot CA + correct hostname works; absent CA or wrong-name same-CA leaf prevents HTTP; restoration restores HTTP. No memory inspection, binary patch or EAC change. Both temporary CAs removed, hosts restored byte-exact, owned probes/client closed.
