@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current V3 sequence and first collection — October 6, #221
+
+Clean input main `29b570950380785e202f3ffd91c655a80348a428`, refreshed pinned
+image/map/references; exact source, dirty report identities and checks:
+[original receipt](../research/evidence/current-registration-request-collection-codec.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K231 | Selected V3 writer/decoder join aggregate field order | Instruction-supported scalar8/collection10/stringa0/c0/2c8/3e0/final460 edges; 2c8 includes inline fields, larger nested bodies remain unjoined. Partial Ghidra retained | [Collection contract](REGISTRATION_REQUEST_COLLECTION_CODEC.md), J221-1 |
+| K232 | Field10 collection is compact count plus BE32-key/raw-string pairs | Actual complementary helpers and unsigned caps; writer oversize zero versus reader rejection; aliases/wrap accepted. Writer size/sentinel consistency requires valid container; no text/authority claim | [Collection contract](REGISTRATION_REQUEST_COLLECTION_CODEC.md), J221-2 |
+| K233 | Complete duplicates retain first value with normal owned-node cleanup | Wire-count loop independent of unique map size; duplicate frees new ownership. Rehash/list order not incoming order; fresh actual placement versus reused helper distinguished; exceptions/global lifetime unknown | [Collection contract](REGISTRATION_REQUEST_COLLECTION_CODEC.md), J221-3 |
+| K234 | Collection, adjacent string and final boolean have distinct failure/cursor rules | Element strings consume available bytes/code2; adjacent a0 copy precedes final extent/code1, native fault unknown. Conditional final460 strict0/1, missing3/invalid4; success error byte unspecified | [Collection contract](REGISTRATION_REQUEST_COLLECTION_CODEC.md), J221-4 |
+
 ## Current V3 serializer selection and interface role — October6, #220
 
 Clean input main `6094d8a294727ec20a41fb225b4b671c7c044afd`, refreshed pinned

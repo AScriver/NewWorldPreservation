@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-collection-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K231",
+        "K232",
+        "K233",
+        "K234"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_COLLECTION_CODEC.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-collection-codec.json",
+          "classification": "source-inference",
+          "scope": "#221 selected aggregate sequence, full field10 collection, duplicate/normal ownership/cursor and adjacent primitive endpoints; executed static/offline checks recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Valid native container and ordinary allocation/control flow only; partial decompiler output retained. Larger c0/2c8/3e0 schemas, complete request fixture/body, framing/discriminator/authoritative meaning, #212 and gameplay remain unavailable. No native/client execution."
+    },
+    {
       "id": "current-registration-request-serializer",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K227", "K228", "K229", "K230"],
@@ -1045,6 +1071,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-collection-codec.json",
     "research/evidence/current-registration-request-serializer.json",
     "research/evidence/current-registration-authentication-contract.json",
     "research/evidence/ghidra-function-slice-validation.json",

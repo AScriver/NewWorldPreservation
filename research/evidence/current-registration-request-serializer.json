@@ -31,10 +31,10 @@
       }
     ],
     "toolFiles": {
-      "README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
-      "manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
-      "verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
-      "Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+      "C:/Users/Austin/.codex/tools/reverse-engineering/README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
     }
   },
   "claimIds": [
@@ -645,5 +645,12 @@
     "Nested request schemas/decoder1407ce8e0, transitive retention, manager140799ec0, exception/finaldescriptor cleanup remain unjoined.",
     "No historical860 discriminator, Carrier/framing inverse, authoritative ticket/peer contract, #212 fixture readiness or gameplay proof."
   ],
-  "fixtures": []
+  "fixtures": [],
+  "metadataCorrection": {
+    "recordedUtc": "2026-10-06T08:24:49.274499+00:00",
+    "actionableId": 221,
+    "originalReceiptSha256": "3d188804a428a963f77e45c1efa6cf6d58e2e8699083c381bf2f1e94c734b330",
+    "scope": "Qualify external shared-tool paths; original hash values and all other source/verification fields retained.",
+    "oldRelativeBase": "C:/Users/Austin/.codex/tools/reverse-engineering"
+  }
 }

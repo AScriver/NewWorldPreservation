@@ -63,3 +63,10 @@ and global lifetime safety are not established. Targeted counter-review preserve
 these limits. Current decoder `0x1407ce8e0` and the nested aggregate helper are the
 next bounded body-codec targets; no request fixture or implementation is supplied.
 #212, authoritative ticket/peer semantics, Carrier/framing and Milestone1 remain open.
+
+## Follow-up #221
+
+[Aggregate order and complete first collection](REGISTRATION_REQUEST_COLLECTION_CODEC.md)
+now close the selected decoder/collection prerequisite at the same image. Larger
+nested fields and framing/authority remain separate; #220 evidence above retains
+its original selection/role scope.

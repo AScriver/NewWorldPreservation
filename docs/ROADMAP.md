@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#221 source result, October 6: the selected V3 aggregate order and complete
+field+0x10 collection now join compact count, BE32 key/raw-string elements,
+duplicate first-value retention and ordinary owned-node/bucket cleanup. Failure
+codes/cursors, adjacent+0xa0's distinct copy-before-bounds behavior and conditional
+final0/1 byte are instruction-supported. [Collection contract](REGISTRATION_REQUEST_COLLECTION_CODEC.md),
+J221-1–4 / K231–K234 and [receipt](../research/evidence/current-registration-request-collection-codec.json)
+retain valid-container, nonminimal-prefix, rehash-order and normal-lifetime limits.
+Larger+0xc0/+0x2c8/+0x3e0 schemas remain separate bounded prerequisites. No complete
+request fixture, framing/auth/world acceptance or #212 unblock follows. Continue
+the next eligible #164 leaf after this scoped commit/completion/release.
+
 #220 source result, October6: interface236 now joins reflected REPClient/default
 construction, concrete no-op callback, adjusted borrowed QueryInterface result,
 AL dispatch result and ordinary placement ownership. The selected V3 descriptor
