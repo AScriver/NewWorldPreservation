@@ -1,5 +1,17 @@
 # Milestone 1 roadmap
 
+#217 source result, October 6: the conditional response subscriber now joins
+`EOSSystemComponent` construction/registration, its empty-string +0x48 body,
+the +0x50 inverse local disable/failure predicate supplying owner+0x768, concrete
+backend module/export resolution and normal ownership/teardown. Error13 can
+notify or queue an error while the handler continues; an empty final string
+permits that local continuation only. [Closed chain](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md),
+J217-1–5 / K214–K218 and [receipt](../research/evidence/current-registration-acceptance-subscriber.json)
+record current-image evidence and checks. Runtime subscriber selection and
+durable acceptance remain unobserved. #178/#164, #212 and Milestone1 remain open.
+The user's October6 continuation supersedes the earlier one-task stopping scope;
+after #217's scoped commit/completion/release, continue eligible #164 leaves.
+
 #216 source result, October 5: owner+0x110 now joins the third R9 callable,
 concrete built-in game interface, owned server-version map, change comparison/
 diagnostic output and replacement/destruction. Response+0x38 supplies that version

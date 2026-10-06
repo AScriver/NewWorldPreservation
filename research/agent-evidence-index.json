@@ -12,6 +12,33 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-acceptance-subscriber",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K214",
+        "K215",
+        "K216",
+        "K217",
+        "K218"
+      ],
+      "docs": [
+        "docs/REGISTRATION_ACCEPTANCE_SUBSCRIBER.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-acceptance-subscriber.json",
+          "classification": "source-inference",
+          "scope": "#217 concrete EOSSystemComponent registration/empty-string subscriber/local owner768 producer and selected normal ownership; executed checks recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Static current-image chain only. Runtime subscriber selection/context scope, durable acceptance/error-consumer effects, authenticated identities and gameplay remain unobserved. Separate #212 construction/schema/framing gates remain blocked. No client/live work or protocol implementation."
+    },
+    {
       "id": "current-registration-authentication-contract",
       "roadmapTasks": [
         "M1-06B",

@@ -6,6 +6,12 @@ authentication results, local response-field ownership and connection-to-owner
 routing. It does **not** establish the current authoritative ticket/identity/peer
 contract. This report records the exact missing joins; it implements no protocol.
 
+Later closures: [#215's diagnostic callable](REGISTRATION_DATA_PROVIDER.md),
+[#216's server-version callback](REGISTRATION_RESPONSE_CALLBACK.md) and
+[#217's concrete empty-result subscriber / local owner+0x768 producer](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md)
+supersede those selected unknown endpoints below. They supply no authoritative
+ticket/principal/peer contract; the historical #211 receipt remains unchanged.
+
 The [#210 report](INITIAL_REGISTRATION_CONTRACT.md) completed its bounded research
 alternative. Its historical 860-byte request discriminator, transport/framing
 bridge and concrete body codecs remain unproved. Done does not close those joins.

@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Current conditional registration subscriber — October 6, #217
+
+Clean input main `db3dbf22997fc16da00ca722c8d3e82189b57754`, current pinned
+build22469132/image/map and clean references. Exact native/data seals and executed
+checks: [original receipt](../research/evidence/current-registration-acceptance-subscriber.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K214 | Concrete subscriber registration and construction are joined | Strongly instruction-supported EOSSystemComponent+a8 / primary58 / subscriber48,50; provider-selected context scope and runtime presence/order unknown | [Subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md), J217-1 |
+| K215 | Concrete virtual48 constructs an empty inline result without validation calls | Complete34-byte instruction body, ignores this and reads no identity/captured state; limited to this concrete endpoint | [Subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md), J217-2 |
+| K216 | owner768 can receive the inverse component130 local disable/failure byte | Selected V3 builder/bus50 join, ctor0, local disable/module-export failure writes1; no-subscriber retention, successive overwrite and no automatic successful-path reset preserved. No authentication/session-success predicate | [Subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md), J217-3 |
+| K217 | Final output controls conditional local continuation; error13 effects remain | Static final-string gate/representation transfer; error13 listener/queue side effects plus normal fallthrough. No durable acceptance or universal authentication behavior | [Subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md), J217-4 |
+| K218 | Component and bus storage have distinct lifetime owners | Selected normal node retention/disconnect and component construction/destruction joined; full quiescence/framework/context/thread scope unproved | [Subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md), J217-5 |
+
 <!-- actionable-212:start -->
 ## Current world-entry member fixture gate — October 5, #212 only
 
