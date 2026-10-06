@@ -1,5 +1,19 @@
 # Milestone 1 roadmap
 
+October6 Preservation continuation, #249 under247/190/164: current GdeRef
+low64-only map identity, cached offline-ID routing and zero-reference gate now
+support an [original guarded trial-input policy](CREATION_TRIAL_REF.md).
+Nine fresh slices/20 instruction assertions;78 focused Python cases passed.
+Required workspace1,231Python cases/43modules, four PowerShell suites and the
+closed synthetic loopback lifecycle passed. Even low64 with nonzero upper32
+avoids the shown alternate routing under each mode/helper; collisions use
+explicit caller-owned keys and raw16 stays unchanged. Source resource remapping,
+actual live map occupancy and native acceptance remain independent.
+Continue #250's concrete identity field codecs and delivery key, then #248's
+bounded bundle candidate. Visible Preservation world entry and Milestone1 are
+unobserved; two-player validation stays deferred until a consenting friend is
+available. [Receipt](../research/evidence/current-creation-trial-ref.json), K325–K328.
+
 October6 player resource, #246 under190/164: the exact owned
 `slices/player.dynamicslice` RASC record supplies raw16
 `a660eeebebc75cb7be6bab11eb831731` and suffix2. The original file-only resolver

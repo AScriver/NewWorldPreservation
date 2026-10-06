@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "classification": "source-inference-and-original-offline-policy",
+  "workItemId": 164,
+  "actionableId": 249,
+  "parentActionableId": 247,
+  "recordedUtc": "2026-10-06T21:24:11.352574+00:00",
+  "input": {
+    "head": "6f74c1ec88ce53dacf37b518a2ddcb740e549322",
+    "workingTree": "M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/CREATION_TRIAL_REF.md\n?? scripts/current_creation_trial_ref.py\n?? tests/test_current_creation_trial_ref.py",
+    "sourcePassHead": "6f74c1ec88ce53dacf37b518a2ddcb740e549322",
+    "sourcePassWorkingTree": "",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "status": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "status": ""
+      }
+    ]
+  },
+  "claimIds": [
+    "K325",
+    "K326",
+    "K327",
+    "K328"
+  ],
+  "sourceSpans": [
+    {
+      "entry": "0x146165f20",
+      "ranges": [
+        {
+          "start": "0x146165f20",
+          "end": "0x146165fc2",
+          "sha256": "8d2ba6f17f43c81444e29880f5a52cbbf12ae848965dc7ac7cf316091a4b7098"
+        }
+      ]
+    },
+    {
+      "entry": "0x14615e330",
+      "ranges": [
+        {
+          "start": "0x14615e330",
+          "end": "0x14615e387",
+          "sha256": "0b7084dbd1650182f040e9115b4c9a4ccc33b7de93397aa2ab6bacb90d9c9db0"
+        }
+      ]
+    },
+    {
+      "entry": "0x140fc7f90",
+      "ranges": [
+        {
+          "start": "0x140fc7f90",
+          "end": "0x140fc8303",
+          "sha256": "5ad706a95316e6dc6c68d6cf14a507d2175961f018dde27d090a87eda676d150"
+        }
+      ]
+    },
+    {
+      "entry": "0x14033d610",
+      "ranges": [
+        {
+          "start": "0x14033d610",
+          "end": "0x14033d983",
+          "sha256": "df71560f0c8e68653d301c003f16b2229db2d93c00965a706e08ece3bf24eb3a"
+        }
+      ]
+    },
+    {
+      "entry": "0x14178db00",
+      "ranges": [
+        {
+          "start": "0x14178db00",
+          "end": "0x14178de57",
+          "sha256": "8928154c2ff92d7c54c3b24d6266c571df910632c0158ccb04b3c057f3140cb7"
+        }
+      ]
+    },
+    {
+      "entry": "0x1416631d0",
+      "ranges": [
+        {
+          "start": "0x1416631d0",
+          "end": "0x141663395",
+          "sha256": "fcecbb544a06367441d36b8733b7e48875da69c57418fac59a83d26f0685c888"
+        }
+      ]
+    },
+    {
+      "entry": "0x141747c60",
+      "ranges": [
+        {
+          "start": "0x141747c60",
+          "end": "0x14174877f",
+          "sha256": "51f07e451cd78385c84dd477ef495a34e4bd027a0ec13ca10b9003775cb22e46"
+        }
+      ]
+    },
+    {
+      "entry": "0x14171e370",
+      "ranges": [
+        {
+          "start": "0x14171e370",
+          "end": "0x14171f14d",
+          "sha256": "038312dd142707ce69968eb48c2694606043834f5b92d671138b38b7723c4a07"
+        }
+      ]
+    },
+    {
+      "entry": "0x1407f7d80",
+      "ranges": [
+        {
+          "start": "0x1407f7d80",
+          "end": "0x1407f7dea",
+          "sha256": "c54e13e5bcfa2fabec9b65d6f4be34ec0792fd08b2d6b927c1d268dd4ef402df"
+        }
+      ]
+    }
+  ],
+  "queryReceipts": [
+    {
+      "path": ".scratch/preservation-gde-20261006-architect/mode/receipt.json",
+      "sha256": "84c60461dd91d38980c43fe3f79306cbbcb2cb32353768938ea6d462e6a8ac50",
+      "functions": 2
+    },
+    {
+      "path": ".scratch/preservation-gde-20261006-architect/init/receipt.json",
+      "sha256": "7e047a5c37a4c96f2f61367c1444d2f6b27daa6bea0812993e17539d42585281",
+      "functions": 2
+    },
+    {
+      "path": ".scratch/preservation-gde-20261006-architect/gates/receipt.json",
+      "sha256": "4223db9a8c6636761f73960c7159c12cb21faba789f64eda3e9a2c2cf2f4f95b",
+      "functions": 4
+    },
+    {
+      "path": ".scratch/preservation-gde-20261006-architect/default/receipt.json",
+      "sha256": "a51ae6ef107da4e202302f34217ac59a5cb36c9d0430fea7e3c3fbd12e9a0745",
+      "functions": 1
+    }
+  ],
+  "privateSourceReceipt": {
+    "path": ".scratch/preservation-gde-20261006-architect/receipt.json",
+    "sha256": "25aa8ba81abd72c98829f082c52934d1de3ad2d22d0a9ce88d4a00647a7a38c4"
+  },
+  "sourceVerification": {
+    "newFunctionSlices": 9,
+    "instructionAssertions": 20,
+    "refreshedSourceSpans": 9,
+    "privateArtifactsRehashed": 19,
+    "unchangedPriorReceiptsRehashed": 5
+  },
+  "originalSources": {
+    "scripts/current_creation_trial_ref.py": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6",
+    "tests/test_current_creation_trial_ref.py": "f1587c570d549ce4c4ee9fd488ac65018a5478971c4bc2877f0870a5813de52a",
+    "scripts/offline-test-profiles.json": "d635a7ce976fa128334ad04b2c986e83fa6335109b6054542c32e561b81b98e1",
+    "scripts/validate_offline.py": "a80f7a64df2ac0ab6d0e4fc09ef5888662970eb92b8d4fb8b4b5ca433e6bb441",
+    "tests/test_offline_runner.py": "d6f43ac0b134bdae05bcdcd310e4eedcf1c511ee99a1f3343692b1ef803a6fe2",
+    "docs/CREATION_TRIAL_REF.md": "8ba2c5da278e5b07564d5e6dac4eb836e207e29cfb027f376b63fe75d39c2353"
+  },
+  "policy": {
+    "raw16": "immutable exact16 bytes",
+    "mapKey": "first LE qword",
+    "alternateRouteAvoidance": "even low64 with nonzero upper32",
+    "collisionScope": "explicit caller-supplied immutable uint64 keys; not live map observation",
+    "high64": "zero permitted",
+    "selection": "at most128 independent random16-byte draws, unchanged",
+    "assignment": "caller-owned stable one-character assignment; not native persistence rule"
+  },
+  "verification": {
+    "focused": {
+      "cases": 78,
+      "status": "passed",
+      "scope": [
+        "tests/test_current_creation_trial_ref.py",
+        "tests/test_current_creation_member_body.py",
+        "tests/test_offline_runner.py"
+      ]
+    },
+    "workspace": {
+      "status": "passed",
+      "receipt": ".scratch/offline-validation/run-jpxd1__3/receipt.json",
+      "sha256": "1def009e718e4d18003a2ea9d026080b59020adbfd42966d671b8f082ffc47ec",
+      "python": {
+        "selectedFiles": 43,
+        "collected": 1231,
+        "executed": 1231,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershellSuitesPassed": 4,
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 52472
+      },
+      "codeInputsUnchanged": true,
+      "finalChangedMetadataInputs": [
+        "docs/EVIDENCE_LEDGER.md",
+        "docs/ROADMAP.md",
+        "research/agent-evidence-index.json"
+      ],
+      "scope": "Original policy and full required offline suite; final navigation/receipt updates record existing support and are checked separately."
+    },
+    "navigation": {
+      "status": "passed",
+      "uniqueBoundaryIds": true,
+      "newBoundaryReferencesExist": true,
+      "updatedMetadataHashes": {
+        "docs/EVIDENCE_LEDGER.md": "86c6d00a73707dfd2611875bcef3e599f7653b3c07804d39786ddd661942f6c2",
+        "docs/ROADMAP.md": "69298911b1b272d12878e6b4a211fe2d2d38020ddb3a6250b3d617dc80870559",
+        "research/agent-evidence-index.json": "e4e85b92f6d8ff4a23f2012b421045f473e24b02014e419c05e8c5e8c12ad7e5"
+      }
+    }
+  },
+  "limits": [
+    "Cached configuration providers/runtime/reset paths remain unobserved.",
+    "Policy avoids the shown alternate routing across all numeric mode/helper cases; it is not native validity or an authenticated identity relation.",
+    "Source resource key/flags/IDs and existing map occupancy independently determine clone/remap/collision success.",
+    "Raw16 uniqueness is not low64 uniqueness; high64!=0, UUID bits and missing community generator constants are not demanded by the examined gates.",
+    "Player identity wire schema, delivery key/runtime designation and visible world entry remain separate;247/190/177/Milestone1 aggregate open."
+  ],
+  "failures": [
+    "Initial instruction helper inspect.py shadowed stdlib inspect; corrected filename; rerun passed.",
+    "One rg wildcard PowerShell path failed; exact reads replaced it."
+  ],
+  "cleanup": "All synchronous helpers exited; no live target/process/service/port resources acquired.",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "milestone1": "not tested"
+}

@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Original fresh GdeRef trial inputs — October6, #249
+
+Clean native-source input6f74c1e, pinned build22469132; original policy/test/
+inventory/docs dirty during Python checks. [Contract/API](CREATION_TRIAL_REF.md)
+and [receipt](../research/evidence/current-creation-trial-ref.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K325 | Offline-ID interpretation comes from cached client configuration |146165f20/14615e330 dispatch named settings once; no actual provider/runtime/reset inventory | Nine fresh slices/20 instruction assertions |
+| K326 | Shown map identity is low LE64; zero raw16 is a separate continuation gate |141747c60 low-key comparisons;1416631d0/1407f7d80 zero-default join; high64 need not be nonzero | Source spans/private seals |
+| K327 | Original immutable reference policy avoids alternate routing and known-key collisions | Even low64/nonzero upper32; explicit occupied-key set; at most128 unchanged fresh draws; no native generator/validity claim | Python policy and original synthetic controls |
+| K328 | Resource remapping and native player acceptance remain separate |14171e370 source-sentinel/flag/IDs; live maps, designation and world entry unobserved | Prior clone/binding receipts and current limits |
+
 ## Exact owned player resource — October6, #246
 
 Baseline clean0d2f93c, same pinned image; resolver/test/doc edits dirty during

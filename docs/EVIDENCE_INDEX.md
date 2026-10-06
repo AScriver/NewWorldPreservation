@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-creation-trial-ref` | M1-06A | [Original fresh reference policy and source limits](CREATION_TRIAL_REF.md) |
 | `owned-player-resource` | M1-06A | [Exact owned player resource input](OWNED_PLAYER_RESOURCE.md) |
 | `current-type8-bundle-body` | M1-06A | [Paired BODY and bounded payload codec](TYPE8_BUNDLE_BODY.md) |
 | `current-creation-replication-record` | M1-06A | [Record reader inverse and paired member writer](CREATION_REPLICATION_RECORD.md) |

@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-creation-trial-ref",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K325", "K326", "K327", "K328"],
+      "docs": ["docs/CREATION_TRIAL_REF.md"],
+      "scripts": ["scripts/current_creation_trial_ref.py"],
+      "tests": ["tests/test_current_creation_trial_ref.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-creation-trial-ref.json", "classification": "source-inference", "scope": "Cached routing, low64 map identity, zero-reference and resource gates; original policy verification separate"}],
+      "limit": "Inert candidate policy only; occupied-key input is not live map observation; native validity, identity delivery and world entry unverified."
+    },
+    {
       "id": "owned-player-resource",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K320", "K321", "K322", "K323", "K324"],
