@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#231 source closure, October6: an actual batch/type-query/binder now supplies
+PlayerComponent's non-default entity-reference key/cache from its owner-map
+lookup. Map membership owns guard invalidation; retained controls preserve guard
+storage. [Binding report](PLAYER_ENTITY_BINDING.md), K271–K274 and
+[receipt](../research/evidence/current-player-entity-binding.json) retain duplicate-key,
+partial-phase, post-copy resolution and virtual predicate qualifications.
+Fresh entity allocation, replication schema/application, runtime invocation and
+service lifetime remain unproved. #212, parent177/164 and bilateral movement stay open.
+
 #230 offline implementation, October6: an original pure selected V3 sender
 encoder now joins nilouter16, fresh wrapper fields/presence, an explicit inner
 type selector and the verified BODY to the CRC/count physical stream.

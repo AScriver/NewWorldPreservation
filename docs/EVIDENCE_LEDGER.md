@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current PlayerComponent entity-reference binding — October6, #231
+
+Clean input main `7b344d46552710568466a8fcfc38f24a17abe0ce`; pinned image/map,
+references and material #208/#209 source seals refreshed. [Original receipt](../research/evidence/current-player-entity-binding.json)
+separates instruction-supported joins, illustrative dataflow and executed regression.
+
+| ID | Claim | Scope / limits | Evidence |
+|---|---|---|---|
+| K271 | Concrete batch/type query/binder supplies component40/48/50/58 | Strongly source-supported PlayerComponent selector acceptance and same owner/key lookup token; actual batch contents/invocation and fresh allocation unknown | [Operation](PLAYER_ENTITY_BINDING.md), J231-1 |
+| K272 | Map membership owns guard invalidation; references retain guard storage | Node20 raw object; separate28-byte control and node40/48 invalidate-owner pair; no strong object allocation ownership, exclusive authority or concurrency proof | [Ownership](PLAYER_ENTITY_BINDING.md), J231-2 |
+| K273 | Identity, copied cache and phase completion require explicit conditions | Duplicate lookup may bind existing object; post-copy source refresh does not recopy cache; virtual predicate gates and time-budget exits remain; no atomic/completed lifecycle claim | [Conditions](PLAYER_ENTITY_BINDING.md), J231-3 |
+| K274 | Refreshed source/counterchecks preserve access and verification limits | Service-slot dereference/-2c0 map access supported; service lifetime unknown. Exact source and offline checks separately recorded; no native/client/M1 acceptance | [Receipt](../research/evidence/current-player-entity-binding.json), J231-4 |
+
 ## Offline selected V3 sender stream encoder — October6, #230
 
 Clean input main `551c9f253092de40bfd30b2ed4db2d2d9fb24372`; current prerequisite

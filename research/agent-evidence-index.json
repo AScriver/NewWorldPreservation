@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-player-entity-binding",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K271",
+        "K272",
+        "K273",
+        "K274"
+      ],
+      "docs": [
+        "docs/PLAYER_ENTITY_BINDING.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-entity-binding.json",
+          "classification": "source-inference",
+          "scope": "#231 exact typed binder/owner-map/guard joins; bounded source counterchecks and repository verification recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Normal stable-input source path only; unique successful insertion required for exact supplied-object identity. Partial phases and cache/source-resolution steps differ. No fresh entity allocation, schema/application, runtime binding, service lifetime, #212 or M1 acceptance."
+    },
+    {
       "id": "current-registration-request-stream",
       "roadmapTasks": [
         "M1-06B"
@@ -1518,6 +1544,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-entity-binding.json",
     "research/evidence/current-registration-request-stream-validation.json",
     "research/evidence/current-registration-identifier-placement.json",
     "research/evidence/current-registration-lookup-text-validation.json",

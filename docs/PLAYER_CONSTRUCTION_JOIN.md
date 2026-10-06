@@ -1,5 +1,11 @@
 # Current player construction and registry join — #208
 
+October6 follow-up #231 positively closes the specific typed binding writer,
+owner-map reference and normal guard-invalidation join described as missing here.
+See [current binding evidence](PLAYER_ENTITY_BINDING.md), K271–K274. This historical
+#208 receipt remains unchanged; fresh supplied-object allocation and concrete
+replication-member application/schema are still unjoined.
+
 Task: M1-06A.2, Actionable208 under workItemId164 (coordination parent177).
 This closes the bounded static research question with precise missing joins.
 It establishes two source-supported paths: replication-member construction and
