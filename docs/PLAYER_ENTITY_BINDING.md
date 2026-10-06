@@ -1,5 +1,9 @@
 # Current PlayerComponent entity-reference binding — #231
 
+October6 #234 now joins conditional nested Entity allocation, original Id copy
+and custom remapping in [the clone contract](PLAYER_ENTITY_CLONE.md).
+The historical #231/#233 scopes below retain their own input/acceptance limits.
+
 October 6 follow-up #233 joins the supplied vector's producer/type/normal lifetime
 and guarded same-receiver deferred-job path. See [vector contract](PLAYER_ENTITY_VECTOR.md).
 Nested per-Entity construction/key treatment remains #234; the historical #231

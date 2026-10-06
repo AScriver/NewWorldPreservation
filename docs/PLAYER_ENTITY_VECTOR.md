@@ -1,5 +1,9 @@
 # Current entity vector and binding receiver
 
+October6 follow-up #234 now joins conditional nested Entity allocation, original
+Id copying and actual XOR/identity remapping. See [the clone contract](PLAYER_ENTITY_CLONE.md).
+The #233 input and limits below remain its historical source scope.
+
 October 6, #233 under #232 / #177 / workItemId 164. The current image supports a
 concrete owned-vector producer and a guarded deferred-job path that supplies the
 same factory-created receiver to its setter and binding batch. The earlier direct

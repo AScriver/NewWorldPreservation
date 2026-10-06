@@ -12,6 +12,34 @@
   },
   "boundaries": [
     {
+      "id": "current-player-entity-clone",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K281",
+        "K282",
+        "K283",
+        "K284",
+        "K285",
+        "K286"
+      ],
+      "docs": [
+        "docs/PLAYER_ENTITY_CLONE.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-entity-clone.json",
+          "classification": "source-inference",
+          "scope": "#234 exact conditional nested allocation, Id copy/attribute and actual custom remapping source joins; source challenges and offline regressions distinct"
+        }
+      ],
+      "limit": "Source conditionals only: registry/RTTI/context/typed attribute/allocation/copy/traversal and source-key gates; no valid or globally unique identity, complete member schema, runtime/player/world or M1 acceptance."
+    },
+    {
       "id": "current-player-entity-vector",
       "roadmapTasks": [
         "M1-06A"
@@ -1572,6 +1600,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-entity-clone.json",
     "research/evidence/current-player-entity-vector.json",
     "research/evidence/current-player-entity-binding.json",
     "research/evidence/current-registration-request-stream-validation.json",

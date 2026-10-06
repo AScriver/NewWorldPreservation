@@ -1,5 +1,15 @@
 # Milestone 1 roadmap
 
+#234 source closure, October 6: the actual nested pointer adapter now reaches
+Entity allocation and destination storage, followed by original Id copying and
+the producer's conditional XOR/identity remapping. The reflected generator is
+overridden on this path; the root-key sentinel returns null before cloning.
+[Clone contract](PLAYER_ENTITY_CLONE.md), K281–K286 and
+[receipt](../research/evidence/current-player-entity-clone.json) retain RTTI,
+registry, typed-attribute, allocation, copy and map conditions. #232 aggregate
+review, concrete replication schema/application, #212 and bilateral movement
+remain open. Offline checks do not establish native/gameplay acceptance.
+
 #233 source closure, October 6: exact InstantiatedContainer/vector ownership and
 a guarded deferred-job capture now connect the factory-produced receiver to the
 holder setter/getter and typed binding batch. The shown direct queue route remains

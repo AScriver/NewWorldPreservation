@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-player-entity-clone` | M1-06A | [Nested Entity clone and Id treatment](PLAYER_ENTITY_CLONE.md) |
 | `current-player-entity-vector` | M1-06A | [Owned vector and guarded binding receiver](PLAYER_ENTITY_VECTOR.md) |
 | `current-player-entity-binding` | M1-06A | [Current typed reference binding and guard ownership](PLAYER_ENTITY_BINDING.md) |
 | `current-registration-request-stream` | M1-06B | [Offline selected V3 sender stream encoder](REGISTRATION_REQUEST_STREAM_CODEC.md) |

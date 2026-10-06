@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current nested Entity clone and Id treatment — October 6, #234
+
+Clean input2097ac6; instruction-supported inference and executed file-only source
+checks. No client/native execution. [Contract](PLAYER_ENTITY_CLONE.md),
+[receipt](../research/evidence/current-player-entity-clone.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K281 | Entities adapter reaches selected nested factory and reserved slot | Dynamic RTTI/registry select class; null/missing metadata skip, null result may store, no allslot success/rollback | J234-1 |
+| K282 | Original Id overwrites factory sentinel before clone return | Entity.Id+8→EntityId.id+0→eight-byte AZu64 serializer; registered primitive context and normal successful traversal/stream required; ignored returns | J234-2 |
+| K283 | Id directly owns a matched default-generator attribute | Context byte8 zero, exact type/key/typed vtable and successful attribute construction; null attr can classify unattributed | J234-3 |
+| K284 | Actual producer overrides generator with XOR/identity mapping | Non-sentinel source; same local map across two filtered passes, primary Id skipped in reference pass, duplicate first wins and absent references preserved; no key validity/uniqueness | J234-4 |
+| K285 | Named MakeEntityId registry and sentinel branch have separate roles | Actual full-name pointer147feb8a0; other cast context/F0registry distinct from field attribute; source root sentinel returns null before holder/clone/remap | J234-5 |
+| K286 | Targeted challenges preserve conditional source acceptance | Allocation and Id association/precedence/overlap survived only stated guards; failed queries retained; no concrete member schema/world/M1 acceptance | J234-6 |
+
 ## Current owned entity vector and binding receiver — October 6, #233
 
 Clean input main `2ca3201d70d806a12ef44f218bac7fd1b87720b7`; pinned image/map,

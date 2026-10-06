@@ -1,5 +1,22 @@
 # Bounded task briefs
 
+## #234 — nested Entity clone and Id treatment (workItemId164, parent232/177)
+
+- Intended outcome and guards were recorded in Researching before work; exact
+  allocation, field-copy and mapper joins closed before Ready/In progress edits.
+- Clean input2097ac6; current image/map/build/references/tool identities and
+  relevant historical source seals refreshed. Distinct isolated allocation/Id
+  roles and targeted challenges; no shared runtime resources or native execution.
+- Owned: clone doc/receipt, small234 navigation/ROADMAP/ledger/brief/handoff/catalog
+  entries and follow-up links in vector/binding/construction reports.
+- Checks: exact source/artifact seals, retained failure/conditional ledger,
+  focused tooling and required workspace, unchanged unrelated inputs, staged
+  scope review and local coherent commit. Receipt carries exact outcomes.
+- Excluded: clients/live/process reads/hooks/captures/endpoints/credentials/replay,
+  guessed codecs/auth design, upstream/push/publication/messages/165 or M1 claims.
+- Next: complete/release this leaf and immediately select a meaningful permitted
+  #164 leaf. Parent232 review and concrete replication/schema acceptance remain.
+
 <!-- actionable-212:start -->
 ## #212 — current world-entry member fixtures (workItemId164, parent179)
 

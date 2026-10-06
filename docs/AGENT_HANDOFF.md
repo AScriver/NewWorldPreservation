@@ -1,5 +1,13 @@
 # Agent handoff
 
+October6 #234: [clone/Id contract](PLAYER_ENTITY_CLONE.md), K281–K286 and
+[receipt](../research/evidence/current-player-entity-clone.json) close conditional
+nested allocation/copy/custom mapping. Initial generic-only Id pass, pointer
+correction, partial/no-PDATA queries and null/skip/error cases remain retained.
+Private file-only helper resources exited; offline runner receipts record owned
+loopback cleanup. Local commit only; next permitted #164 leaf follows release.
+Parent232 aggregate, concrete member/schema, #212 and bilateral movement stay open.
+
 Use this format at a task boundary. Keep current task status in [ROADMAP](ROADMAP.md)
 and substantive factual claims in [EVIDENCE_LEDGER](EVIDENCE_LEDGER.md). A handoff
 links those records rather than creating another current-status document.

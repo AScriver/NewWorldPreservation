@@ -1,5 +1,9 @@
 # Current player construction and registry join — #208
 
+October6 #234 adds the conditional nested Entity factory, source Id copy and
+actual custom mapping [contract](PLAYER_ENTITY_CLONE.md). Concrete replication
+member/schema and gameplay acceptance remain open; older scopes below are historical.
+
 October 6 follow-up #233 adds the exact owned-vector producer and guarded job
 capture/receiver relation in [the vector contract](PLAYER_ENTITY_VECTOR.md).
 Actual nested Entity clone factory/Id treatment remains #234; parent #232's
