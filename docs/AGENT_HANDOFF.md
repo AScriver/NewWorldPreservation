@@ -2,6 +2,10 @@
 
 ## #238 record boundary — October6 continuation
 
+Local code/source increment `af12a01`; #238 terminal Done/version10 and claim
+released. #177 Researching/version19, aggregate unmet and coordination claim
+released; scoped owned-claim readback empty. Continue authorized164 offline work.
+
 Outcome: established record reader grammar plus paired key/selector/creation BODY
 writer, original immutable codec and seven synthetic literals. [Contract/API](CREATION_REPLICATION_RECORD.md),
 K303–K310 and original [source](../research/evidence/current-creation-record-contract.json)/

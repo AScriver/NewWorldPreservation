@@ -9,7 +9,8 @@ retain native outer-writer uncertainty, corrected caller ABI, compact aliases an
 native failure drain versus offline diagnostics. Focused111 cases and independent87
 assertions/94record-BODY cases passed. Required workspace1048/38 Python cases,
 three PowerShell suites and closed synthetic listener passed; inputs unchanged.
-Local commit and tracking closure follow. Runtime mapping/use, valid creation inputs, enclosing bundle/Carrier,
+Local commit `af12a01`; #238 Done/released, #177 remains Researching and its
+coordination claim is released. Scoped owned-claim readback is empty. Runtime mapping/use, valid creation inputs, enclosing bundle/Carrier,
 #210 ACK/authority residuals, #212/#232/177 aggregate and bilateral movement remain
 open. Continue the next meaningful eligible offline164 chunk after validated local
 commit and tracking; the earlier package's stopping instruction is historical.
