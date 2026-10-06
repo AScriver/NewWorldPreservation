@@ -1,0 +1,625 @@
+{
+  "schema": 1,
+  "taskId": 212,
+  "workItemId": 164,
+  "parentId": 179,
+  "date": "2026-10-05",
+  "createdUtc": "2026-10-06T00:05:35.896769+00:00",
+  "classification": "original-prerequisite-audit-and-blocked-handoff",
+  "outcome": "Blocked",
+  "fixtureValidationComplete": false,
+  "fixturesCreated": 0,
+  "fixtureDecoderCasesExecuted": {
+    "positive": 0,
+    "truncation": 0,
+    "unknownType": 0
+  },
+  "currentClientCompatibilityProved": false,
+  "milestone1Proved": false,
+  "preWorkContract": {
+    "record": "#212 Researching scope/acceptance/planned-check/exclusion notes saved before changes",
+    "acceptance": "Exact current build/type/body/channel/direction/state and consumed/output-size boundaries; meaningful actual-decoder positive/truncation/unknown-type cases from source-supported original fixtures",
+    "prerequisites": [
+      "Positive current construction/member contract",
+      "Relevant current framing and complete body codecs"
+    ],
+    "failedGateAction": "Document exact blockers, retain unmet acceptance, hand off #212 Blocked/released and stop",
+    "ownedFiles": [
+      "docs/WORLD_ENTRY_MEMBER_FIXTURES.md",
+      "docs/ROADMAP.md",
+      "docs/TASK_BRIEFS.md",
+      "docs/EVIDENCE_LEDGER.md",
+      "research/evidence/current-world-entry-member-fixture-readiness.json"
+    ],
+    "excluded": [
+      "Resolve construction/designation/authentication/framing gaps",
+      "Other Actionables including #213",
+      "Guessed messages or historical actor/persona replay",
+      "Client starts/process reads/hooks/captures/game endpoints",
+      "Credentials/system/trust/EAC/upstream changes",
+      "Push/publishing/contributor messages"
+    ]
+  },
+  "inputs": {
+    "checkout": {
+      "createdUtc": "2026-10-06T00:05:35.896769+00:00",
+      "head": "d4b6a2c535c5d9f8f48293c235f4767cfb575e48",
+      "branch": "main",
+      "dirtyStatus": "",
+      "aheadOrigin": 0
+    },
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "versionFromPriorSourceReceipt": "1.400.6031.6004151",
+      "steamAppId": "1063730",
+      "steamBuildId": "22469132",
+      "steamMetadataSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6"
+    },
+    "mapping": {
+      "path": "private/frida-trials/run-20261004T1733/client/typeindex.json",
+      "sha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+    },
+    "references": [
+      {
+        "name": "firstLight",
+        "path": "research/upstream/first-light",
+        "commit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "expectedCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirtyStatus": "",
+        "matches": true
+      },
+      {
+        "name": "aeternumWorld",
+        "path": "research/upstream/aeternum-world",
+        "commit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "expectedCommit": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirtyStatus": "",
+        "matches": true
+      }
+    ],
+    "sourceFilesBeforeOwnedEdits": [
+      {
+        "path": "AGENTS.md",
+        "bytes": 8864,
+        "sha256": "e7a575483c89b85d49b01a1c758b96ebb0d63391dab3a83324a075bec110915b"
+      },
+      {
+        "path": "docs/AGENT_START.md",
+        "bytes": 7386,
+        "sha256": "bd956e944cfd212e330e88a45acfb1a5dc6ca374c0852a1634b1d86c3728c492"
+      },
+      {
+        "path": "docs/ROADMAP.md",
+        "bytes": 67957,
+        "sha256": "6faa210589c048d9fc5931d14548fc40969ba9434217e850168170c52fede8d9"
+      },
+      {
+        "path": "docs/TASK_BRIEFS.md",
+        "bytes": 35589,
+        "sha256": "edb6cb70a53ed2f74e52b5bf6a3e32a74f7c8fd2325180f0ecb67a313758a1c4"
+      },
+      {
+        "path": "docs/PLAYER_CONSTRUCTION_JOIN.md",
+        "bytes": 16648,
+        "sha256": "8a7f71f67cfb9af03b9eed0787b6b84ccd6f2a0624c37aec282c934f30f7bd24"
+      },
+      {
+        "path": "docs/PLAYER_DESIGNATION_JOIN.md",
+        "bytes": 16300,
+        "sha256": "812663f17b5b10606e627d7029168382c2b7942e7c9efc2b075b320f8628dc0c"
+      },
+      {
+        "path": "docs/INITIAL_REGISTRATION_CONTRACT.md",
+        "bytes": 16738,
+        "sha256": "9bdf404ee70272f3db2f986bacb1ae0ec01cebebf975a77d97d074a7f7e6b074"
+      },
+      {
+        "path": "docs/REGISTRATION_AUTHENTICATION_CONTRACT.md",
+        "bytes": 22242,
+        "sha256": "a589b8317c66ec86218e46b23f224f4e65d79728f571ffccaa8eb531d7566c67"
+      },
+      {
+        "path": "docs/EVIDENCE_LEDGER.md",
+        "bytes": 134313,
+        "sha256": "a36075efb02b40915e6b03efeccf810bce4ecf01da2287041ec48770a56e1174"
+      },
+      {
+        "path": "docs/ACTIONABLES.md",
+        "bytes": 12768,
+        "sha256": "89dfd7c4fa8eade8914262ed00cc65a2a203e76ae89fbf32015ebbcb3f75ddb5"
+      },
+      {
+        "path": "docs/AGENT_HANDOFF.md",
+        "bytes": 2232,
+        "sha256": "af82546b8bf608978f8f906ad31b2e73d835bfc7faf9488a5e0e5c2d0c547f9f"
+      },
+      {
+        "path": "research/evidence/current-player-construction-join.json",
+        "bytes": 51079,
+        "sha256": "2cbca0b1ec27d31c15ee4d8a61e8cd2f580f6cf56da014ed0e51f55255b40d3c"
+      },
+      {
+        "path": "research/evidence/current-player-designation-join.json",
+        "bytes": 23456,
+        "sha256": "f2ed323a76aaed81029691a42f10b11bc9a136d5d51c47a4f6bf045f570051dd"
+      },
+      {
+        "path": "research/evidence/current-initial-registration-contract.json",
+        "bytes": 72233,
+        "sha256": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8"
+      },
+      {
+        "path": "research/evidence/current-registration-authentication-contract.json",
+        "bytes": 72895,
+        "sha256": "190664f04fde5b09c5454d8574d6802cfec639480917161520fa7c4ff1453972"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-contract.json",
+        "bytes": 2373,
+        "sha256": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+      },
+      {
+        "path": "research/evidence/current-self-length-prefix-trial.json",
+        "bytes": 22962,
+        "sha256": "16615564497c82f6b8f3fa1ab766d7145cce7236869335b515cc5cbd18925cf9"
+      },
+      {
+        "path": "research/evidence/current-player-spawn-source-map.json",
+        "bytes": 9937,
+        "sha256": "07cb671ac79d30ab0137dcb0c16c3f31272aac0dffc1281bf99fd74ad8239bcd"
+      },
+      {
+        "path": "research/upstreams.json",
+        "bytes": 896,
+        "sha256": "30d3dd244973e7105d1a58e9567ca3b6aa9c5394d8430ad067cb73e6a5e36780"
+      },
+      {
+        "path": "requirements-dev.lock",
+        "bytes": 20767,
+        "sha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+      },
+      {
+        "path": "scripts/offline-test-profiles.json",
+        "bytes": 2582,
+        "sha256": "4a28c452c112d5521fd1b026f4b639ead1267163cb3c4250ab5e4071e5b859a6"
+      },
+      {
+        "path": "scripts/current_self_ident_default.py",
+        "bytes": 1144,
+        "sha256": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22"
+      },
+      {
+        "path": "scripts/current_world_activation.py",
+        "bytes": 1470,
+        "sha256": "b5fc7cc326286b301c76e4357f9ee5a63234cb235adf1ee1b973c60bf1e7d12c"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "bytes": 38675,
+        "sha256": "2394155ea935990d976d86d4fd26d7b506719fd23bda8f446186bbce9cf14afe"
+      },
+      {
+        "path": "scripts/dtls_transport_probe.py",
+        "bytes": 16287,
+        "sha256": "c8444079c50f75b46b71f551e6ed79181d0be5b1278d5b8d4603c93f9bf6192d"
+      },
+      {
+        "path": "research/upstream/aeternum-world/Tools/nw_capture/decode_dtls_ledger.py",
+        "bytes": 12048,
+        "sha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_request.py",
+        "bytes": 18802,
+        "sha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_response.py",
+        "bytes": 8205,
+        "sha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba"
+      },
+      {
+        "path": "research/upstream/first-light/server/rep_responder.py",
+        "bytes": 67063,
+        "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/wire.py",
+        "bytes": 6569,
+        "sha256": "bcb82f500455f9aa57312a596554954c04a462a1acc2cb23ae4a74ccd65d3a62"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/frame.py",
+        "bytes": 15425,
+        "sha256": "798f6419114eacac5c5bfb1fd4822929239cd82fb66835e15242dd78a066b33a"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/dispatch.py",
+        "bytes": 8865,
+        "sha256": "a2b852bae63ec663504cdb518c0031c9f5e4f3768ec0070dfb43dcc417da3ae7"
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/chunked_stream_08.py",
+        "bytes": 6800,
+        "sha256": "cbadb2ca450d47ddaf31c0fa8ec0b5f02838be350201e6acf4c7b57958f1da67"
+      }
+    ]
+  },
+  "freshVersionRead": {
+    "command": "Get-Item owned NewWorld.exe | Select-Object -ExpandProperty VersionInfo | Select-Object FileVersion,ProductVersion",
+    "fileVersion": "1.400.6031.6004151",
+    "productVersion": "1.400.6031.6004151"
+  },
+  "runtime": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "scope": "file/source/JSON reads; no native client execution",
+    "powershell": "7.6.6",
+    "analyzer": "1.25.0",
+    "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "baseline": {
+    "path": ".scratch/actionable-212-20261005T1703/baseline.json",
+    "sha256": "ce9f9d4b28b6a6b0a31eb7f4adce2a7b430677a656a879d699a5538814690d3e",
+    "trackedPaths": 221,
+    "initialIndexAndWorkingTreeClean": true,
+    "firstGitDisplayAheadOrigin": 3,
+    "laterLocalComparisonAheadOrigin": 0,
+    "headUnchangedAcrossObservations": true,
+    "refChangeCause": "unknown; no task fetch/push"
+  },
+  "claimIds": [
+    "K210",
+    "K211",
+    "K212",
+    "K213"
+  ],
+  "blockingDependencies": [
+    {
+      "id": "B212-1",
+      "sourceTask": 208,
+      "joins": [
+        "MJ208-1"
+      ],
+      "required": "Concrete class/factory/member decoder/application implementation to fresh PlayerComponent; complete member fields/encoding"
+    },
+    {
+      "id": "B212-2",
+      "sourceTask": 208,
+      "joins": [
+        "MJ208-2",
+        "MJ208-3",
+        "MJ208-4"
+      ],
+      "required": "Fresh gameplay entity/key/tuple/owner-map/context producers; memory/control/guard authority and lifecycle order"
+    },
+    {
+      "id": "B212-3",
+      "sourceTask": 210,
+      "joins": [
+        "J210-3",
+        "J210-4",
+        "J210-6"
+      ],
+      "required": "Pre-transport writer/stream queue/Carrier placement/inverse/checksum joined to current receive; exact consumed/output boundaries"
+    },
+    {
+      "id": "B212-4",
+      "sourceTask": 210,
+      "refinementTask": 211,
+      "required": "Actual request discriminator/runtime branch/index or UUID fallback, complete request/response helper encodings and current placement",
+      "refinement": "#211 joins selected response factory/field decoder, not complete codec or framing"
+    }
+  ],
+  "constructionMissingJoins": [
+    {
+      "id": "MJ208-1",
+      "boundary": "selected class descriptor48/factory create8/member decoder90/application38/48/60\u2192PlayerComponent create1467ca760",
+      "prerequisite": "concrete class selection and callback implementation or adapter, not member index alone"
+    },
+    {
+      "id": "MJ208-2",
+      "boundary": "fresh gameplay entity allocation\u2192component58 key/40/48/50 tuple\u2192owner map writer/context",
+      "prerequisite": "valid key and binding producer with object/context identity"
+    },
+    {
+      "id": "MJ208-3",
+      "boundary": "component allocation/control/guard\u2192authoritative memory owner and guard invalidation writer",
+      "prerequisite": "allocation owner, guard creation and control semantics"
+    },
+    {
+      "id": "MJ208-4",
+      "boundary": "construction/binding/facet activation\u2192general registration\u2192invalidation/removal/reset/disposal",
+      "prerequisite": "callback/order invariant or compensating reindex/removal"
+    }
+  ],
+  "registrationMissingJoinsAt210": [
+    "Actual860 discriminator/runtime branch/registered index or UUID fallback",
+    "Consumer of transport+190 queue; physical stream semantics146a99bf0/146ae55b0/140878c90; downstream Carrier/compression/inverse and checksum algorithm",
+    "Concrete V3 interface serializer/field encodings/current request decoder/selected response-specific factory+28",
+    "Current Carrier retransmission/ACK retirement intervals; all construction triggers/retry-stop predicate",
+    "Runtime factory/callback ordering and reentrant/in-flight cancellation guarantees"
+  ],
+  "authenticationMissingJoinsAt211": {
+    "currentIndependent": [
+      "Upstream calls/semantic input owners of0x146b6d580/0x146b6d9a0 and provider90 assignment/class/ownership",
+      "Remote issuer/validator/claim-store signature/expiry/principal/character/world/use authority",
+      "Concrete response5b subscriber48/router and owner768 source/result contract",
+      "Response18/38 semantic field names/issuer and callback110 downstream retention/identity consumption",
+      "Authoritative accepted principal/ticket to exact connection/peer and cancellation/generation/revocation scope"
+    ],
+    "dependency210": [
+      {
+        "join": "actual historical860 discriminator/runtime branch/index or UUID fallback",
+        "sourceBoundary": "J210-2 native class vs discarded parser-compatible record",
+        "conclusionsGated": "Current request identity and any comparison to historical860 candidates"
+      },
+      {
+        "join": "sender queue consumer/physical stream/Carrier placement and inverse",
+        "sourceBoundary": "J210-3 pre-transport writer vs J210-4 compact-length receive",
+        "conclusionsGated": "Wire placement/transport accepted message and binding fixture"
+      },
+      {
+        "join": "concrete current request/response helper encodings and schemas",
+        "sourceBoundary": "V3 interface236; response factory/decoder now joined but field helpers remain unproved",
+        "conclusionsGated": "Ticket-to-wire authorization or synthetic authentication acceptance/rejection"
+      }
+    ]
+  },
+  "authenticationLimit": "Authoritative identity/ticket/peer semantics additionally gate authenticated-semantic fixtures; not every inert constructor-default body",
+  "dependencyEdgesChanged": false,
+  "decoderSourceReview": [
+    {
+      "path": "research/upstream/first-light/server/javelin/frame.py",
+      "symbols": [
+        "parse_datagram",
+        "marshal_record"
+      ],
+      "classification": "source inference",
+      "limit": "Reference Carrier framing/size agreement does not close current framing/member joins"
+    },
+    {
+      "path": "research/upstream/first-light/server/javelin/dispatch.py",
+      "lines": "92-149",
+      "classification": "source inference",
+      "finding": "Type8 routes to historical decode_either; unregistered type returns None"
+    },
+    {
+      "path": "research/upstream/first-light/server/javelin/chunked_stream_08.py",
+      "symbols": [
+        "decode_standard",
+        "decode_uuid_prefixed",
+        "decode_either",
+        "encode_either"
+      ],
+      "classification": "source inference",
+      "finding": "Anchor or >=16-byte fallback plus opaque tail; round-trip bytes do not establish current player members"
+    },
+    {
+      "path": "research/upstream/aeternum-world/Tools/nw_capture/decode_dtls_ledger.py",
+      "lines": "118-232",
+      "classification": "source inference",
+      "finding": "Carrier/LZ4 plus opaque payloads/trailers; no current player member codec"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "symbols": [
+        "encode_empty_bundle"
+      ],
+      "classification": "source inference",
+      "finding": "Six-byte empty default bundle body contains no entities/members/player state"
+    }
+  ],
+  "selfPrefixLimit": {
+    "typedBytes": 131,
+    "bodyBytes": 127,
+    "typeId": 1628,
+    "candidatePrefixHex": "8302",
+    "status": "historical exact-candidate support only",
+    "outerReaderGeneralized": false,
+    "nonemptyMemberSchemaEstablished": false,
+    "liveTrialRerun": false
+  },
+  "acceptanceChecks": [
+    {
+      "check": "Positive current member build/type/body/channel/direction/state",
+      "outcome": "Blocked",
+      "dependencies": [
+        "B212-1",
+        "B212-2"
+      ]
+    },
+    {
+      "check": "Exact consumed/output member/framing sizes",
+      "outcome": "Blocked",
+      "dependencies": [
+        "B212-1",
+        "B212-3",
+        "B212-4"
+      ]
+    },
+    {
+      "check": "Actual decoder positive/truncation/unknown-type fixture cases",
+      "outcome": "Unrun",
+      "count": 0
+    },
+    {
+      "check": "New fixture round-trip agreement",
+      "outcome": "Unrun"
+    },
+    {
+      "check": "Current-client compatibility",
+      "outcome": "Unproved"
+    }
+  ],
+  "verification": {
+    "preflight": {
+      "command": "Invoke-CodexPowerShell.ps1 -Path scripts/Get-ProjectPreflight.ps1 -Execute",
+      "exitCode": 0,
+      "readiness": "ready",
+      "limits": "Public binding freshness only; older #208/#209 shared-doc/config inputs are stale"
+    },
+    "inputContractAudit": {
+      "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/actionable-212-20261005T1703/Inspect-Inputs.ps1 -Execute",
+      "exitCode": 0,
+      "count": 12,
+      "checks": {
+        "ownedImageHashMatches": true,
+        "ownedImageSizeMatches": true,
+        "typeMapHashMatches": true,
+        "steamAppBuildMatches": true,
+        "referencePinsClean": true,
+        "selectedImportedSourceHashesMatch210": true,
+        "fourConstructionGapsExplicit": true,
+        "registrationFramingNotReconciled": true,
+        "registrationTypeDecoderWasUnjoinedIn210": true,
+        "authenticationReceiptKeepsThreeFramingDependencies": true,
+        "selfCandidateExactly131Typed127Body": true,
+        "historicalSelfTrialClosedAndExplicitlyLimited": true
+      },
+      "receipt": {
+        "path": ".scratch/actionable-212-20261005T1703/contract-checks.json",
+        "sha256": "4d8c9c3bfba165233e8ada155b4df491efb525a13b1b1e7d765bb3114a501564"
+      },
+      "scope": "Identity/explicit-contract metadata checks, not fixture-decoder cases"
+    },
+    "sourceBindingsMatch210": [
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_request.py",
+        "bytes": 18802,
+        "sha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb",
+        "expectedSha256": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb",
+        "matches210": true
+      },
+      {
+        "path": "research/upstream/first-light/server/javelin/v3_response.py",
+        "bytes": 8205,
+        "sha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba",
+        "expectedSha256": "cff82bfb02e07270ee221134f2dee7b043dc9e8a17f83c7af7f0796d7d3c86ba",
+        "matches210": true
+      },
+      {
+        "path": "research/upstream/first-light/server/rep_responder.py",
+        "bytes": 67063,
+        "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73",
+        "expectedSha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73",
+        "matches210": true
+      },
+      {
+        "path": "research/upstream/aeternum-world/Tools/nw_capture/decode_dtls_ledger.py",
+        "bytes": 12048,
+        "sha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b",
+        "expectedSha256": "d5563a4ea694d45a81ab4db0d74ff86c940db95794a872a9393b2761efc9e15b",
+        "matches210": true
+      }
+    ],
+    "workspace": {
+      "status": "passed",
+      "profile": "workspace",
+      "command": "Invoke-CodexPowerShell.ps1 -Path scripts/Test-Offline.ps1 -Execute",
+      "startedAt": "2026-10-06T00:11:45.183792+00:00",
+      "finishedAt": "2026-10-06T00:12:58.643216+00:00",
+      "python": {
+        "selectedFiles": 33,
+        "collected": 469,
+        "executed": 469,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 53353
+      },
+      "changedInputs": [],
+      "newWorldClientTested": false,
+      "receipt": {
+        "path": ".scratch/offline-validation/run-6psj50vw/receipt.json",
+        "sha256": "2e3b71f429a1f4e12610d0990f6cedb8334cb79c537227268f3a910aed7bf0a5"
+      },
+      "scope": "Required offline repository regression; no #212 fixture acceptance"
+    },
+    "documentsAndPreservation": {
+      "status": "passed",
+      "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/actionable-212-20261005T1703/Validate-Report.ps1 -Execute",
+      "checks": 292,
+      "failures": [],
+      "unrelatedTrackedPathsPreserved": 218,
+      "sourceBindingsChecked": 30,
+      "localLinksChecked": 26,
+      "sharedUnderlyingBytesPreserved": true,
+      "receipt": {
+        "path": ".scratch/actionable-212-20261005T1703/document-checks-initial.json",
+        "sha256": "c4382ae5cc2792aec01a19ca582ab31e10e74a0f45fc37c068cdf2decb5d677d"
+      },
+      "checkedMetadataSnapshotSha256": "0a1b5cced54d1da72c713d4b4d5b3bee01105deae20c2050012bebae6f542c78",
+      "limit": "Document snapshot check preceded validation-metadata finalization; final focused check follows it"
+    }
+  },
+  "resources": {
+    "scratch": ".scratch/actionable-212-20261005T1703/",
+    "gameResourcesUsed": false,
+    "liveHooksCapturesEndpointsUsed": false,
+    "credentialsCollected": false,
+    "harness": "Isolated temp data and owned loopback child/listener; cleanup reported by workspace receipt",
+    "rawDiagnostics": "ignored scratch only"
+  },
+  "limit": [
+    "Fresh hashes preserve source identity; no prior native analysis or live trial was rerun.",
+    "#211 narrows the selected response factory/field-decoder gap; full encodings/framing remain unjoined.",
+    "Missing gates prevent fixture construction; zero positive/truncation/unknown-type fixture cases run."
+  ],
+  "taskLifecycleAtArtifactCreation": {
+    "status": "Blocked",
+    "claimRetainedUntilValidatedLocalCommitAndHandoff": true,
+    "Done": false,
+    "nextTaskBegun": false
+  },
+  "ownedOutputBindings": [
+    {
+      "path": "docs/WORLD_ENTRY_MEMBER_FIXTURES.md",
+      "sha256": "9ceade5b76d5c7aab662bb1e5305a86c34347e92f44c0ea78095db03b80b7585"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "1df7f36ef68672b1331c81ccfc6218b74559e19f68fb70774f10a83c105f143e"
+    },
+    {
+      "path": "docs/TASK_BRIEFS.md",
+      "sha256": "8002ddf7641bf569e3a08b275074ca200a83cd6b222fe1cf8d268ae6542ed119"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "7a4cf7e8b8e7016a3d092187e13bdd3f37402ca5bb91686dbd02e332098a66ea"
+    }
+  ],
+  "metadataFinalization": {
+    "afterWorkspaceRun": [
+      "Report verification text",
+      "Readiness receipt validation metadata/output hashes"
+    ],
+    "finalCheck": ".scratch/actionable-212-20261005T1703/document-checks-commit-ready.json",
+    "limit": "Final focused check follows metadata write; no native analysis/client/fixture rerun"
+  }
+}

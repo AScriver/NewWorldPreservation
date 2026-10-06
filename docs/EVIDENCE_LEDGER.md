@@ -1,5 +1,25 @@
 # Evidence ledger
 
+<!-- actionable-212:start -->
+## Current world-entry member fixture gate — October 5, #212 only
+
+Fresh audit input: clean main `d4b6a2c535c5d9f8f48293c235f4767cfb575e48`, pinned
+build22469132/image and approved type-map hashes, clean pinned references, 33 input
+bindings and 221 tracked baseline paths. Prior native/live work was not rerun.
+Exact seals/checks: [readiness receipt](../research/evidence/current-world-entry-member-fixture-readiness.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K210 | Positive current construction/member fixture contract is not supplied by the reviewed outcomes | Observed prerequisite audit; #208 MJ208-1–4 and #209 conditional joins leave concrete member codec/application, fresh entity/context binding, lifetime authority and order unknown. No whole-program absence or current-player claim | [Fixture gate](WORLD_ENTRY_MEMBER_FIXTURES.md), B212-1/B212-2; [construction](PLAYER_CONSTRUCTION_JOIN.md); [designation](PLAYER_DESIGNATION_JOIN.md) |
+| K211 | Relevant current framing/body gates remain unmet | Observed report/receipt audit; #210 writer/queue/Carrier/inverse/checksum and full body encodings remain unjoined. #211 narrows response factory/field-decoder provenance only. Authentication authority additionally gates authenticated-semantic fixtures | [Fixture gate](WORLD_ENTRY_MEMBER_FIXTURES.md), B212-3/B212-4; [registration](INITIAL_REGISTRATION_CONTRACT.md); [authentication](REGISTRATION_AUTHENTICATION_CONTRACT.md) |
+| K212 | Existing decoder agreement cannot validate current fresh-player members | Strongly source-supported pinned reference frame/dispatch/type8 and Carrier/LZ4 source: historical opaque tails/fallback and uninterpreted payload/trailer do not supply current member fields/semantics. No new decoder case or round trip executed | [Fixture gate](WORLD_ENTRY_MEMBER_FIXTURES.md), decoder review; exact source hashes in its [receipt](../research/evidence/current-world-entry-member-fixture-readiness.json) |
+| K213 | Exact Self prefix support is not a general reader/member contract | Historical closed 131-byte typed/127-byte default-body candidate support only; current artifact identity rehashed, no live rerun. No current nonempty member or gameplay proof | [Prefix contract](../research/evidence/current-self-length-prefix-contract.json); [closed result](../research/evidence/current-self-length-prefix-trial.json); [fixture gate](WORLD_ENTRY_MEMBER_FIXTURES.md) |
+
+#212 remains Blocked, with zero fixtures and zero positive/truncation/unknown-type
+fixture-decoder cases. Offline regression/report integrity checks do not complete
+fixture acceptance. No prerequisite task, #213 or live work is started.
+<!-- actionable-212:end -->
+
 ## Current registration authentication/peer ownership — October 5, #211 only
 
 Fresh pinned owned image8654f01d…/build22469132/mapf1e2385f…; initial clean

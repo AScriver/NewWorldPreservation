@@ -1,5 +1,20 @@
 # Milestone 1 roadmap
 
+<!-- actionable-212:start -->
+#212 fixture gate, October 5: **Blocked; fixture validation incomplete**. Required
+positive construction/member joins remain #208 MJ208-1–4; #209's designation paths
+do not supply that schema. #210's writer/stream/Carrier/inverse framing and complete
+body codecs remain unjoined; #211 narrows the response factory/field-decoder gap
+without closing those encodings or framing. The exact 131-byte Self prefix result
+does not generalize. Zero fixtures created and zero positive/truncation/unknown-type
+fixture-decoder cases executed. [Exact blockers and handoff](WORLD_ENTRY_MEMBER_FIXTURES.md),
+K210–K213 and [readiness receipt](../research/evidence/current-world-entry-member-fixture-readiness.json)
+record the bounded audit and offline verification. Only #212 under workItemId164,
+parent179, is worked; parent acceptance/Milestone1 remain open. No prerequisite gap,
+#213, client/live work or publication begins; handoff retains Blocked and releases
+the claim after the local commit.
+<!-- actionable-212:end -->
+
 #211 source result, October 5: current registration source joins immediate producer
 provenance, client authentication-result interpretation, conditional final-subscriber
 acceptance, response copy/borrow/clock ownership and connection→gateway→owner

@@ -1,5 +1,36 @@
 # Bounded task briefs
 
+<!-- actionable-212:start -->
+## #212 — current world-entry member fixtures (workItemId164, parent179)
+
+- Outcome/acceptance: original current-build fixtures with exact type/body/channel/
+  direction/state and consumed/output-size boundaries, exercised through actual
+  decoder positive/truncation/unknown-type cases. Round trips are local agreement;
+  current-client compatibility requires separate evidence.
+- Pre-change scope/checks/exclusions were recorded in the claimed Researching task.
+  Input baseline: clean main `d4b6a2c535c5d9f8f48293c235f4767cfb575e48`, 221 tracked
+  paths, 33 selected bindings; owned build22469132/version1.400.6031.6004151 and
+  approved image/type-map hashes rechecked. References clean at First Light63756a3f
+  and Aeternum820156db. Exact hashes/runtime/configuration are in the receipt.
+- Check plan: refresh identities; verify positive construction/member and relevant
+  framing/body gates; build/exercise fixtures only if those pass; otherwise validate
+  exact blockers, preservation, documents and the required workspace profile.
+- Gate result: **Blocked** by #208 MJ208-1–4 and #210's unreconciled framing/complete
+  body codecs. #209 is conditional; #211 narrows a response decoder gap without
+  completing encodings. Exact 131-byte Self prefix support does not generalize.
+  Zero fixtures/cases; fixture validation is incomplete. [Report](WORLD_ENTRY_MEMBER_FIXTURES.md),
+  K210–K213, [receipt](../research/evidence/current-world-entry-member-fixture-readiness.json).
+- Files: report/receipt plus only #212 insertions in this file, ROADMAP and ledger.
+  No implementation files change. Preserve all pre-existing bytes/commits.
+- Excluded: resolving construction/designation/auth/framing gaps, other tasks/#213,
+  guessed messages/historical replay, game starts/process reads/hooks/captures/
+  endpoints/credentials, system/trust/EAC/upstream changes, push/publishing/messages.
+- Resources/cleanup: unique ignored `.scratch/actionable-212-20261005T1703/`; offline
+  harness owns isolated temp data and any loopback child/listener and verifies cleanup.
+- Handoff: local coherent report commit, actual validation, #212 Blocked/released,
+  then stop. Positive missing contracts require separate authorization/scope.
+<!-- actionable-212:end -->
+
 ## #211 — current registration authentication/peer ownership (workItemId164)
 
 - Outcome/scope recorded before work in the Researching claim: establish current
