@@ -1,5 +1,29 @@
 # Agent handoff
 
+## #238 record boundary — October6 continuation
+
+Outcome: established record reader grammar plus paired key/selector/creation BODY
+writer, original immutable codec and seven synthetic literals. [Contract/API](CREATION_REPLICATION_RECORD.md),
+K303–K310 and original [source](../research/evidence/current-creation-record-contract.json)/
+[validation](../research/evidence/current-creation-record-validation.json) receipts.
+Baseline cleanf4c45c0; pinned image/map/references and #236/#237 support reused.
+
+Executed:65exact spans/42bounded windows/176artifact seals;111focused cases,
+independent87assertions/94record-BODY cases, workspace1048cases/38modules,
+three PowerShell suites and synthetic127.0.0.1 lifecycle. Inputs unchanged;
+listener closed, child exit0; analysis helpers exited. Raw outputs/databases retained
+ignored, no client/native/endpoint/upstream/publication operation.
+
+Retained: generic presence-wrapper mismatch, corrected per-member caller ABI,
+no-PDATA refusals/decompiler warnings, native failure drain and compact aliases.
+Native outer slot/count writer, enclosing bundle/Carrier/ACK/authority, runtime
+table/index/use, valid creation inputs and #212/#232/177/Milestone1 stay open.
+Original encoder is reader inverse, not proof of native outer emission.
+
+After local commit and tracking: continue the next meaningful eligible164 chunk
+under177, tracing the actual type8 bundle BODY/payload extent around this record.
+No child or parent completion stops the authorized continuation.
+
 ## #177 concrete member package — October 6
 
 Requested source/codec package finished under workItemId 164. [Current task status](ROADMAP.md)

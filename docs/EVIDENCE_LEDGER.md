@@ -1,5 +1,22 @@
 # Evidence ledger
 
+## Creation replication record and selector — October6, #238
+
+Clean source baselinef4c45c0, unchanged owned build/image/map and reused K293–K302.
+[Contract/API](CREATION_REPLICATION_RECORD.md), [source receipt](../research/evidence/current-creation-record-contract.json).
+Static joins and executed pure-code checks remain distinct.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K303 | Actual record reader establishes slot/count/member grammar | Compact32 low16 slot, byte structural0–255 count; native outer writer unjoined | R238-1 |
+| K304 | Actual member writer/reader pair establishes key/selector/BODY | Corrected ABI; member+88/+90 and candidate table; no wrapper presence/length | R238-4 |
+| K305 | Configured UUID table joins selector reader and cached writer index | Registrar+50 differs from+54; conditional fresh load/reservednil0; runtime/reload/cache safety unknown | R238-2 |
+| K306 | Unknown-member failure aborts and drains current native stream | No independent length/schema for skip; offline diagnostic offset is separate | Targeted challenge |
+| K307 | Original immutable record codec implements established reader inverse | Explicit table/index, selected BODY, canonical encoder/native compact aliases; no native outer-writer claim | Original module |
+| K308 | Original literals and independent checks preserve ordering/offsets/gates | Seven synthetic vectors;60record+34BODY+17runner; independent87assertions | Focused/Tester reports |
+| K309 | Source and artifact inputs were refreshed for this chunk | 65exact spans/42bounded windows/176private seals; failed queries/warnings retained | Source receipt |
+| K310 | Remaining #210/world-entry acceptance stays explicit | Native outer writer/enclosing receive/Carrier, runtime mapping, ACK/resend, historical860, authority; no player/M1 | Contract limits |
+
 ## Original creation-member BODY codec — October6, #237
 
 Pinned source K293–K298; executed original offline codec and fixture checks.

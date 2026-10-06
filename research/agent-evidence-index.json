@@ -12,6 +12,47 @@
   },
   "boundaries": [
     {
+      "id": "current-creation-replication-record",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K303",
+        "K304",
+        "K305",
+        "K306",
+        "K307",
+        "K308",
+        "K309",
+        "K310"
+      ],
+      "docs": [
+        "docs/CREATION_REPLICATION_RECORD.md"
+      ],
+      "scripts": [
+        "scripts/current_creation_replication_record.py"
+      ],
+      "tests": [
+        "tests/test_current_creation_replication_record.py"
+      ],
+      "fixtures": [
+        "tests/fixtures/replication/current-creation-record-original.json"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-creation-record-contract.json",
+          "classification": "source-inference",
+          "scope": "#238 current reader grammar/per-member paired writer/conditional selector ownership; native outer writer unjoined"
+        },
+        {
+          "path": "research/evidence/current-creation-record-validation.json",
+          "classification": "offline-executed",
+          "scope": "#238 original reader-inverse codec/literals/independent and workspace checks; no native/player acceptance"
+        }
+      ],
+      "limit": "Original reader-inverse codec with explicit synthetic table; native outer writer, runtime selection, enclosing bundle/Carrier/authority/player/M1 unproved."
+    },
+    {
       "id": "current-creation-member-body",
       "roadmapTasks": [
         "M1-06A"
@@ -1556,6 +1597,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/replication/current-creation-record-original.json",
+      "sha256": "a89afa588f4836759723bf75db462d7f18aa43105a73cb78c07c9d9441d8cf7b",
+      "classification": "synthetic",
+      "scope": "Original record reader inverse and creation BODY; no observed native emission/selection/datagram/player state"
+    },
+    {
       "path": "tests/fixtures/replication/current-creation-member-original.json",
       "classification": "synthetic",
       "sha256": "3be777041b81fca2552171f3d2dd7a07dbbbcf965e37017fb8d34df17f0f27d7",
@@ -1677,6 +1724,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-creation-record-validation.json",
+    "research/evidence/current-creation-record-contract.json",
     "research/evidence/current-creation-member-body-validation.json",
     "research/evidence/current-creation-member-contract.json",
     "research/evidence/current-player-member-application.json",

@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "classification": "synthetic",
+  "workItemId": 164,
+  "actionableId": 238,
+  "memberUuid": "203dc8c70c60454ba46f566114314b84",
+  "scope": "Original current record reader inverse and paired creation member BODY; no observed native outer writer, registry selection, datagram or player state",
+  "tables": {
+    "small": [
+      "00000000000000000000000000000000",
+      "203dc8c70c60454ba46f566114314b84",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "wide": {
+      "size": 129,
+      "fill": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "entries": {
+        "0": "00000000000000000000000000000000",
+        "1": "203dc8c70c60454ba46f566114314b84",
+        "128": "203dc8c70c60454ba46f566114314b84"
+      }
+    },
+    "duplicate": [
+      "00000000000000000000000000000000",
+      "203dc8c70c60454ba46f566114314b84",
+      "203dc8c70c60454ba46f566114314b84"
+    ]
+  },
+  "vectors": [
+    {
+      "name": "empty-slot-zero",
+      "table": "small",
+      "slot": 0,
+      "members": [],
+      "recordHex": "0000",
+      "length": 2
+    },
+    {
+      "name": "raw-uuid-empty-body",
+      "table": "small",
+      "slot": 127,
+      "members": [
+        {
+          "key": 0,
+          "classIndex": 0,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        }
+      ],
+      "recordHex": "7f010000203dc8c70c60454ba46f566114314b8400",
+      "length": 21
+    },
+    {
+      "name": "indexed-asset-high-scalar",
+      "table": "small",
+      "slot": 128,
+      "members": [
+        {
+          "key": 127,
+          "classIndex": 1,
+          "body": {
+            "assetId": {
+              "raw16": "000102030405060708090a0b0c0d0e0f",
+              "field_20": 4294967295
+            },
+            "gdeRef": null
+          }
+        }
+      ],
+      "recordHex": "8002017f010101000102030405060708090a0b0c0d0e0fffffffff",
+      "length": 27
+    },
+    {
+      "name": "wide-index-then-raw-member",
+      "table": "wide",
+      "slot": 65535,
+      "members": [
+        {
+          "key": 128,
+          "classIndex": 128,
+          "body": {
+            "assetId": null,
+            "gdeRef": "ffeeddccbbaa99887766554433221100"
+          }
+        },
+        {
+          "key": 0,
+          "classIndex": 0,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        }
+      ],
+      "recordHex": "dfff0702800280020102ffeeddccbbaa998877665544332211000000203dc8c70c60454ba46f566114314b8400",
+      "length": 45
+    },
+    {
+      "name": "maximum-key-complete-body",
+      "table": "small",
+      "slot": 16383,
+      "members": [
+        {
+          "key": 4294967295,
+          "classIndex": 1,
+          "body": {
+            "assetId": {
+              "raw16": "000102030405060708090a0b0c0d0e0f",
+              "field_20": 16909060
+            },
+            "gdeRef": "ffeeddccbbaa99887766554433221100"
+          }
+        }
+      ],
+      "recordHex": "bfff01f7ffffff1f010103000102030405060708090a0b0c0d0e0f01020304ffeeddccbbaa99887766554433221100",
+      "length": 47
+    },
+    {
+      "name": "order-and-duplicate-keys",
+      "table": "small",
+      "slot": 8,
+      "members": [
+        {
+          "key": 9,
+          "classIndex": 1,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        },
+        {
+          "key": 2,
+          "classIndex": 1,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        },
+        {
+          "key": 9,
+          "classIndex": 1,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        }
+      ],
+      "recordHex": "0803090100020100090100",
+      "length": 11
+    },
+    {
+      "name": "explicit-duplicate-table-position",
+      "table": "duplicate",
+      "slot": 0,
+      "members": [
+        {
+          "key": 1,
+          "classIndex": 2,
+          "body": {
+            "assetId": null,
+            "gdeRef": null
+          }
+        }
+      ],
+      "recordHex": "0001010200",
+      "length": 5
+    }
+  ]
+}

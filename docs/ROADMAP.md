@@ -1,5 +1,19 @@
 # Milestone 1 roadmap
 
+October6 continuation, #238 under177/164: current record reader grammar and paired
+member key/selector/BODY writer now support an original guarded record codec and
+seven synthetic vectors. Conditional typeindex loader/installer joins reader table
+and cached wire index; registration order remains distinct. [Record contract/API](CREATION_REPLICATION_RECORD.md),
+K303–K310 and [source receipt](../research/evidence/current-creation-record-contract.json)
+retain native outer-writer uncertainty, corrected caller ABI, compact aliases and
+native failure drain versus offline diagnostics. Focused111 cases and independent87
+assertions/94record-BODY cases passed. Required workspace1048/38 Python cases,
+three PowerShell suites and closed synthetic listener passed; inputs unchanged.
+Local commit and tracking closure follow. Runtime mapping/use, valid creation inputs, enclosing bundle/Carrier,
+#210 ACK/authority residuals, #212/#232/177 aggregate and bilateral movement remain
+open. Continue the next meaningful eligible offline164 chunk after validated local
+commit and tracking; the earlier package's stopping instruction is historical.
+
 Agent workflow, October6: [completion and continuation](../AGENTS.md#completion-and-continuation)
 now preserves required validation and material evidence corrections, reuses unaffected
 checks and batches closure updates without time caps. This instruction maintenance
@@ -537,11 +551,12 @@ conditional application, owned entity vector, clone/Id treatment and typed bindi
 [The member contract](CREATION_MEMBER_BODY.md) retains registry selection,
 active-handler/interception/map misses, state2, weak lifetime, source/resource,
 reflection/key and designation gates. No valid field values or authenticated
-player state are established. #210 still lacks the actual receive/outer-record
-inverse and Carrier placement, runtime selection, exact ACK/resend retirement,
+player state are established. The record reader inverse and per-member paired
+writer now have an original offline codec; the native outer slot/count writer is
+unjoined. #210 still lacks enclosing receive/Carrier placement, runtime selection, exact ACK/resend retirement,
 historical860 discriminator and authority. A BODY-only fixture does not close
-#212, #232/177 aggregate or bilateral movement. Stop after the requested #177
-package; further parent work requires a separate instruction.
+#212, #232/177 aggregate or bilateral movement. The October6 continuation authorizes
+the next meaningful eligible offline164 chunk after each validated local increment.
 
 ### Parked stock-client trust blocker and historical findings
 

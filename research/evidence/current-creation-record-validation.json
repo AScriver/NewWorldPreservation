@@ -1,0 +1,236 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 238,
+  "parentActionableId": 177,
+  "recordedUtc": "2026-10-06T18:12:57.577714+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "f4c45c09110a7f2cdc12e43ed97f04046555ee3b",
+    "dirtyBeforeReceipt": "M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/CREATION_REPLICATION_RECORD.md\n?? research/evidence/current-creation-record-contract.json\n?? scripts/current_creation_replication_record.py\n?? tests/fixtures/replication/current-creation-record-original.json\n?? tests/test_current_creation_replication_record.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "runtime": {
+      "ready": true,
+      "python": "3.11.9",
+      "isolatedVenv": true,
+      "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+      "packages": {
+        "cffi": {
+          "expected": "2.1.1",
+          "installed": "2.1.1",
+          "matches": true
+        },
+        "colorama": {
+          "expected": "0.4.6",
+          "installed": "0.4.6",
+          "matches": true
+        },
+        "cryptography": {
+          "expected": "50.0.2",
+          "installed": "50.0.2",
+          "matches": true
+        },
+        "iniconfig": {
+          "expected": "2.3.0",
+          "installed": "2.3.0",
+          "matches": true
+        },
+        "packaging": {
+          "expected": "26.3",
+          "installed": "26.3",
+          "matches": true
+        },
+        "pluggy": {
+          "expected": "1.6.0",
+          "installed": "1.6.0",
+          "matches": true
+        },
+        "pycparser": {
+          "expected": "3.0",
+          "installed": "3.0",
+          "matches": true
+        },
+        "pygments": {
+          "expected": "2.21.0",
+          "installed": "2.21.0",
+          "matches": true
+        },
+        "pyopenssl": {
+          "expected": "26.4.0",
+          "installed": "26.4.0",
+          "matches": true
+        },
+        "pytest": {
+          "expected": "9.1.1",
+          "installed": "9.1.1",
+          "matches": true
+        },
+        "typing-extensions": {
+          "expected": "4.16.0",
+          "installed": "4.16.0",
+          "matches": true
+        },
+        "lz4": {
+          "expected": "4.4.5",
+          "installed": "4.4.5",
+          "matches": true
+        }
+      },
+      "problems": []
+    }
+  },
+  "sourceContract": {
+    "path": "research/evidence/current-creation-record-contract.json",
+    "sha256": "8134bd845db18adade015778e8198dbafac6a8d668c2989eab7e6e26aa3c5ab9"
+  },
+  "claimIds": [
+    "K307",
+    "K308",
+    "K309",
+    "K310"
+  ],
+  "implementation": [
+    {
+      "path": "scripts/current_creation_replication_record.py",
+      "sha256": "0160f85576ff4b56758351589124600a2951833455d1fc37172f28b26d6d2986"
+    },
+    {
+      "path": "tests/test_current_creation_replication_record.py",
+      "sha256": "5e59e92351b3104d003130d673a49ecc9982cd1625e28afcc5ea3f2aa3ae6f5a"
+    },
+    {
+      "path": "tests/fixtures/replication/current-creation-record-original.json",
+      "sha256": "a89afa588f4836759723bf75db462d7f18aa43105a73cb78c07c9d9441d8cf7b"
+    },
+    {
+      "path": "scripts/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "233f724ea9f1c90381ae4be09287d8ef4c42d056ffc3eb8d2333cb4024e844b5"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "7a2d2044553b54b40060872a65d829b1febed8983dcbe9d96ef0a13c5ac05d83"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "4f44052795ffac6558ae3532c0c1cf8e519285e47eca7825620a7a4bca09a6ea"
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/replication/current-creation-record-original.json",
+    "sha256": "a89afa588f4836759723bf75db462d7f18aa43105a73cb78c07c9d9441d8cf7b",
+    "classification": "synthetic",
+    "vectors": 7,
+    "scope": "Record reader inverse, explicit table/index and creation BODY; no native outer emission"
+  },
+  "focused": {
+    "recordCases": 60,
+    "bodyCases": 34,
+    "runnerCases": 17,
+    "total": 111,
+    "script": {
+      "path": ".scratch/record238-primary/focused.ps1",
+      "sha256": "7da59b57447ea23740b45089269fe9807e1b9139a70a1d05d46bf2c38686afe6"
+    },
+    "junit": {
+      "path": ".scratch/record238-primary/focused.xml",
+      "sha256": "a02256c92173b7d616ff2c43e3027023581d919fa9c855aad57c41d837de3c8b"
+    }
+  },
+  "independent": {
+    "assertions": 87,
+    "focusedCases": 94,
+    "report": {
+      "path": ".scratch/record238-tester-1805/REPORT.md",
+      "sha256": "70b09edbb23f4d02e53dbcab70c38f73c1f4c75c821223d5c918e4931a369042"
+    },
+    "harness": {
+      "path": ".scratch/record238-tester-1805/probe.py",
+      "sha256": "b9c7fb6ec7d7930368effe296055c6067bcc235c932779fec93775bed0a14fa9"
+    },
+    "outcome": "passed; no falsification in synthetic Python scope",
+    "stableInputs": 4
+  },
+  "workspace": {
+    "path": ".scratch/offline-validation/run-fh6cc9aw/receipt.json",
+    "sha256": "602708d1d0928de020b1564292b0532daeda27e6fd61d2a621d43fd601d21b92",
+    "status": "passed",
+    "profile": "workspace",
+    "startedAtUtc": "2026-10-06T18:09:33.505378+00:00",
+    "finishedAtUtc": "2026-10-06T18:10:46.779725+00:00",
+    "python": {
+      "selectedFiles": 38,
+      "collected": 1048,
+      "executed": 1048,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "powershell": [
+      {
+        "file": "tests/test_observe_current_client.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_anchor_transaction.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_launch_lifecycle.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      }
+    ],
+    "cli": {
+      "status": "passed",
+      "httpStatus": 200,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "bind": "127.0.0.1",
+      "port": 57784
+    },
+    "changedInputs": []
+  },
+  "cleanup": {
+    "analysisHelpersExited": true,
+    "syntheticListenerClosed": true,
+    "syntheticChildExitCode": 0,
+    "privateDiagnosticsRetained": true
+  },
+  "exclusions": [
+    "Native outer writer/enclosing receive/Carrier placement",
+    "Runtime mapping/index/fallback choice",
+    "Exact resend/ACK retirement",
+    "Historical860 discriminator",
+    "Authenticated authority",
+    "Native error stream cleanup",
+    "Bundle framing/current stream extent",
+    "Valid creation values and player/aggregate/Milestone1 acceptance"
+  ],
+  "postRunMetadata": "Only documentation/receipt/catalog navigation finalized after workspace; eight implementation/fixture/inventory inputs remain unchanged. Final preflight/link/preservation/staged review follows."
+}

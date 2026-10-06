@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-creation-replication-record` | M1-06A | [Record reader inverse and paired member writer](CREATION_REPLICATION_RECORD.md) |
 | `current-creation-member-body` | M1-06A | [Concrete member class and BODY](CREATION_MEMBER_BODY.md) |
 | `current-player-member-application` | M1-06A | [Decoded member to guarded creation dispatch](PLAYER_MEMBER_APPLICATION.md) |
 | `current-player-entity-clone` | M1-06A | [Nested Entity clone and Id treatment](PLAYER_ENTITY_CLONE.md) |

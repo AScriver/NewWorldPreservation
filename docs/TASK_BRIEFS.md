@@ -1,5 +1,26 @@
 # Bounded task briefs
 
+## #238 — current creation record and class selector (164, parent177)
+
+- Outcome/acceptance/checks/exclusions recorded before work in the claimed M leaf:
+  actual reader/writer/selector/ownership, original supported codec and fixtures,
+  meaningful literal/round-trip/malformed/boundary checks, integration and local commit.
+- Clean baselinef4c45c0; pinned image/map/references and #236/#237 seals refreshed.
+  Distinct isolated initial record/selector questions; primary R238 ledger retained
+  writer mismatch, corrected ABI, native failure drain and unjoined outer writer.
+- Owned: record module/test/seven-vector fixture, reviewed inventory/count,
+  contract/source/validation receipts and concise ledger/navigation/ROADMAP/handoff.
+  Preserve unrelated files; raw analysis/databases stay unique and ignored.
+- Supported result: reader-inverse slot/count record plus paired member key/selector/
+  BODY writer. Explicit immutable synthetic table/index; no guessed presence, wire
+  index default, native cache recovery, unknown-class skip or error cleanup emulation.
+- Focused111 cases passed; independent87 assertions and94record/BODY cases passed.
+  Required workspace integration, staged scope/private-output/link review and
+  lifecycle readback precede the local coherent commit and next eligible164 chunk.
+- Excluded: native outer writer (bounded direct/data leads unjoined), runtime/player/
+  valid inputs, enclosing bundle/Carrier/ACK/authority residuals, clients/hooks/captures/
+  endpoints/credentials/replay/upstream/push/publication or Milestone1 claims.
+
 ## #236/#237 — concrete member source and offline BODY package (164, parent177)
 
 - Outcome/acceptance recorded before work: exact selector/registry/descriptor/factory/decoder/application joins, conditional selection labeled; original codec and deterministic fixtures only for established schema.
