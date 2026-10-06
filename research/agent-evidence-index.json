@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-identifier-placement",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K263",
+        "K264",
+        "K265",
+        "K266"
+      ],
+      "docs": [
+        "docs/REGISTRATION_IDENTIFIER_PLACEMENT.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-identifier-placement.json",
+          "classification": "source-inference",
+          "scope": "#229 actual V3 handle/object construction, nil physical UUID and generic inner type-selector/prefix join; pure models separately recorded"
+        }
+      ],
+      "fixtures": [],
+      "limit": "No native/client execution. Fresh ordinary wrapper flags0/1/3; actual optional values/registry index unobserved. Null-target standalone emitter is not a successful full writer. No receive inverse, authentication, #212 or M1 acceptance."
+    },
+    {
       "id": "current-registration-lookup-text",
       "roadmapTasks": [
         "M1-06B"
@@ -1454,6 +1480,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-identifier-placement.json",
     "research/evidence/current-registration-lookup-text-validation.json",
     "research/evidence/current-registration-setup-inputs.json",
     "research/evidence/current-registration-stream-framing.json",

@@ -1,5 +1,15 @@
 # Milestone 1 roadmap
 
+#229 source closure, October6: the selected V3 factory now joins its actual
+descriptor handle/object and the sender's inner type selector. The physical
+outer UUID is nil on this path; fresh wrapper fields and body presence precede
+the type prefix and BODY. [Identifier placement](REGISTRATION_IDENTIFIER_PLACEMENT.md),
+K263–K266 and [receipt](../research/evidence/current-registration-identifier-placement.json)
+record the corrected placement, initially zero cache and source/model limits.
+Map entry19 is no observed emitted index. Runtime registry values, receive
+inverse, authority, #212 and bilateral movement remain unproved; parent178/164
+and Milestone1 remain open.
+
 #228 offline implementation, October6: the verified lookup-text conversion now
 feeds the existing active TaggedField/BODY API. First-NUL truncation, permissive
 hex/separator/braces/suffix parsing and whole-prefix case flags are preserved in

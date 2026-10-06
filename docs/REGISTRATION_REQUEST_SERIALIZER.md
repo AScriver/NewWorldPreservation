@@ -70,3 +70,11 @@ next bounded body-codec targets; no request fixture or implementation is supplie
 now close the selected decoder/collection prerequisite at the same image. Larger
 nested fields and framing/authority remain separate; #220 evidence above retains
 its original selection/role scope.
+
+## Follow-up #229
+
+[The concrete identifier join](REGISTRATION_IDENTIFIER_PLACEMENT.md) now connects
+the V3 factory's returned handle to object+0x18 UUID, +0x48 serializer and initially
+zero+0x54 index. The generic type emitter uses the actual cache/lookup result;
+map19 is no proof of current index19. That inner selector follows wrapper fields
+and body presence, while the physical outer16 is nil on this registration path.

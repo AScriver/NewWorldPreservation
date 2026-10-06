@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current registration identifier placement — October6, #229
+
+Clean input main `e7b4237904c050390ddd8cabeba37b3f1405754a`; current image/map/reference
+and material #220/#226 bindings refreshed. [Original receipt](../research/evidence/current-registration-identifier-placement.json)
+separates exact instruction-supported conclusions from executed pure models and regression.
+
+| ID | Claim | Scope / limits | Evidence |
+|---|---|---|---|
+| K263 | Selected registration passes a nil UUID to the physical outer16 slot | Strongly source-supported actual owner/gateway/writer construction and ABI; original proposed V3 outer placement falsified. Writable static nil storage, no race/fault proof | [Placement](REGISTRATION_IDENTIFIER_PLACEMENT.md), J229-1 |
+| K264 | Concrete V3 handle/object joins UUID fallback and cached-index type emission before BODY | Strongly source-supported handle pair, object+18 UUID, +48 serializer, initially zero+54. Map19 names UUID but does not establish current compact ID19 | [Descriptor/selector](REGISTRATION_IDENTIFIER_PLACEMENT.md), J229-2 |
+| K265 | Fresh selected wrapper emits flags/options/presence before type and BODY | Strongly source-supported stable ordinary flags0/1/3, bit2 clear; raw8 values/current ambient state unobserved. General context block is separate capability | [Prefix](REGISTRATION_IDENTIFIER_PLACEMENT.md), J229-3 |
+| K266 | Source join retains normal ownership and finite verification boundaries | Shared message/stream owners cover normal synchronous calls; pure instruction models and required checks are separately executed. No native/global teardown/runtime registry/live acceptance | [Receipt](../research/evidence/current-registration-identifier-placement.json), J229-4 |
+
 ## Offline registration lookup-text conversion — October6, #228
 
 Clean input main `f5166334de14352f2843ba79f4ed488647a43953`; relevant source/image

@@ -34,7 +34,7 @@ path, writer `0x146b0f430` produces:
 |---|---|
 | 0..3 | IEEE CRC32, big endian |
 | 4..7 | Low 32 bits of actual count n, big endian |
-| 8..23 | Exactly 16 descriptor bytes |
+| 8..23 | Exactly 16 supplied outer UUID bytes; nil on the selected registration path (#229) |
 | 24 onward | Bytes actually written by the generic wrapper/body writer |
 
 n is the descriptor cursor delta plus the generic writer's actual cursor delta.
@@ -187,3 +187,12 @@ Field authority, authenticated peer binding, current wire selection, complete
 reliability/ACK scheduling, #212's construction/member gates and two actual
 clients with bilateral movement remain unproved. Parent #178/#164 and Milestone 1
 remain open.
+
+## Follow-up #229
+
+[Identifier placement](REGISTRATION_IDENTIFIER_PLACEMENT.md) now joins the selected
+registration call to this physical slot: nil outerUUID, then wrapper
+flags/options/presence, inner class selector and V3 BODY. The class UUID is an
+inner fallback when its actual cache/lookup index is zero; map19 alone supplies
+no emitted-index proof. The #226 header/count/queue evidence keeps its original
+ordinary-stream and lower-emission limits.
