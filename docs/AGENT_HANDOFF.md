@@ -1,5 +1,35 @@
 # Agent handoff
 
+## #239 type8 BODY — October6 continuation
+
+Outcome: actual paired type8 BODY grammar and fresh retained-payload extent/owner
+joined; original immutable codec and bounded creation-record composition with
+seven synthetic literals. [Contract/API](TYPE8_BUNDLE_BODY.md), K311–K319,
+[source](../research/evidence/current-type8-bundle-body-contract.json) and
+[validation](../research/evidence/current-type8-bundle-body-validation.json).
+Clean baseline d1b3bbd; README commit preserved; image/map/references and #238/#207
+source identity refreshed.58spans/19windows/102private seals passed.
+
+Executed:200focused(87BODY), independent8probe groups; historical86testinput
+scoped separately, code/fixture unchanged. Workspace1135/39Python,threePS and
+synthetic127.0.0.1 lifecycle passed; listenerclosed,childexit0, ten implementation
+inputs unchanged. Initial handwritten/scratch literal failures retained and
+corrected; no codec defect reproduced. Only file analysis, private DBs retained;
+no client/native/hook/capture/endpoint/upstream/push/publication operation.
+
+Limits: freshcap256000 payloadbytes,inline2048/heap,optionalcount100. Native
+overcap may consume/succeed without retention; reuse/allocator/concurrency/absent
+destination effects are not emulated. BODY prefix and payload errors keep separate
+offsets. Native unknownmember failure drains later payloadrecords, excludes outer
+suffix; pure parser failswhole without mutation/skip/application. Current record
+encoder remains readerinverse until exact native slot/count writer is joined.
+
+Local commit/tracking closure follow. Then select nearest eligible offline164
+dependency under177: actual native record producer/slot-count writer from known
+per-member caller chain and bundle buffer consumers. Retain #210 receive/Carrier,
+ACK/resend/historical860/authority, runtime table/selection, valid creation values,
+#212/#232/177 aggregate and Milestone1 as unproved. Child completion is no stop.
+
 ## #238 record boundary — October6 continuation
 
 Local code/source increment `af12a01`; #238 terminal Done/version10 and claim

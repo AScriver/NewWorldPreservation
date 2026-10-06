@@ -1,5 +1,19 @@
 # Milestone 1 roadmap
 
+October6 continuation, #239 under177/164: paired current type8 BODY and declared
+payload extent/ownership now support an original guarded codec and bounded
+creation-record composition. [Contract/API](TYPE8_BUNDLE_BODY.md), K311–K319 and
+[source/validation](../research/evidence/current-type8-bundle-body-validation.json).
+Seven synthetic vectors,200focused cases and8independent probe groups passed.
+Freshfactorycap256000/inline2048, optionalcount100, sequence sentinel/compact64,
+native overcap success-without-retention and reuse conditions stay explicit.
+Required workspace1135cases/39modules, three PowerShell suites and closed
+synthetic listener passed; ten code/fixture/inventory inputs unchanged. Local
+commit and tracking closure follow.
+Native outerrecordwriter, remaining #210 Carrier/ACK/authority/runtime joins,
+valid creation values and #212/#232/177/Milestone1 remain open. Continue after this
+checkpoint to the nearest meaningful eligible offline164 dependency.
+
 October6 continuation, #238 under177/164: current record reader grammar and paired
 member key/selector/BODY writer now support an original guarded record codec and
 seven synthetic vectors. Conditional typeindex loader/installer joins reader table

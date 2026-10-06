@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "classification": "synthetic",
+  "source": "Original current paired type8 BODY grammar; invented fixture values only",
+  "limit": "BODY only, no observed native emission, complete datagram, runtime selection or player creation",
+  "vectors": [
+    {"name": "fresh-default", "sequence": null, "field30": 0, "field31": 0, "field08": false, "structure": null, "payloadHex": "", "bodyHex": "000000000000", "length": 6},
+    {"name": "present-sequence-zero", "sequence": 0, "field30": 0, "field31": 0, "field08": false, "structure": null, "payloadHex": "", "bodyHex": "01000000000000", "length": 7},
+    {"name": "sequence-and-raw-tail", "sequence": 128, "field30": 17, "field31": 34, "field08": true, "structure": null, "payloadHex": "aabbcc", "bodyHex": "0180021122010003aabbcc", "length": 11},
+    {"name": "present-empty-structure", "sequence": null, "field30": 0, "field31": 0, "field08": false, "structure": {"fieldD0": 0, "items": []}, "payloadHex": "", "bodyHex": "0000000001000000", "length": 8},
+    {"name": "structure-big-endian-items", "sequence": null, "field30": 171, "field31": 205, "field08": false, "structure": {"fieldD0": 268435456, "items": [0, 4660, 65535]}, "payloadHex": "feed", "bodyHex": "00abcd0001f0000000020300001234ffff02feed", "length": 20},
+    {"name": "largest-present-sequence", "sequence": 18446744073709551614, "field30": 255, "field31": 255, "field08": true, "structure": null, "payloadHex": "", "bodyHex": "01fffeffffffffffffffffff010000", "length": 15},
+    {"name": "synthetic-indexed-creation-payload", "sequence": null, "field30": 0, "field31": 0, "field08": false, "structure": null, "payloadHex": "0001070100", "bodyHex": "0000000000050001070100", "length": 11}
+  ]
+}

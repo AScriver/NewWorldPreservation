@@ -5,6 +5,8 @@ The installed map name and a fresh deduplication counter are experiment values;
 they do not supply a player entity or establish playable world state.
 """
 
+from current_type8_bundle_body import BundleBody, encode_body
+
 MAP_NAME = "newworld_vitaeeterna"
 LEVEL_INFO_TYPE_ID = 0x663
 LEVEL_INFO_HEADER = b"\x00\x01\xa3\x19"
@@ -34,4 +36,4 @@ def encode_empty_bundle() -> bytes:
     An empty current bundle can trigger pending context activation. It contains
     no entities, historical replay, player state or replica payload.
     """
-    return BUNDLE_HEADER + bytes(BUNDLE_BODY_BYTES)
+    return BUNDLE_HEADER + encode_body(BundleBody())

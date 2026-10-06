@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "actionableId": 239,
+  "workItemId": 164,
+  "parentActionableId": 177,
+  "recordedUtc": "2026-10-06T18:52:27.902893+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "sourceContract": {
+    "path": "research/evidence/current-type8-bundle-body-contract.json",
+    "sha256": "f8dd5c24c7786459ff687622838eed670401a3add3368856f28976565d7a46ce"
+  },
+  "claimIds": [
+    "K315",
+    "K316",
+    "K317",
+    "K318",
+    "K319"
+  ],
+  "implementation": [
+    {
+      "path": "scripts/current_type8_bundle_body.py",
+      "sha256": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105"
+    },
+    {
+      "path": "tests/test_current_type8_bundle_body.py",
+      "sha256": "3cda83ea0c789740a0852b3539dc4ee326ba00f19768003a99ca14d694d139ef"
+    },
+    {
+      "path": "tests/fixtures/replication/current-type8-bundle-original.json",
+      "sha256": "923ec36974218fac561f106d3f28e699f40bdb997ffce691d4de14e721782c88"
+    },
+    {
+      "path": "scripts/current_world_activation.py",
+      "sha256": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc"
+    },
+    {
+      "path": "scripts/current_creation_replication_record.py",
+      "sha256": "0160f85576ff4b56758351589124600a2951833455d1fc37172f28b26d6d2986"
+    },
+    {
+      "path": "scripts/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "2022466e708d8e573c53bd0d5a8a28fd044d83b2e5c7bd7628f53bfa8530a0dd"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "96bfb7e31da12bfe181b4f1c1aa7644a0e524edf76e5a83b0c10b23b3ca03728"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "ac73b70a4f158bf29888b85d134298a55c6d698c4fb6f9f4dbd48c32e0420185"
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/replication/current-type8-bundle-original.json",
+    "sha256": "923ec36974218fac561f106d3f28e699f40bdb997ffce691d4de14e721782c88",
+    "classification": "synthetic",
+    "vectors": 7
+  },
+  "focused": {
+    "total": 200,
+    "bodyCases": 87,
+    "recordCases": 60,
+    "creationBodyCases": 34,
+    "runnerCases": 17,
+    "activationCases": 2,
+    "junit": {
+      "path": ".scratch/bundle239-primary/focused.xml",
+      "sha256": "559187d908da899358d55fed8292e636a19bd815d2f24c1285600398eed62061"
+    },
+    "script": {
+      "path": ".scratch/bundle239-primary/focused.ps1",
+      "sha256": "fc6dde491d8abb7a532247229c51dc11539e5acd026e92b4c76f892d23f14443"
+    },
+    "initialFailedJUnit": {
+      "path": ".scratch/bundle239-primary/focused-initial-failed.xml",
+      "sha256": "d8bae63386a5074340b1df93890b0fa15c8a6a4aa3f47baa48e00f891f6cddc9"
+    }
+  },
+  "independent": {
+    "probeGroups": 8,
+    "outcome": "passed; no codec defect reproduced",
+    "report": {
+      "path": ".scratch/bundle239-tester-20261006/REPORT.md",
+      "sha256": "ac1248383861a37aa32610947717308f15a804761a64491fac09141f1da97f13"
+    },
+    "results": {
+      "path": ".scratch/bundle239-tester-20261006/probe-results.json",
+      "sha256": "96d523bb65069066c0d27def8bcf9a2b377a9196b711d4c7085f06ecbe3f3dee"
+    },
+    "harness": {
+      "path": ".scratch/bundle239-tester-20261006/probe.py",
+      "sha256": "fa5ff19c43fbdca70956b366ab0365da55e1bd40e4c535b7028e1586ca7fbfd4"
+    },
+    "currentCodeAndFixtureInputs": 2,
+    "historicalTestCases": 86,
+    "historicalJUnit": {
+      "path": ".scratch/bundle239-tester-20261006/focused-junit.xml",
+      "sha256": "b6b18192283a286bc5d13e64239377efa278d8ec341492465183c79e6be8ff53"
+    },
+    "limit": "86case report uses old test hash; one added maximumBODY test passed current primary87case suite; code/fixture unchanged"
+  },
+  "sourceChallenges": {
+    "ownershipModels": 19,
+    "scalarBoundaryModels": 30,
+    "nativeExecuted": false
+  },
+  "workspace": {
+    "path": ".scratch/offline-validation/run-xuf_p79t/receipt.json",
+    "sha256": "d46e5f95bee0c0d483bb70727d5e8be408267077fe2656be0de2364da6a1c190",
+    "profile": "workspace",
+    "status": "passed",
+    "startedAtUtc": "2026-10-06T18:49:16.383760+00:00",
+    "finishedAtUtc": "2026-10-06T18:50:30.452992+00:00",
+    "runtime": {
+      "ready": true,
+      "python": "3.11.9",
+      "isolatedVenv": true,
+      "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+      "packages": {
+        "cffi": {
+          "expected": "2.1.1",
+          "installed": "2.1.1",
+          "matches": true
+        },
+        "colorama": {
+          "expected": "0.4.6",
+          "installed": "0.4.6",
+          "matches": true
+        },
+        "cryptography": {
+          "expected": "50.0.2",
+          "installed": "50.0.2",
+          "matches": true
+        },
+        "iniconfig": {
+          "expected": "2.3.0",
+          "installed": "2.3.0",
+          "matches": true
+        },
+        "packaging": {
+          "expected": "26.3",
+          "installed": "26.3",
+          "matches": true
+        },
+        "pluggy": {
+          "expected": "1.6.0",
+          "installed": "1.6.0",
+          "matches": true
+        },
+        "pycparser": {
+          "expected": "3.0",
+          "installed": "3.0",
+          "matches": true
+        },
+        "pygments": {
+          "expected": "2.21.0",
+          "installed": "2.21.0",
+          "matches": true
+        },
+        "pyopenssl": {
+          "expected": "26.4.0",
+          "installed": "26.4.0",
+          "matches": true
+        },
+        "pytest": {
+          "expected": "9.1.1",
+          "installed": "9.1.1",
+          "matches": true
+        },
+        "typing-extensions": {
+          "expected": "4.16.0",
+          "installed": "4.16.0",
+          "matches": true
+        },
+        "lz4": {
+          "expected": "4.4.5",
+          "installed": "4.4.5",
+          "matches": true
+        }
+      },
+      "problems": []
+    },
+    "python": {
+      "selectedFiles": 39,
+      "collected": 1135,
+      "executed": 1135,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "powershell": [
+      {
+        "file": "tests/test_observe_current_client.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_anchor_transaction.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_launch_lifecycle.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      }
+    ],
+    "cli": {
+      "status": "passed",
+      "httpStatus": 200,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "bind": "127.0.0.1",
+      "port": 60297
+    },
+    "changedInputs": []
+  },
+  "exclusions": [
+    "Native outer record slot/count writer",
+    "Physical enclosing receive/Carrier placement",
+    "Runtime table/index/fallback choice",
+    "ACK/resend retirement",
+    "Historical860 discriminator",
+    "Authenticated authority",
+    "Native error/mutation/allocator/reuse/concurrency parity",
+    "Valid creation values/player/designation/aggregate/Milestone1"
+  ],
+  "cleanup": {
+    "analysisHelpersExited": true,
+    "syntheticListenerClosed": true,
+    "syntheticChildExitCode": 0,
+    "privateDiagnosticsRetained": true,
+    "clientExecuted": false
+  },
+  "postRunMetadata": "Only documentation/receipt handoff metadata finalized after workspace; ten code/fixture/inventory inputs unchanged. Preservation/index/link/diff checks repeated for affected metadata; no duplicate code validation."
+}

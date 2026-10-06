@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-type8-bundle-body` | M1-06A | [Paired BODY and bounded payload codec](TYPE8_BUNDLE_BODY.md) |
 | `current-creation-replication-record` | M1-06A | [Record reader inverse and paired member writer](CREATION_REPLICATION_RECORD.md) |
 | `current-creation-member-body` | M1-06A | [Concrete member class and BODY](CREATION_MEMBER_BODY.md) |
 | `current-player-member-application` | M1-06A | [Decoded member to guarded creation dispatch](PLAYER_MEMBER_APPLICATION.md) |

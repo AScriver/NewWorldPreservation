@@ -12,6 +12,48 @@
   },
   "boundaries": [
     {
+      "id": "current-type8-bundle-body",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K311",
+        "K312",
+        "K313",
+        "K314",
+        "K315",
+        "K316",
+        "K317",
+        "K318",
+        "K319"
+      ],
+      "docs": [
+        "docs/TYPE8_BUNDLE_BODY.md"
+      ],
+      "scripts": [
+        "scripts/current_type8_bundle_body.py"
+      ],
+      "tests": [
+        "tests/test_current_type8_bundle_body.py"
+      ],
+      "fixtures": [
+        "tests/fixtures/replication/current-type8-bundle-original.json"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-type8-bundle-body-contract.json",
+          "classification": "source-inference",
+          "scope": "#239 paired current BODY/fresh payload extent/ownership; runtime unknown"
+        },
+        {
+          "path": "research/evidence/current-type8-bundle-body-validation.json",
+          "classification": "offline-executed",
+          "scope": "#239 synthetic codec/record composition; required integration tracked separately"
+        }
+      ],
+      "limit": "BODY only; native outer record writer, Carrier/authority/runtime selection/valid player and Milestone1 unproved"
+    },
+    {
       "id": "current-creation-replication-record",
       "roadmapTasks": [
         "M1-06A"
@@ -1597,6 +1639,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/replication/current-type8-bundle-original.json",
+      "sha256": "923ec36974218fac561f106d3f28e699f40bdb997ffce691d4de14e721782c88",
+      "classification": "synthetic",
+      "scope": "Original BODY/explicit synthetic creation payload; no observed emission/selection/datagram/gameplay"
+    },
+    {
       "path": "tests/fixtures/replication/current-creation-record-original.json",
       "sha256": "a89afa588f4836759723bf75db462d7f18aa43105a73cb78c07c9d9441d8cf7b",
       "classification": "synthetic",
@@ -1724,6 +1772,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-type8-bundle-body-contract.json",
+    "research/evidence/current-type8-bundle-body-validation.json",
     "research/evidence/current-creation-record-validation.json",
     "research/evidence/current-creation-record-contract.json",
     "research/evidence/current-creation-member-body-validation.json",

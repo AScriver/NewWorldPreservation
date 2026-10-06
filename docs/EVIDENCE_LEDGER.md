@@ -1,5 +1,23 @@
 # Evidence ledger
 
+## Type8 bundle BODY and bounded payload — October6, #239
+
+Clean baseline d1b3bbd, pinned source/mapping and #238/#207 support refreshed.
+[Contract/API](TYPE8_BUNDLE_BODY.md), [source](../research/evidence/current-type8-bundle-body-contract.json)
+and [validation](../research/evidence/current-type8-bundle-body-validation.json). Static inference and executed synthetic checks remain distinct.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K311 | Actual type8 factory writer/reader pair establishes full BODY order | Bounded trampoline plus PDATA helpers; no type/Carrier framing | R239-1 |
+| K312 | Strict sequence marker, compact64 and sentinel behavior joined | Widths1..9; presentallones canonical absent; native absent leaves reused destination | R239-1/targeted challenge |
+| K313 | Optional scalar/count/BE16 collection paired | Count<=100; native writer over100 substituteszero; raw semantics unknown; local import identity | R239-1 |
+| K314 | Declared extent/copy ownership/retained consumer view joined | Freshcap256000,inline2048/heap; native success may retainempty, reuse/allocator/concurrency conditional | R239-2 |
+| K315 | Original immutable BODY codec preserves prefix/payload boundaries | Safe cap/count/pre-copy guards; diagnostics separate from native state/errors | Original module |
+| K316 | Creation record composition is bounded to explicit payload | Synthetic table; reader-inverse outerrecord writer unjoined; no skip/application/drain | Original module |
+| K317 | Synthetic literals, malformed/boundary and independent probes pass | Seven vectors;200focused cases,8independent groups; historical86test run scoped to old test hash | R239-3/4 |
+| K318 | Source/dirty pins and material counterevidence retained | Exact spans/windows/seals; no-PDATA failures repaired by changed method, required integration tracked | Source/validation receipts |
+| K319 | Native outerwriter and remaining #210/player/M1 joins remain open | BODY proof closes extent, not physical Carrier/ACK/authority/runtime selection/valid creation | Contract limits |
+
 ## Creation replication record and selector — October6, #238
 
 Clean source baselinef4c45c0, unchanged owned build/image/map and reused K293–K302.

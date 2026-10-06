@@ -1,5 +1,18 @@
 # Bounded task briefs
 
+## #239 — current type8 BODY and payload boundary (M)
+
+Under177/work164. Pre-work outcome/acceptance/exclusions recorded in Actionables
+before analysis. Source discovery joins actual paired BODY writer/reader and fresh
+payload extent/copy/view. Original safe value codec, bounded creation-record reader
+inverse composition and seven synthetic fixtures implemented; focused200cases and
+independent8groups passed. [Contract/API](TYPE8_BUNDLE_BODY.md), K311–K319.
+Workspace1135/39Python,threePS and closed synthetic lifecycle passed; local
+commit/tracking closure follow. No child completion stops continuation.
+Native outerrecord writer, #210 remaining transport/authority/runtime selection,
+valid creation values/player/aggregate acceptance remain unproved. No client/live,
+capture/hook/credential/replay/upstream/push/publication action.
+
 ## #238 — current creation record and class selector (164, parent177)
 
 - Outcome/acceptance/checks/exclusions recorded before work in the claimed M leaf:
