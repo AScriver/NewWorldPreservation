@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 ROOT = Path(__file__).parents[1]
 FIXTURE = ROOT / "tests/fixtures/connectivity/current-login-info-result.json"
@@ -32,13 +33,19 @@ def test_observed_character_selection_then_queue_is_not_world_entry():
         assert item["exact_owned_client_tcp_tuple"] and not item["request_values_saved"]
 
 
-def test_received_synthetic_model_and_exercised_sources_remain_pinned():
+def test_received_synthetic_model_and_historical_exercised_sources_remain_pinned():
     case = json.loads(FIXTURE.read_text())["cases"][-1]
     model = json.loads((ROOT / "tests/fixtures/connectivity/current-login-info-candidate.json").read_text())
     body = json.dumps(model,sort_keys=True,separators=(",", ":")).encode()
     assert hashlib.sha256(body).hexdigest() == case["observations"][0]["response_sha256"]
     receipt = json.loads((ROOT / "research/evidence/current-login-info.json").read_text())
     for path, expected in receipt["sources"].items():
-        assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected
+        # #253 changes this probe. Keep the live receipt's original source;
+        # the new private-character receipt covers the current implementation.
+        source = (subprocess.check_output(["git", "show",
+                  "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1:" + path], cwd=ROOT)
+                  if path == "scripts/session_handoff_probe.py"
+                  else (ROOT / path).read_bytes())
+        assert hashlib.sha256(source).hexdigest() == expected
     assert not receipt["game_transport_proven"] and not receipt["actor_spawn_proven"]
     assert not receipt["query_names_values_or_identifiers_exported"]

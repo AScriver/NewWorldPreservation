@@ -1,0 +1,211 @@
+{
+  "schema": 1,
+  "classification": "original-private-trial-character",
+  "workItemId": 164,
+  "actionableId": 253,
+  "parentActionableId": 247,
+  "recordedUtc": "2026-10-06T23:06:51.741724+00:00",
+  "claimIds": [
+    "K341",
+    "K342",
+    "K343"
+  ],
+  "input": {
+    "initialHead": "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1",
+    "initialWorkingTree": "clean",
+    "head": "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1",
+    "workingTree": "M docs/AGENT_HANDOFF.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ONE_PLAYER_MILESTONE.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/queue_contract_probe.py\n M scripts/session_handoff_probe.py\n M scripts/validate_offline.py\n M tests/test_current_login_info.py\n M tests/test_current_queue_handoff.py\n M tests/test_offline_runner.py\n?? docs/PRIVATE_TRIAL_CHARACTER.md\n?? research/evidence/private-trial-character.json\n?? scripts/private_trial_character.py\n?? tests/test_private_trial_character.py"
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/private_trial_character.py",
+      "sha256": "d8b6a7e8b55e22205e0918f36e7292348146bb7449e8eaf056f54dba17bb5037"
+    },
+    {
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "cd33450bc809a0286f32eb9f87a9acd1c0664b3852c1af4e76ccdb1644ac93bf"
+    },
+    {
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "7d52db6db68cb1ad723c0d0c6b938715d9802cbd57870e6af509e1f2c0a62357"
+    },
+    {
+      "path": "scripts/current_player_identity_body.py",
+      "sha256": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df"
+    },
+    {
+      "path": "scripts/current_player_creation_candidate.py",
+      "sha256": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d"
+    },
+    {
+      "path": "scripts/current_creation_trial_ref.py",
+      "sha256": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6"
+    },
+    {
+      "path": "tests/test_private_trial_character.py",
+      "sha256": "ec41632f7017207861ad535b2251aa9d7bdfe33d79627c31c56691b8b683aef5"
+    },
+    {
+      "path": "tests/test_current_login_info.py",
+      "sha256": "642872ed0e80631996471740c0db0a1c734ccfa28c94af0dc0119da113d6b63f"
+    },
+    {
+      "path": "tests/test_current_queue_handoff.py",
+      "sha256": "6ec3d3ffabdad09d0f5d24fa394b83e9a775a9834c8eac791178b76df8621a98"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-login-info-candidate.json",
+      "sha256": "6dc384cc2513e0148b03b88e6222d10f170696fe752aa6dc6230c3b81eddc358"
+    },
+    {
+      "path": "tests/fixtures/connectivity/current-queue-parser-candidate.json",
+      "sha256": "2e6fb077fc4c6c03bb54c9c837bb395367d0abfed3cefc6aba48302d6e079e99"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "cf666bc4f1a41f3b9f67c1cd63ed49cffb1e6f4aac1991091ec4b268a1f12d17"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "0e038e2c00bc9d28bfba8e2f7015941ab466259383c79f26e584daf23453a659"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "3a28478d60e9b09470977c14e6108ffe7d51a288190e2498412e59ad478ab7d6"
+    },
+    {
+      "path": "docs/PRIVATE_TRIAL_CHARACTER.md",
+      "sha256": "ac3eaa168ef2ea4cbc00dbf1ef84ac315f2c536dea39a375f7e370ddd9a2b8d9"
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "path": "research/evidence/current-player-creation-candidate.json",
+      "sha256": "b5da087e282e7648ec311fca32715302ca7f08e868810e8aed8e104255b90f65"
+    },
+    {
+      "path": "research/evidence/current-player-identity-body.json",
+      "sha256": "f6dd2bc5d137d87f8591aa8395412db02d7a861f715d044964ccde11fe5203c1"
+    },
+    {
+      "path": "research/evidence/current-player-designation-join.json",
+      "sha256": "f2ed323a76aaed81029691a42f10b11bc9a136d5d51c47a4f6bf045f570051dd"
+    },
+    {
+      "path": "research/evidence/current-creation-trial-ref.json",
+      "sha256": "a02ec51ac463f4bf454bda6f711cd83322297a2f8f3dbd0b61460264a1b83865"
+    },
+    {
+      "path": "research/evidence/current-login-info.json",
+      "sha256": "bd50e827ea3524b1a107fb070908267def8120bff04953f5ae038b443564764a"
+    },
+    {
+      "path": "research/evidence/current-queue-handoff.json",
+      "sha256": "294973c02f35e56ae52aa17d2e3b989b18e052f27791aa3a09472de2a3e92b6c"
+    }
+  ],
+  "historicalLiveSources": [
+    {
+      "receipt": "research/evidence/current-login-info.json",
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+      "gitRevision": "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1",
+      "scope": "historical live source, not current probe"
+    },
+    {
+      "receipt": "research/evidence/current-queue-handoff.json",
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "7769fbc82411392043b722743885983338bf67d5eff2bd940492c6748144bcd2",
+      "gitRevision": "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1",
+      "scope": "historical live source, not current probe"
+    },
+    {
+      "receipt": "research/evidence/current-queue-handoff.json",
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "dc8b758e156485f8c606886ae4176ef420284538040e034133408f104bb16611",
+      "gitRevision": "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1",
+      "scope": "historical live source, not current probe"
+    }
+  ],
+  "sourceReuse": "Native ID/provider comparison, BODY and reference inputs unchanged from #252 source refresh; these are source inference, not new native execution.",
+  "verification": {
+    "focused": {
+      "tests": 195,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "receipt": ".scratch/one-player-20261006/identity-focused.xml",
+      "sha256": "876790ede3b8abfb4ec73d96b31ec5c54ec840929421843f848cec7d3edc71df"
+    },
+    "workspace": {
+      "receipt": ".scratch/offline-validation/run-kvepgx52/receipt.json",
+      "sha256": "83e0078baab4ae806a60174dec60fdee033afea53e7b50b8a8d9afcecf448207",
+      "status": "passed",
+      "profile": "workspace",
+      "python": {
+        "selectedFiles": 47,
+        "collected": 1373,
+        "executed": 1373,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 65196
+      },
+      "changedInputs": [],
+      "note": "Selected executable/test inputs match current files. Later validation-result documentation and receipt updates are metadata only."
+    },
+    "integratedHttps": "Two actual isolated loopback HTTPS200 responses joined ID/persona/ticket/world/name/time to exact identity BODY and inert candidate/reference; owned server/thread/log closed.",
+    "legacyDefaults": "Every existing case remains byte-identical to its fixture; original live receipt sources stay at pinned historical Git revision."
+  },
+  "corrections": [
+    {
+      "receipt": ".scratch/offline-validation/run-ybmceq7d/receipt.json",
+      "result": "3 failed,1370 passed; external-path test assumed pytest temp outside ignored root, and two old tests treated historical live source pins as permanently current.",
+      "repair": "Allocate a truly external owned test directory and verify changed historical inputs from exact preserved Git revision; retain live receipts unchanged."
+    },
+    "One initial UUID-uppercase negative used numeric-only hex; corrected test input before final worker checks."
+  ],
+  "limits": [
+    "Original ephemeral local record; no official or authenticated backend ticket claim",
+    "Session UUID is private correlation data, not an invented wire field",
+    "Known occupancy is caller local knowledge, not native map observation",
+    "Fixed world/token clock/signature defaults remain experiment values",
+    "No controller forwarding, new Carrier send or game/client/hook action",
+    "Native provider/resource load/designation/rendering/control and all live milestone acceptance remain pending"
+  ],
+  "clientStarted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "milestone1": "not-proven",
+  "cleanup": "Isolated unit-owned loopback servers/threads/logs and private administrative test files closed/removed; no game/shared resource created."
+}

@@ -10,6 +10,7 @@
       "tests/test_current_creation_trial_ref.py",
       "tests/test_current_player_identity_body.py",
       "tests/test_current_player_creation_candidate.py",
+      "tests/test_private_trial_character.py",
       "tests/test_current_creation_replication_record.py",
       "tests/test_current_type8_bundle_body.py",
       "tests/test_current_credentials_contract.py",

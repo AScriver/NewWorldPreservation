@@ -12,9 +12,25 @@ restarts. All remain pending; preserve the two-client acceptance below.
 Furthest private live behavior: the0655 trial reached SelfIdentification and
 context initialization, then selection/spawn timeout; its type8 bundle was empty.
 Current obstacle: no fresh creation/identity member reaches the live path.
-Leaf252 now composes the original nonempty candidate offline. Next: fresh
-identity propagation, conditional component delivery and an admitted integrated
-trial. Native construction, designation, rendering and controls are unproved.
+Leaf252 composes the original nonempty candidate offline; leaf253 now joins one
+fresh immutable backend identity through selection, queue and player BODY.
+Next: default-off forwarding and candidate integration, conditional component
+delivery, then an admitted client trial. Native construction, designation,
+rendering and controls are unproved. The300s client cap includes loading and is
+insufficient for five minutes after spawn; the closed prior trial instead hit
+the30s idle deadline after client traffic stopped, with no budget rejection.
+
+October6 #253 under247/164: [one fresh private trial record](PRIVATE_TRIAL_CHARACTER.md)
+owns distinct new local session/character/persona/ticket UUIDs and one assigned
+GdeRef. Optional original selection/queue inputs join those fields and exact
+identity BODY text; strict private administrative JSON and early guards preserve
+legacy fixture bytes. The isolated HTTPS-to-candidate test and focused195 cases
+passed. Required workspace1,373 Python cases/47modules, four PowerShell suites
+and closed isolated CLI lifecycle passed; exact input seals and catalog review
+are retained in [the receipt](../research/evidence/private-trial-character.json). No new
+Carrier send, controller forwarding, authentication or native designation is
+claimed; actual one-player acceptance remains pending. Historical live receipt
+source pins are preserved at their exact Git revision after probe changes.
 
 October6 #252 under248/190/171/164: the original two-class record and
 [creation/identity type8 candidate](PLAYER_CREATION_CANDIDATE.md) are implemented.

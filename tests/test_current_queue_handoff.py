@@ -1,6 +1,7 @@
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 ROOT = Path(__file__).parents[1]
 FIXTURE = ROOT / "tests/fixtures/connectivity/current-queue-handoff-result.json"
@@ -29,7 +30,7 @@ def test_captured_header_metadata_does_not_claim_body_validation_or_negotiation(
     assert not first["payload_saved"] and not first["handshake_established"]
 
 
-def test_received_synthetic_candidate_and_exercised_original_sources_remain_pinned():
+def test_received_synthetic_candidate_and_historical_sources_remain_pinned():
     fixture = json.loads(FIXTURE.read_text())
     model = json.loads((ROOT / "tests/fixtures/connectivity/current-queue-parser-candidate.json").read_text())
     response = json.dumps(model,sort_keys=True,separators=(",", ":")).encode()
@@ -37,5 +38,10 @@ def test_received_synthetic_candidate_and_exercised_original_sources_remain_pinn
     assert hashlib.sha256(response).hexdigest() == fixture["queue"]["response_sha256"]
     receipt = json.loads((ROOT / "research/evidence/current-queue-handoff.json").read_text())
     for path,expected in receipt["sources"].items():
-        assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected
+        # Keep the exact historical live inputs after the #253 fresh-input change.
+        source = (subprocess.check_output(["git", "show",
+                  "bbadb9d0b2108637f7cc4edb8a7d77be5b9f45f1:" + path], cwd=ROOT)
+                  if path in ("scripts/queue_contract_probe.py", "scripts/session_handoff_probe.py")
+                  else (ROOT / path).read_bytes())
+        assert hashlib.sha256(source).hexdigest() == expected
     assert not receipt["clock_units_and_expiry_verified"] and not receipt["downstream_signature_validation_verified"]

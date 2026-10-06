@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "private-trial-character",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K341", "K342", "K343"],
+      "docs": ["docs/PRIVATE_TRIAL_CHARACTER.md"],
+      "scripts": ["scripts/private_trial_character.py", "scripts/session_handoff_probe.py", "scripts/queue_contract_probe.py"],
+      "tests": ["tests/test_private_trial_character.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/private-trial-character.json", "classification": "synthetic", "scope": "Fresh original local record, strict private persistence and isolated HTTPS-to-player-input equality; no native or live send"}],
+      "limit": "No authenticated native session, controller forwarding or Carrier send. Provider/readiness, resource loading, local designation and visible control remain unproved."
+    },
+    {
       "id": "current-player-creation-candidate",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K337", "K338", "K339", "K340"],

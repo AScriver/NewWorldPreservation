@@ -1,5 +1,24 @@
 # Agent handoff
 
+## #253 fresh identity propagation — October6
+
+- Live behavior remains the closed0655 context initialization, then spawn timeout.
+  No entity/rendering/control claim follows from the offline changes.
+- One immutable original local character now joins selection, queue, identity
+  BODY and assigned creation reference. Strict ignored-file admin preparation,
+  independent fresh UUID domains and legacy response parity are covered by
+  [the contract](PRIVATE_TRIAL_CHARACTER.md), K341–K343 and its receipt.
+- Focused195 tests and required workspace1,373 Python/47modules, four PowerShell
+  suites and isolated CLI lifecycle passed. Input/catalog review and local
+  increment close this leaf. No game/shared resource created; HTTPS resources closed.
+- Continue with default-off controller/Carrier forwarding using one retained
+  record and a concrete nonempty trial proposal. Existing approvals enumerate
+  an empty bundle; this unit grants no new sends. Native loading/designation
+  and all one-player acceptance remain pending.
+- Client maximum300s includes loading; a future five-minute post-spawn test
+  needs a longer bounded lifetime. Prior transport idle-close followed stopped
+  inbound traffic, not an observed datagram/heartbeat budget failure.
+
 ## #252 one-player priority and candidate — October6
 
 - Current goal/checkpoint: [one actual fresh controllable private player](ONE_PLAYER_MILESTONE.md),

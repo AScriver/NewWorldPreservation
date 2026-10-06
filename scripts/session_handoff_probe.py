@@ -13,6 +13,7 @@ import threading
 from urllib.parse import urlsplit
 
 import credentials_contract_probe as credentials
+from private_trial_character import PrivateTrialCharacter
 
 LOGIN_INFO_ROUTE = re.compile(r"/prod/game/getlogininfo/[^/?#]{1,128}/omni")
 CASES = ("empty-characters", "seed-character")
@@ -40,13 +41,23 @@ def login_info_target_shape(target):
     }
 
 
-def response_case(name):
+def response_case(name, *, trial_character: PrivateTrialCharacter | None = None):
     if name not in CASES:
         raise ValueError("Unknown controlled discovery case")
+    if trial_character is not None:
+        if type(trial_character) is not PrivateTrialCharacter or name != "seed-character":
+            raise ValueError("trial_character requires seed-character and an exact private record")
     fixture = Path(__file__).resolve().parents[1] / "tests/fixtures/connectivity/current-login-info-candidate.json"
     model = json.loads(fixture.read_text(encoding="utf-8"))
     if name == "empty-characters":
         model["LoginInfoList"]["Characters"] = []
+    elif trial_character is not None:
+        selected = model["LoginInfoList"]["Characters"][0]
+        selected.update(CharacterId=trial_character.character_id,
+                        PersonaId=trial_character.persona_id,
+                        Name=trial_character.name,
+                        CreatedDate=trial_character.created_at,
+                        ModifiedDate=trial_character.created_at)
     return json.dumps(model, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
@@ -88,12 +99,14 @@ class SessionHandoffHandler(credentials.CredentialsContractHandler):
                   private_game_ticket_issued=False, world_entry_proven=False)
 
 
-def make_server(bind, port, certificates, events, descriptor, *, case):
-    body = response_case(case)
+def make_server(bind, port, certificates, events, descriptor, *, case,
+                trial_character: PrivateTrialCharacter | None = None):
+    body = response_case(case, trial_character=trial_character)
     server = credentials.make_server(bind, port, certificates, events, descriptor, case="flat-numeric-expiration")
     server.RequestHandlerClass = SessionHandoffHandler
     server.login_info_response = body
     server.discovery_case = case
+    server.trial_character = trial_character
     return server
 
 

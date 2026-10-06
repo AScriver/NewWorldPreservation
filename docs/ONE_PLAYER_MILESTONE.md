@@ -53,7 +53,7 @@ Verify this chain rather than assuming wire order:
 
 | Transition | Current support | Missing observation / obstacle |
 |---|---|---|
-| Fresh session/character identity | Login-info and queue schema; identity text codec | Probes retain fixed fixtures; no shared fresh one-character backend owner |
+| Fresh session/character identity | One original immutable record now joins login-info, queue and identity BODY | Integrated controller/Carrier forwarding and native local-ID provider acceptance pending |
 | Entity creation | Owned player AssetId, fresh GdeRef policy, creation BODY/record parser | Trial sends no creation member; native construction/slot placement unobserved |
 | Resource loading and component delivery | Exact owned player resource; baked PlayerComponent index9 | Native load and refreshable runtime index mode unobserved |
 | Local-player designation | Exact text comparison, reconciled identity delivery, guarded registry path | Matching provider availability, binding, keyed readiness and actual designation unobserved |
@@ -71,9 +71,13 @@ Resource index9 is conditional; reader-inverse record construction and live
 Carrier placement remain experimental. Candidate construction grants no new
 live sends or observer sites.
 
-Next relevant work is to supply one fresh backend identity consistently to
-login-info, queue and the identity member, then exercise the integrated candidate
-only within an admitted trial. Expected first observable result: native resource/
+Offline leaf **#253** now supplies [one fresh private character](PRIVATE_TRIAL_CHARACTER.md)
+consistently to login-info, queue and the identity BODY/candidate. The record is
+ephemeral original backend data; native authentication/designation remain unknown.
+
+Next relevant work is default-off controller/Carrier integration of that same
+record, then exercise the candidate only within an admitted trial. Expected
+first observable result: native resource/
 player construction after the previously observed context activation. Local
 designation, rendering and control must then be checked separately.
 
@@ -88,3 +92,9 @@ authorization. A new creation send must be concrete and reviewable before any
 needed approval; unperformed live checks stay pending. Record the furthest
 observed behavior, exact blocker and next justified experiment in this checkpoint
 as the loop advances.
+
+The current runner caps the client at300seconds from resume, including loading.
+That cannot allow a full five-minute control observation after spawn. The prior
+trial exhausted no observed Carrier budget: its transport closed after30.638s
+without inbound traffic. Preserve that distinction; a longer interactive trial
+needs a separately bounded lifetime proposal after the spawn path is concrete.

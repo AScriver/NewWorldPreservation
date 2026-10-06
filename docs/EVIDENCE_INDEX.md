@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `private-trial-character` | M1-07 | [One fresh original record across HTTP and player inputs](PRIVATE_TRIAL_CHARACTER.md) |
 | `current-player-creation-candidate` | M1-07 | [Original two-member type8 candidate](PLAYER_CREATION_CANDIDATE.md) |
 | `owned-player-delivery-index` | M1-06A | [Observed baked index and conditional delivery](PLAYER_DELIVERY_INDEX.md) |
 | `current-player-identity-body` | M1-06A | [Concrete identity fields and bounded BODY codec](PLAYER_IDENTITY_BODY.md) |

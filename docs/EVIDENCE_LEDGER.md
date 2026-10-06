@@ -1,5 +1,17 @@
 # Evidence ledger
 
+## Fresh private character inputs — October6, #253
+
+Baseline clean `bbadb9d`; task-owned generator/probe/test/inventory changes and
+documentation dirty. [Contract/API](PRIVATE_TRIAL_CHARACTER.md) and
+[receipt](../research/evidence/private-trial-character.json) retain exact inputs.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K341 | One fresh frozen local record owns distinct session/character/persona/ticket values and one assigned GdeRef | Original ephemeral backend data; no official account/session authority; caller occupancy is not native map evidence | Generator, strict private JSON and malformed/collision/exclusive-write checks |
+| K342 | The same record joins selection and queue fields to exact identity BODY and creation reference | Observed isolated HTTPS and inert candidate integration; native provider, designation and authentication unobserved | `test_isolated_https_selection_queue_identity_and_candidate` |
+| K343 | Default responses retain exact legacy fixture bytes; incompatible fresh cases fail early | Original controlled byte parity and before-certificate/bind negatives; no new live send/controller behavior | Focused API/CLI tests and selected source hashes |
+
 ## Original two-member player candidate — October6, #252
 
 Baseline clean e73121e; goal checkpoint6cee4dc then task-owned code/tests/inventory

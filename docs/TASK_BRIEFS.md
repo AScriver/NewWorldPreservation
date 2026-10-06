@@ -1,5 +1,20 @@
 # Bounded task briefs
 
+## #253 — one fresh original private character (M)
+
+- Removes fixture reuse and inconsistent identity ownership before a creation
+  trial. WorkItem164, parent247; clean baseline `bbadb9d`.
+- Owns one frozen generator/private JSON/admin CLI, optional selection/queue
+  API and queue CLI inputs, original integrated tests, inventory, docs/receipt.
+- New local UUID domains, timestamp/name and once-assigned reference propagate
+  through exact existing schemas and BODY. Preserve byte-identical defaults;
+  reject malformed/private-path/occupancy/overwrite/unsupported-case inputs.
+- Verify isolated HTTPS selection/queue-to-identity/candidate consistency and
+  exact cleanup, focused/required workspace, source/fixture seals and local commit.
+- No controller/Carrier send, game/client/hook, credentials, official/replayed
+  identities, authenticated ticket or native loading/designation claim. Follow
+  with separately tracked default-off integrated trial preparation.
+
 ## #252 — original creation/identity composition (M)
 
 - Removes the first live-path payload omission after context initialization:
