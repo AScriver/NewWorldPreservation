@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current owned entity vector and binding receiver — October 6, #233
+
+Clean input main `2ca3201d70d806a12ef44f218bac7fd1b87720b7`; pinned image/map,
+references and relevant #231 source refreshed. [Original receipt](../research/evidence/current-player-entity-vector.json)
+separates source support, retained counterevidence and executed regression.
+
+| ID | Claim | Scope / limits | Evidence |
+|---|---|---|---|
+| K275 | Actual batch enumerates the stored holder vector; guarded job supplies its same receiver | Strongly source-supported capture/table/thunk/weak-lock identity; scheduling, state2, context and compared-value gates remain | [Receiver path](PLAYER_ENTITY_VECTOR.md), J233-1 |
+| K276 | Entity factory/default and supplied/copied/generated key constructors are distinct | Exact AZ::Entity reflection/68h factory and zero-extended default supported; actual nested clone factory/Id write remains #234 | [Construction limits](PLAYER_ENTITY_VECTOR.md), J233-3 |
+| K277 | Normal Entity deletion and pointer-copy semantics constrain ownership | Flag1 deletes components; copy duplicates pointer bytes; flag4 target returns. No exclusive ownership, hazardous runtime copy or concurrency proof | [Ownership limits](PLAYER_ENTITY_VECTOR.md), J233-3 |
+| K278 | Fresh outer wrapper differs from previously existing appended objects | Separate operation/type; other object's C0 is transform data. No offset-based receiver identity or substitution of fresh outer wrapper | [Role corrections](PLAYER_ENTITY_VECTOR.md), J233-3 |
+| K279 | InstantiatedContainer Entities metadata and holder disposal are joined | Same AZ::Entity element getter; factory defaults own flag20; disposal checks current flag, borrowed temporary flag0. Per-element clone and exclusive ownership unknown | [Stored vector](PLAYER_ENTITY_VECTOR.md), J233-2 |
+| K280 | Targeted challenge preserves feasible-route and verification limits | Direct queue R4 falsified by caller-known sixtharg0; deferred job route survives only explicit guards. Prefixes are bounded; no native/M1 acceptance | [Verification](PLAYER_ENTITY_VECTOR.md), J233-4 |
+
 ## Current PlayerComponent entity-reference binding — October6, #231
 
 Clean input main `7b344d46552710568466a8fcfc38f24a17abe0ce`; pinned image/map,

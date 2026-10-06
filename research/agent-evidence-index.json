@@ -12,6 +12,34 @@
   },
   "boundaries": [
     {
+      "id": "current-player-entity-vector",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K275",
+        "K276",
+        "K277",
+        "K278",
+        "K279",
+        "K280"
+      ],
+      "docs": [
+        "docs/PLAYER_ENTITY_VECTOR.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-player-entity-vector.json",
+          "classification": "source-inference",
+          "scope": "#233 exact guarded job/receiver and owned-vector/type/normal-disposal source joins; counterevidence and repository validation recorded separately"
+        }
+      ],
+      "limit": "Guarded source relation only: deferred job/context/state/weak-lock/compared-value conditions remain. Direct queue route falsified. Nested Entity clone factory/Id remapping, runtime invocation, exclusive ownership, complete construction and #212/M1 acceptance remain open."
+    },
+    {
       "id": "current-player-entity-binding",
       "roadmapTasks": [
         "M1-06A"
@@ -1544,6 +1572,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-player-entity-vector.json",
     "research/evidence/current-player-entity-binding.json",
     "research/evidence/current-registration-request-stream-validation.json",
     "research/evidence/current-registration-identifier-placement.json",

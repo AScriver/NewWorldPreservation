@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#233 source closure, October 6: exact InstantiatedContainer/vector ownership and
+a guarded deferred-job capture now connect the factory-produced receiver to the
+holder setter/getter and typed binding batch. The shown direct queue route remains
+falsified. [Vector contract](PLAYER_ENTITY_VECTOR.md), K275–K280 and
+[receipt](../research/evidence/current-player-entity-vector.json) retain scheduling,
+state, weak-lock, value-guard, alias, failure and bounded-window conditions.
+#232 remains an open coordination parent; #234 owns actual nested Entity clone
+creation/Id remapping. #212, parent177/164 and bilateral movement remain open.
+
 #231 source closure, October6: an actual batch/type-query/binder now supplies
 PlayerComponent's non-default entity-reference key/cache from its owner-map
 lookup. Map membership owns guard invalidation; retained controls preserve guard

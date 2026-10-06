@@ -1,5 +1,10 @@
 # Current PlayerComponent entity-reference binding — #231
 
+October 6 follow-up #233 joins the supplied vector's producer/type/normal lifetime
+and guarded same-receiver deferred-job path. See [vector contract](PLAYER_ENTITY_VECTOR.md).
+Nested per-Entity construction/key treatment remains #234; the historical #231
+receipt and its duplicate/phase/guard conditions remain unchanged.
+
 Task231 under workItem164/parent177 closes a specific #208 prerequisite: the
 current-image operation and caller that bind an existing PlayerComponent to an
 owner-map reference. It establishes no fresh entity allocation or wire schema.

@@ -1,5 +1,10 @@
 # Current player construction and registry join — #208
 
+October 6 follow-up #233 adds the exact owned-vector producer and guarded job
+capture/receiver relation in [the vector contract](PLAYER_ENTITY_VECTOR.md).
+Actual nested Entity clone factory/Id treatment remains #234; parent #232's
+aggregate construction acceptance and this historical #208 receipt remain open/unchanged.
+
 October6 follow-up #231 positively closes the specific typed binding writer,
 owner-map reference and normal guard-invalidation join described as missing here.
 See [current binding evidence](PLAYER_ENTITY_BINDING.md), K271–K274. This historical
