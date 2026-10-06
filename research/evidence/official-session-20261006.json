@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "classification": "official_user_report_and_allowlisted_local_log_metadata",
+  "status": "partial_normal_entry_and_reported_relogin_verified",
+  "workItemId": 164,
+  "checkpoints": [
+    243,
+    245
+  ],
+  "baselineHead": "32cf7df39088d91ecb6392775ae3a67db131378e",
+  "baselineDirtyFiles": [],
+  "preLaunchHead": "32cf7df39088d91ecb6392775ae3a67db131378e",
+  "closureHead": "0958dd026397c5076f4be2cbf862444af8294969",
+  "concurrentReplicationClaimPreserved": 240,
+  "concurrentCommunityCommitPreserved": "7c8919db0ecd2130404de171bd092619a006fa01",
+  "build": {
+    "steam": {
+      "appid": "1063730",
+      "buildid": "22469132",
+      "source_read_sha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+      "raw_manifest_archived": false
+    },
+    "version": "1.400.6031.6004151",
+    "executable_sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+  },
+  "timing": {
+    "armed_utc": "2026-10-06T19:39:54.693378+00:00",
+    "armed_monotonic_ns": 143044046000000,
+    "clock": "host_monotonic_ns",
+    "cross_client_clock_alignment": "unavailable",
+    "closed_utc": "2026-10-06T19:52:23.993360+00:00",
+    "closed_monotonic_ns": 143793343000000
+  },
+  "launch": {
+    "mode": "ordinary_steam_applaunch",
+    "coldProcessPreflightPassed": true,
+    "strictObserverEnded": "identity_unavailable",
+    "socketSamples": 0,
+    "installedHashIsLiveImageProof": false
+  },
+  "logCollection": {
+    "scope": "own_conventional_Game.log_suffix_fixed_categories",
+    "boundedSeconds": 300,
+    "actualSamples": 252,
+    "rawLinesRetained": false,
+    "markerCounts": {
+      "GAME_CONNECTION_WRAPPER": 21,
+      "REP_CONNECTION": 2,
+      "LEVEL_LOAD_MARKER": 3
+    },
+    "sourceUtcEventCount": 0
+  },
+  "renderedObservations": [
+    {
+      "action": "login_malfunction_visible",
+      "source": "user_report",
+      "reportedAtUtc": "2026-10-06T19:44:00.910576+00:00",
+      "reportMonotonicNs": 143290265000000,
+      "observed": "observed",
+      "exactGameplayActionTimeKnown": false
+    },
+    {
+      "action": "supported_play_pressed",
+      "source": "user_report",
+      "reportedAtUtc": "2026-10-06T19:44:01.910369+00:00",
+      "reportMonotonicNs": 143291265000000,
+      "observed": "observed",
+      "exactGameplayActionTimeKnown": false
+    },
+    {
+      "action": "local_spawn_visible",
+      "source": "user_report",
+      "reportedAtUtc": "2026-10-06T19:44:02.839257+00:00",
+      "reportMonotonicNs": 143292187000000,
+      "observed": "observed",
+      "exactGameplayActionTimeKnown": false
+    },
+    {
+      "action": "ordinary_logout",
+      "source": "user_report",
+      "reportedAtUtc": "2026-10-06T19:51:23.520351+00:00",
+      "reportMonotonicNs": 143732875000000,
+      "observed": "observed",
+      "exactGameplayActionTimeKnown": false
+    },
+    {
+      "action": "ordinary_relogin",
+      "source": "user_report",
+      "reportedAtUtc": "2026-10-06T19:51:24.312838+00:00",
+      "reportMonotonicNs": 143733656000000,
+      "observed": "observed",
+      "exactGameplayActionTimeKnown": false
+    }
+  ],
+  "artifacts": [
+    {
+      "kind": "allowlisted_metadata",
+      "name": "events.jsonl",
+      "sha256": "14b45683f20f6600bafb762d69a7539709cc19da3b7cf9c498829818ed82e407",
+      "bytes": 9684
+    },
+    {
+      "kind": "allowlisted_metadata",
+      "name": "transport.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "kind": "allowlisted_metadata",
+      "name": "resource-ownership.json",
+      "sha256": "4a5f9724644531b2eee7e1567c2dfdd275aa982b830a9595beea65f6beb3addc",
+      "bytes": 800
+    },
+    {
+      "kind": "allowlisted_metadata",
+      "name": "log-only-resource-ownership.json",
+      "sha256": "9587b85a70bde599038fd074d03b5dc93fc115deaa86b8899508c0c52ba06bfe",
+      "bytes": 924
+    }
+  ],
+  "reviewedPrivateManifestHashes": {
+    "manifest.json": "0a40bb5a4216c852f9f16f91414dd12c53abeae09c21b91bc83cf0dc73e36fe0",
+    "scenarios/consenting-movement.json": "493c009c592bffa792d8758823f3bbe4f4c21a8a893f993dab2b0664ad583ed8",
+    "scenarios/normal-entry.json": "af9a07298de3ceb06214add4285f7fda4527aced5a2ab78a298aaa548652dc68",
+    "scenarios/ordinary-relogin.json": "33aff3556a6c2a602406821226bde1cdf853ce184e394381c485ccc86b27fd1e"
+  },
+  "preReviewManifestHashes": {
+    "manifest.json": "3c3f8b86d238e6495b38dca380edae3169ecc0b8fdbac1949ec534a877ca24ee",
+    "scenarios/consenting-movement.json": "0322f3cf7f6b2aea62973dcc15a20882601aa2446a77c0456723d972f97837bc",
+    "scenarios/normal-entry.json": "c58dd0c7baff2d109ee0a5cb7050f3d79eb02190e515d2c5ba2f7b872763c6da",
+    "scenarios/ordinary-relogin.json": "16be251fae5b8aaf72a384226150a11744b23ebb1046ab59947411f79121c130"
+  },
+  "cleanupVerificationSha256": "15250c0783161cb9c0aa9d0588cb68f0c1e13c3e46172a05298cf6f6566f0f8a",
+  "redaction": {
+    "rawLogsOrCredentialsRetained": false,
+    "dynamicNamesAddressesAndAccountActorIdentifiersRetained": false,
+    "video": "not_collected",
+    "parserOutputAllowlistReviewed": true
+  },
+  "friendConsent": "not_confirmed",
+  "movementEvidence": "not_collected",
+  "remainingUnknowns": [
+    "No decoded wire schema, Carrier ordering or authority",
+    "No socket/packet evidence: protected executable path unavailable; installed hash is not runtime image proof",
+    "Own-log attribution uses user-confirmed normal Steam session plus exact public PID/name/creation time",
+    "Exact gameplay action times unavailable; user marks carry later report collection UTC and host monotonic time",
+    "Discovery, character-selection, queue, connection and loading UI transitions were not separately reported or recorded",
+    "Same-inode overwrite past the previous Game.log offset may omit early events",
+    "No second-player consent, viewpoints or clock alignment confirmed",
+    "No remote actor removal/reappearance, protocol identity continuity or transport lifetime changes established",
+    "No gameplay recording or historical replay used",
+    "Current collectors were amended after live collection; exact earlier source snapshots were not preserved for the log-only helper"
+  ],
+  "metadataHashesReverified": true,
+  "ownedCollectorsClosedAndClientExited": true,
+  "privateServerGameplayAcceptance": false
+}

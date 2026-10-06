@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+October 6 official session, #243/#245 under #166/164: the user reported an initial
+Login Malfunction, supported Play and world entry with their main character, then
+ordinary logout and successful return. Hash-verified private manifests retain five
+user action reports and 26 fixed own-log markers. Protected image access was denied;
+zero socket samples or footage were collected. Intermediate screens, exact action
+times, wire schemas and remote actor continuity remain unknown. Both collectors
+closed and the user exited normally; exact recorded process IDs were absent.
+[Session evidence and handoff](OFFICIAL_SESSION_20261006.md), [sanitized receipt](../research/evidence/official-session-20261006.json).
+#244 awaits confirmed second-player consent/availability and both viewpoints.
+No official evidence or offline test result satisfies private gameplay acceptance.
+
 October 6 official-observation tooling, #242 under #166/164: bounded fixed-category
 own-log collectors, explicit user action marks, hashed private scenario manifests
 and recording instructions passed 46 focused Python cases and 12 PowerShell
