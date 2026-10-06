@@ -1,0 +1,46 @@
+{
+  "classification": "original synthetic BODY-only vectors derived from pinned current-image source; no native execution or client acceptance",
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "build": 22469132,
+  "version": "1.400.6031.6004151",
+  "memberUuid": "203dc8c70c60454ba46f566114314b84",
+  "scope": "fresh one-group member BODY only; no class selector, numeric index, record envelope, actor, world state or peer revision",
+  "offlinePolicy": "reject unsupported outer bits, inner bits 2-7 and continuations; accept 0100 as an empty-selection alias and canonicalize to 00",
+  "vectors": [
+    {
+      "name": "no-fields",
+      "assetId": null,
+      "gdeRef": null,
+      "bodyHex": "00",
+      "length": 1
+    },
+    {
+      "name": "asset-only-be32",
+      "assetId": {"raw16": "000102030405060708090a0b0c0d0e0f", "field_20": 16909060},
+      "gdeRef": null,
+      "bodyHex": "0101000102030405060708090a0b0c0d0e0f01020304",
+      "length": 22
+    },
+    {
+      "name": "gde-only-raw16",
+      "assetId": null,
+      "gdeRef": "f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+      "bodyHex": "0102f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+      "length": 18
+    },
+    {
+      "name": "both-explicit-zero",
+      "assetId": {"raw16": "00000000000000000000000000000000", "field_20": 0},
+      "gdeRef": "00000000000000000000000000000000",
+      "bodyHex": "0103000000000000000000000000000000000000000000000000000000000000000000000000",
+      "length": 38
+    },
+    {
+      "name": "both-upper-bound-and-distinct-raw",
+      "assetId": {"raw16": "101112131415161718191a1b1c1d1e1f", "field_20": 4294967295},
+      "gdeRef": "202122232425262728292a2b2c2d2e2f",
+      "bodyHex": "0103101112131415161718191a1b1c1d1e1fffffffff202122232425262728292a2b2c2d2e2f",
+      "length": 38
+    }
+  ]
+}

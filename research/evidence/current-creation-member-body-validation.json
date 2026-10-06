@@ -1,0 +1,412 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 237,
+  "parentActionableId": 177,
+  "relatedSourceActionableId": 236,
+  "recordedUtc": "2026-10-06T17:16:16.068916+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "3eefd1834f4f2b01d2795df2d042d0ecefb50f84",
+    "dirtyBeforeReceipt": "M docs/AGENT_HANDOFF.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/CREATION_MEMBER_BODY.md\n?? research/evidence/current-creation-member-contract.json\n?? scripts/current_creation_member_body.py\n?? tests/fixtures/replication/\n?? tests/test_current_creation_member_body.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "runtime": {
+      "ready": true,
+      "python": "3.11.9",
+      "isolatedVenv": true,
+      "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+      "packages": {
+        "cffi": {
+          "expected": "2.1.1",
+          "installed": "2.1.1",
+          "matches": true
+        },
+        "colorama": {
+          "expected": "0.4.6",
+          "installed": "0.4.6",
+          "matches": true
+        },
+        "cryptography": {
+          "expected": "50.0.2",
+          "installed": "50.0.2",
+          "matches": true
+        },
+        "iniconfig": {
+          "expected": "2.3.0",
+          "installed": "2.3.0",
+          "matches": true
+        },
+        "packaging": {
+          "expected": "26.3",
+          "installed": "26.3",
+          "matches": true
+        },
+        "pluggy": {
+          "expected": "1.6.0",
+          "installed": "1.6.0",
+          "matches": true
+        },
+        "pycparser": {
+          "expected": "3.0",
+          "installed": "3.0",
+          "matches": true
+        },
+        "pygments": {
+          "expected": "2.21.0",
+          "installed": "2.21.0",
+          "matches": true
+        },
+        "pyopenssl": {
+          "expected": "26.4.0",
+          "installed": "26.4.0",
+          "matches": true
+        },
+        "pytest": {
+          "expected": "9.1.1",
+          "installed": "9.1.1",
+          "matches": true
+        },
+        "typing-extensions": {
+          "expected": "4.16.0",
+          "installed": "4.16.0",
+          "matches": true
+        },
+        "lz4": {
+          "expected": "4.4.5",
+          "installed": "4.4.5",
+          "matches": true
+        }
+      },
+      "problems": []
+    }
+  },
+  "sourceContract": {
+    "path": "research/evidence/current-creation-member-contract.json",
+    "sha256": "aea5a1ced2f12b619cc834d183198035a36352a97a8f5a69c94e569cbf6df78a"
+  },
+  "claimIds": [
+    "K299",
+    "K300",
+    "K301",
+    "K302"
+  ],
+  "implementation": [
+    {
+      "path": "scripts/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "tests/test_current_creation_member_body.py",
+      "sha256": "07037897fbeb76769330999ec2c3386aa23a8f39b8c597131c7230847f7bc278"
+    },
+    {
+      "path": "tests/fixtures/replication/current-creation-member-original.json",
+      "sha256": "3be777041b81fca2552171f3d2dd7a07dbbbcf965e37017fb8d34df17f0f27d7"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "6e8df9cbe2adf29da3e0a07a0eef7aef07b36aae344904cbe5c6bd8c2e1280ae"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "ae9a8d4f006fa23f9e71771613b7b36931ecb191072863b3cd83a4b923880254"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "e499de44b9bf43f1f93deace0a41927f926725cff46089f5f70a0eb17ea339f2"
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/replication/current-creation-member-original.json",
+    "sha256": "3be777041b81fca2552171f3d2dd7a07dbbbcf965e37017fb8d34df17f0f27d7",
+    "classification": "synthetic",
+    "vectors": 5,
+    "scope": "BODY only; original bytes/opaque scalar, no observed client/actor/world state"
+  },
+  "focused": {
+    "reportedBy": "Implementer",
+    "codecCases": 34,
+    "withRunnerCases": 51,
+    "validation": "validated task-specific PowerShell; 51 passed",
+    "script": {
+      "path": ".scratch/codec237-run.ps1",
+      "sha256": "3e6629e8a8e7181ac61476ce0f38134c5905900626ddd7e6d8f81fe43a1cbfa8"
+    },
+    "coveredByWorkspace": true
+  },
+  "independentReview": {
+    "executedBy": "Tester",
+    "outcome": "passed; no counterexample",
+    "checks": 168,
+    "focusedCodecCases": 34,
+    "harness": {
+      "path": ".scratch/verify237/falsify.py",
+      "sha256": "fdc7497fb8206de5bec0c0dcdd6978cb359e47f68e8c816f77d4e61ec4cb4334"
+    },
+    "stableInputs": [
+      {
+        "path": "scripts/current_creation_member_body.py",
+        "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+      },
+      {
+        "path": "tests/test_current_creation_member_body.py",
+        "sha256": "07037897fbeb76769330999ec2c3386aa23a8f39b8c597131c7230847f7bc278"
+      },
+      {
+        "path": "tests/fixtures/replication/current-creation-member-original.json",
+        "sha256": "3be777041b81fca2552171f3d2dd7a07dbbbcf965e37017fb8d34df17f0f27d7"
+      }
+    ],
+    "scope": "Independent literal values/field order/masks/endian and truncation cursor oracle; buffer slices/suffix/input ownership, strict gates, raw16 collision preservation; not native execution",
+    "retainedFailure": "Inline noncontiguous-buffer command failed shell quoting; same check succeeded in file harness"
+  },
+  "runs": [
+    {
+      "path": ".scratch/offline-validation/run-oa1mv7_i/receipt.json",
+      "sha256": "cf82dd42af680cb700c4b34b31c593b2c70c95fe3ae58456eac1d9219ebc6b02",
+      "status": "passed",
+      "profile": "tooling",
+      "startedAtUtc": "2026-10-06T17:12:06.371028+00:00",
+      "finishedAtUtc": "2026-10-06T17:12:08.182709+00:00",
+      "runtime": {
+        "ready": true,
+        "python": "3.11.9",
+        "isolatedVenv": true,
+        "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+        "packages": {
+          "cffi": {
+            "expected": "2.1.1",
+            "installed": "2.1.1",
+            "matches": true
+          },
+          "colorama": {
+            "expected": "0.4.6",
+            "installed": "0.4.6",
+            "matches": true
+          },
+          "cryptography": {
+            "expected": "50.0.2",
+            "installed": "50.0.2",
+            "matches": true
+          },
+          "iniconfig": {
+            "expected": "2.3.0",
+            "installed": "2.3.0",
+            "matches": true
+          },
+          "packaging": {
+            "expected": "26.3",
+            "installed": "26.3",
+            "matches": true
+          },
+          "pluggy": {
+            "expected": "1.6.0",
+            "installed": "1.6.0",
+            "matches": true
+          },
+          "pycparser": {
+            "expected": "3.0",
+            "installed": "3.0",
+            "matches": true
+          },
+          "pygments": {
+            "expected": "2.21.0",
+            "installed": "2.21.0",
+            "matches": true
+          },
+          "pyopenssl": {
+            "expected": "26.4.0",
+            "installed": "26.4.0",
+            "matches": true
+          },
+          "pytest": {
+            "expected": "9.1.1",
+            "installed": "9.1.1",
+            "matches": true
+          },
+          "typing-extensions": {
+            "expected": "4.16.0",
+            "installed": "4.16.0",
+            "matches": true
+          },
+          "lz4": {
+            "expected": "4.4.5",
+            "installed": "4.4.5",
+            "matches": true
+          }
+        },
+        "problems": []
+      },
+      "python": {
+        "selectedFiles": 4,
+        "collected": 81,
+        "executed": 81,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [],
+      "cli": null,
+      "changedInputs": []
+    },
+    {
+      "path": ".scratch/offline-validation/run-7s343a8w/receipt.json",
+      "sha256": "ab29577f6a7373146ae368789329949b4dd0c9999f02fcdaad48fc45fb51c154",
+      "status": "passed",
+      "profile": "workspace",
+      "startedAtUtc": "2026-10-06T17:12:12.983660+00:00",
+      "finishedAtUtc": "2026-10-06T17:13:26.578150+00:00",
+      "runtime": {
+        "ready": true,
+        "python": "3.11.9",
+        "isolatedVenv": true,
+        "lockSha256": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+        "packages": {
+          "cffi": {
+            "expected": "2.1.1",
+            "installed": "2.1.1",
+            "matches": true
+          },
+          "colorama": {
+            "expected": "0.4.6",
+            "installed": "0.4.6",
+            "matches": true
+          },
+          "cryptography": {
+            "expected": "50.0.2",
+            "installed": "50.0.2",
+            "matches": true
+          },
+          "iniconfig": {
+            "expected": "2.3.0",
+            "installed": "2.3.0",
+            "matches": true
+          },
+          "packaging": {
+            "expected": "26.3",
+            "installed": "26.3",
+            "matches": true
+          },
+          "pluggy": {
+            "expected": "1.6.0",
+            "installed": "1.6.0",
+            "matches": true
+          },
+          "pycparser": {
+            "expected": "3.0",
+            "installed": "3.0",
+            "matches": true
+          },
+          "pygments": {
+            "expected": "2.21.0",
+            "installed": "2.21.0",
+            "matches": true
+          },
+          "pyopenssl": {
+            "expected": "26.4.0",
+            "installed": "26.4.0",
+            "matches": true
+          },
+          "pytest": {
+            "expected": "9.1.1",
+            "installed": "9.1.1",
+            "matches": true
+          },
+          "typing-extensions": {
+            "expected": "4.16.0",
+            "installed": "4.16.0",
+            "matches": true
+          },
+          "lz4": {
+            "expected": "4.4.5",
+            "installed": "4.4.5",
+            "matches": true
+          }
+        },
+        "problems": []
+      },
+      "python": {
+        "selectedFiles": 37,
+        "collected": 988,
+        "executed": 988,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 52925
+      },
+      "changedInputs": []
+    }
+  ],
+  "retainedFailure": {
+    "path": ".scratch/offline-validation/run-nr9hdgpa/receipt.json",
+    "sha256": "f5c4c37aa234e71bfff1788de97cdbf00bc5be689a4daaf173e031de3c719de5",
+    "reason": "Missing top-level fixture catalog entry; fixed and tooling rerun passed81"
+  },
+  "api": {
+    "module": "scripts/current_creation_member_body.py",
+    "record": "CreationMemberBody",
+    "asset": "AssetIdField(raw16: bytes16, field_20: uint32)",
+    "encode": "encode_body(record) -> bytes",
+    "decode": "decode_body(data, *, member_uuid: bytes16 required) -> (record, consumed BODY bytes)",
+    "strictDomain": "Fresh one group; optional AssetId then GdeRef; unsupported class/masks/continuations rejected; 0100 accepted/canonicalized; no selector/envelope/native state"
+  },
+  "exclusions": [
+    "Runtime class/registry/index choice",
+    "Friendly class name",
+    "Native revision/partial mutation/peer field choice/application",
+    "Auxiliary vector fields or generalized schemas",
+    "Receive record/Carrier inverse, ACK/resend, historical860 and authentication authority",
+    "Valid asset/Gde/player identity or Entity/PlayerRegistry/designation/Milestone1 acceptance",
+    "Client launches/hooks/captures/process access/game endpoint activity; upstream edits or publishing"
+  ],
+  "cleanup": {
+    "analysisHelpersExited": true,
+    "ownedLoopbackListenerClosed": true,
+    "ownedLoopbackChildExitCode": 0,
+    "privateDiagnosticsRetained": true,
+    "unrelatedResourcesUntouched": true
+  },
+  "postRunMetadata": "Documentation and evidence metadata finalized after recorded tests; six implementation/inventory inputs remain workspace-identical. Final preflight/link/staged scope review follows."
+}

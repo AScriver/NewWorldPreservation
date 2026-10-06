@@ -1,5 +1,7 @@
 # Agent handoff
 
+October6 package164/177, #236/#237: [concrete member contract](CREATION_MEMBER_BODY.md) joins UUID203dc8c7-0c60-454b-a46f-566114314b84 to actual descriptor/factory/fresh decoder and conditional application. K293–K298/[source receipt](../research/evidence/current-creation-member-contract.json) preserve source pins, instruction checks and counterevidence. Codec/fixture validation is the remaining increment of this package. Runtime selection, field validity, receive/Carrier/authority residuals of #210, #212 and aggregate #232/177 remain unresolved. Finish this package's validation/commits, save exact outcomes and release claims, then stop without beginning another parent.
+
 October6 #235: [member application contract](PLAYER_MEMBER_APPLICATION.md), K287–K292 and [receipt](../research/evidence/current-player-member-application.json) close the supported role correction: selected decoded pair on nonempty1–32 ordering route → exact empty slot → separate guarded dispatch → GDEStreamer builder. Preserve changed first ordinal, active handler/interception, both map misses, copied inputs and weak lifetime conditions. Registry insertion/NullType are concrete; selected member factory/schema remain unknown. Continue meaningful164 leaves after release. #232 aggregate, #212,177/164 and bilateral movement remain open. No native/gameplay acceptance.
 
 October6 #234: [clone/Id contract](PLAYER_ENTITY_CLONE.md), K281–K286 and

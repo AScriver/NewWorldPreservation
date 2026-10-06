@@ -1,5 +1,17 @@
 # Milestone 1 roadmap
 
+#236/#237 package, October6: concrete UUID203dc8c7-0c60-454b-a46f-566114314b84
+joins registry descriptor/factory/fresh decoder to conditional application. The
+original guarded BODY codec and five synthetic vectors preserve optional AssetId
+(raw16+BE32), GdeRef(raw16), explicit presence and consumed offsets. [Contract/API](CREATION_MEMBER_BODY.md),
+K293–K302 and [offline receipt](../research/evidence/current-creation-member-body-validation.json)
+record 34 focused codec cases, 168 independent assertions and 988 workspace cases/37
+modules plus three PowerShell suites and closed synthetic loopback lifecycle.
+Source closure and offline execution remain distinct. Runtime selection/valid
+player state, #210 receive/Carrier/ACK/authority residuals, #212, #232/177 aggregate
+and bilateral movement remain open. Complete/release these two package leaves
+after the validated local commit and save the focused handoff, then stop.
+
 #235 source closure, October6: on the inspected nonempty1–32-entry route, sorted decoded member pairs reach the exact empty application slot. Separate guarded application dispatch now reaches the established GDEStreamer creation builder. [Application contract](PLAYER_MEMBER_APPLICATION.md), K287–K292 and [receipt](../research/evidence/current-player-member-application.json) retain sorting, predicate, registration, interception, freshness and lifetime conditions. The PlayerComponent descriptor belongs a module descriptor list. Concrete selected class/schema, larger-count ordering, #212, #232 aggregate, parent177/164 and bilateral movement remain open. Offline checks establish no native/gameplay acceptance.
 
 #234 source closure, October 6: the actual nested pointer adapter now reaches
@@ -509,24 +521,18 @@ the production path guard. Static tool output and selected source hashes were
 rechecked; raw decompilation/database remains private.
 No existing Actionable matched this tooling improvement; Actionables was not updated.
 
-**Fresh live-player construction and designation.** Private response receipt,
-actor-connection success, sustained heartbeat echoes and context initialization/
-activation are observed in the0655 result. The player-wait predicate requires
-asynchronous context readiness and a guarded live PlayerRegistry object; their
-runtime values remain unknown. The current source joins designation to replicated
-identity strings and entity-related readiness. The local value is the stored
-connection character_id, source-joined to the queue's unchanged CharacterId. The
-fresh object constructor and member schema remain open. A generic incoming handler
-reaches a subscriber ring with separately mapped owners, but its descriptor/key/
-recipient are not joined to the current type8 decoder object. The current bundle
-parser, concrete registration and player constructor remain unknown.
-[Original source map](../research/evidence/current-player-spawn-source-map.json).
-Determine that current creation/identity contract before another payload trial.
-Exact initial request type and security semantics also remain unknown, without blocking this
-bounded private progression. See the
-[unsent question and exact source boundaries](REGISTRATION_MAINTAINER_QUESTION.md).
-Historical binary identity no longer blocks the reproduced mechanism. The
-unchanged-stock trust route remains a separate parked task.
+**Fresh live-player construction and designation remain unproved.** Historical
+private trial observations retain their original scope. Current source now joins
+type8 recipient/parser, a concrete candidate descriptor/factory/two-field BODY,
+conditional application, owned entity vector, clone/Id treatment and typed binding.
+[The member contract](CREATION_MEMBER_BODY.md) retains registry selection,
+active-handler/interception/map misses, state2, weak lifetime, source/resource,
+reflection/key and designation gates. No valid field values or authenticated
+player state are established. #210 still lacks the actual receive/outer-record
+inverse and Carrier placement, runtime selection, exact ACK/resend retirement,
+historical860 discriminator and authority. A BODY-only fixture does not close
+#212, #232/177 aggregate or bilateral movement. Stop after the requested #177
+package; further parent work requires a separate instruction.
 
 ### Parked stock-client trust blocker and historical findings
 

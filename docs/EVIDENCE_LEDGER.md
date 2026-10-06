@@ -1,5 +1,31 @@
 # Evidence ledger
 
+## Original creation-member BODY codec — October6, #237
+
+Pinned source K293–K298; executed original offline codec and fixture checks.
+[API](CREATION_MEMBER_BODY.md#offline-api-and-executed-checks), [receipt](../research/evidence/current-creation-member-body-validation.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K299 | Original encoder/decoder implements established fresh two-field BODY | Required external UUID; explicit presence, raw16 and BE32; no class/envelope/native state | P177-12 |
+| K300 | Strict malformed/size/class gates and prefix offsets are exercised | Unknown bits/continuations refused by policy; native aliases and partial mutation remain distinct | 34 focused codec cases |
+| K301 | Literal fixtures and independent oracle preserve bytes/order/cursors | Five synthetic vectors; 168 independent checks; full Gde raw16 despite first-qword collisions | Tester harness/receipt |
+| K302 | Reviewed workspace and source identities passed with cleanup | 988 cases/37 Python modules, three PowerShell suites, closed synthetic listener; no runtime/player/authenticated acceptance | Offline receipt |
+
+## Concrete creation member class and schema — October6, #236
+
+Clean analysis input3eefd18; conditional instruction-supported source inference.
+[Contract](CREATION_MEMBER_BODY.md), [receipt](../research/evidence/current-creation-member-contract.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K293 | Actual selector/registry can resolve this candidate descriptor/factory | UUID203dc8c7-0c60-454b-a46f-566114314b84; same registration descriptor; callback/population/selection unobserved, friendly name unknown | P177-8 |
+| K294 | Factory creates exact decoder with one group/two ordinary fields | Fresh constructor only; auxiliary vector excluded | P177-9 |
+| K295 | AssetId is raw16+BE32; GdeRef is raw16 | Native partial mutations retained; derived Gde key is first LE qword, collisions possible | P177-10 |
+| K296 | Writer supports canonical explicit selected-field subsets | Sizes1/22/18/38; peer dirty state unmodeled; native alias tolerance differs from strict offline gate | P177-11 |
+| K297 | Candidate layout joins earlier conditional creation/clone/binding chain | No actual runtime selection, valid values, creation/designation or authenticated gameplay | P177-3/8–10 |
+| K298 | Targeted counterchecks and source refresh preserve remaining #210 scope | Receive inverse/Carrier, selection, ACK/resend, historical860 and authority unclosed; BODY-only fixture permitted, #212/177 aggregate open | P177-7 |
+
 ## Current decoded-member application and creation dispatch — October6, #235
 
 Clean input87c54b7. Instruction-supported inference and executed file-only checks; no native/client execution. [Contract](PLAYER_MEMBER_APPLICATION.md), [receipt](../research/evidence/current-player-member-application.json).

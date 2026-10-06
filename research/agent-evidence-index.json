@@ -12,6 +12,49 @@
   },
   "boundaries": [
     {
+      "id": "current-creation-member-body",
+      "roadmapTasks": [
+        "M1-06A"
+      ],
+      "claimIds": [
+        "K293",
+        "K294",
+        "K295",
+        "K296",
+        "K297",
+        "K298",
+        "K299",
+        "K300",
+        "K301",
+        "K302"
+      ],
+      "docs": [
+        "docs/CREATION_MEMBER_BODY.md"
+      ],
+      "scripts": [
+        "scripts/current_creation_member_body.py"
+      ],
+      "tests": [
+        "tests/test_current_creation_member_body.py"
+      ],
+      "fixtures": [
+        "tests/fixtures/replication/current-creation-member-original.json"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-creation-member-contract.json",
+          "classification": "source-inference",
+          "scope": "#236 concrete conditional class/factory/fresh decoder/application join; source checks separate from runtime"
+        },
+        {
+          "path": "research/evidence/current-creation-member-body-validation.json",
+          "classification": "offline-executed",
+          "scope": "#237 original guarded BODY codec and synthetic fixtures; independent review and workspace checks, no native/client acceptance"
+        }
+      ],
+      "limit": "Fresh one-group/two-field candidate; runtime selection/name/player validity, receive/Carrier/authority and aggregate acceptance unproved."
+    },
+    {
       "id": "current-player-member-application",
       "roadmapTasks": [
         "M1-06A"
@@ -37,7 +80,7 @@
           "scope": "#235 conditional decoded pair/application/registered creation dispatch; role correction, source challenge and regressions distinct"
         }
       ],
-      "limit": "Nonempty1\u201332 ordering/empty-slot/predicate/active handler/interception/bothmapmiss/allocation/state/resource/reflection guards. Larger ordering, concrete member class/schema, runtime/player/world/M1 unknown."
+      "limit": "Historical #235 scope: nonempty1\u201332/empty-slot/predicate/handler/interception/map/lifetime guards. Concrete candidate now in current-creation-member-body; runtime/player/world/M1 unknown."
     },
     {
       "id": "current-player-entity-clone",
@@ -1513,6 +1556,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/replication/current-creation-member-original.json",
+      "classification": "synthetic",
+      "sha256": "3be777041b81fca2552171f3d2dd7a07dbbbcf965e37017fb8d34df17f0f27d7",
+      "scope": "Original fresh creation-member BODY values; explicit presence, raw16 and BE32 boundaries. No native/runtime/world-entry acceptance."
+    },
+    {
       "path": "tests/fixtures/registration/current-request-stream-original.json",
       "classification": "synthetic",
       "sha256": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
@@ -1628,6 +1677,8 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-creation-member-body-validation.json",
+    "research/evidence/current-creation-member-contract.json",
     "research/evidence/current-player-member-application.json",
     "research/evidence/current-player-entity-clone.json",
     "research/evidence/current-player-entity-vector.json",

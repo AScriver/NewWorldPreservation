@@ -6,6 +6,7 @@
       "tests/test_channel_descriptor.py",
       "tests/test_credentials_log_metadata.py",
       "tests/test_current_client_fixture.py",
+      "tests/test_current_creation_member_body.py",
       "tests/test_current_credentials_contract.py",
       "tests/test_current_login_info.py",
       "tests/test_current_queue_handoff.py",

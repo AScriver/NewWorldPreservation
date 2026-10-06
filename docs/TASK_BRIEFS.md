@@ -1,5 +1,15 @@
 # Bounded task briefs
 
+## #236/#237 — concrete member source and offline BODY package (164, parent177)
+
+- Outcome/acceptance recorded before work: exact selector/registry/descriptor/factory/decoder/application joins, conditional selection labeled; original codec and deterministic fixtures only for established schema.
+- Clean baseline3eefd18; owned image/build/map/reference/tool identities refreshed. Completed #207/#208/#209/#231/#233/#234/#235 evidence reused with exact scope and refreshed seals in one accumulated primary ledger.
+- #236 M source leaf and #237 M codec leaf cover unmet acceptance; aggregate177 remains open. Independent initial registry/member roles, instruction checks and targeted falsification preceded implementation.
+- Owned: one contract/source receipt, original codec/test/fixture, reviewed offline inventory and concise ledger/navigation/ROADMAP/handoff deltas. Preserve unrelated paths; private data remains ignored.
+- Checks: source/artifact seal, round-trip/goldens, all truncations, malformed masks/class guard, endian boundaries/presence/slices/suffix/Gde collisions, focused tooling and required workspace; staged review/local coherent increments.
+- Exclusions: clients/native code/live/hooks/captures/endpoints/credentials, guessed formats/replay/upstream edits/publication/authenticated gameplay. #210 residuals recorded explicitly; #212 is not unblocked by BODY-only verification.
+- Stop: save the focused package handoff and release claims; do not start another parent.
+
 ## #235 — decoded-member application role correction (workItemId164, parent177)
 
 - Intended result expressly allowed concrete member selection or a supported correction of its presumed creation role. Positive conditional application/builder join meets the latter; selected class/schema remains open.
