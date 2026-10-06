@@ -100,7 +100,7 @@
   },
   "sourceContract": {
     "path": "research/evidence/current-creation-member-contract.json",
-    "sha256": "aea5a1ced2f12b619cc834d183198035a36352a97a8f5a69c94e569cbf6df78a"
+    "sha256": "d006316b48dab00b7c3de8b96dabf77a08344a5568517458ec2584f8c85e3149"
   },
   "claimIds": [
     "K299",

@@ -61,6 +61,11 @@ qword through the ten-byte leaf `140870c50`; this is not a hash or unique identi
 
 ## Conditional application
 
+AssetId's native value starts at member `+7f0`. The established applier copies
+its 32-byte native value through `1415edba0` when the embedded field's `+58`
+predicate accepts; otherwise it supplies the fixed default. That copy width
+does not add bytes to the proved raw16+BE32 wire field.
+
 GdeRef's interface value at member `+860` contains raw16 at `+870` and derived
 qword at `+880`. That layout matches `14178db00`'s actual value input. Successful
 decode retains the pair; the established nonempty 1–32 ordering/empty-slot route

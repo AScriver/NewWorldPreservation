@@ -1,6 +1,40 @@
 # Agent handoff
 
-October6 package164/177, #236/#237: [concrete member contract](CREATION_MEMBER_BODY.md) joins UUID203dc8c7-0c60-454b-a46f-566114314b84 to actual descriptor/factory/fresh decoder and conditional application. K293–K298/[source receipt](../research/evidence/current-creation-member-contract.json) preserve source pins, instruction checks and counterevidence. Codec/fixture validation is the remaining increment of this package. Runtime selection, field validity, receive/Carrier/authority residuals of #210, #212 and aggregate #232/177 remain unresolved. Finish this package's validation/commits, save exact outcomes and release claims, then stop without beginning another parent.
+## #177 concrete member package — October 6
+
+Requested source/codec package finished under workItemId 164. [Current task status](ROADMAP.md)
+retains unresolved aggregate acceptance. Local implementation commit `583267c`;
+analysis began at clean `3eefd18`. [Contract/API](CREATION_MEMBER_BODY.md),
+K293–K302 and the original [source](../research/evidence/current-creation-member-contract.json)/
+[offline](../research/evidence/current-creation-member-body-validation.json) receipts
+pin the owned build 22469132/version 1.400.6031.6004151, image/map, clean references,
+relevant dirty inputs and source seals.
+
+Outcome: UUID 203dc8c7-0c60-454b-a46f-566114314b84 joins actual selector/registry,
+descriptor/factory/fresh decoder and conditional application. The original guarded
+BODY codec and five synthetic vectors preserve optional AssetId(raw16+BE32),
+GdeRef(raw16), explicit presence and consumed offsets. Friendly name and actual
+runtime class choice remain unproved.
+
+Executed: source 40 exact spans/34 windows/118 artifacts; focused 34 codec+17 runner
+cases, independent 168 assertions, tooling 81, workspace 988 cases/37 Python modules,
+three PowerShell suites and owned synthetic loopback lifecycle. Inputs stayed
+unchanged during tests; final readback preserved 263 unrelated tracked files and
+checked 431 local links. Codec/test/fixture/inventory bytes still match that run.
+The missing catalog entry was corrected after tooling 80 pass/1 fail; that receipt,
+RTTI/no-PDATA failures and native alias/partial-write/Gde-collision counterevidence
+remain retained.
+
+Resources: file-only analysis helpers exited; synthetic listener closed and its
+child exited 0. Private Ghidra databases and ignored receipts remain for provenance.
+Scoped Actionables readback found no owned claims. No native client code, game
+endpoint, upstream edit or publication was performed.
+
+Limits: #210 receive/outer-record/Carrier inverse, runtime index/fallback, exact
+ACK/resend, historical860 and authenticated authority; conditional state2,
+source/resource/reflection/identity/readiness/designation; #212 and #232/177
+aggregate and bilateral movement remain open. BODY-only verification does not
+satisfy these conditions. Stop here; no other parent or trial begins.
 
 October6 #235: [member application contract](PLAYER_MEMBER_APPLICATION.md), K287–K292 and [receipt](../research/evidence/current-player-member-application.json) close the supported role correction: selected decoded pair on nonempty1–32 ordering route → exact empty slot → separate guarded dispatch → GDEStreamer builder. Preserve changed first ordinal, active handler/interception, both map misses, copied inputs and weak lifetime conditions. Registry insertion/NullType are concrete; selected member factory/schema remain unknown. Continue meaningful164 leaves after release. #232 aggregate, #212,177/164 and bilateral movement remain open. No native/gameplay acceptance.
 

@@ -9,8 +9,10 @@ record 34 focused codec cases, 168 independent assertions and 988 workspace case
 modules plus three PowerShell suites and closed synthetic loopback lifecycle.
 Source closure and offline execution remain distinct. Runtime selection/valid
 player state, #210 receive/Carrier/ACK/authority residuals, #212, #232/177 aggregate
-and bilateral movement remain open. Complete/release these two package leaves
-after the validated local commit and save the focused handoff, then stop.
+and bilateral movement remain open. Local package commit `583267c`; Actionables
+#236 and #237 are Done, #177 remains Researching with aggregate acceptance open.
+All three claims are released; scoped owned-claim readback is empty. [Focused handoff](AGENT_HANDOFF.md)
+saved; this package stops without beginning another parent.
 
 #235 source closure, October6: on the inspected nonempty1–32-entry route, sorted decoded member pairs reach the exact empty application slot. Separate guarded application dispatch now reaches the established GDEStreamer creation builder. [Application contract](PLAYER_MEMBER_APPLICATION.md), K287–K292 and [receipt](../research/evidence/current-player-member-application.json) retain sorting, predicate, registration, interception, freshness and lifetime conditions. The PlayerComponent descriptor belongs a module descriptor list. Concrete selected class/schema, larger-count ordering, #212, #232 aggregate, parent177/164 and bilateral movement remain open. Offline checks establish no native/gameplay acceptance.
 
