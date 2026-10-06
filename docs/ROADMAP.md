@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#218 source result, October6: the selected response body now joins fixed BE32/
+BE64 fields, two compact-counted raw-byte strings, strict boolean bytes, concrete
+bounds/status/cleanup and local-view/message ownership. The same compact reader
+is joined at the selected native outer-prefix call; incomplete outer-prefix and
+body failures have distinct cursor effects. Native string copying precedes its
+final extent check, and successful helpers do not define an error-code byte.
+[Body contract](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-1–5 / K219–K223 and
+[receipt](../research/evidence/current-registration-response-body-codec.json)
+record exact evidence and checks. This enables a separate bounded offline body
+codec; actual Carrier/sender-envelope placement, #212 and Milestone1 remain open.
+
 #217 source result, October 6: the conditional response subscriber now joins
 `EOSSystemComponent` construction/registration, its empty-string +0x48 body,
 the +0x50 inverse local disable/failure predicate supplying owner+0x768, concrete

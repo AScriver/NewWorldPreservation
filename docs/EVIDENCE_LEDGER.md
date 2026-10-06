@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current registration response body codec — October6, #218
+
+Clean input main `2e032d6cfc1d69c02e6623f17e9ed0f330085fb1`, refreshed owned
+image/map/references and system-export seals. [Original receipt](../research/evidence/current-registration-response-body-codec.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K219 | Selected serializer/body dispatch and field order are concrete | Instruction-supported descriptor48/serializer20,28; fixed32/64, strings18/38, bools58..5b. Body-only, independent type/wrapper/transport | [Body codec](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-1 |
+| K220 | Numeric, raw-string and boolean body encodings are joined | Exact scalar byte swaps, counted raw bytes/max2ffff and strict0/1 bool reader; bit-pattern encodings do not establish authentication/clock authority | [Body codec](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-2 |
+| K221 | Compact reader accepts width aliases and wraps uint32 | Complete prefix algorithm, partial-tail consumption and canonical writer subset. Same helper at selected outer-prefix call; no broader Carrier inverse | [Body codec](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-3 |
+| K222 | Failures, partial cursor effects and concrete cleanup are joined | Failurecodes1..4; success error-byte unspecified; native string copy precedes final extent check. Future offline copy guard must be labelled stronger behavior | [Body codec](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-4 |
+| K223 | Parent record cursor and local body/message lifetime are distinct | Copied outer-prefix commits only success; full record consumed before synchronous callback; buffer retained; no selected exact-exhaustion/whole-body rollback. No acceptance/gameplay proof | [Body codec](REGISTRATION_RESPONSE_BODY_CODEC.md), B218-5 |
+
 ## Current conditional registration subscriber — October 6, #217
 
 Clean input main `db3dbf22997fc16da00ca722c8d3e82189b57754`, current pinned

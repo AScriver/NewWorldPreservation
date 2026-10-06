@@ -12,6 +12,33 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-response-body-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K219",
+        "K220",
+        "K221",
+        "K222",
+        "K223"
+      ],
+      "docs": [
+        "docs/REGISTRATION_RESPONSE_BODY_CODEC.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-response-body-codec.json",
+          "classification": "source-inference",
+          "scope": "#218 current selected response body scalar/string/bool/prefix codecs, direct borrowed reader and result/frame ownership; simulations and offline checks recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Body/static selected native reader contract only. Native string copy-before-extent and success error-byte retention remain explicit. Carrier placement/sender-envelope inverse, authentication, #212 member/construction/framing gates and gameplay unproved. No native client execution."
+    },
+    {
       "id": "current-registration-acceptance-subscriber",
       "roadmapTasks": [
         "M1-06B"

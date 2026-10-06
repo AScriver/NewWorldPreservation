@@ -12,6 +12,11 @@ Later closures: [#215's diagnostic callable](REGISTRATION_DATA_PROVIDER.md),
 supersede those selected unknown endpoints below. They supply no authoritative
 ticket/principal/peer contract; the historical #211 receipt remains unchanged.
 
+[#218's current response body contract](REGISTRATION_RESPONSE_BODY_CODEC.md)
+also closes the selected primitive encoding/reader ownership gap below. Its
+selected native outer-prefix reader join leaves Carrier/sender-envelope
+placement separate; no authoritative authentication contract follows.
+
 The [#210 report](INITIAL_REGISTRATION_CONTRACT.md) completed its bounded research
 alternative. Its historical 860-byte request discriminator, transport/framing
 bridge and concrete body codecs remain unproved. Done does not close those joins.
