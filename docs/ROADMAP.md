@@ -1,5 +1,15 @@
 # Milestone 1 roadmap
 
+October 6 shutdown preservation, #241 under #166/164: the private owned-client
+archive verified 374 files / 76,744,359,425 bytes, build 22469132 and image
+8654f01d. Every source and destination file was rehashed; the source inventory
+and Steam identity were rechecked. Follow-up loose-text review passed 37 files;
+11 synthetic archive checks passed after the content-screen correction.
+[Archive scope and limitations](OWNED_CLIENT_ARCHIVE.md), [sanitized receipt](../research/evidence/owned-client-archive-20261006.json).
+Steam executable, installed launcher/EAC and shared redistributables are private;
+account stores/logs and raw ACF are excluded. Restore/offline-launch viability and
+an independent off-machine backup remain untested. No private gameplay acceptance.
+
 October 6 community reference intake: the user-supplied Discord download
 `feature-slices.md` contains 3,486 unique index/UUID pairs; all agree with the
 retained mapping of 7,052 entries, verified against its recorded hash.

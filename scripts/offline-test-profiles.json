@@ -41,6 +41,7 @@
       "tests/test_windows_udp_owner.py"
     ],
     "tooling": [
+      "tests/test_preserve_owned_client.py",
       "tests/test_client_config_archive_metadata.py",
       "tests/test_ghidra_function_slice.py",
       "tests/test_project_preflight.py",

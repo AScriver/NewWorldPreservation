@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "classification": "observed-owned-static-file-archive-metadata",
+  "status": "verified",
+  "workItemId": 164,
+  "checkpoint": 241,
+  "baselineHead": "32cf7df39088d91ecb6392775ae3a67db131378e",
+  "baselineDirtyFiles": [],
+  "concurrentClaimPreserved": 240,
+  "steamAppId": "1063730",
+  "steamBuildId": "22469132",
+  "version": "1.400.6031.6004151",
+  "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "files": 374,
+  "bytes": 76744359425,
+  "groups": [
+    {"scope": "owned-static-install", "files": 192, "bytes": 76416676920, "mutableLogsExcluded": 2},
+    {"scope": "steam-executable", "files": 1, "bytes": 5775512},
+    {"scope": "steamworks-shared-redistributables", "files": 181, "bytes": 321906993}
+  ],
+  "startedAtUtc": "2026-10-06T19:19:03.005927+00:00",
+  "endedAtUtc": "2026-10-06T19:21:53.253598+00:00",
+  "inventorySha256": "ddcc7d8819af2be003001f4edf61d080f774897d8c9f8019332d870514237536",
+  "sourceAndDestinationFullyRehashed": true,
+  "sourceInventoryAndSteamIdentityRechecked": true,
+  "archiveInventoryAndAssetsRemainPrivate": true,
+  "configurationHashInventoryPrivate": true,
+  "rawSteamManifestCopied": false,
+  "credentialsOrUserStoresCollected": false,
+  "launchedGame": false,
+  "startedListeners": false,
+  "ownedCollectorExited": true,
+  "syntheticVerification": {"cases": 11, "passed": 11, "realClientTested": false},
+  "followUpTextReview": {"files": 37, "sensitiveFieldRejections": 0, "rawContentsExported": false, "exactShaderListHashAndGrammarReviewed": true, "opaqueBinaryAssetsDecoded": false, "arbitraryUnrecognizedSecretAbsenceGuaranteed": false},
+  "powershellValidation": "parser-and-automatic-variable-rules-passed; wrapper-execution-exit0",
+  "remainingUnknowns": [
+    "Post-shutdown Steam/EAC service and launch availability",
+    "Archive restoration/launch not tested",
+    "Single-machine copy; no independent off-machine backup made",
+    "Official world-entry/movement/relogin and private-server gameplay remain unobserved"
+  ],
+  "privateServerGameplayAcceptance": false
+}
