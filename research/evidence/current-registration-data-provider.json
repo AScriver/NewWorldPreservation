@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-10-06T03:15:59.335808+00:00",
+  "mode": "current-image static-source conclusions; offline verification",
+  "workItemId": 164,
+  "parentTaskId": 178,
+  "taskId": 215,
+  "sourceIdentity": {
+    "gitHead": "defa065ab4fe1f264ad87cfc1bb205f6f0787043",
+    "gitStatusAtSourceSeal": "M docs/ROADMAP.md\n?? docs/REGISTRATION_DATA_PROVIDER.md\n?? research/evidence/current-registration-data-provider.json",
+    "sourceSealUtc": "2026-10-06T03:14:58.880341+00:00",
+    "gitStatusAtRecording": "M docs/ROADMAP.md\n?? docs/REGISTRATION_DATA_PROVIDER.md\n?? research/evidence/current-registration-data-provider.json",
+    "changedExistingFiles": [
+      "docs/ROADMAP.md"
+    ],
+    "unrelatedBaselineFilesUnchanged": true,
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "steamBuild": "22469132",
+      "fileVersion": "1.400.6031.6004151",
+      "versionObservedUtc": "2026-10-06T03:02:47Z"
+    },
+    "steamManifestSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "approvedMappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "toolFilesSha256": {
+      "README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
+      "manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
+      "verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
+      "Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+    },
+    "tools": {
+      "ghidra": "12.1.4",
+      "pyghidra": "3.1.0",
+      "python": "3.11.9",
+      "capstone": "5.0.7"
+    }
+  },
+  "claims": [
+    {
+      "id": "J215-1",
+      "state": "strongly instruction-supported",
+      "finding": "Factory/constructor/caller-retention/installer join closes the owner+0x90 concrete callable.",
+      "edges": [
+        "0x146b6c490 -> 0x146b69ad0 -> caller+0x1000 at 0x146425d02",
+        "0x146426217..0x146426243: first RDX source has vtable 0x148502988; owner slot+8=0x146b70af0",
+        "0x146b70b17..0x146b70b1b -> 0x14056cee0 with destination owner+0x58",
+        "0x14056d009..0x14056d00c: inline destination+0x38 write -> owner+0x90",
+        "0x148502988 slots 0/+8=0x146471c30; +0x10=0x146474e80"
+      ],
+      "limit": "Concrete factory/caller installation only; alternatives not excluded. Only third R9 callable captures caller."
+    },
+    {
+      "id": "J215-2",
+      "state": "strongly instruction-supported",
+      "finding": "Concrete captureless target emits a fixed diagnostic notification and directly supplies no request fields.",
+      "edges": [
+        "0x146b6e25e..0x146b6e26d: target load/null check/virtual+0x10, no returned value consumed",
+        "0x146474e80..0x146474e93: two fixed literal addresses and tail JMP 0x14143e010",
+        "0x14143e076: __stdio_common_vsnprintf_s; formatted-text dispatch 0x1411cfc30/0x1411d1480",
+        "Unhandled fallback 0x14143ba70 -> OutputDebugStringA at 0x14143bb2f"
+      ],
+      "limit": "Dynamic handlers may have side effects; no runtime invocation or universal data-provider absence claim."
+    },
+    {
+      "id": "J215-3",
+      "state": "strongly instruction-supported plus independent harmless-data CRC verification",
+      "finding": "Successful type-index loader branch supplies the CRC32 of returned buffer bytes to V3 request+8.",
+      "edges": [
+        "0x14102ee8b..0x14102ee93 and 0x14643f10b..0x14643f113: CALL 0x146162150 / MOV RCX,RAX / CALL 0x14615f720; wrapper forwards receiver to loader 0x1461661c0 at 0x14615f72d",
+        "0x146166201 opens typeindex.json through file abstraction; 0x1461662ad read return -> length R8 at 0x1461662b5",
+        "0x1461662c4 -> 0x1412f47d0 -> 0x141462980; case-folding argument 0",
+        "0x146166692..0x14616669d: CRC result -> registry+0x70",
+        "0x146162150 returns registry; 0x146165190 copies registry+0x70 -> builder local",
+        "0x146b6e464..0x146b6e46b -> 0x146b66820; 0x146b6684f..0x146b66851 copies local -> request+8"
+      ],
+      "limit": "Read abstraction may supply bytes/counts through a handler. Entire physical-file read, runtime file identity/load success and server meaning remain unproved; constructor initializes zero. No authentication authority follows."
+    },
+    {
+      "id": "J215-4",
+      "state": "strongly instruction-supported",
+      "finding": "Captureless callable is inline-owned; assignments/source cleanup/owner disposal/caller release join its lifetime.",
+      "edges": [
+        "0x146471c30..0x146471c3e: vtable-only copy, no captured state",
+        "0x146b70b3f..0x146b70b88: source temporary disposal/clear; helper handles replaced target disposal",
+        "0x146b6b590..0x146b6b5a9: inline flag/virtual+0x20/active clear",
+        "0x14078fa10..0x14078fa1f: inline return or sized deallocation 0x10",
+        "0x146b6bea0 deletes owner; caller replacement 0x146425d02..0x146425d16 and cleanup 0x14642d363..0x14642d377 release old owner"
+      ],
+      "limit": "Runtime cancellation, generation isolation and callback quiescence remain unproved."
+    }
+  ],
+  "nativeBindings": [
+    {
+      "entry": "0x146b6c490",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b6c490",
+          "endExclusive": "0x146b6c4e4",
+          "sha256": "888aab29a272fcdabc9e6e2926003927d3d9eeaa70f1dae473ab4cdb9d59bfd3"
+        }
+      ]
+    },
+    {
+      "entry": "0x146425cb0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146425cb0",
+          "endExclusive": "0x146425f16",
+          "sha256": "3a1c282255c7882fc47782243c034b42c0fce0497f275211184a6e3ad93d3a84"
+        }
+      ]
+    },
+    {
+      "entry": "0x14642d2d0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14642d2d0",
+          "endExclusive": "0x14642d61d",
+          "sha256": "0c64ffaea873322bd7bbb6de9109d96ec48df68d45ffa9e6e29aaa207dc19cd5"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b6bea0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b6bea0",
+          "endExclusive": "0x146b6bed4",
+          "sha256": "6ca15990e15a695891e1266fe623cfa1b8cf19b4128e2a835e475cc1720f0616"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b69ad0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b69ad0",
+          "endExclusive": "0x146b69e79",
+          "sha256": "0450f7ac67fb2b74b8cad12cce864bbe078320754afcb491c877d9d04be8a3d7"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b6b230",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b6b230",
+          "endExclusive": "0x146b6b611",
+          "sha256": "4b02962143c614346de91cd1279e4467f92416f15ddd8a31a58a185007d9470d"
+        }
+      ]
+    },
+    {
+      "entry": "0x146425f20",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146425f20",
+          "endExclusive": "0x1464264e5",
+          "sha256": "101b84988b6552ff1f216adb27d3be15d64c3fc3702f9b47ec56a09d85080940"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b70af0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b70af0",
+          "endExclusive": "0x146b70b99",
+          "sha256": "588946e317c23b7d3609d41e454888c522abb2e1bf7c988eb92e6e08a5858c22"
+        }
+      ]
+    },
+    {
+      "entry": "0x14056cee0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14056cee0",
+          "endExclusive": "0x14056d05e",
+          "sha256": "4cf7a469815c1dffec8efa92b5ace245c5bb43090012872d9a584bdb1630bc46"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b6e190",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b6e190",
+          "endExclusive": "0x146b6e7b4",
+          "sha256": "12ebacf5b1a308580f88bce6277b55a2aabf48658189e0ac38b72524c93b7f5d"
+        }
+      ]
+    },
+    {
+      "entry": "0x146b66820",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146b66820",
+          "endExclusive": "0x146b66a57",
+          "sha256": "4612119511bb32613517e2b0e938973bdc1c4400742ddde30501cf22e14eb41b"
+        }
+      ]
+    },
+    {
+      "entry": "0x146162150",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146162150",
+          "endExclusive": "0x1461622a3",
+          "sha256": "795ee19221b82f7145f2b14777ac30764a9f6936b774a645208a1bddf5d2d55e"
+        }
+      ]
+    },
+    {
+      "entry": "0x146154ed0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x146154ed0",
+          "endExclusive": "0x146155019",
+          "sha256": "e02f87feb81fcbe4e06dabb894d661a28bf64fcaccf9f73bb482c6889d7e5727"
+        }
+      ]
+    },
+    {
+      "entry": "0x1461661c0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x1461661c0",
+          "endExclusive": "0x146166783",
+          "sha256": "b1b6bd2a494bb549b8d8fe8b5d909f4087800e7fd8f8c5022ca6fd011c6002de"
+        }
+      ]
+    },
+    {
+      "entry": "0x14615f720",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14615f720",
+          "endExclusive": "0x14615f736",
+          "sha256": "75f998edfd8fae6664ea6143ad9844302991fd1f735f1897ebcc3fddc6e2ec25"
+        },
+        {
+          "start": "0x14615f736",
+          "endExclusive": "0x14615f756",
+          "sha256": "1c0894410a95585d9587251a0327851ed42de121b5f0f470b1eee904cdb67a01"
+        },
+        {
+          "start": "0x14615f756",
+          "endExclusive": "0x14615f788",
+          "sha256": "b3d942efba959ce3778e5e022638114e3eceec15073052280b30149b69afb602"
+        },
+        {
+          "start": "0x14615f788",
+          "endExclusive": "0x14615f792",
+          "sha256": "1e71bcedc6b678979e8959df69f45ddf01cb65e923b6600cb7cdb17047155649"
+        },
+        {
+          "start": "0x14615f792",
+          "endExclusive": "0x14615f7ac",
+          "sha256": "5c9c6ae90c99f3068ce8a66a8072c9220d911dbbf178a91545da505ae4622103"
+        }
+      ]
+    },
+    {
+      "entry": "0x1412f47d0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x1412f47d0",
+          "endExclusive": "0x1412f47e7",
+          "sha256": "1f3fc42833e8ec527040d593569344576cbcc1783acc7c898075544f0b41a5db"
+        }
+      ]
+    },
+    {
+      "entry": "0x14102ee20",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14102ee20",
+          "endExclusive": "0x141031659",
+          "sha256": "d9ef3d3b36e18639c07aaaeafb90d1343d16410e35f8bd372e54677c6f3d7b3a"
+        }
+      ]
+    },
+    {
+      "entry": "0x14643f0a0",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14643f0a0",
+          "endExclusive": "0x146441525",
+          "sha256": "437d766fb2d5dfdd434f8b8a80083cda984be877eebdc8ca0337988ea993e4e3"
+        }
+      ]
+    },
+    {
+      "entry": "0x141462980",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x141462980",
+          "endExclusive": "0x141462a27",
+          "sha256": "cd55ceed4b33378acdf52d4d24a1189e7e7ee1049583860caee09b544c63e881"
+        }
+      ]
+    },
+    {
+      "entry": "0x14143e010",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14143e010",
+          "endExclusive": "0x14143e10d",
+          "sha256": "87942cdba4807f6e4a7802e8af66d9b7c47dfc484c776f90d79a6b743fd36b50"
+        }
+      ]
+    },
+    {
+      "entry": "0x14143ba70",
+      "boundary": "PDATA/chained-unwind",
+      "spans": [
+        {
+          "start": "0x14143ba70",
+          "endExclusive": "0x14143bb52",
+          "sha256": "bc0eec54889ac8c396278c0a93a2f2ea22d66276828bf35125a3ef6cb4721c27"
+        }
+      ]
+    },
+    {
+      "entry": "0x146474e80",
+      "boundary": "instruction-complete fixed leaf/tail body ending at return or tail jump",
+      "spans": [
+        {
+          "start": "0x146474e80",
+          "endExclusive": "0x146474e93",
+          "sha256": "81cfc2e7d564626ec9ea77285477a8e10f4a4adc35f36f0b972dfc4f0c48060d"
+        }
+      ]
+    },
+    {
+      "entry": "0x146471c30",
+      "boundary": "instruction-complete fixed leaf/tail body ending at return or tail jump",
+      "spans": [
+        {
+          "start": "0x146471c30",
+          "endExclusive": "0x146471c3e",
+          "sha256": "2a90066e8d16c049ee4eb60e3aac14a595ad291c17c76a6fb294ea4ae75b2e3b"
+        }
+      ]
+    },
+    {
+      "entry": "0x146165190",
+      "boundary": "instruction-complete fixed leaf/tail body ending at return or tail jump",
+      "spans": [
+        {
+          "start": "0x146165190",
+          "endExclusive": "0x146165199",
+          "sha256": "34d0eed997b8edb24ca0e05b90da5f6841be79b00b9f2a3eedc02102d73050a3"
+        }
+      ]
+    },
+    {
+      "entry": "0x14078fa10",
+      "boundary": "instruction-complete fixed leaf/tail body ending at return or tail jump",
+      "spans": [
+        {
+          "start": "0x14078fa10",
+          "endExclusive": "0x14078fa1f",
+          "sha256": "35dda6b2fbfcb7f37bd6985995491d8c5c851def88eb603b72a690c43829d61e"
+        }
+      ]
+    }
+  ],
+  "vtableWindows": [
+    {
+      "start": "0x148590ab8",
+      "bytes": 24,
+      "sha256": "e969a0771c77f5830bda82da08726c6283e9d79f404dcb39dd43fe2a1947e7a4",
+      "verifiedSlots": {
+        "0x0": "0x146b6bea0",
+        "0x8": "0x146b70af0"
+      }
+    },
+    {
+      "start": "0x148502988",
+      "bytes": 48,
+      "sha256": "388800d14955d4329d718eb010b73aa09da5a798a9d46750f5a4711bbf98cc8f",
+      "verifiedSlots": {
+        "0x0": "0x146471c30",
+        "0x8": "0x146471c30",
+        "0x10": "0x146474e80",
+        "0x20": "0x14078fa10"
+      }
+    }
+  ],
+  "verification": {
+    "sourceSeal": {
+      "status": "passed",
+      "nativeBodies": 25,
+      "instructionSites": 67,
+      "scriptSha256": "ba89215c6db4a7fed759c34096e982aff1892bcbce91967f18721c9e3041d4e4"
+    },
+    "crc": {
+      "table": {
+        "start": "0x147fe6730",
+        "bytes": 1024,
+        "sha256": "12f3e0576d447eb37b36d82ba0c1c5481b8f0d12fdc70347ce4a076b229d4c86",
+        "matchesGeneratedIeeeTable": true
+      },
+      "harmlessBuffers": 4,
+      "comparison": "independent IEEE polynomial table and zlib.crc32",
+      "wireOrAuthenticationTest": false
+    },
+    "counterReview": {
+      "installation": "survived",
+      "diagnosticMeaning": "survived; dynamic handler effects remain open",
+      "crcProvenance": "survived with returned-byte-count limit",
+      "ownership": "survived; runtime quiescence remains open",
+      "registryReceiver": "survived: loader receiver is returned by the same accessor registration uses"
+    },
+    "workspace": {
+      "status": "passed",
+      "profile": "workspace",
+      "testedHead": "defa065ab4fe1f264ad87cfc1bb205f6f0787043",
+      "startedAtUtc": "2026-10-06T03:02:09.520077+00:00",
+      "finishedAtUtc": "2026-10-06T03:03:22.106610+00:00",
+      "python": {
+        "selectedFiles": 33,
+        "collected": 469,
+        "executed": 469,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 61677
+      },
+      "changedInputs": [],
+      "recordingOnlyChangesAfterValidation": true
+    }
+  },
+  "retainedPrivateArtifacts": [
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/baseline.json",
+      "sha256": "14bc32ce1eb90d8a328025f427137e7b13e5b25d0ae22a610291f415f34ace0d"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/BRIEF.md",
+      "sha256": "39be6cf0604242d3df979c4682ba2cdb1cffa4c702b471c46d7846a02522a54d"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/LEDGER.md",
+      "sha256": "faebf33f45a0c9c570c417e7938936102bd328b3c6489d8befd89b258cd65328"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/source-verification.json",
+      "sha256": "5a274279ff2241f335abdd0561880018571be44810c28bc5b0dea6fad45f7224"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/import-check.json",
+      "sha256": "15bf026444bb2fabcbc996469a848efa954a84f722a16c0f466e06b5ab42f3ec"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/crc-verification.json",
+      "sha256": "db076c340ec1f46478e3024f5c17e5b1dce1acd604ad718f5a15779014134d45"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/registry-instance.json",
+      "sha256": "9541a0ea5475e9d67983711383e23d571ca37af9ae4acea71b682c8b5f390fbe"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/registry-callers.json",
+      "sha256": "4e16aaac00a7e22bfc4d70440b2a3fa3bb86d75f3dd052cbc344a8e3d3a661ee"
+    },
+    {
+      "path": ".scratch/offline-validation/run-0zdkztwc/receipt.json",
+      "sha256": "19f667ce9e1629b3cc347a9c3ec8aa40ed13955fa6ea739472cf67aff6540b4b"
+    },
+    {
+      "path": ".scratch/provider-215-counter-review-20261006T0300/receipt.json",
+      "sha256": "df386bc96cc47284c170fa3d83d44ab1fada9492b5d336e74640c91608aeca7d"
+    },
+    {
+      "path": ".scratch/provider-215-counter-review-20261006T0300/CHALLENGE_RESULTS.md",
+      "sha256": "9a1405abc6c42e5f3f497342ea0e3ddcb68ac00cbcf997a68224335bb427f010"
+    },
+    {
+      "path": ".scratch/provider-215-counter-review-20261006T0300/REGISTRY_INSTANCE_CHALLENGE.md",
+      "sha256": "33c3fa41fde2ed3df1b9324e79f561ab3657dffa08d04f3bd7fc54621c443922"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/ghidra-a/receipt.json",
+      "sha256": "3fb34be2db5e44abf29b7a8d74f8d40e536f32b6994921e8c46d6fe55fd61275"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/ghidra-b/receipt.json",
+      "sha256": "0754e2e71a7ad5b796ec1860e4f5112e0baf26732a3f5212a5ce93a86f3feac9"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/ghidra-c/receipt.json",
+      "sha256": "3633df9e0566423ac8350bafd0c1411c5b16b7fabcee9a05370bd87d33c9e067"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/ghidra-d/receipt.json",
+      "sha256": "ee10a5f5f2a92c480caad9edf5e495efaa531805bc766152391d1c9a9b38d6b7"
+    },
+    {
+      "path": ".scratch/registration-provider-215-20261006T0235/ghidra-e/receipt.json",
+      "sha256": "2b631b663e42cffc56492a48e86819caedf3bba3e6e4de03ee01db697beecde4"
+    }
+  ],
+  "clientExecuted": false,
+  "upstreamExecuted": false,
+  "milestone1": "not tested",
+  "exclusions": "No launches, hooks, captures, process memory, endpoints, credentials, guessed wire formats, replay, upstream edits, publishing, framing/codecs, ticket implementation or private authentication design."
+}

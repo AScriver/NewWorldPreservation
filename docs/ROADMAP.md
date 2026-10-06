@@ -1,5 +1,17 @@
 # Milestone 1 roadmap
 
+#215 source result, October 5: the previously unresolved owner+0x90 callable now
+joins its upstream construction/installer, vtable+0x10 target, diagnostic output
+consumer and inline ownership/replacement/teardown. This concrete callable does
+not directly supply registration payload values. A separate V3 request+8 join
+establishes CRC32 of the bytes returned by the type-index file abstraction;
+complete physical-file/runtime input and authentication authority remain unproved.
+[New finding](REGISTRATION_DATA_PROVIDER.md), J215-1–4 and
+[original receipt](../research/evidence/current-registration-data-provider.json)
+record exact current-image evidence and source/offline verification. Only215 under
+workItemId164/parent178 is completed after the scoped local commit and claim release.
+Parent178/164 and Milestone1 remain open; no client/live work or other task begins.
+
 <!-- actionable-212:start -->
 #212 fixture gate, October 5: **Blocked; fixture validation incomplete**. Required
 positive construction/member joins remain #208 MJ208-1–4; #209's designation paths
