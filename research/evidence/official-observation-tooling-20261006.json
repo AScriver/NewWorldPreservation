@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "classification": "synthetic_collector_and_offline_tooling_verification",
+  "workItemId": 164,
+  "checkpoint": 242,
+  "status": "passed",
+  "headAtWorkspaceValidation": "0958dd026397c5076f4be2cbf862444af8294969",
+  "workspace": {
+    "pythonCases": 1164,
+    "pythonModules": 41,
+    "powershellSuites": 4,
+    "loopbackLifecycleClosed": true,
+    "receiptSha256": "f45dab86a1acedaa9c84d7ac532d1fa6cf0831e51e4e0d9d9213b7cd6f16c017"
+  },
+  "focusedPythonCases": 46,
+  "syntheticPowerShellAssertions": 12,
+  "sourceAndTestSha256": {
+    "scripts/official_session_metadata.py": "8e275803b418b0d59a29d4894ebceab4951eac275022c26e1880d2ddf9d16bc8",
+    "scripts/Start-OfficialObservation.ps1": "654f81716b899df6ea26b3105b09b08129897d3519e63aff7ee0dc6dffc79fd8",
+    "scripts/Collect-OfficialLogSuffix.ps1": "8d3a7a1867c569d3db52609fa655abc781b8f84fd645555721a1f6da6a841a02",
+    "scripts/OfficialObservation.psm1": "d630c171389319214b2062c6c48fb81581cc92b9d49cb4230b00e54e3a846120",
+    "tests/test_official_session_metadata.py": "808ed068fa38b8e2684f9d83f87883d7cab94e49ca9690fb6478f84df7cc3f5d",
+    "tests/test_official_observation.ps1": "9f35f677311d93c4d2f91348ed2e08844490341c429d11088018cd28de759e63"
+  },
+  "liveSessionEvidence": false,
+  "privateServerGameplayAcceptance": false,
+  "limits": [
+    "Synthetic verification is not a live client or private world result",
+    "Strict image identity refusal is retained; no bypass",
+    "Log-only attribution is weaker than live image verification",
+    "Recordings require user review; no pixel redaction performed"
+  ]
+}

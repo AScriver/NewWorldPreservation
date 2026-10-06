@@ -25,7 +25,7 @@ PYTHON_TIMEOUT = 180
 PS_TIMEOUT = 120
 CLI_TIMEOUT = 20
 REVIEWED_GROUP_SIZES = {"fixtures-static": 17, "protocol-loopback": 12, "windows-native": 4,
-                        "tooling": 5, "powershell": 3, "rep-readonly": 1, "frida-trial": 1}
+                        "tooling": 6, "powershell": 4, "rep-readonly": 1, "frida-trial": 1}
 WORKSPACE_MEMBERS = ["fixtures-static", "protocol-loopback", "windows-native",
                      "tooling", "powershell", "rep-readonly", "frida-trial", "cli-lifecycle"]
 

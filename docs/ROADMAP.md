@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+October 6 official-observation tooling, #242 under #166/164: bounded fixed-category
+own-log collectors, explicit user action marks, hashed private scenario manifests
+and recording instructions passed 46 focused Python cases and 12 PowerShell
+assertions. Workspace validation passed 1,164 Python cases in 41 modules, four
+PowerShell suites and a closed loopback CLI lifecycle. Protected image-path denial
+ends socket collection; the separate log-only helper uses public PID/name/creation
+time and user-confirmed session attribution. [Prepared procedure](OFFICIAL_SESSION_CAPTURE.md).
+Synthetic checks establish collector behavior only; no private gameplay acceptance.
+
 October 6 shutdown preservation, #241 under #166/164: the private owned-client
 archive verified 374 files / 76,744,359,425 bytes, build 22469132 and image
 8654f01d. Every source and destination file was rehashed; the source inventory
