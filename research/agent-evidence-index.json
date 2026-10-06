@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "private-player-creation-trial-preparation",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K344", "K345", "K346", "K347"],
+      "docs": ["docs/PLAYER_CREATION_TRIAL.md"],
+      "scripts": ["scripts/private_player_creation_trial.py", "scripts/carrier_registration_probe.py", "scripts/dtls_transport_probe.py", "scripts/Invoke-FridaPrivateTrial.ps1"],
+      "tests": ["tests/test_private_player_creation_trial.py", "tests/test_carrier_registration_probe.py", "tests/test_dtls_transport_probe.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/private-player-creation-trial-preparation.json", "classification": "synthetic", "scope": "Default-off same-record candidate, one-attempt/lifetime guards and offline integration; no client or new-send admission"}],
+      "limit": "Runtime table/mode/slot/context readiness, native construction, designation and visible control remain unproved. Live trial requires separate specific approval."
+    },
+    {
       "id": "private-trial-character",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K341", "K342", "K343"],

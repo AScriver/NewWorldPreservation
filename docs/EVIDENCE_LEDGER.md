@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Default-off fresh player trial preparation — October6, #254
+
+Baseline clean `0c97186`; task-owned integration/helper/test/controller/inventory
+and documentation dirty. [Concrete experiment](PLAYER_CREATION_TRIAL.md) and
+[receipt](../research/evidence/private-player-creation-trial-preparation.json)
+retain current input hashes and the separate pending live-send grant.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K344 | One SHA-bound fresh record supplies both HTTPS children and the current indexed candidate | Original controlled integration; each child hashes the exact bounded bytes parsed, before listeners; no authenticated ticket or native identity acceptance | Pinned-input/helper/CLI tests and private offline manifest |
+| K345 | The candidate is attempted once after the existing empty activation using shared Carrier cursors | Observed fake-peer boundary, canonical length/digest, prior-stage/earlier-heartbeat failure and terminal-exception tests; a later heartbeat failure in that tick cannot undo creation, and timing is not context-readiness proof | Adapter tests; independent event-order falsification and existing fixed-message sender |
+| K346 | Creation selection admits one lifetime DTLS peer and one application peer object | Controlled own loopback/fake-peer checks reject second admission/reconnect; original defaults retain existing budgets and behavior | Responder and adapter tests; no game process or controller execution |
+| K347 | Actual pinned private inputs produce the original107-byte candidate and default-off controller inputs | Observed pure disk/schema/hash preparation and inert PowerShell guards; runtime mode/table/slot/provider/loading/designation unobserved, live send remains unadmitted | Original metadata receipt, guarded observer disk admission and prepared dispatch parser checks |
+
 ## Fresh private character inputs — October6, #253
 
 Baseline clean `bbadb9d`; task-owned generator/probe/test/inventory changes and

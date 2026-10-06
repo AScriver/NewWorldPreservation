@@ -222,10 +222,14 @@ def test_bounds_and_fixed_loopback_bind(tmp_path, certdir):
             with pytest.raises(ValueError):
                 Responder(certdir, events, port=0, max_datagrams=total,
                           max_peer_datagrams=per_peer)
+        for lifetime_cap in (0, MAX_PEERS + 1, True, 1.0):
+            with pytest.raises(ValueError, match="lifetime"):
+                Responder(certdir, events, port=0, max_lifetime_peers=lifetime_cap)
         with warnings.catch_warnings():
             warnings.simplefilter("error", DeprecationWarning)
             server = Responder(certdir, events, port=0)
         assert server.address[0] == "127.0.0.1"
+        assert server.max_lifetime_peers is None
         with pytest.raises(ValueError):
             server.run(601)
         assert server.socket.fileno() == -1
@@ -283,6 +287,38 @@ def test_retransmission_timer_and_peer_capacity(tmp_path, certdir):
     assert any(item["state"] == "DTLS_DATAGRAM_REFUSED" for item in records)
     assert any(item["state"] == "DTLS_TIMER" and item["retransmitted"] for item in records)
     assert records[-1]["remaining_peers"] == 0 and server.socket.fileno() == -1
+
+
+def test_one_lifetime_peer_refuses_later_client_hello_after_close(tmp_path, certdir):
+    path = tmp_path / "lifetime-events.jsonl"
+    events = EventLog(path)
+    server = Responder(certdir, events, port=0, max_lifetime_peers=1,
+                       lookup=lambda *_: None)
+    stop = threading.Event()
+    thread = threading.Thread(target=server.run, args=(3, stop))
+    first = _client(certdir)
+    second = _client(certdir)
+    thread.start()
+    try:
+        complete, _, _ = _exchange([first], server.address, limit=2)
+        assert complete == {0}
+        assert server.lifetime_peer_admissions == 1
+        admitted = next(iter(server.peers.values()))
+        server._close_peer(admitted, "synthetic_test_close")
+        assert not server.peers
+        complete_again, _, _ = _exchange([second], server.address, limit=0.5)
+        assert not complete_again
+        assert server.lifetime_peer_admissions == 1
+    finally:
+        stop.set()
+        thread.join(timeout=3)
+        first[0].close()
+        second[0].close()
+        events.close()
+    assert not thread.is_alive() and server.socket.fileno() == -1
+    records = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len([row for row in records if row["state"] == "DTLS_PEER_OPENED"]) == 1
+    assert any(row["state"] == "DTLS_DATAGRAM_REFUSED" for row in records)
 
 
 def test_receive_reset_is_unattributed_then_fatal_socket_error_stops_cleanly(tmp_path, certdir):

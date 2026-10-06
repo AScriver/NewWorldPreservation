@@ -1,5 +1,24 @@
 # Bounded task briefs
 
+## #254 — default-off integrated creation trial preparation (M)
+
+- Removes the remaining omitted creation payload after context activation;
+  baseline clean0c97186, workItem164, parent248/190/171.
+- Reuse the exact original fresh record, BODY/record composer and owned mapping.
+  One indexed short candidate; fixed slot0/key0 and conditional resource key9 are
+  explicit experiment values. No arbitrary raw-body escape or larger prefix.
+- Own narrow input-digest/helper, queue, Carrier, optional DTLS lifetime-peer and
+  controller guards, affected tests and associated docs/receipt/inventory.
+  Preserve default behavior, Frida sites/lifetimes/budgets and unrelated files.
+- Adversarial counterexamples require exact parsed-byte hash at every child,
+  heartbeat/predecessor gating, latch-before-send, no cached replay and a lifetime
+  peer cap separate from active capacity. Primary ledger records the limits.
+- Test fake peers or exactly owned ephemeral loopback resources; validate all
+  PS before execution. Never run the full controller/game/system mutation.
+- Required closure: scoped checks/workspace, source/catalog/staged review, local
+  increment, original private input proposal and pending real-client checkpoint.
+  New send approval and user Play/visual observation remain separate gates.
+
 ## #253 — one fresh original private character (M)
 
 - Removes fixture reuse and inconsistent identity ownership before a creation

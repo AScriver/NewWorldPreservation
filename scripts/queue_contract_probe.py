@@ -95,6 +95,7 @@ def main():
     parser.add_argument("--case",choices=CASES,required=True)
     parser.add_argument("--observe-local-socket-owner",action="store_true")
     parser.add_argument("--trial-character")
+    parser.add_argument("--trial-character-sha256")
     occupancy = parser.add_mutually_exclusive_group()
     occupancy.add_argument("--trial-known-empty-occupancy", action="store_true")
     occupancy.add_argument("--trial-occupied-low64", action="append")
@@ -102,15 +103,18 @@ def main():
     if not 1 <= options.duration <= 600:
         parser.error("Duration1..600 required")
     if options.trial_character is None:
-        if options.trial_known_empty_occupancy or options.trial_occupied_low64:
-            parser.error("trial occupancy requires --trial-character")
+        if (options.trial_known_empty_occupancy or options.trial_occupied_low64 or
+                options.trial_character_sha256 is not None):
+            parser.error("trial digest and occupancy require --trial-character")
         trial_character = None
     else:
         try:
+            if options.trial_character_sha256 is None:
+                raise ValueError("--trial-character-sha256 is required with --trial-character")
             occupied = occupied_from_options(options.trial_occupied_low64,
                                              options.trial_known_empty_occupancy)
             trial_character = read_trial_character(options.trial_character,
-                                                   occupied_keys=occupied)
+                occupied_keys=occupied, expected_sha256=options.trial_character_sha256)
             response_case(options.case, trial_character=trial_character)
         except (OSError, ValueError) as exc:
             parser.error(str(exc))

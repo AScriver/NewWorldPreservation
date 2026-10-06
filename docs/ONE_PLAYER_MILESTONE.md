@@ -53,7 +53,7 @@ Verify this chain rather than assuming wire order:
 
 | Transition | Current support | Missing observation / obstacle |
 |---|---|---|
-| Fresh session/character identity | One original immutable record now joins login-info, queue and identity BODY | Integrated controller/Carrier forwarding and native local-ID provider acceptance pending |
+| Fresh session/character identity | One original immutable record joins login-info, queue and identity BODY; default-off controller forwarding is prepared | Native local-ID provider acceptance and admitted live forwarding pending |
 | Entity creation | Owned player AssetId, fresh GdeRef policy, creation BODY/record parser | Trial sends no creation member; native construction/slot placement unobserved |
 | Resource loading and component delivery | Exact owned player resource; baked PlayerComponent index9 | Native load and refreshable runtime index mode unobserved |
 | Local-player designation | Exact text comparison, reconciled identity delivery, guarded registry path | Matching provider availability, binding, keyed readiness and actual designation unobserved |
@@ -75,8 +75,12 @@ Offline leaf **#253** now supplies [one fresh private character](PRIVATE_TRIAL_C
 consistently to login-info, queue and the identity BODY/candidate. The record is
 ephemeral original backend data; native authentication/designation remain unknown.
 
-Next relevant work is default-off controller/Carrier integration of that same
-record, then exercise the candidate only within an admitted trial. Expected
+Offline leaf **#254** prepares [default-off controller/Carrier integration](PLAYER_CREATION_TRIAL.md)
+of that same SHA-bound record. One original107-byte indexed candidate, one attempt
+after empty activation and one lifetime peer are ready for the specific live-send
+grant. Exact byte/digest checks and failure controls do not establish client acceptance.
+
+Next relevant work is that specifically admitted isolated-copy trial. Expected
 first observable result: native resource/
 player construction after the previously observed context activation. Local
 designation, rendering and control must then be checked separately.

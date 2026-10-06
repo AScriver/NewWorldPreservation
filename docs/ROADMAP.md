@@ -14,11 +14,27 @@ context initialization, then selection/spawn timeout; its type8 bundle was empty
 Current obstacle: no fresh creation/identity member reaches the live path.
 Leaf252 composes the original nonempty candidate offline; leaf253 now joins one
 fresh immutable backend identity through selection, queue and player BODY.
-Next: default-off forwarding and candidate integration, conditional component
-delivery, then an admitted client trial. Native construction, designation,
+Leaf254 now prepares [default-off forwarding and candidate integration](PLAYER_CREATION_TRIAL.md).
+Next: one specifically admitted nonempty candidate client trial, with conditional
+component delivery. Native construction, designation,
 rendering and controls are unproved. The300s client cap includes loading and is
 insufficient for five minutes after spawn; the closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
+
+October6 #254 under248/164: one strict SHA-bound fresh record supplies both HTTPS
+children and the original107-byte indexed Carrier candidate. The option is off
+by default; canonical bytes, earlier predecessor/heartbeat failure, once-attempted
+send and one lifetime peer guard the selected path. Creation precedes the tick's
+recurring heartbeat, so a later heartbeat failure cannot undo its send. Focused182
+cases, independent10 inert probes and eight extracted controller metadata guard
+cases passed. Prepared private manifest binds163 files and the three existing
+observer disk entry prefixes; no controller/client/system mutation was executed.
+[Receipt](../research/evidence/private-player-creation-trial-preparation.json)
+retains current inputs. Required workspace1,388 Python cases/48modules, four
+PowerShell suites and the closed isolated CLI lifecycle passed. Existing authorization names
+an empty bundle, so the exact new-send trial remains pending a separate grant.
+Rendered player, local designation/control and all one-player acceptance remain
+unproved; no lifetime, traffic budget, movement codec or observer expansion.
 
 October6 #253 under247/164: [one fresh private trial record](PRIVATE_TRIAL_CHARACTER.md)
 owns distinct new local session/character/persona/ticket UUIDs and one assigned

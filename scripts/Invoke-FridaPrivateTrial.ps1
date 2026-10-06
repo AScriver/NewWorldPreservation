@@ -109,11 +109,82 @@ if ($manifest.PSObject.Properties.Name -contains 'self_ident_current_length') {
         $requiredBindings += Join-Path $workspaceRoot 'research\evidence\current-self-length-prefix-contract.json'
     }
 }
+$creationArguments = @()
+$creationFields = @('trial_character_path','trial_character_sha256','type_index_path','delivery_mode','trial_known_empty_occupancy','trial_occupied_low64')
+if ($manifest.PSObject.Properties.Name -contains 'player_creation_candidate') {
+    if ($manifest.player_creation_candidate -isnot [bool]) { throw 'Player creation admission must be an explicit boolean.' }
+}
+if ($manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -and $manifest.player_creation_candidate) {
+    if ($manifest.PSObject.Properties.Name -notcontains 'application_contract' -or $manifest.application_contract -cne 'carrier-register' -or
+        $manifest.PSObject.Properties.Name -notcontains 'registration_server_version' -or $manifest.registration_server_version -cne '[RETAIL].Javelin.1.400.6031.6004151' -or
+        $manifest.PSObject.Properties.Name -notcontains 'heartbeat_15d' -or -not $manifest.heartbeat_15d -or
+        $manifest.PSObject.Properties.Name -notcontains 'self_ident_default' -or -not $manifest.self_ident_default -or
+        $manifest.PSObject.Properties.Name -notcontains 'self_ident_current_length' -or -not $manifest.self_ident_current_length -or
+        $manifest.PSObject.Properties.Name -notcontains 'spawn_point_notification' -or -not $manifest.spawn_point_notification -or
+        $manifest.PSObject.Properties.Name -notcontains 'world_activation' -or -not $manifest.world_activation -or
+        $manifest.PSObject.Properties.Name -notcontains 'context_gate_observer' -or -not $manifest.context_gate_observer) {
+        throw 'Player creation requires the owned current actor, world and observer admissions.'
+    }
+    foreach ($fieldName in @('trial_character_path','trial_character_sha256','type_index_path','delivery_mode')) {
+        if ($manifest.PSObject.Properties.Name -notcontains $fieldName -or [string]::IsNullOrWhiteSpace($manifest.$fieldName)) { throw 'Player creation input missing.' }
+    }
+    if ($manifest.delivery_mode -cne 'resource-index' -or $manifest.trial_character_sha256 -cnotmatch '^[0-9a-f]{64}$') { throw 'Player creation mode or digest invalid.' }
+    $trialCharacterPath = [IO.Path]::GetFullPath($manifest.trial_character_path)
+    $allowedTrialRoots = @((Join-Path $workspaceRoot '.scratch'),(Join-Path $workspaceRoot 'private'))
+    if (@($allowedTrialRoots | Where-Object { $trialCharacterPath.StartsWith($_+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) }).Count -eq 0 -or
+        (Get-Item -LiteralPath $trialCharacterPath).Attributes -band [IO.FileAttributes]::ReparsePoint -or
+        (Get-Item -LiteralPath $trialCharacterPath).Length -gt 4096 -or
+        (Get-FileHash -LiteralPath $trialCharacterPath -Algorithm SHA256).Hash.ToLowerInvariant() -cne $manifest.trial_character_sha256) {
+        throw 'Private trial character path, extent or digest mismatch.'
+    }
+    $typeIndexPath = Join-Path $clientDirectory 'typeindex.json'
+    if ([IO.Path]::GetFullPath($manifest.type_index_path) -ine $typeIndexPath -or
+        (Get-Item -LiteralPath $typeIndexPath).Attributes -band [IO.FileAttributes]::ReparsePoint -or
+        (Get-FileHash -LiteralPath $typeIndexPath -Algorithm SHA256).Hash.ToLowerInvariant() -cne 'f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75') {
+        throw 'Player creation type index identity mismatch.'
+    }
+    $hasEmpty = $manifest.PSObject.Properties.Name -contains 'trial_known_empty_occupancy'
+    $hasKeys = $manifest.PSObject.Properties.Name -contains 'trial_occupied_low64'
+    if (($hasEmpty -and $manifest.trial_known_empty_occupancy -isnot [bool]) -or ($hasEmpty -and $manifest.trial_known_empty_occupancy -and $hasKeys) -or
+        (-not $hasKeys -and (-not $hasEmpty -or -not $manifest.trial_known_empty_occupancy))) { throw 'Player creation occupancy choice required.' }
+    $occupancyArguments = @()
+    if ($hasEmpty -and $manifest.trial_known_empty_occupancy) {
+        $occupancyArguments = @('--trial-known-empty-occupancy')
+    } else {
+        if (-not $hasKeys -or $manifest.trial_occupied_low64 -isnot [array] -or @($manifest.trial_occupied_low64).Count -eq 0) { throw 'Explicit occupied low64 keys required.' }
+        $seenKeys = [Collections.Generic.HashSet[UInt64]]::new()
+        foreach ($keyText in $manifest.trial_occupied_low64) {
+            if ($keyText -isnot [string] -or $keyText -cnotmatch '^(0|[1-9][0-9]*)$') { throw 'Occupied low64 key must be decimal text.' }
+            $parsedKey = [Convert]::ToUInt64($keyText,10)
+            if (-not $seenKeys.Add($parsedKey)) { throw 'Duplicate occupied low64 key.' }
+            $occupancyArguments += @('--trial-occupied-low64',$keyText)
+        }
+    }
+    $requiredBindings += @($trialCharacterPath,$typeIndexPath)
+    $requiredBindings += @('private_trial_character.py','private_player_creation_trial.py','current_player_creation_candidate.py',
+        'current_creation_replication_record.py','current_creation_member_body.py','current_player_identity_body.py',
+        'current_type8_bundle_body.py','current_creation_trial_ref.py','current_registration_request_body.py',
+        'queue_contract_probe.py','session_handoff_probe.py' | ForEach-Object { Join-Path $PSScriptRoot $_ })
+    $requiredBindings += @((Join-Path $workspaceRoot 'research\evidence\owned-player-resource-20261006.json'),
+                           (Join-Path $workspaceRoot 'research\evidence\owned-player-delivery-index-20261006.json'))
+    $creationArguments = @('--trial-character',$trialCharacterPath,'--trial-character-sha256',$manifest.trial_character_sha256) + $occupancyArguments
+} elseif (@($creationFields | Where-Object { $manifest.PSObject.Properties.Name -contains $_ }).Count -ne 0) {
+    throw 'Player creation inputs require the explicit enabled candidate.'
+}
 foreach ($requiredBinding in $requiredBindings) {
     if (@($manifest.files | Where-Object { $_.path -ieq $requiredBinding }).Count -ne 1) { throw 'Mandatory trial input missing or duplicated in bindings.' }
 }
 & $validator -Path $hostsScript | Out-Null
 & $validator -Path $manifest.frida_dispatch | Out-Null
+if ($creationArguments.Count -ne 0) {
+    $verificationArguments = @('-B',(Join-Path $PSScriptRoot 'private_player_creation_trial.py')) + $creationArguments + @('--type-index',$typeIndexPath,'--delivery-mode',$manifest.delivery_mode)
+    $verificationOutput = & $manifest.protocol_python @verificationArguments 2>$null
+    if ($LASTEXITCODE -ne 0) { throw 'Private player creation verifier refused admission before containment.' }
+    try { $verifiedCandidate = $verificationOutput | ConvertFrom-Json -ErrorAction Stop } catch { throw 'Private player creation verifier returned invalid metadata.' }
+    if (($verifiedCandidate.typed_bytes -isnot [int] -and $verifiedCandidate.typed_bytes -isnot [long]) -or
+        $verifiedCandidate.typed_bytes -lt 1 -or $verifiedCandidate.typed_bytes -ge 128 -or
+        $verifiedCandidate.typed_sha256 -cnotmatch '^[0-9a-f]{64}$') { throw 'Private player creation verifier returned invalid extent or digest.' }
+}
 $hostsPath = Join-Path $env:SystemRoot 'System32\drivers\etc\hosts'
 $journalPath = Join-Path $runPath 'hosts-journal'
 $eventsPath = Join-Path $runPath 'containment-events.jsonl'
@@ -199,7 +270,8 @@ try {
     foreach ($requiredProgram in $requiredPrograms) {
         if (@($manifest.contained_programs | Where-Object { $_ -ieq $requiredProgram }).Count -ne 1) { throw 'Required trial image absent/duplicated in containment manifest.' }
     }
-    Write-Event 'TRIAL_PREFLIGHT_PASSED' @{ retained_root_count=$beforeRoots; hosts_before_sha256=$beforeHostsHash; installed_intact=$true; user_authorization='2026-10-04 direct Frida startup and runtime trust changes'; steam_not_modified=$true }
+    $candidateApprovalScope = if ($manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -and $manifest.player_creation_candidate) { 'separate live operator grant required; this manifest is preparation only' } else { 'no player creation candidate selected' }
+    Write-Event 'TRIAL_PREFLIGHT_PASSED' @{ retained_root_count=$beforeRoots; hosts_before_sha256=$beforeHostsHash; installed_intact=$true; base_authorization='2026-10-04 direct Frida startup and runtime trust changes'; player_creation_authorization_scope=$candidateApprovalScope; steam_not_modified=$true }
     $remoteAddresses = @('0.0.0.0-127.0.0.0','127.0.0.2-255.255.255.255','::2-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff')
     $programIndex = 0
     foreach ($programPath in $manifest.contained_programs) {
@@ -227,6 +299,7 @@ try {
     }
     $pythonExecutable = $manifest.protocol_python
     $commonArguments = @('--certificates',$manifest.certificates,'--descriptor',$manifest.descriptor,'--duration','360','--case','token-loopback','--observe-local-socket-owner')
+    $commonArguments += $creationArguments
     $ipv4Child = Start-OwnedChild -Name 'https-v4' -Executable $pythonExecutable -NativeArguments (@((Join-Path $PSScriptRoot 'queue_contract_probe.py'))+$commonArguments+@('--bind','127.0.0.1','--port','443','--log',(Join-Path $runPath 'https-v4.jsonl')))
     $ipv6Child = Start-OwnedChild -Name 'https-v6' -Executable $pythonExecutable -NativeArguments (@((Join-Path $PSScriptRoot 'queue_contract_probe.py'))+$commonArguments+@('--bind','::1','--port','443','--log',(Join-Path $runPath 'https-v6.jsonl')))
     $dtlsArguments = @((Join-Path $PSScriptRoot 'dtls_transport_probe.py'),'--certificates',$manifest.certificates,'--log',(Join-Path $runPath 'dtls.jsonl'),'--port','64003','--duration','360','--chain','full')
@@ -251,6 +324,10 @@ try {
         }
         if ($manifest.PSObject.Properties.Name -contains 'world_activation' -and $manifest.world_activation) {
             $dtlsArguments += '--world-activation'
+        }
+        if ($manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -and $manifest.player_creation_candidate) {
+            $dtlsArguments += @('--player-creation-candidate','--type-index',$typeIndexPath,
+                                '--delivery-mode',$manifest.delivery_mode) + $creationArguments
         }
     }
     $dtlsChild = Start-OwnedChild -Name 'dtls' -Executable $pythonExecutable -NativeArguments $dtlsArguments

@@ -1,5 +1,30 @@
 # Agent handoff
 
+## #254 prepared one-player creation probe — October6
+
+- Actual client behavior remains the closed0655 context initialization and spawn
+  timeout. Offline integration establishes no entity/rendering/control acceptance.
+- [Prepared experiment](PLAYER_CREATION_TRIAL.md): one new original record retained
+  across selection/queue/creation,107-byte indexed candidate attempted once after
+  empty activation, one lifetime DTLS/application peer and existing containment/
+  observer/lifetimes. Source/input SHA seals and K344–K347 retain unknowns.
+- Focused182, independent10 inert checks and eight actual extracted PowerShell
+  metadata-guard cases passed. Required workspace1,388 Python/48modules, four
+  PowerShell suites and closed isolated CLI lifecycle passed; exact inputs in receipt.
+  Earlier heartbeat failure blocks creation; a later failure in the same tick
+  follows creation and cannot undo it. No game/shared runtime resource created.
+- Ignored `private/frida-trials/run-20261006T2321-player1` contains the one fresh
+  record/candidate, disk admission and163-file manifest. Dispatch scripts under
+  `.scratch/one-player-20261006` validate but have not executed. Pending approval
+  is explicitly recorded; no approval receipt or native result exists.
+- Next gate is one specific300-second isolated-copy creation trial grant and user
+  availability for UAC/Play and visual/control observation. Existing AGENTS admits
+  an empty bundle; the October6 refocus expands no authorization. Keep the active
+  goal and broad parent acceptance pending; do not relaunch the empty trial.
+- If spawn succeeds, the existing300seconds-from-resume cap still cannot satisfy
+  five minutes after spawn. Prepare a separately admitted longer control/network
+  experiment then; do not silently increase runtime/budgets or invent movement.
+
 ## #253 fresh identity propagation — October6
 
 - Live behavior remains the closed0655 context initialization, then spawn timeout.

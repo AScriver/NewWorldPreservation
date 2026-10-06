@@ -21,6 +21,8 @@ import time
 import current_self_ident_default
 import current_spawn_point
 import current_world_activation
+from private_player_creation_trial import PreparedPlayerCreation, prepare_from_files
+from private_trial_character import occupied_from_options
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = ROOT / "research" / "upstream" / "first-light"
@@ -169,13 +171,17 @@ class _PeerState:
         self.next_bundle_at = None
         self.bundle_sent = False
         self.bundle_disabled = False
+        self.next_creation_at = None
+        self.creation_attempted = False
+        self.creation_sent = False
+        self.creation_disabled = False
 
 
 class RegistrationAdapter:
     def __init__(self, events, codecs, *, decompressor=None, compression_guard=None,
                  server_version=None, heartbeat_15d=False, self_ident_default=False,
                  spawn_point_notification=False, world_activation=False,
-                 self_ident_current_length=False, clock=None):
+                 self_ident_current_length=False, prepared_creation=None, clock=None):
         if server_version is not None and server_version != OWNED_SERVER_VERSION:
             raise ValueError("unsupported server version selection")
         if self_ident_default and (not heartbeat_15d or server_version != OWNED_SERVER_VERSION):
@@ -186,6 +192,12 @@ class RegistrationAdapter:
             raise ValueError("world activation requires the current spawn notification")
         if self_ident_current_length and not self_ident_default:
             raise ValueError("current length comparison requires the current default actor candidate")
+        if prepared_creation is not None:
+            if (type(prepared_creation) is not PreparedPlayerCreation or
+                    server_version != OWNED_SERVER_VERSION or not heartbeat_15d or
+                    not self_ident_default or not self_ident_current_length or
+                    not spawn_point_notification or not world_activation):
+                raise ValueError("player candidate requires the complete current guarded sequence")
         self.events = events
         self.frame, self.v3_request, self.v3_response, self.wire, self.rep, self.dispatch = codecs
         self._server_version = server_version
@@ -195,6 +207,8 @@ class RegistrationAdapter:
         self._spawn_point_enabled = spawn_point_notification
         self._world_activation_enabled = world_activation
         self._self_ident_current_length = self_ident_current_length
+        self._prepared_creation = prepared_creation
+        self._creation_peer = None
         self._clock = clock or time.monotonic
         self._heartbeat = getattr(self.dispatch, "heartbeat_15d", None)
         if heartbeat_15d and self._heartbeat is None:
@@ -244,6 +258,12 @@ class RegistrationAdapter:
         state.next_out_envelope_seq = (sequence + 1) & 0xFFFF
 
     def on_app(self, peer, plaintext):
+        if self._prepared_creation is not None:
+            if self._creation_peer is None:
+                self._creation_peer = peer
+            elif peer is not self._creation_peer:
+                self._emit("CARRIER_REJECTED", peer, reason="creation_lifetime_peer_limit")
+                return
         if peer.id not in self.peers:
             if len(self.peers) >= MAX_PEERS:
                 self._emit("CARRIER_REJECTED", peer, reason="peer_limit")
@@ -301,6 +321,8 @@ class RegistrationAdapter:
     def on_tick(self, peer, now):
         if not self._heartbeat_enabled:
             return
+        if self._prepared_creation is not None and peer is not self._creation_peer:
+            return
         state = self.peers.get(peer.id)
         if (self._self_ident_enabled and state is not None and state.v3_sent and
                 not state.self_ident_sent and not state.self_ident_disabled and
@@ -338,6 +360,37 @@ class RegistrationAdapter:
                 current_world_activation.BUNDLE_TYPE_ID, "EMPTY_STATE_BUNDLE",
                 header_bytes=len(current_world_activation.BUNDLE_HEADER))
             state.bundle_disabled = not state.bundle_sent
+            if state.bundle_sent and self._prepared_creation is not None:
+                state.next_creation_at = now + 1.0  # Delay experiment; not readiness.
+        if self._prepared_creation is not None and state is not None and not state.creation_attempted:
+            if (state.heartbeat_disabled or state.self_ident_disabled or
+                    state.spawn_point_disabled or state.level_info_disabled or
+                    state.bundle_disabled):
+                state.creation_attempted = True
+                state.creation_disabled = True
+                self._emit("PLAYER_CREATION_CANDIDATE_REJECTED", peer, reason="predecessor_failed")
+            elif (state.v3_sent and state.self_ident_sent and state.spawn_point_sent and
+                  state.level_info_sent and state.bundle_sent and
+                  state.next_creation_at is not None and now >= state.next_creation_at):
+                state.creation_attempted = True  # Never retry, even if send/cursor update raises.
+                typed = self._prepared_creation.typed_bytes
+                if (len(typed) >= 128 or
+                        not typed.startswith(current_world_activation.BUNDLE_HEADER) or
+                        hashlib.sha256(typed).hexdigest() != self._prepared_creation.typed_sha256):
+                    state.creation_disabled = True
+                    self._emit("PLAYER_CREATION_CANDIDATE_REJECTED", peer, reason="typed_boundary")
+                else:
+                    try:
+                        state.creation_sent = self._send_fixed_actor_message(
+                            peer, state, typed, current_world_activation.BUNDLE_TYPE_ID,
+                            "PLAYER_CREATION_CANDIDATE",
+                            header_bytes=len(current_world_activation.BUNDLE_HEADER),
+                            body_kind="candidate")
+                    except Exception:
+                        state.creation_disabled = True
+                        self._emit("PLAYER_CREATION_CANDIDATE_REJECTED", peer, reason="send_exception")
+                    else:
+                        state.creation_disabled = not state.creation_sent
         if (state is None or not state.v3_sent or state.heartbeat_disabled or
                 state.next_heartbeat_at is None or now < state.next_heartbeat_at or
                 state.heartbeat_sent >= MAX_HEARTBEATS_PER_PEER):
@@ -700,6 +753,14 @@ def parse_options(argv=None):
     parser.add_argument("--self-ident-current-length", action="store_true")
     parser.add_argument("--spawn-point-notification", action="store_true")
     parser.add_argument("--world-activation", action="store_true")
+    parser.add_argument("--player-creation-candidate", action="store_true")
+    parser.add_argument("--trial-character")
+    parser.add_argument("--trial-character-sha256")
+    parser.add_argument("--type-index")
+    parser.add_argument("--delivery-mode", choices=("resource-index",))
+    occupancy = parser.add_mutually_exclusive_group()
+    occupancy.add_argument("--trial-known-empty-occupancy", action="store_true")
+    occupancy.add_argument("--trial-occupied-low64", action="append")
     options = parser.parse_args(argv)
     if not 1 <= options.port <= 65535 or not 1 <= options.duration <= 600:
         parser.error("Port 1..65535 and duration 1..600 required")
@@ -712,11 +773,32 @@ def parse_options(argv=None):
         parser.error("World activation requires the current spawn notification")
     if options.self_ident_current_length and not options.self_ident_default:
         parser.error("Current length comparison requires the current default actor candidate")
+    creation_inputs = (options.trial_character, options.trial_character_sha256,
+                       options.type_index, options.delivery_mode)
+    if options.player_creation_candidate:
+        if (not all(creation_inputs) or not options.heartbeat_15d or
+                options.server_version != OWNED_SERVER_VERSION or
+                not options.self_ident_default or not options.self_ident_current_length or
+                not options.spawn_point_notification or not options.world_activation or
+                options.trial_known_empty_occupancy == bool(options.trial_occupied_low64)):
+            parser.error("Player creation requires pinned inputs and all current predecessor stages")
+    elif (any(value is not None for value in creation_inputs) or
+          options.trial_known_empty_occupancy or options.trial_occupied_low64):
+        parser.error("Player creation inputs require the explicit candidate selection")
     return options
 
 
 def main(argv=None):
     options = parse_options(argv)
+    prepared_creation = None
+    if options.player_creation_candidate:
+        occupied = occupied_from_options(options.trial_occupied_low64,
+                                         options.trial_known_empty_occupancy)
+        prepared_creation = prepare_from_files(
+            trial_character_path=options.trial_character,
+            trial_character_sha256=options.trial_character_sha256,
+            mapping_path=options.type_index, occupied_keys=occupied,
+            delivery_mode=options.delivery_mode)
     reference = verify_reference(options.first_light)
     codecs = load_codecs(reference)
     from dtls_transport_probe import Responder
@@ -732,12 +814,14 @@ def main(argv=None):
                                       self_ident_default=options.self_ident_default,
                                       self_ident_current_length=options.self_ident_current_length,
                                       spawn_point_notification=options.spawn_point_notification,
-                                      world_activation=options.world_activation)
+                                      world_activation=options.world_activation,
+                                      prepared_creation=prepared_creation)
         Responder(directory, events, port=options.port, chain=options.chain,
                   on_app=adapter.on_app,
                   on_tick=adapter.on_tick if options.heartbeat_15d else None,
                   max_datagrams=4096,
-                  max_peer_datagrams=2048).run(options.duration)
+                  max_peer_datagrams=2048,
+                  max_lifetime_peers=1 if prepared_creation is not None else None).run(options.duration)
     finally:
         events.close()
     return 0

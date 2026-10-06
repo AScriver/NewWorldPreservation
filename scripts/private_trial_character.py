@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import dataclass
 from datetime import datetime, timezone
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -138,7 +139,8 @@ def _unique_pairs(pairs: list[tuple[str, object]]) -> dict[str, object]:
     return result
 
 
-def read_trial_character(path: str | Path, *, occupied_keys: frozenset[int]
+def read_trial_character(path: str | Path, *, occupied_keys: frozenset[int],
+                         expected_sha256: str | None = None
                          ) -> PrivateTrialCharacter:
     """Read only the exact private schema, checking the caller's occupancy set."""
     source = _private_path(path)
@@ -146,6 +148,11 @@ def read_trial_character(path: str | Path, *, occupied_keys: frozenset[int]
         raw = stream.read(MAX_FILE_BYTES + 1)
     if len(raw) > MAX_FILE_BYTES:
         raise ValueError("trial character JSON exceeds private bound")
+    if expected_sha256 is not None:
+        if (type(expected_sha256) is not str or
+                not re.fullmatch(r"[0-9a-f]{64}", expected_sha256) or
+                hashlib.sha256(raw).hexdigest() != expected_sha256):
+            raise ValueError("trial character SHA256 mismatch or invalid digest")
     try:
         model = json.loads(raw.decode("utf-8"), object_pairs_hook=_unique_pairs)
     except (UnicodeError, json.JSONDecodeError) as exc:

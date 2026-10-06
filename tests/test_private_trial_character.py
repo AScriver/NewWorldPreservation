@@ -1,6 +1,7 @@
 """Original synthetic private identity and isolated loopback consistency checks."""
 
 from dataclasses import FrozenInstanceError, replace
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -91,6 +92,12 @@ def test_exclusive_private_roundtrip_and_occupancy(private_path):
     source = record()
     assert trial.write_trial_character(path, source) == path.resolve()
     assert trial.read_trial_character(path, occupied_keys=frozenset()) == source
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    assert trial.read_trial_character(path, occupied_keys=frozenset(),
+                                      expected_sha256=digest) == source
+    with pytest.raises(ValueError, match="SHA256"):
+        trial.read_trial_character(path, occupied_keys=frozenset(),
+                                   expected_sha256="0" * 64)
     assert json.loads(path.read_text())["gde_ref"] == GDE_REF.hex()
     with pytest.raises(FileExistsError):
         trial.write_trial_character(path, source)
@@ -98,6 +105,24 @@ def test_exclusive_private_roundtrip_and_occupancy(private_path):
         trial.read_trial_character(path, occupied_keys=frozenset({0x100000002}))
     with pytest.raises(ValueError):
         trial.new_trial_character(occupied_keys=frozenset({0x100000002}), name="Bad\x00Name")
+
+
+def test_queue_cli_digest_and_file_must_cooccur_before_certificate_access(monkeypatch):
+    def forbidden(*args, **kwargs):
+        raise AssertionError("certificate path or listener reached")
+    monkeypatch.setattr(queue.selection.credentials.token.bootstrap.probe,
+                        "private_directory", forbidden)
+    base = ["queue_contract_probe.py", "--certificates", "unread",
+            "--descriptor", "unread", "--log", "unread", "--case", "token-loopback"]
+    for ancillary in (
+        ["--trial-character", "unread", "--trial-known-empty-occupancy"],
+        ["--trial-character-sha256", "0" * 64],
+        ["--trial-character-sha256", "0" * 64, "--trial-known-empty-occupancy"],
+    ):
+        monkeypatch.setattr(sys, "argv", base + ancillary)
+        with pytest.raises(SystemExit) as raised:
+            queue.main()
+        assert raised.value.code == 2
 
 
 def test_path_schema_duplicate_and_extent_guards(private_path):

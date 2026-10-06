@@ -8,6 +8,11 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import carrier_registration_probe as adapter_module
+from current_creation_member_body import MEMBER_UUID as CREATION_UUID
+from current_player_identity_body import MEMBER_UUID as IDENTITY_UUID
+from current_player_creation_candidate import OWNED_PLAYER_ASSET, compose_player_creation_candidate
+from private_player_creation_trial import PreparedPlayerCreation
+from private_trial_character import PrivateTrialCharacter
 
 
 class Events:
@@ -127,7 +132,7 @@ class FakeHeartbeat:
 def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                   server_version=None, heartbeat_15d=False, self_ident_default=False,
                   spawn_point_notification=False, world_activation=False,
-                  self_ident_current_length=False, clock=None):
+                  self_ident_current_length=False, prepared_creation=None, clock=None):
     events, frame, response = Events(), FakeFrame(), FakeResponse()
     class FakeWire:
         @staticmethod
@@ -161,6 +166,7 @@ def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                                                self_ident_current_length=self_ident_current_length,
                                                spawn_point_notification=spawn_point_notification,
                                                world_activation=world_activation,
+                                               prepared_creation=prepared_creation,
                                                clock=clock), events, frame, response
 
 
@@ -637,12 +643,13 @@ def test_reference_admission_rejects_wrong_path_dirty_tree_and_hash(tmp_path, mo
 
 
 def _ready_current_actor_candidate(*, spawn_point_notification=False, world_activation=False,
-                                   self_ident_current_length=False):
+                                   self_ident_current_length=False, prepared_creation=None):
     adapter, events, frame, _response = setup_adapter(
         server_version=adapter_module.OWNED_SERVER_VERSION,
         heartbeat_15d=True, self_ident_default=True,
         spawn_point_notification=spawn_point_notification,
         world_activation=world_activation, self_ident_current_length=self_ident_current_length,
+        prepared_creation=prepared_creation,
         clock=lambda: 0.0)
     peer = Peer("actor-candidate")
     adapter.on_tick(peer, 2.0)
@@ -814,3 +821,152 @@ def test_failed_self_ident_send_cannot_schedule_spawn_notification():
     adapter.on_tick(peer, 3.0)
     assert adapter.peers[peer.id].next_spawn_point_at is None
     assert not any(row["event"].startswith("SPAWN_POINT_NOTIFICATION") for row in events.rows)
+
+
+def _synthetic_prepared_creation():
+    record = PrivateTrialCharacter(
+        "11000000-0000-4000-8000-000000000001",
+        "22000000-0000-4000-8000-000000000002",
+        "33000000-0000-4000-8000-000000000003",
+        "44000000-0000-4000-8000-000000000004",
+        "Preservation", "2026-10-06T22:00:00Z",
+        bytes.fromhex("0200000001000000aabbccddeeff1122"))
+    table = [bytes(16)] * 3936
+    table[10], table[3935] = CREATION_UUID, IDENTITY_UUID
+    identity = record.identity_body()
+    candidate = compose_player_creation_candidate(
+        slot=0, creation_key=0, identity_key=9,
+        creation_class_index=10, identity_class_index=3935,
+        class_table=tuple(table), asset_id=OWNED_PLAYER_ASSET,
+        assigned_gde_ref=record.gde_ref, occupied_keys=frozenset(),
+        character_id=identity.character_id, character_name=identity.character_name,
+        delivery_mode="resource-index")
+    return PreparedPlayerCreation(record, candidate.typed_bytes,
+                                  hashlib.sha256(candidate.typed_bytes).hexdigest())
+
+
+def test_player_creation_is_once_after_empty_bundle_with_shared_cursors():
+    prepared = _synthetic_prepared_creation()
+    adapter, events, frame, peer = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=prepared)
+    for tick in (1.0, 2.0, 3.0, 4.0, 4.99):
+        adapter.on_tick(peer, tick)
+    assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
+    adapter.on_tick(peer, 5.0)
+    sent = [row for row in events.rows if row["event"] == "PLAYER_CREATION_CANDIDATE_SENT"]
+    assert len(sent) == 1
+    assert (sent[0]["type_id"], sent[0]["typed_bytes"], sent[0]["candidate_body_bytes"]) == (
+        8, len(prepared.typed_bytes), len(prepared.typed_bytes) - 3)
+    state = adapter.peers[peer.id]
+    assert state.creation_attempted and state.creation_sent and not state.creation_disabled
+    assert frame.marshaled[-1].payload == bytes((len(prepared.typed_bytes),)) + prepared.typed_bytes
+    assert frame.marshaled[-1].channel == 0 and frame.marshaled[-1].reliable
+    sent_before = len(peer.sent)
+    adapter.on_tick(peer, 60.0)
+    assert len([row for row in events.rows if row["event"] == "PLAYER_CREATION_CANDIDATE_SENT"]) == 1
+    assert all(prepared.trial_character.character_id not in str(row) for row in events.rows)
+    assert len(peer.sent) >= sent_before  # Heartbeat may continue, candidate does not.
+    assert not state.replies.get(5)
+
+
+@pytest.mark.parametrize("corruption", ("typed_bytes", "typed_sha256"))
+def test_player_creation_final_digest_guard_is_terminal_before_send(corruption):
+    prepared = _synthetic_prepared_creation()
+    adapter, events, frame, peer = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=prepared)
+    for tick in (1.0, 2.0, 3.0, 4.0):
+        adapter.on_tick(peer, tick)
+    state = adapter.peers[peer.id]
+    assert state.bundle_sent and not state.creation_attempted
+    state.next_heartbeat_at = 100.0
+    before_cursors = (state.next_out_envelope_seq, state.next_ch0_seq,
+                      state.next_ch0_rel, state.ack_sequence, state.acked_through)
+    before_replies = {key: tuple(value) for key, value in state.replies.items()}
+    before_sends, before_records = len(peer.sent), len(frame.marshaled)
+    if corruption == "typed_bytes":
+        changed = prepared.typed_bytes[:-1] + bytes((prepared.typed_bytes[-1] ^ 1,))
+        object.__setattr__(prepared, "typed_bytes", changed)
+    else:
+        object.__setattr__(prepared, "typed_sha256", "0" * 64)
+    for tick in (5.0, 6.0):
+        adapter.on_tick(peer, tick)
+    assert state.creation_attempted and state.creation_disabled and not state.creation_sent
+    assert (state.next_out_envelope_seq, state.next_ch0_seq, state.next_ch0_rel,
+            state.ack_sequence, state.acked_through) == before_cursors
+    assert {key: tuple(value) for key, value in state.replies.items()} == before_replies
+    assert len(peer.sent) == before_sends and len(frame.marshaled) == before_records
+    assert [row for row in events.rows if row["event"] == "PLAYER_CREATION_CANDIDATE_REJECTED"] == [
+        {"event": "PLAYER_CREATION_CANDIDATE_REJECTED", "connection_id": peer.id,
+         "reason": "typed_boundary"}]
+    assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
+
+
+def test_player_creation_predecessor_failure_and_exception_never_retry(monkeypatch):
+    prepared = _synthetic_prepared_creation()
+    adapter, events, _frame, peer = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=prepared)
+    for tick in (1.0, 2.0, 3.0):
+        adapter.on_tick(peer, tick)
+    peer.partial = True
+    adapter.on_tick(peer, 4.0)
+    state = adapter.peers[peer.id]
+    assert state.bundle_disabled and state.creation_attempted and state.creation_disabled
+    peer.partial = False
+    adapter.on_tick(peer, 5.0)
+    assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
+
+    adapter, events, _frame, peer = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=prepared)
+    for tick in (1.0, 2.0, 3.0, 4.0):
+        adapter.on_tick(peer, tick)
+    original = adapter._send_fixed_actor_message
+    def fail_after_attempt(*args, **kwargs):
+        if args[4] == "PLAYER_CREATION_CANDIDATE":
+            raise RuntimeError("synthetic private data must not appear in logs")
+        return original(*args, **kwargs)
+    monkeypatch.setattr(adapter, "_send_fixed_actor_message", fail_after_attempt)
+    adapter.on_tick(peer, 5.0)
+    adapter.on_tick(peer, 6.0)
+    assert adapter.peers[peer.id].creation_attempted
+    assert len([row for row in events.rows if row["event"] == "PLAYER_CREATION_CANDIDATE_REJECTED"]) == 1
+    assert "synthetic private data" not in str(events.rows)
+
+
+def test_player_creation_peer_object_and_option_guards():
+    prepared = _synthetic_prepared_creation()
+    with pytest.raises(ValueError, match="complete current guarded"):
+        setup_adapter(prepared_creation=prepared)
+    adapter, events, frame, first = _ready_current_actor_candidate(
+        spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=prepared)
+    second = Peer(first.id)
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(second, b"\x03connect")
+    adapter.on_tick(second, 100.0)
+    assert adapter._creation_peer is first and second.sent == []
+    assert not adapter.peers[first.id].creation_attempted
+    assert any(row["event"] == "CARRIER_REJECTED" and
+               row["reason"] == "creation_lifetime_peer_limit" for row in events.rows)
+
+
+def test_player_creation_cli_options_are_default_off_and_coupled():
+    base = ["--certificates", "private/certs", "--log", "private/events",
+            "--first-light", "reference"]
+    assert adapter_module.parse_options(base).player_creation_candidate is False
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(base + ["--trial-character", "private/character.json"])
+    required = ["--player-creation-candidate", "--server-version",
+                adapter_module.OWNED_SERVER_VERSION, "--heartbeat-15d", "--self-ident-default",
+                "--self-ident-current-length", "--spawn-point-notification",
+                "--world-activation", "--trial-character", "private/character.json",
+                "--trial-character-sha256", "0" * 64, "--type-index", "private/typeindex.json",
+                "--delivery-mode", "resource-index", "--trial-known-empty-occupancy"]
+    assert adapter_module.parse_options(base + required).player_creation_candidate is True
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(base + [value for value in required if value != "--world-activation"])
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(base + required[:-1])

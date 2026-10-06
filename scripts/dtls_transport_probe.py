@@ -89,14 +89,20 @@ class Peer:
 class Responder:
     def __init__(self, certificates, events, *, port=64003, chain="full",
                  lookup=owner_of_bound_port, on_app=None, on_tick=None,
-                 max_datagrams=MAX_DATAGRAMS, max_peer_datagrams=MAX_PEER_DATAGRAMS):
+                 max_datagrams=MAX_DATAGRAMS, max_peer_datagrams=MAX_PEER_DATAGRAMS,
+                 max_lifetime_peers=None):
         if not 0 <= port <= 65535 or chain not in ("full", "leaf"):
             raise ValueError("Invalid port or chain mode")
         if (type(max_datagrams) is not int or not 1 <= max_datagrams <= 4096 or
                 type(max_peer_datagrams) is not int or not 1 <= max_peer_datagrams <= 2048 or
                 max_peer_datagrams > max_datagrams):
             raise ValueError("Invalid bounded datagram limits")
+        if (max_lifetime_peers is not None and
+                (type(max_lifetime_peers) is not int or not 1 <= max_lifetime_peers <= MAX_PEERS)):
+            raise ValueError("Invalid lifetime peer admission limit")
         self.max_datagrams, self.max_peer_datagrams = max_datagrams, max_peer_datagrams
+        self.max_lifetime_peers = max_lifetime_peers
+        self.lifetime_peer_admissions = 0
         directory = Path(certificates)
         manifest = json.loads((directory / "certificate-manifest.json").read_text(encoding="utf-8"))
         leaf = x509.load_pem_x509_certificate((directory / "server.pem").read_bytes())
@@ -269,11 +275,15 @@ class Responder:
                 peer = self.peers.get(address)
                 metadata = header_metadata(data)
                 if peer is None:
-                    if metadata["datagram_class"] != "dtls_client_hello_header" or len(self.peers) >= MAX_PEERS:
+                    if (metadata["datagram_class"] != "dtls_client_hello_header" or
+                            len(self.peers) >= MAX_PEERS or
+                            (self.max_lifetime_peers is not None and
+                             self.lifetime_peer_admissions >= self.max_lifetime_peers)):
                         self.events.emit("DTLS_DATAGRAM_REFUSED", reason="unclassified_or_capacity",
                                          datagram_bytes=len(data))
                         continue
                     peer = Peer(self, address)
+                    self.lifetime_peer_admissions += 1
                     self.peers[address] = peer
                     self.by_connection[peer.connection] = peer
                     self.events.emit("DTLS_PEER_OPENED", connection_id=peer.id,

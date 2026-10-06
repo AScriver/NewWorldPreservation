@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "classification": "original-private-player-creation-trial-preparation",
+  "workItemId": 164,
+  "actionableId": 254,
+  "parentActionableId": 248,
+  "recordedUtc": "2026-10-06T23:35:16.542081+00:00",
+  "claimIds": [
+    "K344",
+    "K345",
+    "K346",
+    "K347"
+  ],
+  "input": {
+    "initialHead": "0c9718616844ed5b9ff4aecc1bf39b9607c3a717",
+    "initialWorkingTree": "clean",
+    "head": "0c9718616844ed5b9ff4aecc1bf39b9607c3a717",
+    "workingTree": "M docs/AGENT_HANDOFF.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ONE_PLAYER_MILESTONE.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/Invoke-FridaPrivateTrial.ps1\n M scripts/carrier_registration_probe.py\n M scripts/dtls_transport_probe.py\n M scripts/offline-test-profiles.json\n M scripts/private_trial_character.py\n M scripts/queue_contract_probe.py\n M scripts/validate_offline.py\n M tests/test_carrier_registration_probe.py\n M tests/test_dtls_transport_probe.py\n M tests/test_offline_runner.py\n M tests/test_private_trial_character.py\n?? docs/PLAYER_CREATION_TRIAL.md\n?? research/evidence/private-player-creation-trial-preparation.json\n?? scripts/private_player_creation_trial.py\n?? tests/test_private_player_creation_trial.py"
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/private_player_creation_trial.py",
+      "sha256": "07fd55927f28228f9302d9313652858d2f8ac681de86e3c68492e9148bbd2e30"
+    },
+    {
+      "path": "scripts/private_trial_character.py",
+      "sha256": "2654751e8683d1bbfd43ffae2bba5927726d882e430a0c78caabd1ac8e840c33"
+    },
+    {
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "1f2696f2204e34941038be9605093d9ae11e4e16d960f8b16f94eadbb9c4a0df"
+    },
+    {
+      "path": "scripts/session_handoff_probe.py",
+      "sha256": "cd33450bc809a0286f32eb9f87a9acd1c0664b3852c1af4e76ccdb1644ac93bf"
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "19c859144f6477ea8fc9a070a1857805e2e452d46bdaddc8af7de92796fdbfe8"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "eb873cdd12374a348d9b77ae2e0cade66785d5bfc5aaa62291569ea040bcafe6"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "fb0637494e34d1c1562814326a75b9cf638d149ca3e5cc0f9cb63d39f7234afe"
+    },
+    {
+      "path": "scripts/current_player_creation_candidate.py",
+      "sha256": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d"
+    },
+    {
+      "path": "scripts/current_creation_replication_record.py",
+      "sha256": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817"
+    },
+    {
+      "path": "scripts/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "scripts/current_player_identity_body.py",
+      "sha256": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df"
+    },
+    {
+      "path": "scripts/current_type8_bundle_body.py",
+      "sha256": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105"
+    },
+    {
+      "path": "scripts/current_creation_trial_ref.py",
+      "sha256": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "f38bbb4f79ee9edcac93dadc59bef023e15c0a84b878b261b85028c9e9132b1a"
+    },
+    {
+      "path": "tests/test_private_player_creation_trial.py",
+      "sha256": "8c7d5f49861e8a25c8a10c46d297837037a1be31793c19cb734ec514729c7b01"
+    },
+    {
+      "path": "tests/test_private_trial_character.py",
+      "sha256": "c88cae1394f3eb33517c6fd0c987ae7af8bbc1b617399c0d499cfb77f01b9d2e"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "6e0dcdbd4953d09c650d05ab1cbd7aad22879d3a9ff593f58f2913d445402e1e"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "8bd64bc6b234766fb1853813cd7804064c188c5ab87326985262537b107e9cfa"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "16d2d61577171b14dec2044d81c3108d70187d2d194b949188cbed815365fd61"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "c3f169cd5ff674df4b526ad7a3f9c825bd653771436ff05806a7955134476fa4"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "52ae3dd394bfc06becb7735b6d4161bc0af7d6ba74a2ca9a4a324968d6b385f2"
+    },
+    {
+      "path": "docs/PLAYER_CREATION_TRIAL.md",
+      "sha256": "d9f44fff34d956b965fa6fc51c70e9278f530296fb77ed137e124d24fc20b832"
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "path": "research/evidence/current-player-creation-candidate.json",
+      "sha256": "b5da087e282e7648ec311fca32715302ca7f08e868810e8aed8e104255b90f65"
+    },
+    {
+      "path": "research/evidence/private-trial-character.json",
+      "sha256": "5d16aea77851b134d655782a2f5488466ece4960c1d7826e59c0fd40e5335253"
+    },
+    {
+      "path": "research/evidence/owned-player-resource-20261006.json",
+      "sha256": "e4e309ff8736f672c8d624b81dcbbe8c19cf2d14b025d1013f3f21377dffa82b"
+    },
+    {
+      "path": "research/evidence/owned-player-delivery-index-20261006.json",
+      "sha256": "505f35e21e88c7f3c280919f83ab4b842aff10d63b99e3480297fa5673a90afe"
+    },
+    {
+      "path": "research/evidence/current-world-activation-contract.json",
+      "sha256": "ba7e117cce24f3971e350677b971d7e544dfc48d80e770969b399797aac14dda"
+    },
+    {
+      "path": "research/evidence/current-context-gate-contract.json",
+      "sha256": "db686d1cce9387ca10575a881a4f4e23ccc16fee00fee295416a285308d91317"
+    },
+    {
+      "path": "research/evidence/current-self-length-prefix-contract.json",
+      "sha256": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+    }
+  ],
+  "sourceReuse": "Pinned native type8/record/BODY/ref/asset/index evidence unchanged from closed252/253; conditional source inference reused, not new native execution. Historical live source receipts remain historical after probe edits.",
+  "verification": {
+    "focused": {
+      "tests": 182,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "receipt": ".scratch/one-player-20261006/creation-trial-focused.xml",
+      "sha256": "e548fc579f67f4d96cce15f600a86fba859d9cb118f8c45a15c14d6a31cf785b"
+    },
+    "workspace": {
+      "receipt": ".scratch/offline-validation/run-3hxu57pp/receipt.json",
+      "sha256": "56b2987b5e9f91b13f490c1c84275b13679d9d6ade71c13599b8aa09c0e5b368",
+      "status": "passed",
+      "profile": "workspace",
+      "python": {
+        "selectedFiles": 48,
+        "collected": 1388,
+        "executed": 1388,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 61068
+      },
+      "changedInputs": [],
+      "note": "Current executable/test inputs match. Later validation-result metadata does not change the prepared candidate or executed behavior."
+    },
+    "workerFocused": {
+      "tests": 88,
+      "scope": "helper, Carrier, DTLS and fresh record before final digest guard; no game/controller"
+    },
+    "finalDigestGuard": {
+      "tests": 50,
+      "scope": "Current Carrier module includes two send-time tamper cases; no send/cursor/cache/retry on corrupt bytes/digest."
+    },
+    "independent": {
+      "checks": 10,
+      "scope": "Inert fresh record, exact selection/queue joins, candidate once/shared cursors, partial failure, prior heartbeat failure and same-ID peer refusal",
+      "receipt": ".scratch/one-player-20261006/current-independent-review.json",
+      "sha256": "5e65c2127098c4d4dd7b0f0b9e57951137490adbc3a2ecd242b9777a8da025ec",
+      "sourceInputs": [
+        {
+          "path": "scripts/private_player_creation_trial.py",
+          "sha256": "07fd55927f28228f9302d9313652858d2f8ac681de86e3c68492e9148bbd2e30"
+        },
+        {
+          "path": "scripts/private_trial_character.py",
+          "sha256": "2654751e8683d1bbfd43ffae2bba5927726d882e430a0c78caabd1ac8e840c33"
+        },
+        {
+          "path": "scripts/carrier_registration_probe.py",
+          "sha256": "19c859144f6477ea8fc9a070a1857805e2e452d46bdaddc8af7de92796fdbfe8"
+        },
+        {
+          "path": "scripts/dtls_transport_probe.py",
+          "sha256": "eb873cdd12374a348d9b77ae2e0cade66785d5bfc5aaa62291569ea040bcafe6"
+        },
+        {
+          "path": "scripts/queue_contract_probe.py",
+          "sha256": "1f2696f2204e34941038be9605093d9ae11e4e16d960f8b16f94eadbb9c4a0df"
+        },
+        {
+          "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+          "sha256": "fb0637494e34d1c1562814326a75b9cf638d149ca3e5cc0f9cb63d39f7234afe"
+        }
+      ],
+      "harnessSha256": "f56fec3a1abe737004bc9dbc71e59dcb2a73ce36c1f332e538668a0a2a5e1135",
+      "counterEvidence": "Creation is processed before recurring heartbeat in one tick. A heartbeat failure later in that tick does not prevent the already sent candidate; earlier recorded failures block it."
+    },
+    "powershell": {
+      "receipt": ".scratch/one-player-20261006/controller-preflight-validation.json",
+      "sha256": "43052b5d7d28343c19a3b65fb00840bb639a8e51f94b5c1c550789e90785ecd9",
+      "scripts": [
+        {
+          "sha256": "fb0637494e34d1c1562814326a75b9cf638d149ca3e5cc0f9cb63d39f7234afe",
+          "path": "C:\\Code\\NewWorldPreservation\\scripts\\Invoke-FridaPrivateTrial.ps1",
+          "executed": false,
+          "parser": "Passed",
+          "automaticVariables": "Passed"
+        },
+        {
+          "sha256": "214add64f57c432f7158a9af40c1fc7c53322305698f5942a1352c482f25974d",
+          "path": "C:\\Code\\NewWorldPreservation\\.scratch\\one-player-20261006\\Run-PreparedFrida.ps1",
+          "executed": false,
+          "parser": "Passed",
+          "automaticVariables": "Passed"
+        },
+        {
+          "sha256": "f5f61c1507816bbcf672edd90330a84466262f7361583071fe740c67182623d6",
+          "path": "C:\\Code\\NewWorldPreservation\\.scratch\\one-player-20261006\\Run-PreparedController.ps1",
+          "executed": false,
+          "parser": "Passed",
+          "automaticVariables": "Passed"
+        },
+        {
+          "sha256": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f",
+          "path": "C:\\Code\\NewWorldPreservation\\scripts\\Set-ConnectivityHosts.ps1",
+          "executed": false,
+          "parser": "Passed",
+          "automaticVariables": "Passed"
+        }
+      ],
+      "metadataGuardCases": 8,
+      "controllerExecuted": false
+    },
+    "privatePreparation": {
+      "receipt": ".scratch/one-player-20261006/private-preparation.json",
+      "sha256": "4008679f10f6ec94bc549d931b9c1babbef934b7fc90d49c7294e71be504383a",
+      "runDirectory": "private/frida-trials/run-20261006T2321-player1",
+      "characterFileSha256": "f78a8b3e3b7a09358095cfcc450df2c56c015bf27bb1a305d3008f04d6d66268",
+      "candidateSha256": "d836b1e3ae70e636bca5fe4d4050a23805154c203936b9074c4f9a232d4aed96",
+      "typedBytes": 107,
+      "fileBindings": 163,
+      "diskObserverSites": 3,
+      "manifestSha256": "d93302581dfef7276153a0cb7785c2091a7c7c71723c69242c1632a49c0fab80",
+      "approval": "pending",
+      "clientStarted": false,
+      "controllerExecuted": false,
+      "systemMutated": false,
+      "scope": "Pure owned-copy disk/input admission; three observer entry prefixes read from disk, no native execution."
+    },
+    "readiness": {
+      "receipt": ".scratch/one-player-20261006/current-trial-readiness.json",
+      "sha256": "5c02ea13ca5b76ac258671db82e914ed7454f3e407a664e9b9cac731fd2c599f",
+      "scope": "Read-only23:13:54UTC OS/file snapshot; installed/staged pins, original hosts, no game/443/64003/owned rules, existing CurrentUser Root CA and Steam. Unelevated caller; not a new live trial or cleanup receipt."
+    }
+  },
+  "corrections": [
+    {
+      "finding": "Initial reader assumed braced UUID strings; actual pinned raw-hex32 mapping refused it.",
+      "repair": "Inspect exact pinned7052-entry mapping and require its actual raw-hex32 schema; actual prepared candidate107bytes verified."
+    },
+    {
+      "finding": "PowerShell JSON integer deserializes as Int64; initial int-only metadata guard rejected valid107.",
+      "repair": "Accept only int/long integral lengths1..127 and valid digest; extracted actual guard passed8 inert cases."
+    },
+    {
+      "finding": "Prepared canonical digest was checked at construction, while documented final send guard initially checked only extent/header.",
+      "repair": "Recompute and compare SHA at final typed boundary; two fake-peer tamper cases pass with terminal rejection and unchanged cursors/cache. Pre-repair workspace passed; changed Carrier inputs are revalidated.",
+      "preRepairWorkspaceReceipt": ".scratch/offline-validation/run-dqbwst2a/receipt.json",
+      "preRepairWorkspaceSha256": "9ad1b47080048cdb26b9fd63804e9e4813bda229e14e499b42639bfe30fb5740"
+    },
+    {
+      "finding": "Offline reseal initially refused a second changed binding, the reviewed workspace inventory count.",
+      "repair": "Retain refusal; allow only reviewed controller repair, inventory and final Carrier digest guard, archive old manifest, preserve all character/candidate/non-binding inputs. No attempted or unknown run artifacts allowed."
+    }
+  ],
+  "selectedExperiment": {
+    "typedBytes": 107,
+    "slot": 0,
+    "creationKey": 0,
+    "identityKey": 9,
+    "classIndexes": [
+      10,
+      3935
+    ],
+    "deliveryMode": "conditional resource-index",
+    "timing": "one attempt1second after successful empty activation; not context readiness",
+    "lifetimeAdmissions": 1,
+    "clientSeconds": 300,
+    "serviceSeconds": 360,
+    "approval": "pending-specific-live-player-candidate-grant"
+  },
+  "limits": [
+    "Original new local character/session/persona/ticket and reference, no official identity or replay",
+    "Class table SHA/count/slots prove private input identity, not runtime table installation",
+    "Native outer slot/count producer, resource-index mode/provider and creation/loading/designation remain unobserved",
+    "At most one new creation attempt, no reconnect/retry cache or new observer/lifetime/traffic budget",
+    "Existing observer does not directly observe creation; user visual/control evidence needed",
+    "No client/controller/Frida/hook/game-endpoint execution or system mutation",
+    "No spawned player, camera/input, five-minute movement/authority/network/restart acceptance",
+    "300second resume cap includes loading and cannot satisfy five minutes after spawn"
+  ],
+  "clientStarted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "milestone1": "not-proven",
+  "cleanup": "Unit-owned loopback listeners/threads/temp resources closed; only original ignored administrative preparation retained. No game/shared runtime or containment created."
+}
