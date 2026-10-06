@@ -25,6 +25,15 @@
 - Commit each completed, coherent unit of work after its relevant validation passes, including associated tests, documentation and original evidence receipts. Commit increments as they finish during long tasks instead of accumulating all changes until the end.
 - Review Git status and the staged diff before each commit. Stage only task-owned files or hunks, preserve unrelated pending work, and use focused Conventional Commit messages. Keep private captures, credentials and ignored client-derived output out of commits. Local commits do not authorize pushing or publishing.
 
+## Completion and continuation
+
+- Completion has no elapsed-time or fixed-call cap. Finish the requested acceptance, required validation and evidence review, resource cleanup, tracking updates and claim release. A commit alone does not establish completion.
+- Prepare concise outcome, verification and handoff notes as the unit develops, before its final commit where practical. Record only confirmed task states; batch necessary updates while preserving claim/version checks and required readbacks.
+- Reuse successful checks and evidence when their relevant code, source, configuration and test-data inputs remain unchanged. A new HEAD or tracking update alone does not invalidate them. Revalidate affected claims and checks after material changes, including changes to evidence meaning; retain unaffected support.
+- Repeat validation or request another review when a changed input, failure, new finding or unresolved concern could affect acceptance, correctness, security, evidence validity or cleanup. Identify that reason and check the affected scope. Preserve all mandatory checks, counterevidence and unresolved acceptance.
+- Correct material issues found during final review, including inaccurate evidence wording. Do not reopen completed work solely for cosmetic rewrites, unchanged readbacks, duplicate reviews or receipt updates that only record a newer HEAD.
+- Once acceptance and required closure checks are satisfied, proceed immediately to the next chunk when continued work is explicitly authorized within the session's scope; otherwise give the final response. Child or parent completion does not authorize broader work. If closure remains incomplete, report the concrete outstanding issue and continue the necessary work without a time cutoff.
+
 ## Agent analysis toolchain
 
 - Shared tools are at `C:\Users\Austin\.codex\tools\reverse-engineering`: Ghidra/PyGhidra, private JDK 21, Wireshark/TShark, Frida and a local Cheat Engine x64 build. Read [docs/TOOLS.md](docs/TOOLS.md) and the shared `manifest.json`/`verification.json` before use; those receipts distinguish installed tools from executed checks.

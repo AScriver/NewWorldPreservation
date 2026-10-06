@@ -20,6 +20,9 @@ blockers and Milestone 1 acceptance belong to [ROADMAP](ROADMAP.md), not this gu
    focused profile; use the complete workspace profile before handing off.
 6. Finish with the [handoff format](AGENT_HANDOFF.md). Record the task/verification
    in ROADMAP with a small edit that preserves any concurrent work.
+   Follow [completion and continuation](../AGENTS.md#completion-and-continuation):
+   preserve required checks and material corrections, reuse unaffected validation,
+   and finish or continue authorized work once closure is verified, without time caps.
 
 ## Safe commands
 

@@ -1,5 +1,12 @@
 # Milestone 1 roadmap
 
+Agent workflow, October6: [completion and continuation](../AGENTS.md#completion-and-continuation)
+now preserves required validation and material evidence corrections, reuses unaffected
+checks and batches closure updates without time caps. This instruction maintenance
+changes no protocol implementation or Milestone 1 acceptance. Read-only preflight
+and diff checks passed; workspace validation passed 988 Python cases, three
+PowerShell suites and the synthetic loopback lifecycle with its listener closed.
+
 #236/#237 package, October6: concrete UUID203dc8c7-0c60-454b-a46f-566114314b84
 joins registry descriptor/factory/fresh decoder to conditional application. The
 original guarded BODY codec and five synthetic vectors preserve optional AssetId
