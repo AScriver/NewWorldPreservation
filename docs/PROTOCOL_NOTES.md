@@ -23,6 +23,16 @@ Record flag values in First Light: reliable0x01; chunks0x04; sequential ID0x08; 
 
 **Do not conflate Carrier system IDs, AZ type indices, class UUIDs, replica component IDs, internal EBus event hashes or captured sequence numbers.** `analysis/message_inventory.md` contains internal as well as candidate wire classes. Names alone do not give movement packet formats. Numeric type stability across different builds is not verified.
 
+### Community feature catalog — October 6
+
+The [catalog guide](COMMUNITY_FEATURE_CATALOG.md) preserves the user's downloaded
+reference and its comparison: all 3,486 listed index/UUID pairs agree with the
+retained mapping. It supplies attributed names for the existing index 10 creation
+member and index 13 position-state target, plus index 5181's level-information
+acknowledgement facet. Names, facet directions, fields and runtime use remain
+separate evidence questions. Index 13 means `0x0d`; V3's retained index 19 means
+`0x13`. No catalog entry alone supplies a packet format or an accepted runtime selector.
+
 ### Carrier system messages
 
 Channel3 payload's **last byte** is message ID (`frame.py:55-63,95-99`):

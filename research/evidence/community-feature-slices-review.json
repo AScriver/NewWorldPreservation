@@ -12,7 +12,10 @@
     "upstreamUrl": null,
     "upstreamCommit": null,
     "licenseVerified": false,
-    "rawSourceImported": false
+    "rawSourceImported": false,
+    "privateProjectCopy": "private/community-reference/feature-slices-20261006.md",
+    "privateProjectCopySha256": "15d2a820b4cd26fc391747f011b49309c44728ead50e2934b31197bc0baca9ff",
+    "rawSourceImportedToTrackedSource": false
   },
   "inputs": {
     "mappingPath": "private/frida-trials/run-20261004T1733/client/typeindex.json",
@@ -101,8 +104,22 @@
       "selectedPythonModules": 41,
       "powershellSuitesPassed": 4,
       "syntheticLoopbackListenerClosed": true,
-      "changedInputs": ["scripts/official_session_metadata.py"],
+      "changedInputs": [
+        "scripts/official_session_metadata.py"
+      ],
       "reason": "All test steps passed with this review's files held steady, but unrelated concurrent source edits invalidated the complete workspace receipt. Relevant catalog/review checks remain usable; a stable complete-workspace pass is not claimed."
+    },
+    "privateProjectCopy": "Passed: full source retained under ignored private/community-reference; SHA-256 readback matches the original download.",
+    "documentIntegration": {
+      "documentChecks": "Passed: retained source hash/size, six document references, fourteen local guide links and preserved attribution/native-name limits.",
+      "workspaceReceipt": ".scratch/offline-validation/run-5913aga_/receipt.json",
+      "workspaceStatus": "failed-input-stability-guard",
+      "pythonPassed": 1164,
+      "selectedPythonModules": 41,
+      "powershellSuitesPassed": 4,
+      "syntheticLoopbackListenerClosed": true,
+      "changedInputs": ["docs/ROADMAP.md"],
+      "reason": "All test steps passed, but another session changed ROADMAP during this documentation run. A complete stable workspace pass is not claimed; task-owned document/source checks remain valid."
     }
   },
   "clientExecuted": false,
@@ -114,5 +131,13 @@
     "No serialization fields, facet envelope, valid world/player values, authentication semantics or playable world supplied by this catalog.",
     "Companion files and upstream provenance/license were not supplied or verified; the raw community catalog remains outside tracked source.",
     "No live game-process, capture, game endpoint, installed Steam file, EAC, trust-store or system configuration operation occurred."
+  ],
+  "projectDocuments": [
+    "docs/COMMUNITY_FEATURE_CATALOG.md",
+    "docs/CREATION_MEMBER_BODY.md",
+    "docs/EVIDENCE_INDEX.md",
+    "docs/PROTOCOL_NOTES.md",
+    "docs/TASK_BRIEFS.md",
+    "docs/SPAWN_SEQUENCE.md"
   ]
 }

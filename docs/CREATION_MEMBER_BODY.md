@@ -7,6 +7,8 @@ unconfirmed. The user's community catalog labels the matching index 10/UUID
 `MB::GdeMetadataReplicatedState`; [the intake review](../research/evidence/community-feature-slices-review.json)
 confirms mapping agreement, retains the failed native-name query and does not
 change the source-supported schema or establish runtime selection.
+The [community catalog guide](COMMUNITY_FEATURE_CATALOG.md) preserves the full
+private reference, source identity, related position/level-ack leads and missing companions.
 The image/build, exact spans, finite windows and private artifact seals are in
 [the original source receipt](../research/evidence/current-creation-member-contract.json).
 No native client code ran.

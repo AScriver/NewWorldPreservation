@@ -1,5 +1,13 @@
 # Player spawn sequence — evidence map, not a packet recipe
 
+**October 6 community reference:** the [feature catalog guide](COMMUNITY_FEATURE_CATALOG.md)
+connects the existing creation-member UUID to the attributed
+`MB::GdeMetadataReplicatedState` label and identifies position-state and
+level-information acknowledgement research targets. All catalog index/UUID pairs
+agree with the retained mapping. Native names, schemas, valid spawn values and
+runtime selection remain separate; these leads add no spawn sequence or live result.
+Current progress remains in [ROADMAP](ROADMAP.md).
+
 **Current gate:** sustained private DTLS/heartbeat traffic and current LevelInfo/
 bundle-handler labels are observed on the isolated owned client. It still times
 out waiting for gameplay. Current codecs are in the [contract](../research/evidence/current-world-activation-contract.json);

@@ -39,6 +39,14 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 | `registration-spawn` | M1-06 / 07 | [Carrier trial](CARRIER_REGISTRATION_TRIAL.md), [spawn evidence](SPAWN_SEQUENCE.md) |
 | `replication-reconnect-acceptance` | M1-08 through 12 | [Architecture](ARCHITECTURE.md) and [ROADMAP acceptance](ROADMAP.md#acceptance-boundary) |
 
+## Community reference navigation
+
+The [feature catalog guide](COMMUNITY_FEATURE_CATALOG.md) records the user's
+October 6 Discord download, its verified index/UUID agreement and attributed
+creation-metadata, position-state and level-acknowledgement labels. It connects
+those leads to M1-06/M1-08 documents and the ignored full reference. This is source
+navigation, with no new accepted protocol boundary, fixture or gameplay claim.
+
 ## Search and freshness
 
 Search boundary IDs, task IDs, claim IDs or filenames with `rg`. For example:

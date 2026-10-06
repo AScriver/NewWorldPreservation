@@ -488,6 +488,13 @@ This slice is parked without concrete new evidence. M1-02H is the next task.
 
 ## M1-06 — current registration/world-entry contract
 
+Community source lead, October 6: [feature catalog](COMMUNITY_FEATURE_CATALOG.md).
+Its index 10/UUID matches the existing creation member and is labeled
+`MB::GdeMetadataReplicatedState`; the native friendly name remains unconfirmed.
+Index 5181 is labeled `PlayerComponentServerFacet_OnAckLevelInfoChanged`
+(client-to-server). Verify its envelope, handler and state ordering before use;
+this source adds no readiness proof, fixture, new message or live-trial authorization.
+
 Current checkpoint: the0655 fixed-prefix comparison is closed. Current default
 SelfIdentification reached its callback and changed self=false→true. Actor-connection success
 and ClientContext Initialize were logged; activation latched and pending LevelInfo
@@ -550,6 +557,13 @@ specifies these missing contracts and remains unsent.
 - Cleanup: remove the run's actor/peer and record owned client/service shutdown.
 
 ## M1-08 — actor baseline and delta encoding
+
+Community source lead, October 6: index 13 (`0x0d`), UUID
+`79c28008-4fc5-4efb-88a1-538f4fb7dde1`, is labeled
+`MB::PositionInTheWorldReplicatedState` in the [feature catalog](COMMUNITY_FEATURE_CATALOG.md).
+The index/UUID agrees with the retained mapping; descriptor/factory, paired codec,
+field meaning, application and runtime use still need native/source verification.
+Preserve the distinction from V3's retained index 19 (`0x13`).
 
 - Question: Which current byte contracts identify actors and encode verified transforms?
 - Evidence: E07/E08/E09/E11 and build-bound M1-06 inputs; [protocol](PROTOCOL_NOTES.md).
