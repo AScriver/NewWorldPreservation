@@ -12,6 +12,38 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-body-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K247",
+        "K248",
+        "K249",
+        "K250"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_BODY_CODEC.md"
+      ],
+      "scripts": [
+        "scripts/current_registration_request_body.py"
+      ],
+      "tests": [
+        "tests/test_current_registration_request_body.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-body-codec-validation.json",
+          "classification": "offline-executed",
+          "scope": "#225 original selected V3 BODY encoder/decoder; current source rehashes and independent pure byte checks separately recorded"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/registration/current-request-body-original.json"
+      ],
+      "limit": "BODY only; safe extent prechecks and encoder rejection stronger than native. First-value-wins collection values, active tagged payload only; native iteration/order/object formatter/partial memory not mirrored. No type/framing/Carrier/input authority/auth/#212/world proof."
+    },
+    {
       "id": "current-registration-request-3e0-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1052,6 +1084,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/registration/current-request-body-original.json",
+      "classification": "synthetic",
+      "sha256": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f",
+      "scope": "Original hand-derived neutral/rich V3 BODY byte vectors; no captured identity/authentication or real-client acceptance"
+    },
+    {
       "path": "tests/fixtures/registration/current-response-body-original.json",
       "classification": "synthetic",
       "sha256": "c7f52d4008858c05670607503e828f2d5381a3ff75e33e146ac26c2bddea52e6",
@@ -1149,6 +1187,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-body-codec-validation.json",
     "research/evidence/current-registration-request-3e0-codec.json",
     "research/evidence/current-registration-request-2c8-codec.json",
     "research/evidence/current-registration-request-c0-codec.json",

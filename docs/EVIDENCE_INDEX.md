@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-registration-request-body-codec` | M1-06B | [Offline selected V3 BODY API and original fixtures](REGISTRATION_REQUEST_BODY_CODEC.md) |
 | `current-registration-request-3e0-codec` | M1-06B | [Complete V3 field+3e0 schema](REGISTRATION_REQUEST_3E0_CODEC.md) |
 | `current-registration-request-2c8-codec` | M1-06B | [Complete V3 field+2c8 schema](REGISTRATION_REQUEST_2C8_CODEC.md) |
 | `current-registration-request-c0-codec` | M1-06B | [Complete V3 field+c0 schema](REGISTRATION_REQUEST_C0_CODEC.md) |

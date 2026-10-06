@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Offline selected V3 request BODY codec — October 6, #225
+
+Clean input main `4b724f3228d2c77420cd00b260e5ccafaa6b74d8`; five carried current
+contracts rehashed163 code spans/34 windows. Original implementation/check identity:
+[validation receipt](../research/evidence/current-registration-request-body-codec-validation.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K247 | Pure encoder/decoder follows the actually selected V3 BODY schema | Executed offline implementation of #220–#224 header/collection/a0/c0/2c8/tags/finalbool sequence. Neutral raw/unsigned values; no semantic/auth authority | [Body codec](REGISTRATION_REQUEST_BODY_CODEC.md), J225-1 |
+| K248 | Compact and helper-specific failure behavior is preserved | Offline canonical writer/nonminimal/wrapped reader, duplicates consume all pairs/first value wins, precise failure code/cursor. Safe API exposes no native partial object state | [Body codec](REGISTRATION_REQUEST_BODY_CODEC.md), J225-2 |
+| K249 | API bounds and active-wire ownership are explicit | Encoder rejects oversize, decoder prechecks extent and owns bytes; unique collection values and stable presentation chosen offline, no native order/formatter/memory emulation | [Body codec](REGISTRATION_REQUEST_BODY_CODEC.md), J225-3 |
+| K250 | Independent original bytes and selected regressions verify only offline scope | Hand-derived fixtures/failure oracle plus focused/workspace checks, explicit profile integration. No native/client/framing/authority/#212/Milestone1 proof | [Body codec](REGISTRATION_REQUEST_BODY_CODEC.md), J225-4 |
+
 ## Current V3 field+0x3e0 codec — October 6, #224
 
 Clean input main `5885527da7ea0865814065d37168125520c5ae9c`, refreshed pinned

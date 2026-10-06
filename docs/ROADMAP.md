@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#225 offline implementation, October 6: the actually selected V3 request BODY
+now has an original pure encoder/decoder and byte fixtures. Exact field order,
+compact aliases/wrapping, first-value-wins collection reads, tagged active payloads,
+optional boolean and helper-specific error/cursor behavior follow #220–#224.
+[Body API and checks](REGISTRATION_REQUEST_BODY_CODEC.md), K247–K250 and
+[validation receipt](../research/evidence/current-registration-request-body-codec-validation.json)
+retain safe extent prechecks, original synthetic evidence and current source pins.
+Body encoding supplies no discriminator/framing, input authority/authentication,
+#212 readiness or live gameplay. Parent/Milestone1 remain open; continue the next
+useful #164 leaf after this scoped commit/completion/release.
+
 #224 source result, October 6: selected V3 field+0x3e0 now joins two tagged
 objects, each selecting fixed16 bytes or a bounded raw string, followed by the
 existing +0x460 boolean. Exact caller, raw-tag preservation, incremental read

@@ -1,0 +1,356 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 225,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-06T10:01:34.906599+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "4b724f3228d2c77420cd00b260e5ccafaa6b74d8",
+    "initialDirty": "",
+    "currentDirty": "M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/REGISTRATION_REQUEST_BODY_CODEC.md\n?? research/evidence/current-registration-request-body-codec-validation.json\n?? scripts/current_registration_request_body.py\n?? tests/fixtures/registration/current-request-body-original.json\n?? tests/test_current_registration_request_body.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "steamManifestSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "toolFiles": {
+      "C:/Users/Austin/.codex/tools/reverse-engineering/README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
+      "C:/Users/Austin/.codex/tools/reverse-engineering/Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+    }
+  },
+  "claimIds": [
+    "K247",
+    "K248",
+    "K249",
+    "K250"
+  ],
+  "sourceClaims": [
+    "J225-1",
+    "J225-2",
+    "J225-3",
+    "J225-4"
+  ],
+  "sourceContracts": [
+    {
+      "path": "research/evidence/current-registration-request-serializer.json",
+      "sha256": "f34531acb814318643ce98dae16e57a5b859fabf21c949fb6f1db9f0b3f125e4",
+      "spansRehashed": 30,
+      "windowsRehashed": 19
+    },
+    {
+      "path": "research/evidence/current-registration-request-collection-codec.json",
+      "sha256": "522b71ff61f4cf4b4b47834da48d60c7fa3dbfb62a9fed732ac91de5cb01cc43",
+      "spansRehashed": 46,
+      "windowsRehashed": 5
+    },
+    {
+      "path": "research/evidence/current-registration-request-c0-codec.json",
+      "sha256": "3c315cd20851200b8599e953573674118ec6cc1ebab41ded9a48dff5082251d4",
+      "spansRehashed": 31,
+      "windowsRehashed": 4
+    },
+    {
+      "path": "research/evidence/current-registration-request-2c8-codec.json",
+      "sha256": "def180f1d9eb1aaaf8a486f6e5a5da5ffd1f67a623ff5c12f794ded1423e0dd5",
+      "spansRehashed": 27,
+      "windowsRehashed": 4
+    },
+    {
+      "path": "research/evidence/current-registration-request-3e0-codec.json",
+      "sha256": "f360b024b5c7900779a094656f52af610f897516e7194a007aa881d21a477b41",
+      "spansRehashed": 29,
+      "windowsRehashed": 2
+    }
+  ],
+  "sourceBindings": [
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "sha256": "1ed7884575de6454963c484c2254617fbd76abdc9c654499e8f4af013b45d0b6"
+    },
+    {
+      "path": "tests/test_current_registration_request_body.py",
+      "sha256": "723a24f835fc0f7ac6931880de72393c303541f4d971456a4cb2f9d5cdce18ff"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-body-original.json",
+      "sha256": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "87994b99869788368a9b606867383fbe68b380ce824fa5c1a012a585edf9ca40"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "a11f9ddbd96cf128278e60705e14dcc8c3e07fb6f19f0260c9b80622240e4862"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "c3735a9865925f7ff30f27b632160813f6639047df62c333742936fd9d846802"
+    }
+  ],
+  "documentBindings": [
+    {
+      "path": "docs/REGISTRATION_REQUEST_BODY_CODEC.md",
+      "sha256": "7fb08806aac9a58fd671bc1a33f43a019e4a1794495171e5b2960e9b01d2e97b"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "b2c42d6edad6247431bce68449333e46bb553f2da8331cf6643b3f8537322e48"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "45edd4cb27491dbc2f4d5e51709ce6bf1a697944b8738086b50249420d787773"
+    },
+    {
+      "path": "docs/EVIDENCE_INDEX.md",
+      "sha256": "7e02dd93d99e1d6ac3fac9a97d4687993cc3e6cf532551f4b57ef7ed86be7f51"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "27279ac05c9c46c0b085c47eed39a41c7e6c2a195b7e8478ae44cfa07e362011"
+    }
+  ],
+  "privateArtifacts": [
+    {
+      "path": ".scratch/registration-request-body-225/baseline.json",
+      "sha256": "65fdbb31d844ee9650828977dbb632aad42f0acd1317b2346978992ae8255322"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/BRIEF.md",
+      "sha256": "677852ffa22a96499a754191245200f8300c620b6e2a223a313be755f91a1199"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/LEDGER.md",
+      "sha256": "c33bcc11dfc269495eedff43275af11df945df7635f4bdf50952fe58d6cbf8bc"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/ADJUDICATION.md",
+      "sha256": "bcec44e36d4233989e7c1cd5412c92f69304988659c8d8aaacd9dba5c6733dce"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/contracts-rehashed.json",
+      "sha256": "b03734c4f265b0d9c48b2aeb532aacbdc6609c28545c3e8f1ae9c922ca6a4f15"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/rehash_contracts.py",
+      "sha256": "caf5aa5c337d26ab706b65fa54832172d517efa4c3e102630bc6a2689c78bc47"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/consolidate_validation.py",
+      "sha256": "0ed2c06f26a71fc0fa571765991a8fbc4d40b29e0b78246796f29fb0e7c583c5"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/validation.json",
+      "sha256": "4f95d65a64557ddccdb23b3639470a7b255a44a8374fff0b5de39087a411bc3c"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/report-draft.md",
+      "sha256": "77dbe59a17220513f1be717b000a787c9c9bb7f3da45825286824db74e8695bb"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/write_public_report.py",
+      "sha256": "4c1f45f3f82e9c2597f5ce4cea662fffb713a94d54a49668c6b4b653fe7f7a42"
+    },
+    {
+      "path": ".scratch/registration-request-body-225/seal_report.py",
+      "sha256": "8c0ff8f1e534f70096d03bf3cf9341f505caa6a848071a0e2fe1fb5ddf2e0b34"
+    },
+    {
+      "path": ".scratch/offline-validation/run-_evc37aa/receipt.json",
+      "sha256": "65e4d5de257ebe2f30fdc44d9641fb6150242c188e594fc453421041718d393a"
+    },
+    {
+      "path": ".scratch/offline-validation/run-_evc37aa/workspace-pytest.log",
+      "sha256": "daa34ed3a8b9ca1cfc77bc4582b37c1f017832a2f1a14b643dd8b99e0a8644c4"
+    },
+    {
+      "path": ".scratch/offline-validation/run-_evc37aa/error.txt",
+      "sha256": "758133552d51c853b697ed3b79fdd2cdc3873c5017ffaa9c19448f086dd0844c"
+    },
+    {
+      "path": ".scratch/implementer225-20261006/focused-result.json",
+      "sha256": "abb751cf5460a70e30154d8026afcce107bfa03d2eb44cd16d511092516e14fb"
+    },
+    {
+      "path": ".scratch/implementer225-20261006/focused-junit.xml",
+      "sha256": "3c6e91830f636f0e5823d5ca3cf58e863a2e1eb5697666a2267434d529a643a2"
+    },
+    {
+      "path": ".scratch/implementer225-20261006/focused-output.txt",
+      "sha256": "35de5f53cbe70398416d442bb30bf2b3dc6f57e5f480fa4b3cc71d0dde62342a"
+    },
+    {
+      "path": ".scratch/implementer225-save-receipt.ps1",
+      "sha256": "2d0bd8bb4ee499fc31e8c70a3a8e6cee280b590fb76edd6748edc23d361a6c01"
+    },
+    {
+      "path": ".scratch/implementer225-run-focused.ps1",
+      "sha256": "4d0b75f907b949c0971f95b9dae82737616de5411a1b296e7d4d7b3a7db33f9e"
+    },
+    {
+      "path": ".scratch/tester225-20261006/receipt.json",
+      "sha256": "515a4b55ae373e889767d55ea77814020adc0551464b7e9042207e4444b79e6b"
+    },
+    {
+      "path": ".scratch/tester225-20261006/receipt-original-hash-mismatch.json",
+      "sha256": "9adb98a958697e8fc1eb8c68f97a3383c72199d3133bde64bb241873fe1dee71"
+    },
+    {
+      "path": ".scratch/tester225-20261006/goldens.json",
+      "sha256": "0797dc84e572510d55b3289d9fecd8e8af9f6c1a70ae0743f95da9069bb0b9f0"
+    },
+    {
+      "path": ".scratch/tester225-20261006/oracle.py",
+      "sha256": "776b02e21187eccaf3399522447b116bc6798fd4bc3e109eb627342a6d53da66"
+    },
+    {
+      "path": ".scratch/tester225-20261006/check_codec.py",
+      "sha256": "8d6d2a864981f3f02dcc53ae381dc02be629d642ccd4cc477965f63a25e10672"
+    },
+    {
+      "path": ".scratch/tester225-20261006/probe_tags_inputs.py",
+      "sha256": "22adcb7de114f473af5bd005e9438a72b4051bb7054f31feb505aa2e39be8b88"
+    },
+    {
+      "path": ".scratch/tester225-20261006/Run-Oracle.ps1",
+      "sha256": "cd435d294af6ecae8138797d4fdcc92003f0490a2cb2267856bd0b731f409ebb"
+    },
+    {
+      "path": ".scratch/tester225-20261006/Run-Codec-Comparison.ps1",
+      "sha256": "2c2c7097e64fef29cfe221e0b88dbb9f97bc900df9e64712d334bf0d8d8c3b37"
+    },
+    {
+      "path": ".scratch/tester225-20261006/Run-Targeted-Probes.ps1",
+      "sha256": "608dee491ef85561866416f5c2a1846d9fd8af8ca71079db9699ffcfba3da6b8"
+    },
+    {
+      "path": ".scratch/tester225-20261006/EXPERIMENT_REPORT.md",
+      "sha256": "c428c54d3df1189c1756724d52686a3d501d71a55a41c65497dd4466ce5f9cef"
+    }
+  ],
+  "verification": {
+    "sourceRehash": {
+      "status": "passed for current source byte bindings; historical shared-document drift retained",
+      "receipts": 5,
+      "nativeSpans": 163,
+      "windows": 34,
+      "historicalSharedDocumentDrift": 20
+    },
+    "focused": {
+      "status": "passed",
+      "receipt": ".scratch/implementer225-20261006/focused-result.json",
+      "sha256": "abb751cf5460a70e30154d8026afcce107bfa03d2eb44cd16d511092516e14fb",
+      "command": "C:\\Python314\\python.exe -m pytest -q -p no:cacheprovider --junitxml C:\\Code\\NewWorldPreservation\\.scratch\\implementer225-20261006\\focused-junit.xml tests/test_current_registration_request_body.py tests/test_current_registration_response_body.py tests/test_offline_runner.py",
+      "python": "Python 3.14.3",
+      "tests": 367,
+      "requestTests": 305,
+      "responseTests": 45,
+      "runnerTests": 17,
+      "failures": 0,
+      "skips": 0,
+      "retainedPriorFailure": "Initial 22 failures/344 passes from hand-authored neutral fixture missing seven zero bytes; corrected fixture, no codec change required",
+      "metadataRepair": "Root JUnit count repaired to testsuite count; final retained XML independently reconciled"
+    },
+    "independentOracle": {
+      "status": "passed against unchanged module hash",
+      "receipt": ".scratch/tester225-20261006/receipt.json",
+      "sha256": "515a4b55ae373e889767d55ea77814020adc0551464b7e9042207e4444b79e6b",
+      "moduleSha256": "1ed7884575de6454963c484c2254617fbd76abdc9c654499e8f4af013b45d0b6",
+      "goldenBodies": [
+        69,
+        126
+      ],
+      "anchoredMalformed": 24,
+      "successMutations": 9,
+      "richTruncationBoundaries": 126,
+      "stringThresholds": 5,
+      "tagPositionCases": 512,
+      "invalidInputs": 21,
+      "incompleteCompactTails": 14,
+      "mutableInputOwnership": true,
+      "nativeClientCodeExecuted": false
+    },
+    "sourceAndInputSeal": {
+      "status": "passed",
+      "unrelatedTrackedFilesPreserved": 238
+    },
+    "workspace": {
+      "status": "passed; validation metadata refreshed afterward",
+      "receipt": ".scratch/offline-validation/run-dllz5ul7/receipt.json",
+      "sha256": "3aff93ef59a68649b2f9cbbac57d936a7ada7ce34ce4a1c4ea0060a51cc0bbac",
+      "startedAtUtc": "2026-10-06T09:59:44.267385+00:00",
+      "finishedAtUtc": "2026-10-06T10:00:56.350490+00:00",
+      "python": {
+        "selectedFiles": 35,
+        "collected": 819,
+        "executed": 819,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 54481
+      },
+      "changedInputs": []
+    },
+    "retainedFailedWorkspace": {
+      "status": "historical failure before catalog repair",
+      "receipt": ".scratch/offline-validation/run-_evc37aa/receipt.json",
+      "sha256": "65e4d5de257ebe2f30fdc44d9641fb6150242c188e594fc453421041718d393a",
+      "pythonPassed": 818,
+      "pythonFailed": 1,
+      "cause": "New fixture not yet indexed after primary sealing batch guard failure; corrected before current required run"
+    }
+  },
+  "limits": [
+    "Original synthetic BODY fixtures and pure Python execution only; no native/client acceptance.",
+    "Neutral offsets/unsigned bits/raw bytes only; no authoritative principal/credential/field meaning.",
+    "Encoder rejects oversize values instead of native zero substitution; safe decoder prechecks extent before copy.",
+    "Collection duplicates consume all wire pairs, first value wins; stable presentation does not reproduce native hash-list order.",
+    "Only active tagged payload represented; no derived formatter, inactive native memory, partial native object state or rollback promise.",
+    "Canonical writer and accepted reader aliases/wrapping differ; error code/cursor meaningful only on failure.",
+    "No type/record length/Carrier framing, actual runtime selection, auth/ticket/world integration or #212 unblock.",
+    "Native allocator/fault/OOM/unwind/concurrency and live gameplay remain unproved."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "classification": "original synthetic hand-derived BODY bytes from pinned current-image source contract; no native execution or client acceptance",
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "contracts": [
+    "research/evidence/current-registration-request-serializer.json",
+    "research/evidence/current-registration-request-collection-codec.json",
+    "research/evidence/current-registration-request-c0-codec.json",
+    "research/evidence/current-registration-request-2c8-codec.json",
+    "research/evidence/current-registration-request-3e0-codec.json"
+  ],
+  "vectors": [
+    {
+      "name": "minimum-neutral-69-byte-body",
+      "values": {},
+      "wire": {
+        "field_08": "00000000",
+        "field_10": ["00"],
+        "field_a0": "00",
+        "field_c0": ["0000000000", "00000000", "0000000000", "000000000000000000000000", "00", "00000000", "00", "00", "00", "000000"],
+        "field_2c8": ["00000000", "00", "00000000", "000000", "00000000", "0000000000"],
+        "field_3e0": "0000",
+        "field_420": "0000",
+        "field_460": "00"
+      },
+      "length": 69
+    },
+    {
+      "name": "endian-raw-nul-optional-and-both-tag-branches",
+      "values": {
+        "field_08": 16909060,
+        "field_10": [[287454020, "4100"]],
+        "field_a0": "00ff",
+        "field_c0": {
+          "field_00": "5a",
+          "field_a0": 2309737967,
+          "field_148": 16909060,
+          "field_17c": 255,
+          "field_180": "00",
+          "field_1a0": false,
+          "field_1e8": "ff"
+        },
+        "field_2c8": {
+          "field_00": 305419896,
+          "field_110": true,
+          "field_08": "71",
+          "field_68": 4294967295,
+          "field_f0": "00"
+        },
+        "field_3e0": {"field_30": 253, "field_20": "000102030405060708090a0b0c0d0e0f"},
+        "field_420": {"field_30": 254, "field_00": "0042"},
+        "field_460": true
+      },
+      "wire": {
+        "field_08": "01020304",
+        "field_10": ["01", "11223344", "024100"],
+        "field_a0": "0200ff",
+        "field_c0": ["015a00000000", "89abcdef", "0000000000", "010203040000000000000000", "00", "00000000", "ff", "0100", "0100", "000001ff"],
+        "field_2c8": ["12345678", "01", "00000000", "01710000", "ffffffff", "000000000100"],
+        "field_3e0": "fd000102030405060708090a0b0c0d0e0f",
+        "field_420": "fe020042",
+        "field_460": "01"
+      },
+      "length": 101
+    },
+    {
+      "name": "independently-hand-derived-all-fields-126-byte-body",
+      "values": {
+        "field_08": 16909060,
+        "field_10": [["0x11223344", "00ff"], ["0xa1b2c3d4", "7f"]],
+        "field_a0": "410042",
+        "field_c0": {
+          "field_00": "10", "field_20": "11", "field_40": "12", "field_60": "13", "field_80": "14",
+          "field_a0": "0x55667788",
+          "field_a8": "15", "field_c8": "16", "field_e8": "17", "field_108": "18", "field_128": "19",
+          "field_148": "0x99aabbcc", "field_14c": "0xddeeff00", "field_150": "0x0f1e2d3c",
+          "field_158": "1a", "field_178": "0x10203040", "field_17c": "0xe1",
+          "field_180": "1b", "field_1a0": false,
+          "field_1a8": "1c", "field_1c8": "1d", "field_1e8": "1e"
+        },
+        "field_2c8": {
+          "field_00": "0x12345678", "field_110": true, "field_04": "0x87654321",
+          "field_08": "20", "field_28": "21", "field_48": "22", "field_68": "0xa1b2c3d4",
+          "field_70": "23", "field_90": "24", "field_b0": "25", "field_d0": "26", "field_f0": "27"
+        },
+        "field_3e0": {"field_30": 38, "field_00": "00ab"},
+        "field_420": {"field_30": 15, "field_20": "000102030405060708090a0b0c0d0e0f"},
+        "field_460": true
+      },
+      "wire": {
+        "field_08": "01020304",
+        "field_10": ["02", "11223344", "0200ff", "a1b2c3d4", "017f"],
+        "field_a0": "03410042",
+        "field_c0": ["01100111011201130114", "55667788", "01150116011701180119",
+                     "99aabbccddeeff000f1e2d3c", "011a", "10203040", "e1", "011b", "0100", "011c011d011e"],
+        "field_2c8": ["12345678", "01", "87654321", "012001210122", "a1b2c3d4", "01230124012501260127"],
+        "field_3e0": "260200ab",
+        "field_420": "0f000102030405060708090a0b0c0d0e0f",
+        "field_460": "01"
+      },
+      "length": 126
+    }
+  ]
+}
