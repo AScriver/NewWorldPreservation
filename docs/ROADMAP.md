@@ -1,5 +1,15 @@
 # Milestone 1 roadmap
 
+#216 source result, October 5: owner+0x110 now joins the third R9 callable,
+concrete built-in game interface, owned server-version map, change comparison/
+diagnostic output and replacement/destruction. Response+0x38 supplies that version
+metadata; the separate local `session_id` update comes from then-current owner+0x598
+(response+0x18), with first-NUL/context-capacity limits. No authenticated principal
+or remote authority follows. [Concise finding](REGISTRATION_RESPONSE_CALLBACK.md),
+J216-1–4 and [evidence delta](../research/evidence/current-registration-response-callback.json)
+record current-image joins and verification. Completion is scoped to #216;
+#178/#164 and Milestone 1 remain open.
+
 #215 source result, October 5: the previously unresolved owner+0x90 callable now
 joins its upstream construction/installer, vtable+0x10 target, diagnostic output
 consumer and inline ownership/replacement/teardown. This concrete callable does
