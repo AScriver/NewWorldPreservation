@@ -1,0 +1,674 @@
+{
+  "schema": 1,
+  "classification": "owned-file-observation-with-static-and-public-reference-joins",
+  "workItemId": 164,
+  "actionableId": 251,
+  "parentActionableId": 248,
+  "recordedUtc": "2026-10-06T22:05:20.466990+00:00",
+  "claimIds": [
+    "K333",
+    "K334",
+    "K335",
+    "K336"
+  ],
+  "input": {
+    "head": "9d33851ded49875decfedcafeee44df8ba7dbd9a",
+    "workingTree": "M docs/AGENT_START.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/PLAYER_DELIVERY_INDEX.md\n?? scripts/owned_player_delivery_index.py\n?? tests/test_owned_player_delivery_index.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "sourceCollectionStates": [
+      {
+        "head": "9d33851ded49875decfedcafeee44df8ba7dbd9a",
+        "workingTree": ""
+      },
+      {
+        "head": "a48bf6d842a9bb7cb28c3bf441c29d984691708d",
+        "workingTree": "M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? scripts/current_player_identity_body.py\n?? tests/test_current_player_identity_body.py"
+      }
+    ],
+    "delegation": "reused Architect with inherited context; not independent corroboration"
+  },
+  "ownedFiles": [
+    {
+      "path": "Bin64/NewWorld.exe",
+      "bytes": 179204176,
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e"
+    },
+    {
+      "path": "assets/Engine.pak",
+      "bytes": 673824605,
+      "sha256": "b5405246d9856acfdd8aa2d56f8d02d40a4b3d524542b7eaed182358a3d77329"
+    },
+    {
+      "path": "assets/SharedDataStrm-part8.pak",
+      "bytes": 138144760,
+      "sha256": "a914b6a834c5c7832b065955b8b8bfa2ab1b90004b26ff5bcef9d8397cc36751"
+    },
+    {
+      "path": "assets/DataStrm.pak",
+      "bytes": 1085098995,
+      "sha256": "b043b639907a9e0dadba567b8d4995d5c50e5b2d2c51aeac4789867f22e60e9a"
+    }
+  ],
+  "privateSourceSeals": [
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field251-receipt.json",
+      "sha256": "3054cfde893a24ebc67a2b99e7247243fe42faae58509bb0d413171c41a94369"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/receipt.json",
+      "sha256": "1d50926349b6e542ef19b38b5afdd432029f0912d4f3438d34b8c2e95e24338e"
+    }
+  ],
+  "sourceSpans": [
+    {
+      "start": "0x146711440",
+      "endExclusive": "0x146711870",
+      "sha256": "678c5c07c75ed180ddad278f3942910cb73a29508888cefbe32d06310a48d00a"
+    },
+    {
+      "start": "0x1412f4730",
+      "endExclusive": "0x1412f475a",
+      "sha256": "55a8d1dc31fade41bb4efdd5cd1753f5be90d0aafd23fade5a2cb037a583eb20"
+    },
+    {
+      "start": "0x1412f475a",
+      "endExclusive": "0x1412f47a8",
+      "sha256": "2d6be080e3061b42e214cc6f470699c80aa9d9dfe88406cbecc6e2ffe3a6f471"
+    },
+    {
+      "start": "0x1412f47a8",
+      "endExclusive": "0x1412f47c3",
+      "sha256": "ba53e7b73a164cbbae195e90224c163de1fb08a2df8952642809c2f6284f97e2"
+    },
+    {
+      "start": "0x141048fe0",
+      "endExclusive": "0x14104905f",
+      "sha256": "b4a3e4c779d16526bf158fd2773f827155d02200a8ad84a6d54417892fc3a943"
+    },
+    {
+      "start": "0x1407cf210",
+      "endExclusive": "0x1407cf39d",
+      "sha256": "54c5c3319a10159e9a189cf05a2e428477fc3cca4ea7af626f26e90b9d5b72da"
+    },
+    {
+      "start": "0x1407e4540",
+      "endExclusive": "0x1407e457b",
+      "sha256": "1820b6e402174814faf41bf098c0f3989f05ea008cc1b0f084b6086fb41fc971"
+    },
+    {
+      "start": "0x1407e4580",
+      "endExclusive": "0x1407e45ae",
+      "sha256": "5f87c4d9ae960e722e0f330a4d53c6bceb3ea4c293cccf75c5267ce83b5b697b"
+    },
+    {
+      "start": "0x1407e4430",
+      "endExclusive": "0x1407e44fc",
+      "sha256": "810d6ce1bdf07c2f7572eddfea563c1c8ec09f0d9fa6dfe5ce75e8bf5762759a"
+    },
+    {
+      "start": "0x1400af200",
+      "endExclusive": "0x1400af299",
+      "sha256": "bc3f645068a0e9a8b74e04a2166635c0f495a2fa541831e96669c8a798de10e5"
+    },
+    {
+      "start": "0x1407e9110",
+      "endExclusive": "0x1407e931d",
+      "sha256": "4f93853cf82db548d01f585b8813de79e81a7defba9cea1ec6b4f9f747e6330c"
+    },
+    {
+      "start": "0x1407d2c50",
+      "endExclusive": "0x1407d2f58",
+      "sha256": "87836f61c3c0a61772dacfdfed47c545728f9c42ca17bb1af1902883116ffac4"
+    },
+    {
+      "start": "0x141581ab0",
+      "endExclusive": "0x141581d06",
+      "sha256": "e91a99c67512be9a362d1f2bae707c12d6471e0b1e5f97b1126ade97524fc175"
+    },
+    {
+      "start": "0x141563030",
+      "endExclusive": "0x14156321b",
+      "sha256": "46828efc8574e1a32bd60845413d3d5287df88834e88dea68327ba1b215c3817"
+    },
+    {
+      "start": "0x1414f9550",
+      "endExclusive": "0x1414f95af",
+      "sha256": "bc95cb3c30b412e872250dd6cf84817c7182c198bc17ad71a99778609f1f2ff9"
+    },
+    {
+      "start": "0x141761860",
+      "endExclusive": "0x141761bd8",
+      "sha256": "bc26ea8602c471901195599f557075780f1ef9895f51dcb21936fdeeb0f01cae"
+    },
+    {
+      "start": "0x1407ced00",
+      "endExclusive": "0x1407ceddc",
+      "sha256": "60d1b8911ed0f91f635cd7c77b24316c4112e7b867a187c518dba43d72d17813"
+    },
+    {
+      "start": "0x1407cf450",
+      "endExclusive": "0x1407cf5d1",
+      "sha256": "5a531548a7a411b4ddfda7a95fd1de6a863d566f7e193cacd7683ab6f56a53b7"
+    },
+    {
+      "start": "0x1407867a0",
+      "endExclusive": "0x14078681f",
+      "sha256": "f280ca6c9a115dbfcf6535db3c8fbe3e8333f2715d76aecdeaf6ff8b99b05a92"
+    },
+    {
+      "start": "0x1417c2360",
+      "endExclusive": "0x1417c2418",
+      "sha256": "56bdad6519f0c300013ca9893668ad1ae38708b04ba9de19b27830c83d91e63f"
+    },
+    {
+      "start": "0x14171bbd0",
+      "endExclusive": "0x14171bcd5",
+      "sha256": "e1959b6ad5ed9611d582436d274a8dddc44f10a8c393458d0688a20df232fef4"
+    }
+  ],
+  "sourceWindows": [
+    {
+      "start": "0x148536b70",
+      "bytes": 64,
+      "sha256": "6e38aad0b19dc59af252732a0832aefe1a4f22ad916080518321a6ffdfe5d586"
+    },
+    {
+      "start": "0x147fe6730",
+      "bytes": 1024,
+      "sha256": "12f3e0576d447eb37b36d82ba0c1c5481b8f0d12fdc70347ce4a076b229d4c86"
+    },
+    {
+      "start": "0x1465827c0",
+      "bytes": 5,
+      "sha256": "8aacd0709f61b1e1ce80a3395e462409da941654f842b4970b1cac0a525d7a09"
+    },
+    {
+      "start": "0x146824820",
+      "bytes": 8,
+      "sha256": "0e08e2defe9b2f43e77db452a41fe8b8838b6d6aa3875a87cfff152cb34a7e70"
+    },
+    {
+      "start": "0x147fc7dd8",
+      "bytes": 39,
+      "sha256": "e07dbfa536e29635d4ec835ec0825e3a5f183c6264a50811df15ed8881de43b1"
+    },
+    {
+      "start": "0x148036d98",
+      "bytes": 32,
+      "sha256": "086b4ac94457e5673b35c517c6cc4dcb409ceca4440db3766a06cba7fa96cc98"
+    },
+    {
+      "start": "0x147f01818",
+      "bytes": 39,
+      "sha256": "2883fb98cd890cd9d5db231d9fe42e084d64aa5aa9f49b79f0e8affee44001ba"
+    }
+  ],
+  "privateArtifacts": [
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field-xrefs.json",
+      "sha256": "04f86f994d4f33936abfe9ca6205245071a10c3e1261c2f04ed7ad77280c5270"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field251-native.json",
+      "sha256": "f0c057a237645078ba4d96fffd416c10cb913fbb16d7e7d730697903f1ce67de"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field251-report.md",
+      "sha256": "3d140efa8151e3afcf9e84228f042e986a00e95f148d1092d9768a82fd038f3f"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field251.ps1",
+      "sha256": "963a6efe7acc521c6fb6089b46cf19707efa54ed8d13167c0ad1148891e01f5b"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/field251.py",
+      "sha256": "bd53d9cd9656357158f25e92332ee2df90c2b8feb3923bdaacaef8c9831155d1"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/instructions.json",
+      "sha256": "f465872ab97dd069d61ae8b7c0af35ee69755fd762976ef92b19bc8a8ee8a9e7"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/object-xrefs.json",
+      "sha256": "432c6f8e9c419db43ae67202bdd9d69068f2bb55ea5187b034815eebce41244d"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/receipt.json",
+      "sha256": "1d50926349b6e542ef19b38b5afdd432029f0912d4f3438d34b8c2e95e24338e"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/reflect-xrefs.json",
+      "sha256": "83e8f752ce4e1c3d9d1f8b2fda3b76b921a4bf1fd494ff92fcc5f4f3538c37e1"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/report.md",
+      "sha256": "72c21f072f61e1a7c94d769ef8100a1fdaa8ed431c70f6930afec1bdeac6b739"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/seal.ps1",
+      "sha256": "2182a4ee1e86662fd92d2988402a43054a73048b84ab1e67323d3efc5c9a318c"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/seal.py",
+      "sha256": "277baff80081a75a42dbd041d2eed89d77e210c53425739697871f7e4960613d"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/seal251.py",
+      "sha256": "325b6bd67972a0303ffb57645ac105aa33142110b9035d4d8c985967430bcd8b"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/selector-xrefs.json",
+      "sha256": "1ca6b5e454d98d17b4fb88dc31634a2d3c135c42533cda183793809feb80b05a"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice1.ps1",
+      "sha256": "4a8765751143ee33318d645999aa575a7a7c399b9343973530f16986039ad3fd"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice2.ps1",
+      "sha256": "af9bc491bb664f87c930c2db3fb7a8b3c512365a36b21bc02f671e3959222d91"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice3.ps1",
+      "sha256": "6635e1dc64e3573d2202a5f26ce4cef0fbc40713e45b1639848c0ab899a54743"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice4.ps1",
+      "sha256": "441eabd7b530a4304b1bcee7f73200b24d595f024e929daa8362ba8a5f3ebf8a"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice5.ps1",
+      "sha256": "d2abbc81d493afc56d334d0bb7767cbd9e77b43279d6afb4a7c7a059675bf1ed"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice6.ps1",
+      "sha256": "60e354f16dbcece8eb168f2c3de270c90c250c4fa1be498492f341ff496e29a8"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice7.ps1",
+      "sha256": "4c60b3c392375a9b2cd770d0971b00087cc1f5d21666359bdd767678604f7d09"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice8.ps1",
+      "sha256": "5bc347dedc2ccb427eb7ff8ebcefd94cc29f2f4355d78d9106e73133397ffe92"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/slice9.ps1",
+      "sha256": "28d51329906a428abcb503c46175b0d4194732dae33771fa81f2d206997e0ddc"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step1/function-1407cf210.c",
+      "sha256": "13d8469a85368fb6ee9a9d4d39275013fe1c37fb8e9703d8dc4d35b0217c2694"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step2/function-1407e4430.c",
+      "sha256": "5c780bfd06c2dada64aeecfa4d3b0e9727eeacd7220926697c663d48d30cf446"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step2/function-1407e4540.c",
+      "sha256": "b4fc939f5812199ca15b6342478bd57b7c0403cb7aef95861a9498eea3e612d1"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step2/function-1407e4580.c",
+      "sha256": "66f4a6a043047916f51bcafc193f5209fb0b64e377283634001ce0beed7a569b"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step3/function-1400af200.c",
+      "sha256": "f7f86860dea165489a5255e273dc6bfbb5c45cde15f1b66863b4d93c01799722"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step3/function-1407d2c50.c",
+      "sha256": "9195d2fa8071f1fa48094637dd03bbec0188d2beccf4423fb7d3bf9558d04bb4"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step3/function-1407e9110.c",
+      "sha256": "9fc1d809becc7b1ecdb36e9ec563955bf8e8a3e3097a90c1f23d63037fa41b97"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step4/function-1414f9550.c",
+      "sha256": "354922d14c00f6e3ad002059a3e21493f96c0bef2ab83f22138fc1dd6ac95dab"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step4/function-141563030.c",
+      "sha256": "bb1e7c033cc3fe7ed6d3500a13fae83532023a1ef7f3a1ac0e3212a75d3fd47e"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step4/function-141581ab0.c",
+      "sha256": "4d371876886996a8e6e654104969965d90dd7056992d29fea90fa123aa5eedf7"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step5/function-1407ced00.c",
+      "sha256": "a0c718b2ced8b6506763e09b51a2f5791c7746e9a9b629a3f6e9607601603749"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step5/function-1407cf450.c",
+      "sha256": "42508bc2262f0fc1f90dc4b6636fa90de1115887547e6238db4ca137ad40ca43"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step5/function-141761860.c",
+      "sha256": "cbf30832b14b6e71bd767f5fe01206b0b29cf86508cb93c1fc30ecbfa3919693"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step5/receipt.json",
+      "sha256": "f92c58c51cad4ec470c1a323c6b06ae30128c12a0a9c6c32e7b5af6f8011a162"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step6/function-1407867a0.c",
+      "sha256": "213ead2b155a516c2b6b917f1069b8f8e23d15fb42905db34967d8960666ca86"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step6/function-1417c2360.c",
+      "sha256": "d8adacc12f810a078f3401cdbe8ae320a9ac1ff5daddb67ef7c9e6a3a7606329"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step6/receipt.json",
+      "sha256": "7d4e1aaed9518bf8bfa21bc78e3bba3b7470a717306d195804dde5ed9ac49c45"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step7/function-1412f4730.c",
+      "sha256": "6719a9db774111adf496ee5e7676eaf203caa3213a1bfc568c8fd80d410cc41d"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step7/function-146711440.c",
+      "sha256": "52572d64773d0b3ab3da8eaa5ac71bb57a98e5d100cc30c7a90827d24d1b02ec"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step7/receipt.json",
+      "sha256": "f80f18f1d661f347d273637b9a02753b5dc7d0e05fe4fabb2f33b5cb16fb8500"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step9/function-141048fe0.c",
+      "sha256": "cd89071130e8c4c3e15ef53043250ebe4e74796f3e27b529740e6f7f26834306"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/step9/receipt.json",
+      "sha256": "7532d861886252b9c1b3709dcff2bb02d3d871230cf2606dcb9e78b2742aa37d"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/windows.json",
+      "sha256": "d9d9fba7eddd342a509d2d339759e2398df62ac44c6a33d1af234d0d2746dc40"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/windows.ps1",
+      "sha256": "2c0e196f57e9cab83c47b05c2183120ecefc40b5d967e72a8c2ed2f0578343fa"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/windows.py",
+      "sha256": "8de873665d07afc466951cb9dcb99fd7b4c02c6b171f6f3d4f5c7d5c23b25d69"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/xref.ps1",
+      "sha256": "96487028076aca32eae792fb28f8f82eec4f1cffdcc18e31c52431ad0e497761"
+    },
+    {
+      "path": ".scratch/preservation-delivery-key-20261006-architect/xref.py",
+      "sha256": "9d39bed3eb2372cf6a97d9fd553f39cb023f37e8df99a9a9cde00777f4fd5934"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/build-ooz.ps1",
+      "sha256": "a76ffa553dd40bbcc1ef240f2bcf617b33721a1fe3187d08cfd3603b03e1c643"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/client-index-setting-probe.json",
+      "sha256": "1e08a7cc66cf3a063443a769366e0547ce36758dc1f2b5e656c1729bf5255937"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/inspect-client-index-setting.ps1",
+      "sha256": "d2fca45f896d3600c41d2dd3e934a646d03a60daa3c9e0efb627b88041aef29a"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/inspect-player-slice.ps1",
+      "sha256": "ba9fdd2aad280df9dc7fc80eed4c4fa354aee516db8132d1160455d33425708c"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/inspect_client_index_setting.py",
+      "sha256": "a8a801997246cb925c6a7ce82de249c6e7727e23d0f11723bedfbec9544dddf8"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/inspect_player_slice.py",
+      "sha256": "083239d9f4e743d49d3dfc569e2dc191fb8e8115fbabeab79afd90b469d339f0"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/ooz-build/ooz.exe",
+      "sha256": "1f9cb88d060344d3db8a5922c672340c61595b065774f6442e597ec875e14e97"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/ooz-reference/kraken.cpp",
+      "sha256": "15dac357f857804832c86fc72558f30454a7dcc28a9de96765e63ee240140d36"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/owned-client-json.bin",
+      "sha256": "efc639fc8ec84d405921136e36bc7510f2602da18e9473ba3d3df708ee85899d"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/owned-client-json.ooz",
+      "sha256": "16e814333400b339fcb72e26671e79b743cebdd6163a96b4de790e6e33521c96"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/owned-player-slice.bin",
+      "sha256": "513e5f9bc3f8ca9896fdea164c9889dfbf2bd9587d7273f19395b1b83b3af377"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/owned-player-slice.ooz",
+      "sha256": "9352fabee4bdf1916b6ff74848ff664113dba2e88e087e747c035eb656839090"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/parse-player-slice.ps1",
+      "sha256": "fb0396e6f433ceb7baa011b6a4c9ea85ed857c24112c115176d600ff82814767"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/parse_player_slice.py",
+      "sha256": "2de34556f60a4441469bf140ca1f277a252500f4565b5761676100ae2899f6c5"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/player-component-index-probe.json",
+      "sha256": "bafccd2b96f7e7a46466b31abd20d6b375864218c3e1aa24944a48f7ceb6f7c6"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/player-compression-probe.json",
+      "sha256": "a064261ebb9fc77a9c8968ed173dab2901a663698d760f810911cd3028444c9f"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/player-slice-format.json",
+      "sha256": "f00123d8b118cf4e5a90b2c82eef61027e8d9f8f8ef359673ef5050c3fbd122d"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/seal-delivery-index.ps1",
+      "sha256": "63a0d7f06081a4e5282a4e67e62b1c8f7344100efe86fde9723db22864914620"
+    },
+    {
+      "path": ".scratch/preservation-spawn-20261006/seal_delivery_index.py",
+      "sha256": "93ca031e0b25c3713d37bdc18488979198f0d7db432cad701b9815ffad78f958"
+    }
+  ],
+  "publicReferenceSeals": [
+    {
+      "url": "https://raw.githubusercontent.com/o3de/o3de/3be07620eeec2c66b8426804c24572df2972e559/Code/Framework/AzCore/AzCore/Serialization/ObjectStream.cpp",
+      "commit": "3be07620eeec2c66b8426804c24572df2972e559",
+      "path": ".scratch/preservation-spawn-20261006/public-o3de-ObjectStream.cpp",
+      "sha256": "d1f6b7e0baae96bbc6bc265dd5c6d4ce200eea9a48c6b71f7fa2a68cf3e5367c",
+      "bytes": 119388,
+      "license": "Apache-2.0 OR MIT",
+      "role": "public reference grammar/primitive endian crosscheck; not current native loader proof"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/o3de/o3de/3be07620eeec2c66b8426804c24572df2972e559/Code/Framework/AzCore/AzCore/Serialization/SerializeContext.cpp",
+      "commit": "3be07620eeec2c66b8426804c24572df2972e559",
+      "path": ".scratch/preservation-spawn-20261006/public-o3de-SerializeContext.cpp",
+      "sha256": "2187762891885ecb718d48b1abf44bf573deece2ac68fa6977bea29079535904",
+      "bytes": 143995,
+      "license": "Apache-2.0 OR MIT",
+      "role": "public reference grammar/primitive endian crosscheck; not current native loader proof"
+    }
+  ],
+  "originalSources": {
+    "scripts/owned_player_delivery_index.py": "9c5a0b2d5cd5d617974a21e1994a503e33e77a98199b2f5e705009efac8276fa",
+    "tests/test_owned_player_delivery_index.py": "583a276ef85ae98844ec2da90c5bad6c57b55edcd0e5caf2a017ef399cfe450d",
+    "scripts/offline-test-profiles.json": "734515b4706ab9b9dbd598833d3c2164d32d67232c5343a050764bf34e2eb1e4",
+    "scripts/validate_offline.py": "bdada52b83ecc1ba70b79f0b79875c0f4a75871314c02737df9952d1b7f8b2b4",
+    "tests/test_offline_runner.py": "e68f9b149f88b0d84a47891706826e666b4a853d6b48227aa0962f30799c5900",
+    "docs/PLAYER_DELIVERY_INDEX.md": "6022eb60706b0a5070d8af8492543dd37e31322ad2689cda6858a6b56cf6d5fb"
+  },
+  "asset": {
+    "member": "slices/player.dynamicslice",
+    "package": "assets/SharedDataStrm-part8.pak",
+    "compressedBytes": 44796,
+    "decodedBytes": 367528,
+    "zipCrc32": "a52d1752",
+    "compressedSha256": "fc064f97fd4efcf4c3926563570689e2c43db74fd3cfaa175a9434e9691c70cf",
+    "decodedSha256": "513e5f9bc3f8ca9896fdea164c9889dfbf2bd9587d7273f19395b1b83b3af377",
+    "format": "binary ObjectStream v3; one Entity root",
+    "selectedPlayerComponents": 1,
+    "selected": {
+      "resource_index": 9,
+      "player_offset": 21803,
+      "field_offset": 22082,
+      "value_offset": 22103,
+      "parsed_nodes": 12242
+    },
+    "facetedVersionObserved": 1,
+    "fieldName": "m_replicationIndex",
+    "nameCrc32": "81e598c5",
+    "primitiveRawUuid": "43da906b7def4ca89790854106d3f983",
+    "rawValueBytes": "00000009",
+    "valueInterpretation": "BE32 unsigned9 under public reference grammar; current native primitive loader remains unjoined"
+  },
+  "decoder": {
+    "project": "powzix/ooz",
+    "commit": "05038060aa68f9187ae9923b2388ca8db40e58d1",
+    "url": "https://github.com/powzix/ooz/tree/05038060aa68f9187ae9923b2388ca8db40e58d1",
+    "license": "GPL-3.0-or-later source header; kept external/ignored",
+    "exeSha256": "1f9cb88d060344d3db8a5922c672340c61595b065774f6442e597ec875e14e97",
+    "arguments": [
+      "-dq",
+      "ignored length-prefixed analysis container",
+      "ignored output"
+    ],
+    "backend": "public Kraken_Decompress, no --dll/client library/native game code",
+    "containerPrefix": "8-byte LE output length is analysis-tool input, not a game format",
+    "storedOriginalControl": "32 original A bytes decode unchanged",
+    "result": "expected size and original ZIP CRC matched",
+    "build": "MSBuild18/MSVC14.50.35717/v145; upstream conversion/signedness warnings retained"
+  },
+  "configuration": {
+    "exactKey": "javelin.set-replication-index-on-creation",
+    "looseFileMetadata": [
+      {
+        "path": "bootstrap.cfg",
+        "sha256": "b512b92acc30fe41b2dd7d5072a9dbb19fac1c4d226a78999ee2bcc0d73a7d71",
+        "bytes": 980,
+        "exactKeyPresent": false
+      },
+      {
+        "path": "system_windows_pc.cfg",
+        "sha256": "a748c58f4743ca7ced5ff356ba926028a1ec90d9cb4606e038b2d33d84f5128a",
+        "bytes": 87,
+        "exactKeyPresent": false
+      },
+      {
+        "path": "engine.json",
+        "sha256": "9c40575c4cbd58a0fdd3466ef1d723dec07408048d5c9256ecfdf7cb7c6a7486",
+        "bytes": 66,
+        "exactKeyPresent": false
+      }
+    ],
+    "clientJson": {
+      "package": "assets/DataStrm.pak",
+      "packageBytes": 1085098995,
+      "packageSha256": "b043b639907a9e0dadba567b8d4995d5c50e5b2d2c51aeac4789867f22e60e9a",
+      "member": "client.json",
+      "bytes": 1952,
+      "compressedBytes": 619,
+      "method": 15,
+      "compressedSha256": "3ae3a596cde72f8b88f9b2bf612b1ca5eafc6497aa2e66a332eca39cba6090c9",
+      "decodedSha256": "efc639fc8ec84d405921136e36bc7510f2602da18e9473ba3d3df708ee85899d",
+      "crc32": "326fd32b",
+      "crcVerified": true,
+      "exactSelectedKey": "javelin.set-replication-index-on-creation",
+      "exactKeyPresent": false,
+      "selectedValue": null,
+      "runtimeLoadingAndPrecedence": "unobserved",
+      "rawExportedToTrackedFiles": false
+    },
+    "runtimeMode": "unobserved",
+    "modeFalse": "resource index9 is a conditional candidate; zero omitted/duplicates overwrite",
+    "modeTrue": "assigned selector-qualified runtime traversal ordinal; no asset node count is substituted"
+  },
+  "verification": {
+    "synthetic": {
+      "status": "passed",
+      "cases": 46,
+      "scope": "original metadata controls only; no owned asset fixtures"
+    },
+    "focused": {
+      "status": "passed",
+      "cases": 103,
+      "receipt": ".scratch/preservation-spawn-20261006/delivery-index-focused.xml",
+      "sha256": "c619a447390e95976131a1b3dc762ce0606f12f0ee0a03d578bc5bd96e3f8da8",
+      "scope": [
+        "delivery index",
+        "owned resource",
+        "offline runner"
+      ]
+    },
+    "workspace": {
+      "status": "passed",
+      "receipt": ".scratch/offline-validation/run-c6agb7aq/receipt.json",
+      "sha256": "020051bdfe896566ec1bd17dc9bc905479a02cd47c27aeaaf06768322f54f0a9",
+      "python": {
+        "selectedFiles": 45,
+        "collected": 1327,
+        "executed": 1327,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershellSuitesPassed": 4,
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 54048
+      },
+      "codeInputsUnchanged": true,
+      "inputsRehashed": 237,
+      "finalChangedMetadataInputs": [
+        "docs/ROADMAP.md"
+      ],
+      "selfReceiptFinalization": "This receipt is finalized after the unchanged-code workspace run; no test/code/native-source evidence changes."
+    },
+    "navigation": {
+      "status": "passed",
+      "uniqueBoundaryIds": true,
+      "newReferencesExist": true,
+      "claimRowsUnique": true,
+      "finalMetadataHashes": {
+        "docs/ROADMAP.md": "e888d823ddb00d9be4460bbf7463f2849f3826654eb10530bdf30c721f9c4a1a"
+      }
+    }
+  },
+  "limits": [
+    "Current native ObjectStream primitive Load and PlayerComponent reflection registry insertion were not separately joined.",
+    "The public-format BE32 interpretation does not establish native asset instantiation or accepted delivery key.",
+    "Scoped files omit the exact setting; runtime provider, precedence, refresh and selected mode remain unobserved.",
+    "Asset serialization order does not establish qualifying instantiated component order or assigned ordinal.",
+    "No creation/identity bundle composition, native asset load, local player designation, context readiness, visible Preservation world entry or Milestone1 was executed."
+  ],
+  "failedAttemptsAndCorrections": [
+    "Method15 was not presumed a standard ZSTD stream; magic check rejected that path before decoding.",
+    "Initial broad structural metadata output exceeded bounds; narrowed to exactly selected PlayerComponent rather than dumping unrelated classes.",
+    "Grouped Ghidra leaf query had no PDATA; replaced by exact table-anchored instruction windows."
+  ],
+  "clientStarted": false,
+  "nativeClientCodeExecuted": false,
+  "processAttached": false,
+  "gameEndpointsContacted": false,
+  "rawExportedToTrackedFiles": false,
+  "milestone1": "unobserved",
+  "cleanup": "Synchronous static/decoder helpers exited; required synthetic child and listener closed. Raw owned assets/native listings/public references/build artifacts remain ignored. No game/client/service configuration resources acquired or mutated.",
+  "continuation": "User requested pause after the next commit. Finish this unit, local commit and tracking release, then pause; #252 remains unstarted."
+}

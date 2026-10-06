@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `owned-player-delivery-index` | M1-06A | [Observed baked index and conditional delivery](PLAYER_DELIVERY_INDEX.md) |
 | `current-player-identity-body` | M1-06A | [Concrete identity fields and bounded BODY codec](PLAYER_IDENTITY_BODY.md) |
 | `current-creation-trial-ref` | M1-06A | [Original fresh reference policy and source limits](CREATION_TRIAL_REF.md) |
 | `owned-player-resource` | M1-06A | [Exact owned player resource input](OWNED_PLAYER_RESOURCE.md) |

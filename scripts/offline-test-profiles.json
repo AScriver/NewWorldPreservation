@@ -43,6 +43,7 @@
       "tests/test_windows_udp_owner.py"
     ],
     "tooling": [
+      "tests/test_owned_player_delivery_index.py",
       "tests/test_owned_player_resource.py",
       "tests/test_preserve_owned_client.py",
       "tests/test_official_session_metadata.py",

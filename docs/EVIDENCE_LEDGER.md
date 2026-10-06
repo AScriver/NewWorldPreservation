@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Owned player delivery index — October6, #251
+
+Pinned owned image/build22469132 and selected package/decoded-file hashes;
+native source collection states and task-owned dirty inputs at baseline9d33851
+are recorded in [the receipt](../research/evidence/owned-player-delivery-index-20261006.json).
+[Contract/API and limits](PLAYER_DELIVERY_INDEX.md).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K333 | The selected player slice decodes to one complete ObjectStream-v3 Entity | Observed size/ZIP CRC/hash match with pinned public decoder; no native asset load | Private file/decoder seals and original parser |
+| K334 | Exactly one current PlayerComponent has baked replication index9 | Observed class/base/CRC/type/four-byte selection; BE32 uses public grammar, native primitive Load and registry insertion unjoined | Current UUID/table/CRC joins; asset metadata receipt |
+| K335 | Scoped config files omit the delivery-mode setting | Observed exact absence in three loose files and CRC-verified client.json; runtime provider/precedence/mode unknown | Scoped hashes and allowlisted key probe |
+| K336 | Resource key9 remains conditional; assigned ordinal is unproved | Strongly source-supported branch distinction; serialized order does not establish runtime selector-qualified order; world entry unobserved | 14171bbd0 and mode/reflection source seals; offline controls |
+
 ## Current player identity BODY — October6, #250
 
 Pinned image/build22469132 and type mapping; source collection spans clean and

@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "owned-player-delivery-index",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K333", "K334", "K335", "K336"],
+      "docs": ["docs/PLAYER_DELIVERY_INDEX.md"],
+      "scripts": ["scripts/owned_player_delivery_index.py"],
+      "tests": ["tests/test_owned_player_delivery_index.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/owned-player-delivery-index-20261006.json", "classification": "observed-metadata", "scope": "CRC-verified owned asset field, current class/CRC joins, public grammar and scoped config absence; no native loading"}],
+      "limit": "Resource index9 is conditional on runtime mode and native loading; assigned ordinal, designation and world entry unobserved."
+    },
+    {
       "id": "current-player-identity-body",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K329", "K330", "K331", "K332"],

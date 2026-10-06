@@ -1,5 +1,23 @@
 # Milestone 1 roadmap
 
+October6 owned player delivery index, #251 under248/164: one CRC/hash-verified
+PlayerComponent in the decoded owned player slice has baked index9 under the
+pinned public ObjectStream-v3 grammar. Current UUID/table/reflection/CRC joins
+match the selected field; current native primitive Load and registry insertion
+remain unjoined. The inspected loose configs and packaged client.json omit the
+exact mode setting; runtime provider/precedence/mode and assigned ordinal remain
+unobserved. Index9 is a conditional resource-branch candidate, not native delivery
+or world-entry proof. [Contract/API](PLAYER_DELIVERY_INDEX.md),
+[receipt](../research/evidence/owned-player-delivery-index-20261006.json), K333–K336.
+All46 original parser cases and103 focused checks passed. Required workspace
+1,327Python cases/45modules, four PowerShell suites and the closed synthetic
+loopback lifecycle passed. Receipt sealing rehashed21 native spans, seven windows,
+69 private artifacts and two pinned public reference files.
+The user requested pause after the next commit: finish251, local commit/tracking
+release, then pause. Child252's bounded creation/identity composition is unstarted.
+Native loading/designation/context/world entry and Milestone1 remain unobserved;
+two-player acceptance remains deferred until a consenting friend is available.
+
 October6 identity BODY, #250 under247/164: current UUID3935 joins the concrete
 member's group1 `characterId`/`characterName` fields and their native stored-text
 codecs. The original minimal BODY passes50 focused cases, including a53-byte
@@ -649,6 +667,14 @@ Tasks are bounded outcomes, not assignments to layers. Dependencies identify act
 Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **when required by observed target traffic**, not a speculative rewrite. The known wrap/channel/scheduling limits in [First Light analysis](FIRST_LIGHT_ANALYSIS.md) deserve targeted falsification before they affect long-running sessions. A TCP/UDP socket count is not an actor count.
 
 ## Exact next blocker
+
+October6 continuation is paused after the #251 increment at the user's request.
+The resource, fresh-reference policy and identity BODY subsets are recorded;
+resource index9 is conditional on the unobserved runtime mode/native loading.
+On resumption, child252 can assemble an original bounded offline creation/identity
+candidate with explicit inputs and limits. Do not infer live-send authorization
+or native player acceptance from that composition; unknown assigned component
+order, local identity/provider, designation and context readiness remain gates.
 
 October5 tooling improvement: function-scoped Ghidra is now the default for
 bounded native questions. The original helper imports selected PDATA/chained-unwind
