@@ -1,5 +1,22 @@
 # Milestone 1 roadmap
 
+October6 identity BODY, #250 under247/164: current UUID3935 joins the concrete
+member's group1 `characterId`/`characterName` fields and their native stored-text
+codecs. The original minimal BODY passes50 focused cases, including a53-byte
+synthetic `Preservation` literal, compact-length boundaries, absent/empty fields
+and truncated/unsupported inputs. The214 focused checks and required workspace
+1,281Python cases/44modules, four PowerShell suites and closed synthetic loopback
+lifecycle passed. Source rehash checked59 distinct function spans, nine finite
+windows and76 private artifacts.
+Field decode →ordinary reconciliation →conditional PlayerFacet delivery is
+source-joined. Actual delivery key depends on a refreshable client setting and
+the owned resource's `FacetedComponent.m_replicationIndex` or qualifying component
+order. Inspect those inputs before assembling #248; no delivery key is guessed.
+[Contract/API](PLAYER_IDENTITY_BODY.md),
+[receipt](../research/evidence/current-player-identity-body.json), K329–K332.
+Native identity decode, asset load, local designation and Preservation world
+entry remain unobserved; Milestone1/two-player acceptance remains open.
+
 October6 Preservation continuation, #249 under247/190/164: current GdeRef
 low64-only map identity, cached offline-ID routing and zero-reference gate now
 support an [original guarded trial-input policy](CREATION_TRIAL_REF.md).

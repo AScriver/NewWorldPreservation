@@ -1,5 +1,19 @@
 # Evidence ledger
 
+## Current player identity BODY — October6, #250
+
+Pinned image/build22469132 and type mapping; source collection spans clean and
+dirty states recorded in private seals, with original codec/test/docs changes
+at baseline a48bf6d. [Contract/API](PLAYER_IDENTITY_BODY.md) and
+[receipt](../research/evidence/current-player-identity-body.json).
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K329 | UUID3935 joins the concrete member's group1 identity fields0/1 | Getter/factory/constructor/table chain; values+7d0/+880 match PlayerFacet; unrelated fields excluded | Private current-image spans/table seals |
+| K330 | The minimal selected text BODY has masks02/03, ID flag00 and compact32 lengths | Native byte copying and0x2ffff cap; offline oversize rejection is stricter; constructor presence and fixed16 setter are separate | Literal53-byte control and original codec tests |
+| K331 | Successful field decode can enable delivery through ordinary reconciliation | Field-present bytes →14172ce70 →member+7a0; forced replay reconciles before facet callback; conditional static path only | Source/instruction joins |
+| K332 | Component delivery index is separate from the class selector | Refreshable named setting chooses assigned ordinals or reflected m_replicationIndex; actual resource/config/provider/readiness unobserved | Bounded mode/reflection evidence; no key guessed |
+
 ## Original fresh GdeRef trial inputs — October6, #249
 
 Clean native-source input6f74c1e, pinned build22469132; original policy/test/

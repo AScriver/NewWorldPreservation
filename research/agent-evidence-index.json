@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-player-identity-body",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K329", "K330", "K331", "K332"],
+      "docs": ["docs/PLAYER_IDENTITY_BODY.md"],
+      "scripts": ["scripts/current_player_identity_body.py"],
+      "tests": ["tests/test_current_player_identity_body.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-player-identity-body.json", "classification": "source-inference", "scope": "Concrete UUID/member fields, text codecs, post-decode gate and conditional component delivery; original offline subset"}],
+      "limit": "No native decode or delivery executed; actual asset/config/key, local designation and visible world entry remain unproved."
+    },
+    {
       "id": "current-creation-trial-ref",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K325", "K326", "K327", "K328"],

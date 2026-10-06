@@ -67,6 +67,7 @@ read-only inspection.
 
 | Boundary | Original scripts / test entry | Navigation |
 |---|---|---|
+| Player identity BODY | `current_player_identity_body`; `test_current_player_identity_body` | [Identity fields and delivery limits](PLAYER_IDENTITY_BODY.md) |
 | Reference/dependencies | `Get-FirstLightReference`, `Initialize-DevEnvironment`, `validate_first_light`; `test_validation_gate` | [First Light analysis](FIRST_LIGHT_ANALYSIS.md) |
 | Bootstrap HTTPS and ownership | `connectivity_probe`, `game_log_metadata`, `windows_tcp_owner`; `test_connectivity_probe`, metadata/owner/observer tests | [Connectivity](CURRENT_CLIENT_CONNECTIVITY.md) |
 | Channel/token request | `channel_descriptor`, `bootstrap_probe`, `bootstrap_log_metadata`; descriptor/bootstrap/flow tests | [Channel](BOOTSTRAP_CHANNEL.md) |
