@@ -24,7 +24,8 @@ offsets. Native unknownmember failure drains later payloadrecords, excludes oute
 suffix; pure parser failswhole without mutation/skip/application. Current record
 encoder remains readerinverse until exact native slot/count writer is joined.
 
-Local commit/tracking closure follow. Then select nearest eligible offline164
+Local commit `de6f6f1`; #239 Done/released, #177 Researching/released, aggregate
+acceptance open. Scoped owned-claim readback is empty. Then select nearest eligible offline164
 dependency under177: actual native record producer/slot-count writer from known
 per-member caller chain and bundle buffer consumers. Retain #210 receive/Carrier,
 ACK/resend/historical860/authority, runtime table/selection, valid creation values,

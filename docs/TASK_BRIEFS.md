@@ -8,7 +8,8 @@ payload extent/copy/view. Original safe value codec, bounded creation-record rea
 inverse composition and seven synthetic fixtures implemented; focused200cases and
 independent8groups passed. [Contract/API](TYPE8_BUNDLE_BODY.md), K311–K319.
 Workspace1135/39Python,threePS and closed synthetic lifecycle passed; local
-commit/tracking closure follow. No child completion stops continuation.
+commit `de6f6f1`; #239 Done/released, #177 Researching/released.
+No child completion stops continuation.
 Native outerrecord writer, #210 remaining transport/authority/runtime selection,
 valid creation values/player/aggregate acceptance remain unproved. No client/live,
 capture/hook/credential/replay/upstream/push/publication action.
