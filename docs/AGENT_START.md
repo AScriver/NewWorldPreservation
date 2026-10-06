@@ -2,6 +2,8 @@
 
 Use this page to choose a bounded task and reproduce its checks. Current progress,
 blockers and Milestone 1 acceptance belong to [ROADMAP](ROADMAP.md), not this guide.
+The current priority is the [one-player spawn-and-control checkpoint](ONE_PLAYER_MILESTONE.md);
+preserve the broader two-client roadmap and existing approvals.
 
 ## Read in this order
 

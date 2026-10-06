@@ -1,5 +1,21 @@
 # Milestone 1 roadmap
 
+## Immediate priority — one controllable private player
+
+October6 user refocus resumes the #251 pause and makes
+[one freshly created private character, visibly spawned and controllable](ONE_PLAYER_MILESTONE.md)
+the active goal. Require fresh backend identity, actual local-player rendering/
+camera/input, five-minute move/turn/stop, correlated network evidence including a
+server position update or equally strong test, and repetition after client/backend
+restarts. All remain pending; preserve the two-client acceptance below.
+
+Furthest private live behavior: the0655 trial reached SelfIdentification and
+context initialization, then selection/spawn timeout; its type8 bundle was empty.
+Current obstacle: no fresh creation/identity member reaches the live path.
+Next selected leaf252 composes the original nonempty candidate; fresh identity
+propagation, conditional component delivery and an admitted integrated trial
+follow. Native construction, designation, rendering and controls are unproved.
+
 October6 owned player delivery index, #251 under248/164: one CRC/hash-verified
 PlayerComponent in the decoded owned player slice has baked index9 under the
 pinned public ObjectStream-v3 grammar. Current UUID/table/reflection/CRC joins
@@ -13,8 +29,8 @@ All46 original parser cases and103 focused checks passed. Required workspace
 1,327Python cases/45modules, four PowerShell suites and the closed synthetic
 loopback lifecycle passed. Receipt sealing rehashed21 native spans, seven windows,
 69 private artifacts and two pinned public reference files.
-The user requested pause after the next commit: finish251, local commit/tracking
-release, then pause. Child252's bounded creation/identity composition is unstarted.
+The earlier pause after251 was fulfilled and is historical. The October6 refocus
+resumes work; child252's bounded creation/identity composition is now selected.
 Native loading/designation/context/world entry and Milestone1 remain unobserved;
 two-player acceptance remains deferred until a consenting friend is available.
 
@@ -668,13 +684,16 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
-October6 continuation is paused after the #251 increment at the user's request.
-The resource, fresh-reference policy and identity BODY subsets are recorded;
-resource index9 is conditional on the unobserved runtime mode/native loading.
-On resumption, child252 can assemble an original bounded offline creation/identity
-candidate with explicit inputs and limits. Do not infer live-send authorization
-or native player acceptance from that composition; unknown assigned component
-order, local identity/provider, designation and context readiness remain gates.
+October6 refocus is active: one fresh visible controllable private player is the
+immediate milestone. The last private trial initialized context but sent an empty
+bundle and timed out without a player. Child252 is composing the original bounded
+creation/identity candidate from the recorded resource, fresh-reference and
+identity BODY support. Resource index9 remains conditional on unobserved runtime
+mode/native loading. Fresh identity must also propagate consistently through
+bootstrap/queue and the member. Composition does not admit a new live send;
+record/Carrier placement, runtime delivery, designation, context readiness,
+camera/input and movement remain distinct unproved transitions. See the
+[durable one-player checkpoint](ONE_PLAYER_MILESTONE.md).
 
 October5 tooling improvement: function-scoped Ghidra is now the default for
 bounded native questions. The original helper imports selected PDATA/chained-unwind
