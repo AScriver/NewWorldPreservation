@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-3e0-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K243",
+        "K244",
+        "K245",
+        "K246"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_3E0_CODEC.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-3e0-codec.json",
+          "classification": "source-inference",
+          "scope": "#224 selected3e0 paired schema, exact caller/tag/string joins, incremental state, formatter ownership/defaults and normal disposal; executed static/pure models separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Ordinary constructed storage/control flow only; reader success gates, writer normal returns. Runtime CRT/locale, hardware atomicity, native faults/OOM/unwind and successful lifetime unknown. Fullbody implementation/framing/field authority/#212/gameplay gates remain. No client/native execution."
+    },
+    {
       "id": "current-registration-request-2c8-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1123,6 +1149,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-3e0-codec.json",
     "research/evidence/current-registration-request-2c8-codec.json",
     "research/evidence/current-registration-request-c0-codec.json",
     "research/evidence/current-registration-request-collection-codec.json",

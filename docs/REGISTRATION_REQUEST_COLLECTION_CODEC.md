@@ -116,3 +116,10 @@ authority remain open; #221 evidence above retains its original collection scope
 next nested prerequisite at the same image. Exact PDATA and instructions correct
 the prior missing-metadata interpretation; #221 collection findings remain scoped.
 Separate +0x3e0, full body/framing and field authority remain open.
+
+## Follow-up #224
+
+[Complete field+0x3e0 schema](REGISTRATION_REQUEST_3E0_CODEC.md) closes the final
+selected nested prerequisite at the same image. Two raw-tagged objects select
+fixed16 or counted-string payloads; ownership/partial-read limits are explicit.
+Full body implementation/fixtures, framing and authoritative field meaning remain.

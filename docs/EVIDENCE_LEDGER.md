@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current V3 field+0x3e0 codec — October 6, #224
+
+Clean input main `5885527da7ea0865814065d37168125520c5ae9c`, refreshed pinned
+image/map/references; source, dirty report identities and executed checks:
+[original receipt](../research/evidence/current-registration-request-3e0-codec.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K243 | Actual selected3e0 joins two tagged0x40 objects and final boolean | Instruction/ABI-supported order and raw-tag preservation; bit0 selects raw16/string. Writer normal-return progression, reader success gates. Meaning unknown | [3e0 contract](REGISTRATION_REQUEST_3E0_CODEC.md), J224-1 |
+| K244 | Nested reads commit cursor/output incrementally | Missing tag2, short raw16 1 after tag commit, even string1/carried copy-before-extent, final bool3/4. Bounds-before-copy does not prove hardware atomicity or native safety | [3e0 contract](REGISTRATION_REQUEST_3E0_CODEC.md), J224-2–3 |
+| K245 | Derived text/defaults/normal string disposal have concrete owners | Bits1–3 control bounded formatter; cap39 fits max including NUL. Owned string separate from embedded raw16. Capacity+1 threshold; flag0 retains placement. CRT runtime/OOM/fault/unwind/success lifetime unknown | [3e0 contract](REGISTRATION_REQUEST_3E0_CODEC.md), J224-4 |
+| K246 | Selected nested schema closes only its prerequisite | Instructions and pure models retain corrected writer-gating/capacity details and decompiler warnings. Full body implementation/framing/authority/#212/world remain separate | [3e0 contract](REGISTRATION_REQUEST_3E0_CODEC.md), J224-1–4 |
+
 ## Current V3 field+0x2c8 codec — October 6, #223
 
 Clean input main `1249cd50ef1a27c5d0d0231b1484caf310b2163a`, refreshed pinned

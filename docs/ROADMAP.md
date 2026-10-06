@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#224 source result, October 6: selected V3 field+0x3e0 now joins two tagged
+objects, each selecting fixed16 bytes or a bounded raw string, followed by the
+existing +0x460 boolean. Exact caller, raw-tag preservation, incremental read
+state, formatted owned text, defaults and normal failure disposal are closed.
+[3e0 contract](REGISTRATION_REQUEST_3E0_CODEC.md), J224-1–4 / K243–K246 and
+[receipt](../research/evidence/current-registration-request-3e0-codec.json)
+retain reader-only success gates, capacity-based cleanup and static/model limits.
+Together with #221–#223 this supplies the selected nested schemas; full body
+implementation/fixtures, framing/discriminator, actual input authority, #212 and
+Milestone1 remain open. Continue the next useful #164 leaf after release.
+
 #223 source result, October 6: selected V3 field+0x2c8 now joins three BE32
 bit fields, eight raw counted strings and a strict boolean. Writer/reader inline
 boundaries differ; exact tail/ABI joins and partial status/cursor behavior are
