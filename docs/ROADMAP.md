@@ -1,5 +1,19 @@
 # Milestone 1 roadmap
 
+October 6 Discord player-creation guidance retained: the user relayed
+`player.dynamicslice` as the resource target and a deterministic GdeRef recipe
+with nonzero halves and an even low64. [Attributed summary and local leads](COMMUNITY_PLAYER_CREATION_GUIDANCE.md)
+separate the private snippet of unknown licensing/community live claim from current static
+support: even keys select the false-predicate creation branch in numeric mode2;
+other mode/helper branches and runtime/resource/identity gates remain explicit.
+The original converter's constants/helpers and referenced identity notes are
+missing. The user defers further contributor questions while local investigation
+can resolve the remaining details. No protocol code, live trial or task acceptance
+was changed; no exact existing Actionable covers this reference-retention intake.
+Image/span/artifact, 11 instruction, 256 byte0-model and documentation checks
+passed; the required workspace profile passed with its private receipt retained
+in the guidance note. Actionables was not updated.
+
 October 6 official session, #243/#245 under #166/164: the user reported an initial
 Login Malfunction, supported Play and world entry with their main character, then
 ordinary logout and successful return. Hash-verified private manifests retain five

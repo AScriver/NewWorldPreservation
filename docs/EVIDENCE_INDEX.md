@@ -41,6 +41,11 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 ## Community reference navigation
 
+The [player-creation guidance](COMMUNITY_PLAYER_CREATION_GUIDANCE.md) preserves
+the user's October 6 Discord resource/GdeRef leads, mode-2 static cross-check,
+missing generator inputs and preference to investigate locally before asking more
+questions. The raw snippet stays private; no current player-spawn result follows.
+
 The [feature catalog guide](COMMUNITY_FEATURE_CATALOG.md) records the user's
 October 6 Discord download, its verified index/UUID agreement and attributed
 creation-metadata, position-state and level-acknowledgement labels. It connects
