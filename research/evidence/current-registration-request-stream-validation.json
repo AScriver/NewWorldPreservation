@@ -1,0 +1,385 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 230,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-06T12:58:12.222922+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "551c9f253092de40bfd30b2ed4db2d2d9fb24372",
+    "initialDirty": "",
+    "currentDirty": "M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REGISTRATION_STREAM_FRAMING.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/REGISTRATION_REQUEST_STREAM_CODEC.md\n?? research/evidence/current-registration-request-stream-validation.json\n?? scripts/current_registration_request_stream.py\n?? tests/fixtures/registration/current-request-stream-original.json\n?? tests/test_current_registration_request_stream.py",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "build": 22469132,
+    "version": "1.400.6031.6004151",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "steamManifestSha256": "23036dd465babb3765756ee558add1af63a7b70462d352edc8ce50d8eb06c2a6",
+    "references": [
+      {
+        "path": "research/upstream/first-light",
+        "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+        "dirty": ""
+      },
+      {
+        "path": "research/upstream/aeternum-world",
+        "head": "820156dbc44c86c9436af81aa0dba72e94cb636b",
+        "dirty": ""
+      }
+    ],
+    "toolRoot": "C:\\Users\\Austin\\.codex\\tools\\reverse-engineering",
+    "toolFiles": {
+      "README.md": "fe218a2b41128cc191c4d874c70de6cd95e21e6237739cdddcf7b50a4fc478bc",
+      "manifest.json": "af74f38437440f079c959be41219fa0329e6903edf3869035bf459461aa820e5",
+      "verification.json": "c40380ba99733eda8ca0f726ffedef5bc42e262645d91b32294d1b7fd0f057a4",
+      "Run-Tool.ps1": "6754c38dccfc86868fce5bdbc844fd0faac7b9c7047e165f7b708b9e17acdbc5"
+    },
+    "python": "3.11.9"
+  },
+  "claimIds": [
+    "K267",
+    "K268",
+    "K269",
+    "K270"
+  ],
+  "sourceClaims": [
+    "J230-1",
+    "J230-2",
+    "J230-3",
+    "J230-4"
+  ],
+  "sourceContracts": [
+    {
+      "path": "research/evidence/current-registration-request-body-codec-validation.json",
+      "sha256": "487f9ef30f56d737dfca37c006a25c7378461acca821b6462f5ce4a1f54c1e0a",
+      "spans": 0,
+      "windows": 0
+    },
+    {
+      "path": "research/evidence/current-registration-request-serializer.json",
+      "sha256": "f34531acb814318643ce98dae16e57a5b859fabf21c949fb6f1db9f0b3f125e4",
+      "spans": 30,
+      "windows": 19
+    },
+    {
+      "path": "research/evidence/current-registration-request-collection-codec.json",
+      "sha256": "522b71ff61f4cf4b4b47834da48d60c7fa3dbfb62a9fed732ac91de5cb01cc43",
+      "spans": 46,
+      "windows": 5
+    },
+    {
+      "path": "research/evidence/current-registration-request-c0-codec.json",
+      "sha256": "3c315cd20851200b8599e953573674118ec6cc1ebab41ded9a48dff5082251d4",
+      "spans": 31,
+      "windows": 4
+    },
+    {
+      "path": "research/evidence/current-registration-request-2c8-codec.json",
+      "sha256": "def180f1d9eb1aaaf8a486f6e5a5da5ffd1f67a623ff5c12f794ded1423e0dd5",
+      "spans": 27,
+      "windows": 4
+    },
+    {
+      "path": "research/evidence/current-registration-request-3e0-codec.json",
+      "sha256": "f360b024b5c7900779a094656f52af610f897516e7194a007aa881d21a477b41",
+      "spans": 29,
+      "windows": 2
+    },
+    {
+      "path": "research/evidence/current-registration-stream-framing.json",
+      "sha256": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971",
+      "spans": 52,
+      "windows": 5
+    },
+    {
+      "path": "research/evidence/current-registration-identifier-placement.json",
+      "sha256": "958171b511ea949bf586c656d650ffdc790e93c594fb6e31c84658480ec7c7a8",
+      "spans": 97,
+      "windows": 7
+    }
+  ],
+  "historicalExtendedBindings": [
+    {
+      "path": "scripts/validate_offline.py",
+      "preEditSha256": "a11f9ddbd96cf128278e60705e14dcc8c3e07fb6f19f0260c9b80622240e4862",
+      "currentSha256": "adc0079cd36389fa6aff8042544bba2bf2e908aaef168e1294c113f1ede6a54b",
+      "reason": "Task-owned reviewed runner/profile count extended by new pure stream test module"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "preEditSha256": "87994b99869788368a9b606867383fbe68b380ce824fa5c1a012a585edf9ca40",
+      "currentSha256": "2b328f5f3b648ffd9f5da96687e52e5f09567bcf05e21a3e8363bef0dae897ee",
+      "reason": "Task-owned reviewed runner/profile count extended by new pure stream test module"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "preEditSha256": "c3735a9865925f7ff30f27b632160813f6639047df62c333742936fd9d846802",
+      "currentSha256": "592ad4f5d91136d8a432195f9f1dd254a02324ab79e2bfdd6cce71ed315210ea",
+      "reason": "Task-owned reviewed runner/profile count extended by new pure stream test module"
+    }
+  ],
+  "sourceBindings": [
+    {
+      "path": "scripts/current_registration_request_stream.py",
+      "sha256": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2"
+    },
+    {
+      "path": "tests/test_current_registration_request_stream.py",
+      "sha256": "5abe71addb5149ac5338057d3ebe0f57ade7136edd0a91856db5decbd0820219"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-stream-original.json",
+      "sha256": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "2b328f5f3b648ffd9f5da96687e52e5f09567bcf05e21a3e8363bef0dae897ee"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "adc0079cd36389fa6aff8042544bba2bf2e908aaef168e1294c113f1ede6a54b"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "592ad4f5d91136d8a432195f9f1dd254a02324ab79e2bfdd6cce71ed315210ea"
+    },
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "tests/test_current_registration_request_body.py",
+      "sha256": "350a85221eb5033cb50f38745fc057975f04dceb84692221828a95b9cc54a1e6"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-body-original.json",
+      "sha256": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f"
+    }
+  ],
+  "documentBindings": [
+    {
+      "path": "docs/EVIDENCE_INDEX.md",
+      "sha256": "20b3ddddc4c7dd4f93272b3edbae77bfaa6d465675b3311481255eef3a016349"
+    },
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "sha256": "12d797577e09b766e8d1bb889a6563cec1ba268887cb6b890e590cac909a1997"
+    },
+    {
+      "path": "docs/REGISTRATION_REQUEST_STREAM_CODEC.md",
+      "sha256": "794753504f2de18da2fbd3f07f16fc52b0d48d12bc3a655574f67f1fc7ad8ad5"
+    },
+    {
+      "path": "docs/REGISTRATION_STREAM_FRAMING.md",
+      "sha256": "4479720e2d611fb09ab47a9a2e5deafcd08038053bbcbae70f74cdd642e4fe27"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "00c0aa2563075603dbcbf04b0bbd2e66a6b0b33055bcaa8fe08ad56012836f4e"
+    },
+    {
+      "path": "research/agent-evidence-index.json",
+      "sha256": "3f8c3ff98c845d99d9648940494baed4124d517d13e44bb8beaf58e9ec77e7aa"
+    }
+  ],
+  "privateEvidenceSeals": [
+    {
+      "path": ".scratch/registration-stream-codec-230/baseline.json",
+      "sha256": "fe6418b5e56278cc667b1b74e1b1d2e92347bea631c89401c74c72b75af9ad77"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/BRIEF.md",
+      "sha256": "257cbc520b388e26797c2822a325c5a3cbea7e8b2a2dc4f224b06bad6ca1b917"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/LEDGER-implementation.md",
+      "sha256": "a189511c855fb264c8f13e5eebf2948c31e052e1ed99fdcb1686c219c5eb6469"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/owned.json",
+      "sha256": "f2d29a414deabfd6b61aeb98df199514a35135e095609d8da0d8b83b57c084b6"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/source-rehashed.json",
+      "sha256": "f7a1707689314b1531dfe4c2786067dfc329e62174fd57c3963253c92dae43f3"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/write_fixtures.py",
+      "sha256": "b71a396786510f500a592a5a5da3a9edacd7be54774f845cd167e7463bf49aa1"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/write_fixtures.ps1",
+      "sha256": "d195330d56b7c07f623136423155d200e746e0000e93bcf2635bd64b95ed1ce1"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/write_public.py",
+      "sha256": "3a972df7684bed6bdeca4946b72db3d7d82993b38e789cb0645459cd1f37e035"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/write_receipt.py",
+      "sha256": "92de025531db7ed58b5e37652a770d1fa854dc588574693deb5994f17197a129"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/catalog-preparation-failure.md",
+      "sha256": "70be388367686f224d5a8229edd38235bd316dd809634b0d794db16051d4deb8"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/focused.ps1",
+      "sha256": "16ef916f24aee5b01b5f1ba44e02a0edd9db90a4e935942141aa51f306efc15d"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/focused-junit.xml",
+      "sha256": "9d496583384d22b275653f4a771552adaa554e0a9bca1e4f92e762f69c230210"
+    },
+    {
+      "path": ".scratch/test230-20261006T1251/receipt.json",
+      "sha256": "225303ad0f8c9e879e250c99af12399331a65af9d7c86bf6540ced84012b4956"
+    },
+    {
+      "path": ".scratch/test230-20261006T1251/REPORT.md",
+      "sha256": "ead6c2abb3d2be5c5b063720dfe652793d3b5c2e0769e1667ae6fd79f85088c3"
+    },
+    {
+      "path": ".scratch/test230-20261006T1251/check.py",
+      "sha256": "91d599dcdaff2b97a2bc797ecd5fb41b32d3785e0fa3c5c9112d1892397612e0"
+    },
+    {
+      "path": ".scratch/test230-20261006T1251/run.ps1",
+      "sha256": "1585012d7a1db9d3ac1e69ee35ef07a8fb55c7c41fb43e439fa5a57862d9d431"
+    },
+    {
+      "path": ".scratch/registration-stream-codec-230/ADJUDICATION-verification.md",
+      "sha256": "9b09c22184138d663ac61c95d2b38a265b27376e2c4ea225f33ab714a82c1289"
+    }
+  ],
+  "verification": {
+    "sourceRehash": {
+      "status": "passed",
+      "receipt": ".scratch/registration-stream-codec-230/source-rehashed.json",
+      "sha256": "f7a1707689314b1531dfe4c2786067dfc329e62174fd57c3963253c92dae43f3",
+      "receipts": 8,
+      "spanChecks": 312,
+      "windowChecks": 46,
+      "scope": "Overlapping carried ranges counted per source receipt; no native execution"
+    },
+    "focused": {
+      "status": "passed",
+      "junit": ".scratch/registration-stream-codec-230/focused-junit.xml",
+      "sha256": "9d496583384d22b275653f4a771552adaa554e0a9bca1e4f92e762f69c230210",
+      "tests": 502,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "fixturesStatic": {
+      "status": "passed; final receipt annotations refreshed without other selected input changes",
+      "receipt": ".scratch/offline-validation/run-1v1lnpoq/receipt.json",
+      "sha256": "e0c1f926db53548eb9038493b9920de2af0465348b5efe7e91aee274d5e94a1e",
+      "startedAtUtc": "2026-10-06T12:54:57.356449+00:00",
+      "finishedAtUtc": "2026-10-06T12:54:59.274103+00:00",
+      "python": {
+        "selectedFiles": 14,
+        "collected": 586,
+        "executed": 586,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": null,
+      "cli": null,
+      "changedInputs": []
+    },
+    "workspace": {
+      "status": "passed; final receipt annotations refreshed without other selected input changes",
+      "receipt": ".scratch/offline-validation/run-j0cfobg7/receipt.json",
+      "sha256": "718cee58c2b3e3e3f9cc416335eb81c349d441b8290cc2701ea385a5d100f2fc",
+      "startedAtUtc": "2026-10-06T12:54:59.406536+00:00",
+      "finishedAtUtc": "2026-10-06T12:56:11.350295+00:00",
+      "python": {
+        "selectedFiles": 36,
+        "collected": 954,
+        "executed": 954,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 49222
+      },
+      "changedInputs": []
+    },
+    "independent": {
+      "status": "passed",
+      "receipt": ".scratch/test230-20261006T1251/receipt.json",
+      "sha256": "225303ad0f8c9e879e250c99af12399331a65af9d7c86bf6540ced84012b4956",
+      "scope": [
+        "Pure file-only Python model over synthetic hand-derived BODY bytes; no native or client execution.",
+        "Source seals establish static image/receipt identity, not actual runtime branch conditions or cache index.",
+        "Huge extent probe checks rejection at max+1 via reported __len__; exact max cannot be allocated here.",
+        "No receive inverse, endpoint, movement, or Milestone 1 observation."
+      ],
+      "counts": {
+        "caseComparisons": 486,
+        "goldens": 34,
+        "rejectedDomains": 7,
+        "rejectedFirstInvalidExtents": 18
+      },
+      "cleanup": "No service, listener, database, client or native code created; scratch report retained."
+    },
+    "preservation": {
+      "status": "passed",
+      "unrelatedTrackedFiles": 251,
+      "unrelatedCatalogSemantics": "unchanged"
+    }
+  },
+  "retainedFailures": [
+    {
+      "kind": "catalog preparation guard",
+      "evidence": ".scratch/registration-stream-codec-230/catalog-preparation-failure.md",
+      "attempts": 2,
+      "scope": "Task docs written, catalog not written; encoder/tests/fixtures unchanged",
+      "correction": "Newline-anchored root keys; exact catalog restoration and rerun passed"
+    },
+    {
+      "kind": "Tester source-window harness parser",
+      "evidence": ".scratch/test230-20261006T1251/REPORT.md",
+      "scope": "Failed before sender results; window bytes key corrected in ignored harness; validated rerun passed"
+    }
+  ],
+  "requirements": [
+    "Required explicit uint32 type index, nilouter16, fresh flags0/1/3 with ordered raw8, presence1, inner index-or-fixed V3UUID fallback before unchanged BODY.",
+    "IEEE CRC/BE32 full count over actual complete payload, empty ordinary stream domain and n<=uint32; no partial returned stream on pure BODY failure.",
+    "Original synthetic fixture widths/bitwiseCRC/body bytes; reviewed new test module, guarded fixture count14/workspace36 modules."
+  ],
+  "limits": [
+    "Source inference and finite purePython checks do not execute native/client allocator, registry, TLS, memory or process behavior.",
+    "Opaque fields and type index are supplied explicit synthetic/caller inputs; no current values, map19 default, observed wire or authenticated identity.",
+    "No native receive inverse, general context wrapper, mutable/recycled stream, huge allocation/fault model or lower Carrier/datagram hookup.",
+    "#212 remainsBlocked; parent178/164/M1 and actual two-client movement acceptance stay open."
+  ]
+}

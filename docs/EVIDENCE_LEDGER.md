@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Offline selected V3 sender stream encoder — October6, #230
+
+Clean input main `551c9f253092de40bfd30b2ed4db2d2d9fb24372`; current prerequisite
+seals and BODY bindings refreshed. [Original receipt](../research/evidence/current-registration-request-stream-validation.json)
+separates executed original models/regression from static native source support.
+
+| ID | Claim | Scope / limits | Evidence |
+|---|---|---|---|
+| K267 | Pure encoder joins selected nilouter/wrapper/type/BODY and physical header | Offline implementation of K251/K263–K265; actual type_index is required, map19 supplies no implicit runtime ID | [API](REGISTRATION_REQUEST_STREAM_CODEC.md), J230-1 |
+| K268 | Fresh flags and safe count/type/extent bounds are explicit | Opaquebytes8, second-only rejected, no context/native inverse; n>uint32 rejected rather than narrowed. Reused safe BODY returns complete bytes or raises | [Domain](REGISTRATION_REQUEST_STREAM_CODEC.md), J230-2 |
+| K269 | Original fixtures and finite independent models exercise encoding joins | Literal compact thresholds, separate bitwiseCRC and original BODYgoldens; no native/observed-wire/authority equivalence | [Checks](REGISTRATION_REQUEST_STREAM_CODEC.md), J230-3 |
+| K270 | Reviewed validation binds current edits and preserves unrelated inputs | New pure test module enters guarded fixture/workspace inventory; exact executed counts and owned loopback cleanup in receipt; no client acceptance | [Receipt](../research/evidence/current-registration-request-stream-validation.json), J230-4 |
+
 ## Current registration identifier placement — October6, #229
 
 Clean input main `e7b4237904c050390ddd8cabeba37b3f1405754a`; current image/map/reference

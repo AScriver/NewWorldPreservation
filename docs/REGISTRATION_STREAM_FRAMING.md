@@ -196,3 +196,10 @@ flags/options/presence, inner class selector and V3 BODY. The class UUID is an
 inner fallback when its actual cache/lookup index is zero; map19 alone supplies
 no emitted-index proof. The #226 header/count/queue evidence keeps its original
 ordinary-stream and lower-emission limits.
+
+## Follow-up #230
+
+[The bounded original encoder](REGISTRATION_REQUEST_STREAM_CODEC.md) now implements
+the selected empty ordinary stream using the corrected #229 nilouter/inner-type
+placement and unchanged verified BODY. Type index and opaque8 fields are explicit;
+no native receive inverse, Carrier hookup or observed runtime values follow.

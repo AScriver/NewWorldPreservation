@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#230 offline implementation, October6: an original pure selected V3 sender
+encoder now joins nilouter16, fresh wrapper fields/presence, an explicit inner
+type selector and the verified BODY to the CRC/count physical stream.
+[API and checks](REGISTRATION_REQUEST_STREAM_CODEC.md), K267–K270 and
+[receipt](../research/evidence/current-registration-request-stream-validation.json)
+record required index/domain bounds, original fixtures and current input hashes.
+No map19 default, receive inverse, native/live emission or authentication is
+supplied. #212, parent178/164 and bilateral movement remain open.
+
 #229 source closure, October6: the selected V3 factory now joins its actual
 descriptor handle/object and the sender's inner type selector. The physical
 outer UUID is nil on this path; fresh wrapper fields and body presence precede

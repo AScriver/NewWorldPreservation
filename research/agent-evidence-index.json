@@ -12,6 +12,38 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-stream",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K267",
+        "K268",
+        "K269",
+        "K270"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_STREAM_CODEC.md"
+      ],
+      "scripts": [
+        "scripts/current_registration_request_stream.py"
+      ],
+      "tests": [
+        "tests/test_current_registration_request_stream.py"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-stream-validation.json",
+          "classification": "offline-executed",
+          "scope": "#230 original bounded fresh V3 sender stream encoder; source rehash/finite models and repository checks separately recorded"
+        }
+      ],
+      "fixtures": [
+        "tests/fixtures/registration/current-request-stream-original.json"
+      ],
+      "limit": "Empty ordinary stream and fresh flags0/1/3 only; explicit index/opaque8 inputs, n<=uint32. No actual runtime values, native receive inverse, Carrier emission, authentication, #212 or M1 acceptance."
+    },
+    {
       "id": "current-registration-identifier-placement",
       "roadmapTasks": [
         "M1-06B"
@@ -1371,6 +1403,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/registration/current-request-stream-original.json",
+      "classification": "synthetic",
+      "sha256": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
+      "scope": "34 original selected V3 stream vectors from literal compact widths, separate bitwiseCRC and original BODYgoldens; no real wire data"
+    },
+    {
       "path": "tests/fixtures/registration/current-lookup-text-original.json",
       "classification": "synthetic",
       "sha256": "963c4f810893daa038855916e6be69d8709a415cf5b37f676a977a81efef8825",
@@ -1480,6 +1518,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-stream-validation.json",
     "research/evidence/current-registration-identifier-placement.json",
     "research/evidence/current-registration-lookup-text-validation.json",
     "research/evidence/current-registration-setup-inputs.json",
