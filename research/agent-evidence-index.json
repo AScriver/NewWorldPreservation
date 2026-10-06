@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-c0-codec",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K235",
+        "K236",
+        "K237",
+        "K238"
+      ],
+      "docs": [
+        "docs/REGISTRATION_REQUEST_C0_CODEC.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-c0-codec.json",
+          "classification": "source-inference",
+          "scope": "#222 complete selected c0 pairedschema, incremental read/status/optional mutation, source defaults and ordinary owned-string disposal; executed static/offline checks separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Ordinary fresh construction/control flow only; known-entry constructor window and partial writer decompilations retained. Separate2c8/3e0/fullbody/framing/discriminator/authoritative meaning/#212/gameplay gates open. No native/client execution."
+    },
+    {
       "id": "current-registration-request-collection-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1071,6 +1097,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-c0-codec.json",
     "research/evidence/current-registration-request-collection-codec.json",
     "research/evidence/current-registration-request-serializer.json",
     "research/evidence/current-registration-authentication-contract.json",

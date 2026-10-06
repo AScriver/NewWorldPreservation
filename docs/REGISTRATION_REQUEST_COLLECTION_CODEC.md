@@ -103,3 +103,9 @@ These checks do not supply the remaining +0xc0/+0x2c8/+0x3e0 schemas, current
 discriminator/framing inverse, authoritative field meanings or live acceptance.
 #212 and Milestone1 remain open. The next bounded prerequisite is +0xc0's concrete
 writer/reader schema, followed by the other separately scoped nested fields.
+
+## Follow-up #222
+
+[Complete field+0xc0 schema](REGISTRATION_REQUEST_C0_CODEC.md) now closes that
+separate prerequisite at the same image. Field+0x2c8/+0x3e0 and full body/framing/
+authority remain open; #221 evidence above retains its original collection scope.

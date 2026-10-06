@@ -1,5 +1,17 @@
 # Milestone 1 roadmap
 
+#222 source result, October 6: the selected V3 field+0xc0 now has a complete
+paired schema: fifteen raw counted strings, five BE32 bit fields, one raw byte
+and a presence-first optional boolean. Default construction/owned-string normal
+cleanup and incremental cursor/output behavior are joined. Presence commits
+before its value; raw byte and strict booleans have distinct failure codes.
+[c0 contract](REGISTRATION_REQUEST_C0_CODEC.md), J222-1–4 / K235–K238 and
+[receipt](../research/evidence/current-registration-request-c0-codec.json) retain
+exact tail/ABI proof, partial decompiler warnings, copy-before-bounds and lifetime
+limits. Separate+0x2c8/+0x3e0 schemas remain next; complete request body/framing,
+authority, #212 and Milestone1 remain open. Continue the next eligible164 leaf
+after the scoped commit/completion/release.
+
 #221 source result, October 6: the selected V3 aggregate order and complete
 field+0x10 collection now join compact count, BE32 key/raw-string elements,
 duplicate first-value retention and ordinary owned-node/bucket cleanup. Failure

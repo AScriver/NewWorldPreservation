@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current V3 field+0xc0 codec — October 6, #222
+
+Clean input main `45f2e47ea9992a616d5e653a41d9930f0597de66`, refreshed pinned
+image/map/references; exact source, dirty report identities and checks:
+[original receipt](../research/evidence/current-registration-request-c0-codec.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K235 | Actual c0 writer/reader close complete paired schema | Instruction/tail/ABI-supported15rawstrings,5BE32bits,rawbyte,optionalpresence/value; memory order differs from optional wire order. Field/auth meanings unknown | [c0 contract](REGISTRATION_REQUEST_C0_CODEC.md), J222-1 |
+| K236 | Optional presence mutates before conditional value; cursor/output incremental | Raw byte any0..255/missing1, strict optional missing3/invalid4, presence0 retains inactive value.15strings copy before extent/code1; BE32 short2/noadvance. Native faults unexecuted | [c0 contract](REGISTRATION_REQUEST_C0_CODEC.md), J222-2 |
+| K237 | Fresh c0 defaults and ordinary string disposal have concrete owners | Known-entry457bytes throughRET, PDATArefusal retained;15emptySSOstrings/default0. Reverse-string destruction/topflag0 preserves placement; OOM/corruption/exceptions/finalsuccesscaller unknown | [c0 contract](REGISTRATION_REQUEST_C0_CODEC.md), J222-3 |
+| K238 | Selected c0 helper closure is a bounded schema prerequisite | Borrowed reader view/owned copied members, no helper rollback, successerrorbyte unspecified; separate2c8/3e0/fullbody/framing/authority/#212/world gates remain | [c0 contract](REGISTRATION_REQUEST_C0_CODEC.md), J222-4 |
+
 ## Current V3 sequence and first collection — October 6, #221
 
 Clean input main `29b570950380785e202f3ffd91c655a80348a428`, refreshed pinned
