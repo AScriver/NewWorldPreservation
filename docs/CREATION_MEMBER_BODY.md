@@ -2,7 +2,11 @@
 
 Work item 164, parent 177; source #236 and offline codec #237. This is a
 conditional current-image source join for UUID
-`203dc8c7-0c60-454b-a46f-566114314b84`. Its friendly class name is unknown.
+`203dc8c7-0c60-454b-a46f-566114314b84`. Its native friendly class name remains
+unconfirmed. The user's community catalog labels the matching index 10/UUID
+`MB::GdeMetadataReplicatedState`; [the intake review](../research/evidence/community-feature-slices-review.json)
+confirms mapping agreement, retains the failed native-name query and does not
+change the source-supported schema or establish runtime selection.
 The image/build, exact spans, finite windows and private artifact seals are in
 [the original source receipt](../research/evidence/current-creation-member-contract.json).
 No native client code ran.

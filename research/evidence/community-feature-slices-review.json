@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "classification": "community-reference-with-offline-mapping-comparison",
+  "recordedUtc": "2026-10-06T19:36:27.291812+00:00",
+  "workItemId": 164,
+  "trackingChanged": false,
+  "source": {
+    "description": "User-supplied feature-slices.md downloaded from a Discord post",
+    "localPath": "C:/Users/Austin/Downloads/feature-slices.md",
+    "sha256": "15d2a820b4cd26fc391747f011b49309c44728ead50e2934b31197bc0baca9ff",
+    "bytes": 591226,
+    "upstreamUrl": null,
+    "upstreamCommit": null,
+    "licenseVerified": false,
+    "rawSourceImported": false
+  },
+  "inputs": {
+    "mappingPath": "private/frida-trials/run-20261004T1733/client/typeindex.json",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "mappingGenerationTime": "2025-10-22T03:13:16Z",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "reviewBaseHead": "32cf7df39088d91ecb6392775ae3a67db131378e",
+    "workingTree": "Unrelated pending owned-client archive and official-observation scripts, tests, documentation and offline-runner changes preserved; see ignored Git snapshots."
+  },
+  "comparison": {
+    "catalogRows": 3486,
+    "mappingEntries": 7052,
+    "matchingIndexUuidPairs": 3486,
+    "mismatches": 0,
+    "duplicateIndices": 0,
+    "duplicateUuids": 0,
+    "facetMessages": 1824,
+    "facetSlices": 184,
+    "nonFacetEntries": 1662,
+    "nonFacetBuckets": 179
+  },
+  "leads": [
+    {
+      "index": 10,
+      "uuid": "203dc8c7-0c60-454b-a46f-566114314b84",
+      "communityName": "MB::GdeMetadataReplicatedState",
+      "sourceLine": 6963,
+      "existingEvidence": "research/evidence/current-creation-member-contract.json",
+      "scope": "Name for the same mapped candidate whose descriptor/factory/AssetId/GdeRef BODY was already source-supported; native friendly name remains unconfirmed."
+    },
+    {
+      "index": 13,
+      "uuid": "79c28008-4fc5-4efb-88a1-538f4fb7dde1",
+      "communityName": "MB::PositionInTheWorldReplicatedState",
+      "sourceLine": 6996,
+      "scope": "Concrete UUID/name lead for actor position-state research; no fields, values, codec, application or runtime use verified by this intake."
+    },
+    {
+      "index": 5181,
+      "uuid": "971ddbb2-67db-4beb-9632-85851d0ee00e",
+      "communityName": "Javelin::ClientMessages::PlayerComponentServerFacet_OnAckLevelInfoChanged",
+      "sourceLine": 2971,
+      "communityDirection": "client-to-server",
+      "scope": "Level-information acknowledgement lead; neither facet envelope nor callback/order semantics verified."
+    }
+  ],
+  "nativeCheck": {
+    "sourceSupportedMemberTable": "0x148041178",
+    "writerSlot": "+0x88 -> 0x141727cc0",
+    "readerSlot": "+0x90 -> 0x1417b4110",
+    "bodySlotsMatch": true,
+    "tableSpanSha256": "5be3fca61487b0cdcc162404cb1ee29a17a40d0ecbd297a42094036f46519002",
+    "spanStart": "0x148041170",
+    "spanBytes": 160,
+    "nativeNameResult": "not-established",
+    "failedQuery": "The table-minus-eight candidate did not satisfy canonical x64 RTTI complete-object-locator signature/self-RVA guards. The initial query failed and no type-name parse was attempted; this does not establish absence of RTTI elsewhere."
+  },
+  "missingBesideDownload": [
+    "uuid_to_class.json",
+    "catalog.md",
+    "facets-rmi.md",
+    "gen_feature_slices.py"
+  ],
+  "privateArtifacts": {
+    "procedure": ".scratch/feature-slices-intake-20261006/compare_catalog.py",
+    "validatedRunner": ".scratch/feature-slices-intake-20261006/run-comparison.ps1",
+    "comparison": ".scratch/feature-slices-intake-20261006/comparison.json"
+  },
+  "verification": {
+    "catalogComparison": "Passed: 3486 unique index/UUID pairs agree with the retained mapping; native BODY writer/reader slots also match.",
+    "reviewConsistency": "Passed: source hashes, row counts, three selected UUID/name/line associations, negative native-name result and document links agree with the ignored observation.",
+    "powershellValidation": "Comparison and review runners passed parser and automatic-variable checks before execution.",
+    "initialWorkspace": {
+      "receipt": ".scratch/offline-validation/run-v6yhzvms/receipt.json",
+      "status": "failed-input-stability-guard",
+      "pythonPassed": 1163,
+      "selectedPythonModules": 41,
+      "powershellSuitesPassed": 4,
+      "syntheticLoopbackListenerClosed": true,
+      "reason": "Roadmap formatting was edited during the run; the runner correctly reported InputChangedDuringRun. Test steps passed, but this is not a qualifying complete workspace receipt."
+    },
+    "repeatedWorkspace": {
+      "receipt": ".scratch/offline-validation/run-6jchp4in/receipt.json",
+      "status": "failed-input-stability-guard",
+      "pythonPassed": 1163,
+      "selectedPythonModules": 41,
+      "powershellSuitesPassed": 4,
+      "syntheticLoopbackListenerClosed": true,
+      "changedInputs": ["scripts/official_session_metadata.py"],
+      "reason": "All test steps passed with this review's files held steady, but unrelated concurrent source edits invalidated the complete workspace receipt. Relevant catalog/review checks remain usable; a stable complete-workspace pass is not claimed."
+    }
+  },
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "limits": [
+    "Agreement is with the retained mapping, not observed runtime registration, type selection, emitted wire indices or client acceptance.",
+    "Community names and facet directions remain attributed external labels; matching UUIDs do not independently prove names or schemas.",
+    "No serialization fields, facet envelope, valid world/player values, authentication semantics or playable world supplied by this catalog.",
+    "Companion files and upstream provenance/license were not supplied or verified; the raw community catalog remains outside tracked source.",
+    "No live game-process, capture, game endpoint, installed Steam file, EAC, trust-store or system configuration operation occurred."
+  ]
+}

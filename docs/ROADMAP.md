@@ -1,5 +1,22 @@
 # Milestone 1 roadmap
 
+October 6 community reference intake: the user-supplied Discord download
+`feature-slices.md` contains 3,486 unique index/UUID pairs; all agree with the
+retained mapping of 7,052 entries, verified against its recorded hash.
+[Review receipt](../research/evidence/community-feature-slices-review.json).
+It labels the existing creation-member UUID as `MB::GdeMetadataReplicatedState`
+(index 10), and supplies research targets `MB::PositionInTheWorldReplicatedState`
+(index 13) and `PlayerComponentServerFacet_OnAckLevelInfoChanged` (index 5181).
+These names/directions remain community labels: the guarded native RTTI query
+did not establish the creation class name. Existing BODY writer/reader slots
+still match. The catalog adds no field layouts, valid creation values, runtime
+selection or gameplay acceptance. Its linked schema/facet companions were not
+found beside the download. No exact existing Actionable covers this source intake;
+Actionables was not updated and all Milestone 1 gates remain open.
+Catalog and review checks passed. All workspace test steps passed; the repeat's
+complete receipt was invalidated by a concurrent edit to unrelated
+`official_session_metadata.py`. That workspace validation limit is retained.
+
 October6 continuation, #239 under177/164: paired current type8 BODY and declared
 payload extent/ownership now support an original guarded codec and bounded
 creation-record composition. [Contract/API](TYPE8_BUNDLE_BODY.md), K311–K319 and
