@@ -1,5 +1,15 @@
 # Milestone 1 roadmap
 
+#226 source closure, October 6: the registration sender's physical stream,
+IEEE CRC/header, locked queue consumer and installed backend chunk-copy/enqueue
+path are joined. The exact forwarding ABI separates a selected child pointer
+from a zero local owner slot; size/configuration and uint32 flush limits remain
+explicit. [Stream and queue report](REGISTRATION_STREAM_FRAMING.md), K251–K254
+and [receipt](../research/evidence/current-registration-stream-framing.json)
+record source checks and pure models separately. The lower-interface runtime
+choice, actual emission/datagram inverse, authenticated authority, #212 and
+bilateral movement remain unproved. Parent #178/#164 and Milestone 1 stay open.
+
 #225 offline implementation, October 6: the actually selected V3 request BODY
 now has an original pure encoder/decoder and byte fixtures. Exact field order,
 compact aliases/wrapping, first-value-wins collection reads, tagged active payloads,

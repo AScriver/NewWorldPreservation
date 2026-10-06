@@ -1,5 +1,11 @@
 # Current registration authentication and peer ownership — #211
 
+Later source closure: [#226's physical stream and queued backend join](REGISTRATION_STREAM_FRAMING.md)
+supplies concrete reserve/write/header/CRC, vector consumption and pooled chunk
+copying. Actual lower emission, a compact-record inverse, historical860 selection
+and authenticated authority remain unproved; the historical receipt below is
+unchanged.
+
 Only Actionable **211**, under **workItemId 164**, was worked. Current source
 establishes conditional request construction, client interpretation of received
 authentication results, local response-field ownership and connection-to-owner

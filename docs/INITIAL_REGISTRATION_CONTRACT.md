@@ -1,5 +1,11 @@
 # Current initial registration contract — #210
 
+Later source closure: [#226's physical stream and queued backend join](REGISTRATION_STREAM_FRAMING.md)
+supplies concrete reserve/write/header/CRC, vector consumption and pooled chunk
+copying. Actual lower emission, a compact-record inverse, historical860 selection
+and authenticated authority remain unproved; the historical receipt below is
+unchanged.
+
 Only Actionable **210**, under **workItemId164**, was worked. The bounded research
 outcome is a conditional current native contract and precise missing joins. The
 historical reliable channel0, flags0x21, 860-byte records still have **no proved

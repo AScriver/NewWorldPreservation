@@ -12,6 +12,32 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-stream-framing",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K251",
+        "K252",
+        "K253",
+        "K254"
+      ],
+      "docs": [
+        "docs/REGISTRATION_STREAM_FRAMING.md"
+      ],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-stream-framing.json",
+          "classification": "source-inference",
+          "scope": "#226 concrete physical stream/header/CRC, locked queue and installed backend chunk-copy/enqueue join; pure checks separately recorded"
+        }
+      ],
+      "fixtures": [],
+      "limit": "No native/client execution or live acceptance. CRC64/count32 and empty/high-water distinctions; positive chunk limit<=65535, adequate capacity and uint32 flush arithmetic are explicit preconditions. Member child pointer is not authenticated identity; lower runtime/datagram, historical860, #212 and M1 unproved."
+    },
+    {
       "id": "current-registration-request-body-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1187,6 +1213,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-stream-framing.json",
     "research/evidence/current-registration-request-body-codec-validation.json",
     "research/evidence/current-registration-request-3e0-codec.json",
     "research/evidence/current-registration-request-2c8-codec.json",

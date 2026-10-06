@@ -1,5 +1,11 @@
 # Current registration response body codec — #218/#219
 
+Later source closure: [#226's physical stream and queued backend join](REGISTRATION_STREAM_FRAMING.md)
+supplies concrete reserve/write/header/CRC, vector consumption and pooled chunk
+copying. Actual lower emission, a compact-record inverse, historical860 selection
+and authenticated authority remain unproved; the historical receipt below is
+unchanged.
+
 October 6, 2026; workItemId: 164 / parent #178. The selected current response
 body codec is now joined to **concrete scalar, compact-length, byte-string and
 boolean readers**, their bounds/status behavior and result ownership. This closes

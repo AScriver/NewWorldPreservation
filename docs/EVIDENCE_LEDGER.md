@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current registration stream and queued backend — October 6, #226
+
+Clean input main `040d7357dce67f4c98500e9a6e63f5339fc5ecb9`; current image/build,
+dirty-file state, exact source spans, retained query failures and adjudication:
+[original receipt](../research/evidence/current-registration-stream-framing.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K251 | Concrete stream writes reserved8, descriptor16 and actual wrapper bytes with IEEE CRC/header | Source inference plus pure CRC/stream models; CRC extent64 vs stored count32, ignored generic success, empty/nonoverflow assumptions explicit | [Stream report](REGISTRATION_STREAM_FRAMING.md), J226-1 |
+| K252 | Locked queue hands physical B/low32 L to installed backend and pooled chunk-copy lists | Source inference; exact argument shuffle, member child selection, separate zero owner slot, uint16 chunks/capacity and uint32 sticky flush gate. Lower runtime/datagram unjoined | [Stream report](REGISTRATION_STREAM_FRAMING.md), J226-2 |
+| K253 | Compact receive records are a separate direction from this selected sender envelope | Source inference/carried spans freshly rehashed; no inferred inverse, historical860 discriminator or current on-wire selection | [Stream report](REGISTRATION_STREAM_FRAMING.md), J226-3 |
+| K254 | Source and copied-buffer lifetimes are scoped and counter-reviewed | Source inference/pure models; pool control vs pool, logical reset vs zeroing, synchronous retention. Eventual chunk retirement, native faults/races and gameplay unproved | [Stream report](REGISTRATION_STREAM_FRAMING.md), J226-4 |
+
 ## Offline selected V3 request BODY codec — October 6, #225
 
 Clean input main `4b724f3228d2c77420cd00b260e5ccafaa6b74d8`; five carried current
