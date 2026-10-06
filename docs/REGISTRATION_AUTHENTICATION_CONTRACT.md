@@ -17,6 +17,11 @@ also closes the selected primitive encoding/reader ownership gap below. Its
 selected native outer-prefix reader join leaves Carrier/sender-envelope
 placement separate; no authoritative authentication contract follows.
 
+[#220's V3 serializer selection/interface-role result](REGISTRATION_REQUEST_SERIALIZER.md)
+also closes the concrete descriptor body-writer and reflected default REPClient
+dispatch boundaries. Complete nested request codecs and runtime selection remain
+separate; interface-dispatch success supplies no write or authentication authority.
+
 The [#210 report](INITIAL_REGISTRATION_CONTRACT.md) completed its bounded research
 alternative. Its historical 860-byte request discriminator, transport/framing
 bridge and concrete body codecs remain unproved. Done does not close those joins.

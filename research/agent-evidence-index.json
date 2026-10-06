@@ -12,6 +12,23 @@
   },
   "boundaries": [
     {
+      "id": "current-registration-request-serializer",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K227", "K228", "K229", "K230"],
+      "docs": ["docs/REGISTRATION_REQUEST_SERIALIZER.md"],
+      "scripts": [],
+      "tests": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-request-serializer.json",
+          "classification": "source-inference",
+          "scope": "#220 concrete reflected REPClient default/QI/dispatch, V3 descriptor body-writer selection and normal ownership; executed static/offline checks recorded separately"
+        }
+      ],
+      "fixtures": [],
+      "limit": "Selected initialized/local/normal source paths only. Nested V3 schemas/decoder, transitive retention, runtime/discriminator, authoritative auth, Carrier/framing, #212 and gameplay remain unproved. No native/client execution."
+    },
+    {
       "id": "current-registration-response-body-codec",
       "roadmapTasks": [
         "M1-06B"
@@ -1028,6 +1045,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-serializer.json",
     "research/evidence/current-registration-authentication-contract.json",
     "research/evidence/ghidra-function-slice-validation.json",
     "research/evidence/current-player-designation-join.json",

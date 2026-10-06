@@ -1,5 +1,16 @@
 # Milestone 1 roadmap
 
+#220 source result, October6: interface236 now joins reflected REPClient/default
+construction, concrete no-op callback, adjusted borrowed QueryInterface result,
+AL dispatch result and ordinary placement ownership. The selected V3 descriptor
+separately owns a serializer selecting bodywriter `0x1407ce860`: field+8's BE32
+helper then aggregate `0x1407d54a0`, with +0x460 passed by pointer. [Closed selection/role](REGISTRATION_REQUEST_SERIALIZER.md),
+J220-1–4 / K227–K230 and [receipt](../research/evidence/current-registration-request-serializer.json)
+record exact source/verification and retention/runtime qualifiers. Nested request
+schemas/decoder are the next source prerequisite; no request fixture, historical860
+discriminator, auth/Carrier/world acceptance or #212 unblock follows. Continue
+the next eligible #164 leaf after the scoped commit/completion/release.
+
 #219 implementation, October6: the [offline response body codec](REGISTRATION_RESPONSE_BODY_CODEC.md#offline-body-implementation--219)
 now encodes canonical fields and decodes source-supported aliases, returning
 consumed offsets and helper failure codes. Payload copying is extent-checked;

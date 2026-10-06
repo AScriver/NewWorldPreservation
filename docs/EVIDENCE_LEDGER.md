@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Current V3 serializer selection and interface role — October6, #220
+
+Clean input main `6094d8a294727ec20a41fb225b4b671c7c044afd`, refreshed pinned
+image/map/references; exact source, dirty report identities and checks:
+[original receipt](../research/evidence/current-registration-request-serializer.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K227 | Interface236 joins concrete reflected REPClient default construction | Instruction/table-supported factory/serializer/constructor/QI identity; runtime supplied implementation unknown, not V3 body identity | [Selection/role](REGISTRATION_REQUEST_SERIALIZER.md), J220-1 |
+| K228 | Default callback is no-op; V3+50 reports normal dispatch via AL | Complete immediate-return leaf has unspecified return value; wrapper sets AL1 after callback regardless of result. No write/acceptance/throw-return or full-RAX claim | [Selection/role](REGISTRATION_REQUEST_SERIALIZER.md), J220-2 |
+| K229 | V3 descriptor serializer selects concrete bodywriter1407ce860 | Factory/table/accessor plus actual caller146167262; BE32 scalar then aggregate1407d54a0 with six pointers. Nested schema/framing/discriminator not supplied | [Selection/role](REGISTRATION_REQUEST_SERIALIZER.md), J220-3 |
+| K230 | Query, placement rollback and descriptor serializer have distinct owners | Selected normal borrowed QI/no direct retain, flag0 state destruction versus flag1 free, owned16-byte serializer. Transitive retention/exception/final teardown unjoined | [Selection/role](REGISTRATION_REQUEST_SERIALIZER.md), J220-4 |
+
 ## Offline registration response body implementation — October6, #219
 
 Clean input main `9144dc81dcfd7aa59151f8ebdf724491ed6c43e5`; source contract
