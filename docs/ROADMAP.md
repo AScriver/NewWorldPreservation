@@ -1,5 +1,14 @@
 # Milestone 1 roadmap
 
+#219 implementation, October6: the [offline response body codec](REGISTRATION_RESPONSE_BODY_CODEC.md#offline-body-implementation--219)
+now encodes canonical fields and decodes source-supported aliases, returning
+consumed offsets and helper failure codes. Payload copying is extent-checked;
+oversized encoder strings are rejected. Original synthetic goldens and independent
+byte experiments verify that body behavior; [validation receipt](../research/evidence/current-registration-response-body-codec-validation.json)
+records focused and workspace checks. No Carrier/framing/auth/world integration
+or client acceptance follows. #212's construction/member/framing gates and
+Milestone1 remain open; continue the next eligible #164 leaf after completion/release.
+
 #218 source result, October6: the selected response body now joins fixed BE32/
 BE64 fields, two compact-counted raw-byte strings, strict boolean bytes, concrete
 bounds/status/cleanup and local-view/message ownership. The same compact reader

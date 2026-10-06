@@ -1,5 +1,17 @@
 # Evidence ledger
 
+## Offline registration response body implementation — October6, #219
+
+Clean input main `9144dc81dcfd7aa59151f8ebdf724491ed6c43e5`; source contract
+#218 and refreshed owned image/map/reference identities. Dirty implementation
+hashes and actual checks: [validation receipt](../research/evidence/current-registration-response-body-codec-validation.json).
+
+| ID | Claim | Classification / scope and limit | Evidence |
+|---|---|---|---|
+| K224 | Original offline body encoder/decoder implements the closed field contract | Executed pure Python and original synthetic goldens; canonical counts, raw bytes, aliases/wrap, strict bools and partial consumed offsets. Body-only, no client/native execution | [Implementation](REGISTRATION_RESPONSE_BODY_CODEC.md#offline-body-implementation--219), codec/tests/fixture hashes |
+| K225 | Offline string input/copy bounds are deliberately stronger | Source-reviewed pre-copy extent guard and oversized encoder refusal; explicit differences from native copy-before-check/empty substitution. No native fault-cleanup claim | [Implementation](REGISTRATION_RESPONSE_BODY_CODEC.md#offline-body-implementation--219), validation receipt |
+| K226 | Independent malformed/boundary byte checks and required workspace checks pass | Executed checks at receipt-pinned dirty inputs; repository and byte tests cannot establish Carrier placement, authenticated identity, #212 readiness or gameplay | [Validation receipt](../research/evidence/current-registration-response-body-codec-validation.json) |
+
 ## Current registration response body codec — October6, #218
 
 Clean input main `2e032d6cfc1d69c02e6623f17e9ed0f330085fb1`, refreshed owned

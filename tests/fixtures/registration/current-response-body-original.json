@@ -1,0 +1,26 @@
+{
+  "classification": "synthetic body-only golden bytes; hand-derived from the pinned current-image source contract, not native execution or client acceptance",
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "contract": "research/evidence/current-registration-response-body-codec.json",
+  "sourceClaims": ["B218-1", "B218-2", "B218-3", "B218-4"],
+  "vectors": [
+    {
+      "name": "minimum",
+      "field_08": 0,
+      "field_10": 0,
+      "field_18_hex": "",
+      "field_38_hex": "",
+      "flags": [false, false, false, false],
+      "body_hex": "000000000000000000000000000000000000"
+    },
+    {
+      "name": "endian-raw-nul-bool-order",
+      "field_08": 16909060,
+      "field_10": 1234605616436508552,
+      "field_18_hex": "00ff41",
+      "field_38_hex": "7f00",
+      "flags": [false, true, false, true],
+      "body_hex": "0102030411223344556677880300ff41027f0000010001"
+    }
+  ]
+}

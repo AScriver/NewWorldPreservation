@@ -21,22 +21,30 @@
         "K220",
         "K221",
         "K222",
-        "K223"
+        "K223",
+        "K224",
+        "K225",
+        "K226"
       ],
       "docs": [
         "docs/REGISTRATION_RESPONSE_BODY_CODEC.md"
       ],
-      "scripts": [],
-      "tests": [],
+      "scripts": ["scripts/current_registration_response_body.py"],
+      "tests": ["tests/test_current_registration_response_body.py"],
       "evidence": [
         {
           "path": "research/evidence/current-registration-response-body-codec.json",
           "classification": "source-inference",
           "scope": "#218 current selected response body scalar/string/bool/prefix codecs, direct borrowed reader and result/frame ownership; simulations and offline checks recorded separately"
+        },
+        {
+          "path": "research/evidence/current-registration-response-body-codec-validation.json",
+          "classification": "offline-executed",
+          "scope": "#219 original body-only Python codec, hand-derived synthetic goldens, independent byte experiments and reviewed workspace checks; no native/client execution"
         }
       ],
-      "fixtures": [],
-      "limit": "Body/static selected native reader contract only. Native string copy-before-extent and success error-byte retention remain explicit. Carrier placement/sender-envelope inverse, authentication, #212 member/construction/framing gates and gameplay unproved. No native client execution."
+      "fixtures": ["tests/fixtures/registration/current-response-body-original.json"],
+      "limit": "Selected native source contract and offline body codec only. Offline payload precheck/oversized input refusal are deliberate stronger policies. Carrier placement/sender-envelope inverse, authentication, #212 member/construction/framing gates and gameplay unproved. No native client execution."
     },
     {
       "id": "current-registration-acceptance-subscriber",
@@ -922,6 +930,12 @@
     }
   ],
   "fixtures": [
+    {
+      "path": "tests/fixtures/registration/current-response-body-original.json",
+      "classification": "synthetic",
+      "sha256": "c7f52d4008858c05670607503e828f2d5381a3ff75e33e146ac26c2bddea52e6",
+      "scope": "#219 hand-derived original body goldens from the pinned source contract; pure Python checks are not native/client acceptance"
+    },
     {
       "path": "tests/fixtures/connectivity/current-client-bootstrap.json",
       "classification": "observed-metadata",

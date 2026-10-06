@@ -7,7 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
-| `current-registration-response-body-codec` | M1-06B | [Current response body](REGISTRATION_RESPONSE_BODY_CODEC.md) |
+| `current-registration-response-body-codec` | M1-06B | [Current body contract and offline codec](REGISTRATION_RESPONSE_BODY_CODEC.md) |
 | `current-registration-acceptance-subscriber` | M1-06B | [Concrete conditional subscriber](REGISTRATION_ACCEPTANCE_SUBSCRIBER.md) |
 | `ghidra-function-slices` | Offline tooling | [Function-scoped Ghidra](TOOLS.md#function-scoped-ghidra-default) |
 | `reference-environment` | M1-00 | [First Light analysis](FIRST_LIGHT_ANALYSIS.md) |

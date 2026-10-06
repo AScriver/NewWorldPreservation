@@ -1,4 +1,4 @@
-# Current registration response body codec — #218
+# Current registration response body codec — #218/#219
 
 October 6, 2026; workItemId: 164 / parent #178. The selected current response
 body codec is now joined to **concrete scalar, compact-length, byte-string and
@@ -114,3 +114,28 @@ restricted source-instruction simulations independently checked writer/prefix
 equations; these were simulations, not native execution. The original receipt
 records focused/offline validation separately. #212's fresh construction/member/
 framing gates, #178/#164 and Milestone1 remain open.
+
+## Offline body implementation — #219
+
+[Original Python codec](../scripts/current_registration_response_body.py) exposes
+the immutable `RegistrationResponseBody(field_08, field_10, field_18, field_38, flags)`,
+`encode_body(record)` and `decode_body(data)`. Scalar inputs are unsigned bit
+patterns; strings are owned raw `bytes`; flags are four booleans. Decoding returns
+`(record, consumed)` so a caller can account for trailing bytes without inventing
+an exact-exhaustion rule. `DecodeError.code` and `.cursor` preserve the helper
+failure code and consumed body offset, including partial prefixes and invalid
+boolean consumption. No success error-code byte is invented.
+
+The encoder writes canonical compact counts and rejects strings above 0x2ffff
+bytes instead of silently replacing them with empty strings. The decoder checks
+the complete payload extent before copying, then owns the resulting bytes. These
+are deliberate stronger input/bounds policies than the native writer/helper.
+Reader width aliases, f8..ff aliases and uint32 wrapping remain supported.
+
+[Hand-derived synthetic body goldens](../tests/fixtures/registration/current-response-body-original.json),
+[focused tests](../tests/test_current_registration_response_body.py) and a separate
+independent byte experiment cover field order/endian, raw NUL bytes, prefix
+thresholds/aliases, caps, short reads, cursor effects, boolean rejection and trailing
+bytes. [Validation receipt](../research/evidence/current-registration-response-body-codec-validation.json)
+pins the implemented files and actual checks. This module has no message type,
+outer frame, Carrier, authentication or world-entry integration; #212 remains blocked.
