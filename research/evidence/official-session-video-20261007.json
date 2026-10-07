@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 1,
+  "classification": "official_user_reviewed_gameplay_recording_and_direct_decoded_frame_observations",
+  "status": "planned_solo_visual_references_preserved_friend_session_deferred",
+  "workItemId": 164,
+  "coordinator": 166,
+  "baselineUnitCommit": "e1f84fe",
+  "recordedAtUtc": "2026-10-07T22:13:07.470615+00:00",
+  "privateRun": "private/official-sessions/solo-video-20261007T2148Z",
+  "build": {
+    "installedSteamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "installedImageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "installedIdentityPreflightReused": true,
+    "liveProcessImageVerified": false
+  },
+  "clip": {
+    "name": "recordings/solo-main-A.mp4",
+    "sha256": "f9583046b427f106a5495006eb93e7a7fffead0510131243fc713aec3e083bbb",
+    "bytes": 69772275,
+    "durationSeconds": 56.7171,
+    "sourceCreationUtc": "2026-10-07T22:04:02.1286076Z",
+    "sourceLastWriteUtc": "2026-10-07T22:04:56.1236269Z"
+  },
+  "copyAndSourceHashesMatched": true,
+  "visualObservations": [
+    {
+      "clipSeekSeconds": 0.0,
+      "observed": "own character-selection screen"
+    },
+    {
+      "clipSeekSeconds": 5.0,
+      "observed": "same selection screen and Play control"
+    },
+    {
+      "clipSeekSeconds": 10.0,
+      "observed": "selection screen with Play spinner"
+    },
+    {
+      "clipSeekSeconds": 15.0,
+      "observed": "world-loading screen"
+    },
+    {
+      "clipSeekSeconds": 20.0,
+      "observed": "world-loading progress bar"
+    },
+    {
+      "clipSeekSeconds": 25.0,
+      "observed": "own player rendered in world with HUD"
+    },
+    {
+      "clipSeekSeconds": 30.0,
+      "observed": "world view/camera heading and player pose changed"
+    },
+    {
+      "clipSeekSeconds": 35.0,
+      "observed": "player action pose and visual effect"
+    },
+    {
+      "clipSeekSeconds": 40.0,
+      "observed": "ability effect/HUD cooldown changes"
+    },
+    {
+      "clipSeekSeconds": 45.0,
+      "observed": "different world view and persistent player visual effect"
+    },
+    {
+      "clipSeekSeconds": 50.0,
+      "observed": "tree interaction and gathering reward notification"
+    },
+    {
+      "clipSeekSeconds": 52.0,
+      "observed": "tree chopping action and progress indicator"
+    },
+    {
+      "clipSeekSeconds": 54.0,
+      "observed": "continued tree chopping action"
+    },
+    {
+      "clipSeekSeconds": 55.7,
+      "observed": "tree tilting/falling and loot/logging reward notifications"
+    }
+  ],
+  "userReportedActions": {
+    "receivedAtUtc": "2026-10-07T22:07:05Z",
+    "reportedSequence": [
+      "safe login",
+      "movement",
+      "abilities",
+      "gathering",
+      "chopped down tree"
+    ],
+    "source": "direct user response; report time is not exact action time"
+  },
+  "reviewReceiptSha256": "35a5b4a3e006acb7b52889cfed2c22da61ad27e607089edfb7089c83e1f78af9",
+  "privatePreservationReceiptSha256": "c9724f31c9af2020fa22a8f515e91b7e1bb4d912bb9a6db10624a774515e9e78",
+  "observationMethod": "Fourteen individually reviewed decoded/downscaled frames at explicit clip seeks plus separate user report; not continuous video review.",
+  "reproduction": {
+    "toolVersion": "ffmpeg8.1 essentials build from local resolved ffmpeg command",
+    "arguments": [
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "<seekSeconds>",
+      "-i",
+      "<private clip>",
+      "-frames:v",
+      "1",
+      "-vf",
+      "scale=960:-2",
+      "-an",
+      "<new frame path>"
+    ],
+    "timing": "Explicit seek requested; nearest decoded frame precision bounded by video frame interval. No wall-clock synchronization inferred.",
+    "sparseFirstPass": "Earlier fps=1/5 previews retained separately; their nominal times were not used for exact-offset claims."
+  },
+  "privacy": {
+    "userReviewedExactClip": true,
+    "microphoneOffUserAttestation": true,
+    "noCredentialsOrUnconsentingIdentifiersUserAttestation": true,
+    "sampledPixelsReviewed": true,
+    "continuousPixelsOrAudioIndependentlyReviewed": false,
+    "userOwnDisplayLabelsKeptPrivate": true
+  },
+  "validationReused": {
+    "workspaceReceipt": ".scratch/offline-validation/run-yph5ma7e/receipt.json",
+    "workspaceReceiptSha256": "f92982b6a851b27af7b06b0a5bac4e47cfc1e8e40643c0c4b17b428996037b40",
+    "pythonCases": 1429,
+    "pythonModules": 48,
+    "powershellSuites": 5,
+    "noSelectedInputsChangedDuringRun": true,
+    "scope": "Executed integration before this evidence-only recording update; reuse unaffected code/tests. Recheck changed evidence/docs/catalog."
+  },
+  "noLiveMemoryLogsSocketsPacketsCollected": true,
+  "noClientOrSystemChanges": true,
+  "privateServerGameplayAcceptance": false,
+  "remainingShutdownCriticalGaps": [
+    "Consenting friend mutual visibility/bilateral movement and remote logout/removal/reappearance with both viewpoints; explicitly deferred by user October7."
+  ],
+  "limits": [
+    "No separately verified jump/stationary pause in these samples.",
+    "No logout/return or inventory-before/after persistence frames in this clip.",
+    "Key/button events and causality are not observed; movement/actions are user-reported and supported by rendered changes.",
+    "Loot UI is visible; authoritative inventory mutation and server acceptance are unobserved.",
+    "No remote player, packet contents, actor ID, authority or private-server proof.",
+    "Credential authentication, queue and exact wall-clock action times remain unknown."
+  ],
+  "updatedAtUtc": "2026-10-07T22:33:42.769789+00:00",
+  "additionalClips": [
+    {
+      "id": "return",
+      "clip": {
+        "name": "recordings/solo-return-A.mp4",
+        "sha256": "3ee403d7281b50aa55cf6c09f0da36068a02bcb59f689ad8c45632e0f751cd0d",
+        "bytes": 89470897,
+        "durationSeconds": 76.050433,
+        "frameRate": "60/1",
+        "sourceCreationUtc": "2026-10-07T22:10:57.1125606Z",
+        "sourceLastWriteUtc": "2026-10-07T22:12:10.4425433Z"
+      },
+      "visualObservations": [
+        {
+          "clipSeekSeconds": 0.0,
+          "observed": "own player rendered on stone path with HUD"
+        },
+        {
+          "clipSeekSeconds": 10.0,
+          "observed": "player approaching labeled NPC; world view changed"
+        },
+        {
+          "clipSeekSeconds": 20.0,
+          "observed": "player/world rendered with combat reward notifications"
+        },
+        {
+          "clipSeekSeconds": 25.0,
+          "observed": "inventory open; wood-icon stack counts 46,31,2 readable"
+        },
+        {
+          "clipSeekSeconds": 30.0,
+          "observed": "world view and additional loot reward notifications"
+        },
+        {
+          "clipSeekSeconds": 40.0,
+          "observed": "in-world menu navigation overlay"
+        },
+        {
+          "clipSeekSeconds": 45.0,
+          "observed": "exit-to-main-menu confirmation dialog"
+        },
+        {
+          "clipSeekSeconds": 50.0,
+          "observed": "startup/return logo and loading progress"
+        },
+        {
+          "clipSeekSeconds": 55.0,
+          "observed": "own character-selection screen with Play control"
+        },
+        {
+          "clipSeekSeconds": 60.0,
+          "observed": "same selection screen with Play spinner"
+        },
+        {
+          "clipSeekSeconds": 65.0,
+          "observed": "world-loading screen and progress"
+        },
+        {
+          "clipSeekSeconds": 70.0,
+          "observed": "own world player/HUD rendered again in same visible vicinity"
+        },
+        {
+          "clipSeekSeconds": 75.5,
+          "observed": "returned world player, changed view and HUD notices"
+        }
+      ],
+      "reviewReceiptSha256": "52d411942c3f42be697526bcb0a836af91bf9754f18e2cd46e11299b4d4e47a8",
+      "privatePreservationReceiptSha256": "791e2589e833e987b0cd85d109ff9786aa30f871f7e405cc971fa7177087c751",
+      "observationMethod": "13 individually reviewed explicit-seek frames; not continuous video or audio review.",
+      "reproduction": {
+        "toolVersion": "ffmpeg8.1 essentials build from local resolved ffmpeg command",
+        "arguments": [
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostdin",
+          "-n",
+          "-ss",
+          "<seekSeconds>",
+          "-i",
+          "<private clip>",
+          "-frames:v",
+          "1",
+          "-vf",
+          "scale=<960 or 1920>:-2",
+          "-an",
+          "<new frame path>"
+        ],
+        "fullResolutionSeeks": [
+          20,
+          25,
+          30,
+          75.5
+        ],
+        "timing": "Explicit seek requested; nearest decoded frame precision bounded by video frame interval. No wall-clock synchronization inferred.",
+        "sparseFirstPass": "Earlier fps=1/5 previews retained; nominal times excluded from exact-offset claims."
+      },
+      "privacy": {
+        "userReviewedExactClip": true,
+        "attestationMethod": "Exact path submitted in response to explicit privacy-reviewed clip request",
+        "microphoneOffUserAttestation": true,
+        "noCredentialsOrUnconsentingIdentifiersUserAttestation": true,
+        "sampledPixelsReviewed": true,
+        "continuousPixelsOrAudioIndependentlyReviewed": false,
+        "ownCharacterLabelsAndProprietaryPixelsKeptPrivate": true
+      },
+      "limits": [
+        "Rendered frames do not expose keys/buttons, network authority, actor identities or backend transactions.",
+        "File UTC and report/collection UTC are distinct from actual action timestamps.",
+        "No remote player viewpoint, disappearance or reappearance was observed.",
+        "Safe character selection is visible; credential authentication and queue behavior are unobserved.",
+        "Post-return inventory absent from this clip; supplemented by a later separate clip."
+      ]
+    },
+    {
+      "id": "after-return",
+      "clip": {
+        "name": "recordings/solo-after-return-A.mp4",
+        "sha256": "b89f14e769d4d03e28cb72a7d8022ef1f4f720362ebb0a5a04c1916e34e3eafa",
+        "bytes": 48726810,
+        "durationSeconds": 38.140133,
+        "frameRate": "120/1",
+        "sourceCreationUtc": "2026-10-07T22:18:27.5565692Z",
+        "sourceLastWriteUtc": "2026-10-07T22:19:02.9265090Z"
+      },
+      "visualObservations": [
+        {
+          "clipSeekSeconds": 0.0,
+          "observed": "own mounted player rendered in wooded location"
+        },
+        {
+          "clipSeekSeconds": 10.0,
+          "observed": "inventory open while mounted"
+        },
+        {
+          "clipSeekSeconds": 15.0,
+          "observed": "inventory categories and counts visible"
+        },
+        {
+          "clipSeekSeconds": 20.0,
+          "observed": "wood tooltip and wood-icon counts 46,31,2 visible"
+        },
+        {
+          "clipSeekSeconds": 25.0,
+          "observed": "same wood-icon counts; tooltip transition in progress"
+        },
+        {
+          "clipSeekSeconds": 30.0,
+          "observed": "inventory closed; mounted player and world visible"
+        },
+        {
+          "clipSeekSeconds": 33.0,
+          "observed": "mounted player/world pose at rest"
+        },
+        {
+          "clipSeekSeconds": 34.0,
+          "observed": "same mounted player/world pose at rest"
+        },
+        {
+          "clipSeekSeconds": 35.0,
+          "observed": "mount/rider raised over path with lifted legs"
+        },
+        {
+          "clipSeekSeconds": 35.5,
+          "observed": "mount/rider lowering with visible dust"
+        },
+        {
+          "clipSeekSeconds": 36.0,
+          "observed": "grounded mount/rider pose"
+        },
+        {
+          "clipSeekSeconds": 36.5,
+          "observed": "mounted player/world pose at rest after rise/landing"
+        },
+        {
+          "clipSeekSeconds": 37.0,
+          "observed": "same mounted player/world pose at rest"
+        },
+        {
+          "clipSeekSeconds": 37.5,
+          "observed": "same mounted player/world pose at rest"
+        },
+        {
+          "clipSeekSeconds": 38.0,
+          "observed": "same mounted player/world pose at rest"
+        }
+      ],
+      "reviewReceiptSha256": "f7cfefc8ff7c1fca43e1732e83e43bc116aa4591e20a2be3b5d61d8485972b26",
+      "privatePreservationReceiptSha256": "71168c78ce22aa577f991b76b2555e90d3eaa0399682b865b0803c3c3448e296",
+      "observationMethod": "15 individually reviewed explicit-seek frames; not continuous video or audio review.",
+      "reproduction": {
+        "toolVersion": "ffmpeg8.1 essentials build from local resolved ffmpeg command",
+        "arguments": [
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostdin",
+          "-n",
+          "-ss",
+          "<seekSeconds>",
+          "-i",
+          "<private clip>",
+          "-frames:v",
+          "1",
+          "-vf",
+          "scale=<960 or 1920>:-2",
+          "-an",
+          "<new frame path>"
+        ],
+        "fullResolutionSeeks": [
+          10,
+          15,
+          20,
+          25
+        ],
+        "timing": "Explicit seek requested; nearest decoded frame precision bounded by video frame interval. No wall-clock synchronization inferred.",
+        "sparseFirstPass": "Earlier fps=1/5 previews retained; nominal times excluded from exact-offset claims."
+      },
+      "privacy": {
+        "userReviewedExactClip": true,
+        "attestationMethod": "Exact path submitted in response to explicit privacy-reviewed clip request",
+        "microphoneOffUserAttestation": true,
+        "noCredentialsOrUnconsentingIdentifiersUserAttestation": true,
+        "sampledPixelsReviewed": true,
+        "continuousPixelsOrAudioIndependentlyReviewed": false,
+        "ownCharacterLabelsAndProprietaryPixelsKeptPrivate": true
+      },
+      "limits": [
+        "Rendered frames do not expose keys/buttons, network authority, actor identities or backend transactions.",
+        "File UTC and report/collection UTC are distinct from actual action timestamps.",
+        "No remote player viewpoint, disappearance or reappearance was observed.",
+        "Safe character selection is visible; credential authentication and queue behavior are unobserved.",
+        "Different location and additional actions between clips; intervening inventory activity is uncontrolled.",
+        "Mount/rider rise and landing are visible; an unmounted jump was not reviewed."
+      ]
+    },
+    {
+      "id": "travel",
+      "clip": {
+        "name": "recordings/solo-travel-A.mp4",
+        "sha256": "d0b9f61a57017ca152434a5546a90aa835b07b9e4cf003f185301d23ff9fc860",
+        "bytes": 55198393,
+        "durationSeconds": 43.683566,
+        "frameRate": "60/1",
+        "sourceCreationUtc": "2026-10-07T22:22:31.8560465Z",
+        "sourceLastWriteUtc": "2026-10-07T22:23:12.7824421Z"
+      },
+      "visualObservations": [
+        {
+          "clipSeekSeconds": 0.0,
+          "observed": "world player near departure shrine"
+        },
+        {
+          "clipSeekSeconds": 10.0,
+          "observed": "world player at supported shrine interaction"
+        },
+        {
+          "clipSeekSeconds": 15.0,
+          "observed": "map interface with travel points"
+        },
+        {
+          "clipSeekSeconds": 17.5,
+          "observed": "fast-travel confirmation dialog"
+        },
+        {
+          "clipSeekSeconds": 20.0,
+          "observed": "departure visual effect and countdown"
+        },
+        {
+          "clipSeekSeconds": 25.0,
+          "observed": "departure countdown nearing completion"
+        },
+        {
+          "clipSeekSeconds": 26.0,
+          "observed": "continued departure countdown"
+        },
+        {
+          "clipSeekSeconds": 27.0,
+          "observed": "departure countdown below one second"
+        },
+        {
+          "clipSeekSeconds": 28.0,
+          "observed": "loading artwork with progress region"
+        },
+        {
+          "clipSeekSeconds": 29.0,
+          "observed": "loading artwork and visible progress"
+        },
+        {
+          "clipSeekSeconds": 30.0,
+          "observed": "continued loading progress"
+        },
+        {
+          "clipSeekSeconds": 32.0,
+          "observed": "local player/HUD rendered at visibly different destination shrine"
+        },
+        {
+          "clipSeekSeconds": 35.0,
+          "observed": "local player leaving destination steps; changed location/view"
+        },
+        {
+          "clipSeekSeconds": 40.0,
+          "observed": "local player farther along destination path"
+        },
+        {
+          "clipSeekSeconds": 41.0,
+          "observed": "player/world pose and view changed"
+        },
+        {
+          "clipSeekSeconds": 42.0,
+          "observed": "local player on destination path"
+        },
+        {
+          "clipSeekSeconds": 43.0,
+          "observed": "player action pose, effect and HUD cooldown"
+        }
+      ],
+      "reviewReceiptSha256": "9dd1f583e920d887fcada2c6d71a29008be498dad41a5596f0d54613f6caf0d0",
+      "privatePreservationReceiptSha256": "d87f0bd88eaa16d2c0d1afd582a659282f70f743c9cabec1c0d0cba0daa69b48",
+      "observationMethod": "Seventeen individually reviewed explicit-seek frames; not continuous video or audio review.",
+      "reproduction": {
+        "toolVersion": "ffmpeg8.1 essentials build from local resolved ffmpeg command",
+        "arguments": [
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostdin",
+          "-n",
+          "-ss",
+          "<seekSeconds>",
+          "-i",
+          "<private clip>",
+          "-frames:v",
+          "1",
+          "-vf",
+          "scale=960:-2",
+          "-an",
+          "<new frame path>"
+        ],
+        "timing": "Explicit seeks, nearest decoded frame interval precision; no synchronized game-action wall clock.",
+        "sparseFirstPass": "Nominal fps=1/5 preview offsets excluded from exact-time claims."
+      },
+      "privacy": {
+        "userReviewedExactClip": true,
+        "attestationMethod": "Exact path submitted in response to explicit privacy-reviewed clip request",
+        "microphoneOffUserAttestation": true,
+        "noCredentialsOrUnconsentingIdentifiersUserAttestation": true,
+        "sampledPixelsReviewed": true,
+        "continuousPixelsOrAudioIndependentlyReviewed": false,
+        "ownCharacterLabelsAndProprietaryPixelsKeptPrivate": true
+      },
+      "limits": [
+        "Ordinary supported travel is a visible behavioral reference, not a backend map/context boundary or protocol claim.",
+        "Key/button input, authoritative position/state and inventory after travel are unobserved.",
+        "No remote player evidence. No memory, logs, sockets or packets collected for this recording.",
+        "Rendered player motion/effects are sampled; unmounted jump is not established.",
+        "File/report UTC is not exact game-action timing."
+      ]
+    }
+  ],
+  "visibleInventoryContinuity": {
+    "reviewedAtUtc": "2026-10-07T22:23:31.609096+00:00",
+    "classification": "visible_inventory_count_continuity_between_separate_reviewed_clips",
+    "beforeLogout": {
+      "clipSha256": "3ee403d7281b50aa55cf6c09f0da36068a02bcb59f689ad8c45632e0f751cd0d",
+      "seekSeconds": 25.0,
+      "frameSha256": "d2d46943a418b996287b31cae3bfff7d7723ff32abc499d774e9dc9b8a4b2b8a"
+    },
+    "afterReturn": {
+      "clipSha256": "b89f14e769d4d03e28cb72a7d8022ef1f4f720362ebb0a5a04c1916e34e3eafa",
+      "seekSeconds": 20.0,
+      "frameSha256": "9d5dca2ca4f6d7a35ce38dda290001a84e6dd9ded42df10614c3cc0ef338ab8c"
+    },
+    "woodIconStackCounts": {
+      "before": [
+        46,
+        31,
+        2
+      ],
+      "after": [
+        46,
+        31,
+        2
+      ],
+      "matched": true
+    },
+    "method": "Human pixel comparison of visible wood icons/counts, with one named tooltip in after-return frame; no stable item ID read.",
+    "limits": [
+      "Count equality supports visible continuity only. Additional gameplay between clips is uncontrolled.",
+      "No inventory count before the original gathering; exact gathering delta remains unknown.",
+      "No causal join of gathered rewards to these exact stacks or proof of authoritative persistence."
+    ],
+    "reviewReceiptSha256": "6938ccadb97fd7c20946f285d27f4e7c8187f5e2b3e34dbb6bb5363ba184d2a9"
+  },
+  "optionalPrecisionGaps": [
+    "Unmounted jump; exact pre-gather count/delta; uninterrupted controlled inventory-persistence reproduction if needed.",
+    "Post-fast-travel inventory continuity; queue/failure behavior only if naturally encountered and safely recordable."
+  ],
+  "limitsScope": "Original limits below apply to the main clip; each additional clip and inventory comparison retain their own limits.",
+  "sourceSha256": {
+    "scripts/official_session_metadata.py": "8e275803b418b0d59a29d4894ebceab4951eac275022c26e1880d2ddf9d16bc8",
+    "scripts/OfficialObservation.psm1": "d630c171389319214b2062c6c48fb81581cc92b9d49cb4230b00e54e3a846120",
+    "scripts/Start-OfficialObservation.ps1": "654f81716b899df6ea26b3105b09b08129897d3519e63aff7ee0dc6dffc79fd8",
+    "scripts/Collect-OfficialLogSuffix.ps1": "8d3a7a1867c569d3db52609fa655abc781b8f84fd645555721a1f6da6a841a02",
+    "scripts/preserve_owned_client.py": "82305eee5242815dd4e17adc4179186a0bd657d3f092cc56be352462e9c6362d",
+    "tests/test_official_session_metadata.py": "808ed068fa38b8e2684f9d83f87883d7cab94e49ca9690fb6478f84df7cc3f5d",
+    "tests/test_official_observation.ps1": "9f35f677311d93c4d2f91348ed2e08844490341c429d11088018cd28de759e63",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "userDeferredSecondPlayerAtUtc": "2026-10-07T22:32:11Z",
+  "privatePacketManifestSha256": "cc75b33af0ce0b05e4a7a31cfc2f6dbe5c008c8f53bbfafaaa3c6a25c10fe2da",
+  "privatePacketCounts": {
+    "clips": 5,
+    "bytes": 300067262,
+    "directlyReviewedFrames": 63,
+    "includesPreviouslyReceiptedTestClip": true
+  },
+  "cleanup": {
+    "privateReceiptSha256": "bb803f084bcc040df1e2290f65ea97ae4174cf41249e4d79ec8e21b33a08dbb9",
+    "userConfirmedNormalExit": true,
+    "publicGameAndOwnedCollectorAbsent": true,
+    "hostsDigestUnchanged": true,
+    "noForcedTerminationOrSystemChanges": true,
+    "videoPacketLiveCollectorStarted": false
+  },
+  "sealedAtUtc": "2026-10-07T22:36:34.218782+00:00"
+}

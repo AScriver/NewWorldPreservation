@@ -27,6 +27,26 @@ remain user-attested; only sampled pixels were independently inspected.
 [Continuation receipt](../research/evidence/shutdown-preservation-20261007.json)
 binds review hashes and limits.
 
+The same video-only packet now preserves four further exact, privacy-reviewed
+Game Bar clips. Source/copy SHA-256 hashes match; all pixels and audio stay private.
+[Gameplay and return receipt](../research/evidence/official-session-video-20261007.json)
+binds each claim to clip hashes, explicit playback seeks and private review receipts.
+
+| Clip | Preserved visual reference |
+|---|---|
+| Main, 56.7171 seconds / 69,772,275 bytes | Selection/Play/loading; visible local player; changed world view/pose, ability effects, gathering notifications, chopping and tree falling. Movement/control inputs are separately user-reported; pressed keys and network acceptance were not observed. |
+| Return, 76.050433 seconds / 89,470,897 bytes | Inventory before logout; main-menu exit confirmation; selection/Play/loading; local player rendered again in the same visible vicinity. No remote removal/reappearance or actor identity evidence. |
+| After return, 38.140133 seconds / 48,726,810 bytes | Inventory wood-icon counts 46/31/2 match the pre-logout frame; one wood tooltip identifies its visible stack. Mounted rest, rise and landing are sampled. This is a later clip in another location with uncontrolled intervening actions; equality supports visible count continuity only. |
+| Fast travel, 43.683566 seconds / 55,198,393 bytes | Map choice/confirmation, departure countdown, loading at 28–30 seconds, destination player/HUD at 32 seconds and changed world position/view afterward. This is an ordinary supported route, without a claim about backend map/context boundaries. |
+
+The test is 60 fps, as are main/return/travel; the after-return clip reports 120 fps.
+Direct review covers named decoded frames, not continuous playback or independent
+audio review. Source file UTC, collection UTC and playback offsets remain distinct.
+No pre-gather inventory count was captured: exact gathering delta, stable item IDs
+and authoritative persistence remain unknown. No unmounted jump was established.
+These precision gaps do not require repeating completed solo sequences unless a
+specific preservation question needs them. The next necessary live session is F1/F2.
+
 The initial Steam-window clip and a later user-reported Codex-window clip are
 excluded. The user reported a natural internet disconnect before the main clip
 started; no disconnect footage exists. The first strict collector closed at
@@ -40,16 +60,16 @@ and [capture boundaries](OFFICIAL_SESSION_CAPTURE.md). Done #241/#242/#243/#245
 retain their exact limited outcomes; supplementing their evidence does not turn
 reports into footage or reopen those checkpoints.
 
-## Concrete missing evidence, in value order
+## Collection checklist and remaining gaps
 
 | Gap | Collection and completion boundary |
 |---|---|
-| S1: rendered entry and local controls | Record safe loading → visible player/world; walk, turn, stop, jump and move camera. Inspect the clip with playback offsets. Distinguish visible motion from reports about pressed controls; game logs do not fill missing frames. Capture startup/selection/queue only when privacy permits; mark each omitted transition explicitly. |
-| S2: visible ordinary return | During the same solo session, record ordinary logout/selection and relogin/loading/local return where safe. Stop before credential or identifying screens; use separate clips as necessary. This one repetition fills the missing visual evidence. |
+| S1: rendered entry and local controls | Preserved selection/loading/local player, changed view/pose and ability effects in main clip. Mounted rest/rise/landing appears in after-return clip. Key/button causality, unmounted jump and queue remain unobserved; no routine repeat requested. |
+| S2: visible ordinary return | Preserved exit confirmation, selection/Play/loading and local rendered return in the return clip. This fills the missing local visual reference; remote actor removal/reappearance remains F2. |
 | F1: mutual visibility and movement | Defer execution. A consenting friend with their own legitimate client/account records viewpoint B. Capture approach/departure, then walk/turn/stop/jump in both directions with the observer stationary. Both clips must support the attributed observations. |
 | F2: remote logout/reappearance | With that friend, A remains recording while B logs out and returns. Preserve A's visible disappearance/reappearance plus B's local safe transitions. Then swap if needed to cover the opposite role. Actor IDs/reuse and packet causes remain unknown. |
-| S3: one server-driven state change | Useful while F1/F2 are deferred: one ordinary gathering interaction plus the own inventory before/after and after the already planned relogin. Record the visible item/count change, not an inferred backend transaction. Do this only where private recording excludes unrelated players/identifiers. |
-| S4: map transition, if needed | After S1/S2/S3, one ordinary supported zone/fast-travel transition can preserve destination/loading/control and inventory continuity. Record a concrete missing map-transition dependency first; do not repeat routes to accumulate footage without a question. |
+| S3: gathering and visible state continuity | Preserved gathering/tree-felling/reward UI and wood-icon count equality across logout/return. Pre-gather inventory and uninterrupted intervening activity were not recorded, so exact delta/backend persistence are unproved. Repeat only for that specific missing comparison if needed. |
+| S4: supported travel transition | Preserved one ordinary fast-travel map/confirmation/countdown/loading/destination/movement reference. Post-travel inventory was not opened; inventory continuity across travel remains unknown. Do not repeat routes without a concrete missing question. |
 
 No forced failures, purchases, account deletion, new characters or special
 instrumentation are necessary for these sequences. Official observations preserve
@@ -76,7 +96,7 @@ Each run has an ignored unique `private/official-sessions/<run>/` directory:
 - `source-snapshot/` and its manifest: exact original collector/test/lock bytes and hashes.
 - Existing collector state, events and ownership receipts, when actually collected: fixed own-log categories
   and supported public process attribution, preserving protected-path refusal.
-- `recordings/`: only exact user-selected, stopped, reviewed local clips; no desktop/login footage.
+- `recordings/`: only exact user-selected, stopped, reviewed local clips; no desktop or credential-prompt footage.
 - A review record binding each visual claim to **clip SHA-256, viewpoint and playback
   interval**, reviewer/source, user privacy attestation and limitations. A report about
   a clip is still a report until someone actually inspects its pixels.
@@ -116,7 +136,9 @@ location using normal gameplay; do not put names/account IDs into receipts.
 6. Stop recordings, review privacy, bind hashes/offsets, then exit normally when done.
 
 With one instance and no confirmed friend, this is a prepared procedure only.
-Continue useful solo S1/S2/S3 collection in the meantime.
+The October 7 solo clips supplement S1/S2/S3/S4; they do not pass F1/F2.
+The user explicitly deferred second-player recording on October 7. Resume only when
+the user is ready and a consenting friend can use their own legitimate client.
 
 ## Resources and closure
 

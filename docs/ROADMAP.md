@@ -5,7 +5,8 @@
 This chat continues only #166/workItem164 official-server evidence that becomes
 unavailable January31,2027. The separate chat retains the private-player priority
 below. [Reconciled inventory, missing evidence and friend packet](SHUTDOWN_PRESERVATION.md),
-[sanitized continuation receipt](../research/evidence/shutdown-preservation-20261007.json).
+[sanitized baseline receipt](../research/evidence/shutdown-preservation-20261007.json),
+[new gameplay/return/travel receipt](../research/evidence/official-session-video-20261007.json).
 
 Reuse verified #241 client archive and Done #242/#243/#245 with their exact limits.
 Eight small October6 official-session artifacts and archive inventory/digest agree
@@ -15,7 +16,7 @@ markers, without footage/direct observations. No76GB rehash or new archive copy.
 New user-reviewed Game Bar test clip is privately copied with matching source/copy
 SHA256, 32.4169seconds, 1920x1080/60fps. Direct review of decoded frames at2/10/20/30s
 shows startup logo, title UI, character selection and world-loading screen. This
-fills those visual samples only: no reviewed player/control or logout/return frames.
+fills those visual samples only; the further clips below supply player/return frames.
 Clip offsets/file UTC and report times are distinct; audio/full-video privacy is
 user-attested, not independently verified. Exact public game PID/name/creation
 matched; live protected image remains unverified. Original collector/test sources
@@ -30,11 +31,28 @@ User subsequently reported an unrecorded internet outage/disconnection and anoth
 wrong-target Codex recording. Neither is footage or protocol/failure evidence.
 The user may independently retry recording; accept only exact reviewed game clips.
 
-Single-client player/control, ordinary logout/return and one useful server-driven
-inventory/persistence observation remain pending. #244 has a researched, prepared
-two-viewpoint movement/remote logout-reappearance packet; execution is deferred
-until a consenting friend with a legitimate second client is available. All
-private implementation/native/isolated-client work remains in the other chat.
+Four further private clips now preserve selection/loading/local player, rendered
+movement/ability effects, gathering/tree felling, inventory, ordinary exit to main
+menu and local return, later inventory wood-icon count equality (46/31/2), mounted
+rest/rise/landing, and supported fast-travel map/confirmation/countdown/loading/
+destination movement. Main/return/after-return/travel durations are respectively
+56.7171/76.050433/38.140133/43.683566seconds; source/copy hashes match. Original
+recordings, sampled frames, review manifests and source snapshots remain ignored.
+Direct samples, user reports and log markers remain distinct. Pre-gather count,
+uncontrolled activity between clips, stable item identities, authoritative
+persistence, exact input causality and unmounted jump are not proved.
+
+User confirmed normal exit; the exact recorded game and collector processes are
+absent. No live memory/log/socket/packet collector was used for the video packet.
+Full workspace validation passed1429Python cases/48modules and5PowerShell suites
+including owned loopback closure before these evidence-only updates; unchanged
+code/test support is reused. Final public/private review bindings, all8source
+snapshots and catalog readiness pass;19focused preflight/catalog tests pass.
+#244 is Ready with a researched two-viewpoint movement/remote logout-reappearance
+packet and partial preparation validation; user explicitly deferred second-player
+recording. Execution awaits a consenting friend
+with a legitimate second client. #166 remains open for its original aggregate
+acceptance. Private implementation/native/isolated-client work stays in the other chat.
 
 ## Immediate priority — one controllable private player
 

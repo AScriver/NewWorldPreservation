@@ -21,11 +21,12 @@
       "fixtures": [],
       "evidence": [
         {"path": "research/evidence/shutdown-preservation-20261007.json", "classification": "observed-metadata", "scope": "Bounded archive/report reconciliation, preserved direct test-frame samples and explicit missing official gameplay evidence"},
+        {"path": "research/evidence/official-session-video-20261007.json", "classification": "observed-metadata", "scope": "Privately preserved solo gameplay, gathering, local logout/return, visible inventory-count continuity and supported fast travel; sampled-frame observations and separate user attestations"},
         {"path": "research/evidence/owned-client-archive-20261006.json", "classification": "observed-metadata", "scope": "Prior executed owned static archive verification; no restore or launch proof"},
         {"path": "research/evidence/official-session-20261006.json", "classification": "observed-metadata", "scope": "User-reported ordinary entry/relogin and allowlisted own-log markers, no footage"},
         {"path": "research/evidence/official-observation-tooling-20261006.json", "classification": "offline-executed", "scope": "Prior synthetic collector tests reused only with matching exact code/test hashes"}
       ],
-      "limit": "Official shutdown preservation only. Reports, sampled decoded frames and markers are distinct; footage remains private. Friend movement/remote return and full solo controls/return remain pending. No private gameplay or protocol proof."
+      "limit": "Official shutdown preservation only. Reports, sampled decoded frames and markers are distinct; footage remains private. Friend movement/remote return remains uncollected. Solo clips do not prove key causality, stable item IDs, exact gathering delta or backend persistence. No private gameplay or protocol proof."
     },
     {
       "id": "current-creation-record-supplier-path",
@@ -1937,6 +1938,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/official-session-video-20261007.json",
     "research/evidence/shutdown-preservation-20261007.json",
     "research/evidence/current-connect-ack-retry.json",
     "research/evidence/private-player-creation-trial-20261007.json",
