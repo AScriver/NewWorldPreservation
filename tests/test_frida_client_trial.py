@@ -1,4 +1,5 @@
 """No live client, Frida attachment, or firewall changes in this suite."""
+import argparse
 import json
 from pathlib import Path
 import sys
@@ -8,6 +9,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import frida_client_trial as trial
+import private_trial_lifetime as lifetime
 
 
 class FakeOwner:
@@ -237,6 +239,171 @@ def test_stop_before_spawn_has_no_spawn_call(tmp_path):
     with pytest.raises(RuntimeError, match="before spawn"):
         run_fake(tmp_path, device, owner)
     assert not device.spawned and device.resumed == [] and owner.closed
+
+
+class FakeController:
+    def __init__(self):
+        self.is_exited = False
+        self.closed = False
+
+    def exited(self):
+        return self.is_exited
+
+    def close(self):
+        self.closed = True
+
+
+@pytest.mark.parametrize("stop_kind", ["user", "controller"])
+def test_user_stop_client_outlives_old_deadline_and_closes_owned_job(tmp_path, monkeypatch, stop_kind):
+    private = tmp_path / "private" / "frida-trials"
+    run = private / "run-manual"
+    run.mkdir(parents=True)
+    controller = FakeController()
+    device, owner = FakeDevice(), FakeOwner()
+    elapsed, events = [0], []
+
+    def advance(_seconds):
+        elapsed[0] += 601
+        if elapsed[0] >= 1803:
+            if stop_kind == "user":
+                (run / "stop.request").touch()
+            else:
+                controller.is_exited = True
+
+    monkeypatch.setattr(trial.time, "monotonic", lambda: elapsed[0])
+    monkeypatch.setattr(trial.time, "sleep", advance)
+    with lifetime.UserStop(run / "stop.request", controller=controller, private=private) as stop:
+        trial.execute(device, owner, run, run / "client" / "Bin64" / "NewWorld.exe",
+                      {"path": "fake", "bytes": [0] * 16}, None,
+                      lambda event, **fields: events.append({"event": event, **fields}), stop=stop)
+        assert stop.reason == ("stop_requested" if stop_kind == "user" else "controller_exited")
+    assert elapsed[0] == 1803 and device.resumed == [41]
+    assert owner.closed and controller.closed and device.session.detached
+    assert not any(item["event"] == "lifetime_expired" for item in events)
+
+
+@pytest.mark.parametrize("phase", ["before_spawn", "after_spawn", "before_resume"])
+def test_controller_loss_during_admission_never_resumes(tmp_path, phase):
+    controller = FakeController()
+    device, owner = FakeDevice(), FakeOwner()
+    stop = type("Stop", (), {"is_set": lambda self: controller.is_exited})()
+    if phase == "before_spawn":
+        controller.is_exited = True
+    elif phase == "after_spawn":
+        original_spawn = device.spawn
+
+        def spawn(*arguments, **keywords):
+            result = original_spawn(*arguments, **keywords)
+            controller.is_exited = True
+            return result
+        device.spawn = spawn
+    else:
+        original_create = device.session.create_script
+
+        def create(source, name):
+            script = original_create(source, name)
+            original_load = script.load
+
+            def load():
+                original_load()
+                controller.is_exited = True
+            script.load = load
+            return script
+        device.session.create_script = create
+    with pytest.raises(RuntimeError, match="before spawn|before attach|before resume"):
+        trial.execute(device, owner, tmp_path, tmp_path / "NewWorld.exe",
+                      {"path": "fake", "bytes": [0] * 16}, None, lambda *_a, **_kw: None, stop=stop)
+    assert device.resumed == [] and owner.closed
+    assert device.spawned == (phase != "before_spawn")
+
+
+def test_manual_client_requires_guard_before_spawn(tmp_path):
+    device, owner = FakeDevice(), FakeOwner()
+    with pytest.raises(ValueError, match="owned stop guard"):
+        trial.execute(device, owner, tmp_path, tmp_path / "NewWorld.exe", {}, None, None)
+    assert not device.spawned
+
+
+class FakeControllerApi:
+    def __init__(self, *, created=123, wait=258, open_result=91):
+        self.created, self.wait, self.open_result = created, wait, open_result
+        self.closed = []
+
+    def OpenProcess(self, access, inherit, process_id):
+        assert access == 0x00101000 and not inherit and process_id == 41
+        return self.open_result
+
+    def GetProcessTimes(self, _handle, created, *_remaining):
+        created._obj.dwHighDateTime = self.created >> 32
+        created._obj.dwLowDateTime = self.created & 0xffffffff
+        return True
+
+    def WaitForSingleObject(self, handle, timeout):
+        assert handle == 91 and timeout == 0
+        return self.wait
+
+    def CloseHandle(self, handle):
+        self.closed.append(handle)
+        return True
+
+
+def test_retained_controller_handle_verifies_creation_and_detects_exit():
+    api = FakeControllerApi(created=(1 << 32) + 123)
+    owner = lifetime.WindowsController(41, (1 << 32) + 123, api=api)
+    assert not owner.exited()
+    api.wait = 0
+    assert owner.exited()
+    owner.close()
+    owner.close()
+    assert api.closed == [91]
+
+
+@pytest.mark.parametrize("options,exception", [
+    ({"created": 124}, ValueError), ({"wait": 0}, ValueError),
+    ({"wait": 0xffffffff}, OSError), ({"open_result": 0}, OSError),
+])
+def test_unverifiable_controller_is_rejected_and_handle_closed(options, exception):
+    api = FakeControllerApi(**options)
+    with pytest.raises(exception):
+        lifetime.WindowsController(41, 123, api=api)
+    assert api.closed == ([] if options.get("open_result") == 0 else [91])
+
+
+def test_manual_mode_refuses_missing_controller_identity(tmp_path, monkeypatch):
+    private = tmp_path / "private" / "frida-trials"
+    run = private / "run-missing-owner"
+    run.mkdir(parents=True)
+    monkeypatch.delenv(lifetime.CONTROLLER_PID_ENV, raising=False)
+    monkeypatch.delenv(lifetime.CONTROLLER_CREATED_ENV, raising=False)
+    with pytest.raises(ValueError, match="owning controller identity"):
+        lifetime.UserStop(run / "stop.request", private=private)
+
+
+def test_existing_stop_and_wrong_run_path_refused_before_owner_admission(tmp_path):
+    private = tmp_path / "private" / "frida-trials"
+    run = private / "run-stopped"
+    run.mkdir(parents=True)
+    (run / "stop.request").touch()
+    with pytest.raises(ValueError, match="already requested"):
+        lifetime.UserStop(run / "stop.request", private=private)
+    with pytest.raises(ValueError, match="direct private"):
+        lifetime.admit_stop_file(run / "other-stop", private=private)
+
+
+def test_lifetime_cli_keeps_timed_default_and_requires_exclusive_selection():
+    parser = argparse.ArgumentParser()
+    lifetime.add_lifetime_options(parser, timed_flag="--seconds", dest="seconds")
+    options = parser.parse_args([])
+    lifetime.resolve_lifetime_options(parser, options, default_seconds=120, maximum=300, dest="seconds")
+    assert options.seconds == 120 and options.until_stopped is None
+    options = parser.parse_args(["--until-stopped", "private/run-example/stop.request"])
+    lifetime.resolve_lifetime_options(parser, options, default_seconds=120, maximum=300, dest="seconds")
+    assert options.seconds is None
+    with pytest.raises(SystemExit):
+        parser.parse_args(["--seconds", "300", "--until-stopped", "stop.request"])
+    options = parser.parse_args(["--seconds", "301"])
+    with pytest.raises(SystemExit):
+        lifetime.resolve_lifetime_options(parser, options, default_seconds=120, maximum=300, dest="seconds")
 
 
 @pytest.fixture

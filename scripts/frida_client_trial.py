@@ -7,7 +7,7 @@ unmodified upstream trust hook plus an original observation listener.
 from __future__ import annotations
 
 import argparse
-from contextlib import contextmanager
+from contextlib import ExitStack, contextmanager
 import ctypes
 from ctypes import wintypes
 import hashlib
@@ -19,6 +19,8 @@ import stat
 import sys
 import threading
 import time
+
+from private_trial_lifetime import UserStop, add_lifetime_options, resolve_lifetime_options
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = ROOT / "private" / "frida-trials"
@@ -312,8 +314,11 @@ class WindowsOwner:
                 raise failure
 
 
-def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, record) -> None:
+def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int | None, record,
+            *, stop=None) -> None:
     """Injectable Frida/device and owner facades permit failure tests without a client."""
+    if seconds is None and stop is None:
+        raise ValueError("user-stop lifetime requires an owned stop guard")
     pid = None
     session = None
     opened_process = False
@@ -395,7 +400,7 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
     try:
         device.on("child-added", on_child)
         environment = {"SteamAppId": "1063730", "SteamGameId": "1063730"}
-        if (run / "stop.request").exists():
+        if (run / "stop.request").exists() or (stop is not None and stop.is_set()):
             raise RuntimeError("stop requested before spawn")
         pid = device.spawn(str(exe), env=environment, cwd=str(exe.parent))
         record("spawn_suspended", pid=pid)
@@ -404,6 +409,8 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
         finally:
             opened_process = owner.process is not None
         record("owner_claimed", pid=pid, creation_filetime=created, job_active_limit=1)
+        if stop is not None and stop.is_set():
+            raise RuntimeError("stop requested before attach")
         if owner.exited():
             raise RuntimeError("spawned process exited before attach")
         session = device.attach(pid)
@@ -420,15 +427,16 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
         upstream.on("message", on_message("upstream"))
         upstream.load()
         wait_status("upstream")
-        if ((run / "stop.request").exists() or state["child_error"] or state["detached"] or
+        if ((run / "stop.request").exists() or (stop is not None and stop.is_set()) or
+                state["child_error"] or state["detached"] or
                 state["observer"] is not True or state["upstream"] is not True):
             raise RuntimeError("stop/child/session/script failure before resume")
         if owner.exited():
             raise RuntimeError("spawned process exited before resume")
         device.resume(pid)
         record("resumed")
-        deadline = time.monotonic() + seconds
-        while time.monotonic() < deadline:
+        deadline = time.monotonic() + seconds if seconds is not None else None
+        while deadline is None or time.monotonic() < deadline:
             if state["child_error"]:
                 raise RuntimeError("child rejection failed")
             if state["observer"] is not True or state["upstream"] is not True:
@@ -438,8 +446,8 @@ def execute(device, owner, run: Path, exe: Path, admission: dict, seconds: int, 
                     record("client_exited", via="frida_session")
                     break
                 raise RuntimeError("Frida session detached after resume: " + state["detached"])
-            if (run / "stop.request").exists():
-                record("stop_requested")
+            if (stop is not None and stop.is_set()) or (run / "stop.request").exists():
+                record("stop_requested", reason=getattr(stop, "reason", None) or "stop_requested")
                 break
             if owner.exited():
                 record("client_exited")
@@ -473,12 +481,11 @@ def main(argv=None) -> int:
     parser.add_argument("--run-dir", type=Path, required=True)
     parser.add_argument("--exe", type=Path, required=True)
     parser.add_argument("--admission", type=Path, required=True)
-    parser.add_argument("--seconds", type=int, default=120)
+    add_lifetime_options(parser, timed_flag="--seconds", dest="seconds")
     parser.add_argument("--context-gate-observer", action="store_true",
                         help="observe only three pinned callback/gate sites and boolean state")
     args = parser.parse_args(argv)
-    if not 1 <= args.seconds <= 300:
-        parser.error("seconds must be 1..300")
+    resolve_lifetime_options(parser, args, default_seconds=120, maximum=300, dest="seconds")
     run = args.run_dir.resolve(strict=True)
     private = PRIVATE.resolve(strict=True)
     if run.parent != private or not re.fullmatch(r"run-[A-Za-z0-9_-]+", run.name):
@@ -488,7 +495,13 @@ def main(argv=None) -> int:
         parser.error("runner.lock must be a regular file in the run directory")
     # The controller's exclusive open cannot succeed while this handle is live.
     # Keep it through every admission, spawn, publication, and cleanup path.
-    with lock_path.open("a+b"):
+    with ExitStack() as resources:
+        resources.enter_context(lock_path.open("a+b"))
+        stop = None
+        if args.until_stopped is not None:
+            if args.until_stopped.absolute() != run / "stop.request":
+                parser.error("user-stop file must belong to the selected run")
+            stop = resources.enter_context(UserStop(args.until_stopped))
         staged_real, source_run = selected_copy(run, args.exe, args.admission)
         with hold_copy_use(source_run):
             admission = admit(run, staged_real, args.admission,
@@ -506,7 +519,7 @@ def main(argv=None) -> int:
                     record("selected_copy", source_run=source_run.name)
                     import frida  # Only load for an explicitly admitted live trial.
                     execute(frida.get_local_device(), WindowsOwner(), run, staged_real,
-                            admission, args.seconds, record)
+                            admission, args.seconds, record, stop=stop)
                     record("trial_complete")
                     return 0
                 except Exception as error:

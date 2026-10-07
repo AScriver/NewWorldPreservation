@@ -17,6 +17,12 @@ if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
 $manifestPath = Join-Path $runPath 'trial-inputs.json'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 if ($manifest.run_directory -ine $runPath -or $manifest.schema -ne 1) { throw 'Run manifest identity mismatch.' }
+$manualLifetime = $false
+if ($manifest.PSObject.Properties.Name -contains 'user_stop_lifetime') {
+    if ($manifest.user_stop_lifetime -isnot [bool]) { throw 'User-stop lifetime admission must be an explicit boolean.' }
+    $manualLifetime = $manifest.user_stop_lifetime
+}
+if ($manualLifetime -and ($manifest.PSObject.Properties.Name -notcontains 'player_creation_candidate' -or -not $manifest.player_creation_candidate)) { throw 'User-stop lifetime requires the selected player creation candidate.' }
 $admission = Get-Content -LiteralPath (Join-Path $runPath 'admission.json') -Raw | ConvertFrom-Json
 $clientRun = $runPath
 if ($admission.PSObject.Properties.Name -contains 'staged_copy_run') {
@@ -35,7 +41,7 @@ foreach ($binding in $manifest.files) {
 }
 $validator = 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1'
 $hostsScript = Join-Path $PSScriptRoot 'Set-ConnectivityHosts.ps1'
-$requiredBindings = @($PSCommandPath,$hostsScript,$manifest.frida_dispatch,(Join-Path $runPath 'admission.json'),(Join-Path $runPath 'stage-complete.json'),(Join-Path $clientDirectory 'Bin64\NewWorld.exe'),(Join-Path $PSScriptRoot 'frida_client_trial.py'),(Join-Path $PSScriptRoot 'frida_trial_observer.js'),(Join-Path $PSScriptRoot 'dtls_transport_probe.py'),(Join-Path $workspaceRoot 'research\upstream\first-light\tools\client-hooks\frida_dtls_trust_patch.js'))
+$requiredBindings = @($PSCommandPath,$hostsScript,$manifest.frida_dispatch,(Join-Path $runPath 'admission.json'),(Join-Path $runPath 'stage-complete.json'),(Join-Path $clientDirectory 'Bin64\NewWorld.exe'),(Join-Path $PSScriptRoot 'frida_client_trial.py'),(Join-Path $PSScriptRoot 'frida_trial_observer.js'),(Join-Path $PSScriptRoot 'dtls_transport_probe.py'),(Join-Path $PSScriptRoot 'private_trial_lifetime.py'),(Join-Path $workspaceRoot 'research\upstream\first-light\tools\client-hooks\frida_dtls_trust_patch.js'))
 if ($manifest.PSObject.Properties.Name -contains 'application_contract') {
     $requiredBindings += Join-Path $PSScriptRoot 'carrier_registration_probe.py'
     $requiredBindings += Join-Path $workspaceRoot 'research\upstream\first-light\server\rep_responder.py'
@@ -188,7 +194,8 @@ if ($creationArguments.Count -ne 0) {
 $hostsPath = Join-Path $env:SystemRoot 'System32\drivers\etc\hosts'
 $journalPath = Join-Path $runPath 'hosts-journal'
 $eventsPath = Join-Path $runPath 'containment-events.jsonl'
-if ((Test-Path -LiteralPath $eventsPath) -or (Test-Path -LiteralPath (Join-Path $runPath 'stop.request'))) { throw 'One attempt per run; preserve prior receipt.' }
+$stopRequestPath = Join-Path $runPath 'stop.request'
+if ((Test-Path -LiteralPath $eventsPath) -or (Test-Path -LiteralPath $stopRequestPath)) { throw 'One attempt per run; preserve prior receipt.' }
 $ownedChildren = [Collections.Generic.List[Diagnostics.Process]]::new()
 $childRecords = [Collections.Generic.List[object]]::new()
 $rulePlans = [Collections.Generic.List[object]]::new()
@@ -196,6 +203,9 @@ $hostsPrepared = $false
 $failure = $null
 $cleanupFailure = $null
 $runnerLock = $null
+$controllerProcess = [Diagnostics.Process]::GetCurrentProcess()
+$controllerPidText = [string]$controllerProcess.Id
+$controllerCreatedFiletimeText = [string]$controllerProcess.StartTime.ToUniversalTime().ToFileTimeUtc()
 $beforeHostsHash = (Get-FileHash -LiteralPath $hostsPath -Algorithm SHA256).Hash.ToLowerInvariant()
 $caPemText = [IO.File]::ReadAllText((Join-Path $manifest.certificates 'ca.pem'))
 $caDerBytes = [Convert]::FromBase64String(($caPemText -replace '-----BEGIN CERTIFICATE-----|-----END CERTIFICATE-----|\s',''))
@@ -221,9 +231,43 @@ function Get-OwnedRule {
     if ($applications.Count -ne 1 -or $applications[0].Program -ine $Plan.program) { throw 'Firewall program conflict; preserve rule.' }
     return $foundRules[0]
 }
+function Publish-StopRequest {
+    param([string]$StopPath)
+    if (Test-Path -LiteralPath $StopPath) {
+        if (-not (Test-Path -LiteralPath $StopPath -PathType Leaf)) { throw 'Stop marker path is not a file.' }
+        return
+    }
+    try {
+        $stopStream = [IO.File]::Open($StopPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read)
+        try {
+            $stopBytes = [Text.UTF8Encoding]::new($false).GetBytes("close admission`n")
+            $stopStream.Write($stopBytes,0,$stopBytes.Length)
+            $stopStream.Flush($true)
+        } finally { $stopStream.Dispose() }
+    } catch [IO.IOException] {
+        if (-not (Test-Path -LiteralPath $StopPath -PathType Leaf)) { throw }
+    }
+}
+function Get-TrialLifetimeArguments {
+    param([bool]$ManualLifetime,[string]$StopPath)
+    if ($ManualLifetime) { return @('--until-stopped',$StopPath) }
+    return @('--duration','360')
+}
+function Wait-OwnedDispatch {
+    param([object]$Dispatch,[object[]]$Services,[bool]$ManualLifetime,[string]$StopPath)
+    $dispatchDeadline = if ($ManualLifetime) { $null } else { [DateTime]::UtcNow.AddSeconds(320) }
+    try {
+        while (-not $Dispatch.HasExited -and ($ManualLifetime -or [DateTime]::UtcNow -lt $dispatchDeadline)) {
+            if (Test-Path -LiteralPath $StopPath) { break }
+            if (@($Services | Where-Object { $_.HasExited }).Count -ne 0) { throw 'Service exited during trial.' }
+            Start-Sleep -Milliseconds 250
+        }
+    } finally { Publish-StopRequest -StopPath $StopPath }
+    if (-not $Dispatch.WaitForExit(15000)) { throw 'Frida dispatch did not close after lifetime/stop; retain containment.' }
+}
 function Start-OwnedChild {
     param([string]$Name,[string]$Executable,[string[]]$NativeArguments)
-    if (Test-Path -LiteralPath (Join-Path $runPath 'stop.request')) { throw 'Admission closed.' }
+    if (Test-Path -LiteralPath $stopRequestPath) { throw 'Admission closed.' }
     $startInfo = [Diagnostics.ProcessStartInfo]::new()
     $startInfo.FileName=$Executable
     $startInfo.UseShellExecute=$false
@@ -231,6 +275,8 @@ function Start-OwnedChild {
     $startInfo.WorkingDirectory=$workspaceRoot
     $startInfo.Environment.Remove('SSL_CERT_FILE') | Out-Null
     $startInfo.Environment.Remove('SSL_CERT_DIR') | Out-Null
+    $startInfo.Environment['NWP_TRIAL_CONTROLLER_PID'] = $controllerPidText
+    $startInfo.Environment['NWP_TRIAL_CONTROLLER_CREATED_FILETIME'] = $controllerCreatedFiletimeText
     if ($Executable -ieq $manifest.protocol_python) { $startInfo.Environment['PYTHONPATH']=$manifest.protocol_packages }
     foreach ($nativeArgument in $NativeArguments) { $startInfo.ArgumentList.Add($nativeArgument) }
     $child = [Diagnostics.Process]::Start($startInfo)
@@ -298,11 +344,12 @@ try {
         if ($resolved.Count -eq 0 -or @($resolved | Where-Object { $_ -notin @('127.0.0.1','::1') }).Count -ne 0) { throw 'Non-loopback resolver result; no launch.' }
     }
     $pythonExecutable = $manifest.protocol_python
-    $commonArguments = @('--certificates',$manifest.certificates,'--descriptor',$manifest.descriptor,'--duration','360','--case','token-loopback','--observe-local-socket-owner')
+    $lifetimeArguments = @(Get-TrialLifetimeArguments -ManualLifetime $manualLifetime -StopPath $stopRequestPath)
+    $commonArguments = @('--certificates',$manifest.certificates,'--descriptor',$manifest.descriptor) + $lifetimeArguments + @('--case','token-loopback','--observe-local-socket-owner')
     $commonArguments += $creationArguments
     $ipv4Child = Start-OwnedChild -Name 'https-v4' -Executable $pythonExecutable -NativeArguments (@((Join-Path $PSScriptRoot 'queue_contract_probe.py'))+$commonArguments+@('--bind','127.0.0.1','--port','443','--log',(Join-Path $runPath 'https-v4.jsonl')))
     $ipv6Child = Start-OwnedChild -Name 'https-v6' -Executable $pythonExecutable -NativeArguments (@((Join-Path $PSScriptRoot 'queue_contract_probe.py'))+$commonArguments+@('--bind','::1','--port','443','--log',(Join-Path $runPath 'https-v6.jsonl')))
-    $dtlsArguments = @((Join-Path $PSScriptRoot 'dtls_transport_probe.py'),'--certificates',$manifest.certificates,'--log',(Join-Path $runPath 'dtls.jsonl'),'--port','64003','--duration','360','--chain','full')
+    $dtlsArguments = @((Join-Path $PSScriptRoot 'dtls_transport_probe.py'),'--certificates',$manifest.certificates,'--log',(Join-Path $runPath 'dtls.jsonl'),'--port','64003') + $lifetimeArguments + @('--chain','full')
     if ($manifest.PSObject.Properties.Name -contains 'application_contract') {
         if ($manifest.application_contract -cne 'carrier-register') { throw 'Unknown application contract; no game admission.' }
         $dtlsArguments[0] = Join-Path $PSScriptRoot 'carrier_registration_probe.py'
@@ -343,20 +390,14 @@ try {
     if (-not $ready -or $tcpListeners.Count -ne 2 -or $udpListeners.Count -ne 1) { throw 'Exact owned loopback listener readback failed.' }
     Write-Event 'PRIVATE_ENDPOINTS_READY' @{ https_v4=$ipv4Child.Id; https_v6=$ipv6Child.Id; dtls=$dtlsChild.Id; no_application_protocol_invented=$true }
     $fridaChild = Start-OwnedChild -Name 'frida-dispatch' -Executable (Get-Command pwsh -ErrorAction Stop).Source -NativeArguments @('-NoLogo','-NoProfile','-File',$manifest.frida_dispatch)
-    $deadline = [DateTime]::UtcNow.AddSeconds(320)
-    while (-not $fridaChild.HasExited -and [DateTime]::UtcNow -lt $deadline) {
-        if (Test-Path -LiteralPath (Join-Path $runPath 'stop.request')) { break }
-        if ($ipv4Child.HasExited -or $ipv6Child.HasExited -or $dtlsChild.HasExited) { throw 'Service exited during trial.' }
-        Start-Sleep -Milliseconds 250
-    }
-    if (-not $fridaChild.WaitForExit(15000)) { throw 'Frida dispatch did not close after bounded lifetime/stop; retain containment.' }
+    Wait-OwnedDispatch -Dispatch $fridaChild -Services @($ipv4Child,$ipv6Child,$dtlsChild) -ManualLifetime $manualLifetime -StopPath $stopRequestPath
     Write-Event 'FRIDA_DISPATCH_FINISHED' @{ exit_code=$fridaChild.ExitCode; source='owned dispatch exit; hook and DTLS outcomes in separate logs' }
 } catch {
     $failure=@{ type=$_.Exception.GetType().Name; line=$_.InvocationInfo.ScriptLineNumber; message=$_.Exception.Message }
     Write-Event 'TRIAL_FAILED' $failure
 } finally {
     try {
-        [IO.File]::WriteAllText((Join-Path $runPath 'stop.request'),"close admission`n")
+        Publish-StopRequest -StopPath $stopRequestPath
         # Give Frida's retained game job owner time to terminate before stopping services.
         $dispatchRecords = @($childRecords | Where-Object { $_.name -ceq 'frida-dispatch' })
         if ($dispatchRecords.Count -eq 1) {

@@ -59,7 +59,8 @@
       "tests/test_official_observation.ps1",
       "tests/test_observe_current_client.ps1",
       "tests/test_rep_anchor_transaction.ps1",
-      "tests/test_rep_launch_lifecycle.ps1"
+      "tests/test_rep_launch_lifecycle.ps1",
+      "tests/test_frida_controller_lifetime.ps1"
     ],
     "rep-readonly": ["tests/test_windows_rep_readonly_probe.py"],
     "frida-trial": ["tests/test_frida_client_trial.py"]

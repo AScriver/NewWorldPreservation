@@ -16,7 +16,9 @@ checkpoint. Work remains under top-level Actionables **164**.
    spectator views and a server's send log do not satisfy this.
 3. Normal controls move, turn and stop the character; retain an interactive
    session for at least five minutes without spawn timeout, disconnect or return
-   to selection. Five minutes is an acceptance criterion, not a protocol fact.
+   to selection. Five minutes is a minimum acceptance criterion, not a stop time
+   or protocol fact. The October7 direction removes the prepared trial's elapsed
+   time cap; the user confirms completion or refocuses the goal.
 4. Correlate session, character, entity and movement in client/server evidence.
    Show a server-originated position reflected in the client, or equally strong
    network-participation evidence. State the movement authority actually
@@ -80,6 +82,10 @@ of that same SHA-bound record. One original107-byte indexed candidate, one attem
 after empty activation and one lifetime peer are ready for the specific live-send
 grant. Exact byte/digest checks and failure controls do not establish client acceptance.
 
+October7 follow-ups256/257 replace elapsed trial deadlines with user-confirmed
+completion/refocus and exact-controller loss detection. Startup/cleanup and
+explicit protocol failures remain guarded. See the trial's lifetime contract.
+
 Next relevant work is that specifically admitted isolated-copy trial. Expected
 first observable result: native resource/
 player construction after the previously observed context activation. Local
@@ -97,8 +103,8 @@ needed approval; unperformed live checks stay pending. Record the furthest
 observed behavior, exact blocker and next justified experiment in this checkpoint
 as the loop advances.
 
-The current runner caps the client at300seconds from resume, including loading.
-That cannot allow a full five-minute control observation after spawn. The prior
+The October7 user instruction supersedes the300-second resume cap. The prior
 trial exhausted no observed Carrier budget: its transport closed after30.638s
 without inbound traffic. Preserve that distinction; a longer interactive trial
-needs a separately bounded lifetime proposal after the spawn path is concrete.
+uses the user-confirmed lifetime in the prepared trial, with real failure and
+cleanup controls retained.

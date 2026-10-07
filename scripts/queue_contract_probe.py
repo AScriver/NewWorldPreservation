@@ -11,6 +11,9 @@ import json
 from pathlib import Path
 import re
 import threading
+from contextlib import ExitStack
+
+from private_trial_lifetime import UserStop, add_lifetime_options, resolve_lifetime_options
 from urllib.parse import urlsplit
 
 import session_handoff_probe as selection
@@ -85,13 +88,30 @@ def make_server(bind, port, certificates, events, descriptor, *, case,
     return server
 
 
+def serve(server, duration, *, stop=None):
+    if duration is None:
+        if stop is None:
+            raise ValueError("user-stop lifetime requires an owned stop guard")
+        server.timeout = 0.1
+        while not stop.is_set():
+            server.handle_request()
+        return
+    timer = threading.Timer(duration, server.shutdown)
+    try:
+        timer.start()
+        server.serve_forever(poll_interval=0.1)
+    finally:
+        timer.cancel()
+        timer.join()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("certificates","descriptor","log"):
         parser.add_argument("--"+name,required=True)
     parser.add_argument("--bind",choices=["127.0.0.1","::1"],default="127.0.0.1")
     parser.add_argument("--port",type=int,default=443)
-    parser.add_argument("--duration",type=int,default=600)
+    add_lifetime_options(parser)
     parser.add_argument("--case",choices=CASES,required=True)
     parser.add_argument("--observe-local-socket-owner",action="store_true")
     parser.add_argument("--trial-character")
@@ -100,8 +120,7 @@ def main():
     occupancy.add_argument("--trial-known-empty-occupancy", action="store_true")
     occupancy.add_argument("--trial-occupied-low64", action="append")
     options = parser.parse_args()
-    if not 1 <= options.duration <= 600:
-        parser.error("Duration1..600 required")
+    resolve_lifetime_options(parser, options, default_seconds=600)
     if options.trial_character is None:
         if (options.trial_known_empty_occupancy or options.trial_occupied_low64 or
                 options.trial_character_sha256 is not None):
@@ -118,6 +137,13 @@ def main():
             response_case(options.case, trial_character=trial_character)
         except (OSError, ValueError) as exc:
             parser.error(str(exc))
+    with ExitStack() as resources:
+        stop = (resources.enter_context(UserStop(options.until_stopped))
+                if options.until_stopped is not None else None)
+        return run_probe(options, trial_character, stop=stop)
+
+
+def run_probe(options, trial_character, *, stop=None):
     bootstrap = selection.credentials.token.bootstrap
     certificates = bootstrap.probe.private_directory(options.certificates)
     descriptor = bootstrap.load_local_descriptor(bootstrap.probe.private_directory(options.descriptor),token_routing="original-hostnames")
@@ -129,15 +155,11 @@ def main():
     if options.observe_local_socket_owner:
         from windows_tcp_owner import owner_of_connection
         server.socket_owner_lookup = owner_of_connection
-    timer = threading.Timer(options.duration,server.shutdown)
     try:
         events.emit("QUEUE_CONTRACT_PROBE_LISTENING",bind=options.bind,port=server.server_port,case=options.case,
                     secure_private_accounts_implemented=False,game_transport_implemented=False)
-        timer.start()
-        server.serve_forever(poll_interval=0.1)
+        serve(server, options.duration, stop=stop)
     finally:
-        timer.cancel()
-        timer.join()
         server.server_close()
         events.emit("QUEUE_CONTRACT_PROBE_STOPPED")
         events.close()

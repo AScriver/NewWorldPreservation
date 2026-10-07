@@ -77,7 +77,7 @@ def test_full_selection_rejects_missing_and_unreviewed_modules(tmp_path):
     root, manifest = workspace_tree(tmp_path)
     chosen = runner.selection(root, manifest, "workspace")
     assert len(chosen["python"]) == 48
-    assert len(chosen["powershell"]) == 4
+    assert len(chosen["powershell"]) == 5
     assert chosen["cli"] is True
     (root / "tests/test_queue_contract_probe.py").unlink()
     with pytest.raises(ValueError, match="Missing selected test"):

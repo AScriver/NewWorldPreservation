@@ -21,6 +21,8 @@ import time
 import current_self_ident_default
 import current_spawn_point
 import current_world_activation
+from dtls_transport_probe import TerminalProtocolError
+from private_trial_lifetime import UserStop, add_lifetime_options, resolve_lifetime_options
 from private_player_creation_trial import PreparedPlayerCreation, prepare_from_files
 from private_trial_character import occupied_from_options
 
@@ -141,6 +143,10 @@ class _ConnectAckFacade:
 class _PeerState:
     def __init__(self):
         self.seen = set()
+        self.seen_digests = {}
+        self.last_inbound_sequence = None
+        self.outgoing_sequences = set()
+        self.terminal_error = None
         self.connect_ack_sent = False
         self.v3_sent = False
         self.after_ack_seen = False
@@ -181,7 +187,10 @@ class RegistrationAdapter:
     def __init__(self, events, codecs, *, decompressor=None, compression_guard=None,
                  server_version=None, heartbeat_15d=False, self_ident_default=False,
                  spawn_point_notification=False, world_activation=False,
-                 self_ident_current_length=False, prepared_creation=None, clock=None):
+                 self_ident_current_length=False, prepared_creation=None, clock=None,
+                 user_stop_lifetime=False):
+        if type(user_stop_lifetime) is not bool:
+            raise ValueError("user-stop lifetime must be an explicit boolean")
         if server_version is not None and server_version != OWNED_SERVER_VERSION:
             raise ValueError("unsupported server version selection")
         if self_ident_default and (not heartbeat_15d or server_version != OWNED_SERVER_VERSION):
@@ -208,6 +217,8 @@ class RegistrationAdapter:
         self._world_activation_enabled = world_activation
         self._self_ident_current_length = self_ident_current_length
         self._prepared_creation = prepared_creation
+        self._user_stop_lifetime = user_stop_lifetime
+        self._terminal_reason = None
         self._creation_peer = None
         self._clock = clock or time.monotonic
         self._heartbeat = getattr(self.dispatch, "heartbeat_15d", None)
@@ -253,11 +264,38 @@ class RegistrationAdapter:
         return (state.next_out_envelope_seq if state.autonomous_started
                 else inbound_sequence)
 
-    @staticmethod
-    def _note_out_envelope(state, sequence):
-        state.next_out_envelope_seq = (sequence + 1) & 0xFFFF
+    def _note_out_envelope(self, state, sequence):
+        if self._user_stop_lifetime:
+            state.outgoing_sequences.add(sequence)
+            state.next_out_envelope_seq = sequence + 1
+        else:
+            state.next_out_envelope_seq = (sequence + 1) & 0xFFFF
+
+    def _terminal(self, peer, state, reason):
+        state.terminal_error = reason
+        self._terminal_reason = reason
+        self._emit("CARRIER_TERMINAL_FAILURE", peer, reason=reason)
+        raise TerminalProtocolError(reason)
+
+    def _check_cursors(self, peer, state, envelope=None, *, record=False, ack=False):
+        if not self._user_stop_lifetime:
+            return
+        selected = (state.next_out_envelope_seq if envelope is None else envelope)
+        if (selected is not None and
+                (not 0 <= selected <= 0xFFFF or selected in state.outgoing_sequences)):
+            self._terminal(peer, state, "outgoing_envelope_namespace_exhausted")
+        if record and (not 0 <= state.next_ch0_seq <= 0xFFFF or
+                       not 0 <= state.next_ch0_rel <= 0xFFFF):
+            self._terminal(peer, state, "outgoing_record_namespace_exhausted")
+        if ack and not 0 <= state.ack_sequence <= 0xFFFF:
+            self._terminal(peer, state, "outgoing_ack_namespace_exhausted")
+
+    def _advance_cursor(self, value):
+        return value + 1 if self._user_stop_lifetime else (value + 1) & 0xFFFF
 
     def on_app(self, peer, plaintext):
+        if self._terminal_reason is not None:
+            raise TerminalProtocolError(self._terminal_reason)
         if self._prepared_creation is not None:
             if self._creation_peer is None:
                 self._creation_peer = peer
@@ -270,26 +308,39 @@ class RegistrationAdapter:
                 return
             self.peers[peer.id] = _PeerState()
         state = self.peers[peer.id]
+        if state.terminal_error is not None:
+            raise TerminalProtocolError(state.terminal_error)
         try:
             self._handle(peer, state, plaintext)
+        except TerminalProtocolError:
+            raise
         except (ValueError, TypeError, IndexError):
+            if self._user_stop_lifetime:
+                self._terminal(peer, state, "adapter_frame_or_response_failure")
             self._emit("CARRIER_REJECTED", peer, reason="invalid_frame_or_response")
         except Exception:
+            if self._user_stop_lifetime:
+                self._terminal(peer, state, "adapter_failure")
             self._emit("CARRIER_REJECTED", peer, reason="adapter_failure")
 
     def _ack(self, peer, state, sequence):
+        self._check_cursors(peer, state, self._out_envelope(state, sequence), ack=True)
         ack = self.rep.build_sm_ct_acks_record(state.ack_sequence, sequence,
                                                 state.acked_through)
         outbound_sequence = self._out_envelope(state, sequence)
+        if ack is not None:
+            self._check_cursors(peer, state, outbound_sequence, ack=True)
         datagram = (b"\x80\x01" + outbound_sequence.to_bytes(2, "big") + ack
                     if ack is not None else None)
         if datagram is not None and peer.send_app(datagram) == len(datagram):
-            state.ack_sequence = (state.ack_sequence + 1) & 0xFFFF
+            state.ack_sequence = self._advance_cursor(state.ack_sequence)
             state.acked_through = sequence
             self._note_out_envelope(state, outbound_sequence)
             state.replies.setdefault(sequence, []).append(datagram)
             self._emit("CARRIER_ACK_SENT", peer, envelope_sequence=outbound_sequence,
                        inbound_envelope_sequence=sequence)
+        elif datagram is not None and self._user_stop_lifetime:
+            self._terminal(peer, state, "ack_send_failed")
 
     def _heartbeat_ack(self, payload):
         if not self._heartbeat_enabled:
@@ -319,11 +370,15 @@ class RegistrationAdapter:
         return None
 
     def on_tick(self, peer, now):
+        if self._terminal_reason is not None:
+            raise TerminalProtocolError(self._terminal_reason)
+        state = self.peers.get(peer.id)
+        if state is not None and state.terminal_error is not None:
+            raise TerminalProtocolError(state.terminal_error)
         if not self._heartbeat_enabled:
             return
         if self._prepared_creation is not None and peer is not self._creation_peer:
             return
-        state = self.peers.get(peer.id)
         if (self._self_ident_enabled and state is not None and state.v3_sent and
                 not state.self_ident_sent and not state.self_ident_disabled and
                 state.next_self_ident_at is not None and now >= state.next_self_ident_at):
@@ -386,6 +441,8 @@ class RegistrationAdapter:
                             "PLAYER_CREATION_CANDIDATE",
                             header_bytes=len(current_world_activation.BUNDLE_HEADER),
                             body_kind="candidate")
+                    except TerminalProtocolError:
+                        raise
                     except Exception:
                         state.creation_disabled = True
                         self._emit("PLAYER_CREATION_CANDIDATE_REJECTED", peer, reason="send_exception")
@@ -393,7 +450,8 @@ class RegistrationAdapter:
                         state.creation_disabled = not state.creation_sent
         if (state is None or not state.v3_sent or state.heartbeat_disabled or
                 state.next_heartbeat_at is None or now < state.next_heartbeat_at or
-                state.heartbeat_sent >= MAX_HEARTBEATS_PER_PEER):
+                (not self._user_stop_lifetime and
+                 state.heartbeat_sent >= MAX_HEARTBEATS_PER_PEER)):
             return
         if state.heartbeat_counter is None:
             state.heartbeat_counter = secrets.randbits(32)
@@ -405,11 +463,13 @@ class RegistrationAdapter:
             state.heartbeat_disabled = True
             self._emit("HEARTBEAT_15D_REJECTED", peer, reason="codec_or_cursor")
             return
+        self._check_cursors(peer, state, record=True)
         record = self.frame.MessageRecord(
             channel=0, payload=self.wire.encode_vlq32(len(body)) + body,
             sequence=state.next_ch0_seq, reliable_sequence=state.next_ch0_rel,
             reliable=True, flags_override=0x21)
         record_bytes = self.frame.marshal_datagram([record])
+        self._check_cursors(peer, state, ack=True)
         ack = self.rep.build_sm_ct_acks_record(state.ack_sequence,
                                                 state.last_inbound_nonack,
                                                 state.acked_through)
@@ -417,15 +477,17 @@ class RegistrationAdapter:
         datagram = (b"\x80\x01" + envelope_sequence.to_bytes(2, "big") +
                     record_bytes + (ack or b""))
         if peer.send_app(datagram) != len(datagram):
+            if self._user_stop_lifetime:
+                self._terminal(peer, state, "heartbeat_send_failed")
             state.heartbeat_disabled = True
             self._emit("HEARTBEAT_15D_REJECTED", peer, reason="send_failed")
             return
         state.autonomous_started = True
         self._note_out_envelope(state, envelope_sequence)
-        state.next_ch0_seq = (state.next_ch0_seq + 1) & 0xFFFF
-        state.next_ch0_rel = (state.next_ch0_rel + 1) & 0xFFFF
+        state.next_ch0_seq = self._advance_cursor(state.next_ch0_seq)
+        state.next_ch0_rel = self._advance_cursor(state.next_ch0_rel)
         if ack is not None:
-            state.ack_sequence = (state.ack_sequence + 1) & 0xFFFF
+            state.ack_sequence = self._advance_cursor(state.ack_sequence)
             state.acked_through = state.last_inbound_nonack
         state.heartbeat_counter = (counter + 1) & 0xFFFFFFFF
         state.heartbeat_sent += 1
@@ -443,6 +505,7 @@ class RegistrationAdapter:
         if state.next_out_envelope_seq is None:
             self._emit(event_prefix + "_REJECTED", peer, reason="cursor_unavailable")
             return False
+        self._check_cursors(peer, state, record=True)
         prefix = self.wire.encode_vlq32(len(body))
         prefix_kind = "pinned_leb128"
         if (self._self_ident_current_length and type_id == current_self_ident_default.TYPE_ID and
@@ -456,6 +519,7 @@ class RegistrationAdapter:
             channel=0, payload=prefix + body,
             sequence=state.next_ch0_seq, reliable_sequence=state.next_ch0_rel,
             reliable=True, flags_override=0x21)
+        self._check_cursors(peer, state, ack=True)
         ack = self.rep.build_sm_ct_acks_record(state.ack_sequence,
                                                state.last_inbound_nonack,
                                                state.acked_through)
@@ -463,14 +527,16 @@ class RegistrationAdapter:
         datagram = (b"\x80\x01" + envelope_sequence.to_bytes(2, "big") +
                     self.frame.marshal_datagram([record]) + (ack or b""))
         if peer.send_app(datagram) != len(datagram):
+            if self._user_stop_lifetime:
+                self._terminal(peer, state, "actor_send_failed")
             self._emit(event_prefix + "_REJECTED", peer, reason="send_failed")
             return False
         state.autonomous_started = True
         self._note_out_envelope(state, envelope_sequence)
-        state.next_ch0_seq = (state.next_ch0_seq + 1) & 0xFFFF
-        state.next_ch0_rel = (state.next_ch0_rel + 1) & 0xFFFF
+        state.next_ch0_seq = self._advance_cursor(state.next_ch0_seq)
+        state.next_ch0_rel = self._advance_cursor(state.next_ch0_rel)
         if ack is not None:
-            state.ack_sequence = (state.ack_sequence + 1) & 0xFFFF
+            state.ack_sequence = self._advance_cursor(state.ack_sequence)
             state.acked_through = state.last_inbound_nonack
         self._emit(event_prefix + "_SENT", peer, envelope_sequence=envelope_sequence,
                    record_sequence=record.sequence, reliable_sequence=record.reliable_sequence,
@@ -559,17 +625,32 @@ class RegistrationAdapter:
             return
         sequence = envelope.sequence
         if sequence in state.seen:
+            if (self._user_stop_lifetime and
+                    state.seen_digests[sequence] != hashlib.sha256(body).digest()):
+                self._terminal(peer, state, "inbound_sequence_content_conflict")
             cached = state.replies.get(sequence, ())
             for datagram in cached:
                 if peer.send_app(datagram) != len(datagram):
+                    if self._user_stop_lifetime:
+                        self._terminal(peer, state, "cached_reply_resend_failed")
                     self._emit("CARRIER_REJECTED", peer, reason="reply_resend_failed")
                     return
             self._emit("CARRIER_DUPLICATE", peer, envelope_sequence=sequence,
                        locally_generated_replies_resent=len(cached))
             return
-        if len(state.seen) >= MAX_SEQUENCES_PER_PEER:
+        limit = 0x10000 if self._user_stop_lifetime else MAX_SEQUENCES_PER_PEER
+        if len(state.seen) >= limit:
+            if self._user_stop_lifetime:
+                self._terminal(peer, state, "inbound_sequence_namespace_exhausted")
             self._emit("CARRIER_REJECTED", peer, reason="sequence_limit")
             return
+        if self._user_stop_lifetime:
+            if state.last_inbound_sequence is not None and sequence < state.last_inbound_sequence:
+                self._terminal(peer, state, "unsupported_lower_inbound_sequence")
+            # Keep the complete validated record-stream digest. No replay window is proven.
+            self._check_cursors(peer, state)
+            state.seen_digests[sequence] = hashlib.sha256(body).digest()
+            state.last_inbound_sequence = sequence
         state.seen.add(sequence)
         self._emit("CARRIER_PARSED", peer, envelope_sequence=sequence,
                    record_count=len(result.messages), plaintext_bytes=len(plaintext))
@@ -601,12 +682,17 @@ class RegistrationAdapter:
         if non_ack:
             state.last_inbound_nonack = sequence
         if connect_request:
+            if self._user_stop_lifetime and state.connect_ack_sent:
+                self._terminal(peer, state, "connect_ack_cursor_reuse")
             outbound_sequence = self._out_envelope(state, sequence)
+            self._check_cursors(peer, state, outbound_sequence)
             facade = _ConnectAckFacade(
                 peer, sequence,
                 outgoing_envelope_seq=outbound_sequence if state.autonomous_started else None)
             self.rep.PeerSession.send_connect_ack(facade)
             if not facade.sent_ok:
+                if self._user_stop_lifetime:
+                    self._terminal(peer, state, "connect_ack_send_failed")
                 self._emit("CARRIER_REJECTED", peer, reason="connect_ack_send_failed")
                 return
             state.connect_ack_sent = True
@@ -679,17 +765,21 @@ class RegistrationAdapter:
                 return
             if state.v3_sent:
                 body_out = state.v3_response_record
+                self._check_cursors(peer, state, self._out_envelope(state, sequence), ack=True)
                 ack = self.rep.build_sm_ct_acks_record(state.ack_sequence, sequence,
                                                         state.acked_through)
                 if ack is not None:
                     body_out += ack
                 outbound_sequence = self._out_envelope(state, sequence)
+                self._check_cursors(peer, state, outbound_sequence, ack=ack is not None)
                 datagram = b"\x80\x01" + outbound_sequence.to_bytes(2, "big") + body_out
                 if peer.send_app(datagram) != len(datagram):
+                    if self._user_stop_lifetime:
+                        self._terminal(peer, state, "v3_resend_failed")
                     self._emit("V3_REJECTED", peer, reason="response_resend_failed")
                     return
                 if ack is not None:
-                    state.ack_sequence = (state.ack_sequence + 1) & 0xFFFF
+                    state.ack_sequence = self._advance_cursor(state.ack_sequence)
                     state.acked_through = sequence
                 state.replies.setdefault(sequence, []).append(datagram)
                 self._note_out_envelope(state, outbound_sequence)
@@ -709,13 +799,17 @@ class RegistrationAdapter:
                                               flags_override=0x21)
             response_record_bytes = self.frame.marshal_datagram([record])
             body_out = response_record_bytes
+            self._check_cursors(peer, state, self._out_envelope(state, sequence), ack=True)
             ack = self.rep.build_sm_ct_acks_record(state.ack_sequence, sequence,
                                                     state.acked_through)
             if ack is not None:
                 body_out += ack
             outbound_sequence = self._out_envelope(state, sequence)
+            self._check_cursors(peer, state, outbound_sequence, ack=ack is not None)
             datagram = b"\x80\x01" + outbound_sequence.to_bytes(2, "big") + body_out
             if peer.send_app(datagram) != len(datagram):
+                if self._user_stop_lifetime:
+                    self._terminal(peer, state, "v3_send_failed")
                 self._emit("V3_REJECTED", peer, reason="send_failed")
                 return
             state.v3_sent = True
@@ -726,7 +820,7 @@ class RegistrationAdapter:
             if self._self_ident_enabled:
                 state.next_self_ident_at = self._clock() + 1.0
             if ack is not None:
-                state.ack_sequence = (state.ack_sequence + 1) & 0xFFFF
+                state.ack_sequence = self._advance_cursor(state.ack_sequence)
                 state.acked_through = sequence
             state.replies.setdefault(sequence, []).append(datagram)
             self._emit("V3_RESPONSE_SENT", peer, envelope_sequence=outbound_sequence,
@@ -744,7 +838,7 @@ def parse_options(argv=None):
     parser.add_argument("--certificates", required=True)
     parser.add_argument("--log", required=True)
     parser.add_argument("--port", type=int, default=64003)
-    parser.add_argument("--duration", type=int, default=300)
+    add_lifetime_options(parser)
     parser.add_argument("--chain", choices=("full", "leaf"), default="full")
     parser.add_argument("--first-light", type=Path, required=True)
     parser.add_argument("--server-version", choices=(OWNED_SERVER_VERSION,))
@@ -762,8 +856,9 @@ def parse_options(argv=None):
     occupancy.add_argument("--trial-known-empty-occupancy", action="store_true")
     occupancy.add_argument("--trial-occupied-low64", action="append")
     options = parser.parse_args(argv)
-    if not 1 <= options.port <= 65535 or not 1 <= options.duration <= 600:
-        parser.error("Port 1..65535 and duration 1..600 required")
+    resolve_lifetime_options(parser, options, default_seconds=300)
+    if not 1 <= options.port <= 65535:
+        parser.error("Port 1..65535 required")
     if options.self_ident_default and (not options.heartbeat_15d or
                                       options.server_version != OWNED_SERVER_VERSION):
         parser.error("Default actor candidate requires owned version and heartbeat")
@@ -790,40 +885,44 @@ def parse_options(argv=None):
 
 def main(argv=None):
     options = parse_options(argv)
-    prepared_creation = None
-    if options.player_creation_candidate:
-        occupied = occupied_from_options(options.trial_occupied_low64,
-                                         options.trial_known_empty_occupancy)
-        prepared_creation = prepare_from_files(
-            trial_character_path=options.trial_character,
-            trial_character_sha256=options.trial_character_sha256,
-            mapping_path=options.type_index, occupied_keys=occupied,
-            delivery_mode=options.delivery_mode)
-    reference = verify_reference(options.first_light)
-    codecs = load_codecs(reference)
-    from dtls_transport_probe import Responder
-    from connectivity_probe import EventLog, private_directory
+    from contextlib import nullcontext
+    with (UserStop(options.until_stopped) if options.until_stopped else nullcontext()) as stop:
+        prepared_creation = None
+        if options.player_creation_candidate:
+            occupied = occupied_from_options(options.trial_occupied_low64,
+                                             options.trial_known_empty_occupancy)
+            prepared_creation = prepare_from_files(
+                trial_character_path=options.trial_character,
+                trial_character_sha256=options.trial_character_sha256,
+                mapping_path=options.type_index, occupied_keys=occupied,
+                delivery_mode=options.delivery_mode)
+        reference = verify_reference(options.first_light)
+        codecs = load_codecs(reference)
+        from dtls_transport_probe import Responder
+        from connectivity_probe import EventLog, private_directory
 
-    directory = private_directory(options.certificates)
-    path = private_directory(options.log)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    events = EventLog(path)
-    try:
-        adapter = RegistrationAdapter(events, codecs, server_version=options.server_version,
-                                      heartbeat_15d=options.heartbeat_15d,
-                                      self_ident_default=options.self_ident_default,
-                                      self_ident_current_length=options.self_ident_current_length,
-                                      spawn_point_notification=options.spawn_point_notification,
-                                      world_activation=options.world_activation,
-                                      prepared_creation=prepared_creation)
-        Responder(directory, events, port=options.port, chain=options.chain,
-                  on_app=adapter.on_app,
-                  on_tick=adapter.on_tick if options.heartbeat_15d else None,
-                  max_datagrams=4096,
-                  max_peer_datagrams=2048,
-                  max_lifetime_peers=1 if prepared_creation is not None else None).run(options.duration)
-    finally:
-        events.close()
+        directory = private_directory(options.certificates)
+        path = private_directory(options.log)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        events = EventLog(path)
+        try:
+            adapter = RegistrationAdapter(events, codecs, server_version=options.server_version,
+                                          heartbeat_15d=options.heartbeat_15d,
+                                          self_ident_default=options.self_ident_default,
+                                          self_ident_current_length=options.self_ident_current_length,
+                                          spawn_point_notification=options.spawn_point_notification,
+                                          world_activation=options.world_activation,
+                                          prepared_creation=prepared_creation,
+                                          user_stop_lifetime=options.until_stopped is not None)
+            Responder(directory, events, port=options.port, chain=options.chain,
+                      on_app=adapter.on_app,
+                      on_tick=adapter.on_tick if options.heartbeat_15d else None,
+                      max_datagrams=4096,
+                      max_peer_datagrams=2048,
+                      max_lifetime_peers=1 if prepared_creation is not None else None).run(
+                          options.duration, stop if options.until_stopped else None)
+        finally:
+            events.close()
     return 0
 
 

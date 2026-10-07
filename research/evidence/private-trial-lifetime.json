@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "classification": "original-controlled-private-trial-lifetime",
+  "status": "passed",
+  "recordedUtc": "2026-10-07T17:26:31.532597+00:00",
+  "workItemId": 164,
+  "actionableIds": [
+    256,
+    257
+  ],
+  "parentActionableId": 248,
+  "claimIds": [
+    "K349",
+    "K350",
+    "K351"
+  ],
+  "input": {
+    "initialHead": "fbaf1b63ea50638495e16aaf093a2ecf963690db",
+    "initialWorkingTree": "clean",
+    "head": "fbaf1b63ea50638495e16aaf093a2ecf963690db",
+    "workingTree": "M docs/AGENT_HANDOFF.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ONE_PLAYER_MILESTONE.md\n M docs/PLAYER_CREATION_TRIAL.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/Invoke-FridaPrivateTrial.ps1\n M scripts/carrier_registration_probe.py\n M scripts/dtls_transport_probe.py\n M scripts/frida_client_trial.py\n M scripts/offline-test-profiles.json\n M scripts/queue_contract_probe.py\n M scripts/validate_offline.py\n M tests/test_carrier_registration_probe.py\n M tests/test_dtls_transport_probe.py\n M tests/test_frida_client_trial.py\n M tests/test_offline_runner.py\n M tests/test_queue_contract_probe.py\n?? research/evidence/private-trial-lifetime.json\n?? scripts/private_trial_lifetime.py\n?? tests/test_frida_controller_lifetime.ps1"
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/private_trial_lifetime.py",
+      "sha256": "156ab1f7374bd0b147d8726567fd4902dfee780ca5522b045fdf0961751d1d22"
+    },
+    {
+      "path": "scripts/frida_client_trial.py",
+      "sha256": "79f09514642d875ac056f8f5508699cf5f1e8a5acf22daa08c2e50bcc2ad0faa"
+    },
+    {
+      "path": "scripts/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "506a31377facc49929f49c42ab72ba1eb2de34916c7effee40176e5fc83149c9"
+    },
+    {
+      "path": "scripts/queue_contract_probe.py",
+      "sha256": "672e6d9422b7c75e1124c3e4bda3b8b9a4abe24aa5586935b5f4531ea96f7b72"
+    },
+    {
+      "path": "scripts/dtls_transport_probe.py",
+      "sha256": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf"
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "18cb4b72309f27b7c250835b505c5eea66ef3d72ddcf4946837d3063a5f95e49"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "sha256": "d337e182bf17f87aea660a0e88a0f0ee1ed122707371b43e5657ea256d227940"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "sha256": "0770d0ed5b562251a863c23a59d09acbefd60956f7b9c49f83fe25c213b81d26"
+    },
+    {
+      "path": "tests/test_frida_client_trial.py",
+      "sha256": "83c45d624e55f463bc09eec1a29875804b3a73b28c2ddec00dcd9d17ace86914"
+    },
+    {
+      "path": "tests/test_frida_controller_lifetime.ps1",
+      "sha256": "67e6d485fa495968e9b8fe439617e96eb25a4160dc55d5c4c8d129054ef341c5"
+    },
+    {
+      "path": "tests/test_queue_contract_probe.py",
+      "sha256": "04bd776e10a3c47c388daeda37437c2fccf0c5ba9d21aeab446f23743d882a75"
+    },
+    {
+      "path": "tests/test_dtls_transport_probe.py",
+      "sha256": "eb9474872d2911efc2a52eae39afcc3cbc8aa90fb6fbf77cb3883ae208a47a1a"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "76266e4ff3bd1768718f4fc40d36062913853e8e6d0772a7782576d3dbbf8cb7"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "sha256": "19081969d838ce26087ce65699a3f80bf066059b09cca7d6e862449f020ba2a2"
+    }
+  ],
+  "policy": {
+    "elapsedSessionDeadline": null,
+    "finish": "user-confirmed completion or goal refocus",
+    "emergencyStops": [
+      "exact controller loss",
+      "client exit",
+      "admission/hook/transport failure",
+      "unsupported protocol ordering or cursor exhaustion"
+    ],
+    "cleanup": "stop signal, exact game job exit, exclusive runner lock, owned listeners closed, containment release",
+    "startupShutdownTimeoutsRetained": true,
+    "newHooks": false,
+    "newWireMessages": false
+  },
+  "prepared": {
+    "mode": "offline-user-confirmed-lifetime-preparation",
+    "character_unchanged": true,
+    "candidate_sha256": "d836b1e3ae70e636bca5fe4d4050a23805154c203936b9074c4f9a232d4aed96",
+    "candidate_bytes": 107,
+    "manifest_sha256": "cd76e1f92fcaf7ae8a4bfb980e7ed85fdf448a723f3bf3c43537d5fbc9c942c6",
+    "bindings": 164,
+    "user_stop_lifetime": true,
+    "observer_sites": 3,
+    "changed_bound_inputs": [
+      "scripts\\carrier_registration_probe.py",
+      "scripts\\dtls_transport_probe.py",
+      "scripts\\frida_client_trial.py",
+      "scripts\\Invoke-FridaPrivateTrial.ps1",
+      "scripts\\queue_contract_probe.py",
+      "scripts\\validate_offline.py"
+    ],
+    "approval_pending": true,
+    "client_started": false,
+    "controller_executed": false,
+    "system_mutated": false
+  },
+  "validation": {
+    "focusedPython": 164,
+    "extractedControllerLifecycle": "passed",
+    "workspacePython": {
+      "selectedFiles": 48,
+      "collected": 1424,
+      "executed": 1424,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "workspacePowershell": [
+      {
+        "file": "tests/test_official_observation.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_observe_current_client.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_anchor_transaction.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_rep_launch_lifecycle.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      },
+      {
+        "file": "tests/test_frida_controller_lifetime.ps1",
+        "status": "passed",
+        "validator": "parser-and-automatic-variable"
+      }
+    ],
+    "workspaceCli": {
+      "status": "passed",
+      "httpStatus": 200,
+      "listenerClosed": true,
+      "childExitCode": 0,
+      "bind": "127.0.0.1",
+      "port": 65383
+    },
+    "independentChecks": 12,
+    "independentScope": "real benign Windows child PID/creation identity/loss; extracted controller failure cases",
+    "workspaceReceipt": ".scratch/offline-validation/run-ttctcenm/receipt.json",
+    "workspaceSha256": "ada81442e1696b74c0deb8e0bed48ac29a6d5dc38d85c9d578c7ebc3594b496f"
+  },
+  "limits": [
+    "No native client or full controller execution; no player/control/movement acceptance.",
+    "Actual containment cleanup remains source-supported, not newly executed.",
+    "No safe replay retirement, reordered ACK or sequence rollover contract is proved.",
+    "Private event logs retain observations until stop; storage failures end the attempt."
+  ],
+  "counterEvidence": [
+    "Initial Core run82passed/1failed: stop reason was unset when marker short-circuited guard; corrected and164focused checks passed.",
+    "Pinned imported ACK helper returns no ACK for lower numeric sequences; manual mode fails explicitly instead of inventing wrap semantics."
+  ],
+  "resources": {
+    "clientStarted": false,
+    "fullControllerExecuted": false,
+    "hostsFirewallTrustMutated": false,
+    "syntheticListenersClosed": true,
+    "independentBenignChildTerminated": true
+  }
+}

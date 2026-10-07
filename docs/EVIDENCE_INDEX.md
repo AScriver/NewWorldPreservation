@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `private-trial-lifetime` | M1-07 | [User-confirmed creation trial lifetime](PLAYER_CREATION_TRIAL.md) |
 | `current-character-identity-override` | M1-07 | [Selected owned identity-override inputs](CHARACTER_IDENTITY_OVERRIDE.md) |
 | `private-player-creation-trial-preparation` | M1-07 | [Default-off one-candidate trial and pending admission](PLAYER_CREATION_TRIAL.md) |
 | `private-trial-character` | M1-07 | [One fresh original record across HTTP and player inputs](PRIVATE_TRIAL_CHARACTER.md) |

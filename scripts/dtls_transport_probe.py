@@ -4,6 +4,8 @@ The server does not authenticate client certificates. A completed server handsha
 does not prove that a client accepted this server or entered a world.
 """
 import argparse
+from collections import deque
+from contextlib import nullcontext
 import json
 import socket
 import threading
@@ -18,6 +20,7 @@ from cryptography.hazmat.primitives import hashes
 from connectivity_probe import EventLog, private_directory
 from udp_handoff_probe import header_metadata
 from windows_udp_owner import owner_of_bound_port
+from private_trial_lifetime import UserStop, add_lifetime_options, resolve_lifetime_options
 
 
 MAX_PEERS = 8
@@ -35,6 +38,10 @@ ALERTS = {0: "close_notify", 20: "bad_record_mac", 40: "handshake_failure",
 REASONS = {"unknown ca", "certificate verify failed", "bad certificate", "handshake failure",
            "unsupported protocol", "no shared cipher", "wrong version number", "unexpected message",
            "decryption failed or bad record mac", "bad record mac"}
+
+
+class TerminalProtocolError(RuntimeError):
+    """A manual trial cannot safely continue after a protocol boundary is reached."""
 
 
 def _failure(error):
@@ -185,6 +192,7 @@ class Responder:
 
     def _advance(self, peer):
         connection = peer.connection
+        terminal = False
         try:
             if not peer.established:
                 connection.do_handshake()
@@ -206,6 +214,10 @@ class Responder:
                                      plaintext_bytes=len(plaintext))
                     if self.on_app is not None:
                         self.on_app(peer, plaintext)
+        except TerminalProtocolError:
+            terminal = True
+            self._close_peer(peer, "terminal_protocol_failure")
+            raise
         except (SSL.WantReadError, SSL.WantWriteError):
             pass
         except (SSL.Error, SSL.SysCallError, SSL.ZeroReturnError) as error:
@@ -213,23 +225,35 @@ class Responder:
             self.events.emit("DTLS_FAILURE", connection_id=peer.id, error_class=kind, openssl_reason=reason)
             self._close_peer(peer, "openssl_failure")
         finally:
-            self._drain(peer)
+            if not terminal:
+                self._drain(peer)
 
     def run(self, seconds, stop=None):
-        if not 0 < seconds <= 600:
+        manual = seconds is None
+        if manual and stop is None:
+            self.socket.close()
+            raise ValueError("Manual lifetime requires an explicit stop guard")
+        if not manual and not 0 < seconds <= 600:
             self.socket.close()
             raise ValueError("Duration must be 1..600 seconds")
         stop = stop if stop is not None else threading.Event()
-        deadline = time.monotonic() + seconds
+        if manual:
+            self.max_lifetime_peers = 1
+        deadline = None if manual else time.monotonic() + seconds
         count = 0
+        recent_datagrams = deque()
+        recent_peer_datagrams = {}
         self.events.emit("DTLS_PROBE_LISTENING", bind=self.address[0], port=self.address[1],
                          chain=self.chain, configured_leaf_sha256=self.leaf_fingerprint,
                          configured_chain_root_sha256=self.root_fingerprint if self.chain == "full" else None,
                          client_certificate_authenticated=False, game_authentication=False,
                          world_entry=False, max_datagrams=self.max_datagrams,
-                         max_peer_datagrams=self.max_peer_datagrams)
+                         max_peer_datagrams=self.max_peer_datagrams,
+                         datagram_budget_basis="rolling_second" if manual else "lifetime",
+                         session_lifetime="user_stop" if manual else "elapsed_duration")
         try:
-            while not stop.is_set() and time.monotonic() < deadline and count < self.max_datagrams:
+            while (not stop.is_set() and (manual or time.monotonic() < deadline) and
+                   (manual or count < self.max_datagrams)):
                 now = time.monotonic()
                 for peer in list(self.peers.values()):
                     if now - peer.created >= MAX_HANDSHAKE_SECONDS and not peer.established:
@@ -252,12 +276,19 @@ class Responder:
                             self.peers.get(peer.address) is peer):
                         try:
                             self.on_tick(peer, now)
+                        except TerminalProtocolError:
+                            raise
                         except Exception:
                             self.events.emit("DTLS_TICK_FAILURE", connection_id=peer.id,
                                              reason="application_tick_failure")
                             self._close_peer(peer, "tick_failure")
+                if (manual and self.max_lifetime_peers == 1 and
+                        self.lifetime_peer_admissions and not self.peers):
+                    self.events.emit("DTLS_PROBE_FAILURE", reason="owned_peer_closed")
+                    raise TerminalProtocolError("Owned trial peer closed")
                 try:
-                    self.socket.settimeout(min(0.05, max(0.001, deadline - time.monotonic())))
+                    self.socket.settimeout(0.05 if manual else
+                                           min(0.05, max(0.001, deadline - time.monotonic())))
                     data, address = self.socket.recvfrom(65535)
                 except socket.timeout:
                     continue
@@ -273,6 +304,23 @@ class Responder:
                     continue
                 count += 1
                 peer = self.peers.get(address)
+                if manual:
+                    now = time.monotonic()
+                    while recent_datagrams and recent_datagrams[0] <= now - 1:
+                        recent_datagrams.popleft()
+                    if len(recent_datagrams) >= self.max_datagrams:
+                        self.events.emit("DTLS_PROBE_FAILURE", reason="datagram_rate_exhausted")
+                        raise TerminalProtocolError("Trial datagram rate exhausted")
+                    recent_datagrams.append(now)
+                    if peer is not None:
+                        recent = recent_peer_datagrams.setdefault(peer.id, deque())
+                        while recent and recent[0] <= now - 1:
+                            recent.popleft()
+                        if len(recent) >= self.max_peer_datagrams:
+                            self.events.emit("DTLS_PROBE_FAILURE", reason="peer_datagram_rate_exhausted",
+                                             connection_id=peer.id)
+                            raise TerminalProtocolError("Trial peer datagram rate exhausted")
+                        recent.append(now)
                 metadata = header_metadata(data)
                 if peer is None:
                     if (metadata["datagram_class"] != "dtls_client_hello_header" or
@@ -286,6 +334,8 @@ class Responder:
                     self.lifetime_peer_admissions += 1
                     self.peers[address] = peer
                     self.by_connection[peer.connection] = peer
+                    if manual:
+                        recent_peer_datagrams[peer.id] = deque([time.monotonic()])
                     self.events.emit("DTLS_PEER_OPENED", connection_id=peer.id,
                                      peer={"address":address[0], "port":address[1]})
                 peer.packets += 1
@@ -293,7 +343,7 @@ class Responder:
                 self.events.emit("DTLS_DATAGRAM_RECEIVED", connection_id=peer.id,
                                  datagram_bytes=len(data), process_id=self.lookup(*address),
                                  owner_basis="IPv4_bound_endpoint_owner_not_exact_flow", **metadata)
-                if peer.packets > self.max_peer_datagrams:
+                if not manual and peer.packets > self.max_peer_datagrams:
                     self._close_peer(peer, "packet_limit")
                     continue
                 try:
@@ -318,19 +368,22 @@ def main():
     parser.add_argument("--certificates", required=True)
     parser.add_argument("--log", required=True)
     parser.add_argument("--port", type=int, default=64003)
-    parser.add_argument("--duration", type=int, default=600)
+    add_lifetime_options(parser)
     parser.add_argument("--chain", choices=("full", "leaf"), default="full")
     options = parser.parse_args()
-    if not 1 <= options.port <= 65535 or not 1 <= options.duration <= 600:
-        parser.error("Port 1..65535 and duration 1..600 required")
-    directory = private_directory(options.certificates)
-    path = private_directory(options.log)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    events = EventLog(path)
-    try:
-        Responder(directory, events, port=options.port, chain=options.chain).run(options.duration)
-    finally:
-        events.close()
+    resolve_lifetime_options(parser, options, default_seconds=600)
+    if not 1 <= options.port <= 65535:
+        parser.error("Port 1..65535 required")
+    with (UserStop(options.until_stopped) if options.until_stopped else nullcontext()) as stop:
+        directory = private_directory(options.certificates)
+        path = private_directory(options.log)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        events = EventLog(path)
+        try:
+            Responder(directory, events, port=options.port, chain=options.chain).run(
+                options.duration, stop if options.until_stopped else None)
+        finally:
+            events.close()
     return 0
 
 

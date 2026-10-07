@@ -14,7 +14,7 @@ from OpenSSL import SSL
 ROOT = Path(__file__).parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from connectivity_probe import EventLog, generate_certificates
-from dtls_transport_probe import MAX_PEERS, Responder
+from dtls_transport_probe import MAX_PEERS, Responder, TerminalProtocolError
 
 
 @pytest.fixture
@@ -259,6 +259,143 @@ def test_selected_datagram_budget_stops_and_closes_socket(tmp_path, certdir):
     assert records[-1]["received_datagrams"] == 3
     assert records[-1]["sockets_closed"] and server.socket.fileno() == -1
     assert "SYNTHETIC-SECRET" not in path.read_text()
+
+
+def test_manual_requires_stop_guard_and_continues_past_cumulative_budget(tmp_path, certdir):
+    events = EventLog(tmp_path / "manual-events.jsonl")
+    unguarded = Responder(certdir, events, port=0)
+    with pytest.raises(ValueError, match="explicit stop guard"):
+        unguarded.run(None)
+    assert unguarded.socket.fileno() == -1
+    stop = threading.Event()
+    server = Responder(certdir, events, port=0, max_datagrams=3, max_peer_datagrams=2)
+    thread = threading.Thread(target=server.run, args=(None, stop))
+    thread.start()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as client:
+            for _ in range(3):
+                client.sendto(b"synthetic", server.address)
+            deadline = time.monotonic() + 2
+            while server.socket.fileno() != -1 and time.monotonic() < deadline:
+                rows = [json.loads(line) for line in (tmp_path / "manual-events.jsonl").read_text().splitlines()]
+                if len([row for row in rows if row["state"] == "DTLS_DATAGRAM_REFUSED"]) >= 3:
+                    break
+                time.sleep(0.005)
+            time.sleep(1.05)
+            for _ in range(3):
+                client.sendto(b"synthetic", server.address)
+            time.sleep(0.1)
+        assert thread.is_alive()
+    finally:
+        stop.set()
+        thread.join(timeout=3)
+        events.close()
+    rows = [json.loads(line) for line in (tmp_path / "manual-events.jsonl").read_text().splitlines()]
+    assert not thread.is_alive()
+    assert rows[-1]["received_datagrams"] == 6
+    assert rows[-1]["sockets_closed"] and server.socket.fileno() == -1
+
+
+def test_manual_rate_exhaustion_is_terminal_and_cleans_up(tmp_path, certdir):
+    path = tmp_path / "rate-events.jsonl"
+    events = EventLog(path)
+    server = Responder(certdir, events, port=0, max_datagrams=2, max_peer_datagrams=1)
+    stop = threading.Event()
+    failures = []
+
+    def run():
+        try:
+            server.run(None, stop)
+        except TerminalProtocolError as error:
+            failures.append(str(error))
+
+    thread = threading.Thread(target=run)
+    thread.start()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as client:
+            for _ in range(3):
+                client.sendto(b"synthetic", server.address)
+        thread.join(timeout=3)
+    finally:
+        stop.set()
+        thread.join(timeout=3)
+        events.close()
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert failures == ["Trial datagram rate exhausted"]
+    assert any(row["state"] == "DTLS_PROBE_FAILURE" and
+               row["reason"] == "datagram_rate_exhausted" for row in rows)
+    assert rows[-1]["sockets_closed"] and server.socket.fileno() == -1
+
+
+def test_manual_terminal_tick_propagates_and_owned_peer_close_ends_trial(tmp_path, certdir):
+    for condition in ("tick", "closed"):
+        path = tmp_path / f"{condition}-events.jsonl"
+        events = EventLog(path)
+        server = Responder(certdir, events, port=0,
+                           on_tick=lambda _peer, _now: (_ for _ in ()).throw(
+                               TerminalProtocolError("Synthetic terminal boundary")))
+        server.socket.close()
+        server.socket = Mock()
+        server.socket.recvfrom.side_effect = socket.timeout
+        if condition == "tick":
+            connection = Mock()
+            connection.DTLSv1_get_timeout.return_value = None
+            now = time.monotonic()
+            peer = SimpleNamespace(id="synthetic-owned", address=("127.0.0.1", 10001),
+                                   connection=connection, established=True,
+                                   created=now, last_seen=now)
+            server.peers[peer.address] = peer
+            server.by_connection[connection] = peer
+        else:
+            server.lifetime_peer_admissions = 1
+        try:
+            with pytest.raises(TerminalProtocolError):
+                server.run(None, threading.Event())
+        finally:
+            events.close()
+        rows = [json.loads(line) for line in path.read_text().splitlines()]
+        assert rows[-1]["state"] == "DTLS_PROBE_STOPPED"
+        assert rows[-1]["sockets_closed"] and not server.peers
+        assert server.socket.close.called
+        if condition == "closed":
+            assert any(row["state"] == "DTLS_PROBE_FAILURE" and
+                       row["reason"] == "owned_peer_closed" for row in rows)
+
+
+def test_manual_peer_rate_exhaustion_is_terminal(tmp_path, certdir):
+    path = tmp_path / "peer-rate-events.jsonl"
+    events = EventLog(path)
+    server = Responder(certdir, events, port=0, max_datagrams=10, max_peer_datagrams=1,
+                       lookup=lambda *_: None)
+    stop = threading.Event()
+    failures = []
+
+    def run():
+        try:
+            server.run(None, stop)
+        except TerminalProtocolError as error:
+            failures.append(str(error))
+
+    client = _client(certdir)
+    thread = threading.Thread(target=run)
+    thread.start()
+    try:
+        with pytest.raises(SSL.WantReadError):
+            client[1].do_handshake()
+        first = client[1].bio_read(65535)
+        client[0].sendto(first, server.address)
+        client[0].sendto(first, server.address)
+        thread.join(timeout=3)
+    finally:
+        stop.set()
+        thread.join(timeout=3)
+        client[0].close()
+        events.close()
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert failures == ["Trial peer datagram rate exhausted"]
+    assert any(row["state"] == "DTLS_PROBE_FAILURE" and
+               row["reason"] == "peer_datagram_rate_exhausted" for row in rows)
+    assert rows[-1]["sockets_closed"] and server.socket.fileno() == -1
 
 
 def test_retransmission_timer_and_peer_capacity(tmp_path, certdir):

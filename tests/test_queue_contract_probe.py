@@ -83,3 +83,28 @@ def test_synthetic_queue_identity_matches_original_local_selection_not_real_cred
 def test_unknown_case_refused_before_certificate_material_or_bind():
     with pytest.raises(ValueError):
         contract.make_server("127.0.0.1",0,Path("not-read"),None,{},case="assume-game-ready")
+
+
+def test_user_stop_https_service_has_no_elapsed_timer(monkeypatch):
+    stop = threading.Event()
+
+    class Server:
+        requests = 0
+        timeout = None
+
+        def handle_request(self):
+            self.requests += 1
+            if self.requests == 5:
+                stop.set()
+
+    def forbidden_timer(*_arguments):
+        raise AssertionError("manual service must not schedule elapsed shutdown")
+    monkeypatch.setattr(contract.threading, "Timer", forbidden_timer)
+    server = Server()
+    contract.serve(server, None, stop=stop)
+    assert server.requests == 5 and server.timeout == 0.1
+
+
+def test_manual_https_service_requires_explicit_stop_guard():
+    with pytest.raises(ValueError, match="owned stop guard"):
+        contract.serve(None, None)

@@ -1,5 +1,18 @@
 # Bounded task briefs
 
+## #256/#257 — user-confirmed lifetime and bounded ongoing transport (M each)
+
+- October7 user direction removes the prepared creation trial's elapsed cap.
+  #256 owns client/controller/service stop ownership; #257 owns cumulative
+  transport exhaustion and bounded retained protocol state under248/workItem164.
+- Keep the client alive until user completion/refocus, client exit, controller
+  loss or a real failure. Retain existing startup/shutdown and containment gates.
+- Preserve the exact candidate/observer/hook scope. No replay-window retirement
+  or sequence rollover semantics are proved; expose those failures explicitly.
+- Inert/owned ephemeral tests, independent benign-process ownership check,
+  parser validation, workspace checks, current prepared-input pins and local
+  commit close this policy change. Native player/control acceptance stays pending.
+
 ## #255 — selected identity-override inputs (S)
 
 - Removes a selected disk-setting mismatch concern before the fresh-player trial.

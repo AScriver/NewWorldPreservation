@@ -1,5 +1,26 @@
 # Agent handoff
 
+## #256/#257 user-confirmed trial lifetime — October7
+
+- [The creation trial](PLAYER_CREATION_TRIAL.md) now has no elapsed session cap
+  in its explicit user-stop mode. The user confirms finished or refocuses the
+  goal; client exit, exact controller loss or a real failure also requests stop.
+- Children retain controller handles validated by PID and creation FILETIME.
+  Stop publication, exact game-job termination, exclusive runner lock, owned
+  listener shutdown and containment release keep their existing order.
+- Healthy packet/heartbeat totals no longer end this mode. Rolling admission
+  and finite replay state remain bounded; unsupported ordering/cursor rollover
+  ends with an explicit protocol failure. No eviction or new wire semantics.
+- The October6 capped preparation below is historical. Its candidate/record
+  remain unchanged; current input pins and checks belong to the
+  [lifetime receipt](../research/evidence/private-trial-lifetime.json).
+  No game trial ran, and the separate nonempty-send admission remains pending.
+- Validation:164 focused Python cases, workspace1,424/48modules, five PowerShell
+  suites and closed isolated CLI lifecycle passed; independent12 checks used a
+  benign Windows process. Current dispatch/stop/grant preparation is under
+  ignored `.scratch/trial-lifetime-20261007`; the former capped launch entry
+  refuses use. Final readback found no game,443/64003 listener or trial rule.
+
 ## #254 prepared one-player creation probe — October6
 
 - Actual client behavior remains the closed0655 context initialization and spawn
@@ -17,13 +38,13 @@
   record/candidate, disk admission and163-file manifest. Dispatch scripts under
   `.scratch/one-player-20261006` validate but have not executed. Pending approval
   is explicitly recorded; no approval receipt or native result exists.
-- Next gate is one specific300-second isolated-copy creation trial grant and user
+- Next gate was one specific capped isolated-copy creation trial grant and user
   availability for UAC/Play and visual/control observation. Existing AGENTS admits
   an empty bundle; the October6 refocus expands no authorization. Keep the active
   goal and broad parent acceptance pending; do not relaunch the empty trial.
-- If spawn succeeds, the existing300seconds-from-resume cap still cannot satisfy
-  five minutes after spawn. Prepare a separately admitted longer control/network
-  experiment then; do not silently increase runtime/budgets or invent movement.
+- October7 replaces this former300seconds-from-resume policy with the
+  user-confirmed lifetime above. Five minutes after spawn remains a minimum;
+  movement and network-participation acceptance remain unproved.
 
 ## #253 fresh identity propagation — October6
 
@@ -40,8 +61,8 @@
   record and a concrete nonempty trial proposal. Existing approvals enumerate
   an empty bundle; this unit grants no new sends. Native loading/designation
   and all one-player acceptance remain pending.
-- Client maximum300s includes loading; a future five-minute post-spawn test
-  needs a longer bounded lifetime. Prior transport idle-close followed stopped
+- The then-current maximum300s included loading and was superseded October7.
+  Prior transport idle-close followed stopped
   inbound traffic, not an observed datagram/heartbeat budget failure.
 
 ## #252 one-player priority and candidate — October6

@@ -1,8 +1,9 @@
 # Prepared fresh player creation trial — pending authorization
 
 This opt-in preparation removes the omitted entity-creation payload after the
-last private client's context initialization. WorkItem164, leaf254 under248.
-Baseline clean `0c97186`; [fresh character inputs](PRIVATE_TRIAL_CHARACTER.md) and
+last private client's context initialization. WorkItem164, leaf254 and lifetime
+follow-ups256/257 under248. The original254 baseline was clean `0c97186`;
+[fresh character inputs](PRIVATE_TRIAL_CHARACTER.md) and
 [the original two-member candidate](PLAYER_CREATION_CANDIDATE.md) are reused.
 No client has run this candidate. The actual milestone remains
 [one rendered, controllable networked player](ONE_PLAYER_MILESTONE.md).
@@ -31,7 +32,7 @@ No previous official identity, entity, actor state or recorded gameplay supplies
 | Outer application length | Final typed size1..127, one-byte prefix; no raw selector fallback or new over127 comparison |
 | Timing | Once attempted, one second after successful existing empty-bundle send; delay is an experiment, not context-readiness proof |
 | Session/peer | One new record, one lifetime DTLS admission and one application peer object; no reconnect reuse |
-| Lifetime | At most300seconds from client resume; existing360-second services/320-second controller wait and traffic budgets retained |
+| Lifetime | No elapsed session deadline; user confirms finished or refocuses the goal, or the client exits or a genuine failure ends the attempt |
 
 The first expected observable result is construction of a newly rendered player.
 If a player appears, verify local camera/input ownership with normal controls.
@@ -40,10 +41,20 @@ Carrier ACK, callback or selection preview does not establish native constructio
 local designation, world entry or control. Existing observation sites do not
 directly observe player creation; user visual confirmation remains necessary.
 
-The current300-second cap includes loading and cannot satisfy five minutes
-*after* spawn. This probe tests the earliest missing transition. A subsequent
-bounded longer control/network-participation trial is required if spawn succeeds.
-No lifetime, traffic budget, movement codec or observer permission is added here.
+The October7 user instruction removes the300-second policy cap, including the
+controller and service deadlines that would otherwise end a longer session.
+Five minutes of control **after spawn is a minimum acceptance criterion**, not
+a stop time. Keep the trial active while that observation is useful. If progress
+stalls, ask the user to confirm completion or refocus the goal; elapsed time alone
+does not end it. Movement codecs and observer scope remain separately evidenced.
+
+When the user says finished or changes the goal, request stop through this run's
+`stop.request`, then reconcile cleanup before another trial or goal takes over.
+Normal client exit, loss of the exact owning controller, hook/admission failure,
+transport failure or an unsupported protocol transition also ends the attempt.
+Startup, handshake/idle and shutdown waits remain failure controls. Terminate the
+exact game owner before releasing loopback containment; a failed cleanup retains
+containment and reports what remains.
 
 ## Input and failure guards
 
@@ -64,6 +75,15 @@ heartbeat failure later that tick cannot undo the already attempted candidate.
 Lifetime admission is not released when its peer closes. When the
 option is absent, the existing path remains unchanged.
 
+Explicit user-stop mode changes cumulative packet budgets to rolling one-second
+admission limits and keeps the existing heartbeat cadence with at most eight
+pending pings. Replay state retains the finite16-bit sequence namespace and
+digests of complete validated record streams; exact duplicates resend cached
+bytes. No replay eviction or rollover semantics are guessed. Conflicting sequence
+contents, a new lower sequence, cursor exhaustion or uncertain sends terminate
+with an explicit protocol failure. This removes policy deadlines; it does not
+establish native support for unlimited protocol traffic.
+
 Carrier CLI requires the explicit `--player-creation-candidate`, character path
 and SHA, private typeIndex path, `--delivery-mode resource-index`, one occupancy
 choice and every current actor/world prerequisite. Ancillary inputs without the
@@ -78,6 +98,11 @@ boolean and `trial_character_path`, `trial_character_sha256`, `type_index_path`,
 actor/world/observer selections and exact unique file bindings before the existing
 first system mutation. Both HTTPS processes and Carrier receive the same selected
 file, expected SHA and occupancy. The installed client/launcher/EAC remain intact.
+The selected preparation adds explicit `user_stop_lifetime: true` and passes
+`--until-stopped <run>/stop.request` through the client and services. Each retains
+a controller handle verified by PID and creation FILETIME before admission, and
+stops when that owner exits. The legacy timed modes remain available for other
+procedures.
 
 ## Admission and user action
 
@@ -86,9 +111,10 @@ file, expected SHA and occupancy. The installed client/launcher/EAC remain intac
 the October6 priority explicitly expands no authorization. Offline implementation,
 tests, record generation and manifest preparation authorize no new live send.
 
-The needed grant is one300-second isolated-copy trial with this exact fresh
-creation/identity candidate added after the existing sequence, retaining the
-same containment/hooks/ownership/cleanup and no lifetime/budget/observer expansion.
+The needed grant is one isolated-copy trial with this exact fresh
+creation/identity candidate added after the existing sequence and the
+user-confirmed lifetime above, retaining the same containment/hooks/ownership/
+cleanup and observer scope.
 Windows elevation is still necessary for the existing bounded hosts/firewall
 transaction. Once admitted and the private preview appears, the user clicks
 **Play** for `Preservation`, then reports a rendered player/local camera and
@@ -97,8 +123,10 @@ until that specific grant and involvement are available.
 
 ## Verification and current readiness
 
-The [preparation receipt](../research/evidence/private-player-creation-trial-preparation.json)
-records exact code/test/source inputs, executed checks and remaining limits.
+The [original preparation receipt](../research/evidence/private-player-creation-trial-preparation.json)
+retains October6's exact code/test/source inputs and its historical timer policy.
+The [lifetime follow-up receipt](../research/evidence/private-trial-lifetime.json)
+records the revised source and controlled checks.
 Controlled tests use fake peers or unit-owned ephemeral loopback resources;
 none runs the game or full system-changing controller. Real-client construction,
 designation, camera/input, movement authority and repeat acceptance stay pending.

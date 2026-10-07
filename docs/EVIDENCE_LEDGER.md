@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## User-confirmed trial lifetime — October7, #256/#257
+
+Baseline clean `fbaf1b6`; task-owned lifetime code/tests and documentation dirty.
+[Procedure](PLAYER_CREATION_TRIAL.md) and
+[receipt](../research/evidence/private-trial-lifetime.json) distinguish controlled
+checks from the unchanged historical real-client spawn timeout.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K349 | Explicit user-stop mode has no elapsed client/controller/service session deadline | Controlled fake-clock/server checks and source inspection; user completion/refocus, exact controller loss, exit or failure stops it; no real game session | Lifetime helper, client/queue and extracted controller tests |
+| K350 | Children verify and retain the exact controller creation identity before admission | Executed independent benign Windows child admitted matching PID/FILETIME, rejected mismatch/dead child and detected exit; containment cleanup order remains source-supported | Independent twelve-check harness; game-job/runner-lock and existing release guards |
+| K351 | Healthy cumulative transport totals no longer cut off this mode | Controlled rolling-budget/heartbeat/replay checks; full finite16-bit namespace, exact normalized duplicates, terminal lower/conflicting sequences and fresh cursor exhaustion; no proven rollover/eviction/native acceptance | Carrier/DTLS tests, pinned helper counterexamples and explicit failure propagation |
+
 ## Selected local-character override inputs — October6, #255
 
 Baseline clean7af9934; disk-only observations with exact source pins in

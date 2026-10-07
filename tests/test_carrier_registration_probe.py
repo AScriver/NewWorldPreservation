@@ -8,6 +8,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import carrier_registration_probe as adapter_module
+from dtls_transport_probe import TerminalProtocolError
 from current_creation_member_body import MEMBER_UUID as CREATION_UUID
 from current_player_identity_body import MEMBER_UUID as IDENTITY_UUID
 from current_player_creation_candidate import OWNED_PLAYER_ASSET, compose_player_creation_candidate
@@ -132,7 +133,8 @@ class FakeHeartbeat:
 def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                   server_version=None, heartbeat_15d=False, self_ident_default=False,
                   spawn_point_notification=False, world_activation=False,
-                  self_ident_current_length=False, prepared_creation=None, clock=None):
+                  self_ident_current_length=False, prepared_creation=None, clock=None,
+                  user_stop_lifetime=False):
     events, frame, response = Events(), FakeFrame(), FakeResponse()
     class FakeWire:
         @staticmethod
@@ -167,7 +169,180 @@ def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                                                spawn_point_notification=spawn_point_notification,
                                                world_activation=world_activation,
                                                prepared_creation=prepared_creation,
-                                               clock=clock), events, frame, response
+                                               clock=clock,
+                                               user_stop_lifetime=user_stop_lifetime), events, frame, response
+
+
+@pytest.mark.parametrize("value", [1, "true", None])
+def test_manual_adapter_selection_requires_explicit_boolean(value):
+    with pytest.raises(ValueError, match="explicit boolean"):
+        setup_adapter(user_stop_lifetime=value)
+
+
+def test_manual_heartbeat_continues_past_old_total_with_bounded_pending():
+    adapter, events, frame, _ = setup_adapter(
+        heartbeat_15d=True, user_stop_lifetime=True, clock=lambda: 0.0)
+    peer = Peer("manual-heartbeat")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, system_id=None, flags=0xE0, payload=b"registration")]
+    adapter.on_app(peer, b"\x02registration")
+    for index in range(1201):
+        adapter.on_tick(peer, 0.5 * (index + 1))
+    state = adapter.peers[peer.id]
+    assert state.heartbeat_sent == 1201
+    assert len(state.pending_pings) == 8
+    assert state.next_ch0_seq == state.next_ch0_rel == 1202
+    assert not state.terminal_error
+    assert len([row for row in events.rows if row["event"] == "HEARTBEAT_15D_SENT"]) == 1201
+
+
+def test_manual_full_namespace_normalized_replay_and_conflict():
+    class Decoder:
+        class LZ4BlockError(Exception):
+            pass
+
+        def decompress(self, _body, *, uncompressed_size):
+            return b"same-record-stream" if self.same else b"different-record-stream"
+
+    decoder = Decoder()
+    decoder.same = True
+    adapter, events, frame, _ = setup_adapter(
+        decompressor=decoder, compression_guard=lambda: None, user_stop_lifetime=True)
+    peer = Peer("manual-replay")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01same-record-stream")
+    initial = list(peer.sent)
+    frame.compressed = True
+    adapter.on_app(peer, b"\x01compressed")
+    assert peer.sent == initial * 2
+    assert adapter.peers[peer.id].seen_digests[1] == hashlib.sha256(b"same-record-stream").digest()
+    decoder.same = False
+    with pytest.raises(TerminalProtocolError, match="content_conflict"):
+        adapter.on_app(peer, b"\x01compressed")
+    assert peer.sent == initial * 2
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_app(peer, b"\x02later")
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_tick(peer, 1.0)
+    assert peer.sent == initial * 2
+    assert events.rows[-1]["reason"] == "inbound_sequence_content_conflict"
+
+
+def test_manual_retains_more_than_old_inbound_total_and_rejects_lower_new_sequence():
+    adapter, _events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-sequences")
+    frame.records = [Record(system_id=6, flags=0x20)]
+    frame.parse_envelope = lambda plaintext: (
+        SimpleNamespace(sequence=int.from_bytes(plaintext[:2], "big"),
+                        is_compressed=False, type_byte=0x80), plaintext[2:])
+    for sequence in range(2051):
+        if sequence == 2048:
+            continue
+        adapter.on_app(peer, sequence.to_bytes(2, "big") + b"stream")
+    state = adapter.peers[peer.id]
+    assert len(state.seen) == len(state.seen_digests) == 2050
+    before = (len(peer.sent), len(state.seen), state.last_inbound_nonack,
+              state.acked_through, state.ack_sequence)
+    with pytest.raises(TerminalProtocolError, match="unsupported_lower"):
+        adapter.on_app(peer, (2048).to_bytes(2, "big") + b"new-stream")
+    assert (len(peer.sent), len(state.seen), state.last_inbound_nonack,
+            state.acked_through, state.ack_sequence) == before
+
+
+@pytest.mark.parametrize("cursor", ["next_out_envelope_seq", "next_ch0_seq",
+                                    "next_ch0_rel", "ack_sequence"])
+def test_manual_fresh_cursor_exhaustion_is_terminal_before_send(cursor):
+    adapter, events, frame, _ = setup_adapter(
+        heartbeat_15d=True, user_stop_lifetime=True, clock=lambda: 0.0)
+    peer = Peer("manual-cursor")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, system_id=None, flags=0xE0, payload=b"registration")]
+    adapter.on_app(peer, b"\x02registration")
+    state = adapter.peers[peer.id]
+    setattr(state, cursor, 65536)
+    before = (len(peer.sent), state.next_out_envelope_seq,
+              state.next_ch0_seq, state.next_ch0_rel, state.ack_sequence)
+    with pytest.raises(TerminalProtocolError, match="namespace_exhausted"):
+        adapter.on_tick(peer, 0.5)
+    assert (len(peer.sent), state.next_out_envelope_seq,
+            state.next_ch0_seq, state.next_ch0_rel, state.ack_sequence) == before
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_tick(peer, 1.0)
+    assert len(peer.sent) == before[0]
+    assert events.rows[-1]["event"] == "CARRIER_TERMINAL_FAILURE"
+
+
+@pytest.mark.parametrize("send_path", ["connect", "v3_initial", "v3_resend", "ack"])
+def test_manual_app_send_paths_reject_unsafe_fresh_cursors_before_send(send_path):
+    adapter, _events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-app-cursor")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    if send_path == "connect":
+        adapter.on_app(peer, b"\x01connect")
+        state = adapter.peers[peer.id]
+        frame.records = [Record(system_id=1, payload=b"\x01")]
+        incoming = b"\x02connect-again"
+    else:
+        adapter.on_app(peer, b"\x01connect")
+        state = adapter.peers[peer.id]
+        if send_path == "v3_resend":
+            frame.records = [Record(channel=0, system_id=None, flags=0xE0,
+                                    payload=b"registration")]
+            adapter.on_app(peer, b"\x02registration")
+            incoming = b"\x03new-registration"
+        elif send_path == "v3_initial":
+            frame.records = [Record(channel=0, system_id=None, flags=0xE0,
+                                    payload=b"registration")]
+            incoming = b"\x02registration"
+        else:
+            frame.records = [Record(system_id=8, payload=b"other-system")]
+            incoming = b"\x02other"
+    if send_path != "connect":
+        state.next_out_envelope_seq = 65536
+    before = len(peer.sent)
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_app(peer, incoming)
+    assert len(peer.sent) == before
+
+
+def test_manual_fixed_actor_send_checks_shared_reliable_cursor():
+    adapter, _events, frame, _ = setup_adapter(
+        server_version=adapter_module.OWNED_SERVER_VERSION, heartbeat_15d=True,
+        self_ident_default=True, user_stop_lifetime=True, clock=lambda: 0.0)
+    peer = Peer("manual-actor-cursor")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, system_id=None, flags=0xE0, payload=b"registration")]
+    adapter.on_app(peer, b"\x02registration")
+    state = adapter.peers[peer.id]
+    state.next_ch0_rel = 65536
+    before = len(peer.sent)
+    with pytest.raises(TerminalProtocolError, match="record_namespace_exhausted"):
+        adapter.on_tick(peer, 1.0)
+    assert len(peer.sent) == before
+    assert not state.self_ident_sent
+
+
+def test_manual_partial_send_latches_terminal_failure():
+    adapter, _events, frame, _ = setup_adapter(
+        heartbeat_15d=True, user_stop_lifetime=True, clock=lambda: 0.0)
+    peer = Peer("manual-partial")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, system_id=None, flags=0xE0, payload=b"registration")]
+    adapter.on_app(peer, b"\x02registration")
+    peer.partial = True
+    with pytest.raises(TerminalProtocolError, match="heartbeat_send_failed"):
+        adapter.on_tick(peer, 0.5)
+    sent = len(peer.sent)
+    peer.partial = False
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_tick(peer, 1.0)
+    with pytest.raises(TerminalProtocolError):
+        adapter.on_app(peer, b"\x03later")
+    assert len(peer.sent) == sent
 
 
 def test_connect_then_registration_then_post_data_metadata_only():
