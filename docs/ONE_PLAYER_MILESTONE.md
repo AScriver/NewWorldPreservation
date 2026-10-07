@@ -27,11 +27,26 @@ checkpoint. Work remains under top-level Actionables **164**.
    gameplay replay or Amazon world simulation supplies the result. Record any
    Steam/launcher dependency separately; durable persistence is unnecessary.
 
-All five conditions are **pending**. On success retain reproduction commands,
+No run satisfies all five conditions. October7's first attempt used a fresh
+original backend record and a fresh isolated client/DTLS session, but stopped
+before registration or entity creation. Native identity acceptance and conditions
+2–5 remain unproved; the fresh retry and later restart repetition are still
+required. On success retain reproduction commands,
 correlated logs and visual evidence or explicit user confirmation, mark this
 milestone complete, and proceed to the existing multiplayer acceptance gate.
 
 ## Furthest real-client behavior
+
+October7's [first selected creation trial](../research/evidence/private-player-creation-trial-20261007.json)
+ran at clean83911ed with one SHA-bound original record supplied to HTTPS and
+Carrier. The isolated client established DTLS, received one ConnectACK, then the
+second connection request hit `connect_ack_cursor_reuse`. No registration,
+actor/world or creation message was sent. The controller stopped the game and
+cleanup/readback passed. The user reported an apparent crash on Play; native
+crash causality is unproved. That single-attempt grant is consumed.
+
+This later attempt did not advance the player path. The furthest observed
+context/player-path behavior remains the earlier0655 trial below.
 
 The closed [0655 private trial](../research/evidence/current-self-length-prefix-trial.json)
 used the isolated owned copy, loopback containment, existing trust hook,
@@ -55,8 +70,8 @@ Verify this chain rather than assuming wire order:
 
 | Transition | Current support | Missing observation / obstacle |
 |---|---|---|
-| Fresh session/character identity | One original immutable record joins login-info, queue and identity BODY; default-off controller forwarding is prepared | Native local-ID provider acceptance and admitted live forwarding pending |
-| Entity creation | Owned player AssetId, fresh GdeRef policy, creation BODY/record parser | Trial sends no creation member; native construction/slot placement unobserved |
+| Fresh session/character identity | One original immutable record joins login-info, queue and identity BODY; first selected trial forwards the same SHA-bound record to HTTPS and Carrier | Native local-ID provider acceptance unproved; fresh retry pending |
+| Entity creation | Owned player AssetId, fresh GdeRef policy, creation BODY/record parser and one-candidate integration | First selected trial aborted before creation; native construction/slot placement unobserved |
 | Resource loading and component delivery | Exact owned player resource; baked PlayerComponent index9 | Native load and refreshable runtime index mode unobserved |
 | Local-player designation | Exact text comparison, reconciled identity delivery, guarded registry path | Matching provider availability, binding, keyed readiness and actual designation unobserved |
 | Camera/input ownership | Local-player and context-readiness gates identified | Rendered player/camera/input not demonstrated |
@@ -86,7 +101,16 @@ October7 follow-ups256/257 replace elapsed trial deadlines with user-confirmed
 completion/refocus and exact-controller loss detection. Startup/cleanup and
 explicit protocol failures remain guarded. See the trial's lifetime contract.
 
-Next relevant work is that specifically admitted isolated-copy trial. Expected
+October7 #259 corrects the pre-registration retry guard offline in local `e508a87`.
+[The correction receipt](../research/evidence/current-connect-ack-retry.json)
+pins the final code, pinned-builder retry behavior, retained failure controls and
+passing focused/independent/workspace checks. It proves no new native behavior.
+Fresh `run-20261007T1901-player2` contains a new record, original107-byte candidate
+and164 sealed inputs, with existing hooks/observer/containment and user-confirmed
+lifetime. Readiness passed20:06UTC; no second grant or native attempt exists.
+
+Next relevant work is that fresh isolated-copy trial after a new specific grant.
+Expected
 first observable result: native resource/
 player construction after the previously observed context activation. Local
 designation, rendering and control must then be checked separately.
