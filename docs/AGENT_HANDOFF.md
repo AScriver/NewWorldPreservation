@@ -1,5 +1,26 @@
 # Agent handoff
 
+## #258 selected creation trial — October7, closed before creation
+
+- Human answer “Approve this one trial” admitted the exact prepared107-byte
+  creation/identity candidate and user-confirmed lifetime. It ran at clean83911ed.
+  The grant is consumed; preserve `run-20261006T2321-player1`, including its stop
+  marker, logs, original record and164-file manifest. No automatic native retry.
+- Game12896 resumed, guarded trust initializer succeeded and DTLS established.
+  The first connection request got ConnectACK on envelope2; the next distinct
+  incoming envelope3 hit `connect_ack_cursor_reuse`. The transport service ended,
+  controller stopped the game, and no registration/actor/world/creation send ran.
+  User reported apparent crash on Play; native crash causality is unproved.
+- Controller cleanup18:43:47 and independent18:45:44 readback passed: exact owners,
+  game/ports/rules absent; hosts byte-exact; retained Root1; installed hashes and
+  Valid signatures unchanged. Changed Steam metadata/app/build was preserved.
+- [Original live receipt](../research/evidence/private-player-creation-trial-20261007.json)
+  seals39 runtime inputs and11 private receipts. Actual native candidate/control/
+  movement/restart acceptance remains untested. Furthest prior behavior is0655.
+- Next concrete fix: test pinned repeated-connect response semantics against this
+  new guard, preserve replay/order/exhaustion/send controls, then prepare a fresh
+  record/run and obtain a specific next-attempt grant. No new wire formats/hooks.
+
 ## #256/#257 user-confirmed trial lifetime — October7
 
 - [The creation trial](PLAYER_CREATION_TRIAL.md) now has no elapsed session cap
@@ -14,7 +35,8 @@
 - The October6 capped preparation below is historical. Its candidate/record
   remain unchanged; current input pins and checks belong to the
   [lifetime receipt](../research/evidence/private-trial-lifetime.json).
-  No game trial ran, and the separate nonempty-send admission remains pending.
+  At that checkpoint no game trial ran and nonempty-send admission was pending;
+  the later258 attempt and its consumed grant are recorded above.
 - Validation:164 focused Python cases, workspace1,424/48modules, five PowerShell
   suites and closed isolated CLI lifecycle passed; independent12 checks used a
   benign Windows process. Current dispatch/stop/grant preparation is under

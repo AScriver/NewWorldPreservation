@@ -1,11 +1,13 @@
-# Prepared fresh player creation trial — pending authorization
+# Fresh player creation trial — first attempt closed before creation
 
 This opt-in preparation removes the omitted entity-creation payload after the
 last private client's context initialization. WorkItem164, leaf254 and lifetime
 follow-ups256/257 under248. The original254 baseline was clean `0c97186`;
 [fresh character inputs](PRIVATE_TRIAL_CHARACTER.md) and
 [the original two-member candidate](PLAYER_CREATION_CANDIDATE.md) are reused.
-No client has run this candidate. The actual milestone remains
+October7's first selected trial ran but stopped before the creation candidate
+was sent. Its [closed receipt](../research/evidence/private-player-creation-trial-20261007.json)
+records the transport-guard failure and cleanup. The actual milestone remains
 [one rendered, controllable networked player](ONE_PLAYER_MILESTONE.md).
 
 ## Concrete proposed experiment
@@ -106,10 +108,19 @@ procedures.
 
 ## Admission and user action
 
-**Pending.** Existing [AGENTS](../AGENTS.md) and
-[Carrier procedure](CARRIER_REGISTRATION_TRIAL.md) enumerate an empty bundle;
-the October6 priority explicitly expands no authorization. Offline implementation,
-tests, record generation and manifest preparation authorize no new live send.
+**First grant consumed; another attempt is pending.** The user explicitly approved
+the exact original107-byte candidate and user-confirmed lifetime on October7.
+The selected isolated client reached DTLS, then the new manual-lifetime guard
+rejected a second connection request as `connect_ack_cursor_reuse`. The controller
+stopped the owned game. No registration response, actor/world message or creation
+candidate was sent; this does not test the candidate's native acceptance.
+The user reported that the game seemed to crash on Play; the logs record the
+controller's stop after transport failure, without a native crash diagnosis.
+
+Repair and validate this pre-registration guard against the pinned responder
+before preparing another attempt. Preserve the closed run and its fresh record;
+a subsequent client/backend trial needs a new run, fresh character and specific
+grant. Offline code, fixtures and preparation confer no native permission.
 
 The needed grant is one isolated-copy trial with this exact fresh
 creation/identity candidate added after the existing sequence and the
@@ -131,9 +142,18 @@ Controlled tests use fake peers or unit-owned ephemeral loopback resources;
 none runs the game or full system-changing controller. Real-client construction,
 designation, camera/input, movement authority and repeat acceptance stay pending.
 
-Read-only readiness23:13:54UTC confirmed installed EXE/launcher hashes and Valid
+Historical read-only readiness23:13:54UTC confirmed installed EXE/launcher hashes and Valid
 signatures, isolated copy/map/typeIndex pins, original hosts, no game or
 443/64003/listeners/NWPreservation rules, Steam running and the existing
 CurrentUser/Root CA count1 valid throughOctober9. Caller was unelevated. Recheck
 affected inputs immediately before an admitted dispatch; this is a readiness
 snapshot, not a new trial or cleanup of resources this unit never acquired.
+
+October7 readiness18:41UTC verified all164 unique input bindings, unchanged
+installed images/Valid signatures, pinned copy/map/typeIndex, original hosts,
+retained Root1 and absent game/listeners/rules. The actual process resumed18:42:48,
+established DTLS18:43:38 and hit the guard on incoming envelope3 after replying to2.
+Controller cleanup18:43:47 and independent readback18:45:44 verified exact owners,
+game/listeners/rules absent, byte-exact hosts, Root1 and intact installed images.
+Steam metadata differed while app/build stayed fixed; it was preserved and its
+change cause is unknown. No control, movement or restart acceptance was observed.

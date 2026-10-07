@@ -1,5 +1,16 @@
 # Evidence ledger
 
+## First selected creation trial — October7, #258
+
+Executed at clean `83911ed`; original live [receipt](../research/evidence/private-player-creation-trial-20261007.json)
+pins39 runtime scripts, the164-file private manifest and11 private evidence seals.
+Its single explicit grant is consumed; no creation message was attempted.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K352 | Fresh isolated client reached private DTLS, then manual mode rejected its second connection request | Observed game12896, guarded initializer and DTLS1.2; ConnectACK env2 then terminal `connect_ack_cursor_reuse` on env3; zero registration/actor/world/creation sends. User apparent-crash report follows controller stop; no native crash diagnosis or candidate acceptance | Frida/DTLS/controller metadata, explicit human report and live receipt |
+| K353 | Controller and independent OS readback verified cleanup | Observed18:43:47/18:45:44 exact owners/game/ports/rules absent, byte-exact hosts, Root1, installed hashes/Valid signatures. Steam metadata changed with app/build fixed and was preserved; cause unknown | Controller cleanup and independent final readback, sealed in live receipt |
+
 ## User-confirmed trial lifetime — October7, #256/#257
 
 Baseline clean `fbaf1b6`; task-owned lifetime code/tests and documentation dirty.
@@ -11,7 +22,7 @@ checks from the unchanged historical real-client spawn timeout.
 |---|---|---|---|
 | K349 | Explicit user-stop mode has no elapsed client/controller/service session deadline | Controlled fake-clock/server checks and source inspection; user completion/refocus, exact controller loss, exit or failure stops it; no real game session | Lifetime helper, client/queue and extracted controller tests |
 | K350 | Children verify and retain the exact controller creation identity before admission | Executed independent benign Windows child admitted matching PID/FILETIME, rejected mismatch/dead child and detected exit; containment cleanup order remains source-supported | Independent twelve-check harness; game-job/runner-lock and existing release guards |
-| K351 | Healthy cumulative transport totals no longer cut off this mode | Controlled rolling-budget/heartbeat/replay checks; full finite16-bit namespace, exact normalized duplicates, terminal lower/conflicting sequences and fresh cursor exhaustion; no proven rollover/eviction/native acceptance | Carrier/DTLS tests, pinned helper counterexamples and explicit failure propagation |
+| K351 | Healthy cumulative transport totals no longer cut off this mode | Controlled rolling-budget/heartbeat/replay checks; finite16-bit namespace and terminal safety controls. This is insufficient for normal native transport compatibility: K352 exposed a repeated-connect guard failure before registration. No proven rollover/eviction/native acceptance | Carrier/DTLS tests, pinned helper counterexamples, failure propagation and K352 counterevidence |
 
 ## Selected local-character override inputs — October6, #255
 

@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "private-player-creation-trial-20261007",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K352", "K353"],
+      "docs": ["docs/PLAYER_CREATION_TRIAL.md"],
+      "scripts": ["scripts/carrier_registration_probe.py", "scripts/frida_client_trial.py", "scripts/Invoke-FridaPrivateTrial.ps1"],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/private-player-creation-trial-20261007.json", "classification": "observed-metadata", "scope": "Admitted isolated game DTLS, pre-registration repeated-connect guard failure and actual cleanup"}],
+      "limit": "No creation attempt or native player/control/movement acceptance. Receipt pins as-executed83911ed; closed single grant does not admit another attempt."
+    },
+    {
       "id": "private-trial-lifetime",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K349", "K350", "K351"],
@@ -1871,6 +1882,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/private-player-creation-trial-20261007.json",
     "research/evidence/private-trial-lifetime.json",
     "research/evidence/current-player-creation-candidate.json",
     "research/evidence/current-type8-bundle-body-contract.json",

@@ -11,11 +11,14 @@ restarts. All remain pending; preserve the two-client acceptance below.
 
 Furthest private live behavior: the0655 trial reached SelfIdentification and
 context initialization, then selection/spawn timeout; its type8 bundle was empty.
-Current obstacle: no fresh creation/identity member reaches the live path.
+Current obstacle: October7's manual-lifetime trial terminates at
+`connect_ack_cursor_reuse` on the second connection request, before registration
+or the fresh creation/identity member. The candidate remains untested natively.
 Leaf252 composes the original nonempty candidate offline; leaf253 now joins one
 fresh immutable backend identity through selection, queue and player BODY.
 Leaf254 now prepares [default-off forwarding and candidate integration](PLAYER_CREATION_TRIAL.md).
-Next: one specifically admitted nonempty candidate client trial, with conditional
+Next: repair and validate that pre-registration guard, then prepare a fresh
+specifically admitted nonempty candidate client trial, with conditional
 component delivery. Native construction, designation,
 rendering and controls are unproved. October7 removes the prepared trial's elapsed
 session cap: the user confirms finished or refocuses the goal. Five minutes after
@@ -32,9 +35,26 @@ unsupported ordering/cursor rollover fails explicitly. Offline verification is
 recorded in [the receipt](../research/evidence/private-trial-lifetime.json).
 Focused164 Python checks, five PowerShell suites, independent12 benign-process/
 controller checks and workspace1,424 Python cases/48modules plus the isolated
-CLI lifecycle passed. The unattempted164-file proposal now selects manual stop;
+CLI lifecycle passed. At that checkpoint the unattempted164-file proposal selected manual stop;
 its original character and107-byte candidate remain unchanged.
 No native trial or new-send grant is implied; visible player/control remains pending.
+
+October7 #258 under248/164 executed the explicitly approved manual-lifetime trial
+at clean `83911ed`, using the original fresh record and107-byte candidate. The
+isolated game resumed and its DTLS trust initializer/handshake succeeded. One
+ConnectACK was transmitted on envelope2; incoming envelope3 contained another
+connection request, and the new guard stopped the service before registration.
+The controller requested stop and cleaned up the game. The user reported an
+apparent crash on Play; no native crash diagnosis is claimed.
+[Closed receipt](../research/evidence/private-player-creation-trial-20261007.json),
+K352/K353. Zero creation attempts/transmissions or actor/world messages occurred.
+Cleanup18:43:47 and independent18:45:44 readback verified all owned resources gone,
+original hosts, retained Root1 and unchanged installed binaries/Valid signatures.
+Steam app/build remained pinned; changed metadata was preserved, cause unknown.
+The one-trial grant is consumed. Pinned responder and controlled reproduction
+support answering repeated connection requests; validate the precise correction
+before proposing a new fresh run. Historical0655 remains the furthest actual
+context/player-path behavior; rendering/control/network/restart gates stay open.
 
 October6 #255 under247/164: [selected owned configurations](CHARACTER_IDENTITY_OVERRIDE.md)
 contain no local-character impersonation override spelling or JSON property.
