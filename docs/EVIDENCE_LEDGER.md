@@ -1,5 +1,16 @@
 # Evidence ledger
 
+## Generic serializer input paths — October7, #240, partial
+
+[Original source receipt](../research/evidence/current-creation-record-publication-inputs.json)
+pins the new query and independent instruction review. Slice query clean e508a87,
+wrapper query e508a87 with only milestone documentation dirty, owner/review clean94690fb.
+Native image/map/spans and private output hashes matched. No runtime observation.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K356 | Seven direct caller edges narrow the generic serializer's input suppliers | Instruction-supported arg7/arg6 one-qword moves; pair-based upstream paths forward146153e70 return or allocation-failure zero. TLS-fallback interpretation falsified. Concrete type8 alias, helper semantics, payload producer and outer slot/count writer remain unknown; no codec change/native acceptance | [Exact caller/ownership limits](CREATION_REPLICATION_RECORD.md#serializer-input-checkpoint--october7-240), seven pinned slices/scans, independent ABI/path challenge; warnings/counterevidence retained |
+
 ## Manual-lifetime connection retry correction — October7, #259
 
 Exercised at c4d7250 with three task-owned Carrier code/test files dirty; pinned

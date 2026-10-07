@@ -26,6 +26,17 @@ session cap: the user confirms finished or refocuses the goal. Five minutes afte
 spawn remains the minimum control acceptance. The closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
 
+October7 #240 under177/164 traces seven direct caller edges into the generic
+whole-message serializer and corrects two decompiler interpretations through
+instruction review: wrapper transfers move one qword, and the apparent TLS
+fallback exits before serialization. Successful pair-based paths instead forward
+`146153e70`'s result. [Source checkpoint](CREATION_REPLICATION_RECORD.md#serializer-input-checkpoint--october7-240),
+[partial receipt](../research/evidence/current-creation-record-publication-inputs.json),
+K356. Image/map/native-span/output pins match; exact documentation-only dirty
+query state and warnings are retained. Concrete input identity, type8 payload
+association and native outer slot/count writer remain unjoined; no codec or
+prepared candidate changed. The pending corrected live trial remains next.
+
 October7 #259 under248/164 restores the pinned response to fresh connection
 retries in manual mode and checks the existing ACK namespace before each reply.
 The pinned control record and builder remain; the current request's inline ACK

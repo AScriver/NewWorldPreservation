@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-creation-record-publication-inputs",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K356"],
+      "docs": ["docs/CREATION_REPLICATION_RECORD.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-creation-record-publication-inputs.json", "classification": "source-inference", "scope": "Seven direct caller edges and corrected instruction-supported input paths"}],
+      "limit": "Static partial source checkpoint only. Incoming object/type8 alias, helper semantics, actual payload producer and native outer slot-count writer remain unknown; no codec/native acceptance."
+    },
+    {
       "id": "current-connect-ack-retry",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K354", "K355"],

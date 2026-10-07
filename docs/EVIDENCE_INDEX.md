@@ -7,6 +7,7 @@ status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|
+| `current-creation-record-publication-inputs` | M1-06A | [Corrected serializer input paths and unresolved payload join](CREATION_REPLICATION_RECORD.md#serializer-input-checkpoint--october7-240) |
 | `current-connect-ack-retry` | M1-07 | [Validated retry correction and fresh pending proposal](PLAYER_CREATION_TRIAL.md) |
 | `private-player-creation-trial-20261007` | M1-07 | [Closed pre-creation guard failure and cleanup](PLAYER_CREATION_TRIAL.md) |
 | `private-trial-lifetime` | M1-07 | [User-confirmed creation trial lifetime](PLAYER_CREATION_TRIAL.md) |

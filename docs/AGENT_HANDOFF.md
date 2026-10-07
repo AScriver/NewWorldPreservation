@@ -1,5 +1,28 @@
 # Agent handoff
 
+## #240 serializer input checkpoint — October7, partial
+
+- Seven bounded function slices and exact direct-call instructions join generic
+  serializer146ae79b0 to wrapper/immediate/upstream callers. Machine argument7/6
+  positions survive review; wrapper transfers move one qword and clear its source.
+  The146afd420 TLS branch exits before serialization, correcting the decompiler
+  interpretation. Both incoming pair slots instead feed146153e70; its return or
+  an allocation-failure zero is forwarded. Concrete object/helper semantics remain
+  unknown. [Checkpoint](CREATION_REPLICATION_RECORD.md#serializer-input-checkpoint--october7-240),
+  [original partial receipt](../research/evidence/current-creation-record-publication-inputs.json), K356.
+- Query states: clean e508a87; wrapper e508a87 with only ONE_PLAYER_MILESTONE dirty;
+  owner and independent instruction review clean94690fb. Exact image/map, native
+  spans, seven outputs and scan files match. Retain the three overlapping-global
+  warnings and the falsified TLS/shared-pair wording; do not restore those leads.
+- Remaining #240 edge: incoming handle/helper result to the actual retained type8
+  payload and native outer slot/count writer. No alias-absence claim, format change,
+  runtime acceptance or task completion. All static helper processes exited;
+  only ignored file evidence/databases were added, with no live resources acquired.
+- Unchanged prior workspace code/lifecycle validation was reused after input-delta
+  reconciliation;36 affected catalog/runner checks and actual preflight passed.
+  Corrected player2 proposal remains
+  pending a fresh specific human grant; no native retry was dispatched.
+
 ## #259 connection retry correction — October7
 
 - Removed manual mode's blanket second-connect refusal and applied the existing

@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "classification": "original-bounded-static-source-inference",
+  "status": "partial",
+  "recordedUtc": "2026-10-07T20:40:29.429574+00:00",
+  "workItemId": 164,
+  "actionableIds": [
+    240
+  ],
+  "parentActionableId": 177,
+  "claimIds": [
+    "K356"
+  ],
+  "input": {
+    "reviewHead": "94690fb9b97b85b7b0190b70952edd1c7b0dfb4b",
+    "workingTree": "Task-owned source checkpoint docs/catalog/receipt only; no runtime or codec changes.",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "queryStates": [
+      {
+        "receipt": {
+          "path": ".scratch/record240-publication-20261007T2015/slice-output/receipt.json",
+          "bytes": 1504,
+          "sha256": "ed42f9269faa07605217eecd50e2def19abdbaaf509aa12d928d6292b34a462c"
+        },
+        "head": "e508a87f46625b9b53599b672c6dd76cf5bf3d17",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:17:43.447001+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-publication-20261007T2015/wrapper-output/receipt.json",
+          "bytes": 1537,
+          "sha256": "90c4c449a5eaaf248b746de3094dde1954f74b9f6c201596c402873b9233f3e5"
+        },
+        "head": "e508a87f46625b9b53599b672c6dd76cf5bf3d17",
+        "gitStatus": " M docs/ONE_PLAYER_MILESTONE.md\n",
+        "recordedUtc": "2026-10-07T20:19:00.785250+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-publication-20261007T2015/owner-output/receipt.json",
+          "bytes": 1951,
+          "sha256": "ba71b76530d73c6164d064bcbe741442768bef1aef565cbf4993b426ba548b2e"
+        },
+        "head": "94690fb9b97b85b7b0190b70952edd1c7b0dfb4b",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:20:07.072089+00:00"
+      }
+    ],
+    "instructionReviewHead": "94690fb9b97b85b7b0190b70952edd1c7b0dfb4b",
+    "instructionReviewGitStatus": ""
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/ghidra_function_slice.py",
+      "sha256": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341"
+    }
+  ],
+  "directCalls": [
+    {
+      "site": "0x146afa572",
+      "target": "0x146ab5600",
+      "kind": "candidate-direct",
+      "owner": "0x146afa350"
+    },
+    {
+      "site": "0x146afc03d",
+      "target": "0x146afc090",
+      "kind": "candidate-direct",
+      "owner": "0x146afbfd0"
+    },
+    {
+      "site": "0x146afd76b",
+      "target": "0x146ab5600",
+      "kind": "candidate-direct",
+      "owner": "0x146afd420"
+    },
+    {
+      "site": "0x146ab57c1",
+      "target": "0x146ab4d20",
+      "kind": "candidate-direct",
+      "owner": "0x146ab5600"
+    },
+    {
+      "site": "0x146afc4c3",
+      "target": "0x146ab4f20",
+      "kind": "candidate-direct",
+      "owner": "0x146afc090"
+    },
+    {
+      "site": "0x146ab4df4",
+      "target": "0x146ae79b0",
+      "kind": "candidate-direct",
+      "owner": "0x146ab4d20"
+    },
+    {
+      "site": "0x146ab4ff1",
+      "target": "0x146ae79b0",
+      "kind": "candidate-direct",
+      "owner": "0x146ab4f20"
+    }
+  ],
+  "adjudication": {
+    "P240-P1": {
+      "outcome": "survived-at-named-sites",
+      "finding": "Two decoded direct calls reach generic146ae79b0. No completeness claim for indirect routes."
+    },
+    "P240-P2": {
+      "outcome": "argument-positions-survived-ownership-wording-weakened",
+      "finding": "146ab4d20 argument7 and146ab4f20 argument6 supply one-qword moves, source-clear and local slot address; no shared-pair copy at these wrappers."
+    },
+    "P240-P3": {
+      "outcome": "partly-falsified",
+      "finding": "146afa350 moves incoming argument4 pointee.146afbfd0 moves both incoming argument3 slots into146afc090 argument4.146afd420 and146afc090 feed incoming pair data through146153e70 and forward its return or allocation-failure zero.",
+      "falsified": "146afd420 TLS branch exits to cleanup before146afd76b; second-slot-alone or TLS-fallback origin is unsupported."
+    },
+    "P240-P4": {
+      "outcome": "unknown",
+      "finding": "Concrete incoming type8 alias, helper ownership semantics, payload supplier and native outer slot/count writer remain unjoined. No explicit+418/+420 does not prove no alias."
+    }
+  },
+  "verification": {
+    "queryBindingSeal": {
+      "path": ".scratch/record240-publication-seal-20261007T2035/input-verification.json",
+      "sha256": "47d7bf67249b44bd994e7c7a989690decb0bb6e11f286b246fed133405118fe0"
+    },
+    "functions": 7,
+    "directCallSites": 7,
+    "allSelectedNativeSpansMatch": true,
+    "allDecompileOutputsMatch": true,
+    "instructionUndecodedBytes": 0,
+    "capstoneVersion": "5.0.7",
+    "pythonVersion": "3.11.9",
+    "globalWarningFunctions": [
+      "0x146afc090",
+      "0x146afa350",
+      "0x146afd420"
+    ],
+    "priorWorkspaceReuse": {
+      "receipt": {
+        "path": ".scratch/offline-validation/run-e_j_hy6h/receipt.json",
+        "sha256": "4b5c098bd298f314899f3fe0f11ab4eadcb51b65a7eef9da3accbcc79440efd7"
+      },
+      "finishedAtUtc": "2026-10-07T19:06:44.107639+00:00",
+      "pythonPassed": 1429,
+      "selectedModules": 48,
+      "powershellSuites": 5,
+      "cliLifecycle": "passed and closed",
+      "inputDelta": [
+        "docs/EVIDENCE_LEDGER.md",
+        "docs/ROADMAP.md",
+        "research/agent-evidence-index.json"
+      ],
+      "limit": "Unchanged code/fixtures/lifecycle checks reused. Changed documentation/catalog receives focused checks and actual preflight separately; no new full-workspace execution implied."
+    }
+  },
+  "counterevidence": [
+    "Initial primary seal refused an all-clean assumption; the wrapper query had only milestone documentation dirty. Exact native span/output checks then passed.",
+    "Decompiler handle/TLS interpretations required correction by machine instructions.",
+    "Three overlapping-global decompiler warnings remain; inferred global names and types are not proof.",
+    "One reviewer Windows rg literal-wildcard error was corrected; supplementary no-offset text matches establish no alias absence."
+  ],
+  "privateMetadata": [
+    {
+      "path": ".scratch/record240-publication-seal-20261007T2035/input-verification.json",
+      "sha256": "47d7bf67249b44bd994e7c7a989690decb0bb6e11f286b246fed133405118fe0"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/extraction.json",
+      "sha256": "b7eb6d290b581317fc8a18fd5dd367d5d329af7832e01a36a8e2585bf093de9f"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/challenge-results.md",
+      "sha256": "048fbe34b1f5c959810ff6b21521165dd35cb8e1e337664c94429d10b1522cfd"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/extract.py",
+      "sha256": "4e154c6fa9fc11e2a2d4cd0b7ac529e7cc110dd327b61439fdca8a7b7782ab7f"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/extract.ps1",
+      "sha256": "5ac8d023874f38143149aa26180c0accc939159bb4dabe8f16f058570fb40ac9"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/ledger.md",
+      "sha256": "03f0c759642f8df7b014997b186e7ba22e845e9791eaa8d89b6cfb61f4d01f74"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146ab4d20.txt",
+      "sha256": "703dcf30d1c668078e65242569077d3475f51ff5149be26120b6fb0e2012232b"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146ab4f20.txt",
+      "sha256": "eafdb471b4fb41a20a28446328c356783697790c8c16b747319d5419b04019d9"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146ab5600.txt",
+      "sha256": "a87cf1011fb61ba3794539037b6fd5f34efcff1973ed99cc8631da170fa182c3"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146afc090.txt",
+      "sha256": "02b7f628ac3ab959215d8a9f8a8cfc0bea233a4bff43ae252dcd949236f4adfd"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146afa350.txt",
+      "sha256": "d5e7d220df4a94c9eea750bd8c23f58ea563f51bdc307864560c73a543547383"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146afd420.txt",
+      "sha256": "1ac7befd99a84927ae0ae221c1cf93ea491b8b87267f8ccd77a57f35673bb10d"
+    },
+    {
+      "path": ".scratch/record240-publication-review-20261007T2025/fn-146afbfd0.txt",
+      "sha256": "3dbe3763e947d4a6dde0610b0fc4f147591df3f51ae5d77f88e87114cb867a19"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/slice-output/receipt.json",
+      "bytes": 1504,
+      "sha256": "ed42f9269faa07605217eecd50e2def19abdbaaf509aa12d928d6292b34a462c"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/wrapper-output/receipt.json",
+      "bytes": 1537,
+      "sha256": "90c4c449a5eaaf248b746de3094dde1954f74b9f6c201596c402873b9233f3e5"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/owner-output/receipt.json",
+      "bytes": 1951,
+      "sha256": "ba71b76530d73c6164d064bcbe741442768bef1aef565cbf4993b426ba548b2e"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/xref.py",
+      "sha256": "3857cdd54c12b2891ae58af7bcc2beb33f0b02cd7b85dfc8029da755582b6551"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/extract.py",
+      "sha256": "bb8067c6f91dccf8488e623ef8f9bc15ed3f1551156454788d5efa6061967d6b"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/xrefs-20eabd35f8bd.json",
+      "bytes": 393,
+      "sha256": "ad3936b3884eff07743bb2e087a3659474c35dc17003e4e6d798d6d0da0cde72"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/xrefs-a3435b58aa86.json",
+      "bytes": 263,
+      "sha256": "92639bbe9cbc325b170361a6bd568a8f7e7677a2bc41a95caaff05b3c3c4b4f6"
+    },
+    {
+      "path": ".scratch/record240-publication-20261007T2015/xrefs-d3377df48db5.json",
+      "bytes": 263,
+      "sha256": "46605c20ad86dcf2ec78c128d9b6f8310654703c02c81416e77701490d70ba0c"
+    }
+  ],
+  "cleanup": {
+    "fileOnlyHelpersExited": true,
+    "runtimeResourcesAcquired": false,
+    "clientExecuted": false,
+    "processMemoryRead": false,
+    "networkUsed": false,
+    "hooksChanged": false,
+    "privateArtifactsRetained": true
+  },
+  "limits": [
+    "Original source metadata only; proprietary disassembly/decompiles remain ignored.",
+    "No native outer writer or actual type8 payload producer joined.",
+    "No codec, candidate, native grant, client acceptance, visible player/control/movement or restart proof.",
+    "Corrected fresh creation trial remains prepared awaiting its specific next human grant."
+  ]
+}

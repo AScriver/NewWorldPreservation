@@ -99,6 +99,32 @@ routes remain possible. Generic selector callers `146ae6860`/`146ae6a80` emit
 presence plus descriptor+20 bodies and are a different serialization path.
 The offline outer encoder is an inverse of the established reader grammar.
 
+## Serializer input checkpoint — October7, #240
+
+The new bounded caller trace reaches generic whole-message serializer `146ae79b0`
+through `146ab4d20`/`146ab4f20`, then `146ab5600`/`146afc090` and upstream
+`146afa350`/`146afd420`/`146afbfd0`. Exact instructions confirm the two wrappers
+move one qword from machine argument7/6, clear its source and pass a local slot
+address. They do not copy a two-qword shared handle at that boundary.
+
+`146afa350` moves its incoming argument4 pointee. The other routes supply incoming
+two-qword pairs through `146153e70`, then forward its return or an allocation-failure
+zero. Independent review falsified the apparent TLS fallback in `146afd420`: that
+branch exits before the serializer-reaching call. The successful route uses both
+argument3 slots, not its second slot alone.
+
+[Original partial receipt](../research/evidence/current-creation-record-publication-inputs.json),
+K356, pins seven function slices, direct-call scans, instruction review and exact
+query state. The wrapper query overlapped only a milestone documentation edit;
+native spans and output hashes matched. Three overlapping-global decompiler
+warnings are retained; global names and inferred types are not proof.
+
+The concrete incoming object, helper ownership semantics and association with the
+retained type8 payload remain unknown. An absent explicit context+418/+420 access
+does not prove no alias. This narrows the supplier paths without joining the native
+outer slot/count writer or changing the original codec/candidate. No native trial
+or creation acceptance follows from this static query.
+
 Remaining #210 joins: native outer writer and enclosing receive/Carrier placement,
 actual runtime mapping/index/fallback choice, exact resend/ACK retirement,
 historical860 discriminator and authenticated authority. Bundle extent/framing,
