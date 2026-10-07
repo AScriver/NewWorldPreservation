@@ -12,6 +12,22 @@
   },
   "boundaries": [
     {
+      "id": "shutdown-official-preservation",
+      "roadmapTasks": ["M1-01"],
+      "claimIds": [],
+      "docs": ["docs/SHUTDOWN_PRESERVATION.md", "docs/OFFICIAL_SESSION_CAPTURE.md", "docs/OFFICIAL_SESSION_20261006.md", "docs/OWNED_CLIENT_ARCHIVE.md"],
+      "scripts": ["scripts/official_session_metadata.py", "scripts/Start-OfficialObservation.ps1", "scripts/Collect-OfficialLogSuffix.ps1", "scripts/OfficialObservation.psm1"],
+      "tests": ["tests/test_official_session_metadata.py", "tests/test_official_observation.ps1", "tests/test_project_preflight.py"],
+      "fixtures": [],
+      "evidence": [
+        {"path": "research/evidence/shutdown-preservation-20261007.json", "classification": "observed-metadata", "scope": "Bounded archive/report reconciliation, preserved direct test-frame samples and explicit missing official gameplay evidence"},
+        {"path": "research/evidence/owned-client-archive-20261006.json", "classification": "observed-metadata", "scope": "Prior executed owned static archive verification; no restore or launch proof"},
+        {"path": "research/evidence/official-session-20261006.json", "classification": "observed-metadata", "scope": "User-reported ordinary entry/relogin and allowlisted own-log markers, no footage"},
+        {"path": "research/evidence/official-observation-tooling-20261006.json", "classification": "offline-executed", "scope": "Prior synthetic collector tests reused only with matching exact code/test hashes"}
+      ],
+      "limit": "Official shutdown preservation only. Reports, sampled decoded frames and markers are distinct; footage remains private. Friend movement/remote return and full solo controls/return remain pending. No private gameplay or protocol proof."
+    },
+    {
       "id": "current-creation-record-supplier-path",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K357", "K358"],
@@ -1921,6 +1937,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/shutdown-preservation-20261007.json",
     "research/evidence/current-connect-ack-retry.json",
     "research/evidence/private-player-creation-trial-20261007.json",
     "research/evidence/private-trial-lifetime.json",

@@ -1,5 +1,12 @@
 # Ordinary official-session observation
 
+For the October 7 shutdown-only continuation, start with
+[the reconciled inventory and recording packet](SHUTDOWN_PRESERVATION.md).
+Existing October 6 entry/logout/relogin reports and client-archive checks are
+reused. The new solo sequence fills missing footage; friend execution is deferred
+until consent and availability. Normal Steam/launcher/EAC and user-handled login
+remain the collection path.
+
 This is the user's separate October 6 authorization under workItemId 164.
 It permits normal Steam/launcher/EAC sessions while the user is present, manual
 login, ordinary local logs and supported gameplay recordings. It adds no private
@@ -95,8 +102,9 @@ alignment aid, not proof of synchronized clocks or network causality.
    consent, remote removal/reappearance. Do not force failures or infer actor IDs.
 
 Without a second consenting player, movement and remote actor observations remain
-uncollected. Zone/fast-travel or simple gameplay is eligible only after these
-priorities and only for a concrete unresolved preservation dependency.
+uncollected. Continue the shutdown packet's useful solo visual/control, return
+and one ordinary server-driven state-change evidence while the friend is
+unavailable. Zone/fast-travel needs a concrete unresolved preservation dependency.
 
 ## Handoff and cleanup
 

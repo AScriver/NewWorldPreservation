@@ -1,5 +1,31 @@
 # Bounded task briefs
 
+## #166 — shutdown-critical official evidence continuation (M coordination)
+
+- October 7 scope: official observations that become unavailable January 31, 2027;
+  workItemId164. Existing Done241/242/243/245 are reused with their limited outcomes.
+- Clean baseline90f37da. Evidence: eight small official-session artifact hashes and
+  existing archive inventory/manifest reconcile; no76GB rehash. Prior reports and
+  diagnostic markers contain no footage or direct visual proof.
+- Own `docs/SHUTDOWN_PRESERVATION.md`, focused updates to capture procedure,
+  ROADMAP/this brief/catalog, a sanitized continuation receipt and unique ignored
+  solo-20261007T2138Z attempt and solo-video-20261007T2148Z video-only packet.
+  Preserve other-chat implementation/native files.
+- Runtime: normal Steam/launcher/EAC; user selected installed Windows Game Bar and
+  handles launch/login/actions/recording/exit. Pinned build22469132/image8654f01d;
+  exact current original sources recorded in the private source-snapshot manifest.
+- First collection gap: safe loading/player/control footage and one ordinary
+  logout/return visual sequence. Source and playback hashes/times remain explicit;
+  user's report, reviewed pixels and own-log markers are separate evidence classes.
+- Deferred: consenting friend bilateral movement and remote logout/reappearance;
+  one game instance cannot execute this. Prepare the two-viewpoint packet.
+- Resource owner: this chat's unique collectors/outputs only; no shared database,
+  listeners, packet capture, process-memory reads or game configuration changes.
+  Serialize normal game use with any other chat's owned client/routing work.
+- Closure: relevant offline input/receipt/privacy checks and local commits, closed
+  collectors, user's normal exit and exact public process readback, Actionables
+  handoff/release. Do not claim original166/private milestone acceptance.
+
 ## #256/#257 — user-confirmed lifetime and bounded ongoing transport (M each)
 
 - October7 user direction removes the prepared creation trial's elapsed cap.

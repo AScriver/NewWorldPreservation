@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "classification": "bounded_reconciliation_and_original_shutdown_capture_plan",
+  "status": "baseline_reconciled_visual_test_preserved_main_gameplay_pending",
+  "workItemId": 164,
+  "coordinator": 166,
+  "friendTask": 244,
+  "baselineHead": "90f37da699ed35801cc86daa6b93466216d8e1a5",
+  "baselineDirtyFiles": [],
+  "recordedAtUtc": "2026-10-07T22:03:32.482147+00:00",
+  "officialShutdownDate": "2027-01-31",
+  "shutdownHourKnown": false,
+  "scope": "Only evidence unavailable after official service closure; separate chat owns private implementation/native trials.",
+  "archiveReconciliation": {
+    "verificationReused": "research/evidence/owned-client-archive-20261006.json",
+    "files": 374,
+    "bytes": 76744359425,
+    "steamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "executableSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "canonicalInventorySha256": "ddcc7d8819af2be003001f4edf61d080f774897d8c9f8019332d870514237536",
+    "inventoryFileSha256": "9b191b8dfe3cd44890cbedd4b8639d224fce090727c3dcf3fa0784508c91665d",
+    "independentSmallManifestReconciliation": "matched",
+    "archiveBytesRehashedThisRun": false,
+    "newArchiveCreated": false,
+    "restoreOrOffMachineBackupProved": false
+  },
+  "october6SessionReconciliation": {
+    "receipt": "research/evidence/official-session-20261006.json",
+    "independentlyMatchedPrivateArtifacts": 8,
+    "metadataArtifacts": [
+      {
+        "kind": "allowlisted_metadata",
+        "name": "events.jsonl",
+        "sha256": "14b45683f20f6600bafb762d69a7539709cc19da3b7cf9c498829818ed82e407",
+        "bytes": 9684
+      },
+      {
+        "kind": "allowlisted_metadata",
+        "name": "transport.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "kind": "allowlisted_metadata",
+        "name": "resource-ownership.json",
+        "sha256": "4a5f9724644531b2eee7e1567c2dfdd275aa982b830a9595beea65f6beb3addc",
+        "bytes": 800
+      },
+      {
+        "kind": "allowlisted_metadata",
+        "name": "log-only-resource-ownership.json",
+        "sha256": "9587b85a70bde599038fd074d03b5dc93fc115deaa86b8899508c0c52ba06bfe",
+        "bytes": 924
+      }
+    ],
+    "scenarioManifestSha256": {
+      "manifest.json": "0a40bb5a4216c852f9f16f91414dd12c53abeae09c21b91bc83cf0dc73e36fe0",
+      "scenarios/consenting-movement.json": "493c009c592bffa792d8758823f3bbe4f4c21a8a893f993dab2b0664ad583ed8",
+      "scenarios/normal-entry.json": "af9a07298de3ceb06214add4285f7fda4527aced5a2ab78a298aaa548652dc68",
+      "scenarios/ordinary-relogin.json": "33aff3556a6c2a602406821226bde1cdf853ce184e394381c485ccc86b27fd1e"
+    },
+    "evidenceClass": "five user reports plus26fixed own-log markers; no footage or direct pixel observation",
+    "markerCounts": {
+      "GAME_CONNECTION_WRAPPER": 21,
+      "REP_CONNECTION": 2,
+      "LEVEL_LOAD_MARKER": 3
+    },
+    "socketSamples": 0,
+    "actionTimestamps": "later report collection times, not exact game-action times"
+  },
+  "initialRecordingAttempt": {
+    "status": "wrong_Steam_window_excluded",
+    "gameplayVideoAccepted": false,
+    "strictImageIdentityResult": "identity_unavailable",
+    "socketSamples": 0,
+    "logOnlyStart": "refused_after_exact_public_process_no_longer_present",
+    "logSamples": 0,
+    "userNormalExitConfirmed": true,
+    "wrongVideoCopiedOpenedOrDeleted": false
+  },
+  "visualTest": {
+    "privateRun": "private/official-sessions/solo-video-20261007T2148Z",
+    "clipSha256": "dbd827a02257a46893576e1f23ab89b99fc2a1ea754d6b28ceac9bd6dbe88373",
+    "bytes": 36898887,
+    "durationSeconds": 32.4169,
+    "copyAndSourceHashesMatched": true,
+    "directlyObserved": [
+      {
+        "clipOffsetSeconds": 2,
+        "observed": "startup publisher logo"
+      },
+      {
+        "clipOffsetSeconds": 10,
+        "observed": "New World title/continue UI"
+      },
+      {
+        "clipOffsetSeconds": 20,
+        "observed": "own character-selection screen with Play loading indicator"
+      },
+      {
+        "clipOffsetSeconds": 30,
+        "observed": "world-loading artwork and progress bar"
+      }
+    ],
+    "reviewSha256": "cb2f129069a475857e4ebf46b1ebbabb4e2a62a7082fee9eba460657bf887f52",
+    "privacyAttestedByUser": true,
+    "fullVideoPrivacyVerified": false,
+    "audioPrivacyVerified": false,
+    "liveImageVerified": false,
+    "coldCollectorRetry": "refused_already_running_client_not_bypassed",
+    "liveCollectorsStarted": false
+  },
+  "reusedValidation": {
+    "receipt": "research/evidence/official-observation-tooling-20261006.json",
+    "allSixCollectorSourceTestBindingsMatch": true,
+    "focusedPythonCases": 46,
+    "syntheticPowerShellAssertions": 12,
+    "testsRerunForUnchangedCollectors": false
+  },
+  "sourceAndTestSha256": {
+    "scripts/official_session_metadata.py": "8e275803b418b0d59a29d4894ebceab4951eac275022c26e1880d2ddf9d16bc8",
+    "scripts/Start-OfficialObservation.ps1": "654f81716b899df6ea26b3105b09b08129897d3519e63aff7ee0dc6dffc79fd8",
+    "scripts/Collect-OfficialLogSuffix.ps1": "8d3a7a1867c569d3db52609fa655abc781b8f84fd645555721a1f6da6a841a02",
+    "scripts/OfficialObservation.psm1": "d630c171389319214b2062c6c48fb81581cc92b9d49cb4230b00e54e3a846120",
+    "tests/test_official_session_metadata.py": "808ed068fa38b8e2684f9d83f87883d7cab94e49ca9690fb6478f84df7cc3f5d",
+    "tests/test_official_observation.ps1": "9f35f677311d93c4d2f91348ed2e08844490341c429d11088018cd28de759e63"
+  },
+  "remainingShutdownCriticalGaps": [
+    "Reviewed visible local player, walk/turn/stop/jump/camera footage",
+    "Reviewed ordinary logout/loading/return footage",
+    "One ordinary server-driven gathering/inventory change and return persistence",
+    "Consenting friend mutual visibility and bilateral movement, both viewpoints",
+    "Remote logout disappearance/reappearance with both viewpoints and timing limits"
+  ],
+  "reportsWithoutFootage": [
+    "Unplanned internet disconnect before main recording",
+    "Main recorder targeted Codex"
+  ],
+  "privateServerGameplayAcceptance": false,
+  "limits": [
+    "Integrity checks verify named small files and retained observations, not full archive bytes today.",
+    "Prepared friend sequence is not collected evidence.",
+    "No live memory, packet, raw-log or socket capture; no hooks, system changes or induced failures.",
+    "Video file/report UTC and clip offsets are different timing bases.",
+    "Wrong-window recordings remain outside the preservation package."
+  ]
+}

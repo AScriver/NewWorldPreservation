@@ -1,5 +1,41 @@
 # Milestone 1 roadmap
 
+## Shutdown preservation — official evidence only, October 7
+
+This chat continues only #166/workItem164 official-server evidence that becomes
+unavailable January31,2027. The separate chat retains the private-player priority
+below. [Reconciled inventory, missing evidence and friend packet](SHUTDOWN_PRESERVATION.md),
+[sanitized continuation receipt](../research/evidence/shutdown-preservation-20261007.json).
+
+Reuse verified #241 client archive and Done #242/#243/#245 with their exact limits.
+Eight small October6 official-session artifacts and archive inventory/digest agree
+with prior receipts. Prior entry/logout/relogin remain user reports and26fixed log
+markers, without footage/direct observations. No76GB rehash or new archive copy.
+
+New user-reviewed Game Bar test clip is privately copied with matching source/copy
+SHA256, 32.4169seconds, 1920x1080/60fps. Direct review of decoded frames at2/10/20/30s
+shows startup logo, title UI, character selection and world-loading screen. This
+fills those visual samples only: no reviewed player/control or logout/return frames.
+Clip offsets/file UTC and report times are distinct; audio/full-video privacy is
+user-attested, not independently verified. Exact public game PID/name/creation
+matched; live protected image remains unverified. Original collector/test sources
+were privately snapshotted and all six #242 validation bindings still match.
+
+The first attempt recorded Steam; its clip was excluded, not copied/opened/deleted.
+Strict metadata collection ended at protected-path refusal with0socket samples;
+log-only startup was refused after the game had already exited. User later confirmed
+normal exit. The corrected game had already started before cold arming, which was
+refused without bypass; this is a video-only run with no live log/socket collector.
+User subsequently reported an unrecorded internet outage/disconnection and another
+wrong-target Codex recording. Neither is footage or protocol/failure evidence.
+The user may independently retry recording; accept only exact reviewed game clips.
+
+Single-client player/control, ordinary logout/return and one useful server-driven
+inventory/persistence observation remain pending. #244 has a researched, prepared
+two-viewpoint movement/remote logout-reappearance packet; execution is deferred
+until a consenting friend with a legitimate second client is available. All
+private implementation/native/isolated-client work remains in the other chat.
+
 ## Immediate priority — one controllable private player
 
 October6 user refocus resumes the #251 pause and makes

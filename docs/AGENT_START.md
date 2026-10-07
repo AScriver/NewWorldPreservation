@@ -2,6 +2,10 @@
 
 Use this page to choose a bounded task and reproduce its checks. Current progress,
 blockers and Milestone 1 acceptance belong to [ROADMAP](ROADMAP.md), not this guide.
+For the separately authorized shutdown-only official-observation chat, use
+[the shutdown preservation packet](SHUTDOWN_PRESERVATION.md) under #166/workItem164.
+Its normal Steam/launcher/EAC recordings and preserved reports stay separate from
+the private implementation priority below.
 The current priority is the [one-player spawn-and-control checkpoint](ONE_PLAYER_MILESTONE.md);
 preserve the broader two-client roadmap and existing approvals.
 
