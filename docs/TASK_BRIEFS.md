@@ -26,6 +26,28 @@
   collectors, user's normal exit and exact public process readback, Actionables
   handoff/release. Do not claim original166/private milestone acceptance.
 
+### #166 offline footage comparison — October 7 continuation (S)
+
+- Baseline `f89771d`, clean tracked tree before this unit. Own this brief, the
+  shutdown preservation/ROADMAP/catalog deltas and one sanitized supplement.
+  Original clips, sealed packet and previous reviews remain historical inputs.
+- Input: `solo-return-A.mp4`, SHA-256
+  `3ee403d7281b50aa55cf6c09f0da36068a02bcb59f689ad8c45632e0f751cd0d`;
+  existing packet `solo-video-20261007T2148Z`. Bind new decoded frames to explicit
+  clip seeks and hashes. Check readable inventory/reward counts around the loot
+  interaction; preserve conflicting observations and the missing pre-tree baseline.
+- Own unique ignored `.scratch/shutdown-offline-20261007T2319Z/` and
+  `private/official-sessions/review-20261007T2319Z/`. Only local file reads, frame
+  decoding and original notes/receipts are allowed. No live game, network capture,
+  memory access, launcher/EAC changes or listeners are needed.
+- Closure: review pixels and arithmetic, validate clip/frame/source/catalog
+  bindings, reuse unchanged code checks, scoped local commit and Actionables
+  handoff/release. Consenting friend recording remains deferred.
+- Outcome:14 new decoded frames establish a same-clip ordinary loot UI comparison
+  (40+14=54;54+12=66); the later separate clip shows54/77. Hash/metadata/arithmetic/
+  counterevidence/catalog checks and19 focused tests pass; unchanged full workspace
+  support is reused. No new gameplay, live collector or system mutation.
+
 ## #256/#257 — user-confirmed lifetime and bounded ongoing transport (M each)
 
 - October7 user direction removes the prepared creation trial's elapsed cap.

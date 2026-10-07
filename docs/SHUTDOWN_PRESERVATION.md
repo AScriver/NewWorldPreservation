@@ -47,6 +47,18 @@ and authoritative persistence remain unknown. No unmounted jump was established.
 These precision gaps do not require repeating completed solo sequences unless a
 specific preservation question needs them. The next necessary live session is F1/F2.
 
+Offline review of the existing return clip also fills one ordinary loot-count
+comparison. Inventory at24seconds shows reagent-icon counts40/54; interaction
+pose/progress at28.5seconds precedes reward UI at30seconds (+14/+12, totals54/66);
+inventory at32seconds shows54/66. The arithmetic agrees. Icon order changes, so
+the comparison follows appearance/reward labels, not pane slots or stable item IDs.
+[Loot comparison supplement](../research/evidence/official-session-loot-comparison-20261007.json)
+binds14 new private frame files and the reused after-return15second frame.
+That later frame shows54/77: the first count agrees, the second differs. Uncontrolled
+intervening play prevents a claim that both counts persisted unchanged. This is a
+container-loot UI reference; the earlier tree's pre-gather count and backend
+inventory authority remain unknown. No new live collection was needed.
+
 The initial Steam-window clip and a later user-reported Codex-window clip are
 excluded. The user reported a natural internet disconnect before the main clip
 started; no disconnect footage exists. The first strict collector closed at
@@ -68,7 +80,7 @@ reports into footage or reopen those checkpoints.
 | S2: visible ordinary return | Preserved exit confirmation, selection/Play/loading and local rendered return in the return clip. This fills the missing local visual reference; remote actor removal/reappearance remains F2. |
 | F1: mutual visibility and movement | Defer execution. A consenting friend with their own legitimate client/account records viewpoint B. Capture approach/departure, then walk/turn/stop/jump in both directions with the observer stationary. Both clips must support the attributed observations. |
 | F2: remote logout/reappearance | With that friend, A remains recording while B logs out and returns. Preserve A's visible disappearance/reappearance plus B's local safe transitions. Then swap if needed to cover the opposite role. Actor IDs/reuse and packet causes remain unknown. |
-| S3: gathering and visible state continuity | Preserved gathering/tree-felling/reward UI and wood-icon count equality across logout/return. Pre-gather inventory and uninterrupted intervening activity were not recorded, so exact delta/backend persistence are unproved. Repeat only for that specific missing comparison if needed. |
+| S3: gathering, loot and visible state continuity | Preserved gathering/tree-felling/reward UI, wood-icon count equality across logout/return, and a same-clip container-loot before/reward/after count comparison (40+14=54;54+12=66). Later reagent counts54/77 retain counterevidence to unchanged full inventory. The tree's pre-gather count and uninterrupted intervening activity were not recorded; exact tree delta/backend persistence remain unproved. Repeat only for a specific missing comparison if needed. |
 | S4: supported travel transition | Preserved one ordinary fast-travel map/confirmation/countdown/loading/destination/movement reference. Post-travel inventory was not opened; inventory continuity across travel remains unknown. Do not repeat routes without a concrete missing question. |
 
 No forced failures, purchases, account deletion, new characters or special

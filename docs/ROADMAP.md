@@ -42,6 +42,19 @@ Direct samples, user reports and log markers remain distinct. Pre-gather count,
 uncontrolled activity between clips, stable item identities, authoritative
 persistence, exact input causality and unmounted jump are not proved.
 
+Offline review now adds a [same-clip ordinary loot comparison](../research/evidence/official-session-loot-comparison-20261007.json):
+return24s inventory40/54,28.5s interaction pose/progress,30s rewards+14/+12 with
+totals54/66,32s inventory54/66. These rendered counts/arithmetic agree;14 decoded
+frame files and the existing after-return15s frame are privately hash-bound.
+That later frame shows54/77, preserving counterevidence to unchanged full
+inventory across uncontrolled intervening play. The tree-gather baseline, stable
+item identities and backend authority remain unknown. Original sealed media and
+reviews are retained; no client launch, memory reads or new live collection.
+Supplement clip/frame/source bindings, public/private metadata equality, arithmetic,
+counterevidence and catalog readiness pass;19 focused preflight tests pass. The
+1429-case/48-module workspace and5PowerShell-suite support is reused with all
+selected non-documentation inputs unchanged.
+
 User confirmed normal exit; the exact recorded game and collector processes are
 absent. No live memory/log/socket/packet collector was used for the video packet.
 Full workspace validation passed1429Python cases/48modules and5PowerShell suites

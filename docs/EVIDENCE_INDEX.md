@@ -4,6 +4,8 @@ The [JSON catalog](../research/agent-evidence-index.json) maps each protocol bou
 to ROADMAP tasks, ledger claim IDs, slice docs, original scripts, tests, receipts
 and sanitized fixtures. It is navigation and fixture identity metadata. Current
 status and the exact next blocker remain in [ROADMAP](ROADMAP.md).
+The shutdown branch's [offline loot-count supplement](../research/evidence/official-session-loot-comparison-20261007.json)
+adds a sampled UI comparison and its later count difference, with raw media private.
 
 | Boundary ID | Tasks | Read first |
 |---|---|---|

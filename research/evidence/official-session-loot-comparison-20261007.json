@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "classification": "observed-metadata",
+  "status": "reviewed-offline-supplement",
+  "reviewedAtUtc": "2026-10-07T23:24:12.748562+00:00",
+  "workItemId": 164,
+  "coordinator": 166,
+  "baseline": {
+    "commit": "f89771d",
+    "trackedWorkingTreeBeforeUnit": "clean",
+    "changesInUnit": "Documentation, catalog and original sanitized comparison receipt only"
+  },
+  "privateRun": "private/official-sessions/review-20261007T2319Z",
+  "originalPrivateRun": "private/official-sessions/solo-video-20261007T2148Z",
+  "originalPacketManifestSha256": "cc75b33af0ce0b05e4a7a31cfc2f6dbe5c008c8f53bbfafaaa3c6a25c10fe2da",
+  "inputClip": {
+    "name": "recordings/solo-return-A.mp4",
+    "sha256": "3ee403d7281b50aa55cf6c09f0da36068a02bcb59f689ad8c45632e0f751cd0d",
+    "bytes": 89470897,
+    "durationSeconds": 76.050433,
+    "frameRate": "60/1",
+    "sourceCreationUtc": "2026-10-07T22:10:57.1125606Z",
+    "sourceLastWriteUtc": "2026-10-07T22:12:10.4425433Z"
+  },
+  "build": {
+    "installedSteamBuildId": "22469132",
+    "version": "1.400.6031.6004151",
+    "installedImageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "installedIdentityPreflightReused": true,
+    "liveProcessImageVerified": false
+  },
+  "decoder": {
+    "version": "ffmpeg version 8.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "operations": "Explicit -ss seek; one nearest decoded original-size frame; no audio; file input only",
+    "timingLimit": "Offsets are relative to the clip; nearest decoded frame precision is bounded by its frame interval. File UTC times do not establish exact action clock times."
+  },
+  "frameManifestSha256": "f53950b7b634f4604fba40dcdb9f2741eef5eac7da62b9e1d169924ed9b0e7a5",
+  "reviewToolSha256": {
+    "private/official-sessions/review-20261007T2319Z/Extract-ReturnComparison.ps1": "fffb74f1445cb48de31c39e85ba3d63b203ca66467e7fe0a8f6fcb96b39f5444",
+    "private/official-sessions/review-20261007T2319Z/Record-Comparison.py": "ec2668d1765f0754846433c55a8678f66f3b748b9a43fdd35885f7d23f77eb99"
+  },
+  "newFrameFiles": [
+    {
+      "clipOffsetSeconds": 22.0,
+      "file": "frames/return-seek-22.0s.png",
+      "bytes": 2268297,
+      "sha256": "25f5da0f6b42fc360474357c2831d576626260865111a72c7db2599e1e9d8e44",
+      "observed": "Local player beside a visible loot-container interaction prompt"
+    },
+    {
+      "clipOffsetSeconds": 23.0,
+      "file": "frames/return-seek-23.0s.png",
+      "bytes": 1957983,
+      "sha256": "741f5388388568d707ca5945ca9b1723803cb73116460c1d400330198c06b680",
+      "observed": "Inventory open; reagent stack counts are obscured below the pane boundary"
+    },
+    {
+      "clipOffsetSeconds": 24.0,
+      "file": "frames/return-seek-24.0s.png",
+      "bytes": 1988954,
+      "sha256": "fe245cd76f0533779fb3f6d5712c96a3505a3b7a7638067925b42b23bcd8433d",
+      "observed": "Inventory reagent icons show stack A count40 and stack B count54; displayed load141.9"
+    },
+    {
+      "clipOffsetSeconds": 25.0,
+      "file": "frames/return-seek-25.0s.png",
+      "bytes": 2010735,
+      "sha256": "d2d46943a418b996287b31cae3bfff7d7723ff32abc499d774e9dc9b8a4b2b8a",
+      "observed": "Inventory scrolled to other categories; wood-icon counts46/31/2 visible"
+    },
+    {
+      "clipOffsetSeconds": 27.0,
+      "file": "frames/return-seek-27.0s.png",
+      "bytes": 2366489,
+      "sha256": "7f7ad190081ae86764609eb928aa2aeefaf3cd1797190cd709080493d391fb2d",
+      "observed": "Inventory closed; player beside the loot-container interaction prompt"
+    },
+    {
+      "clipOffsetSeconds": 28.5,
+      "file": "frames/return-seek-28.5s.png",
+      "bytes": 2663210,
+      "sha256": "82225ae609e146b711891c6a6f9ffb424d0691097f2cd8fe0cc7aa52cc2866e5",
+      "observed": "Player interaction pose and partial progress arc at the loot-container prompt"
+    },
+    {
+      "clipOffsetSeconds": 30.0,
+      "file": "frames/return-seek-30.0s.png",
+      "bytes": 2853623,
+      "sha256": "d1bcc4d91363003ce160f0fd710b2af07ace9955b8b3b7904e6e4894984e00f5",
+      "observed": "Reward UI shows stack A +14 with displayed total54, stack B +12 with displayed total66"
+    },
+    {
+      "clipOffsetSeconds": 32.0,
+      "file": "frames/return-seek-32.0s.png",
+      "bytes": 2021084,
+      "sha256": "07a81ca34f11e2e05a9082c7741e58aca4cef4d6d14569e9ef9be84e924a8c21",
+      "observed": "Inventory reopened; corresponding reagent icons now show54 and66; displayed load144.5; icon order differs"
+    },
+    {
+      "clipOffsetSeconds": 33.0,
+      "file": "frames/return-seek-33.0s.png",
+      "bytes": 2229216,
+      "sha256": "d3bbcbb7ce4cc7198be26e4ac01dbb47189293166361b22dae5d48ca0150b01b",
+      "observed": "Inventory scrolled upward; reagent icons partly below pane boundary, counts unreadable"
+    },
+    {
+      "clipOffsetSeconds": 34.0,
+      "file": "frames/return-seek-34.0s.png",
+      "bytes": 2141263,
+      "sha256": "0d4dbf02e0ce8c542d0cc52ee941c45e6b65005efaf434a10482d3b6eaf0c910",
+      "observed": "Inventory still open at the same scrolled region; reagent counts unreadable"
+    },
+    {
+      "clipOffsetSeconds": 35.0,
+      "file": "frames/return-seek-35.0s.png",
+      "bytes": 2137919,
+      "sha256": "6e9b8f3ff59684bf9574ec91e6f84da81e2b5c9c5ce34362a681883708ab72cd",
+      "observed": "Inventory closed; local player/world pose visible"
+    },
+    {
+      "clipOffsetSeconds": 36.0,
+      "file": "frames/return-seek-36.0s.png",
+      "bytes": 2324334,
+      "sha256": "16cc2b50e81db004e8af7d28d2a00895ecf2b15349e8c633f2eaf5008ee9a503",
+      "observed": "Local player/world visible beside the container; no inventory counts shown"
+    },
+    {
+      "clipOffsetSeconds": 37.0,
+      "file": "frames/return-seek-37.0s.png",
+      "bytes": 2487686,
+      "sha256": "925eb79493d02e17e6bbcfabbfc2fe6ab988c35182ee9147c616dafd3df95f58",
+      "observed": "Local player/world visible beside the container; no inventory counts shown"
+    },
+    {
+      "clipOffsetSeconds": 38.0,
+      "file": "frames/return-seek-38.0s.png",
+      "bytes": 2697455,
+      "sha256": "391ecf8a00ac8c703caa3883280e7606f5f07fbb075d21b8a3bf65efb6b9af2d",
+      "observed": "Local player/world visible beside the container; no inventory counts shown"
+    }
+  ],
+  "uiComparison": {
+    "classification": "directly-reviewed-icons-counts-and-reward-text-with-arithmetic-check",
+    "beforeClipOffsetSeconds": 24.0,
+    "interactionClipOffsetSeconds": 28.5,
+    "rewardClipOffsetSeconds": 30.0,
+    "afterClipOffsetSeconds": 32.0,
+    "itemKeysAreAnalystAliases": true,
+    "identityJoin": "Icon appearance and reward labels; inventory order changes; no native or server item identity",
+    "items": [
+      {
+        "itemKey": "reagent-A",
+        "beforeCount": 40,
+        "rewardDelta": 14,
+        "rewardTotal": 54,
+        "afterCount": 54,
+        "laterSeparateClipCount": 54,
+        "arithmeticMatches": true,
+        "laterCountEqualsImmediateAfter": true
+      },
+      {
+        "itemKey": "reagent-B",
+        "beforeCount": 54,
+        "rewardDelta": 12,
+        "rewardTotal": 66,
+        "afterCount": 66,
+        "laterSeparateClipCount": 77,
+        "arithmeticMatches": true,
+        "laterCountEqualsImmediateAfter": false
+      }
+    ]
+  },
+  "laterSeparateClip": {
+    "clip": {
+      "name": "recordings/solo-after-return-A.mp4",
+      "sha256": "b89f14e769d4d03e28cb72a7d8022ef1f4f720362ebb0a5a04c1916e34e3eafa",
+      "bytes": 48726810,
+      "durationSeconds": 38.140133,
+      "frameRate": "120/1",
+      "sourceCreationUtc": "2026-10-07T22:18:27.5565692Z",
+      "sourceLastWriteUtc": "2026-10-07T22:19:02.9265090Z"
+    },
+    "frame": {
+      "seekSeconds": 15.0,
+      "observed": "inventory categories and counts visible",
+      "name": "review-frames/after-return-bound/seek-15.0s.png",
+      "sha256": "8ed4af43940bc57e628f72bd28f6c2a7c8a52f8554f39ec662f1cc249289c187"
+    },
+    "observed": "Corresponding reagent icons show54 and77 in the later separate clip",
+    "scope": "Equal54 is a visible comparison only; different77 defeats a claim that both counts were unchanged. Additional play/location change is uncontrolled; no cause or persistence authority is established."
+  },
+  "evidenceLedger": [
+    {
+      "id": "L1",
+      "status": "observed",
+      "claim": "Readable before/after reagent counts exist within the return clip",
+      "references": [
+        "return@24.0s",
+        "return@32.0s"
+      ],
+      "limit": "Rendered UI icons/counts; no stable native item identity"
+    },
+    {
+      "id": "L2",
+      "status": "observed",
+      "claim": "Container interaction pose/progress and two reward notifications occur between those inventory views",
+      "references": [
+        "return@28.5s",
+        "return@30.0s"
+      ],
+      "limit": "Named sampled pixels; key/button causality and exact completion boundary unobserved"
+    },
+    {
+      "id": "L3",
+      "status": "arithmetic-verified",
+      "claim": "40+14=54 and54+12=66 match immediate after counts",
+      "references": [
+        "L1",
+        "L2"
+      ],
+      "limit": "Supports a visible UI count-change reference; does not prove backend state or the earlier tree-gather delta"
+    },
+    {
+      "id": "L4",
+      "status": "observed",
+      "claim": "Later separate clip has54 and77, rather than54 and66",
+      "references": [
+        "after-return@15.0s"
+      ],
+      "limit": "Intervening play is uncontrolled; do not claim both inventory counts persisted unchanged"
+    },
+    {
+      "id": "L5",
+      "status": "unknown",
+      "claim": "Pre-tree count/delta, stable item IDs, controlled logout persistence and authoritative inventory mutation remain unproved",
+      "references": [],
+      "limit": "No new gameplay or instrumentation was used to close these gaps"
+    }
+  ],
+  "privacy": {
+    "originalUserAttestationReused": true,
+    "newNamedFramesIndependentlyInspected": 14,
+    "priorNamedFrameReinspected": 1,
+    "continuousPixelsOrAudioIndependentlyReviewed": false,
+    "rawPixelsAudioAndDisplayedLabelsRemainPrivate": true
+  },
+  "reproduction": [
+    "Read the existing private return recording after verifying its SHA-256; preserve the original sealed manifest.",
+    "Run the saved extraction script through Invoke-CodexPowerShell; explicitly decode its14 original-size, audio-free frames.",
+    "Review return24/28.5/30/32 seconds for before/interaction/reward/after; match icons rather than pane slots.",
+    "Reinspect the existing after-return15-second frame and retain the changed77 count; do not fill intervening actions by assumption."
+  ],
+  "limits": [
+    "Sampled decoded frames are direct observations; continuous action/audio review was not performed.",
+    "The two comparisons are ordinary container loot, not a baseline for the earlier chopped tree.",
+    "Analyst keys are original aliases, not asset, protocol, actor or backend IDs.",
+    "No uninterrupted controlled persistence experiment; no packet, memory, log or live endpoint evidence.",
+    "Current clip identity and prior installed build metadata do not independently verify the protected live image.",
+    "Two-player mutual movement and remote logout/reappearance remain uncollected and user-deferred."
+  ],
+  "cleanup": {
+    "originalClipAndManifestUnchanged": true,
+    "gameLaunched": false,
+    "liveProcessObservationUsed": false,
+    "listenersStarted": false,
+    "systemConfigurationChanged": false,
+    "decoderCommandsExited": true
+  },
+  "sourceSha256": {
+    "scripts/official_session_metadata.py": "8e275803b418b0d59a29d4894ebceab4951eac275022c26e1880d2ddf9d16bc8",
+    "scripts/OfficialObservation.psm1": "d630c171389319214b2062c6c48fb81581cc92b9d49cb4230b00e54e3a846120",
+    "scripts/Start-OfficialObservation.ps1": "654f81716b899df6ea26b3105b09b08129897d3519e63aff7ee0dc6dffc79fd8",
+    "scripts/Collect-OfficialLogSuffix.ps1": "8d3a7a1867c569d3db52609fa655abc781b8f84fd645555721a1f6da6a841a02",
+    "scripts/preserve_owned_client.py": "82305eee5242815dd4e17adc4179186a0bd657d3f092cc56be352462e9c6362d",
+    "tests/test_official_session_metadata.py": "808ed068fa38b8e2684f9d83f87883d7cab94e49ca9690fb6478f84df7cc3f5d",
+    "tests/test_official_observation.ps1": "9f35f677311d93c4d2f91348ed2e08844490341c429d11088018cd28de759e63",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/official-session-video-20261007.json": "9e7fb2606910b5d4a91142b0ceead058a102d9583a86cff8b030db27b30fc6b2"
+  },
+  "privateReviewReceiptSha256": "2fd00b51df4e2ffc95eec89d08dc570247c3e869f5527b54d32e363765ef5dfa"
+}
