@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-creation-record-supplier-path",
+      "roadmapTasks": ["M1-06A"],
+      "claimIds": ["K357"],
+      "docs": ["docs/CREATION_REPLICATION_RECORD.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-creation-record-supplier-path.json", "classification": "source-inference", "scope": "Wrapper pair placement, pending queue routes and cached/default/stream conditional inputs"}],
+      "limit": "Static partial source checkpoint. Lower byte helpers/direction, concrete type8 alias, actual payload producer and native outer writer remain unjoined. No candidate/codec/native acceptance."
+    },
+    {
       "id": "current-creation-record-publication-inputs",
       "roadmapTasks": ["M1-06A"],
       "claimIds": ["K356"],

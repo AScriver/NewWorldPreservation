@@ -1,5 +1,25 @@
 # Agent handoff
 
+## #240 wrapper/queue suppliers — October7, partial
+
+- [Supplier checkpoint](CREATION_REPLICATION_RECORD.md#wrapper-and-queue-suppliers--october7-240),
+  [original receipt](../research/evidence/current-creation-record-supplier-path.json),
+  K357. New static cleanf336979 queries verify pair move into wrapper+60/+68,
+  pointer-preserving queue drain and conditional pending-entry pointer routes.
+  Cached entry+a8 bypasses the builder; absent cache uses an allocation plus a
+  separate default initializer. Empty stream skips reconstruction and retains
+  default wrapper; nonempty output needs two success gates. Do not equate nonnull
+  output with decoded or valid creation data.
+- Seven new primary functions plus two reviewed callees have matching image/map,
+  native spans and output hashes. Four primary/one reviewer overlapping-global
+  warnings retained. Reconstruction direction is inference because lower byte
+  helpers are unjoined. Callbacks may affect selected object/pointee/lifetime;
+  durable enqueue and network transmission are not proved. Prior K356 retained.
+- Exact next source edges: cached+a8 producer or entry+58 stored-stream supplier
+  to actual retained type8; then its embedded payload/native outer writer. No
+  source-supported codec change follows. Helpers exited; no runtime resources
+  acquired. Corrected manual-lifetime native trial remains pending its new grant.
+
 ## #240 serializer input checkpoint — October7, partial
 
 - Seven bounded function slices and exact direct-call instructions join generic

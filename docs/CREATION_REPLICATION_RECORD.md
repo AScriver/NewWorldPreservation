@@ -125,6 +125,32 @@ does not prove no alias. This narrows the supplier paths without joining the nat
 outer slot/count writer or changing the original codec/candidate. No native trial
 or creation acceptance follows from this static query.
 
+## Wrapper and queue suppliers — October7, #240
+
+The next bounded trace places an incoming pair in wrapper+60/+68 through
+`146153e70`. This wrapper is separate from its carried object. The one-qword
+supplier reaches `146afa350` from queue drain `146abae10`/`146b04560`.
+Feeder `146aecdf0` processes0xb8-byte pending entries and supplies pointer slots
+to one of two queues under an unjoined virtual predicate. Its optional callback
+can affect selection; selection is fetched again before that branch. Queue-helper
+durability and network transmission are not established by these calls.
+
+Entry conversion `146aba5d0` moves cached entry+a8 directly, or calls
+`146b085d0` when the cache is absent. The latter separately allocates storage and
+initializes an empty carried pair through `146154030`. Zero stored-stream length
+retains this default wrapper without reconstruction. Nonempty entry+58 stream
+passes through `1461ac8d0`, requiring result byte+1 and a second stream predicate
+to retain output. Nonnull output therefore does not prove reconstruction, valid
+message contents or native creation.
+
+The new callee passes wrapper+60 plus stream to `1417b2430`; reconstruction is
+supported inference while lower byte operations remain unjoined. Cached-pointer
+and stored-stream producers, concrete type8 alias and payload/outer writer remain
+unknown. [Original partial receipt](../research/evidence/current-creation-record-supplier-path.json),
+K357, pins seven new primary functions and two reviewed callees, exact instructions,
+hashes, conditional gates and warnings. The original codec and prepared candidate
+are unchanged; no native trial was executed.
+
 Remaining #210 joins: native outer writer and enclosing receive/Carrier placement,
 actual runtime mapping/index/fallback choice, exact resend/ACK retirement,
 historical860 discriminator and authenticated authority. Bundle extent/framing,

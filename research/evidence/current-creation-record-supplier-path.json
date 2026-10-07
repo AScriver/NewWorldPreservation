@@ -1,0 +1,536 @@
+{
+  "schema": 1,
+  "classification": "original-bounded-static-source-inference",
+  "status": "partial",
+  "recordedUtc": "2026-10-07T21:08:12.076223+00:00",
+  "workItemId": 164,
+  "actionableIds": [
+    240
+  ],
+  "parentActionableId": 177,
+  "claimIds": [
+    "K357"
+  ],
+  "input": {
+    "head": "f336979460e65c09c924cc606282c5a648f333db",
+    "workingTreeAtRecording": "M docs/AGENT_HANDOFF.md\n M docs/CREATION_REPLICATION_RECORD.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json",
+    "workingTreeScope": "Six task-owned docs/catalog edits; new receipt created only after binding checks. No runtime/codec edit.",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "queryStates": [
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/helper-output/receipt.json",
+          "bytes": 1057,
+          "sha256": "cc3c2a9a3054f4874564fa0588d633f5758d343c191df2e823589800d177ee75"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:45:15.444629+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/supplier-output/receipt.json",
+          "bytes": 1057,
+          "sha256": "d1f454825aef3f146503f0130ded9c227bd7b76a75900d2d92d98da6d3ccba15"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:46:11.372118+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/boundary-output/receipt.json",
+          "bytes": 1862,
+          "sha256": "f809b96e4755a9b421ccf99c800f54e643c2073ecc520ef3818cc5d88a997a10"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:48:18.726321+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/queue-producer-output/receipt.json",
+          "bytes": 1057,
+          "sha256": "0ccff6b56f8a0ca22e907dc1fb0b7e2b2675b464bc9eb78107819a567ee1e13b"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:49:39.772385+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/entry-output/receipt.json",
+          "bytes": 1057,
+          "sha256": "e936494d974126b9213b0894d9085333563b6251876713d9365f19582e1eee72"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:51:09.873400+00:00"
+      },
+      {
+        "receipt": {
+          "path": ".scratch/record240-supplier-20261007T2045/entry-builder-output/receipt.json",
+          "bytes": 1057,
+          "sha256": "86ea63a4bd2c3ce25dae5739c54b6dffb84808de05878e45ac92bce7f23d65d2"
+        },
+        "head": "f336979460e65c09c924cc606282c5a648f333db",
+        "gitStatus": "",
+        "recordedUtc": "2026-10-07T20:52:19.804564+00:00"
+      }
+    ],
+    "reviewQueryHead": "f336979460e65c09c924cc606282c5a648f333db",
+    "reviewQueryGitStatus": "",
+    "preservedHistoricalReceipts": [
+      {
+        "path": "research/evidence/current-creation-record-publication-inputs.json",
+        "bytes": 10984,
+        "sha256": "a6c11e083dd77b223fb8f521378ee0c3d391ed6387fa1b8c85778d6a6cf2657c",
+        "gitBlobSha256": "f49a3b97f0efcd895f54c41d8781906b3d7833201efc732caee778a9e3cf88be",
+        "comparison": "Unmodified relative to HEAD with configured core.autocrlf; disk bytes bound separately."
+      },
+      {
+        "path": "research/evidence/current-connect-ack-retry.json",
+        "bytes": 10064,
+        "sha256": "583fe96a55d823b218e86a5b8bb5f06a06d1da015519da3fb51fd7af6294d1f2",
+        "gitBlobSha256": "583fe96a55d823b218e86a5b8bb5f06a06d1da015519da3fb51fd7af6294d1f2",
+        "comparison": "Unmodified relative to HEAD with configured core.autocrlf; disk bytes bound separately."
+      },
+      {
+        "path": "research/evidence/private-player-creation-trial-20261007.json",
+        "bytes": 12446,
+        "sha256": "c997c140fe3f4bad512ff34addbf82c4deb724d93aa6779e52eead412702ac46",
+        "gitBlobSha256": "c997c140fe3f4bad512ff34addbf82c4deb724d93aa6779e52eead412702ac46",
+        "comparison": "Unmodified relative to HEAD with configured core.autocrlf; disk bytes bound separately."
+      }
+    ]
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/ghidra_function_slice.py",
+      "bytes": 15114,
+      "sha256": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341"
+    }
+  ],
+  "directCalls": [
+    {
+      "site": "0x146abafbe",
+      "target": "0x146afa350",
+      "kind": "candidate-direct",
+      "owner": "0x146abae10"
+    }
+  ],
+  "adjudication": {
+    "S240-1": {
+      "outcome": "instruction-supported-placement",
+      "finding": "146153e70 moves the incoming two-slot pair to wrapper+60/+68, clears both source slots, calls146165a00 and returns the wrapper. The wrapper and its carried object are distinct.",
+      "limit": "Inspected initializer direct writes concern flags/+4/+c metadata; opaque callee/global/TLS effects and concrete pair type/durable pointee ownership remain unresolved."
+    },
+    "S240-2": {
+      "outcome": "named-normal-return-route-survived",
+      "finding": "146abae10 drains owner+1c8 before owner+1a0 through146b04560. A selected qword is preserved across callbacks and supplied as a local slot address in argument4 to146afa350 at146abafbe; empty paths supply zero.",
+      "limit": "Ordinary ABI preserves pointer bits; callbacks may still affect pointee/lifetime. Nonempty dequeue assumes its required callback object. No runtime selection or source concrete type established."
+    },
+    "S240-3": {
+      "outcome": "conditional-pointer-slot-routes-survived",
+      "finding": "146aecdf0 exchanges pending-vector fields+50/+68, processes0xb8-byte entries through146aba5d0, and rejects null result or initial null selection. Selection is fetched again after an optional callback. Virtual+10 true supplies146a7fe90(queue+28,&result); false or second null selection supplies the base queue.",
+      "limit": "Predicate/callback semantics and helper internals remain unknown. The supplied pointer-slot is proved; durable enqueue, reliability category, actor meaning and network traffic are not."
+    },
+    "S240-4": {
+      "outcome": "gates-survived-strong-decoding-claim-falsified",
+      "finding": "146aba5d0 moves cached+a8 directly and clears its source, otherwise calls146b085d0. That function separately allocates via14137e220 and initializes supplied storage via146154030 with empty+60/+68. Zero stored-stream length retains the default wrapper without1461ac8d0. Nonempty+58 stream requires status byte+1 and a second stream predicate or output is cleared/released.",
+      "inference": "1461ac8d0 supplies wrapper+60 and stream to1417b2430; default-to-filled-object flow supports reconstruction, while underlying byte direction remains unjoined.",
+      "limit": "Nonnull output is not proof of decoding or valid creation.146154030 is an initializer, not allocator;140876b20 is not proven full stream exhaustion. Lower byte operations in1461455f0/1461454d0/1417b2430, graceful allocation-failure behavior and opaque post-output effects remain unknown."
+    },
+    "S240-5": {
+      "outcome": "unknown",
+      "finding": "Cached+a8 producer, stored-stream+58 producer, concrete carried-pair type, retained context+418/+420 alias, embedded+110 payload and native outer slot/count writer remain unjoined. Absent explicit offsets do not prove absence of an alias."
+    }
+  },
+  "verification": {
+    "primarySeal": {
+      "path": ".scratch/record240-supplier-seal-20261007T2055/input-verification.json",
+      "bytes": 9364,
+      "sha256": "c6065e59e0bce40e57e25fa4a781817f24913461d34332882e3145b20eeac01c"
+    },
+    "reviewSeal": {
+      "path": ".scratch/record240-supplier-review-20261007T2055/verification.json",
+      "bytes": 480,
+      "sha256": "c4803432a24d31b481b170eec6dec230fee4c051db6b0762147d9653f4e98e25"
+    },
+    "primaryFunctions": [
+      "0x146153e70",
+      "0x146abae10",
+      "0x146165a00",
+      "0x146b04560",
+      "0x146aecdf0",
+      "0x146aba5d0",
+      "0x146b085d0"
+    ],
+    "newReviewedCallees": [
+      "0x146154030",
+      "0x1461ac8d0"
+    ],
+    "allSelectedNativeSpansMatch": true,
+    "allOutputsMatch": true,
+    "instructionUndecodedBytes": 0,
+    "directCallCandidates": 1,
+    "tools": {
+      "ghidra": "12.1.4",
+      "pyghidra": "3.1.0",
+      "capstone": "5.0.7",
+      "python": "3.11.9"
+    },
+    "primaryGlobalWarningFunctions": [
+      "0x146165a00",
+      "0x146aecdf0",
+      "0x146aba5d0",
+      "0x146b085d0"
+    ],
+    "reviewGlobalWarningFunctions": [
+      "0x1461ac8d0"
+    ],
+    "priorWorkspaceReuse": {
+      "receipt": {
+        "path": ".scratch/offline-validation/run-e_j_hy6h/receipt.json",
+        "bytes": 48390,
+        "sha256": "4b5c098bd298f314899f3fe0f11ab4eadcb51b65a7eef9da3accbcc79440efd7"
+      },
+      "finishedAtUtc": "2026-10-07T19:06:44.107639+00:00",
+      "pythonPassed": 1429,
+      "selectedModules": 48,
+      "powershellSuites": 5,
+      "cliLifecycle": "passed and closed",
+      "inputDelta": [
+        "docs/EVIDENCE_LEDGER.md",
+        "docs/ROADMAP.md",
+        "research/agent-evidence-index.json"
+      ],
+      "limit": "Unchanged code/fixtures/lifecycle support reused. Affected documentation/catalog checks and actual preflight recorded separately; no new full-workspace execution implied."
+    }
+  },
+  "counterevidence": [
+    "A combined queue-function read was truncated; narrowed tail/instruction reads preceded the pointer-routing claim.",
+    "The first public-receipt builder stopped on an incorrect primary-extraction schema assumption before writing the receipt; corrected checks compare the actual instruction and sealed native span hashes. This was not a source-query failure.",
+    "A second builder guard compared raw Git LF bytes with Windows CRLF bytes and stopped before writing; core.autocrlf=true and normalized content/empty Git diff verified unchanged historical receipts. Both disk and Git blob identities are recorded.",
+    "A supplementary old tick+60 inspection concerned telemetry vectors, not this wrapper; no association was promoted.",
+    "Empty-stream default retention falsifies the claim that every nonnull output has been decoded.",
+    "Initializer and allocator are separate. Underlying byte direction and post-output effects remain unproved.",
+    "Four primary and one reviewed overlapping-global warnings remain; inferred global names/types are not proof."
+  ],
+  "privateMetadata": [
+    {
+      "path": ".scratch/record240-supplier-seal-20261007T2055/input-verification.json",
+      "bytes": 9364,
+      "sha256": "c6065e59e0bce40e57e25fa4a781817f24913461d34332882e3145b20eeac01c"
+    },
+    {
+      "path": ".scratch/record240-supplier-seal-20261007T2055/verify_inputs.py",
+      "bytes": 5893,
+      "sha256": "26127acd0ef6685a019becc2957922dcebe08760af62047529b77b056ec3f389"
+    },
+    {
+      "path": ".scratch/record240-supplier-seal-20261007T2055/Verify-Supplier.ps1",
+      "bytes": 405,
+      "sha256": "a1103c2114cfe8166aca217b319926d154f7000dfb3bd96f427909a2b583c2fd"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/ledger.md",
+      "bytes": 4598,
+      "sha256": "00567f2179f295dc820bf512f13c269a6ec7c15cbf3d6978b73a412b6688100d"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/verification.json",
+      "bytes": 480,
+      "sha256": "c4803432a24d31b481b170eec6dec230fee4c051db6b0762147d9653f4e98e25"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/extraction.json",
+      "bytes": 1814,
+      "sha256": "ee0299409a719de2cc9d942d292ed991dfa3d99acdb7d16d47bd0b10762cbe77"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/callee-output/receipt.json",
+      "bytes": 1504,
+      "sha256": "d152daa9910a2350256007c746726714575c269a647739e328bee786c09ad07c"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/challenge-results.md",
+      "bytes": 10893,
+      "sha256": "237a55c0e79b4c8f9220439e7511c7e3f4614ade8be59cc62e1e6987a8201fcd"
+    },
+    {
+      "path": ".scratch/record240-supplier-seal-20261007T2055/receipt-build-counterevidence.json",
+      "bytes": 1008,
+      "sha256": "13a04e8b1f5042486b73e91dffbb4933fe7cd4f4eea24428c51d5b583f6fbc67"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/helper-output/receipt.json",
+      "bytes": 1057,
+      "sha256": "cc3c2a9a3054f4874564fa0588d633f5758d343c191df2e823589800d177ee75"
+    },
+    {
+      "entry": "0x146153e70",
+      "path": ".scratch/record240-supplier-20261007T2045/helper-output/function-146153e70.c",
+      "bytes": 1933,
+      "sha256": "51918a696a36902197999b9bbbe778d801fb20b0e0e32520dd511feef615b69d"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/supplier-output/receipt.json",
+      "bytes": 1057,
+      "sha256": "d1f454825aef3f146503f0130ded9c227bd7b76a75900d2d92d98da6d3ccba15"
+    },
+    {
+      "entry": "0x146abae10",
+      "path": ".scratch/record240-supplier-20261007T2045/supplier-output/function-146abae10.c",
+      "bytes": 3450,
+      "sha256": "0e379df88c1ebc8d43740212e83ca407adf2ac9d0a6d3d272042379daf6ef707"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/boundary-output/receipt.json",
+      "bytes": 1862,
+      "sha256": "f809b96e4755a9b421ccf99c800f54e643c2073ecc520ef3818cc5d88a997a10"
+    },
+    {
+      "entry": "0x146165a00",
+      "path": ".scratch/record240-supplier-20261007T2045/boundary-output/function-146165a00.c",
+      "bytes": 3229,
+      "sha256": "233b889c3385c1ff77aa214ff318a45f5bd628975804f1f15b3fea89238cb544"
+    },
+    {
+      "entry": "0x146b04560",
+      "path": ".scratch/record240-supplier-20261007T2045/boundary-output/function-146b04560.c",
+      "bytes": 1802,
+      "sha256": "3032451e8e3d5a9bc9420eaa0214c37b2a3c747f39e516fc75db5837ced131d2"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/queue-producer-output/receipt.json",
+      "bytes": 1057,
+      "sha256": "0ccff6b56f8a0ca22e907dc1fb0b7e2b2675b464bc9eb78107819a567ee1e13b"
+    },
+    {
+      "entry": "0x146aecdf0",
+      "path": ".scratch/record240-supplier-20261007T2045/queue-producer-output/function-146aecdf0.c",
+      "bytes": 9853,
+      "sha256": "112d63e2a6ad48ae824fdec2e512172ea7478726004b3edfde359e6aee282fd1"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/entry-output/receipt.json",
+      "bytes": 1057,
+      "sha256": "e936494d974126b9213b0894d9085333563b6251876713d9365f19582e1eee72"
+    },
+    {
+      "entry": "0x146aba5d0",
+      "path": ".scratch/record240-supplier-20261007T2045/entry-output/function-146aba5d0.c",
+      "bytes": 5744,
+      "sha256": "87d457023bbc083d5c3b6fbfdd9177f21c5f4468a927f6fc6052116727444784"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/entry-builder-output/receipt.json",
+      "bytes": 1057,
+      "sha256": "86ea63a4bd2c3ce25dae5739c54b6dffb84808de05878e45ac92bce7f23d65d2"
+    },
+    {
+      "entry": "0x146b085d0",
+      "path": ".scratch/record240-supplier-20261007T2045/entry-builder-output/function-146b085d0.c",
+      "bytes": 5408,
+      "sha256": "33b05bc60b7773d3652a9e88b7744ed8b25bc86afe9831060d5238108873d2f4"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Extract-Boundaries.ps1",
+      "bytes": 433,
+      "sha256": "f2a3e62a031c7dc48328f18d4639bf973f4a42dfdccb821bf70cb85607d6634a"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Extract-Entry.ps1",
+      "bytes": 410,
+      "sha256": "d54b5e38232b363fcc9af8cc3a3b7f41a87f41bc529f1618f32d9169ba31c27b"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Extract-EntryBuilder.ps1",
+      "bytes": 415,
+      "sha256": "48b984c6e85afd40d790e6635ff8d3878f65d6de9a7db7acdd1bce90a771227c"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Extract-QueueProducer.ps1",
+      "bytes": 407,
+      "sha256": "64423e3b2f1f67f178c1837c4492d46548c6e07641e7d47ef4730b29b120a24e"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Extract-Supplier.ps1",
+      "bytes": 426,
+      "sha256": "22462c595eba99a577664cfd230eef6cb1b0948d649e7ce93e91e322bfb55ee9"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Prepare-Query.ps1",
+      "bytes": 585,
+      "sha256": "d0373d1d40606b5a9d2f74402b8cce4896c5fc41aafbbba1f8cbf2864d6f7a92"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Scan-Supplier.ps1",
+      "bytes": 402,
+      "sha256": "aa5ea920fc8c1332006becf6e5d037da064d571f7b22b6ce521d2c78665961f3"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-Boundaries.ps1",
+      "bytes": 864,
+      "sha256": "8e5f23e809b91fc9165e4dc2daa3252692a3878d9a0ebd0d91c226fbd6926c58"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-Entry.ps1",
+      "bytes": 823,
+      "sha256": "9af80d8435f6869a103a43732748aec4c58baebd6d85441246e878d602453424"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-EntryBuilder.ps1",
+      "bytes": 844,
+      "sha256": "5ac0f627e0f67a8283d0e118279fe27a0e7c866926c8de94fd5470f5672f948d"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-Helper.ps1",
+      "bytes": 827,
+      "sha256": "77c14b3cb188c572d9ba2c3791c5feb475f4d96319e2f902e99039fd01cbe938"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-QueueProducer.ps1",
+      "bytes": 838,
+      "sha256": "1847b472aa3fdfaeff442d09b4225cc30f1f243c37f51181c5c76d14006fa48d"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/Slice-Supplier.ps1",
+      "bytes": 826,
+      "sha256": "b3bb1014df82d395776bbb3631ed79d4e7600e976f89782ad28fa793057ec2d7"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extract.py",
+      "bytes": 7756,
+      "sha256": "bb8067c6f91dccf8488e623ef8f9bc15ed3f1551156454788d5efa6061967d6b"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/xref.py",
+      "bytes": 1245,
+      "sha256": "3857cdd54c12b2891ae58af7bcc2beb33f0b02cd7b85dfc8029da755582b6551"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/xrefs-716aaeb4b5ca.json",
+      "bytes": 133,
+      "sha256": "30a073d25126cd7d2e8c3fac3ecaab35aa0f69437ceefd411835a3ec92d2cddd"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extraction-0aebff214d8a.json",
+      "bytes": 7405,
+      "sha256": "8cf3456d69d6799e16647bd93305c64410720244867bceb439481e8222a3d849"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146aba5d0.txt",
+      "bytes": 9886,
+      "sha256": "e06ebac180f14aa27cc6d0915845e49f949f929227b2c765ab54d32cf69ea28c"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extraction-2e5bc2824bb0.json",
+      "bytes": 7927,
+      "sha256": "7a5d79aafef4f2af191c4403931a2001fa1c4bc232c5829af1bcb34baac9d09a"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146aecdf0.txt",
+      "bytes": 15943,
+      "sha256": "cec83545b57cc64ee320ee70ec1582bad2149873c3a02756417101973dfcd1e6"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extraction-942f5b36e612.json",
+      "bytes": 7042,
+      "sha256": "cccdb9ab106e888a8541823e1ab820d689d0c80276cd64b1fe9f66285dcd81f6"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146b085d0.txt",
+      "bytes": 9006,
+      "sha256": "8bf11fff25d92ab50dec7e4017e055a3f5915f951ea43ff65dc0fdc8a9af7128"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extraction-a98b620688d2.json",
+      "bytes": 6742,
+      "sha256": "b018520dd1896ff615c3f2c9393aa8354a78897e57e08858b8809815f844dc70"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146153e70.txt",
+      "bytes": 2719,
+      "sha256": "e7cc61930a6475707730c89be84cbbf2c933739ab0d68682a62e88de37fc1cc9"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146abae10.txt",
+      "bytes": 6621,
+      "sha256": "6b7153a8c0651da4f5feaa6ce6ccd48327695fd7792cd372d669d79ba2d3e16e"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/extraction-db5613a6beb1.json",
+      "bytes": 7233,
+      "sha256": "0c8b55ff32e13bca57894078977d0f597ef2379546ef7143f88f053fe8630c37"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146165a00.txt",
+      "bytes": 5835,
+      "sha256": "fa387de663c45c7ac85b3a79395faa1803fb1d3f10d8fe9d0b46f4f81c035226"
+    },
+    {
+      "path": ".scratch/record240-supplier-20261007T2045/fn-146b04560.txt",
+      "bytes": 2934,
+      "sha256": "006c3562e2c18002f65099df740e3beb3098d80bfa9bee269551f61305f8de98"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/fn-146154030.txt",
+      "bytes": 1444,
+      "sha256": "a70ee35d292a227a18a6a049b9b3f5b24f90363fc625c8684853c23198b89ff6"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/fn-1461ac8d0.txt",
+      "bytes": 9929,
+      "sha256": "d0b3ead113d947b067c31f9ed0947f18947c916873b98179c1e209a199660f48"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/callee-output/function-146154030.c",
+      "bytes": 1136,
+      "sha256": "2b64b074f92213625840646d92b64264d8320dd2feff499869bbd92f5df32ad1"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/callee-output/function-1461ac8d0.c",
+      "bytes": 5530,
+      "sha256": "dda33a6e917e3c7e8afc153aa5e30f685fe66c1c3945e0ba7deb0417b13b6fbc"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/Query.ps1",
+      "bytes": 1735,
+      "sha256": "0df7598255aff1a54c35654d587b15abf3f6ab597879a23d3d93ced53f8d7818"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/Verify.ps1",
+      "bytes": 322,
+      "sha256": "baa137be8b00bc71ea1d1042443bae011c301691b8081ae87c2ac257b3f652c4"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/verify.py",
+      "bytes": 1544,
+      "sha256": "149e0e568cb36c306431b8fef00f43e4d50b8f2a0a0baf2ab7a86006df89e553"
+    },
+    {
+      "path": ".scratch/record240-supplier-review-20261007T2055/extract.py",
+      "bytes": 4639,
+      "sha256": "9c25e8e0dad26d78cfa61e4b768393696f9bcc5ff04adf8bd660db0f1d6fd25c"
+    }
+  ],
+  "cleanup": {
+    "fileOnlyHelpersExited": true,
+    "runtimeResourcesAcquired": false,
+    "clientExecuted": false,
+    "processMemoryRead": false,
+    "networkUsed": false,
+    "hooksChanged": false,
+    "privateArtifactsRetained": true
+  },
+  "limits": [
+    "Original metadata/conclusions only; proprietary instructions and decompiles remain ignored.",
+    "Partial source checkpoint; actual type8 payload producer/native outer writer acceptance remains open.",
+    "No codec or candidate change and no native execution, creation, controls, movement or restart proof.",
+    "Corrected fresh creation trial remains prepared pending its specific new human grant."
+  ]
+}

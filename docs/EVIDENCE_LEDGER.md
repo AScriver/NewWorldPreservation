@@ -1,5 +1,15 @@
 # Evidence ledger
 
+## Wrapper and queue suppliers — October7, #240, partial
+
+[Original receipt](../research/evidence/current-creation-record-supplier-path.json)
+pins cleanf336979, seven new functions, two reviewed callees and current image/map.
+All selected native spans/output hashes matched; prior K356 receipt is preserved.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K357 | Wrapper pair placement and pending queue routes narrow the serializer's suppliers | Static instructions; cached+a8 versus stored-stream+58 paths, separate allocator/initializer and empty-stream default gate. Nonempty path requires two predicates. Reconstruction direction remains inference; lower byte helpers, concrete type8 source, payload and outer writer unknown. No codec/candidate/native acceptance change | [Exact gates/ownership limits](CREATION_REPLICATION_RECORD.md#wrapper-and-queue-suppliers--october7-240), primary/reviewer span/output seals and bounded challenge |
+
 ## Generic serializer input paths — October7, #240, partial
 
 [Original source receipt](../research/evidence/current-creation-record-publication-inputs.json)

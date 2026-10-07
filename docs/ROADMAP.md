@@ -26,6 +26,16 @@ session cap: the user confirms finished or refocuses the goal. Five minutes afte
 spawn remains the minimum control acceptance. The closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
 
+October7 #240's next [supplier trace](CREATION_REPLICATION_RECORD.md#wrapper-and-queue-suppliers--october7-240),
+K357/[partial receipt](../research/evidence/current-creation-record-supplier-path.json),
+joins wrapper pair placement, pointer-preserving queue drain and conditional
+pending-entry routes. Cached objects and stored-stream construction remain separate;
+zero stream length can retain a default wrapper without reconstruction. Seven new
+functions and two reviewed callees pass pinned instruction/span/output checks.
+Lower byte operations, cached/stored-stream suppliers, actual type8 payload and
+native outer writer remain unjoined. No codec/candidate/native acceptance changed;
+the corrected trial still awaits its specific new human grant.
+
 October7 #240 under177/164 traces seven direct caller edges into the generic
 whole-message serializer and corrects two decompiler interpretations through
 instruction review: wrapper transfers move one qword, and the apparent TLS
