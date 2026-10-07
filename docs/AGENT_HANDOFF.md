@@ -1,5 +1,16 @@
 # Agent handoff
 
+## #240 supplier follow-up and historical fault read — October7, partial
+
+- [Original follow-up receipt](../research/evidence/current-creation-supplier-followup.json),
+  K358/K359: two new source functions join the feeder's downstream ring-cell
+  insertion; the cached/stream producer is still unknown. Queue+20 is an incremented
+  counter, not an independently established cursor. Cleanup-shaped caller is not a
+  producer join; candidate146ae5adb has no verified function boundary/arguments.
+- Existing Windows Application Error/WER metadata18:42–18:45UTC contains no events.
+  This does not rule out a crash; original trial and candidate remain unchanged.
+  All helpers exited without runtime resources; corrected trial grant is pending.
+
 ## #240 wrapper/queue suppliers — October7, partial
 
 - [Supplier checkpoint](CREATION_REPLICATION_RECORD.md#wrapper-and-queue-suppliers--october7-240),

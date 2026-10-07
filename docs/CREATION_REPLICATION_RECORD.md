@@ -151,6 +151,15 @@ K357, pins seven new primary functions and two reviewed callees, exact instructi
 hashes, conditional gates and warnings. The original codec and prepared candidate
 are unchanged; no native trial was executed.
 
+The next [bounded follow-up](../research/evidence/current-creation-supplier-followup.json),
+K358, checks `146a7fe90`: it moves the supplied qword into a ring cell, clears
+the source slot and increments queue+20. This joins the feeder's downstream
+pointer insertion on normal return, while opaque allocation/resize effects and
+pointee lifetime remain qualified. Direct caller `146a9fe30` is cleanup-shaped;
+its call does not identify the pending-entry producer. Another byte-scan candidate
+at `146ae5adb` lacks a verified function boundary/arguments and remains a candidate.
+Cached+a8, stored-stream+58, actual type8 payload and native writer remain unjoined.
+
 Remaining #210 joins: native outer writer and enclosing receive/Carrier placement,
 actual runtime mapping/index/fallback choice, exact resend/ACK retirement,
 historical860 discriminator and authenticated authority. Bundle extent/framing,

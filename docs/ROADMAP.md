@@ -26,6 +26,14 @@ session cap: the user confirms finished or refocuses the goal. Five minutes afte
 spawn remains the minimum control acceptance. The closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
 
+October7 #240's two-function [supplier follow-up](../research/evidence/current-creation-supplier-followup.json),
+K358, joins the downstream ring-cell pointer insertion and rejects a cleanup
+caller as an identified pending-entry producer. One other scan candidate lacks a
+validated function boundary; actual cached/stream/type8 payload/native writer
+remain unjoined. The separately recorded three-minute Windows fault-metadata read
+(K359) found no Application Error/WER events; absence does not disprove a native
+crash. The confirmed original stop remains the Carrier guard. No new native run.
+
 October7 #240's next [supplier trace](CREATION_REPLICATION_RECORD.md#wrapper-and-queue-suppliers--october7-240),
 K357/[partial receipt](../research/evidence/current-creation-record-supplier-path.json),
 joins wrapper pair placement, pointer-preserving queue drain and conditional

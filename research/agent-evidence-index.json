@@ -14,12 +14,15 @@
     {
       "id": "current-creation-record-supplier-path",
       "roadmapTasks": ["M1-06A"],
-      "claimIds": ["K357"],
+      "claimIds": ["K357", "K358"],
       "docs": ["docs/CREATION_REPLICATION_RECORD.md"],
       "scripts": ["scripts/ghidra_function_slice.py"],
       "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
       "fixtures": [],
-      "evidence": [{"path": "research/evidence/current-creation-record-supplier-path.json", "classification": "source-inference", "scope": "Wrapper pair placement, pending queue routes and cached/default/stream conditional inputs"}],
+      "evidence": [
+        {"path": "research/evidence/current-creation-record-supplier-path.json", "classification": "source-inference", "scope": "Wrapper pair placement, pending queue routes and cached/default/stream conditional inputs"},
+        {"path": "research/evidence/current-creation-supplier-followup.json", "classification": "source-inference", "scope": "Two-function downstream pointer insertion/caller follow-up; producer and other candidate boundary remain unjoined"}
+      ],
       "limit": "Static partial source checkpoint. Lower byte helpers/direction, concrete type8 alias, actual payload producer and native outer writer remain unjoined. No candidate/codec/native acceptance."
     },
     {
@@ -47,13 +50,16 @@
     {
       "id": "private-player-creation-trial-20261007",
       "roadmapTasks": ["M1-07"],
-      "claimIds": ["K352", "K353"],
-      "docs": ["docs/PLAYER_CREATION_TRIAL.md"],
+      "claimIds": ["K352", "K353", "K359"],
+      "docs": ["docs/PLAYER_CREATION_TRIAL.md", "docs/ROADMAP.md"],
       "scripts": ["scripts/carrier_registration_probe.py", "scripts/frida_client_trial.py", "scripts/Invoke-FridaPrivateTrial.ps1"],
       "tests": [],
       "fixtures": [],
-      "evidence": [{"path": "research/evidence/private-player-creation-trial-20261007.json", "classification": "observed-metadata", "scope": "Admitted isolated game DTLS, pre-registration repeated-connect guard failure and actual cleanup"}],
-      "limit": "No creation attempt or native player/control/movement acceptance. Receipt pins as-executed83911ed; closed single grant does not admit another attempt."
+      "evidence": [
+        {"path": "research/evidence/private-player-creation-trial-20261007.json", "classification": "observed-metadata", "scope": "Admitted isolated game DTLS, pre-registration repeated-connect guard failure and actual cleanup"},
+        {"path": "research/evidence/current-creation-supplier-followup.json", "classification": "observed-metadata", "scope": "Separate existing Windows fault-metadata section only: no events in a bounded historical window; native crash remains unconfirmed"}
+      ],
+      "limit": "No creation attempt or native player/control/movement acceptance. Original trial receipt pins as-executed83911ed; supplementary missing fault events do not disprove a crash. Closed single grant does not admit another attempt."
     },
     {
       "id": "private-trial-lifetime",

@@ -1,5 +1,15 @@
 # Evidence ledger
 
+## Supplier follow-up and existing fault metadata — October7, partial
+
+[Original receipt](../research/evidence/current-creation-supplier-followup.json)
+separates two-function static source inference from the existing Windows log read.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K358 | Downstream helper stores the supplied pointer in a ring cell; inspected owner caller is cleanup-shaped | Normal-return instructions; no identified cached/stream producer, opaque callee effects and lifetime unresolved. Another scan candidate lacks a verified boundary/arguments. No native writer, type8 payload or candidate change | Exact native-span/output bindings and qualified source follow-up |
+| K359 | Existing Application Error/WER query returned no events18:42–18:45UTC | Executed read-only metadata query; no native crash confirmed or disproved. No new client/process/hook/capture/network access; original trial is preserved | Bounded two-provider receipt with exact owned-image pin and query status |
+
 ## Wrapper and queue suppliers — October7, #240, partial
 
 [Original receipt](../research/evidence/current-creation-record-supplier-path.json)

@@ -1,0 +1,296 @@
+{
+  "schema": 1,
+  "classification": "original-bounded-evidence-checkpoint",
+  "status": "partial",
+  "recordedUtc": "2026-10-07T21:29:01.966221+00:00",
+  "workItemId": 164,
+  "sourceActionableIds": [
+    240
+  ],
+  "claimIds": [
+    "K358",
+    "K359"
+  ],
+  "input": {
+    "head": "e6bb44700681eaf1e256ec28b24ea286178c2fb0",
+    "queryGitStatusBefore": "",
+    "queryGitStatusAfter": "",
+    "recordingGitStatus": "M docs/AGENT_HANDOFF.md\n M docs/CREATION_REPLICATION_RECORD.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M research/agent-evidence-index.json",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "historicalReceiptsUnmodifiedRelativeToHead": [
+      {
+        "path": "research/evidence/current-creation-record-supplier-path.json",
+        "bytes": 24047,
+        "sha256": "cd7b920109b92c2291901ccf7bc7826a0fbcb6531e8e768126b93d946dde03ba"
+      },
+      {
+        "path": "research/evidence/current-creation-record-publication-inputs.json",
+        "bytes": 10984,
+        "sha256": "a6c11e083dd77b223fb8f521378ee0c3d391ed6387fa1b8c85778d6a6cf2657c"
+      },
+      {
+        "path": "research/evidence/current-connect-ack-retry.json",
+        "bytes": 10064,
+        "sha256": "583fe96a55d823b218e86a5b8bb5f06a06d1da015519da3fb51fd7af6294d1f2"
+      },
+      {
+        "path": "research/evidence/private-player-creation-trial-20261007.json",
+        "bytes": 12446,
+        "sha256": "c997c140fe3f4bad512ff34addbf82c4deb724d93aa6779e52eead412702ac46"
+      }
+    ]
+  },
+  "sourceInference": {
+    "claimId": "K358",
+    "classification": "source-inference",
+    "selectedFunctions": [
+      {
+        "entry": "0x146a7fe90",
+        "reason": "Exact call from 0x146aecdf0 supplies its queue+0x28 and a local pointer slot; first producer boundary to test."
+      },
+      {
+        "entry": "0x146a9fe30",
+        "reason": "Only PDATA-backed candidate caller found by exact-root scan of 0x146abae10; selected to verify argument and role."
+      }
+    ],
+    "queueInsertion": {
+      "finding": "On ordinary return146a7fe90 loads the supplied qword, clears its source slot, stores it in the selected ring cell and increments queue+20. The known feeder call supplies queue+28 or the base queue and a local pointer slot.",
+      "instructionRefs": [
+        "146a7feaa",
+        "146a7fead",
+        "146a7ff45",
+        "146a7ff4d",
+        "146a7ff54",
+        "146a7ff57",
+        "146aed336",
+        "146aed33a",
+        "146aed33e",
+        "146aed350",
+        "146aed353"
+      ],
+      "limits": "This joins downstream pointer insertion, not the prior pending-entry producer or network publication. Opaque resize/allocation effects, allocation-failure handling and durable pointee lifetime remain unproved."
+    },
+    "ownerCaller": {
+      "finding": "146a9fe30 supplies its saved first argument to146abae10 at146a9fe67; later member release including the+1a0 helper makes this caller cleanup-shaped. No pending-entry construction is joined by this edge.",
+      "instructionRefs": [
+        "146a9fe54",
+        "146a9fe5c",
+        "146a9fe64",
+        "146a9fe67",
+        "146aa027c",
+        "146aa0283"
+      ],
+      "limit": "Cleanup role is inference from this body; opaque or indirect callees are not an absence proof."
+    },
+    "unverifiedCandidate": {
+      "site": "0x146ae5adb",
+      "target": "0x146abae10",
+      "pdataOwner": null,
+      "instructionBoundaryVerified": false,
+      "argumentsVerified": false,
+      "limit": "Candidate opcode/displacement matches; no source producer association follows."
+    },
+    "unknowns": [
+      "Cached pending-entry+a8 producer",
+      "Stored-stream+58 producer",
+      "Concrete type8 alias and embedded payload supplier",
+      "Native outer slot/count writer"
+    ],
+    "counterevidence": [
+      "The named downstream helper receives an already supplied qword; it does not join prior entry construction.",
+      "The inspected direct owner caller is cleanup-shaped rather than an identified producer.",
+      "Initial private verifier hash assumption was corrected; no Ghidra query failed.",
+      "Private cursor label is narrowed to exact+20 counter; prior pop code treats that field as count."
+    ],
+    "warningFunctions": [
+      "0x146a9fe30"
+    ],
+    "verification": {
+      "path": ".scratch/record240-followup-seal-20261007T2127/input-verification.json",
+      "bytes": 1260,
+      "sha256": "605d1731ea123c89ec3824d031ff3f3527a38a965acf358c90cabd2513bcbceb"
+    }
+  },
+  "existingFaultObservation": {
+    "claimId": "K359",
+    "classification": "observed-metadata",
+    "recordedUtc": "2026-10-07T21:17:55.8360048Z",
+    "sourceHead": "e6bb44700681eaf1e256ec28b24ea286178c2fb0",
+    "historicalTrial": "run-20261006T2321-player1",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "windowStartUtc": "2026-10-07T18:42:00.0000000+00:00",
+    "windowEndUtc": "2026-10-07T18:45:00.0000000+00:00",
+    "queries": [
+      {
+        "Provider": "Application Error",
+        "EventId": 1000,
+        "Status": "no-events-in-window",
+        "EventsRead": 0,
+        "LimitReached": false
+      },
+      {
+        "Provider": "Windows Error Reporting",
+        "EventId": 1001,
+        "Status": "no-events-in-window",
+        "EventsRead": 0,
+        "LimitReached": false
+      }
+    ],
+    "exactOwnedCopyFaultRecords": 0,
+    "nameOnlyWerReports": 0,
+    "nativeCrashConfirmed": false,
+    "limit": "No events returned in these two providers/window. Missing records do not disprove a native crash or other application fault. This is existing-log metadata, not a new native attempt."
+  },
+  "priorWorkspaceReuse": {
+    "receipt": {
+      "path": ".scratch/offline-validation/run-e_j_hy6h/receipt.json",
+      "bytes": 48390,
+      "sha256": "4b5c098bd298f314899f3fe0f11ab4eadcb51b65a7eef9da3accbcc79440efd7"
+    },
+    "finishedAtUtc": "2026-10-07T19:06:44.107639+00:00",
+    "pythonPassed": 1429,
+    "selectedModules": 48,
+    "powershellSuites": 5,
+    "cliLifecycle": "passed and closed",
+    "inputDelta": [
+      "docs/EVIDENCE_LEDGER.md",
+      "docs/ROADMAP.md",
+      "research/agent-evidence-index.json"
+    ],
+    "limit": "Unchanged code/fixtures/lifecycle support reused; affected catalog/docs checks and actual preflight recorded separately."
+  },
+  "privateMetadata": [
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/binding.json",
+      "bytes": 8554,
+      "sha256": "0d04f5f5df337200959cfeeb3f03e911868b875b7c87712f57c24868a2ff9f5d"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112.Query.ps1",
+      "bytes": 799,
+      "sha256": "c5cb35218f6303e00e86acb467ebb01d6c6a960a4e58e18f106de4bb14c5cb7a"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112.Query2.ps1",
+      "bytes": 800,
+      "sha256": "0fbc5e7c1a2df429c0ee27b6b4a7cb210e4e0e1b7297edac0d12ca60e52dd0e6"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112.Xref.ps1",
+      "bytes": 1872,
+      "sha256": "e252c233734814491d19b3b73de1472c9fdfb0152c79ff0f81752a7b59f4bb7c"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112.Xref2.ps1",
+      "bytes": 1887,
+      "sha256": "51b3f947c33d2386945a89da2aca7979094dc2f83543a00af85d3cf4fe32b2d8"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112.Extract.ps1",
+      "bytes": 1031,
+      "sha256": "190adcbda64b44e81e8cb3a27b63829219753c015c3ea39c8d5325742a77cb81"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/xref.py",
+      "bytes": 1397,
+      "sha256": "7ec0eb7d7094af4e2d638ba679c7c5c44e14882a3ffdd96d62d00bc2642ce8f8"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/xref-146abae10.py",
+      "bytes": 1392,
+      "sha256": "ec069f06761068f26bb1376ae39c2919312d868ef765f8d59cea92a23025400e"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/extract.py",
+      "bytes": 4639,
+      "sha256": "2d1f78be1217680d4bceda697c4f43b0a9439ed54f47bff6c31c4e899a0e23c6"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/verify.py",
+      "bytes": 7603,
+      "sha256": "3b7551d13df2d0de3799b63fa19b107d5e5505bd703bb4370613ce35c3caff74"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/report.md",
+      "bytes": 4564,
+      "sha256": "6ea1ff692599ef53f29d47015e125ce426e6706e3b87f2488088d5fbaee4f5dc"
+    },
+    {
+      "path": "scripts/ghidra_function_slice.py",
+      "bytes": 15114,
+      "sha256": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/extraction.json",
+      "bytes": 1808,
+      "sha256": "dee078d1f8678d8df873d208f18a568924b3411b69f207f93e1cc3c93321afe8"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/output-1/receipt.json",
+      "bytes": 1057,
+      "sha256": "b7feef6dcda57212f70da3ce6ff47c8b4078d7f80279cad9b9a4cb1366a21536"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/output-1/function-146a7fe90.c",
+      "bytes": 1397,
+      "sha256": "f8af72eb4c4788ad012004cd147ed86a094c1df3be69056a3abaa3ab84deda5a"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/fn-146a7fe90.txt",
+      "bytes": 2892,
+      "sha256": "407209fd481daddc736ab5b4a8d207c6d7dfe15679fc070901f2f0502f4f1006"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/output-2/receipt.json",
+      "bytes": 1057,
+      "sha256": "359f22fc28ed8220195cbb4ad1fbc8b3405082cbab170839b9b27b45df25b983"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/output-2/function-146a9fe30.c",
+      "bytes": 7993,
+      "sha256": "2c9542873bb8fd9a4a11df9876e0e66683e1da02dfe43513bad046854b3d1c9d"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/fn-146a9fe30.txt",
+      "bytes": 12507,
+      "sha256": "8ac8867c225292cb02a3d442b9603ceca9d7dbc28d5ff13b9233dc3650bd5a26"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/xref-146aecdf0.json",
+      "bytes": 135,
+      "sha256": "570214ad5665016d718c4e9514eb6a15e47803248dd031acde18b86591a554c3"
+    },
+    {
+      "path": ".scratch/record240-entry-source-20261007T2112/xref-146abae10.json",
+      "bytes": 256,
+      "sha256": "f9f8b8000c4214714ba73343ad12cc87b5723a930eb7e5cfac9292da0619b0c0"
+    },
+    {
+      "path": ".scratch/player-fault-metadata-20261007T2117/fault-metadata.json",
+      "bytes": 1417,
+      "sha256": "bec6e38dd5cf05d0b3a5902144cbc850edefa2e1f41197ca3c7132f74090ff01"
+    },
+    {
+      "path": ".scratch/player-fault-metadata-20261007T2117/Read-PlayFaultMetadata.ps1",
+      "bytes": 6016,
+      "sha256": "0bfb85a9dd1b054c7723da90b3a75399eea32c75b1084333eca23d90da452f1b"
+    }
+  ],
+  "cleanup": {
+    "staticHelpersExited": true,
+    "faultReadHelperExited": true,
+    "runtimeResourcesAcquired": false,
+    "processMemoryRead": false,
+    "clientLaunched": false,
+    "hooksChanged": false,
+    "networkUsed": false,
+    "privateArtifactsRetained": true
+  },
+  "limits": [
+    "Original metadata/conclusions only; proprietary instructions/decompiles and raw event records are not copied.",
+    "No codec, candidate, grant or native player/control/movement/restart acceptance change.",
+    "Corrected trial remains prepared pending its specific new human approval."
+  ]
+}
