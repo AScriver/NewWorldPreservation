@@ -1,5 +1,17 @@
 # Evidence ledger
 
+## Manual-lifetime connection retry correction — October7, #259
+
+Exercised at c4d7250 with three task-owned Carrier code/test files dirty; pinned
+FirstLight63756a3 clean. [Original receipt](../research/evidence/current-connect-ack-retry.json)
+seals current inputs and distinguishes controlled tests from the consumed live258
+attempt. K352/K353 remain historical as-executed observations.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K354 | Manual mode answers fresh connection retries through the pinned builder and rejects exhausted ACK state | Source-supported repeated dispatch; reproduced79 focused/18 independent scenarios, six corresponding timed/manual byte comparisons and normally reached ACKcursor65536 rejection. Fixed control record remains; per-request ACK range changes. Duplicate/conflict/order/partial-send controls retained. No native retry acceptance | Pinned responder465-473/1069-1141, source hashes, fake-peer and actual pinned-codec checks; namespace counterevidence retained in receipt |
+| K355 | Fresh retry proposal is sealed with a new record, existing scope and user-confirmed lifetime | Observed disk-only original107-byte composition,164 unique bindings, three observer guards and five wrapper parser checks;20:06 read-only OS readiness passes. No grant, game/controller execution, native creation, control or movement proof | Fresh private preparation/readiness seals; correction receipt; creation procedure |
+
 ## First selected creation trial — October7, #258
 
 Executed at clean `83911ed`; original live [receipt](../research/evidence/private-player-creation-trial-20261007.json)

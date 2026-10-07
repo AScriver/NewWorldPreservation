@@ -11,19 +11,34 @@ restarts. All remain pending; preserve the two-client acceptance below.
 
 Furthest private live behavior: the0655 trial reached SelfIdentification and
 context initialization, then selection/spawn timeout; its type8 bundle was empty.
-Current obstacle: October7's manual-lifetime trial terminates at
+October7's first manual-lifetime trial terminated at
 `connect_ack_cursor_reuse` on the second connection request, before registration
 or the fresh creation/identity member. The candidate remains untested natively.
 Leaf252 composes the original nonempty candidate offline; leaf253 now joins one
 fresh immutable backend identity through selection, queue and player BODY.
 Leaf254 now prepares [default-off forwarding and candidate integration](PLAYER_CREATION_TRIAL.md).
-Next: repair and validate that pre-registration guard, then prepare a fresh
-specifically admitted nonempty candidate client trial, with conditional
+Leaf259 now fixes and validates that pre-registration guard; a fresh164-input
+retry proposal is sealed and awaits a new specific one-trial grant. Next: run that
+admitted nonempty candidate client trial, with conditional
 component delivery. Native construction, designation,
 rendering and controls are unproved. October7 removes the prepared trial's elapsed
 session cap: the user confirms finished or refocuses the goal. Five minutes after
 spawn remains the minimum control acceptance. The closed prior trial instead hit
 the30s idle deadline after client traffic stopped, with no budget rejection.
+
+October7 #259 under248/164 restores the pinned response to fresh connection
+retries in manual mode and checks the existing ACK namespace before each reply.
+The pinned control record and builder remain; the current request's inline ACK
+range changes normally. Exact duplicates, conflicts/lower order, exhausted
+cursors and uncertain sends retain their controls. [Receipt](../research/evidence/current-connect-ack-retry.json),
+K354/K355. Checks passed79 focused, independent18 scenarios/six raw-byte comparisons,
+a normally reached ACK-exhaustion boundary and workspace1,429/48modules plus five
+PowerShell suites/closed isolated CLI lifecycle. Fresh `run-20261007T1901-player2`
+contains a new original character/107-byte candidate and164 sealed inputs, existing
+hooks/observer/containment and user-confirmed lifetime. Readiness20:06UTC passed;
+no retry game launch or new native send occurred. The previous single grant is
+consumed; a specific next-attempt grant is still required. Native retry handling,
+player construction/control/network/restart acceptance remain open.
 
 October7 #256/#257 under248/164 implement the revised
 [user-confirmed lifetime](PLAYER_CREATION_TRIAL.md). Client/controller/services
@@ -52,8 +67,8 @@ Cleanup18:43:47 and independent18:45:44 readback verified all owned resources go
 original hosts, retained Root1 and unchanged installed binaries/Valid signatures.
 Steam app/build remained pinned; changed metadata was preserved, cause unknown.
 The one-trial grant is consumed. Pinned responder and controlled reproduction
-support answering repeated connection requests; validate the precise correction
-before proposing a new fresh run. Historical0655 remains the furthest actual
+support answering repeated connection requests; the later259 fix/preparation
+above closes that offline correction. Historical0655 remains the furthest actual
 context/player-path behavior; rendering/control/network/restart gates stay open.
 
 October6 #255 under247/164: [selected owned configurations](CHARACTER_IDENTITY_OVERRIDE.md)

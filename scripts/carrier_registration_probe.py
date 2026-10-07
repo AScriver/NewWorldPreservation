@@ -682,10 +682,8 @@ class RegistrationAdapter:
         if non_ack:
             state.last_inbound_nonack = sequence
         if connect_request:
-            if self._user_stop_lifetime and state.connect_ack_sent:
-                self._terminal(peer, state, "connect_ack_cursor_reuse")
             outbound_sequence = self._out_envelope(state, sequence)
-            self._check_cursors(peer, state, outbound_sequence)
+            self._check_cursors(peer, state, outbound_sequence, ack=True)
             facade = _ConnectAckFacade(
                 peer, sequence,
                 outgoing_envelope_seq=outbound_sequence if state.autonomous_started else None)

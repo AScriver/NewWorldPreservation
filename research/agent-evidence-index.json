@@ -12,6 +12,17 @@
   },
   "boundaries": [
     {
+      "id": "current-connect-ack-retry",
+      "roadmapTasks": ["M1-07"],
+      "claimIds": ["K354", "K355"],
+      "docs": ["docs/PLAYER_CREATION_TRIAL.md"],
+      "scripts": ["scripts/carrier_registration_probe.py"],
+      "tests": ["tests/test_carrier_registration_probe.py", "tests/carrier_registration_smoke.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-connect-ack-retry.json", "classification": "synthetic", "scope": "Pinned connection retries, replay/exhaustion/send controls and fresh offline private proposal"}],
+      "limit": "Controlled tests and read-only readiness only; fresh native retry/creation handling and all player/control/movement/restart acceptance remain open. Another specific human grant is required."
+    },
+    {
       "id": "private-player-creation-trial-20261007",
       "roadmapTasks": ["M1-07"],
       "claimIds": ["K352", "K353"],
@@ -1882,6 +1893,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-connect-ack-retry.json",
     "research/evidence/private-player-creation-trial-20261007.json",
     "research/evidence/private-trial-lifetime.json",
     "research/evidence/current-player-creation-candidate.json",

@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "classification": "original-controlled-carrier-retry-fix-and-offline-preparation",
+  "status": "passed",
+  "recordedUtc": "2026-10-07T20:07:11.087663+00:00",
+  "workItemId": 164,
+  "actionableIds": [
+    259
+  ],
+  "parentActionableId": 248,
+  "claimIds": [
+    "K354",
+    "K355"
+  ],
+  "input": {
+    "head": "c4d7250a796f9ef1a8a716bbef32613eb7959b32",
+    "exercisedWorkingTree": "Three task-owned Carrier adapter/test files dirty at c4d7250; associated docs/receipt added after validation.",
+    "nativeFailureBaseline": "Historical clean83911ed; the closed receipt is preserved byte-exact."
+  },
+  "sourceInputs": [
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "sha256": "7d943eaffb29e9989217909faa50ccb1a83a3306bb1787fc96560ddd5ae2d816"
+    },
+    {
+      "path": "tests/test_carrier_registration_probe.py",
+      "sha256": "83df765b6694842dabb84794e88b8eb5eb13833402d805ce4bb262335541c4c7"
+    },
+    {
+      "path": "tests/carrier_registration_smoke.py",
+      "sha256": "41dde52586bd5a043878835e2cb5bb2cc7d86f9e7438f13741339670dad799b7"
+    }
+  ],
+  "pinnedReference": {
+    "head": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "workingTree": "clean",
+    "source": {
+      "path": "research/upstream/first-light/server/rep_responder.py",
+      "sha256": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73"
+    },
+    "anchors": [
+      "PeerSession connection-request dispatch465-473",
+      "send_connect_ack1069-1141"
+    ],
+    "finding": "Pinned responder answers each connection request using its fixed control record and the current request ACK range."
+  },
+  "change": {
+    "removed": "Manual-mode blanket refusal of a second fresh connection request.",
+    "added": "Existing ACK-namespace admission on every fresh connection reply.",
+    "preserved": [
+      "Pinned ConnectACK builder and its fixed control/inline-ACK record cursors",
+      "Current per-request ACK range and unique outgoing envelope allocation",
+      "Exact duplicate cache, conflicting/lower sequence guards and partial-send terminal latch",
+      "Candidate/body/timing, existing hooks, observer and user-confirmed lifetime"
+    ]
+  },
+  "validation": {
+    "focused": {
+      "fakePeerCases": 71,
+      "explicitPinnedCodecSmokeCases": 8,
+      "totalPassed": 79
+    },
+    "independent": {
+      "basis": "Executed tester outputs and primary adjudication before this recording; no new execution is implied by the recording timestamp.",
+      "syntheticCases": 18,
+      "timedCases": 9,
+      "manualCases": 9,
+      "matchedRawResponseComparisons": 6,
+      "covered": [
+        "Fresh same/changed requests before registration",
+        "Exact duplicate versus conflicting/lower sequence",
+        "Fresh requests after registration and autonomous heartbeat",
+        "First/second partial reply and refusal of later registration"
+      ],
+      "harness": {
+        "path": ".scratch/connect-ack-repro-20261007/repro.py",
+        "sha256": "14ffa55955c4e6ca92305ce54f68773b486baa5d7d89d1a6a4805404f53735db"
+      },
+      "reachableNamespace": {
+        "normalInboundEnvelopes": 65535,
+        "cursorAssignment": false,
+        "sourceTransform": false,
+        "before": {
+          "ackSequence": 65536,
+          "nextOutgoingEnvelope": 65535,
+          "sent": 65535
+        },
+        "cachedDuplicate": "Byte-exact resend admitted; no cursor advancement.",
+        "freshConnect": "outgoing_ack_namespace_exhausted before any additional send",
+        "harness": {
+          "path": ".scratch/connect-ack-repro-20261007/namespace_actual.py",
+          "sha256": "bb2e30ff4ef0b06cba259c7feefb54741f5906e66732d66098bcc34979e869f8"
+        }
+      }
+    },
+    "workspace": {
+      "receipt": {
+        "path": ".scratch/offline-validation/run-e_j_hy6h/receipt.json",
+        "sha256": "4b5c098bd298f314899f3fe0f11ab4eadcb51b65a7eef9da3accbcc79440efd7"
+      },
+      "finishedAtUtc": "2026-10-07T19:06:44.107639+00:00",
+      "python": {
+        "selectedFiles": 48,
+        "collected": 1429,
+        "executed": 1429,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershellSuites": 5,
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 53756
+      },
+      "changedInputs": []
+    },
+    "preparedPowerShell": "All five fresh dispatch/controller/launch/stop/readiness scripts passed parser and automatic-variable validation; native launch/controller wrappers were not executed."
+  },
+  "counterevidence": [
+    "The first native attempt terminated before registration/creation; this fix does not retrospectively prove candidate acceptance.",
+    "Adversarial removal of the blanket guard alone admitted a fresh connect at an exhausted ACK cursor; this led to ack=True admission in the final fix.",
+    "Whole replies for different incoming envelopes are not byte-identical: the current inline ACK range changes. Corresponding timed/manual replies are byte-identical in six controlled comparisons.",
+    "Two initial smoke failures came from a synthetic changed request ending with system ID6 instead of1; correcting the fixture passed the pinned-codec cases.",
+    "Offline preparation initially refused additional changed shared bindings. The consumed-grant AGENTS annotation and changed smoke are reviewed nonruntime inputs; Carrier is the only changed shared runtime input."
+  ],
+  "prepared": {
+    "schema": 1,
+    "mode": "fresh-offline-original-retry-preparation",
+    "preparedAtUtc": "2026-10-07T20:04:40.740863+00:00",
+    "runDirectory": "private/frida-trials/run-20261007T1901-player2",
+    "workspaceHead": "c4d7250a796f9ef1a8a716bbef32613eb7959b32",
+    "characterSha256": "f6c970292341c36c98966d11011f12b0d0cb8fe0c632b188ff7bee3ce56c489f",
+    "candidateSha256": "2afbba59ac2bf35742ce4664c0fcd623c9e54fec78ae83e18ef35305c39aa28a",
+    "candidateBytes": 107,
+    "manifestSha256": "63fa58d9487347b3d590361a296a4db930d7bfe5f9a167b4eff9297422c7fbe4",
+    "uniqueBindings": 164,
+    "observerSites": 3,
+    "allIdentityDomainsNew": true,
+    "clientSeconds": null,
+    "serviceSeconds": null,
+    "userStopLifetime": true,
+    "changedSharedInputs": [
+      "AGENTS.md",
+      "scripts/carrier_registration_probe.py",
+      "tests/carrier_registration_smoke.py"
+    ],
+    "grantPending": true,
+    "clientStarted": false,
+    "controllerExecuted": false,
+    "systemMutated": false,
+    "limits": [
+      "Offline canonical composition and disk admission only.",
+      "Native repeated-connect acceptance and creation remain unobserved.",
+      "Requires a new specific human grant; preserve the closed single-grant run."
+    ]
+  },
+  "readiness": {
+    "timestampUtc": "2026-10-07T20:06:10.5872138+00:00",
+    "checkedUniqueBindings": 164,
+    "installedHashesAndSignatures": "match/Valid",
+    "copyMapTypeIndex": "match",
+    "gameListenersRulesAbsent": true,
+    "hostsSha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "retainedRoot": {
+      "store_mutated": false,
+      "currently_valid": true,
+      "store": "CurrentUser/Root",
+      "retained_count": 1,
+      "expires_utc": "2026-10-09T18:58:22.0000000Z"
+    },
+    "systemMutated": false,
+    "scope": "Read-only OS/file readiness; no native retry or cleanup of newly acquired trial resources."
+  },
+  "privateMetadata": [
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/identity-preparation.json",
+      "sha256": "95f7c656c1dad37d2e1bc015b55489859644728230eeb57a4b1ea0c8d3ba40e7"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/private-preparation.json",
+      "sha256": "194e2c491f0c2ae55afcb2b75a0818c89e025904c96bb20f65238998e48b3cba"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/current-trial-readiness.json",
+      "sha256": "1c13a95b597ac913085990c7a58089d8f32e000e21d78cbd5cd9b198a8e9f877"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/prepare_identity.py",
+      "sha256": "b9cdc2df14c4b0ddba316bdcfe9748423efe2a219977bc98fe2dc69abfbc5101"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/prepare_retry.py",
+      "sha256": "a3349e866dc66d27b083bd95f781635f877caa40e6dff2cba9efa7ce0bbeeeea"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Prepare-Retry.ps1",
+      "sha256": "16314111bb15344358c90ff395f0ca2ab0b0c732fe4e5b5dc7bc6c3561937b1e"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Run-PreparedFrida.ps1",
+      "sha256": "b69a1ed722c0ef59aed4174c34040a7a140521897c05c247b837489b66442255"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Run-PreparedController.ps1",
+      "sha256": "743a9fdcc67a0debcdf800413e35ddd36ce76cbea89deb2b137691461febbd7f"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Launch-ApprovedCreationTrial.ps1",
+      "sha256": "7068fb31a5c5389a33232f57b010d396eec9c4102f9f440f5cb9c7cd49251757"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Stop-PreparedTrial.ps1",
+      "sha256": "c8b97c56f2ec584715660704557fd99fe685cff7f36b053ba81ecc59e11a0fb3"
+    },
+    {
+      "path": ".scratch/player-creation-retry-20261007T1901/Read-TrialReadiness.ps1",
+      "sha256": "116e34d56ba00db5b18c272b566ea02ca1afb6018b85f612d1c673e9aa8d08ea"
+    }
+  ],
+  "historicalNativeReceipt": {
+    "path": "research/evidence/private-player-creation-trial-20261007.json",
+    "sha256": "c997c140fe3f4bad512ff34addbf82c4deb724d93aa6779e52eead412702ac46"
+  },
+  "limits": [
+    "No game launch, new hooks, OS containment mutation or new native send in this fix/preparation unit.",
+    "Fresh native repeated-connect handling and the107-byte creation candidate remain unobserved.",
+    "Requires a new specific human grant; the previous one-trial grant is consumed.",
+    "Rendering, local designation, controls, networked movement and restart repetition remain open."
+  ]
+}

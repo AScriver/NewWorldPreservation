@@ -1,4 +1,4 @@
-# Fresh player creation trial — first attempt closed before creation
+# Fresh player creation trial — retry prepared, pending grant
 
 This opt-in preparation removes the omitted entity-creation payload after the
 last private client's context initialization. WorkItem164, leaf254 and lifetime
@@ -118,7 +118,9 @@ The user reported that the game seemed to crash on Play; the logs record the
 controller's stop after transport failure, without a native crash diagnosis.
 
 Repair and validate this pre-registration guard against the pinned responder
-before preparing another attempt. Preserve the closed run and its fresh record;
+before preparing another attempt. That correction is now validated offline in
+[the retry receipt](../research/evidence/current-connect-ack-retry.json).
+Preserve the closed run and its fresh record;
 a subsequent client/backend trial needs a new run, fresh character and specific
 grant. Offline code, fixtures and preparation confer no native permission.
 
@@ -131,6 +133,17 @@ transaction. Once admitted and the private preview appears, the user clicks
 **Play** for `Preservation`, then reports a rendered player/local camera and
 normal move/turn/stop, or the exact failure. Client launch remains unperformed
 until that specific grant and involvement are available.
+
+The fresh retry proposal is `run-20261007T1901-player2`: a new immutable character
+and original107-byte candidate, with164 sealed unique inputs and manual lifetime.
+Its candidate SHA is `2afbba59ac2bf35742ce4664c0fcd623c9e54fec78ae83e18ef35305c39aa28a`;
+the manifest SHA is `63fa58d9487347b3d590361a296a4db930d7bfe5f9a167b4eff9297422c7fbe4`.
+The fixed adapter answers fresh connection retries through the same pinned
+builder while checking the existing ACK namespace. The fixed control record
+stays unchanged; each fresh response carries its current inbound ACK range.
+Exact cached duplicates retain their original bytes. No new messages, hooks or
+observer sites are selected. Grant/launch/stop wrappers under ignored
+`.scratch/player-creation-retry-20261007T1901` validate; no grant or attempt exists.
 
 ## Verification and current readiness
 
@@ -157,3 +170,13 @@ Controller cleanup18:43:47 and independent readback18:45:44 verified exact owner
 game/listeners/rules absent, byte-exact hosts, Root1 and intact installed images.
 Steam metadata differed while app/build stayed fixed; it was preserved and its
 change cause is unknown. No control, movement or restart acceptance was observed.
+
+Retry correction checks passed79 focused cases (71 fake-peer and8 explicit pinned
+codec smokes), independent18 timed/manual scenarios with6 corresponding raw-byte
+comparisons, and a normally reached65,536 ACK cursor boundary. A cached duplicate
+still resends; a fresh connection response fails before send at exhaustion.
+Required workspace1,429 Python cases/48modules, five PowerShell suites and the
+closed isolated CLI lifecycle passed against the final code. Readiness20:06UTC
+verified all164 bindings, original hosts, Root1, intact installed signatures and
+absent game/listeners/rules. This is offline/read-only evidence; native retry and
+creation acceptance remain pending the new specific grant.

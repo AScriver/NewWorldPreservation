@@ -299,12 +299,109 @@ def test_manual_app_send_paths_reject_unsafe_fresh_cursors_before_send(send_path
         else:
             frame.records = [Record(system_id=8, payload=b"other-system")]
             incoming = b"\x02other"
-    if send_path != "connect":
-        state.next_out_envelope_seq = 65536
+    state.next_out_envelope_seq = 65536
     before = len(peer.sent)
     with pytest.raises(TerminalProtocolError):
         adapter.on_app(peer, incoming)
     assert len(peer.sent) == before
+
+
+def test_manual_fresh_connect_retry_and_duplicate_preserve_distinct_cursors():
+    adapter, events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-connect-retry")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01first-connect")
+    adapter.on_app(peer, b"\x02changed-connect-body")
+    state = adapter.peers[peer.id]
+    assert peer.sent == [b"connect-ack", b"connect-ack"]
+    assert (state.acked_through, state.ack_sequence, state.next_out_envelope_seq,
+            state.outgoing_sequences) == (2, 2, 3, {1, 2})
+    assert len([row for row in events.rows if row["event"] == "CONNECT_ACK_SENT"]) == 2
+
+    before = (len(peer.sent), state.acked_through, state.ack_sequence,
+              state.next_out_envelope_seq, set(state.outgoing_sequences))
+    adapter.on_app(peer, b"\x02changed-connect-body")
+    assert peer.sent[-1] == b"connect-ack"
+    assert (len(peer.sent), state.acked_through, state.ack_sequence,
+            state.next_out_envelope_seq, state.outgoing_sequences) == (
+                before[0] + 1, *before[1:])
+    assert events.rows[-1]["locally_generated_replies_resent"] == 1
+    with pytest.raises(TerminalProtocolError, match="inbound_sequence_content_conflict"):
+        adapter.on_app(peer, b"\x02same-envelope-different-body")
+    assert len(peer.sent) == before[0] + 1
+
+
+def test_manual_fresh_connect_after_autonomous_send_keeps_outbound_allocation():
+    adapter, events, frame, _ = setup_adapter(
+        heartbeat_15d=True, user_stop_lifetime=True, clock=lambda: 0.0)
+    peer = Peer("manual-autonomous-retry")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01first-connect")
+    frame.records = [Record(channel=0, flags=0xE0, payload=b"registration")]
+    adapter.on_app(peer, b"\x02registration")
+    adapter.on_tick(peer, 0.5)
+    state = adapter.peers[peer.id]
+    assert state.autonomous_started and state.next_out_envelope_seq == 4
+    before_ack = state.ack_sequence
+    frame.records = [Record(system_id=1, payload=b"\x02new-request")]
+    adapter.on_app(peer, b"\x05different-connect-length")
+    assert state.next_out_envelope_seq == 5
+    assert state.acked_through == 5 and state.ack_sequence == before_ack
+    assert state.outgoing_sequences == {1, 2, 3, 4}
+    assert events.rows[-1]["event"] == "CONNECT_ACK_SENT"
+    assert events.rows[-1]["outbound_envelope_sequence"] == 4
+    assert len(peer.sent) == 4
+
+
+def test_manual_fresh_connect_checks_ack_namespace_after_real_ack_send():
+    adapter, _events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-ack-exhaustion")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    state = adapter.peers[peer.id]
+    state.ack_sequence = 65535
+    frame.records = [Record(system_id=8, payload=b"other")]
+    adapter.on_app(peer, b"\x02other")
+    assert state.ack_sequence == 65536 and state.next_out_envelope_seq == 3
+    sent = len(peer.sent)
+    frame.records = [Record(system_id=1, payload=b"\x02")]
+    with pytest.raises(TerminalProtocolError, match="outgoing_ack_namespace_exhausted"):
+        adapter.on_app(peer, b"\x03fresh-connect")
+    assert len(peer.sent) == sent
+
+
+def test_manual_fresh_connect_rejects_exhausted_envelope_after_success():
+    adapter, _events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-envelope-exhaustion")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    state = adapter.peers[peer.id]
+    state.autonomous_started = True
+    state.next_out_envelope_seq = 65535
+    adapter.on_app(peer, b"\x02fresh-connect")
+    assert state.next_out_envelope_seq == 65536
+    sent = len(peer.sent)
+    with pytest.raises(TerminalProtocolError, match="outgoing_envelope_namespace_exhausted"):
+        adapter.on_app(peer, b"\x03fresh-again")
+    assert len(peer.sent) == sent
+
+
+def test_manual_partial_second_connect_latches_terminal_failure():
+    adapter, _events, frame, _ = setup_adapter(user_stop_lifetime=True)
+    peer = Peer("manual-connect-partial")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01first")
+    state = adapter.peers[peer.id]
+    prior = (state.acked_through, state.ack_sequence, state.next_out_envelope_seq)
+    peer.partial = True
+    with pytest.raises(TerminalProtocolError, match="connect_ack_send_failed"):
+        adapter.on_app(peer, b"\x02second")
+    assert (state.acked_through, state.ack_sequence,
+            state.next_out_envelope_seq) == prior
+    peer.partial = False
+    with pytest.raises(TerminalProtocolError, match="connect_ack_send_failed"):
+        adapter.on_app(peer, b"\x03third")
+    assert len(peer.sent) == 2
 
 
 def test_manual_fixed_actor_send_checks_shared_reliable_cursor():

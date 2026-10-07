@@ -1,5 +1,30 @@
 # Agent handoff
 
+## #259 connection retry correction — October7
+
+- Removed manual mode's blanket second-connect refusal and applied the existing
+  ACK-namespace guard before every fresh response. Pinned FirstLight63756a3 stays
+  clean; fixed control record/builder and current inbound ACK ranges remain.
+  Exact cached duplicates, conflict/lower order, namespace and partial-send
+  terminal controls stay in force. Native retry acceptance remains unobserved.
+- [Original correction receipt](../research/evidence/current-connect-ack-retry.json)
+  pins the three exercised dirty code/test files at c4d7250 and controlled checks:
+  79 focused, independent18 scenarios/six timed-manual byte comparisons, real
+  fake-peer namespace reachability, workspace1,429/48modules, five PowerShell
+  suites and closed isolated CLI lifecycle. The earlier native failure remains
+  historical evidence; no game or full controller ran in this correction unit.
+- Fresh `run-20261007T1901-player2` is sealed with164 unique inputs, a newly
+  generated immutable character and original107-byte candidate. Manifest
+  SHA63fa58d9..., candidate SHA2afbba59..., manual lifetime, unchanged selected
+  actor/world sequence and three-site/seven-boolean observer. Five fresh wrappers
+  under `.scratch/player-creation-retry-20261007T1901` validate. Native grant is
+  pending; do not reuse the consumed first-attempt grant or its closed run.
+- Readiness20:06UTC: all bindings match, original hosts/Root1, installed hashes/
+  Valid signatures and pinned copy/map/typeIndex intact, no game/443/64003/trial
+  rules. This is readiness, not new native cleanup. Next: obtain the concrete
+  one-trial grant, recheck affected readiness, launch with UAC and ask the user
+  to click Play/report actual player behavior. Full goal/parent acceptance open.
+
 ## #258 selected creation trial — October7, closed before creation
 
 - Human answer “Approve this one trial” admitted the exact prepared107-byte
@@ -17,9 +42,8 @@
 - [Original live receipt](../research/evidence/private-player-creation-trial-20261007.json)
   seals39 runtime inputs and11 private receipts. Actual native candidate/control/
   movement/restart acceptance remains untested. Furthest prior behavior is0655.
-- Next concrete fix: test pinned repeated-connect response semantics against this
-  new guard, preserve replay/order/exhaustion/send controls, then prepare a fresh
-  record/run and obtain a specific next-attempt grant. No new wire formats/hooks.
+- The later259 unit above repairs this guard offline and prepares a fresh run;
+  specific next-attempt admission and actual native acceptance remain open.
 
 ## #256/#257 user-confirmed trial lifetime — October7
 

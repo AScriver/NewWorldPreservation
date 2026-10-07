@@ -3,6 +3,8 @@ import os
 from pathlib import Path
 import sys
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import carrier_registration_probe as adapter_module
 
@@ -79,6 +81,76 @@ def test_pinned_code_synthetic_connect_ack_round_trip():
     assert outbound_env.sequence == 7 and parsed.error is None
     assert [record.system_msg_id for record in parsed.messages] == [2, 6]
     assert "CONNECT_ACK_SENT" in [row["event"] for row in events.rows]
+
+
+def test_pinned_code_fresh_connect_retry_then_registration():
+    if os.environ.get("CARRIER_REGISTRATION_SMOKE") != "1":
+        raise RuntimeError("set CARRIER_REGISTRATION_SMOKE=1 for explicit pinned smoke")
+    from dtls_transport_probe import TerminalProtocolError
+
+    frame, request_codec, response_codec, wire, rep, dispatch = adapter_module.load_codecs(
+        adapter_module.REFERENCE)
+    events, peer = Events(), Peer()
+    adapter = adapter_module.RegistrationAdapter(
+        events, (frame, request_codec, response_codec, wire, rep, dispatch),
+        user_stop_lifetime=True)
+
+    def send(sequence, records):
+        adapter.on_app(peer, b"\x80\x01" + sequence.to_bytes(2, "big") +
+                       frame.marshal_datagram(records))
+
+    def connect(payload):
+        return frame.MessageRecord(channel=3, payload=payload, sequence=0,
+                                   reliable_sequence=0, reliable=True,
+                                   flags_override=0x21)
+
+    first = connect(b"\x00\x00\x00\x05\x01")
+    changed = connect(b"\x00\x00\x00\x06\x99\x01")
+    send(2, [first])
+    send(3, [changed])
+    assert len(peer.sent) == 2
+    for inbound, datagram in ((2, peer.sent[0]), (3, peer.sent[1])):
+        envelope, body = frame.parse_envelope(datagram)
+        parsed = frame.parse_datagram(body)
+        assert envelope.sequence == inbound and parsed.error is None
+        assert [record.system_msg_id for record in parsed.messages] == [2, 6]
+        control, ack = parsed.messages
+        assert (control.channel, control.flags, control.sequence,
+                control.reliable_sequence, control.payload) == (
+                    3, 0x21, 0, 0, b"\x00\x00\x00\x05\x02")
+        assert (ack.channel, ack.flags, ack.sequence, ack.reliable_sequence) == (
+            3, 0x18, 1, 0)
+        assert (int.from_bytes(ack.payload[1:3], "big"),
+                int.from_bytes(ack.payload[3:5], "big")) == (inbound, inbound)
+    state = adapter.peers[peer.id]
+    assert (state.ack_sequence, state.acked_through, state.next_out_envelope_seq,
+            state.outgoing_sequences) == (2, 3, 4, {2, 3})
+
+    retry_bytes = b"\x80\x01\x00\x03" + frame.marshal_datagram([changed])
+    adapter.on_app(peer, retry_bytes)
+    assert peer.sent[-1] == peer.sent[1]
+    assert (state.ack_sequence, state.acked_through,
+            state.next_out_envelope_seq) == (2, 3, 4)
+
+    registration_body = bytes(32) + b"".join(
+        type_id.to_bytes(4, "big") + b"\x01x" for type_id in range(6))
+    registration = frame.MessageRecord(
+        channel=0, payload=wire.encode_vlq32(len(registration_body)) + registration_body,
+        sequence=0, reliable_sequence=0, reliable=True, flags_override=0x21)
+    send(4, [registration])
+    assert state.v3_sent and state.ack_sequence == 3 and state.acked_through == 4
+    response_envelope, response_body = frame.parse_envelope(peer.sent[-1])
+    response = frame.parse_datagram(response_body)
+    assert response_envelope.sequence == 4 and response.error is None
+    assert (response.messages[0].channel, response.messages[0].sequence,
+            response.messages[0].reliable_sequence) == (0, 0, 0)
+    assert (response.messages[1].sequence,
+            int.from_bytes(response.messages[1].payload[1:3], "big")) == (2, 4)
+    assert [row["event"] for row in events.rows].count("CONNECT_ACK_SENT") == 2
+    assert "V3_RESPONSE_SENT" in [row["event"] for row in events.rows]
+
+    with pytest.raises(TerminalProtocolError, match="inbound_sequence_content_conflict"):
+        send(3, [first])
 
 
 def test_pinned_lz4_full_body_synthetic_round_trip():
