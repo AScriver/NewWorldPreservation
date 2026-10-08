@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "partial",
+  "workItemId": 164,
+  "actionableId": 267,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T03:52:42.711357+00:00",
+  "claimIds": [
+    "K377",
+    "K378"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "3259724c229f2501f474d66cf5a498d134407565",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "queryState": "main3259724 clean at both queries; sourceStable true; no automatic analysis; timeout30 each",
+    "investigatorContext": "inherits earlier downstream map; not independent first pass"
+  },
+  "sources": {
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-bytepath.json": "a33434deca99e0572e178357aef2a86e418cb141fc3930d8c5c18cf7581751bc",
+    "research/evidence/current-registration-bit-send.json": "4bd9650c613a07a8a918c493032dca8d077700c38aac78a3e898d061f0d7cc7a",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+    ".scratch/registration267-receive-source-20261008T0332Z/read_driver_table.py": "e8aefe14f0243d112a069f7165ca5e0f8a884c9688bec588de3f69ebc6c531ab",
+    ".scratch/registration267-receive-source-20261008T0332Z/REPORT.md": "f4565ff09ffb93721a9360dfe94f507646b4173f15a564bcb89519f799eedfa5",
+    ".scratch/registration267-receive-source-20261008T0332Z/run-slice.ps1": "2a80d37934d242c8336109937debb4095e051c56bcf178f86963455086c7cbf5",
+    ".scratch/registration267-receive-source-20261008T0332Z/run-slice2.ps1": "4ff8ad679f4ae8b10a46bc2396242e6fadb81571ef3a0732917e6765beb86479",
+    ".scratch/registration267-receive-source-20261008T0332Z/run-table.ps1": "207e7d2488015eafb96924a65a7b84598e4556e6f8cf0320cdcd1309b9197a9c",
+    ".scratch/registration267-receive-source-20261008T0332Z/task-brief.md": "e55cd4cc507b0b6fb6d5592e3848da3f8aa91c89ca44742fa15954b715171525",
+    ".scratch/registration267-receive-source-20261008T0332Z/output/function-14056cee0.c": "6a6fd4d2d867ec30a362ab0237d65b3680b22f82b659d14374ca1b3c8bfdf8d6",
+    ".scratch/registration267-receive-source-20261008T0332Z/output/function-146b28f70.c": "6ebd44b5f32ae2b348923f89a22518d793e8e5b5322842b25f93e7cb9cf46fc6",
+    ".scratch/registration267-receive-source-20261008T0332Z/output/receipt.json": "b2fba296a08bb65a9da7de01aaf6b6a393a70316634fa1dd3916b9b252fd3620",
+    ".scratch/registration267-receive-source-20261008T0332Z/output2/function-145dbdd30.c": "c10e4998de8be1710ba89c8d44fd1b631fda720949a6a04973bb86e397db8712",
+    ".scratch/registration267-receive-source-20261008T0332Z/output2/function-146b36920.c": "3ebdae607d6f6173661d3dc07a64da1439c847b4e71609f19fc2ff0c4cf91f90",
+    ".scratch/registration267-receive-source-20261008T0332Z/output2/receipt.json": "df00b5787a388057340be8538dddb6911028235589d7151fb74bb7a18eb81e80",
+    ".scratch/registration267-review-20261008T0344Z/report.md": "5130e3cd1e966d85cddfdf8f052382e0713ea2edc0fbcfb6403a41217da23464",
+    ".scratch/registration-210-primary-20261005T2205Z/metadata.json": "af383492f9678aba30e0c266d72f228f410c98b88c5def515e0239fea9e85401",
+    ".scratch/registration263-inbound-map-20261008T0153Z/REPORT.md": "a21074f40ddb0dc37c47eb7f42837f224d326ea37ce66d00e108fb8a638852b0",
+    ".scratch/registration267-primary-20261008T0333Z/Baseline.py": "01470944adb3d78df1526aa6b3cea9e821750afc9130f48b98c6873bce7f2344",
+    ".scratch/registration267-primary-20261008T0333Z/Baseline.ps1": "b013c986dd1c9d050509c2207da9d7223daa04a7c4d294d4c61cc1b48f23d138",
+    ".scratch/registration267-primary-20261008T0333Z/baseline.json": "14960fd9daf8265f98946fcd5b942989bc93a8aa63e16539cb34af5bbff170af",
+    ".scratch/registration267-primary-20261008T0333Z/baseline-counterevidence.md": "02d132013b6fd5f663417c4433086312c85ba3977f8dc56ce2c9979309313aee",
+    ".scratch/registration267-primary-20261008T0333Z/Seal.py": "a49cbe66f246631fe4dcf65a32c9cf19b7327b081d4d2b3cd3cd3217f0eca6be",
+    ".scratch/registration267-primary-20261008T0333Z/Seal.ps1": "c1789b28c32a295846cfea3461a80186137df43f1f7624bcbe9af56d5ebe8d25",
+    ".scratch/registration267-primary-20261008T0333Z/seal.json": "3437bce895d5d76aa4f51a697761321064d8de4009f16a14e1e60d00fc194471",
+    ".scratch/registration267-primary-20261008T0333Z/ledger.md": "4ba2981d41304a48247f455b20f7976b4c934c6c0572c7a9eca53ae747bc3cc1",
+    ".scratch/registration267-primary-20261008T0333Z/adjudication.md": "47df4de39819d6c77acc03836f3d3a46f554896b3d0a6384aedbe9096d425345",
+    ".scratch/registration267-primary-20261008T0333Z/Publish.py": "48fa09f73f4502bd63b85d7299a311db0be551453f3395138674d5c7284373fa",
+    ".scratch/registration267-primary-20261008T0333Z/Publish.ps1": "a4e0255fd099a8ed34a57fba0113e1bd2f426032398e50f48459a7e2e5f2e765",
+    ".scratch/registration267-primary-20261008T0333Z/fn-14056cee0.txt": "d5c876eea390f89ea570e6d6f6cc049179433982dbdbcc9432175da097689ac7",
+    ".scratch/registration267-primary-20261008T0333Z/fn-145dbdd30.txt": "cdc36c6bf90cb1a6bcabd97899ddf3032a80f2e04f8515d08fd5f5844ff81301",
+    ".scratch/registration267-primary-20261008T0333Z/fn-146b28f70.txt": "3873d5fbd2b3b0e14a66f8c850e50a740341df7a3282fbd56d2cfac99b4036cb",
+    ".scratch/registration267-primary-20261008T0333Z/fn-146b36920.txt": "c67a53797325f133b0b7025efed31f2c0b694bb70f60b6166a1f365ad5bf8364",
+    ".scratch/registration267-primary-20261008T0333Z/reused-146b6ba90.txt": "32d4ab225e9de2d31742dc2809c2b0ebe6dd3f18e87199e9ac185d93f3e5fb01",
+    ".scratch/registration267-primary-20261008T0333Z/reused-146b713e0.txt": "25b730efe68e85ade408108fd2f045f83ec4fee71d810f620ee1481e02947ce7",
+    ".scratch/registration267-primary-20261008T0333Z/reused-146b714d0.txt": "e0fa43f8782ce3a54849bd48caad51f12e9000a704f6fc8b2de2a7cddb91a714"
+  },
+  "bounds": {
+    "queryRoots": 4,
+    "previouslySealedSetterQueriedAgain": "0x146b28f70",
+    "nativeBytes": 3202,
+    "tableWindows": 1,
+    "tableBytes": 192,
+    "combinedNewQueryBytes": 3394,
+    "maxRoots": 4,
+    "maxWindows": 4,
+    "maxBytes": 1048576,
+    "reusedNativeSpans": 3,
+    "tools": "Ghidra12.1.4/PyGhidra3.1.0/Python3.11.9/Capstone5.0.7"
+  },
+  "nativeBindings": [
+    {
+      "entry": "0x146b28f70",
+      "start": "0x146b28f70",
+      "endExclusive": "0x146b28fc7",
+      "bytes": 87,
+      "sha256": "25c9dcbfe0717db6801f95593966d499fa438a0f354d6460ab6e7c83c269b9d0"
+    },
+    {
+      "entry": "0x14056cee0",
+      "start": "0x14056cee0",
+      "endExclusive": "0x14056d05e",
+      "bytes": 382,
+      "sha256": "4cf7a469815c1dffec8efa92b5ace245c5bb43090012872d9a584bdb1630bc46"
+    },
+    {
+      "entry": "0x146b36920",
+      "start": "0x146b36920",
+      "endExclusive": "0x146b37017",
+      "bytes": 1783,
+      "sha256": "500baffc8bc7c31b05876e73300e1faef119686a54481c4fad7959de80409766"
+    },
+    {
+      "entry": "0x145dbdd30",
+      "start": "0x145dbdd30",
+      "endExclusive": "0x145dbe0e6",
+      "bytes": 950,
+      "sha256": "36110dbf2e4e53023f868b49396c9b0be7a620b9bde6a404dd1eff5d3d4f671b"
+    }
+  ],
+  "reusedNativeBindings": [
+    {
+      "start": "0x146b713e0",
+      "endExclusive": "0x146b7145a",
+      "bytes": 122,
+      "sha256": "319bb756c085c03b97ae56ce6d98c51b906d6958a4731dbb83de40b116a8eae1"
+    },
+    {
+      "start": "0x146b714d0",
+      "endExclusive": "0x146b7151e",
+      "bytes": 78,
+      "sha256": "a471c368d6745f2a8d84c6260f6de6051c41b31e5006fa3242f90ccd7e4c9aae"
+    },
+    {
+      "start": "0x146b6ba90",
+      "endExclusive": "0x146b6bbfd",
+      "bytes": 365,
+      "sha256": "5b81ebb03792909648b37dd63bd975a46ac36115733f4a1ce34488d732795b47"
+    }
+  ],
+  "reusedPrimaryTable": {
+    "address": "0x14858c358",
+    "bytes": 192,
+    "sha256": "0d495081f07e3c77b49b6e64e1121e49892f54aa532638ee2afd471e0c626fb1"
+  },
+  "driverTable": {
+    "address": "0x148480a20",
+    "bytes": 192,
+    "sha256": "1a75e636c8c587eeab9e1cac335b191022bf35497a2d66e8773d7a79a5d4bbfc",
+    "slot48": "0x140f684a0",
+    "slot28": "0x145dcd610"
+  },
+  "callbackStorage": {
+    "caller": "0x146b713e0 selected primary+8 AL nonzero; closure148591708/captured child; virtual+48 at146b7143a",
+    "selectedTable": "0x14858c358+0x48 -> 0x146b28f70",
+    "destination": "this+0x278; active-pointer slot destination+0x38=this+0x2b0",
+    "helper": "0x14056cee0 normal branches call opaque copy/move/cleanup virtual slots and replace active pointer",
+    "return": "destination address, not success status",
+    "flag": "setter writes byte+0x130=1 after helper return without active-pointer/result check; callable may be null",
+    "inputCleanup": "conditionally virtual+0x20 then clear incoming active+0x38",
+    "limit": "virtual implementation/allocation/exception/lifetime/runtime installation and later byte invocation unknown"
+  },
+  "callbackArguments": {
+    "site": "0x146b714d0",
+    "incoming": "RCX capture; RDX stream/view argument; R8 separate opaque two-qword pair",
+    "pair": "both words moved to local pair and source words cleared",
+    "view": "original RDX passed through140870bc0",
+    "next": "146b6ba90 gets RCX=&capture.child, RDX=helper result, R8=localpair; dereferences child and addresses member+0xf0",
+    "parser": "140879580 result saved;1402f2d90 result inRDX and saved result inR8 submitted to146af20c0 ->146af1d90 ->compact record reader",
+    "limit": "caller-result flow only; pair meaning, copy/accessor internals and exact byte transparency/header removal unknown"
+  },
+  "lowerDriver": {
+    "guard": "146b36920 owner+0x48==0; selected ctor branch dwordowner+0x7c==1; allocation/normal-return conditions",
+    "store": "145dbdd30 constructed driver stored owner+0x50; later factory result stored+0x48; no proved+0x50-null guard",
+    "table": "148480a20+0x48(decimal72)->140f684a0; +0x28(decimal40)->145dcd610",
+    "limit": "separate object/table; targets unclassified and no relation to primary callback/receive proved"
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Partial",
+    "primaryNativeAndTableSeal": "Passed",
+    "criticalReview": "K377/K378 conditional storage and argument-flow survived; offsets/semantics corrected",
+    "workspaceScope": "original code/adapter/fixtures unchanged; current1890/50/fivePS/closed loopback reconciliation and affected36/actual preflight closure separately recorded in ROADMAP"
+  },
+  "counterEvidence": [
+    "Initial baseline used copied65-char receipt digest; failed guard retained, corrected against currentdisk and264 source binding; no evidence changed.",
+    "Provisional driver+48 target confused decimal40 withhex48; raw table+48 is140f684a0,145dcd610 is+28.",
+    "Investigator driver-slot-empty wording corrected: guard+48 differs from actualdriverstorage+50 and branch requiresdword+7c==1.",
+    "Helper destination return/unchecked flag do not prove successful active callable; capture-slot pointer/pair/parser-member semantics kept exact.",
+    "Same2b0 offsets in cached226 dispatcher layouts do not establish same-primary callback identity; no join inferred."
+  ],
+  "limits": [
+    "Saved same-primary+2b0 invocation and actual RDX/R8 lower producer remain unjoined.",
+    "Opaque copy/accessor/virtual effects, current network-to-view/Carrier framing/runtime binding/reply values/auth/native acceptance/M1 unknown.",
+    "No original codec/adapter/candidate/trial change from this source checkpoint; consumed native grant not renewed."
+  ],
+  "nextEvidence": "Find a demonstrated same-primary active+2b0 invoker and its RDX/R8 origin; unclassified otherdriver+48 is not a proved receive edge.",
+  "cleanup": {
+    "staticChildrenExited": true,
+    "reviewResourcesAcquired": false,
+    "runtimeResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}

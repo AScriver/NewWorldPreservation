@@ -1,5 +1,19 @@
 # Bounded task briefs
 
+## #267 — concrete receive callback and byte handoff (M, partial)
+
+- Continue164/178 from clean3259724. Primary owns original contract/ledger/
+  roadmap/handoff/catalog/receipt. Investigator owns ignored267 source/ghidra
+  dirs, inherits prior downstream map; review owns ignored267 review only.
+  No tracked/source/runtime edits by delegates, no client/hooks/captures/network.
+- Four query roots3202 bytes and one192-byte table; one setter repeats prior
+  sealed source. Native/image/map/artifact seal and critical ABI/offset review
+  retain storage/result/flag/capture-slot/pair/helper/constructor qualifications.
+- Original current codecs/adapter unchanged. Affected36 checks/actual preflight
+  plus exact selected input-set reconciliation reuse1890/50/fivePS/closed owned
+  loopback only for unchanged support. Scoped checkpoint commit/readback/release;
+  saved primary+2b0 invocation/network-to-view byte path remains open.
+
 ## #266 — explicit current registration adapter (M)
 
 - Continue164/178 from clean2effa03. Primary owns adapter/test, original

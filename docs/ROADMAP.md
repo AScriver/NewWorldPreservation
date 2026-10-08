@@ -2,6 +2,21 @@
 
 ## Server protocol focus — October 7
 
+Newest #267 [receive checkpoint](REGISTRATION_TRANSPORT_RECEIVE.md) pins selected
+primary+48 callback storage and separate stream/pair argument flow (K377/K378).
+Flag+130/helper return do not prove callable availability; RCX addresses the
+captured-child slot, and child+f0 is an existing member address. The separate
+driver guard+48 differs from storage+50; its+48 target remains unclassified.
+Four query roots3202 bytes plus192 table are sealed and critically reviewed;
+one setter repeats older source. Original codecs/adapter unchanged. Affected36
+catalog/runner checks and actual preflight pass; seven public/34 private bindings
+match. Exact input-set reconciliation reuses1890/50/fivePS/closed-loopback support
+with only source metadata changes and one added receipt; closure is retained at
+.scratch/registration267-primary-20261008T0333Z/closure.json. Static children
+exited; no runtime resources acquired. The next concrete edge is the selected
+primary+2b0 caller and its RDX/R8 provenance; full Carrier/response/native
+acceptance remain unproved. No new live trial follows.
+
 Current #266 adds an [explicit current-codec adapter profile](REGISTRATION_ADAPTER_CURRENT.md)
 (K375/K376) under164/178. Caller supplies both uint32 selectors and immutable
 response BODY. One raw physical request must pass the original strict decoder,

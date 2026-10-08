@@ -1,5 +1,23 @@
 # Agent handoff
 
+## #267 receive callback checkpoint — October7, partial
+
+- [K377/K378 source contract](REGISTRATION_TRANSPORT_RECEIVE.md) joins selected
+  primary+48 to callable storage this+278/active+2b0 and distinguishes stream
+  RDX from opaque pair R8. Helper-return/flag+130 are not success/availability;
+  RCX=&capture.child is dereferenced before existing parser member+f0 is used.
+- Four query roots3202 bytes/one192-byte table; repeated setter source is
+  identified. Primary native/hash seal and critical review correct driver
+  guard+48 versus storage+50 and decimal72(+48) target140f684a0. No receive
+  relation is inferred from that unclassified slot on a different object.
+- Codec/adapter/native trial unchanged; affected36 checks/actual preflight and
+  all seven public/34 private bindings pass. Exact input-set reconciliation
+  reuses1890/50/fivePS/closed-loopback support; closure is retained under
+  .scratch/registration267-primary-20261008T0333Z/closure.json. Find the
+  same-primary active+2b0 invocation and actual RDX/R8 producer next. Opaque
+  copy/accessor semantics and earlier stream/Carrier placement remain unknown.
+  Static children exited; ignored outputs retained, no runtime resources used.
+
 ## #266 explicit current registration adapter — October7
 
 - [Current profile](REGISTRATION_ADAPTER_CURRENT.md), K375/K376, pairs strict

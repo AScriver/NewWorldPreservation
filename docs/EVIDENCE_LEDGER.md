@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Receive callback storage and argument separation — October7, #267, partial
+
+[Original source receipt](../research/evidence/current-registration-receive-callback.json)
+pins clean3259724, four query roots3202 bytes/one192-byte table and reused
+native source. Primary native/hash seal and critical review retain corrected
+field/predicate/ABI limits; no native/client runtime executed.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K377 | Selected primary+48 setter uses callable storage at this+278/active+2b0 | Strongly source-supported conditional caller/table/helper operations. Helper returns destination address, flag+130 is unchecked and cannot prove active callable. Copy/move/cleanup internals, actual installation and later invocation remain unproved | [Stored callback](REGISTRATION_TRANSPORT_RECEIVE.md#stored-callback); native/source seal and critical review |
+| K378 | Callback has distinct stream/view and opaque pair arguments; helper-result span arguments reach compact reader | Strongly source-supported RCX=&capture.child, dereference/addressed child+f0 and RDX/R8 result flow. Copy/accessor internals, exact byte transparency, lower producer/Carrier/auth/native acceptance remain unknown | [Argument separation](REGISTRATION_TRANSPORT_RECEIVE.md#distinct-arguments); reused exact instruction spans |
+
+Separate driver construction guards owner+48 but stores driver+50; table+48
+selects unclassified140f684a0, not145dcd610 (+28). Its slot number does not join
+the primary callback. Full byte-path acceptance stays partial.
+
 ## Explicit current registration adapter — October7, #266
 
 [Original integration receipt](../research/evidence/current-registration-adapter-current.json)
