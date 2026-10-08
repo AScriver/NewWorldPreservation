@@ -31,9 +31,41 @@ compatibility redirects. Startup profile inventories refer to the manifest.
 The commit review and handoff now require disposition of task-introduced temporary
 scaffolding, preserving meaningful tests, reusable diagnostics and evidence. Manual
 review distinguishes a retired print probe from retained privacy regressions and
-reusable analysis helpers. Next: implement the offline publication-hygiene check.
-No matching scoped Actionable exists;
-tracking was not updated.
+reusable analysis helpers.
+
+The original [publication hygiene check](PUBLISH_HYGIENE.md) reads the entire
+staged index or one pinned HEAD tree, with bounded Git-object reads, known
+secret/artifact rules, escaped/redacted diagnostics and incomplete failures.
+It is integrated into the tooling/workspace inventory. Isolated independent CLI
+fixtures exercised snapshot selection, forbidden entries without blob access,
+caps, missing objects, index changes and token-bearing filename redaction.
+Timeout/cleanup and malformed-output controls remain synthetic test boundaries;
+absence of hooks/network requests is source-supported, not a live capture result.
+Windows Git refused the initial newline-path fixture before scanning; the real
+rename test now uses a valid Windows name, and escaped-name parsing is separately
+labeled modeled inventory with real object reads.
+
+An initial whole-index scan rejected the original anchor rejection test's dummy
+private-key marker. Full source review found no serialized key material; the test
+is retained unchanged under one explicit path/rule/blob-hash exception. Its use
+is reported, and any edited bytes or copied path require review again. Independent
+CLI perturbations confirmed that renaming the blob, editing the marker or appending
+a credential rejects the candidate without emitting matched bytes.
+
+The final focused run passed 78 cases. The validated complete workspace command
+ran October8 17:41:37–17:43:09 UTC at `f19eb83` plus this unit's staged changes:
+**2039 Python cases in 52 modules, five PowerShell suites and the owned loopback
+CLI exchange passed** (health200, child exit0, listener closed). All 298 selected
+inputs were stable during the run. Ignored receipt:
+`.scratch/offline-validation/run-o0z_o29i/receipt.json`, SHA256
+`2e4806b8bd53189decc4ac32a5e197b6c250cba806fc6a53ac95e6c9ccb0c157`.
+Post-run edits only record these outcome notes; source/test/fixture/lock hashes
+remain matched. Scope and unrelated roadmap history are unchanged. Older source
+receipts that bind changed agent guidance or inventory remain historical/stale;
+their native results were not rerun. Scaffolding disposition: reusable scanner
+and meaningful tests retained; task-specific harnesses and receipts stay ignored,
+with owned children exited. No matching scoped Actionable exists; tracking was
+not updated. No native trial or publication was performed.
 
 ## Current receive-view pool — October8, #284
 

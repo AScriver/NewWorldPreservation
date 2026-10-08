@@ -24,7 +24,8 @@ under #166/workItem164. Preserve the broader two-client milestone and existing g
    next owner/action, authorization, evidence limits and cleanup. Update ROADMAP and
    ledger with small edits that preserve concurrent work; continue authorized work.
    Review temporary scaffolding introduced by the task and record its disposition;
-   preserve useful tests, reusable diagnostics and evidence receipts.
+   preserve useful tests, reusable diagnostics and evidence receipts. Before a
+   commit, check the staged candidate with [publication hygiene](PUBLISH_HYGIENE.md).
 
 ## Safe commands
 
@@ -37,6 +38,7 @@ memory, change routing/trust or contact game endpoints.
 & C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-Offline.ps1 -Execute
 & C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-Offline.ps1 -Execute -ArgumentList '-Profile','tooling'
 & C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-Offline.ps1 -Execute -ArgumentList '-ListProfiles'
+& C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-PublishHygiene.ps1 -Execute
 ```
 
 The [profile manifest](../scripts/offline-test-profiles.json) owns the exact selected
