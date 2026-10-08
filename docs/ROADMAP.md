@@ -28,7 +28,11 @@ independent research, and existing Actionables lifecycle states. Historical hand
 entries and live grant text are unchanged. The dedicated task/handoff templates
 and shared contract now have direct startup links; old headings remain as
 compatibility redirects. Startup profile inventories refer to the manifest.
-Next: add deliberate scaffolding review. No matching scoped Actionable exists;
+The commit review and handoff now require disposition of task-introduced temporary
+scaffolding, preserving meaningful tests, reusable diagnostics and evidence. Manual
+review distinguishes a retired print probe from retained privacy regressions and
+reusable analysis helpers. Next: implement the offline publication-hygiene check.
+No matching scoped Actionable exists;
 tracking was not updated.
 
 ## Current receive-view pool — October8, #284

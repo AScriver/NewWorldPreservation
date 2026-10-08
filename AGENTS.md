@@ -25,6 +25,7 @@
 
 - Commit each completed, coherent unit of work after its relevant validation passes, including associated tests, documentation and original evidence receipts. Commit increments as they finish during long tasks instead of accumulating all changes until the end.
 - Review Git status and the staged diff before each commit. Stage only task-owned files or hunks, preserve unrelated pending work, and use focused Conventional Commit messages. Keep private captures, credentials and ignored client-derived output out of commits. Local commits do not authorize pushing or publishing.
+- Review temporary probes, debug output, unused flags and dead scaffolding introduced by the task. Retire obsolete pieces or record their continuing purpose in the handoff. Preserve evidence receipts, useful regression/rejection/privacy/cleanup tests, reusable diagnostic tools and comments explaining invariants or provenance. Keep client-derived diagnostics ignored; this review authorizes no unrelated cleanup.
 
 ## Completion and continuation
 

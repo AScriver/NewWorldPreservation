@@ -17,6 +17,8 @@ Required authorization: <existing task/live scope; specific missing grant; or no
 Changes:
 - <concrete behavior changed, why, and affected files>
 
+Scaffolding disposition: <removed; retained with concrete purpose; or none introduced>
+
 Executed verification:
 - <exact command/profile; start/end; counts and outcomes; receipt path + SHA256>
 - <selected inputs unchanged or changed during run; cleanup observed>

@@ -23,6 +23,8 @@ under #166/workItem164. Preserve the broader two-client milestone and existing g
 7. Use the [handoff template](AGENT_HANDOFF_TEMPLATE.md): record the bounded result,
    next owner/action, authorization, evidence limits and cleanup. Update ROADMAP and
    ledger with small edits that preserve concurrent work; continue authorized work.
+   Review temporary scaffolding introduced by the task and record its disposition;
+   preserve useful tests, reusable diagnostics and evidence receipts.
 
 ## Safe commands
 
