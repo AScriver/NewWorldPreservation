@@ -1,7 +1,9 @@
 """Bounded private Carrier connect and V3 registration adapter.
 
-Only loopback DTLS, a pinned clean First Light checkout, and local fresh
-session tokens are supported. Logs contain framing metadata, never bodies,
+Only loopback DTLS and a pinned clean First Light checkout are supported.
+The historical path uses fresh local tokens; current codecs require explicit
+caller selectors and response BODY without inferred field meanings.
+Logs contain framing metadata, never bodies,
 identity fields, token bytes, exception text, or raw datagrams.
 """
 from __future__ import annotations
@@ -27,6 +29,7 @@ from private_player_creation_trial import PreparedPlayerCreation, prepare_from_f
 from private_trial_character import occupied_from_options
 
 ROOT = Path(__file__).resolve().parents[1]
+MAX_REGISTRATION_BYTES = 4096
 REFERENCE = ROOT / "research" / "upstream" / "first-light"
 AETERNUM = ROOT / "research" / "upstream" / "aeternum-world"
 COMMIT = "63756a3f7ff0ae41752dcc7c80267802c3fa7548"
@@ -188,7 +191,31 @@ class RegistrationAdapter:
                  server_version=None, heartbeat_15d=False, self_ident_default=False,
                  spawn_point_notification=False, world_activation=False,
                  self_ident_current_length=False, prepared_creation=None, clock=None,
-                 user_stop_lifetime=False):
+                 user_stop_lifetime=False, current_request_type_index=None,
+                 current_response_type_index=None, current_response_body=None):
+        current_values = (current_request_type_index, current_response_type_index,
+                          current_response_body)
+        self._current_response_payload = None
+        self._current_response_body_bytes = None
+        self._current_request_type_index = None
+        self._current_response_type_index = None
+        if any(value is not None for value in current_values):
+            if not all(value is not None for value in current_values):
+                raise ValueError("current registration requires both type selectors and response BODY")
+            if (type(current_request_type_index) is not int or
+                    not 0 <= current_request_type_index < 1 << 32):
+                raise ValueError("current request selector must be a uint32 bit pattern")
+            # Lazy imports keep the historical/default path's dependencies unchanged.
+            from current_registration_response_record import encode_registration_response_record
+            from current_registration_response_body import encode_body
+            prepared_response = encode_registration_response_record(
+                current_response_body, type_index=current_response_type_index)
+            if len(prepared_response) > MAX_REGISTRATION_BYTES:
+                raise ValueError("current response record exceeds adapter byte limit")
+            self._current_response_payload = prepared_response
+            self._current_response_body_bytes = len(encode_body(current_response_body))
+            self._current_request_type_index = current_request_type_index
+            self._current_response_type_index = current_response_type_index
         if type(user_stop_lifetime) is not bool:
             raise ValueError("user-stop lifetime must be an explicit boolean")
         if server_version is not None and server_version != OWNED_SERVER_VERSION:
@@ -210,7 +237,8 @@ class RegistrationAdapter:
         self.events = events
         self.frame, self.v3_request, self.v3_response, self.wire, self.rep, self.dispatch = codecs
         self._server_version = server_version
-        self._version_choice = "owned_image" if server_version is not None else "historical"
+        self._version_choice = ("caller_current_body" if self._current_response_payload is not None
+                                else "owned_image" if server_version is not None else "historical")
         self._heartbeat_enabled = heartbeat_15d
         self._self_ident_enabled = self_ident_default
         self._spawn_point_enabled = spawn_point_notification
@@ -559,7 +587,24 @@ class RegistrationAdapter:
         return (inner[2] & 0x3F) | (inner[3] << 6)
 
     def _registration_schema(self, payload):
-        """Raw or one canonical source-encoded VLQ wrapper; no offset search."""
+        """Current exact raw stream, or historical raw/prefix grammar; no offset search."""
+        if self._current_request_type_index is not None:
+            # Selected current physical stream only; no prefix search or legacy fallback.
+            if type(payload) is not bytes or not 0 < len(payload) <= MAX_REGISTRATION_BYTES:
+                return "unresolved", "none", 0
+            from current_registration_request_receive import (
+                StreamDecodeError, decode_registration_request_stream,
+            )
+            try:
+                decoded, consumed = decode_registration_request_stream(
+                    payload, expected_type_index=self._current_request_type_index,
+                    max_payload_bytes=MAX_REGISTRATION_BYTES - 8)
+            except StreamDecodeError:
+                return "unresolved", "none", 0
+            del decoded  # Never retain or emit decoded identity/opaque string fields.
+            if consumed != len(payload):
+                return "unresolved", "none", 0
+            return "current_physical", "raw", consumed
         variants = [("raw", payload)]
         for prefix_length in range(1, 6):
             remaining = len(payload) - prefix_length
@@ -710,9 +755,11 @@ class RegistrationAdapter:
                       for record in result.messages
                       if record.channel != 3]
         known_types = self.dispatch.supported_type_ids()
+        registration_type = (self._current_request_type_index
+                             if self._current_request_type_index is not None else 0x13)
         non_registration_types = [type_id for record, type_id in zip(
             [record for record in result.messages if record.channel != 3], post_types)
-            if not record.flags & 0x40 and type_id is not None and type_id != 0x13
+            if not record.flags & 0x40 and type_id is not None and type_id != registration_type
             and type_id in known_types]
         if state.v3_sent and non_registration_types and not state.after_v3_seen:
             state.after_v3_seen = True
@@ -757,7 +804,7 @@ class RegistrationAdapter:
             self._emit("V3_CANDIDATE", peer, envelope_sequence=sequence,
                        payload_bytes=len(v3_record.payload), recognition_basis=basis,
                        type_unproven=True)
-            if not 0 < len(v3_record.payload) <= 4096:
+            if not 0 < len(v3_record.payload) <= MAX_REGISTRATION_BYTES:
                 self._emit("V3_REJECTED", peer, reason="sequence_or_size_gate")
                 self._ack(peer, state, sequence)
                 return
@@ -786,12 +833,19 @@ class RegistrationAdapter:
             self._emit("V3_PARSER_RESULT", peer, envelope_sequence=sequence,
                        parse_mode=parse_mode, normalization=normalization,
                        exact_request_type_known=False)
-            response_fields = {"session_token": self.v3_response.make_session_token()}
-            if self._server_version is not None:
-                response_fields["server_version"] = self._server_version
-            response = self.v3_response.encode(
-                self.v3_response.V3RegistrationResponse(**response_fields))
-            payload = self.wire.encode_vlq32(len(response)) + response
+            if self._current_response_payload is not None:
+                payload = self._current_response_payload
+                response_type_id = self._current_response_type_index
+                response_body_bytes = self._current_response_body_bytes
+            else:
+                response_fields = {"session_token": self.v3_response.make_session_token()}
+                if self._server_version is not None:
+                    response_fields["server_version"] = self._server_version
+                response = self.v3_response.encode(
+                    self.v3_response.V3RegistrationResponse(**response_fields))
+                payload = self.wire.encode_vlq32(len(response)) + response
+                response_type_id = 0x03
+                response_body_bytes = len(response)
             record = self.frame.MessageRecord(channel=0, payload=payload, sequence=0,
                                               reliable_sequence=0, reliable=True,
                                               flags_override=0x21)
@@ -823,7 +877,7 @@ class RegistrationAdapter:
             state.replies.setdefault(sequence, []).append(datagram)
             self._emit("V3_RESPONSE_SENT", peer, envelope_sequence=outbound_sequence,
                        inbound_envelope_sequence=sequence,
-                       response_type_id=0x03, response_body_bytes=len(response),
+                       response_type_id=response_type_id, response_body_bytes=response_body_bytes,
                        response_record_sequence=0, response_reliable_sequence=0,
                        version_choice=self._version_choice,
                        client_acceptance_proven=False)

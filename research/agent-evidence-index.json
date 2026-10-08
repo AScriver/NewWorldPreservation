@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-adapter-current",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K375", "K376"],
+      "docs": ["docs/REGISTRATION_ADAPTER_CURRENT.md", "docs/REGISTRATION_REQUEST_RECEIVE.md", "docs/REGISTRATION_RESPONSE_RECORD.md"],
+      "scripts": ["scripts/carrier_registration_probe.py", "scripts/current_registration_request_receive.py", "scripts/current_registration_response_record.py"],
+      "tests": ["tests/test_carrier_registration_probe.py"],
+      "evidence": [{"path": "research/evidence/current-registration-adapter-current.json", "classification": "offline-executed", "scope": "Explicit current request/reply adapter component; original synthetic pinned-codec/state/rejection/privacy verification"}],
+      "fixtures": ["tests/fixtures/registration/current-request-stream-original.json", "tests/fixtures/registration/current-response-record-original.json"],
+      "limit": "Default-off paired caller selectors/BODY, strict server receive policy and existing Carrier gates. Actual current-client Carrier placement/runtime bindings/response semantics/authentication/native acceptance/M1 unknown. Historical probe bindings retained and no new native grant."
+    },
+    {
       "id": "current-registration-bit-send",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K373", "K374"],
@@ -2012,6 +2023,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-adapter-current.json",
     "research/evidence/current-registration-bit-send.json",
     "research/evidence/current-registration-response-record.json",
     "research/evidence/current-registration-worker-dispatch.json",

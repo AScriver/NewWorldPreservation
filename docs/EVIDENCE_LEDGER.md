@@ -1,5 +1,22 @@
 # Evidence ledger
 
+## Explicit current registration adapter — October7, #266
+
+[Original integration receipt](../research/evidence/current-registration-adapter-current.json)
+pins main2effa03 with exact changed adapter/test state and unchanged current
+codecs/literals. No native/client code ran; controlled pinned-codec execution
+and reused static source claims remain separate.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K375 | Explicit current request profile validates one raw physical stream and discards decoded fields without historical fallback | Reproduced with original literals and malformed/cap/privacy tests. Caller selector and existing connect/candidate/Carrier caps apply. Strict canonical/exhaustion policy is not recovered native receive behavior; actual Carrier placement/runtime binding/authentication unknown | [Adapter contract](REGISTRATION_ADAPTER_CURRENT.md); focused JUnit and independent pinned-codec report |
+| K376 | Caller-selected current response record passes directly through pinned frame codec and cached retry/send state | Reproduced exact hand literal, duplicate/fresh retry and short-send checks. All response fields/selectors explicitly supplied; no double length prefix or automatic historical reply values. Appropriate server response/native acceptance/world/player/M1 remain unproved | [Reply/state contract](REGISTRATION_ADAPTER_CURRENT.md); original response literals and independent experiments |
+
+Changing the adapter makes eleven prior probe/test-bound receipts historical.
+The new receipt records those affected bindings; unchanged native/source/codec
+claims retain their previous scope. Historical prepared trial hashes no longer
+admit this changed adapter, and no new native attempt is authorized.
+
 ## Aligned bit copy and fallback import arguments — October7, #265
 
 [Original source receipt](../research/evidence/current-registration-bit-send.json)

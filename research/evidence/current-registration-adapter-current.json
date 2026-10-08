@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 266,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T03:24:39.938473+00:00",
+  "claimIds": [
+    "K375",
+    "K376"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "2effa036e7b09daa70a34ff6a2facec7f54f9e1e",
+    "implementationDirty": [
+      " M scripts/carrier_registration_probe.py",
+      " M tests/test_carrier_registration_probe.py"
+    ],
+    "imageSha256Reused": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256Reused": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "firstLightHead": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "nativeImageScope": "unchanged prior static source identity; no new image query or native execution"
+  },
+  "sources": {
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "tests/fixtures/registration/current-response-record-original.json": "bba16a9b620bf15a052947d9e9b19cc56d24e2005d373fe1f3788fff53c2d8b2",
+    "scripts/carrier_registration_probe.py": "d61c0191580b02331c9bc82b8af6bed50c80815932faa20b3f4c632f64aad666",
+    "tests/test_carrier_registration_probe.py": "402083780e97522f4264f7fc48d1d0b2e22f5eb6bb943c92342a155e8cfc829d",
+    "tests/fixtures/registration/current-request-stream-original.json": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
+    "tests/fixtures/registration/current-request-body-original.json": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f",
+    "tests/fixtures/registration/current-response-body-original.json": "c7f52d4008858c05670607503e828f2d5381a3ff75e33e146ac26c2bddea52e6",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_current_registration_request_receive.py": "d92574da885c0cba773e460a93dd7a09bd0ac9f4868e95ec028f0a68a4cd217c",
+    "tests/test_current_registration_request_stream.py": "5abe71addb5149ac5338057d3ebe0f57ade7136edd0a91856db5decbd0820219",
+    "tests/test_current_registration_response_record.py": "557e0a7a30a7b45bf9348660335c65f9a81be97804eeec56c11c3addb29dc90d",
+    "tests/test_current_registration_response_body.py": "bbfa5e2cf5e0eb61d123d6334728c7823e8935e6e4cbf1fd00e99d6d37cdbea9",
+    "scripts/Invoke-FridaPrivateTrial.ps1": "506a31377facc49929f49c42ab72ba1eb2de34916c7effee40176e5fc83149c9",
+    "research/evidence/current-registration-request-receive.json": "1873782decc03063efbbfa267956c1d82c971db1b579ab11311a5002f67cc475",
+    "research/evidence/current-registration-response-record.json": "67688f96e421681993effc1b22036d38f8a8a8d026891ef301d23a47d1627f5d",
+    "research/evidence/current-registration-bit-send.json": "4bd9650c613a07a8a918c493032dca8d077700c38aac78a3e898d061f0d7cc7a"
+  },
+  "privateArtifacts": {
+    ".scratch/registration266-tester-20261008T0318Z/experiment-report.json": "07336ebb23c60c6c3d446bc9540f5a6d2693ea1ec1d454a77fb4f3d0cac77f20",
+    ".scratch/registration266-tester-20261008T0318Z/harness.py": "b8cba929b2c14ce939f9e7691d0d901f01bb92f6831abc780c73656f149dc928",
+    ".scratch/registration266-tester-20261008T0318Z/run.ps1": "ac044e1c82e3b16f61ca4357065578a9468f8197cff5f45940747617f6921164",
+    ".scratch/registration266-integration-20261008T0308Z/Baseline.py": "488303cae2e81ef2ca631ea4e9950dcfb483aba0dbf1a6f4baf8fce8b6069772",
+    ".scratch/registration266-integration-20261008T0308Z/Baseline.ps1": "5b8755867f3a5686333d5fd491e7e5bf350f827cfd943adb8a7cc6eeab51e719",
+    ".scratch/registration266-integration-20261008T0308Z/baseline.json": "8b4cc2fc9921e7edabfe07cecf7ef59878c9daae73d1c7df0435ed16f5296bd7",
+    ".scratch/registration266-integration-20261008T0308Z/ledger.md": "720ff1657806e80747ddea891d5a6d5c735d3a719409add55033282f25ec14f4",
+    ".scratch/registration266-integration-20261008T0308Z/Focused.ps1": "5d95636bad0610feb278cfa7e21f8105a61fecb163db8a458acc86db7c55d05a",
+    ".scratch/registration266-integration-20261008T0308Z/focused-final2-junit.xml": "33f0f47e44afdcb37eba9e463ea9ea4970d14d791231c56f33aca521dffa7f48",
+    ".scratch/registration266-integration-20261008T0308Z/focused-final2-tests.log": "31dc84a73491057ef0224e30a426bf1e49cb615b13c311a2ef4752b0a682f547",
+    ".scratch/registration266-integration-20261008T0308Z/focused-junit.xml": "0e3bcfbf41de4d67344f7fbfbeeaacbf8824ece56246ca92c6aac1fdae2fd936",
+    ".scratch/registration266-integration-20261008T0308Z/focused-tests.log": "ccb29a7dc5d5d0d758f86d701ed07c255ec8e53ab42ddf444cac01932ee24518",
+    ".scratch/registration266-integration-20261008T0308Z/focused-final-junit.xml": "c59d2729643ccdd2374930e730e97a720878177241f5baa3d16ba359f7c83aa9",
+    ".scratch/registration266-integration-20261008T0308Z/focused-final-tests.log": "d7cf022b97abcb25c15a09044d47fa4818d88a1b44439e37766d3dabdafdd1bd",
+    ".scratch/registration266-integration-20261008T0308Z/Publish.py": "08fec0d1b587527c92e1555b44f5f82b2784bfb5dceaa3b1723b014686b5d41f",
+    ".scratch/registration266-integration-20261008T0308Z/Publish.ps1": "a0ddb988c02bbf5b7964eac1dc846542d2cc4558320574291f8e79cf4286d9af",
+    ".scratch/registration266-integration-20261008T0308Z/seal.json": "806f9c0b3002fdddbc454744b7a44d784e1bfcf1b3a3df00cd492f0826ebf862"
+  },
+  "api": {
+    "entry": "RegistrationAdapter constructor",
+    "selection": "all3 explicit current_request_type_index/current_response_type_index/current_response_body together; otherwise historical default",
+    "selectors": "required true uint32 bit patterns, zero accepted; no runtime binding inferred",
+    "request": "one complete raw immutable physical stream through original strict decoder; exact consumed extent; no prefix search or legacy fallback",
+    "reply": "explicit immutable caller BODY, fresh flags0 typed record, pre-encoded once and passed directly to frame; no second prefix or automatic historical fields",
+    "policy": "request total4096 includes8-byte physical header; reply4096 includes compact record prefix; existing full Carrier plaintext4096 cap also applies",
+    "state": "existing connect/candidate/send/cursor/ACK gates, cached reply retry, configured request selector excluded from progress",
+    "data": "decoded fields discarded; fixed metadata/input hashes/outgoing reply state only; caller buffers not securely erased",
+    "cli": "no current-profile CLI selection added"
+  },
+  "validation": {
+    "type": "Automated test",
+    "outcome": "Passed",
+    "focusedCases": 646,
+    "originalRequestStreams": 34,
+    "explicitResponseSelectors": [
+      0,
+      3,
+      300
+    ],
+    "independentGroupsPassed": 7,
+    "independentLiteralReply": "15000103000000000000000000000000000000000000",
+    "independentDatagramSha256": "339f7d801faecc2c576bc881eec61fdaed2c62b9ef1b41b0b32e1b6c45aab724",
+    "testedCarrierBoundary": "pinned flags0/index19 single record: physical4084/4085 yields Carrier4096/4097 accepted/rejected;12-byte overhead specific to tested shape",
+    "shortSend": "reply/cache/ACK cursors not committed; later fresh sequence succeeds",
+    "scope": "original synthetic fixtures/pinned Python codecs/mock peer; full workspace closure recorded separately in ROADMAP"
+  },
+  "historicalBindings": [
+    {
+      "path": "research/evidence/current-registration-bit-send.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-registration-lower-send.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-registration-request-receive.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py",
+        "scripts/offline-test-profiles.json",
+        "scripts/validate_offline.py",
+        "tests/test_offline_runner.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-creation-queue-drain-boundary.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-connect-ack-retry.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py",
+        "tests/test_carrier_registration_probe.py"
+      ]
+    },
+    {
+      "path": "research/evidence/private-player-creation-trial-20261007.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py",
+        "scripts/validate_offline.py"
+      ]
+    },
+    {
+      "path": "research/evidence/private-trial-lifetime.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/carrier_registration_probe.py",
+        "scripts/offline-test-profiles.json",
+        "scripts/validate_offline.py",
+        "tests/test_carrier_registration_probe.py",
+        "tests/test_offline_runner.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-actor-callback-validation.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/carrier_registration_probe.py",
+        "scripts/current_self_ident_default.py",
+        "scripts/dtls_transport_probe.py",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js",
+        "scripts/offline-test-profiles.json",
+        "scripts/validate_offline.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-actor-callback-trial.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/carrier_registration_probe.py",
+        "scripts/current_self_ident_default.py",
+        "scripts/dtls_transport_probe.py",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js",
+        "scripts/queue_contract_probe.py",
+        "scripts/session_handoff_probe.py"
+      ]
+    },
+    {
+      "path": "research/evidence/current-world-activation-validation.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/carrier_registration_probe.py",
+        "scripts/current_self_ident_default.py",
+        "scripts/current_world_activation.py",
+        "scripts/dtls_transport_probe.py",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js",
+        "scripts/offline-test-profiles.json"
+      ]
+    },
+    {
+      "path": "research/evidence/current-world-activation-trial.json",
+      "freshness": "stale-local-inputs",
+      "mismatches": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/carrier_registration_probe.py",
+        "scripts/current_self_ident_default.py",
+        "scripts/current_world_activation.py",
+        "scripts/dtls_transport_probe.py",
+        "scripts/frida_client_trial.py",
+        "scripts/frida_trial_observer.js",
+        "scripts/queue_contract_probe.py"
+      ]
+    }
+  ],
+  "trialGuard": "Changed adapter fails historical manifest hash admission by source inspection; controller not run. Consumed native grant remains closed.",
+  "counterEvidence": [
+    "First focused run112 assertion failures used peer object instead of peer.id; corrected test-only error, no production change for that failure.",
+    "Second focused run1 failure requested absent selector300 request fixture; existing boundary selector128 replaces test-only assumption.",
+    "Raw4096 stream passes schema but tested Carrier4108 bytes rejects input_limit; schema cap alone is not whole-datagram capacity.",
+    "Historical probe/test bindings are stale after adapter/test change; prior receipt statuses do not establish current adapter behavior."
+  ],
+  "limits": [
+    "Strict raw decoder is server policy inverse of selected sender source, not recovered native receiver; current incoming record provenance/reassembly unjoined.",
+    "Caller BODY fields/selectors are experimental inputs; appropriate server values/authentication and runtime bindings unknown.",
+    "Pinned Python frame/wire execution with mock peer is not native/client/DTLS/endpoint acceptance or playable server/M1.",
+    "Current codec/fixtures unchanged; historical default covered by reused existing tests in fresh focused run. Native grant not renewed."
+  ],
+  "cleanup": {
+    "testerOneShotChildrenExited": true,
+    "runtimeResourcesAcquiredByIntegration": false,
+    "privateArtifactsRetainedIgnored": true,
+    "pushed": false
+  }
+}

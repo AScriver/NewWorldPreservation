@@ -1,5 +1,6 @@
 """Synthetic Carrier adapter controls; never launch a client or listener."""
 import hashlib
+import json
 from pathlib import Path
 from types import SimpleNamespace
 import sys
@@ -14,6 +15,12 @@ from current_player_identity_body import MEMBER_UUID as IDENTITY_UUID
 from current_player_creation_candidate import OWNED_PLAYER_ASSET, compose_player_creation_candidate
 from private_player_creation_trial import PreparedPlayerCreation
 from private_trial_character import PrivateTrialCharacter
+from current_registration_response_body import RegistrationResponseBody
+from current_registration_response_record import encode_registration_response_record
+
+CURRENT_RESPONSE = RegistrationResponseBody(0, 0, b"", b"", (False,) * 4)
+CURRENT_STREAMS = json.loads((Path(__file__).resolve().parents[1] /
+    "tests/fixtures/registration/current-request-stream-original.json").read_text())["vectors"]
 
 
 class Events:
@@ -134,7 +141,8 @@ def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                   server_version=None, heartbeat_15d=False, self_ident_default=False,
                   spawn_point_notification=False, world_activation=False,
                   self_ident_current_length=False, prepared_creation=None, clock=None,
-                  user_stop_lifetime=False):
+                  user_stop_lifetime=False, current_request_type_index=None,
+                  current_response_type_index=None, current_response_body=None):
     events, frame, response = Events(), FakeFrame(), FakeResponse()
     class FakeWire:
         @staticmethod
@@ -170,13 +178,185 @@ def setup_adapter(request=None, *, decompressor=None, compression_guard=None,
                                                world_activation=world_activation,
                                                prepared_creation=prepared_creation,
                                                clock=clock,
-                                               user_stop_lifetime=user_stop_lifetime), events, frame, response
+                                               user_stop_lifetime=user_stop_lifetime,
+                                               current_request_type_index=current_request_type_index,
+                                               current_response_type_index=current_response_type_index,
+                                               current_response_body=current_response_body), events, frame, response
 
 
 @pytest.mark.parametrize("value", [1, "true", None])
 def test_manual_adapter_selection_requires_explicit_boolean(value):
     with pytest.raises(ValueError, match="explicit boolean"):
         setup_adapter(user_stop_lifetime=value)
+
+
+def current_adapter(request_index=19, response_index=3, body=CURRENT_RESPONSE, **kwargs):
+    return setup_adapter(current_request_type_index=request_index,
+        current_response_type_index=response_index, current_response_body=body, **kwargs)
+
+
+def current_stream(vector):
+    return bytes.fromhex(vector["crc_be32"] + vector["count_be32"] + vector["payload"])
+
+
+@pytest.mark.parametrize("vector", CURRENT_STREAMS, ids=lambda row: row["name"])
+@pytest.mark.parametrize("response_index", [0, 3, 300])
+def test_current_literal_request_routes_exact_caller_response(vector, response_index):
+    adapter, events, frame, historical = current_adapter(vector["type_index"], response_index)
+    peer = Peer("current-synthetic")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x21, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02current")
+    assert frame.marshaled[-1].payload == encode_registration_response_record(
+        CURRENT_RESPONSE, type_index=response_index)
+    assert historical.tokens == [] and historical.versions == []
+    assert adapter.peers[peer.id].v3_sent
+    schema = next(row for row in events.rows if row["event"] == "REGISTRATION_SCHEMA_RESULT")
+    assert schema["parse_mode"] == "current_physical" and schema["normalization"] == "raw"
+    sent = next(row for row in events.rows if row["event"] == "V3_RESPONSE_SENT")
+    assert sent["response_type_id"] == response_index
+    assert sent["response_body_bytes"] == 18 and sent["version_choice"] == "caller_current_body"
+    assert sent["client_acceptance_proven"] is False
+    # A later ordinary retry reuses the exact cached record/cursor machinery.
+    adapter.on_app(peer, b"\x03retry")
+    assert len(frame.marshaled) == 1
+    assert any(row["event"] == "V3_RESPONSE_RESENT" for row in events.rows)
+
+
+@pytest.mark.parametrize("missing", ["current_request_type_index", "current_response_type_index", "current_response_body"])
+def test_current_profile_requires_all_three_values(missing):
+    values = dict(current_request_type_index=19, current_response_type_index=3,
+                  current_response_body=CURRENT_RESPONSE)
+    values[missing] = None
+    with pytest.raises(ValueError, match="both type selectors and response BODY"):
+        setup_adapter(**values)
+
+
+@pytest.mark.parametrize("value", [True, False, -1, 1 << 32, "19", 19.0])
+@pytest.mark.parametrize("selector", ["request", "response"])
+def test_current_profile_rejects_invalid_selectors(selector, value):
+    with pytest.raises(ValueError):
+        current_adapter(**{selector + "_index": value})
+
+
+@pytest.mark.parametrize("body", [b"", {}, object()])
+def test_current_profile_requires_current_immutable_body(body):
+    with pytest.raises(TypeError):
+        current_adapter(body=body)
+
+
+def test_current_response_cap_includes_record_prefix_before_peer_resources():
+    allowed = RegistrationResponseBody(0, 0, b"x" * 4072, b"", (False,) * 4)
+    adapter, _, _, _ = current_adapter(body=allowed)
+    assert len(adapter._current_response_payload) == 4096
+    oversized = RegistrationResponseBody(0, 0, b"x" * 4073, b"", (False,) * 4)
+    with pytest.raises(ValueError, match="adapter byte limit"):
+        current_adapter(body=oversized)
+
+
+@pytest.mark.parametrize("kind", ["checksum", "count", "outer-uuid", "flags", "presence", "selector", "suffix", "prefix", "body-tail", "over-cap"])
+def test_current_profile_rejects_malformed_stream_without_legacy_fallback(kind, monkeypatch):
+    import zlib
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    value = current_stream(vector)
+    if kind in ("outer-uuid", "flags", "presence", "selector", "body-tail"):
+        payload = bytearray(value[8:])
+        if kind == "body-tail":
+            payload += b"private-tail"
+        else:
+            payload[{"outer-uuid": 0, "flags": 16, "presence": 17, "selector": 18}[kind]] ^= 0x7F
+        value = zlib.crc32(payload).to_bytes(4, "big") + len(payload).to_bytes(4, "big") + payload
+        value = bytes(value)
+    elif kind == "checksum":
+        value = bytes([value[0] ^ 1]) + value[1:]
+    elif kind == "count":
+        value = value[:4] + (0xFFFFFFFF).to_bytes(4, "big") + value[8:]
+    elif kind == "suffix":
+        value += b"private-suffix"
+    elif kind == "prefix":
+        value = bytes([len(value)]) + value
+    else:
+        value = b"private-limit" * 400
+    adapter, events, frame, historical = current_adapter()
+    monkeypatch.setattr(adapter.v3_request, "parse_v3_request", lambda _: pytest.fail("legacy fallback"))
+    monkeypatch.setattr(adapter.v3_request, "parse_v3_request_retry", lambda _: pytest.fail("legacy fallback"))
+    peer = Peer("rejected-current")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x21, payload=value)]
+    adapter.on_app(peer, b"\x02current")
+    assert frame.marshaled == [] and historical.tokens == []
+    assert not adapter.peers[peer.id].v3_sent
+    assert any(row.get("reason") == "schema_unresolved" for row in events.rows)
+    assert "private-" not in str(events.rows)
+
+
+def test_current_retry_type_is_not_post_registration_progress(monkeypatch):
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 128 and row["flags"] == 0)
+    adapter, events, frame, _ = current_adapter(request_index=128)
+    monkeypatch.setattr(adapter, "_typed_id", lambda _: 128)
+    adapter.dispatch.supported_type_ids = lambda: {128}
+    peer = Peer("current-type-policy")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x21, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02current")
+    adapter.on_app(peer, b"\x03current")
+    assert any(row["event"] == "V3_RESPONSE_RESENT" for row in events.rows)
+    assert not any(row["event"] == "POST_REGISTRATION_CLIENT_DATA" for row in events.rows)
+
+
+@pytest.mark.parametrize("string_bytes,expected_size,accepted", [(3999, 4096, True), (4000, 4097, False)])
+def test_current_request_schema_cap_includes_physical_header(string_bytes, expected_size, accepted):
+    from dataclasses import replace
+    from current_registration_request_body import decode_body
+    from current_registration_request_stream import encode_registration_request_stream
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    body, _ = decode_body(bytes.fromhex(vector["body"]))
+    value = encode_registration_request_stream(replace(body, field_a0=b"x" * string_bytes), type_index=19)
+    assert len(value) == expected_size
+    adapter, _, _, _ = current_adapter()
+    result = adapter._registration_schema(value)
+    assert result == (("current_physical", "raw", expected_size) if accepted else ("unresolved", "none", 0))
+
+
+def test_current_valid_request_fields_are_not_logged_or_retained_in_peer_state():
+    from dataclasses import replace
+    from current_registration_request_body import decode_body
+    from current_registration_request_stream import encode_registration_request_stream
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    body, _ = decode_body(bytes.fromhex(vector["body"]))
+    sentinel = b"original-private-request-sentinel"
+    value = encode_registration_request_stream(replace(body, field_a0=sentinel), type_index=19)
+    adapter, events, frame, historical = current_adapter()
+    peer = Peer("current-data-discard")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x21, payload=value)]
+    adapter.on_app(peer, b"\x02current")
+    state = adapter.peers[peer.id]
+    assert state.v3_sent and historical.tokens == []
+    assert sentinel.decode() not in str(events.rows)
+    assert sentinel.decode() not in str(vars(state))
+    assert all(sentinel not in sent for sent in peer.sent)
+    # The caller owns input buffers; discarding decoded fields is not secure erasure.
+
+
+def test_current_partial_reply_does_not_advance_send_state():
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    adapter, events, frame, _ = current_adapter()
+    peer = Peer("current-partial")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    state = adapter.peers[peer.id]
+    previous_ack = (state.ack_sequence, state.acked_through)
+    peer.partial = True
+    frame.records = [Record(channel=0, flags=0x21, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02current")
+    assert not state.v3_sent and state.v3_response_record is None
+    assert (state.ack_sequence, state.acked_through) == previous_ack
+    assert not any(row["event"] == "V3_RESPONSE_SENT" for row in events.rows)
 
 
 def test_manual_heartbeat_continues_past_old_total_with_bounded_pending():

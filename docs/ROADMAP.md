@@ -2,6 +2,29 @@
 
 ## Server protocol focus — October 7
 
+Current #266 adds an [explicit current-codec adapter profile](REGISTRATION_ADAPTER_CURRENT.md)
+(K375/K376) under164/178. Caller supplies both uint32 selectors and immutable
+response BODY. One raw physical request must pass the original strict decoder,
+full extent and4096-byte policy; rejected current input has no historical
+fallback. Exact current response is pre-encoded once with flags0 and passed
+directly to pinned framing, then cached for retries. Historical default/CLI
+selection stays unchanged. Focused646 cases pass, including existing behavior,
+original literal routing, caps/privacy/rejection and short sends. Independent
+pinned-codec/mock-peer verification passes all seven groups, including the exact
+reply literal and the selected4084/4085→4096/4097 Carrier cap boundary. Fresh
+complete workspace passes1890 Python cases/50 modules and all fivePS suites;
+owned loopback listener closes and child exits0. Run inputs remain unchanged:
+.scratch/offline-validation/run-_3i3it6v/receipt.json. All36 affected catalog/runner
+checks and actual preflight/index/new bindings pass; outcome-only documentation
+is reconciled at .scratch/registration266-integration-20261008T0308Z/closure.json.
+The earlier1754-case result is historical after this code edit. Tester children
+exited; private artifacts remain ignored. No game/native resources acquired.
+Incoming Carrier placement, runtime bindings, response field selection,
+authentication and native acceptance remain open. Eleven old probe/test-bound
+receipts and old private trial manifests retain historical hashes; changed
+adapter inputs would fail the existing trial admission guard by source inspection;
+the controller was not run. No new live grant follows.
+
 The user's latest direction defers further official behavior references and
 prioritizes reproducing what the client sends and what a replacement server
 must return, under workItemId164. Current client-derived codecs, private trial

@@ -11,6 +11,10 @@
 /tests/fixtures/registration/current-response-record-original.json text eol=lf
 /research/evidence/current-registration-response-record.json text eol=lf
 /research/evidence/current-registration-bit-send.json text eol=lf
+/scripts/carrier_registration_probe.py text eol=lf
+/tests/test_carrier_registration_probe.py text eol=lf
+/docs/REGISTRATION_ADAPTER_CURRENT.md text eol=lf
+/research/evidence/current-registration-adapter-current.json text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf
 /tests/test_current_token_contract.py text eol=lf

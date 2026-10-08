@@ -1,5 +1,29 @@
 # Agent handoff
 
+## #266 explicit current registration adapter — October7
+
+- [Current profile](REGISTRATION_ADAPTER_CURRENT.md), K375/K376, pairs strict
+  original raw-request decoding with an explicit caller response record. Both
+  uint32 selectors and immutable response BODY are required together. No
+  historical fallback after a current rejection, no second reply length prefix,
+  no automatic token/version/auth choice or CLI/native selection.
+- Existing candidate/connect/cursor/ACK/send gates remain. Response is cached
+  for retries, short send does not commit success, configured request selector
+  is excluded from progress. Fixed metadata only; decoded fields discarded,
+  existing input hashes remain. Caller buffers are not securely erased.
+- Focused646 and seven independent actual pinned-codec/mock-peer groups pass.
+  Complete workspace1890 Python/50 modules, fivePS suites and owned loopback
+  pass with unchanged inputs, listener closed and childExit0. Receipt
+  .scratch/offline-validation/run-_3i3it6v/receipt.json; affected36 checks/actual
+  preflight pass and closure reconciles outcome docs in
+  .scratch/registration266-integration-20261008T0308Z/closure.json.
+  Earlier1754-case support and old probe/test/trial hashes remain historical;
+  source-inspected native admission guard would reject changed manifest inputs.
+- Next substantive boundary is incoming physical stream→record/callback byte
+  provenance and actual runtime bindings/response semantics. Static/codecs do
+  not establish authentication, native acceptance or M1. The October7 single
+  native grant is consumed; no game/runtime resources acquired by this unit.
+
 ## #265 aligned copy/fallback import route — October7
 
 - K373/K374 [source checkpoint](REGISTRATION_STREAM_FRAMING.md#concrete-copy-and-fallback-import-route--265)

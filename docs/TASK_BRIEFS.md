@@ -1,5 +1,26 @@
 # Bounded task briefs
 
+## #266 — explicit current registration adapter (M)
+
+- Continue164/178 from clean2effa03. Primary owns adapter/test, original
+  contract/ledger/roadmap/handoff/catalog/receipt; reuse unchanged original
+  request receive/BODY/sender and response BODY/record/literals, qualified
+  #263/#265 source joins. Current Carrier placement remains unproved.
+- Required paired caller selectors/BODY select default-off current raw parser
+  and flags0 reply. Exact extent,4096-byte policy, no historical fallback,
+  metadata/discard, pre-encoded immutable response and cache/send gates.
+  Historical default unchanged; no CLI or new native attempt.
+- Tester owns only ignored .scratch/registration266-tester-20261008T0318Z/.
+  Actual pinned frame/wire/ACK with mock peer and original synthetic literals;
+  no socket/client/memory/hook/capture/endpoints/upstream edits. Preserve shared
+  tracked files/resources and pin material dirty state/input hashes.
+- Focused646/seven independent groups and fresh1890-case/50-module workspace,
+  fivePS suites/owned loopback pass. Inputs unchanged, listener closed/childExit0.
+  Affected36 checks/actual preflight and scoped closure pass. Retain failed test-only runs,
+  affected historical hashes and all Carrier/runtime/auth/native limits.
+  Complete affected catalog/preflight, scoped local commit, tracking readback,
+  claim release and owned cleanup. No elapsed cutoff or implicit live grant.
+
 ## #265 — aligned bit copy and fallback send arguments (M)
 
 - Split263's remaining direct copy/send boundary under164/178. Baseline clean
