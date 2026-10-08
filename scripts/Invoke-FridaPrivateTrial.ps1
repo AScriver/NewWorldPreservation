@@ -3,6 +3,74 @@ param([Parameter(Mandatory)][string]$RunDirectory)
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
+function Get-CurrentRegistrationTrialArguments {
+    param([object]$Manifest,[string]$WorkspaceRoot)
+    $names = @('current_request_type_index','current_response_type_index','current_response_body','current_response_body_sha256')
+    $selected = $false
+    if ($Manifest.PSObject.Properties.Name -contains 'current_registration') {
+        if ($Manifest.current_registration -isnot [bool]) { throw 'Current registration selection must be an explicit boolean.' }
+        $selected = $Manifest.current_registration
+    }
+    if (-not $selected) {
+        if (@($names | Where-Object { $Manifest.PSObject.Properties.Name -contains $_ }).Count -ne 0) { throw 'Current registration inputs require explicit selection.' }
+        return @()
+    }
+    if ($Manifest.PSObject.Properties.Name -notcontains 'application_contract' -or $Manifest.application_contract -cne 'carrier-register') { throw 'Current registration requires the Carrier application contract.' }
+    if (@($names | Where-Object { $Manifest.PSObject.Properties.Name -contains $_ }).Count -ne $names.Count) { throw 'Current registration inputs must be complete.' }
+    foreach ($selectorName in @('current_request_type_index','current_response_type_index')) {
+        $selector = $Manifest.$selectorName
+        if (($selector -isnot [int] -and $selector -isnot [long]) -or $selector -lt 0 -or $selector -ge 4294967296) { throw 'Current registration selectors must be JSON uint32 integers.' }
+    }
+    if ($Manifest.current_response_body -isnot [string] -or [string]::IsNullOrWhiteSpace($Manifest.current_response_body) -or
+        $Manifest.current_response_body_sha256 -isnot [string] -or $Manifest.current_response_body_sha256 -cnotmatch '^[0-9a-fA-F]{64}$') { throw 'Current registration BODY selection invalid.' }
+    $bodyPath = [IO.Path]::GetFullPath($Manifest.current_response_body)
+    $privateRoots = @((Join-Path $WorkspaceRoot 'private'),(Join-Path $WorkspaceRoot '.scratch'))
+    if (@($privateRoots | Where-Object { $bodyPath.StartsWith($_+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) }).Count -eq 0) { throw 'Current registration BODY must remain private.' }
+    foreach ($mixedName in @('registration_server_version','registration_server_version_receipt','trial_character_path','trial_character_sha256','type_index_path','delivery_mode','trial_known_empty_occupancy','trial_occupied_low64')) {
+        if ($Manifest.PSObject.Properties.Name -contains $mixedName) { throw 'Current registration cannot mix historical or creation inputs.' }
+    }
+    foreach ($mixedName in @('heartbeat_15d','self_ident_default','spawn_point_notification','world_activation','context_gate_observer','self_ident_current_length','player_creation_candidate')) {
+        if ($Manifest.PSObject.Properties.Name -contains $mixedName -and $Manifest.$mixedName -ne $false) { throw 'Current registration cannot enable actor, world or creation stages.' }
+    }
+    return @('--current-request-type-index',([string]$Manifest.current_request_type_index),
+             '--current-response-type-index',([string]$Manifest.current_response_type_index),
+             '--current-response-body',$bodyPath,
+             '--current-response-body-sha256',$Manifest.current_response_body_sha256.ToLowerInvariant())
+}
+function Assert-CurrentRegistrationTrialPreflight {
+    param([object]$Manifest,[string[]]$RegistrationArguments,[string]$ScriptRoot)
+    if ($RegistrationArguments.Count -eq 0) { return }
+    $selectedBodyBindings = @($Manifest.files | Where-Object { $_.path -ieq $RegistrationArguments[5] })
+    if ($selectedBodyBindings.Count -ne 1 -or $selectedBodyBindings[0].sha256 -cne $RegistrationArguments[7]) { throw 'Selected current registration BODY binding mismatch.' }
+    $requiredPaths = @($Manifest.protocol_python,$RegistrationArguments[5]) + @(
+        'private_current_registration_trial.py','current_registration_request_body.py',
+        'current_registration_request_stream.py','current_registration_request_receive.py',
+        'current_registration_response_body.py','current_registration_response_record.py' |
+        ForEach-Object { Join-Path $ScriptRoot $_ })
+    foreach ($requiredPath in $requiredPaths) {
+        $matchesForPath = @($Manifest.files | Where-Object { $_.path -ieq $requiredPath })
+        if ($matchesForPath.Count -ne 1 -or
+            (Get-FileHash -LiteralPath $requiredPath -Algorithm SHA256).Hash.ToLowerInvariant() -cne $matchesForPath[0].sha256) { throw 'Selected current registration input missing, duplicated or changed.' }
+    }
+    $verificationArguments = @('-B',(Join-Path $ScriptRoot 'private_current_registration_trial.py')) + $RegistrationArguments
+    $previousPythonPath = $env:PYTHONPATH
+    try {
+        $env:PYTHONPATH = $Manifest.protocol_packages
+        $verificationOutput = & $Manifest.protocol_python @verificationArguments 2>$null
+        if ($LASTEXITCODE -ne 0 -or @($verificationOutput).Count -ne 1) { throw 'Private current registration verifier refused admission before containment.' }
+    } finally { $env:PYTHONPATH = $previousPythonPath }
+    try { $verifiedRegistration = $verificationOutput | ConvertFrom-Json -ErrorAction Stop } catch { throw 'Private current registration verifier returned invalid metadata.' }
+    if (@($verifiedRegistration.PSObject.Properties.Name).Count -ne 8 -or
+        $verifiedRegistration.status -cne 'prepared-only' -or $verifiedRegistration.client_acceptance_proven -isnot [bool] -or $verifiedRegistration.client_acceptance_proven -or
+        $verifiedRegistration.current_request_type_index -cne $Manifest.current_request_type_index -or
+        $verifiedRegistration.current_response_type_index -cne $Manifest.current_response_type_index -or
+        $verifiedRegistration.body_sha256 -cne $RegistrationArguments[7] -or
+        ($verifiedRegistration.body_bytes -isnot [int] -and $verifiedRegistration.body_bytes -isnot [long]) -or
+        $verifiedRegistration.body_bytes -lt 1 -or $verifiedRegistration.body_bytes -gt 4096 -or
+        ($verifiedRegistration.typed_record_bytes -isnot [int] -and $verifiedRegistration.typed_record_bytes -isnot [long]) -or
+        $verifiedRegistration.typed_record_bytes -lt 1 -or $verifiedRegistration.typed_record_bytes -gt 4096 -or
+        $verifiedRegistration.typed_record_sha256 -cnotmatch '^[0-9a-f]{64}$') { throw 'Private current registration verifier metadata mismatch.' }
+}
 $runPath = [IO.Path]::GetFullPath($RunDirectory)
 $privateRoot = Join-Path $workspaceRoot 'private\frida-trials'
 if ((Split-Path -Parent $runPath) -ine $privateRoot -or (Split-Path -Leaf $runPath) -notmatch '^run-[A-Za-z0-9_-]+$') { throw 'One direct private/frida-trials/run-* directory required.' }
@@ -17,12 +85,13 @@ if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
 $manifestPath = Join-Path $runPath 'trial-inputs.json'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 if ($manifest.run_directory -ine $runPath -or $manifest.schema -ne 1) { throw 'Run manifest identity mismatch.' }
+$registrationArguments = @(Get-CurrentRegistrationTrialArguments -Manifest $manifest -WorkspaceRoot $workspaceRoot)
 $manualLifetime = $false
 if ($manifest.PSObject.Properties.Name -contains 'user_stop_lifetime') {
     if ($manifest.user_stop_lifetime -isnot [bool]) { throw 'User-stop lifetime admission must be an explicit boolean.' }
     $manualLifetime = $manifest.user_stop_lifetime
 }
-if ($manualLifetime -and ($manifest.PSObject.Properties.Name -notcontains 'player_creation_candidate' -or -not $manifest.player_creation_candidate)) { throw 'User-stop lifetime requires the selected player creation candidate.' }
+if ($manualLifetime -and $registrationArguments.Count -eq 0 -and ($manifest.PSObject.Properties.Name -notcontains 'player_creation_candidate' -or -not $manifest.player_creation_candidate)) { throw 'User-stop lifetime requires the selected player creation or current registration candidate.' }
 $admission = Get-Content -LiteralPath (Join-Path $runPath 'admission.json') -Raw | ConvertFrom-Json
 $clientRun = $runPath
 if ($admission.PSObject.Properties.Name -contains 'staged_copy_run') {
@@ -42,6 +111,13 @@ foreach ($binding in $manifest.files) {
 $validator = 'C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1'
 $hostsScript = Join-Path $PSScriptRoot 'Set-ConnectivityHosts.ps1'
 $requiredBindings = @($PSCommandPath,$hostsScript,$manifest.frida_dispatch,(Join-Path $runPath 'admission.json'),(Join-Path $runPath 'stage-complete.json'),(Join-Path $clientDirectory 'Bin64\NewWorld.exe'),(Join-Path $PSScriptRoot 'frida_client_trial.py'),(Join-Path $PSScriptRoot 'frida_trial_observer.js'),(Join-Path $PSScriptRoot 'dtls_transport_probe.py'),(Join-Path $PSScriptRoot 'private_trial_lifetime.py'),(Join-Path $workspaceRoot 'research\upstream\first-light\tools\client-hooks\frida_dtls_trust_patch.js'))
+if ($registrationArguments.Count -ne 0) {
+    $requiredBindings += @($manifest.protocol_python,$registrationArguments[5])
+    $requiredBindings += @('private_current_registration_trial.py','current_registration_request_body.py',
+        'current_registration_request_stream.py','current_registration_request_receive.py',
+        'current_registration_response_body.py','current_registration_response_record.py' |
+        ForEach-Object { Join-Path $PSScriptRoot $_ })
+}
 if ($manifest.PSObject.Properties.Name -contains 'application_contract') {
     $requiredBindings += Join-Path $PSScriptRoot 'carrier_registration_probe.py'
     $requiredBindings += Join-Path $workspaceRoot 'research\upstream\first-light\server\rep_responder.py'
@@ -180,6 +256,7 @@ if ($manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -an
 foreach ($requiredBinding in $requiredBindings) {
     if (@($manifest.files | Where-Object { $_.path -ieq $requiredBinding }).Count -ne 1) { throw 'Mandatory trial input missing or duplicated in bindings.' }
 }
+Assert-CurrentRegistrationTrialPreflight -Manifest $manifest -RegistrationArguments $registrationArguments -ScriptRoot $PSScriptRoot
 & $validator -Path $hostsScript | Out-Null
 & $validator -Path $manifest.frida_dispatch | Out-Null
 if ($creationArguments.Count -ne 0) {
@@ -354,6 +431,7 @@ try {
         if ($manifest.application_contract -cne 'carrier-register') { throw 'Unknown application contract; no game admission.' }
         $dtlsArguments[0] = Join-Path $PSScriptRoot 'carrier_registration_probe.py'
         $dtlsArguments += @('--first-light',(Join-Path $workspaceRoot 'research\upstream\first-light'))
+        $dtlsArguments += $registrationArguments
         if ($manifest.PSObject.Properties.Name -contains 'registration_server_version') {
             $dtlsArguments += @('--server-version',$manifest.registration_server_version)
         }

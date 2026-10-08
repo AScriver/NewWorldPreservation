@@ -1,5 +1,23 @@
 # Milestone 1 roadmap
 
+## Current registration-only preparation — October8, #285
+
+[K428–K430](CURRENT_REGISTRATION_TRIAL.md) adds explicit current-profile admission,
+shared bounded BODY validation before containment or services, DTLS-only forwarding,
+and the existing owner-verified user-stop lifetime. All 152 bindings in a fresh
+private manifest and the selected helpers passed; the verified 1733 client copy
+was reused. Request selector 19, response selector 3 and the minimal 18-byte zero
+BODY are experimental values. A fresh specific native trial grant is required.
+
+295 focused Python cases, isolated PowerShell helpers and an independent synthetic
+DTLS exchange passed. Full workspace validation passed 1978 cases in 51 Python
+modules, five PowerShell suites and a closed loopback CLI exchange. An initial
+inventory failure is retained; the deliberate fixture/module totals were corrected
+to 25/51. Final catalog, preflight and binding closure support preparation only.
+The controller top level, containment and native client were not run. Source #284's
+pool/cursor question and native type, authentication, world entry and Milestone 1
+remain unresolved. Official clips are normal-game references.
+
 ## Current receive-view pool — October8, #284
 
 [K425–K427](REGISTRATION_RECEIVE_POOL.md) trace two exact helpers395B and one

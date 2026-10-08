@@ -75,8 +75,8 @@ def test_current_cli_requires_a_complete_hexadecimal_digest(digest):
 
 
 def private_body_options(tmp_path, monkeypatch, raw):
-    import connectivity_probe
-    monkeypatch.setattr(connectivity_probe, "WORKSPACE", tmp_path)
+    import private_current_registration_trial
+    monkeypatch.setattr(private_current_registration_trial, "WORKSPACE", tmp_path)
     path = tmp_path / "private" / "body.bin"
     path.parent.mkdir()
     path.write_bytes(raw)

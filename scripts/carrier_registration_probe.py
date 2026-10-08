@@ -899,32 +899,8 @@ def _uint32_selector(value):
 
 def prepare_current_registration(options):
     """Validate caller-owned current response bytes before runtime resources."""
-    if options.current_request_type_index is None:
-        return {}
-    from connectivity_probe import private_directory
-    from current_registration_response_body import decode_body, encode_body
-    from current_registration_response_record import encode_registration_response_record
-
-    try:
-        path = private_directory(options.current_response_body)
-        with path.open("rb") as stream:
-            raw = stream.read(MAX_REGISTRATION_BYTES + 1)
-        if not 1 <= len(raw) <= MAX_REGISTRATION_BYTES:
-            raise ValueError
-        if hashlib.sha256(raw).hexdigest() != options.current_response_body_sha256.lower():
-            raise ValueError
-        body, consumed = decode_body(raw)
-        if consumed != len(raw) or encode_body(body) != raw:
-            raise ValueError
-        response = encode_registration_response_record(
-            body, type_index=options.current_response_type_index)
-        if len(response) > MAX_REGISTRATION_BYTES:
-            raise ValueError
-    except (OSError, ValueError, TypeError):
-        raise ValueError("Invalid private current registration response configuration") from None
-    return {"current_request_type_index": options.current_request_type_index,
-            "current_response_type_index": options.current_response_type_index,
-            "current_response_body": body}
+    from private_current_registration_trial import prepare_current_registration as prepare_private
+    return prepare_private(options)
 
 
 def parse_options(argv=None):

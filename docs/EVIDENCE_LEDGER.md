@@ -1,5 +1,23 @@
 # Evidence ledger
 
+## Current registration-only preparation — October8, #285
+
+[Receipt](../research/evidence/current-registration-trial-preparation.json)
+pins base cb94d38, the changed code and tests, private preparation and executed checks.
+
+| ID | Claim | Evidence and limits |
+| --- | --- | --- |
+| K428 | Shared current-response preparation, strict selectors and private canonical BODY | Actual cold CLI and 295 focused cases; format only, semantics and authentication unknown |
+| K429 | Selected controller bindings, preflight, four DTLS inputs and user-stop gate | Actual AST-isolated helpers and fake handles; source ordering and 152 private bindings; controller top level and native client not run |
+| K430 | Configured synthetic request/reply, retry, rejection, privacy and cleanup | Independent literal localhost DTLS exchange; child exit and closed port; no native acceptance |
+
+Preparation acceptance passed; native acceptance, authentication, world entry and
+Milestone 1 remain unproved. Historical receipts remain immutable; bindings for
+changed code retain their historical meaning. Full 1978/51/five-suite validation
+and the loopback exchange passed after the inventory correction. No controller
+top level, native client, hooks, hosts, firewall or official endpoint ran, and no
+new native trial grant was issued.
+
 ## Current receive-view pool — October8, #284
 
 [Receipt](../research/evidence/current-registration-receive-pool.json) pins

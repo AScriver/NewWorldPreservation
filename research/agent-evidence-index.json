@@ -449,6 +449,42 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-trial-preparation",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K428",
+        "K429",
+        "K430"
+      ],
+      "docs": [
+        "docs/CURRENT_REGISTRATION_TRIAL.md"
+      ],
+      "scripts": [
+        "scripts/Invoke-FridaPrivateTrial.ps1",
+        "scripts/private_current_registration_trial.py",
+        "scripts/carrier_registration_probe.py"
+      ],
+      "tests": [
+        "tests/test_private_current_registration_trial.py",
+        "tests/test_carrier_registration_probe.py",
+        "tests/test_frida_controller_lifetime.ps1"
+      ],
+      "fixtures": [
+        "tests/fixtures/registration/current-request-stream-original.json",
+        "tests/fixtures/registration/current-response-record-original.json"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-trial-preparation.json",
+          "classification": "offline-executed",
+          "scope": "Guarded current registration-only controller preparation and configured synthetic localhost request/reply"
+        }
+      ],
+      "limit": "Prepared only; actual controller, containment, native selectors, response authentication, world entry and Milestone 1 remain unproved; a fresh specific native grant is required."
+    },
+    {
       "id": "current-registration-receive-pool",
       "roadmapTasks": [
         "M1-06B"
@@ -2433,6 +2469,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-trial-preparation.json",
     "research/evidence/current-registration-receive-pool.json",
     "research/evidence/current-registration-ack-budget.json",
     "research/evidence/current-registration-connection-ack.json",
