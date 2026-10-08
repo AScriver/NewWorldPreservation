@@ -1,5 +1,9 @@
 # Current registration stream framing — #226
 
+Later [#263 byte-path checkpoint](#packet-assembly-calls--263) identifies the
+conditional record writer and chosen-buffer lower-call ABI. Concrete bit copying,
+reciprocal child identity and lower emission remain unproved.
+
 October 6, 2026; workItemId: 164 / parent #178. The current sender's concrete
 stream, queued byte handoff and concrete backend chunk-copy chain are joined.
 Exact source checks and targeted counter-review support the bounded result.
@@ -322,3 +326,60 @@ static children exited. All36 affected catalog/runner cases and actual preflight
 index/new receipt bindings pass. Exact unchanged-input closure is
 .scratch/registration262-primary-20261008T0136Z/closure.json; code/fixtures retain
 the1641-case/49-module workspace, five PowerShell suites and closed loopback support.
+
+## Packet assembly calls — #263
+
+[Original partial receipt](../research/evidence/current-registration-bytepath.json),
+K368–K370, pins db060e0 with TASK_BRIEFS-only query changes, the same image/map,
+four new backed ranges totaling8017 bytes and one16-byte table. Raw instructions,
+decompiler output and databases remain ignored; no client or native code ran.
+
+`145ddeee0` reads a state object's child pointer at +20 and reaches the four
+mode-list layouts also used by `145dcc970`. Count/container is child+90+mode*40;
+sentinel/head is child+98+mode*40. Producer nodes store copied buffer at+20 and
+uint16 byte count at+28. Consumer `145dcadf0` reads those fields. The old helper
+queues child+10 state; the consumer dereferences state+20. The reciprocal
+identity `*(*(producerChild+10)+20)==producerChild` remains unproved, so this is
+a conditional matching-topology join rather than unconditional same-object proof.
+
+Eligible nodes are unlinked and counters updated **before** opaque writer calls.
+Writer virtual+8 receives flag byte8 bits, uint16 byte count16 bits, conditional
+mode byte/record+1a/+1c/+1e metadata, then payload pointer with byte count*8 bits.
+Zero writer+20 byte-order flag reverses16-bit scalar bytes before those calls.
+This proves call arguments/order, with no successful copy or transactional-drain
+guarantee. No semantic names or accepted identities follow from these fields.
+
+Reused factory `145dbae90` initializes embedded writer owner+2d00 with table
+147fbe6e8, backing owner+2d28, cursor0, capacity80000 and owner+2d20 byte-order
+flag0. Table+8 resolves to140f8bfd0; its concrete bit-copy body is unqueried.
+Assembly calls that writer for byte80/81, byte01 and a16-bit sequence value,
+then the record helper. Computed byte count is ceil(bit count/8). Outputs of
+four bytes or fewer use local packet/record cleanup through145dcc3d0.
+
+For longer outputs, an optional owner+28 virtual+28 transform can preserve the
+first four bytes while replacing the tail/buffer/count when its output shrinks;
+otherwise the original is retained and bit0 cleared. Its algorithm/effects are
+unproved. Optional owner+30 virtual+28 receives state+28, chosen buffer and
+DWORD byte count first. When absent/zero, lower *owner virtual+50 receives
+RCX=*owner, RDX=state+28, R8=chosen buffer, R9D=chosen byte count at145ddf70d.
+Optional nonzero AL takes145ddf714; lower nonzero EAX takes145ddf761, a distinct
+status/event branch. Reused fallback table+50 points to145dda0d0, unqueried;
+supplied runtime selection and final socket/Carrier emission remain unknown.
+
+Input helper145dddfa0 independently obtains a pooled buffer and calls lower+58.
+Lower zero can be followed by optional owner+30 virtual+38 input. The selected
+bit-reader/event path therefore has conditional provenance; its reassembly to
+the higher compact-length response callback remains unjoined. Existing wrapper,
+BODY and compact-reader proofs separately support a pure typed response record
+encoder with explicit caller values, without proving that physical envelope.
+
+Critical review corrected qword index5a4 to byte offset2d20, byte-versus-bit
+units, sentinel/count separation, reciprocal identity and call/return/input
+conditions. Agent aggregate6993 was wrong: exact ranges total8017 bytes.
+Primary's first table recheck used192 rather than recorded128 bytes and failed
+closed; the repaired extent/hash passed. All new instruction listings were
+independently reconstructed from pinned PE bytes. All36 affected catalog/runner
+checks and actual preflight bindings pass; unchanged1641/49/fivePS/closed-loopback
+support is compared in .scratch/registration263-primary-20261008T0150Z/closure.json.
+All owned static processes exited; no runtime resources were acquired. Acceptance
+stays partial for concrete bit-copy, reciprocal identity and lower emission.

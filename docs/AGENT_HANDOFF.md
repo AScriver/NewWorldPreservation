@@ -1,5 +1,29 @@
 # Agent handoff
 
+## #263 packet assembly calls — October7, partial
+
+- K368–K370 [checkpoint](../research/evidence/current-registration-bytepath.json)
+  records matching mode-list topology and node payload/uint16 byte count passed
+  to writer+8; bit-count argument is byte length*8. Exact reciprocal child/state
+  identity is unresolved. Container/count+90 and sentinel+98 are separate;
+  unlink/count updates precede opaque writing and do not establish successful drain.
+- Embedded writer owner+2d00/table147fbe6e8 has+8 target140f8bfd0, unqueried.
+  Initial byte-order flag is owner+2d20=0. Assembly creates a four-byte header,
+  conditionally transforms its tail and passes chosen B/L to optional+28 then
+  lower+50; fallback145dda0d0 is unqueried. Input may also use optional+38.
+  Do not merge return branches, infer transparency or claim network/Carrier proof.
+- Four ranges total8017 bytes, one16-byte new table. Primary independently
+  redecoded all instructions and sealed exact hashes. Review corrected byte/index,
+  list/sentinel, reciprocal identity, call order and input/return conditions.
+  Earlier incorrect6993 aggregate and failed192-vs128 table recheck are retained.
+- All36 affected checks pass; actual preflight/index/new bindings match.
+  Private closure .scratch/registration263-primary-20261008T0150Z/closure.json
+  reuses unchanged1641-case/49-module workspace/fivePS/closed owned loopback.
+  All static children exited, private databases retained ignored, no runtime used.
+- Continue with a pure typed response record encoder from existing wrapper/BODY/
+  compact-reader proof, explicit type binding and controlled literal vectors.
+  Full incoming byte provenance and native acceptance remain separate source gates.
+
 ## #262 stored callback dispatch — October7, partial
 
 - K366/K367 [original checkpoint](../research/evidence/current-registration-worker-dispatch.json)

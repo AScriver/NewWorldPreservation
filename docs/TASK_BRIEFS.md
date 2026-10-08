@@ -1,5 +1,33 @@
 # Bounded task briefs
 
+## #263 — post-record registration byte path (M)
+
+- Continue164/178 from clean db060e0. Reuse226/261/262 physical sender, chunk
+  lists, separate fallback one-byte call and internal record-ring checkpoint.
+  Exact candidates145dddfa0(owner), (*owner) virtual+8 and145ddeee0(owner) are
+  source-connected at145ddb4e1/4ec/4f2. Inspect both direct helpers first.
+- Investigator owns ignored .scratch/registration263-bytepath-20261008T0145Z/
+  and private/ghidra/registration263-bytepath-20261008T0145Z/; primary owns tracked
+  original receipt/framing/ledger/roadmap/handoff/catalog. Guided related work,
+  not independent rediscovery. No shared services/ports/fixtures/runtime state;
+  preserve others' edits and serialize file-backed queries.
+- At most four new PDATA-backed roots/four data or table windows/1MiB code.
+  Prioritize concrete physical-buffer/length/list consumers and packet writers;
+  reuse existing fallback table+8. Distinguish pointer/value/ABI/ownership and
+  conditional effects. No guessed headers/messages, class/runtime binding,
+  native launch/process access/hooks/captures/endpoints/replay/trial/upstream/push.
+- Seal actual image/map/output/instruction/tool/checkout identities; review
+  material uncertainty, retain failures. Affected36 catalog/runner/actual preflight;
+  compare/reuse unchanged1641-case workspace/49 modules/fivePS/closed loopback.
+  Scoped local commit, honest acceptance/readback/release and static-child cleanup.
+
+- Partial outcome: matching chunk-list topology/payload/byte-length writer calls
+  and transformed chosen-buffer lower ABI are pinned; reciprocal child/state
+  identity, concrete bit-copy140f8bfd0 and fallback send145dda0d0 are unresolved.
+  Four new ranges actually total8017 bytes, one16-byte table, reviewed conditions.
+  All36 affected checks/preflight pass; unchanged1641/49/fivePS/closed loopback
+  support reused by exact input comparison. No runtime/client or responder change.
+
 ## #262 — queued registration callback and worker dispatch (M)
 
 - Continue164/178 from clean760a51a. Reuse completed226/261 sender/backend/chunk

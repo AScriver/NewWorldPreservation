@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "workItemId": 164,
+  "actionableId": 263,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T02:05:47.158527+00:00",
+  "claimIds": [
+    "K368",
+    "K369",
+    "K370"
+  ],
+  "acceptance": "partial: conditional queue-layout/writer/output ABI joined; reciprocal child identity, concrete bit-copy and lower emission remain open",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "db060e053d4473a51664b7d89b3beba6597f93d9",
+    "queryDirty": "M docs/TASK_BRIEFS.md",
+    "imageBytes": 179204176,
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0"
+  },
+  "sources": {
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "research/evidence/current-registration-stream-framing.json": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971",
+    "research/evidence/current-registration-lower-send.json": "1e48c154cae0b883aac08730bb1bd3d7ae95a916277a025f4fe1349e535157bc",
+    "research/evidence/current-registration-worker-dispatch.json": "ce7669f27db4a71341bdaed66055ed6b29952a792119bb26d01ddc015ab08f76",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-response-body-codec.json": "8ebd689086445694cf798861d5a0b39d356ed9043e63fecb53c39899a30aecb4"
+  },
+  "privateArtifacts": {
+    ".scratch/registration263-bytepath-20261008T0145Z/report.md": "597f87db52ed986e5ed062f44cc8e306eac7ff7da1fa1c0417916dfe03b494da",
+    "private/ghidra/registration263-bytepath-20261008T0145Z/receipt.json": "b53e8548e8c14d8b03169f477f921ea5442f617efbecac0b2d0c246e3b73ef08",
+    ".scratch/registration263-review-20261008T0201Z/report.md": "dc38bf2cb36f5d3cf82f365b925d2a73a0a8060af0689705ec6536884306110f",
+    ".scratch/registration263-inbound-map-20261008T0153Z/REPORT.md": "a21074f40ddb0dc37c47eb7f42837f224d326ea37ce66d00e108fb8a638852b0",
+    ".scratch/registration263-primary-20261008T0150Z/Seal.py": "6b376304bef6f8c7f1df55bcfb22c710d1cb3ced0b261f6e1c5c81a1b76c2d22",
+    ".scratch/registration263-primary-20261008T0150Z/Seal.ps1": "b065b5d84d256c73c25c64c828a478450defe7d22c316371d65f084bc333cdc2",
+    ".scratch/registration263-primary-20261008T0150Z/seal.json": "741b11153349c2b6a291d48a79ea563120ad6e7edf71597605637b6264d2435c",
+    ".scratch/registration263-primary-20261008T0150Z/ledger.md": "a25649f9ec50a917899b8a98140194433e296132722c2dab95ae4d60472ba262",
+    ".scratch/registration263-primary-20261008T0150Z/failed-seal-attempt.json": "3b866148dc6d78b1a3a8f039514a0b48651cd03de0ef50388ad73cba2a5a172c"
+  },
+  "nativeBindings": [
+    {
+      "start": "0x145dddfa0",
+      "endExclusive": "0x145ddec5f",
+      "bytes": 3263,
+      "sha256": "d4ebedc5236a384ba67c2afd2332bdf1585631ef916bc2c852f3d0df2fba0354"
+    },
+    {
+      "start": "0x145ddeee0",
+      "endExclusive": "0x145ddf93b",
+      "bytes": 2651,
+      "sha256": "3667189fccd774888d816b7d0111525c424a184a066bf825afa5265ade9a2845"
+    },
+    {
+      "start": "0x145dcadf0",
+      "endExclusive": "0x145dcb47f",
+      "bytes": 1679,
+      "sha256": "98b41e3c315a8daa08e6d0d7a17f0edde60537a865b886cf63f7ddb9300cb322"
+    },
+    {
+      "start": "0x145dcc3d0",
+      "endExclusive": "0x145dcc578",
+      "bytes": 424,
+      "sha256": "3ea026bfeb435f870cf9144e144e807823a362f0e5517f58e5e3a9a63b4b2ce7"
+    }
+  ],
+  "newTableBinding": {
+    "start": "0x147fbe6e8",
+    "bytes": 16,
+    "sha256": "e8d3d4ac53d2478cb75db7724a6f1292d862a6c31aed50f6ec7563b2e9ba5963",
+    "slot8": "0x140f8bfd0"
+  },
+  "queueTopology": {
+    "producer": "0x145dcc970",
+    "consumer": "0x145dcadf0",
+    "containerCountOffset": "child+0x90+mode*0x40",
+    "sentinelHeadOffset": "child+0x98+mode*0x40",
+    "payloadPointerOffset": "record+0x20",
+    "payloadByteLengthOffset": "record+0x28 (uint16)",
+    "condition": "stateChild==producerChild; reciprocal child+0x10/state+0x20 binding not proved",
+    "order": "eligible node unlink/count decrement precede opaque writer calls",
+    "limit": "Matching topology/layout and conditional pointer arguments, not observed population, successful write or transactional drain"
+  },
+  "recordWriteCalls": {
+    "method": "embedded writer virtual+0x8",
+    "fields": [
+      "flag byte8 bits",
+      "payload byte count16 bits",
+      "conditional mode8 bits",
+      "conditional record+0x1a/+0x1c/+0x1e values16 bits",
+      "record+0x20 payload pointer with uint16 byte count*8 bits"
+    ],
+    "byteOrderCondition": "writer+0x20==0 reverses16-bit scalar byte order before calls"
+  },
+  "writerBinding": {
+    "ownerOffset": "0x2d00",
+    "table": "0x147fbe6e8",
+    "methodPlus8": "0x140f8bfd0",
+    "bufferInitial": "owner+0x2d28",
+    "bitCountInitial": 0,
+    "capacityInitial": "0x80000",
+    "byteOrderFlagOffset": "owner+0x2d20",
+    "byteOrderFlagInitial": 0,
+    "methodBodyQueried": false
+  },
+  "packetAssembly": {
+    "method": "0x145ddeee0",
+    "initialWriteCalls": [
+      "byte0x80 or0x81",
+      "byte0x01",
+      "16-bit sequence value"
+    ],
+    "computedByteLength": "ceil(writer bit count/8)",
+    "minimumOutputCondition": "computed length greater than4",
+    "transform": "conditional owner+0x28 virtual+0x28 processes tail after preserved4-byte header; smaller output substitutes alternate buffer/count, otherwise retains original and clears bit0",
+    "limit": "Concrete bit-copy method and transform effects/algorithm not proved"
+  },
+  "outputDispatch": {
+    "optional": "owner+0x30 object virtual+0x28",
+    "lowerCondition": "optional absent or returns zero",
+    "lowerSite": "0x145ddf70d",
+    "abi": [
+      "RCX=*owner",
+      "RDX=state+0x28",
+      "R8=chosen buffer pointer",
+      "R9D=chosen byte count"
+    ],
+    "returnBranches": "optional nonzero AL skips lower to145ddf714; lower nonzero EAX goes145ddf761",
+    "fallbackTarget": "0x145dda0d0",
+    "fallbackBodyQueried": false,
+    "limit": "Supplied/fallback runtime selection, callee effect and network delivery unknown"
+  },
+  "inputDispatch": {
+    "method": "0x145dddfa0",
+    "lower": "virtual+0x58 with pooled buffer/capacity",
+    "alternate": "lower zero and optional owner+0x30 permits virtual+0x38 input",
+    "limit": "Bit-reader/event path present; exact provenance/reassembly-to-compact-response callback unjoined"
+  },
+  "verification": {
+    "primarySeal": ".scratch/registration263-primary-20261008T0150Z/seal.json",
+    "newFunctionRoots": 4,
+    "newNativeRanges": 4,
+    "uniqueNewExecutableBytes": 8017,
+    "newTableWindows": 1,
+    "newTableBytes": 16,
+    "reusedLowerTableBytes": 128,
+    "independentInstructionListingsMatched": true,
+    "criticalReview": "passed with explicit qualifications",
+    "newQueriesByReviewer": false
+  },
+  "counterEvidence": [
+    "Initial bit-count description corrected: wire scalar is byte length, payload argument is bits.",
+    "Agent report qword index5a4 corrected to actual endian-flag byte offset2d20.",
+    "Count/container90 and sentinel98 separated; unlink precedes opaque writes; reciprocal child identity remains conditional.",
+    "Optional/lower nonzero branches differ, and optional input may replace lower receive provenance.",
+    "Exact primary ranges total8017, not reported6993; first root is3263, not2239 bytes.",
+    "First primary reused-table recheck used192 instead of original128 bytes and failed closed; repaired from sealed extent."
+  ],
+  "limits": [
+    "No final bit-copy/Carrier/socket/current runtime binding/authentication/response selection/native acceptance or gameplay proof.",
+    "Typed response-record encoder can be derived separately from existing wrapper/BODY/compact-reader contracts; full physical incoming envelope remains unknown.",
+    "Source checkpoint changes no codec, responder, candidate or trial; previous native grant is consumed."
+  ],
+  "cleanup": {
+    "allQueryChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}

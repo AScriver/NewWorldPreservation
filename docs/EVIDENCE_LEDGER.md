@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Registration packet assembly calls — October7, #263, partial
+
+[Original checkpoint](../research/evidence/current-registration-bytepath.json)
+pins db060e0/TASK_BRIEFS-only state, four new backed ranges totaling8017 bytes,
+one16-byte table and reused source. Primary redecoded all new instructions and
+critical review retained these qualified claims. No client or native code ran.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K368 | Chunk producer and record writer use matching mode-list topology, payload pointer and uint16 byte length | Strongly source-supported conditional layout. Container/count+90, sentinel+98, stride40. Consumer state+20 must equal producer child; reciprocal child+10/state+20 binding unresolved. Unlink/count updates precede opaque writer calls. Scalar emits16 bits; payload count is bytes*8 bits. No successful bit copy or transactional drain | [Writer calls](REGISTRATION_STREAM_FRAMING.md#packet-assembly-calls--263); exact spans/listings and source seal |
+| K369 | Assembly writes a four-byte header, conditionally transforms its tail and passes chosen buffer/count to optional handler then lower+50 | Strongly source-supported ABI/conditions. Writer+8 target140f8bfd0 and fallback lower+50 target145dda0d0 bodies unqueried. Optional/lower nonzero returns differ. No final byte transparency, runtime selection, socket delivery or Carrier/authentication proof | [Output conditions](REGISTRATION_STREAM_FRAMING.md#packet-assembly-calls--263); table/constructor/native ABI and qualified review |
+| K370 | Separate input helper can source a pooled buffer through lower+58 or optional+38 | Strongly source-supported bounded calls. Optional input prevents exclusive lower provenance. Higher compact-length response callback, record reassembly and physical envelope remain unjoined | [Receive limits](REGISTRATION_STREAM_FRAMING.md#packet-assembly-calls--263); native conditional input path |
+
 ## Registration callback dispatch — October7, #262, partial
 
 [Original checkpoint](../research/evidence/current-registration-worker-dispatch.json)

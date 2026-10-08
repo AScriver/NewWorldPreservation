@@ -51,6 +51,20 @@ workspace support and resource cleanup. #262 remains a partial source checkpoint
 The existing corrected creation trial still needs its specific next-attempt
 grant; this offline continuation starts no client or new live instrumentation.
 
+#263 [packet-assembly checkpoint](REGISTRATION_STREAM_FRAMING.md#packet-assembly-calls--263)
+now joins matching chunk-list layout to payload/byte-count writer arguments and
+the conditional chosen-buffer lower+50 ABI (K368–K370). Exact child reciprocity,
+concrete bit-copy140f8bfd0 and fallback send145dda0d0 remain unproved. Four
+new backed ranges total8017 bytes; source/metadata qualifications are retained
+after primary seal and review. No server responder or native trial changed.
+All36 affected catalog/runner cases pass and actual preflight bindings match;
+private closure .scratch/registration263-primary-20261008T0150Z/closure.json
+compares unchanged code/fixture/runtime support before reusing1641 cases/49
+modules, fivePS suites and closed loopback/childExit0. Source acceptance is partial.
+Next useful code unit is a pure typed response record around the existing BODY,
+generic wrapper and compact reader, with caller-supplied type/wrapper values.
+That component cannot establish the full incoming Carrier envelope or acceptance.
+
 ## Earlier shutdown preservation — October 7
 
 The earlier #166/workItem164 scope preserved official-server evidence that becomes
