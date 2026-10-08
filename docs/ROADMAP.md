@@ -80,6 +80,23 @@ All static children exited; source databases remain private/ignored. Next source
 unit is concrete bit-copy140f8bfd0 and fallback lower send145dda0d0, preserving
 conditional transform/supplied-interface and byte-provenance limits.
 
+### Server source continuation #265
+
+New [copy/fallback source checkpoint](REGISTRATION_STREAM_FRAMING.md#concrete-copy-and-fallback-import-route--265)
+splits263's remaining direct boundary into an M child, K373/K374. Aligned writer
+arguments reach the named memcpy import; selected fallback buffer/count reach
+the ordinal20 import, named sendto by the unchanged local DLL file. Three PDATA
+roots763 bytes plus128-byte no-PDATA thunk and retained wrong8-byte text read
+total899. Primary native/import seal and critical review pass. Correct capacity
+is0x80000 bits; optional AL, provider-null zero, unchecked growth/remainder and
+length-unchecked return limits are retained. No runtime delivery/Carrier or
+codec/responder/client change follows. All36 affected catalog/runner cases and
+actual preflight/index/new bindings pass. Private closure
+.scratch/registration265-primary-20261008T0238Z/closure.json reconciles the new
+source receipt plus ledger/roadmap/catalog meaning, preserving unchanged1754
+cases/50 modules, fivePS suites and closed owned loopback/childExit0. All static
+children exited. Parent263 actual incoming/reciprocal joins remain partial.
+
 ## Earlier shutdown preservation — October 7
 
 The earlier #166/workItem164 scope preserved official-server evidence that becomes

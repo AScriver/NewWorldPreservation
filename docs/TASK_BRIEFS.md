@@ -1,5 +1,24 @@
 # Bounded task briefs
 
+## #265 — aligned bit copy and fallback send arguments (M)
+
+- Split263's remaining direct copy/send boundary under164/178. Baseline clean
+  b1b519e, pinned image/map; reuse263/261 construction/table/ABI evidence.
+- Investigator owns only ignored .scratch/registration265-bit-send-20261008T0238Z/
+  and matching private/ghidra/ dir; primary owns original docs/receipt/catalog.
+  Related review owns ignored report, no new queries. Preserve others' edits;
+  no shared runtime/services/ports/fixtures or client/native execution.
+- Four-root/four-window/1MiB cap. Actual3 PDATA roots763 bytes,128-byte no-PDATA
+  memcpy thunk and wrong8-byte .text read total899. Independent native/import/
+  artifact seal and critical review retain all conditional routes and failures.
+- K373/K374: byte-aligned destination/source/count to named memcpy import and
+  selected fallback buffer/DWORD count to ordinal20 import. AL/provider/byte+8/
+  optional-transform/fallback/growth and return-value limits remain explicit.
+- Affected36 catalog/runner/actual preflight; reuse1754/50/fivePS/closed loopback
+  only after exact code/fixture/runtime and selected-input-set reconciliation.
+  Scoped local commit/tracking/readback/release; all static children exited.
+  Parent263 still needs reciprocal identity and actual incoming Carrier joins.
+
 ## #264 — typed registration response record encoder (M)
 
 - Continue164/178 from clean9668f01. Reuse sealed generic wrapper/selector,

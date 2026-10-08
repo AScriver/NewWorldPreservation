@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "workItemId": 164,
+  "actionableId": 265,
+  "parentActionableId": 263,
+  "coordinationAncestorId": 178,
+  "recordedUtc": "2026-10-08T02:57:32.500185+00:00",
+  "claimIds": [
+    "K373",
+    "K374"
+  ],
+  "acceptance": "Qualified aligned-copy/fallback import-argument route; parent263 full byte-path acceptance remains partial.",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "b1b519efca513bd53272cac266cc9d4e42e348b1",
+    "queryDirty": "",
+    "imageBytes": 179204176,
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "python": "3.11.9",
+    "capstone": "5.0.7"
+  },
+  "sources": {
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "scripts/carrier_registration_probe.py": "7d943eaffb29e9989217909faa50ccb1a83a3306bb1787fc96560ddd5ae2d816",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "research/evidence/current-registration-bytepath.json": "a33434deca99e0572e178357aef2a86e418cb141fc3930d8c5c18cf7581751bc",
+    "research/evidence/current-registration-lower-send.json": "1e48c154cae0b883aac08730bb1bd3d7ae95a916277a025f4fe1349e535157bc",
+    "research/evidence/current-registration-response-record.json": "67688f96e421681993effc1b22036d38f8a8a8d026891ef301d23a47d1627f5d"
+  },
+  "privateArtifacts": {
+    "private/ghidra/registration265-bit-send-20261008T0238Z/receipt.json": "55975c83252bae8a1beb745cff9757a4fa70d3b98289a80bebf94239158dbf85",
+    ".scratch/registration265-bit-send-20261008T0238Z/report.md": "5dcd90777f89611809286d94f63911dd1bdc6a0acbbb3c213ded213092645fae",
+    ".scratch/registration265-review-20261008T0251Z/report.md": "e33dddd20b6aa40715089f2e0aae3da45dcbb37338bc817afa530702073da724",
+    ".scratch/registration265-primary-20261008T0238Z/baseline.json": "c3a691a1f741a49886b25122c7f3e78cec4ff6a83105f348bcb6c5f14f4f2223",
+    ".scratch/registration265-primary-20261008T0238Z/Seal.py": "f21612d0140f13c236febed9f6e5360df26999f017da83bdbd598d61beb8559d",
+    ".scratch/registration265-primary-20261008T0238Z/Seal.ps1": "6dd4de291d12d3075f4cbb789442f02c44db04b876f55f4c525d06df731ed8fa",
+    ".scratch/registration265-primary-20261008T0238Z/seal.json": "9a11e34284db51dd9699979d37f1cf14e366141f1b253e802692f3916b7665d1",
+    ".scratch/registration265-primary-20261008T0238Z/ledger.md": "2fcda13d1cf4f44920d42b60815f5831166e2aea21da3b9addd21a64f0ff79dc",
+    ".scratch/registration265-primary-20261008T0238Z/adjudication.md": "c36144027329668de3b0c7311f00743050bf18b974113cc4f71f1d3b5e452ec5"
+  },
+  "nativeBindings": [
+    {
+      "start": "0x140f8bfd0",
+      "endExclusive": "0x140f8bfef",
+      "bytes": 31,
+      "sha256": "2ea999d3f1b24523f450c56cc18f733c34eb50c84cad9ad7fa7b695a93e64667"
+    },
+    {
+      "start": "0x140f8bfef",
+      "endExclusive": "0x140f8c14b",
+      "bytes": 348,
+      "sha256": "e8c23b79a215c6d7e7c7da3974972c22f130fab44f579a42fff02ce79d139ec7"
+    },
+    {
+      "start": "0x140f8c14b",
+      "endExclusive": "0x140f8c14c",
+      "bytes": 1,
+      "sha256": "ae3f4619b0413d70d3004b9131c3752153074e45725be13b9a148978895e359e"
+    },
+    {
+      "start": "0x145dda0d0",
+      "endExclusive": "0x145dda173",
+      "bytes": 163,
+      "sha256": "f045f7bd9fde0c22a4caeaeb40e29d43d688ef513825b000557ab88b0388cf33"
+    },
+    {
+      "start": "0x140f7fb80",
+      "endExclusive": "0x140f7fc5c",
+      "bytes": 220,
+      "sha256": "8f0f601cdf0e4a4fad91d74fb91e1c428021408d185fe72e7764104b2d51d3e9"
+    }
+  ],
+  "imports": [
+    {
+      "module": "WS2_32.dll",
+      "iat": "0x147eca9c8",
+      "ordinal": 20
+    },
+    {
+      "module": "VCRUNTIME140.dll",
+      "iat": "0x147eca6e0",
+      "name": "memcpy"
+    }
+  ],
+  "extent": {
+    "pdataRoots": 3,
+    "pdataBytes": 763,
+    "thunkWindowBytes": 128,
+    "thunkWindow": {
+      "start": "0x147aad05b",
+      "bytes": 128,
+      "sha256": "205935417135d452ace174ccb6c834cb46d99c79926d4488b724043420d6309c",
+      "pdataOwner": null,
+      "materialEntryBytes": 6
+    },
+    "incorrectAddressWindowBytes": 8,
+    "combinedExecutableBytes": 899,
+    "newDataWindowCount": 1,
+    "newVtableWindows": 0
+  },
+  "alignedCopy": {
+    "function": "0x140f8bfd0",
+    "zeroBits": "return before copying",
+    "arguments": "backing+floor(cursor/8), original source, ceil(bitCount/8)",
+    "copyThunk": "0x147aad05b",
+    "copyIat": "0x147eca6e0",
+    "cursor": "increments by requested bits after call returns",
+    "capacityBits": "0x80000 at selected construction",
+    "condition": "alignment checked after optional unqueried growth-helper call",
+    "growth": "0x140f68d20 return unchecked here; effects/bounds unknown",
+    "remainder": "full source-byte-derived16-bit store unmasked to remainder; only cursor increment masksbits&7",
+    "limit": "import-call arguments/source model; loaded implementation or actual copy unobserved"
+  },
+  "fallbackSend": {
+    "lower": "0x145dda0d0",
+    "method": "0x140f7fb80",
+    "conditions": [
+      "optional caller absent or AL==0",
+      "selected fallback table route",
+      "lower byte+8 nonzero",
+      "state virtual+30 pointer nonnull"
+    ],
+    "arguments": "nested handle**(object+10), original chosenB, DWORD chosenL, flags0, provider pointer, provider DWORD output count",
+    "iat": "0x147eca9c8",
+    "module": "WS2_32.dll",
+    "ordinal": 20,
+    "localFileExport": {
+      "name": "sendto",
+      "fileSha256": "535d7a8336ddbae77b1f2c68339e5e7dbeb5f06445d6e42b19c794ef0e26f6a3",
+      "scope": "reused261 file export identity; actual loaded DLL unknown"
+    },
+    "returns": [
+      "provider null returns0 before send",
+      "import result!=-1 maps0 without requested-length comparison",
+      "only error2733 enters secondary import/retry; other error returnse",
+      "lower zero also calls opaque145db4ef0"
+    ],
+    "limit": "optional transform/interface/provider/destination/status meaning/delivery/Carrier unproved"
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "nativeInstructionAndImportSeal": "passed",
+    "criticalReview": "conditional K373/K374 survived",
+    "scope": "source route only; affected tests/full-workspace reuse/actual preflight tracked separately in ROADMAP"
+  },
+  "counterEvidence": [
+    "Wrong147ec76e0 query retained; correct147eca6e0 delta0x3000, not initial5000 statement.",
+    "Agent report891 total omitted wrong8; actual machine/primary executable extent899.",
+    "First seal script failed at bare PowerShell boolean, corrected without new source queries.",
+    "Growth results unchecked, unaligned remainder unmasked, optional testsAL, zero may bypass send and non--1 result does not prove full-length delivery."
+  ],
+  "limits": [
+    "Child/state reciprocity, optional transforms/supplied runtime interfaces/provider values/incoming reassembly/full Carrier/authentication/native acceptance/M1 remain open.",
+    "All existing codecs/fixtures/classifier/responder/candidate/trial/client unchanged. No actual native execution or next-attempt grant."
+  ],
+  "cleanup": {
+    "allStaticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}

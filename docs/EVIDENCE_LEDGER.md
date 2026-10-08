@@ -1,5 +1,17 @@
 # Evidence ledger
 
+## Aligned bit copy and fallback import arguments — October7, #265
+
+[Original source receipt](../research/evidence/current-registration-bit-send.json)
+pins clean b1b519e, unchanged owned image/map and3 PDATA roots/763 bytes plus
+128-byte no-PDATA thunk and wrong8-byte text window (total899). Primary raw-byte
+seal and critical review retain corrections/limits; no native/client code ran.
+
+| Claim | Description | Current evidence and limits | References |
+|---|---|---|---|
+| K373 | Aligned packet writer submits destination/source/ceil(bits/8) to exact memcpy import and advances cursor after return | Strongly source-supported selected branch. Initial cursor0/byte widths; unqueried unchecked growth can affect state, remainder writes are unmasked. Capacity0x80000 bits; loaded implementation/copy/bounds unobserved | [Copy conditions](REGISTRATION_STREAM_FRAMING.md#concrete-copy-and-fallback-import-route--265); exact native/import seal and review |
+| K374 | Conditional fallback lower route submits chosen packet buffer/DWORD count to WS2_32 ordinal20 import | Strongly source-supported ABI, AL/provider/byte+8/table conditions. Local DLL export names sendto; zero may bypass send, non--1 import result has no length-equality check. Optional transform/interface/destination/status meaning/delivery/Carrier remain unproved | [Fallback conditions](REGISTRATION_STREAM_FRAMING.md#concrete-copy-and-fallback-import-route--265); exact caller/native/import/file identity |
+
 ## Typed registration response record — October7, #264
 
 [Original encoder receipt](../research/evidence/current-registration-response-record.json)

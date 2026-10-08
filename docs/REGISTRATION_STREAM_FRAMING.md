@@ -350,7 +350,7 @@ This proves call arguments/order, with no successful copy or transactional-drain
 guarantee. No semantic names or accepted identities follow from these fields.
 
 Reused factory `145dbae90` initializes embedded writer owner+2d00 with table
-147fbe6e8, backing owner+2d28, cursor0, capacity80000 and owner+2d20 byte-order
+147fbe6e8, backing owner+2d28, cursor0, capacity0x80000 bits and owner+2d20 byte-order
 flag0. Table+8 resolves to140f8bfd0; its concrete bit-copy body is unqueried.
 Assembly calls that writer for byte80/81, byte01 and a16-bit sequence value,
 then the record helper. Computed byte count is ceil(bit count/8). Outputs of
@@ -381,5 +381,46 @@ closed; the repaired extent/hash passed. All new instruction listings were
 independently reconstructed from pinned PE bytes. All36 affected catalog/runner
 checks and actual preflight bindings pass; unchanged1641/49/fivePS/closed-loopback
 support is compared in .scratch/registration263-primary-20261008T0150Z/closure.json.
+
+## Concrete copy and fallback import route — #265
+
+[Original source receipt](../research/evidence/current-registration-bit-send.json),
+K373/K374, continues263 under164/178 from clean b1b519e. Three PDATA roots/five
+ranges total763 bytes; a128-byte no-PDATA import-thunk window and retained wrong
+8-byte executable-address read make899 bytes. Primary independently decoded
+all ranges/imports and checked hashes; critical review retained the conditions.
+
+Writer140f8bfd0 returns for zero bits. With byte-aligned cursor it submits
+destination=backing+floor(cursor/8), source and ceil(bits/8) to147aad05b, whose
+first jump selects PE import147eca6e0, VCRUNTIME140.dll!memcpy. Cursor advances
+by requested bits after that call returns. Current packet scalar/payload widths
+8/16/byteCount*8 preserve alignment from zero cursor on the ordinary path.
+Insufficient computed space first calls unqueried140f68d20 without checking a
+status here; alignment is re-read afterward. This does not establish growth,
+bounds, loaded import behavior or actual copy. Unaligned remainder stores use
+the full final source byte without masking to requested remainder width.
+
+The selected lower+50 route requires absent optional dispatch or its AL==0,
+conditional fallback selection and lower byte+8 nonzero.145dda0d0 gets pointer
+and DWORD output count through state-pointee virtual+30; null pointer returns0
+before a selected send. It forwards that pair and original chosen buffer/DWORD
+byte count to its lower+20 object's virtual+18. Reused fallback table148480758
+selects140f7fb80, which passes handle**(object+10), original buffer/count, flags0
+and provider pointer/count to147eca9c8 (PE WS2_32 ordinal20). The unchanged local
+DLL file export names it sendto; actual loaded DLL/destination/call remain unobserved.
+
+Import return other than-1 maps0 without checking returned length. On-1, only
+error2733 enters another import and retry; otherwise it returnse. Lower's zero
+branch invokes opaque145db4ef0. No delivery/ack/error meaning is inferred from
+these statuses. Optional transform may change selected buffer/count; supplied
+runtime interfaces and exact producer-child-state reciprocity remain unknown.
+Incoming reassembly/full Carrier identity, authentication and acceptance are open.
+
+The historical agent891 aggregate excluded the wrong8-byte window; machine and
+primary seals record899. Initial address correction5000 was also wrong: the
+recorded addresses differ by0x3000. Those failures, the first seal-script typo,
+and corrected results remain private. No codec/responder/trial/client changed.
+Validation and exact unchanged1754/50/fivePS/closed-loopback reuse are recorded
+in ROADMAP and .scratch/registration265-primary-20261008T0238Z/closure.json.
 All owned static processes exited; no runtime resources were acquired. Acceptance
 stays partial for concrete bit-copy, reciprocal identity and lower emission.

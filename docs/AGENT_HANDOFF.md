@@ -1,5 +1,27 @@
 # Agent handoff
 
+## #265 aligned copy/fallback import route — October7
+
+- K373/K374 [source checkpoint](REGISTRATION_STREAM_FRAMING.md#concrete-copy-and-fallback-import-route--265)
+  joins selected aligned writer destination/source/count to the named memcpy
+  import and selected fallback packet buffer/count to ordinal20 (local file
+  export sendto). Conditions cover AL, byte+8, provider, table, alignment/growth
+  and optional transform/runtime interface; actual native copy/delivery unknown.
+- Three PDATA roots763 bytes,128 no-PDATA thunk and retained erroneous8-byte
+  text read total899. Agent891 aggregate and address-delta5000 were incorrect;
+  correct delta0x3000. Capacity0x80000 bits, unmasked remainder, unchecked growth,
+  zero-before-send and no returned-length equality are retained in source limits.
+- Primary exact raw-byte/import/artifact seal and critical review pass. No
+  codecs/fixtures/classifier/responder/trial/client changed; all static children
+  exited and private databases remain ignored. No game/runtime resource acquired.
+- Affected36 catalog/runner/preflight and unchanged1754/50/fivePS/closed-loopback
+  closure are tracked in ROADMAP and private
+  .scratch/registration265-primary-20261008T0238Z/closure.json.
+- Parent263 remains partial for reciprocal child/state and actual inbound
+  reassembly/full Carrier. Next useful implementation is an explicit validated
+  current-request classifier route in the adapter; preserve reply-selection/
+  authentication/runtime/native acceptance limits and the consumed trial grant.
+
 ## #264 typed response record encoder — October7
 
 - Original [response encoder](REGISTRATION_RESPONSE_RECORD.md), K371/K372,
