@@ -74,7 +74,7 @@ intended outcome, completion/rejection boundaries, planned checks and evidence
 references in its description. Research may finish with a precise bounded answer
 or missing-contract report; that does not make the gameplay condition true.
 Implementation owners must refresh exact files/input identities and fill the
-[TASK_BRIEFS template](TASK_BRIEFS.md#task-brief-template) before execution.
+[task brief template](TASK_BRIEF_TEMPLATE.md) before execution.
 
 Creation starts no implementation, game process, hook, endpoint contact or system
 change. Existing [AGENTS](../AGENTS.md), owned-copy/loopback procedures, private-output

@@ -25,8 +25,11 @@ required authorization; task briefs identify expected responsibility. Review of
 180 local links/anchors and three synthetic handoff scenarios preserved completed
 offline work versus open native acceptance, a missing trial grant versus approved
 independent research, and existing Actionables lifecycle states. Historical handoff
-entries and live grant text are unchanged. Next: extract the templates and shorten
-startup navigation. No matching scoped Actionable exists; tracking was not updated.
+entries and live grant text are unchanged. The dedicated task/handoff templates
+and shared contract now have direct startup links; old headings remain as
+compatibility redirects. Startup profile inventories refer to the manifest.
+Next: add deliberate scaffolding review. No matching scoped Actionable exists;
+tracking was not updated.
 
 ## Current receive-view pool — October8, #284
 
