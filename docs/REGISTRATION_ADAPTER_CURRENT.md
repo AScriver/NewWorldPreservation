@@ -38,7 +38,9 @@ record cap before opening runtime resources. It rejects partial configuration,
 invalid selectors, malformed/noncanonical/trailing BODY and mismatched hashes.
 Current mode can also select the existing optional heartbeat and bootstrap
 stages under their original prerequisites; see [the composed path](CURRENT_REGISTRATION_BOOTSTRAP.md).
-Player creation remains excluded. `--server-version` is independent guard
+The complete existing creation candidate can also be explicitly selected under
+[its integration guards](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md).
+`--server-version` is independent guard
 metadata in current mode and never changes the caller BODY. All current response
 fields remain caller-selected; the CLI supplies
 no default identity or authentication result. Existing lifetime, certificate,

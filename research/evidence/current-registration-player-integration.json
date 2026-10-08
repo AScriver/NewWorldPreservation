@@ -1,0 +1,296 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 286,
+  "parentActionableId": 179,
+  "claimIds": [
+    "K438",
+    "K439",
+    "K440"
+  ],
+  "recordedUtc": "2026-10-08T21:25:56.943802+00:00",
+  "input": {
+    "head": "40cee5f1dcdc7ecbc6aed9cdcf651db62c6b3b59",
+    "baselineDirty": [],
+    "firstLightHead": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "experimentalSelectors": {
+      "request": 19,
+      "response": 3
+    },
+    "responseBody": "18 canonical zero bytes; authentication/native suitability unproved"
+  },
+  "sources_sha256": {
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "scripts/carrier_registration_probe.py": "c264bc24ca542311e87a7ad1e98ebd64921d3d0cc2b73eaac64a8ab61d215909",
+    "scripts/Invoke-FridaPrivateTrial.ps1": "bb91c2e8a8da4eec5a9c212444fc7bc47880d3ef4639ccbf7b196fa3d630e291",
+    "tests/test_carrier_registration_probe.py": "a77fed2a0d563b94eddfc8d1c1cb1c5d94ca80f81fcdfbafcb93b2b990372faf",
+    "tests/test_frida_controller_lifetime.ps1": "c9f1d6a3f19d2876c9550eea4da1b2a5a13de9a8e1bf17a56a34497e2f398d29",
+    "scripts/private_current_registration_trial.py": "85d31d4a91fcf21e2da2e4055d131849bf322e6f513c4944a47689e8a4cd725c",
+    "scripts/private_trial_character.py": "2654751e8683d1bbfd43ffae2bba5927726d882e430a0c78caabd1ac8e840c33",
+    "scripts/private_player_creation_trial.py": "07fd55927f28228f9302d9313652858d2f8ac681de86e3c68492e9148bbd2e30",
+    "scripts/current_player_creation_candidate.py": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d",
+    "scripts/current_player_identity_body.py": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df",
+    "scripts/current_creation_member_body.py": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800",
+    "scripts/current_creation_replication_record.py": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817",
+    "scripts/current_creation_trial_ref.py": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6",
+    "scripts/current_type8_bundle_body.py": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105",
+    "scripts/current_self_ident_default.py": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22",
+    "scripts/current_world_activation.py": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc",
+    "scripts/current_spawn_point.py": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c",
+    "scripts/queue_contract_probe.py": "672e6d9422b7c75e1124c3e4bda3b8b9a4abe24aa5586935b5f4531ea96f7b72",
+    "scripts/session_handoff_probe.py": "cd33450bc809a0286f32eb9f87a9acd1c0664b3852c1af4e76ccdb1644ac93bf",
+    "scripts/dtls_transport_probe.py": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf",
+    "scripts/offline-test-profiles.json": "24ce85d6efd0163061d0bc02616f040050ff0f43aa44da654e354351ed6cade5",
+    "docs/CURRENT_REGISTRATION_PLAYER_INTEGRATION.md": "6f34142115d0d4f554ce9cefb03c4811da027908c857f500e5151efac39cc5ff",
+    "docs/PLAYER_IDENTITY_BODY.md": "d9443aefeb38d2323c0b05d6c7b6a2117472056b064de24b9a5dcd90fabf2dc4",
+    "docs/PLAYER_DESIGNATION_JOIN.md": "812663f17b5b10606e627d7029168382c2b7942e7c9efc2b075b320f8628dc0c",
+    "docs/CHARACTER_IDENTITY_OVERRIDE.md": "a7bfef59e19d07742f9d435aeb7e753e2a5d3d52e251e0781b5f1394af24e351"
+  },
+  "private_artifact_sha256": {
+    ".scratch/fresh-player-dtls-20261008-2109/body.bin": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+    ".scratch/fresh-player-dtls-20261008-2109/challenge.py": "260c7b49641aa1319d060b084d71d8d9b78bfd69bdb951b98faa66cbf2692141",
+    ".scratch/fresh-player-dtls-20261008-2109/character.json": "ae2cbbbca685f11d85fd7bafcc1ca079dbd3322205f8e90718f5bbb8e699f1dd",
+    ".scratch/fresh-player-dtls-20261008-2109/child.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/fresh-player-dtls-20261008-2109/child.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/fresh-player-dtls-20261008-2109/events.jsonl": "e916c0b2e66926f19a197577c09e15564bf271810e89f9ac0d50cf0e25199108",
+    ".scratch/fresh-player-dtls-20261008-2109/result.json": "5a089b88fb04aaa05e3f6dd2520e1f34859f5ee6386b3e0708b2277eb4d05eca",
+    ".scratch/fresh-player-dtls-20261008-2109/run.ps1": "6f75f11dc1e371afc646de178ac01177549caa012fc8aac993b64a5a4c745329",
+    ".scratch/fresh-player-dtls-20261008-2109/typeindex.json": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    ".scratch/fresh-player-integration-20261008T2108/CheckPrepared.ps1": "8108b524e5eac6fb054f16c9104ae04bfffe79fa8eea233b7923f4cda8ae3746",
+    ".scratch/fresh-player-integration-20261008T2108/Controller.ps1": "25f388b261516bd1de16cf9abdef45874d9c242869ec726ae283945855210461",
+    ".scratch/fresh-player-integration-20261008T2108/Focused.ps1": "f40404abbd2f31ccbf7432c7f67275331d943cf5f5d471c3484db56dd6712e9d",
+    ".scratch/fresh-player-integration-20261008T2108/PrepareInputs.ps1": "e59521757ba214b6aca1682517bf16afa20aa365ac26aaf43844757b066c9ebb",
+    ".scratch/fresh-player-integration-20261008T2108/PrepareInputs.py": "2c5b3c87641e1531637a9e90a3a22b13d032f37d9c1e5fc0f542228b828c8e58",
+    ".scratch/fresh-player-integration-20261008T2108/Workspace.ps1": "f1cdcbd0234c728ee5faf88ce68ffa5677b38880bd8d01a5e2673f039e4b3b1d",
+    ".scratch/fresh-player-integration-20261008T2108/WriteMetadata.ps1": "c6617c03dc18cfc55a2c7d99615faafb41b8814b94a52123de929d0e9326b7c9",
+    ".scratch/fresh-player-integration-20261008T2108/WriteMetadata.py": "6368d01a723aa1b13dba032a55f86738e7ca8b96fd6961698a6fe37fe796a4c6",
+    ".scratch/fresh-player-integration-20261008T2108/brief.md": "bf6e5fee2fa3efa677fe413e317f2f2f8be5c0e598752d285819cd07244cb2e9",
+    ".scratch/fresh-player-integration-20261008T2108/controller.json": "f157293f1f81300ef40b898744c34772e8fd22ccebc48388deccdd8958242ffd",
+    ".scratch/fresh-player-integration-20261008T2108/focused-junit.xml": "3f0e54ed57e0fb97341c58b3c63c7a5542e8ce450089ed7a60a0bbc549206a2b",
+    ".scratch/fresh-player-integration-20261008T2108/focused.log": "e9ca42f5835a07adc2c820cc78cb9cc2871ad9511d33cd24d6187daf43e9dae8",
+    ".scratch/fresh-player-integration-20261008T2108/ledger.md": "bc073629f2883d6f76b8b6e40be8d49d0768416f09c3e23f7578b0155f1f1fc5",
+    ".scratch/fresh-player-integration-20261008T2108/preparation.json": "e08f9f50914ad4c47c0a7a49774e1ebb3cb6b9f73a20593fd84b498cdce26bed",
+    ".scratch/fresh-player-integration-20261008T2108/prepared-input-check.json": "e420181747080f586774d5157f95ef62c12c8b433862b9656cb1cd380e16d442",
+    "private/frida-trials/run-20261008T2112-current-player/Run-PreparedFrida.ps1": "24797143370038f0d6c354cb35d06ff8ffc7db329d0813280d87f02747a36c63",
+    "private/frida-trials/run-20261008T2112-current-player/admission.json": "e4f2f718e7489daed8f2ed430c8d43b0d36f522f85daa97110a04d05493241b2",
+    "private/frida-trials/run-20261008T2112-current-player/current-response-body.bin": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+    "private/frida-trials/run-20261008T2112-current-player/player-creation-candidate.bin": "6c02da121095bd0e5fa938db66a635ed25a3fbf4722063d2eb81bae6b9607310",
+    "private/frida-trials/run-20261008T2112-current-player/stage-complete.json": "48cee270796d01bbbaf77bd7d922eb42b13026c95a58690bfb088eb107a4d802",
+    "private/frida-trials/run-20261008T2112-current-player/trial-character.json": "43a01d0e785cf45a55f0f4112b737e07fc95172f2eac8e690645be4f771cc7ab",
+    "private/frida-trials/run-20261008T2112-current-player/trial-inputs.json": "082904e8141f2f239c7584c3279db70ab677c9e36005c31b0e0d7e68d48299e9",
+    ".scratch/offline-validation/run-7qeh5b62/receipt.json": "d73188468626b1c17a68750c45d4583a56779b92693085a09bb0b5e8a4687869",
+    ".scratch/fresh-player-integration-20261008T2108/workspace.log": "5324b97602292aee5d0a28a34502749bb665bf184e62c2600c83389aba45f62c",
+    ".scratch/fresh-player-integration-20261008T2108/workspace-summary.json": "6ad105ba7be8831c38ccc162e0a60419f9fb36dd706efc85c78efe180f193da4",
+    ".scratch/fresh-player-integration-20261008T2108/Finalize.py": "6bd9a82d3b85117532c1e6d5887d595fa9f8cfd454ac064f14d9f85ef6fea6f2",
+    ".scratch/fresh-player-integration-20261008T2108/Finalize.ps1": "8777f82b62c55ebdab2b40164167732bbe6da3c28a30c879b18dc0f38132fccc",
+    ".scratch/fresh-player-integration-20261008T2108/adjudication.md": "26114560bc6e5511215d34fd49ec169ba48f624d07436459ba0660de4548bc52",
+    ".scratch/fresh-player-integration-20261008T2108/catalog-junit.xml": "fc6b3fc8a64436176e6063fbee0290a84f1feb61bdb3476d9c33ff28bc9c8a6c",
+    ".scratch/fresh-player-integration-20261008T2108/catalog.log": "d915a7362c8d9bbd8037f7b9e525ed2db1759c3d07cae38024d8ede953385cce",
+    ".scratch/fresh-player-integration-20261008T2108/preflight.log": "1c27ebecadcae845423618578f522a71fa34f5f31f58b6c1254d59f3a31f8393",
+    ".scratch/fresh-player-integration-20261008T2108/hygiene-before-receipt-closure.json": "b6124079f108bc0881f7437b835c17578a19fd5b8444795c448bd8b4bfa41e3e",
+    ".scratch/fresh-player-integration-20261008T2108/FinalStage.py": "0ccadd3b2936c0c46f6fff38e86421c6b535268f367855b6cc353ef812fc9b04",
+    ".scratch/fresh-player-integration-20261008T2108/FinalStage.ps1": "92f611017ee41dd5b03dbe7b94f12b581a2d1d1437a57bef1bef10df81bab2b8"
+  },
+  "implementation": {
+    "removedProfileExclusions": 3,
+    "changedEncoders": false,
+    "changedScheduler": false,
+    "changedObserverOrHook": false,
+    "selfIdentification": "unchanged constructor defaults and current131 prefix",
+    "retainedGuards": [
+      "complete opt-in current and creation inputs",
+      "canonical SHA-bound immutable character and BODY",
+      "owned type mapping/map/resource contracts",
+      "all actor/world predecessors",
+      "one lifetime peer",
+      "one attempt, no retry after failure",
+      "shared Carrier cursors",
+      "allowlisted metadata only"
+    ],
+    "timing": "existing1s after successful empty bundle; not readiness"
+  },
+  "identity": {
+    "localEquality": "same record character_id/name in selection, queue and identity member; same assigned GdeRef in creation",
+    "nativeDeliveryAndDesignation": "unproved",
+    "runtimeOverride": "selected disk absence only; effective provider override unknown"
+  },
+  "verification": {
+    "focused": {
+      "command": "Invoke-CodexPowerShell.ps1 -Path .scratch/fresh-player-integration-20261008T2108/Focused.ps1 -Execute",
+      "pythonCases": 452,
+      "pythonStatus": "passed",
+      "scope": "seven explicitly selected modules",
+      "controllerChecks": {
+        "scope": "actual isolated registration helpers and creation admission statements; mapping hash mocked only in statement test",
+        "startedUtc": "2026-10-08T21:12:16.3422168+00:00",
+        "firstFailure": "Scriptblock-created code has no file-backed PSScriptRoot; test supplies original controller directory via task variable; production unchanged",
+        "status": "passed",
+        "finishedUtc": "2026-10-08T21:12:17.3952463+00:00"
+      }
+    },
+    "syntheticDtls": {
+      "path": ".scratch/fresh-player-dtls-20261008-2109/result.json",
+      "sha256": "5a089b88fb04aaa05e3f6dd2520e1f34859f5ee6386b3e0708b2277eb4d05eca",
+      "startedUtc": "2026-10-08T21:12:47.363697+00:00",
+      "finishedUtc": "2026-10-08T21:12:58.094114+00:00",
+      "scope": "actual owned localhost CLI/DTLS, new synthetic character and verified private type map; no native game",
+      "status": "passed",
+      "creationExactlyOnce": true,
+      "creationDelaySeconds": 1.0,
+      "coldInvalidCases": 6,
+      "secondPeerRefused": true,
+      "cachedOrFreshRegistrationNeverReplaysCreation": true,
+      "portRebound": true,
+      "certificatesRemoved": true,
+      "childExit": 0
+    },
+    "preparedInputChecks": {
+      "status": "passed",
+      "recordedUtc": "2026-10-08T21:15:18.7624104+00:00",
+      "boundFiles": 156,
+      "scope": "actual isolated pre-resource controller statements, real current/creation verifiers,156 exact unique inputs, captured child forwarding; no controller resource block",
+      "candidateBytes": 107,
+      "candidateSha256": "6c02da121095bd0e5fa938db66a635ed25a3fbf4722063d2eb81bae6b9607310",
+      "manifestSha256": "082904e8141f2f239c7584c3279db70ab677c9e36005c31b0e0d7e68d48299e9",
+      "nativeGrant": false,
+      "nativeClientExecuted": false,
+      "runtimeResourcesAcquired": false
+    },
+    "workspace": {
+      "status": "passed",
+      "path": ".scratch/offline-validation/run-7qeh5b62/receipt.json",
+      "sha256": "d73188468626b1c17a68750c45d4583a56779b92693085a09bb0b5e8a4687869",
+      "startedUtc": "2026-10-08T21:21:30.999132+00:00",
+      "finishedUtc": "2026-10-08T21:22:56.721499+00:00",
+      "selectedInputs": 301,
+      "changedInputs": [],
+      "python": {
+        "selectedFiles": 52,
+        "collected": 2059,
+        "executed": 2059,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_frida_controller_lifetime.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 65031
+      },
+      "selectedPythonModules": 52,
+      "selectedPowerShellSuites": 5
+    },
+    "review": {
+      "status": "passed with one evidence-scope correction",
+      "scope": "targeted fresh-context Adversary",
+      "independentlyRehashedBindings": 156,
+      "bindingMismatches": 0,
+      "canonicalCandidateEqual": true,
+      "correction": "input-admission checks exclude elevation, one-attempt/retained-root/runtime containment checks; CA validity/run freshness separately checked"
+    },
+    "stagedHygiene": {
+      "status": "passed",
+      "snapshot": "entire staged tree before adding this closure metadata; final candidate must be rescanned",
+      "blobsScanned": 417,
+      "bytesScanned": 5224212,
+      "findings": [],
+      "inventorySha256": "d0c936f8bf930bd36bcf0293c9ab557873755a90ef24624123fadc544b5211ec",
+      "reviewedMarkers": [
+        {
+          "path": "tests/test_rep_anchor_candidate.py",
+          "rule": "private-key"
+        }
+      ],
+      "finalSnapshotReceipt": ".scratch/fresh-player-integration-20261008T2108/hygiene.json"
+    },
+    "workspaceInputReuseLimit": "Only the original evidence receipt is amended with actual results after the stable full run; affected catalog/preflight checks follow. No runtime/test/input changes.",
+    "affectedCatalog": {
+      "cases": 36,
+      "status": "passed",
+      "actualPreflight": "passed",
+      "reason": "new/updated evidence receipt after unchanged stable full run"
+    }
+  },
+  "proposal": {
+    "status": "prepared-only",
+    "recordedUtc": "2026-10-08T21:14:03.312997+00:00",
+    "baselineHead": "40cee5f1dcdc7ecbc6aed9cdcf651db62c6b3b59",
+    "runDirectory": "private/frida-trials/run-20261008T2112-current-player",
+    "manifestSha256": "082904e8141f2f239c7584c3279db70ab677c9e36005c31b0e0d7e68d48299e9",
+    "boundFiles": 156,
+    "characterSha256": "43a01d0e785cf45a55f0f4112b737e07fc95172f2eac8e690645be4f771cc7ab",
+    "candidateSha256": "6c02da121095bd0e5fa938db66a635ed25a3fbf4722063d2eb81bae6b9607310",
+    "candidateBytes": 107,
+    "bodySha256": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+    "clientCopyReused": true,
+    "caNotAfterUtc": "2026-10-09T18:58:22+00:00",
+    "nativeGrant": false,
+    "nativeClientExecuted": false,
+    "runtimeResourcesAcquired": false,
+    "scope": "existing131-byte default self/prefix83 02, spawn, LevelInfo, empty bundle, then one original107-byte creation/identity candidate; no scheduler or observer change",
+    "limits": [
+      "timer is not readiness",
+      "native key9/class table/resource loading unproved",
+      "runtime provider override unproved",
+      "no stable player or control acceptance"
+    ]
+  },
+  "failuresRetained": [
+    {
+      "phase": "first isolated PS statement extraction",
+      "result": "failed because Scriptblock-created PSScriptRoot was empty",
+      "correction": "test supplies original script directory with a task variable; production expressions unchanged;452 Python cases already passed"
+    }
+  ],
+  "limits": [
+    "native incoming selector/authentication remain unproved",
+    "same-ID local composition is not native designation",
+    "runtime class/resource-index/key9 delivery unproved",
+    "timer/ACK is not async map readiness",
+    "no new native trial grant or client execution",
+    "no rendered/control/movement/restart acceptance",
+    "no Amazon independence claim"
+  ],
+  "cleanup": {
+    "syntheticChildExited": true,
+    "syntheticPortRebound": true,
+    "syntheticCertificatesRemoved": true,
+    "nativeRuntimeResourcesAcquired": false,
+    "privateProposalRetained": true,
+    "scratchDisposition": "task brief, preparation/readback/verification helpers and receipts retained ignored; no disposable native stop/launch scripts created"
+  }
+}

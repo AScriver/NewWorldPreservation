@@ -1,5 +1,25 @@
 # Milestone 1 roadmap
 
+## Current registration and fresh player integration — October8, #286
+
+[K438–K440](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md) connects explicit current
+registration to the existing original creation/identity candidate. The CLI,
+adapter and controller retain all selected-stage/source/hash/type/asset/peer
+guards; encoders, scheduler and fixed-default SelfIdentification are unchanged.
+One fresh private record supplies selection/queue and the candidate identity.
+452 focused cases, actual isolated PowerShell admission checks and an independent
+real synthetic localhost DTLS exchange passed. The candidate was sent once after
+the empty bundle, with shared cursors and no replay on registration retries.
+
+A new156-binding private proposal passes the selected pre-resource input checks
+and canonical verifiers. It reuses the verified client copy and existing observer;
+no native client or system resources were started. Complete workspace verification
+and scoped review are recorded in the integration receipt. Native key9 delivery,
+resource loading, effective identity override, asynchronous map readiness,
+designation, camera/input and movement remain unproved. The next concrete step
+is one specifically approved isolated-client creation attempt with user-stop
+lifetime. Previous grants are consumed; this integration grants no new launch.
+
 ## Current registration/map attempt — October8, #214, partial
 
 The single specifically approved attempt ran at clean d90d0d1 with154 unchanged
@@ -36,7 +56,8 @@ and the broader multiplayer milestone retain their existing scope.
 the existing optional heartbeat/SelfIdentification/spawn/LevelInfo/empty-bundle
 send path through the CLI and controller. Exact caller BODY, shared cursors,
 stage prerequisites and map/type/version/hash guards are retained; current
-player-creation mixing is rejected at every entry point. No scheduler, codec,
+player-creation mixing was rejected at this checkpoint; #286 now joins it with
+the full existing preparation guards. No scheduler, codec,
 response defaults or readiness model was added.
 
 284 focused cases, isolated PowerShell helpers and three actual synthetic
@@ -1487,9 +1508,10 @@ native attempt stopped before registration/creation on the repeated-connect
 guard; the subsequent offline guard repair is not a successful native rerun.
 Resource index9, actual Carrier delivery, fresh identity propagation,
 designation, camera/input and movement remain separate unproved conditions.
-Current registration with creation is still excluded. First prepare and verify
-its source-supported integration and the separate readiness boundary; a further
-native attempt requires a specific grant. The #214 grant is consumed. Selection/
+The #286 offline integration now admits the complete original candidate with
+current registration. Its fresh private proposal and synthetic checks establish
+preparation only; a further native attempt requires a specific grant. The separate
+readiness boundary remains unread. The #214 grant is consumed. Selection/
 apparent-map reports establish no stable player. See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
 
 October5 tooling improvement: function-scoped Ghidra is now the default for

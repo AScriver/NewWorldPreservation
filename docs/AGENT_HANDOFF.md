@@ -1,5 +1,28 @@
 # Agent handoff
 
+## Current registration/fresh player integration — October8, #286
+
+- Slice: existing original creation/identity candidate now composes with the
+  explicit current-registration CLI/adapter/controller. Only3 exclusions removed;
+  all downstream guards, encoder/scheduler and fixed-default SelfIdentification
+  unchanged. Same fresh record supplies HTTPS and Carrier identity inputs.
+-452 focused cases and actual isolated PS checks passed. Independent synthetic
+  localhost DTLS verified exact current/bootstrap/creation bytes once, shared
+  cursors, no replay, cold rejection and second-peer refusal. Child/port/certs
+  cleaned. Full workspace/review/staged hygiene results belong to the receipt.
+- New proposal: `run-20261008T2112-current-player`,156 bindings,107-byte candidate;
+  selected input-admission checks and canonical verifiers passed with child starts
+  captured. No native resource block ran. Retain private preparation/diagnostics;
+  all old proposals and consumed runs remain unchanged.
+- Next owner: user for a new specific one-attempt grant and manual Play/control
+  report. [Prepared scope](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md). Existing
+  CA expires October9 at18:58:22UTC; recheck validity/bindings before admission.
+  Agent can continue authorized source-supported work separately.
+- Limits: key9/class-table/resource loading, effective provider override,
+  async readiness, player designation, camera/input and movement remain unproved.
+  No extra observation site or claimed gameplay completion. Full server replacement
+  and the broader multiplayer milestone remain open.
+
 ## Closed current registration/map attempt — October8, #214, partial
 
 - Clean d90d0d1; specific single-attempt grant;154 unchanged bindings19/3/zeroBODY,

@@ -88,11 +88,72 @@ try {
     try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Nonboolean current selection accepted.' }
     catch { if ($_.Exception.Message -ceq 'Nonboolean current selection accepted.') { throw } }
     $manifestObject.current_registration = $true
-    foreach ($mixedName in @('trial_character_path','player_creation_candidate')) {
-        Add-Member -InputObject $manifestObject -NotePropertyName $mixedName -NotePropertyValue $true
-        try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Mixed profile accepted.' }
-        catch { if ($_.Exception.Message -ceq 'Mixed profile accepted.') { throw } }
-        $manifestObject.PSObject.Properties.Remove($mixedName)
+    # Execute the actual creation-admission statements in isolation. No controller,
+    # client, routing or service starts. Only the mapping hash read is modeled here;
+    # Python canonical preparation and the private proposal verify real mapping bytes.
+    $creationStart = $source.IndexOf('$creationArguments = @()')
+    $creationEnd = $source.IndexOf('foreach ($requiredBinding in $requiredBindings)')
+    if ($creationStart -lt 0 -or $creationEnd -le $creationStart -or $creationEnd -ge $firstHostsMutation) { throw 'Creation admission moved after resources.' }
+    $controllerScriptRoot = Split-Path -Parent $controllerPath
+    # Scriptblock-created code has no file-backed PSScriptRoot. Supply the same
+    # directory under a task variable; leave the admission expressions unchanged.
+    $creationAdmission = [scriptblock]::Create($source.Substring($creationStart,$creationEnd-$creationStart).Replace('$PSScriptRoot','$controllerScriptRoot'))
+    $clientDirectory = Join-Path $registrationTestRoot 'synthetic-client'
+    $null = New-Item -ItemType Directory -Path $clientDirectory
+    $mappingPath = Join-Path $clientDirectory 'typeindex.json'
+    [IO.File]::WriteAllText($mappingPath,'synthetic hash-boundary model only')
+    $characterPath = Join-Path $registrationTestRoot 'character.json'
+    [IO.File]::WriteAllText($characterPath,'{}')
+    $characterDigest = (Get-FileHash -LiteralPath $characterPath -Algorithm SHA256).Hash.ToLowerInvariant()
+    function Get-FileHash {
+        param([string]$LiteralPath,[string]$Algorithm)
+        if ($LiteralPath -ieq $mappingPath) { return [pscustomobject]@{Hash='f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75'} }
+        Microsoft.PowerShell.Utility\Get-FileHash -LiteralPath $LiteralPath -Algorithm $Algorithm
+    }
+    try {
+        $creationSelection = @{
+            player_creation_candidate=$true; trial_character_path=$characterPath
+            trial_character_sha256=$characterDigest; type_index_path=$mappingPath
+            delivery_mode='resource-index'; trial_known_empty_occupancy=$true
+            registration_server_version='[RETAIL].Javelin.1.400.6031.6004151'
+            heartbeat_15d=$true; self_ident_default=$true; self_ident_current_length=$true
+            spawn_point_notification=$true; world_activation=$true; context_gate_observer=$true
+        }
+        foreach ($selectedName in $creationSelection.Keys) {
+            $manifestObject | Add-Member -NotePropertyName $selectedName -NotePropertyValue $creationSelection[$selectedName]
+        }
+        $manifest = $manifestObject
+        $requiredBindings = @()
+        . $creationAdmission
+        $joinedArguments = @(Get-CurrentRegistrationTrialArguments -Manifest $manifest -WorkspaceRoot $workspaceRoot)
+        if (($joinedArguments -join '|') -cne ($registrationArguments -join '|') -or
+            ($creationArguments -join '|') -cne "--trial-character|$characterPath|--trial-character-sha256|$characterDigest|--trial-known-empty-occupancy" -or
+            $requiredBindings -notcontains $characterPath -or $requiredBindings -notcontains $mappingPath) { throw 'Current creation lost independent BODY/identity bindings.' }
+        Assert-CurrentRegistrationTrialPreflight -Manifest $manifest -RegistrationArguments $joinedArguments -ScriptRoot (Join-Path $workspaceRoot 'scripts')
+        foreach ($selectedName in $creationSelection.Keys) {
+            $savedValue = $manifest.$selectedName
+            $manifest.PSObject.Properties.Remove($selectedName)
+            try { . $creationAdmission; throw 'Incomplete selected creation admitted.' }
+            catch { if ($_.Exception.Message -ceq 'Incomplete selected creation admitted.') { throw } }
+            $manifest | Add-Member -NotePropertyName $selectedName -NotePropertyValue $savedValue
+        }
+        foreach ($badSelection in @($false,'true',1)) {
+            $manifest.player_creation_candidate = $badSelection
+            try { . $creationAdmission; throw 'Invalid creation selection admitted ancillary inputs.' }
+            catch { if ($_.Exception.Message -ceq 'Invalid creation selection admitted ancillary inputs.') { throw } }
+        }
+        $manifest.player_creation_candidate = $true
+        $manifest.trial_character_sha256 = '0'*64
+        try { . $creationAdmission; throw 'Stale character admitted.' }
+        catch { if ($_.Exception.Message -ceq 'Stale character admitted.') { throw } }
+        $manifest.trial_character_sha256 = $characterDigest
+        $manifest | Add-Member -NotePropertyName trial_occupied_low64 -NotePropertyValue @('2')
+        try { . $creationAdmission; throw 'Conflicting occupancy admitted.' }
+        catch { if ($_.Exception.Message -ceq 'Conflicting occupancy admitted.') { throw } }
+        $manifest.PSObject.Properties.Remove('trial_occupied_low64')
+    } finally {
+        Remove-Item -LiteralPath 'Function:\Get-FileHash'
+        foreach ($selectedName in $creationSelection.Keys) { $manifestObject.PSObject.Properties.Remove($selectedName) }
     }
     $manifestObject.application_contract = 'other'
     try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Wrong contract accepted.' }

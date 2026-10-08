@@ -229,8 +229,6 @@ class RegistrationAdapter:
         if self_ident_current_length and not self_ident_default:
             raise ValueError("current length comparison requires the current default actor candidate")
         if prepared_creation is not None:
-            if self._current_response_payload is not None:
-                raise ValueError("current registration cannot select player creation")
             if (type(prepared_creation) is not PreparedPlayerCreation or
                     server_version != OWNED_SERVER_VERSION or not heartbeat_15d or
                     not self_ident_default or not self_ident_current_length or
@@ -943,8 +941,6 @@ def parse_options(argv=None):
         digest = options.current_response_body_sha256.lower()
         if len(digest) != 64 or any(character not in "0123456789abcdef" for character in digest):
             parser.error("Current response BODY requires a hexadecimal SHA256")
-        if options.player_creation_candidate:
-            parser.error("Current registration cannot select player creation")
     if options.self_ident_default and (not options.heartbeat_15d or
                                       options.server_version != OWNED_SERVER_VERSION):
         parser.error("Default actor candidate requires owned version and heartbeat")

@@ -65,7 +65,7 @@ def test_current_cli_zero_selector_and_historical_default_are_distinct():
     assert adapter_module.parse_options(CLI_BASE + CLI_CURRENT + ["--heartbeat-15d"]).heartbeat_15d
 
 
-def test_current_cli_accepts_explicit_bootstrap_but_rejects_creation():
+def test_current_cli_accepts_bootstrap_and_requires_complete_creation_inputs():
     stages = ["--server-version", adapter_module.OWNED_SERVER_VERSION,
               "--heartbeat-15d", "--self-ident-default", "--spawn-point-notification",
               "--world-activation", "--self-ident-current-length"]
@@ -395,12 +395,65 @@ def test_current_user_stop_send_failures_suppress_successors(failure):
         adapter.on_tick(peer, 10.0)
 
 
-def test_current_direct_adapter_rejects_player_creation():
-    with pytest.raises(ValueError, match="current registration cannot select player creation"):
-        current_adapter(server_version=adapter_module.OWNED_SERVER_VERSION,
-            heartbeat_15d=True, self_ident_default=True, self_ident_current_length=True,
-            spawn_point_notification=True, world_activation=True,
-            prepared_creation=_synthetic_prepared_creation())
+@pytest.mark.parametrize("omitted", ["server_version", "heartbeat_15d", "self_ident_default",
+    "self_ident_current_length", "spawn_point_notification", "world_activation"])
+def test_current_direct_adapter_creation_retains_all_predecessor_guards(omitted):
+    selected = dict(server_version=adapter_module.OWNED_SERVER_VERSION,
+        heartbeat_15d=True, self_ident_default=True, self_ident_current_length=True,
+        spawn_point_notification=True, world_activation=True,
+        prepared_creation=_synthetic_prepared_creation())
+    selected.pop(omitted)
+    with pytest.raises(ValueError):
+        current_adapter(**selected)
+
+
+def test_current_creation_retries_and_delayed_ticks_do_not_reschedule_or_replay():
+    prepared, (adapter, events, frame, peer) = _ready_creation_candidate(True)
+    state = adapter.peers[peer.id]
+    for tick in (10.0, 20.0, 30.0, 40.0):
+        adapter.on_tick(peer, tick)
+    assert state.next_creation_at == 41.0 and not state.creation_attempted
+    adapter.on_app(peer, b"\x02current")
+    adapter.on_app(peer, b"\x03current")
+    assert state.next_creation_at == 41.0
+    adapter.on_tick(peer, 40.99)
+    assert not state.creation_attempted
+    adapter.on_tick(peer, 41.0)
+    assert state.creation_sent
+    creation_payload = bytes((len(prepared.typed_bytes),)) + prepared.typed_bytes
+    assert sum(record.payload == creation_payload for record in frame.marshaled) == 1
+    cursors = (state.next_ch0_seq, state.next_ch0_rel)
+    adapter.on_app(peer, b"\x03current")
+    adapter.on_app(peer, b"\x04current")
+    assert (state.next_ch0_seq, state.next_ch0_rel) == cursors
+    assert all(creation_payload not in datagram
+               for replies in state.replies.values() for datagram in replies)
+    adapter.on_tick(peer, 100.0)
+    assert sum(record.payload == creation_payload for record in frame.marshaled) == 1
+    unique_records = list(dict.fromkeys(
+        (record.sequence, record.reliable_sequence, record.payload)
+        for record in frame.marshaled))
+    assert [(seq, rel) for seq, rel, _payload in unique_records] == [
+        (index, index) for index in range(len(unique_records))]
+
+
+def test_current_user_stop_creation_send_failure_is_terminal_and_not_retried():
+    adapter, events, frame, peer = ready_current_bootstrap(
+        user_stop=True, spawn_point_notification=True, world_activation=True,
+        self_ident_current_length=True, prepared_creation=_synthetic_prepared_creation())
+    for tick in (0.5, 1.0, 2.0, 3.0, 4.0):
+        adapter.on_tick(peer, tick)
+    peer.partial = True
+    with pytest.raises(TerminalProtocolError, match="actor_send_failed"):
+        adapter.on_tick(peer, 5.0)
+    state = adapter.peers[peer.id]
+    assert state.creation_attempted and not state.creation_sent
+    attempts = len(frame.marshaled)
+    peer.partial = False
+    with pytest.raises(TerminalProtocolError, match="actor_send_failed"):
+        adapter.on_tick(peer, 6.0)
+    assert len(frame.marshaled) == attempts
+    assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
 
 
 @pytest.mark.parametrize("vector", CURRENT_STREAMS, ids=lambda row: row["name"])
@@ -1585,11 +1638,17 @@ def _synthetic_prepared_creation():
                                   hashlib.sha256(candidate.typed_bytes).hexdigest())
 
 
-def test_player_creation_is_once_after_empty_bundle_with_shared_cursors():
+def _ready_creation_candidate(current_profile):
     prepared = _synthetic_prepared_creation()
-    adapter, events, frame, peer = _ready_current_actor_candidate(
-        spawn_point_notification=True, world_activation=True,
-        self_ident_current_length=True, prepared_creation=prepared)
+    selected = dict(spawn_point_notification=True, world_activation=True,
+                    self_ident_current_length=True, prepared_creation=prepared)
+    ready = ready_current_bootstrap if current_profile else _ready_current_actor_candidate
+    return prepared, ready(**selected)
+
+
+@pytest.mark.parametrize("current_profile", [False, True], ids=["legacy", "current"])
+def test_player_creation_is_once_after_empty_bundle_with_shared_cursors(current_profile):
+    prepared, (adapter, events, frame, peer) = _ready_creation_candidate(current_profile)
     for tick in (1.0, 2.0, 3.0, 4.0, 4.99):
         adapter.on_tick(peer, tick)
     assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
@@ -1611,11 +1670,9 @@ def test_player_creation_is_once_after_empty_bundle_with_shared_cursors():
 
 
 @pytest.mark.parametrize("corruption", ("typed_bytes", "typed_sha256"))
-def test_player_creation_final_digest_guard_is_terminal_before_send(corruption):
-    prepared = _synthetic_prepared_creation()
-    adapter, events, frame, peer = _ready_current_actor_candidate(
-        spawn_point_notification=True, world_activation=True,
-        self_ident_current_length=True, prepared_creation=prepared)
+@pytest.mark.parametrize("current_profile", [False, True], ids=["legacy", "current"])
+def test_player_creation_final_digest_guard_is_terminal_before_send(corruption, current_profile):
+    prepared, (adapter, events, frame, peer) = _ready_creation_candidate(current_profile)
     for tick in (1.0, 2.0, 3.0, 4.0):
         adapter.on_tick(peer, tick)
     state = adapter.peers[peer.id]
@@ -1643,11 +1700,9 @@ def test_player_creation_final_digest_guard_is_terminal_before_send(corruption):
     assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
 
 
-def test_player_creation_predecessor_failure_and_exception_never_retry(monkeypatch):
-    prepared = _synthetic_prepared_creation()
-    adapter, events, _frame, peer = _ready_current_actor_candidate(
-        spawn_point_notification=True, world_activation=True,
-        self_ident_current_length=True, prepared_creation=prepared)
+@pytest.mark.parametrize("current_profile", [False, True], ids=["legacy", "current"])
+def test_player_creation_predecessor_failure_and_exception_never_retry(monkeypatch, current_profile):
+    prepared, (adapter, events, _frame, peer) = _ready_creation_candidate(current_profile)
     for tick in (1.0, 2.0, 3.0):
         adapter.on_tick(peer, tick)
     peer.partial = True
@@ -1658,9 +1713,7 @@ def test_player_creation_predecessor_failure_and_exception_never_retry(monkeypat
     adapter.on_tick(peer, 5.0)
     assert not any(row["event"] == "PLAYER_CREATION_CANDIDATE_SENT" for row in events.rows)
 
-    adapter, events, _frame, peer = _ready_current_actor_candidate(
-        spawn_point_notification=True, world_activation=True,
-        self_ident_current_length=True, prepared_creation=prepared)
+    prepared, (adapter, events, _frame, peer) = _ready_creation_candidate(current_profile)
     for tick in (1.0, 2.0, 3.0, 4.0):
         adapter.on_tick(peer, tick)
     original = adapter._send_fixed_actor_message
@@ -1676,13 +1729,12 @@ def test_player_creation_predecessor_failure_and_exception_never_retry(monkeypat
     assert "synthetic private data" not in str(events.rows)
 
 
-def test_player_creation_peer_object_and_option_guards():
+@pytest.mark.parametrize("current_profile", [False, True], ids=["legacy", "current"])
+def test_player_creation_peer_object_and_option_guards(current_profile):
     prepared = _synthetic_prepared_creation()
     with pytest.raises(ValueError, match="complete current guarded"):
         setup_adapter(prepared_creation=prepared)
-    adapter, events, frame, first = _ready_current_actor_candidate(
-        spawn_point_notification=True, world_activation=True,
-        self_ident_current_length=True, prepared_creation=prepared)
+    prepared, (adapter, events, frame, first) = _ready_creation_candidate(current_profile)
     second = Peer(first.id)
     frame.records = [Record(system_id=1, payload=b"\x01")]
     adapter.on_app(second, b"\x03connect")
@@ -1693,9 +1745,12 @@ def test_player_creation_peer_object_and_option_guards():
                row["reason"] == "creation_lifetime_peer_limit" for row in events.rows)
 
 
-def test_player_creation_cli_options_are_default_off_and_coupled():
+@pytest.mark.parametrize("current_profile", [False, True], ids=["legacy", "current"])
+def test_player_creation_cli_options_are_default_off_and_coupled(current_profile):
     base = ["--certificates", "private/certs", "--log", "private/events",
             "--first-light", "reference"]
+    if current_profile:
+        base += CLI_CURRENT
     assert adapter_module.parse_options(base).player_creation_candidate is False
     with pytest.raises(SystemExit):
         adapter_module.parse_options(base + ["--trial-character", "private/character.json"])

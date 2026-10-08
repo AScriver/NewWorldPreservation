@@ -26,12 +26,6 @@ function Get-CurrentRegistrationTrialArguments {
     $bodyPath = [IO.Path]::GetFullPath($Manifest.current_response_body)
     $privateRoots = @((Join-Path $WorkspaceRoot 'private'),(Join-Path $WorkspaceRoot '.scratch'))
     if (@($privateRoots | Where-Object { $bodyPath.StartsWith($_+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) }).Count -eq 0) { throw 'Current registration BODY must remain private.' }
-    foreach ($mixedName in @('trial_character_path','trial_character_sha256','type_index_path','delivery_mode','trial_known_empty_occupancy','trial_occupied_low64')) {
-        if ($Manifest.PSObject.Properties.Name -contains $mixedName) { throw 'Current registration cannot mix creation inputs.' }
-    }
-    if ($Manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -and $Manifest.player_creation_candidate -ne $false) {
-        throw 'Current registration cannot select player creation.'
-    }
     return @('--current-request-type-index',([string]$Manifest.current_request_type_index),
              '--current-response-type-index',([string]$Manifest.current_response_type_index),
              '--current-response-body',$bodyPath,

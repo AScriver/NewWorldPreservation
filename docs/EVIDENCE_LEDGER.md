@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Current registration/fresh player integration — October8, #286
+
+[Receipt](../research/evidence/current-registration-player-integration.json) pins
+clean40cee5f plus relevant changed sources/tests and the original private proposal.
+
+| ID | Claim | Evidence and limits |
+| --- | --- | --- |
+| K438 | Explicit current registration composes with the original prepared creation path |452 focused cases, actual isolated PS checks and real synthetic localhost DTLS. Complete prerequisites, same cursors, once-attempt/failure/privacy/peer guards retained; no codec or scheduler change. Synthetic delivery is not native acceptance |
+| K439 | Selection/queue and creation share the fresh local identity inputs |Actual immutable-record/candidate/HTTPS code and existing equality checks; character ID/name unchanged, same assigned GdeRef. SelfIdentification remains separate fixed defaults. Native key9 callback delivery, effective provider override, designation/readiness/control unknown |
+| K440 | A fresh bound client proposal passes offline input-admission checks |New107-byte original candidate/156 unique inputs; actual real-hash admission statements and canonical verifiers, captured child forwarding. Verified copy reused; no resource block or native operation. Separate specific grant required; CA validity/bindings rechecked before admission |
+
+The previous native attempt omitted creation. Its timeout does not establish
+the sole missing condition. One-second creation delay and transport ACKs are not
+asynchronous map readiness. Full world-entry/player acceptance remains open.
+
 ## Current registration/map attempt — October8, #214, partial
 
 [Receipt](../research/evidence/current-registration-bootstrap-trial.json) pins

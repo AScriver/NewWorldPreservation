@@ -1,5 +1,23 @@
 # Bounded task briefs
 
+## #286 — integrate current registration and original fresh-player candidate (M)
+
+- Baseline clean main40cee5f; current runtime/test and156 private bindings pinned
+  in the [receipt](../research/evidence/current-registration-player-integration.json).
+- Owner: primary owns the2 admission sources,2 guard-test files and associated
+  original docs/receipt/catalog/ledger. Investigator read-only; Tester owns one
+  unique ignored synthetic DTLS run, dynamic127.0.0.1 port and exact child/certs.
+- Completion: actual profile composition, all retained guards and same fresh
+  record forwarding, deterministic/PS/DTLS/full offline checks, fresh preparation,
+  scoped review/hygiene/commit and tracker closure. Native gameplay is separate.
+- Permitted: original offline edits/tests/read-only owned inputs; no native game,
+  memory/hooks/routing/trust, Amazon endpoint, replay, publication or new grant.
+- Rejection: incomplete/stale/mismatched inputs, missing stage, wrong occupancy/
+  class/mode, multi-peer reuse, repeated candidate send or timer-as-readiness claim.
+- Cleanup: exact synthetic children/ports/certs released; private records and
+  receipts retained. No native resources acquired. Next user action is a specific
+  one-attempt grant for the [prepared scope](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md).
+
 ## #214 — one admitted current registration/map observation (M, partial)
 
 - Input: clean main d90d0d1; original154-binding prepared manifest, selectors19/3,

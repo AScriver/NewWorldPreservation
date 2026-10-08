@@ -35,6 +35,13 @@ required. On success retain reproduction commands,
 correlated logs and visual evidence or explicit user confirmation, mark this
 milestone complete, and proceed to the existing multiplayer acceptance gate.
 
+October8's later [current-registration/map attempt](CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md)
+reached native response receipt and self/LevelInfo/context activation, then the
+user reported a spawn timeout. Creation was omitted and later async readiness
+was unread. The [#286 integration](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md)
+now prepares the original fresh candidate on that route; native acceptance
+remains unperformed and requires its own specific one-attempt grant.
+
 ## Furthest real-client behavior
 
 October7's [first selected creation trial](../research/evidence/private-player-creation-trial-20261007.json)
@@ -45,8 +52,10 @@ actor/world or creation message was sent. The controller stopped the game and
 cleanup/readback passed. The user reported an apparent crash on Play; native
 crash causality is unproved. That single-attempt grant is consumed.
 
-This later attempt did not advance the player path. The furthest observed
-context/player-path behavior remains the earlier0655 trial below.
+That October7 attempt did not advance the player path. The subsequent October8
+current-registration attempt reached comparable context/player-path callbacks
+on the explicit current route; neither it nor the earlier0655 trial below
+created a controllable player. Preserve each run's exact inputs separately.
 
 The closed [0655 private trial](../research/evidence/current-self-length-prefix-trial.json)
 used the isolated owned copy, loopback containment, existing trust hook,

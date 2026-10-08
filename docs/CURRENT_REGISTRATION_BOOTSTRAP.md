@@ -37,8 +37,9 @@ literal as **guard metadata**. Current response bytes come entirely from the
 caller BODY; the version is not injected into `field_38` or another field.
 An empty `field_38` remains empty. Its required native contents and acceptance
 semantics are unknown. Encoding a response never establishes authentication.
-Current registration with player creation is rejected by the CLI, controller
-and direct adapter API; creation ancillary inputs also remain excluded.
+At the #213 checkpoint, current registration with player creation was rejected
+by the CLI, controller and direct API. The later [#286 integration](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md)
+permits the complete original candidate with all existing preparation guards.
 
 ## Send state and readiness
 

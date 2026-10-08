@@ -52,8 +52,9 @@ October4stage; its cause and change time are unknown. The owned copy is retained
 K434–K437 do not choose between later asynchronous readiness failure and missing
 player construction/designation. Those conditions remain separate, followed by
 camera/input ownership. Next server work is source-backed fresh-player integration
-and the readiness boundary. The current registration/creation admission prohibition
-remains in force until that integration is prepared and verified. #214/aggregate
+and the readiness boundary. At closure, current registration/creation mixing
+remained excluded. The later [#286 offline integration](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md)
+prepares that combination with existing guards and no new native grant. #214/aggregate
 world entry remain partial; another native attempt needs its own specific grant.
 
 Targeted independent review upheld K434–K437 within these limits. Fresh36 affected
