@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 281,
+  "parentActionableId": 277,
+  "claimIds": [
+    "K416",
+    "K417",
+    "K418"
+  ],
+  "recordedUtc": "2026-10-08T10:14:14.189012+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "a3834d1a0f4d055804d8ea6e3491e295e24ae1a0",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_RECEIVE_STATE.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_RECEIVE_STATE.md": "d4083c81e7a895bfee8908e00092a900a53fa03752b074c36b9542d949dcc0e7",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-address-factory.json": "a50cc35e3f7c6f019aade1b6f30898e5974181baf3cd0f06cdc864b7857a4f07",
+    "research/evidence/current-registration-driver-backend.json": "30f5fb1c4b38a2f41d49aa9c2be8449c78d4ab44e45720de38d7a10067bc9fbd",
+    "research/evidence/current-registration-incoming-reader.json": "514a066c5cda5ed727f40eb25f2124b22bd3b492d1e3344ca25c30d1442713f9",
+    "research/evidence/current-registration-packet-dispatch.json": "b17b1e40e466bbca541e46a199739ee6ca7eaa9d14792b1966c5811d96417a57",
+    "research/evidence/current-registration-packet-receive.json": "06e20c6232a565811eeb344e11ed3ae0a0943e7954219938a34e1b92171fd76e",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/registration262-worker-20261008T0126Z/table-148480670.json": "476602d6c22a95a51ed6c68e6de890fa4ea6321a8c087c217aa0621b3f014e04",
+    ".scratch/registration278-primary-20261008T0822Z/closure.json": "7162e57defbddc37c2c471bd15e3f55ff88be03f86ad633b5cec65d2876cd2c8",
+    ".scratch/registration279-next-callback-20261008T0916Z/report.md": "38b05f80e15867974fa0cfb5f17cdb15d530c1abc910dfa8f036390b1ece0253",
+    ".scratch/registration280-next-construction-20261008T0937Z/report.md": "257712fed36260a090de5e1e3ca43fb3659846b011df04eee0eb22ca4bce5c31",
+    ".scratch/registration281-construction-20261008T0955Z/ADDENDUM-2.md": "e2551f4e1b8e6524bb7d78fc35bb57fb2f1fa907d150d6871e251e1518cf03b3",
+    ".scratch/registration281-construction-20261008T0955Z/ADDENDUM.md": "355c45b62ba9031cbcc139bd78880563c812bd712fff13ffb3e165517682b8c2",
+    ".scratch/registration281-construction-20261008T0955Z/NEXT-EDGE.md": "999228850e5e3d665fdbaf5c80e43aa81de278a8ff380d733aa55988867f4b98",
+    ".scratch/registration281-construction-20261008T0955Z/NativeCheck.ps1": "8a311b9e037344e112f683b41cac4fec8319b5fdfc8b3b8c7c880ea072eb27a7",
+    ".scratch/registration281-construction-20261008T0955Z/NativeCheck.py": "9976aae70602475479fd0174560d823fb607fdf3d7a81a54c6bdb6a9ae111b75",
+    ".scratch/registration281-construction-20261008T0955Z/NativeCheckSecond.ps1": "3feb84a98cbdcc17af9f05a113f01796f61ca87e5ea499dcad335d82ffba80b6",
+    ".scratch/registration281-construction-20261008T0955Z/NativeCheckSecond.py": "31a189967beaab276dffc828e12a69ca1f1e88bbae353b9b75476be4870447e2",
+    ".scratch/registration281-construction-20261008T0955Z/Query145dcecd0.ps1": "5bdcd42f3585ff7fe8ae4c5ce3ea5c60b1392e9a679e88d601108da575490cea",
+    ".scratch/registration281-construction-20261008T0955Z/Query145de1a30.ps1": "974027983d642ff4312a5effe16dac9e8d2f258880cbdf9d82eb58b4377f73ba",
+    ".scratch/registration281-construction-20261008T0955Z/Query145de1a30.retry.ps1": "5d0b6a913c1295383835f150c5388fc3bf9e90b559176066f36d2423289aa644",
+    ".scratch/registration281-construction-20261008T0955Z/REPORT.md": "4003523dd99e1de53f61b73be2e64bdd6914cd6e93cc50bd6d5b3bea177b0c60",
+    ".scratch/registration281-construction-20261008T0955Z/native-check-145dcecd0.json": "c2757ef2931e80b73264c85ebbcb84df5369ac697179d78c319b557c2b21520d",
+    ".scratch/registration281-construction-20261008T0955Z/native-check.json": "f37a6c6b580e2ac37a587478d40f37e450dd6901646ff3fe209930dc9fc844f2",
+    ".scratch/registration281-construction-20261008T0955Z/native-instructions-145dcecd0.txt": "f8057c4b67429961d4d890305533c9348f7a0e481ba4d3e91cabe87954bc2471",
+    ".scratch/registration281-construction-20261008T0955Z/native-instructions.txt": "7cb208cae0c927b921dcfee9a2527a8718d8c694f85d5f50cafeb41b49bf9062",
+    ".scratch/registration281-construction-20261008T0955Z/output-145dcecd0/function-145dcecd0.c": "19d749fd7d6314ce3081ba55d21cdf51fba9fc75ffe0e222879608e66a4dbdf6",
+    ".scratch/registration281-construction-20261008T0955Z/output-145dcecd0/receipt.json": "a14a2aa5a081305e184ccc91e9607f4fb373243404952e5655b4edfa085d4a1f",
+    ".scratch/registration281-construction-20261008T0955Z/output-145de1a30/function-145de1a30.c": "573e08dcad4f117e9503766afc37f79fe0fcf8067dc39474d231dd55e647ff3a",
+    ".scratch/registration281-construction-20261008T0955Z/output-145de1a30/receipt.json": "6e3c7daec7fb894e0d5de743f5d76646f601d232ef2f6eff8c92cd77373587a4",
+    ".scratch/registration281-primary-20261008T0955Z/Baseline.ps1": "dccf95f143abc22941131fdf4adddfdc8b589fe90ea95105c6e7c22abf12c718",
+    ".scratch/registration281-primary-20261008T0955Z/Baseline.py": "d7a82d3df8eb47dc8070d0ea1e45c464e091f6018d953c456b124ca9eafb0997",
+    ".scratch/registration281-primary-20261008T0955Z/Catalog.ps1": "ede248d1b6481a3a61a7ba6cddd8fc697a7414488d4d28a21702117d8e3ae74d",
+    ".scratch/registration281-primary-20261008T0955Z/Closure.ps1": "e20a0f453fdebd3ecb5acfd303e25cb18debdf09b63e9f4de8f547728d3aef1a",
+    ".scratch/registration281-primary-20261008T0955Z/Closure.py": "fabef5ac6c970d786b796d771aa9e6f2f57129a7d8109c33ea683af0cd4730aa",
+    ".scratch/registration281-primary-20261008T0955Z/Commit.ps1": "76d20df35bbd444e6c6e50c34802206583b58b914be0048104f1888b95a4c48d",
+    ".scratch/registration281-primary-20261008T0955Z/Metadata.ps1": "61169d7a771a7ed0c6c448e772d0ff234dbdffbe0d3b6ad1eb8d220e015105ce",
+    ".scratch/registration281-primary-20261008T0955Z/Metadata.py": "12e6305a52aa8df954d5d22ded4f2928f3c1ed6af8a1a24eee73bf50859a55b2",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareBaseline.py": "2d0b33075051053f0bc81638face1bc62c5a2da2fa7c69c383dab86234e77eeb",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareMetadata.py": "dd17b728070fcbfc56d15c84e98d0dccd214fb7c0dc12160952639c6bd801493",
+    ".scratch/registration281-primary-20261008T0955Z/PreparePublish.py": "bc0993494203d01b03d395e9a9b17014b946414f9d8c61141bd5794f9eb48de4",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareSeal.py": "47381cfba5a9b517fd71bcf393432422bd83ec14c18c0f918033066630880c02",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareSeal.py.failed": "47381cfba5a9b517fd71bcf393432422bd83ec14c18c0f918033066630880c02",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareStateSeal.py": "47830e0b133f4778f04d95ca4e860e57394dee8bb184454e405ab36073448318",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareSupport.ps1": "e9c44d8b959c7a951319d9795318cd933458e2b34e6dd15cf76c36b84bda6f27",
+    ".scratch/registration281-primary-20261008T0955Z/PrepareSupport.py": "e03f5de454b6be65beab6cd8c268e88530b9631a1f7a6941538171353668ee0a",
+    ".scratch/registration281-primary-20261008T0955Z/Publish.ps1": "d7888c69e8cae1012bafc8b7b3e7e8ea6210e6be01b1b6fe899f5112ff13d6b0",
+    ".scratch/registration281-primary-20261008T0955Z/Publish.py": "fca9249c616d89d02b6a86bd6e4ceacc610aed01791f0598c9f9bf1a204b77a4",
+    ".scratch/registration281-primary-20261008T0955Z/RepairSeal.ps1": "5853ec38f87832ac964b71977f2023fb2a9e3147af5c4ab921982cee0f6b3c9a",
+    ".scratch/registration281-primary-20261008T0955Z/RepairSeal.py": "cf3687b18bbec4d03c9d235dd7f2c9d39813b75b5a880258624c95603886909c",
+    ".scratch/registration281-primary-20261008T0955Z/Seal.ps1": "47e817bbb96977bc02e0f61a80a49dbc4447c37becf1c268e83fcbb9edaa2d14",
+    ".scratch/registration281-primary-20261008T0955Z/Seal.ps1.failed": "47e817bbb96977bc02e0f61a80a49dbc4447c37becf1c268e83fcbb9edaa2d14",
+    ".scratch/registration281-primary-20261008T0955Z/Seal.py": "ee29dfbabb2a11d938bb973c8df92dca319f8fa82ab1d5b07af52cc92fe959df",
+    ".scratch/registration281-primary-20261008T0955Z/Seal.py.failed": "b7fee354ee7ff66f723ef71ea0fb5b505b98ce40bd6ccf216ac6c76cd32a1d32",
+    ".scratch/registration281-primary-20261008T0955Z/Stage.ps1": "51a9b94e6148c30628008a231bf3b36e065e5e3076880f05ad9148c249424086",
+    ".scratch/registration281-primary-20261008T0955Z/StateSeal.ps1": "6df2b7b34d75c4c6efc6961570992ad23c836317a64b06161fc5d82c9ca9feeb",
+    ".scratch/registration281-primary-20261008T0955Z/StateSeal.py": "324e154d373e1144675d1ca58c9a75e408f710612513a86262edfba2851e399e",
+    ".scratch/registration281-primary-20261008T0955Z/adjudication.md": "dcc9741272919a6887dad9e563408180bb0387b0dadce575ebc9c33727de0098",
+    ".scratch/registration281-primary-20261008T0955Z/baseline.json": "47289b1ce97b9e98bfe424e115ad05ca7fcc239fbaa3855960ba4899af5d16ac",
+    ".scratch/registration281-primary-20261008T0955Z/doc-draft.md": "d4083c81e7a895bfee8908e00092a900a53fa03752b074c36b9542d949dcc0e7",
+    ".scratch/registration281-primary-20261008T0955Z/ledger.md": "d99ce2d8b41b464f86ab62d55e3954fe9ce569aab3f1ca007f7be241f074cbf9",
+    ".scratch/registration281-primary-20261008T0955Z/metadata-head.py": "7b7071ee944aebb04fd1d87ff491b568de0689eabd8111710ab277acf24296f5",
+    ".scratch/registration281-primary-20261008T0955Z/native-145dcecd0.txt": "77094fe1771d6eb56ab8388a745263c17cff5fcf5e972e2088dd377dbcd38e05",
+    ".scratch/registration281-primary-20261008T0955Z/native-145de1a30.txt": "d830a95c7be40417bebe26b4e522c2d716de2ba099d4559f4ea888be9a081249",
+    ".scratch/registration281-primary-20261008T0955Z/publish-tail.py": "1f0e34c66c3bcc41cb583d7508e03be4b77951eed8e3377d0254712c4ac64d3f",
+    ".scratch/registration281-primary-20261008T0955Z/seal-failure.json": "3bd5dffda61f58beedfcd9395dbb39302fad1f3a20947b9b0d30ee8a05eb925d",
+    ".scratch/registration281-primary-20261008T0955Z/seal-tail.py": "79636e4271b60e12e452c1a4d721435aa7f028450b80856a233f6cc1dba43b5b",
+    ".scratch/registration281-primary-20261008T0955Z/seal-tail.py.failed": "aa5c7dae9e739454d5cf187a2f99b9e47492fb25b748b94660c9333cc40a0f87",
+    ".scratch/registration281-primary-20261008T0955Z/seal.json": "669b82083832686a78d2cb695191d459e65394a841bc226747f4c08d8cc66a9e",
+    ".scratch/registration281-primary-20261008T0955Z/state-seal-tail.py": "c3796d825fe698104dc56cffa693e9141fe632eac0595576ce7db713f5ab2853",
+    ".scratch/registration281-primary-20261008T0955Z/state-seal.json": "2b1ac50c6880cb61c36a7d3ebdac32abb114fdcb87a11e5f9ed9a548ae7c8619",
+    ".scratch/registration281-review-20261008T1006Z/report.md": "b6b13dcc296fa74d9c69b30bfdef5c1df674f25c097f5b56a148c81ffc8cc450",
+    "research/upstream/first-light/server/javelin/frame.py": "798f6419114eacac5c5bfb1fd4822929239cd82fb66835e15242dd78a066b33a",
+    "research/upstream/first-light/server/javelin/wire.py": "bcb82f500455f9aa57312a596554954c04a462a1acc2cb23ae4a74ccd65d3a62"
+  },
+  "native": [
+    {
+      "entry": "0x145de1a30",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration281-construction-20261008T0955Z/output-145de1a30/receipt.json",
+      "queryReceiptSha256": "6e3c7daec7fb894e0d5de743f5d76646f601d232ef2f6eff8c92cd77373587a4",
+      "historicalHead": "a3834d1a0f4d055804d8ea6e3491e295e24ae1a0",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145de1a30",
+          "endExclusive": "0x145de1af2",
+          "bytes": 194,
+          "sha256": "8a6d2c1bb1e945909bbfbab125ff079d2dd535869d16d08616f394162658eb7b",
+          "instructions": 48,
+          "listing": ".scratch/registration281-primary-20261008T0955Z/native-145de1a30.txt",
+          "listingSha256": "d830a95c7be40417bebe26b4e522c2d716de2ba099d4559f4ea888be9a081249"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dcecd0",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration281-construction-20261008T0955Z/output-145dcecd0/receipt.json",
+      "queryReceiptSha256": "a14a2aa5a081305e184ccc91e9607f4fb373243404952e5655b4edfa085d4a1f",
+      "historicalHead": "a3834d1a0f4d055804d8ea6e3491e295e24ae1a0",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145dcecd0",
+          "endExclusive": "0x145dcee42",
+          "bytes": 370,
+          "sha256": "8c8ded3f1b40739a72474333e70927b51fb3117e1bfba70bfec1ac502dfe006c",
+          "instructions": 100,
+          "listing": ".scratch/registration281-primary-20261008T0955Z/native-145dcecd0.txt",
+          "listingSha256": "77094fe1771d6eb56ab8388a745263c17cff5fcf5e972e2088dd377dbcd38e05"
+        }
+      ]
+    }
+  ],
+  "resourceActual": {
+    "newHelperBatches": 2,
+    "newPdataRoots": 2,
+    "newCodeBytes": 564,
+    "primaryNewTableWindowBytes": 0,
+    "initializedStaticImportBytes": 75697152,
+    "virtualBssExtensionBytes": 11118896,
+    "primaryBaselineFullIdentityPasses": 1,
+    "primarySealFullIdentityPasses": 3,
+    "primaryFailedSealFullIdentityPasses": 1,
+    "agentUniqueFullIdentityPasses": 5,
+    "primaryFullIdentityPasses": 4,
+    "knownFullIdentityPasses": 9,
+    "knownFullIdentityBytes": 1612837584,
+    "agentNativeFullIdentityPasses": 1,
+    "agentNativeSelectedCodeBytes": 564,
+    "agentSecondNativeMetadataBytes": 648,
+    "agentSecondNativeCodeBytes": 370,
+    "failedSourceQueryPreflights": 1,
+    "failedHelperQueries": 0,
+    "failedPrimarySeals": 1
+  },
+  "metadataNavigation": {
+    "firstSeal": {
+      "readCalls": 511631,
+      "readBytes": 7833876,
+      "directHeaderLogicalBytes": 262
+    },
+    "secondSeal": {
+      "readCalls": 511631,
+      "readBytes": 7833876,
+      "directHeaderLogicalBytes": 262
+    }
+  },
+  "sourceClaims": {
+    "K416": "Direct194B lookup-node construction/copies/links; output-slot return and early publication, no virtualfactory call.",
+    "K417": "Conditional receive-factory zero to new object+8 and guarded same-holder state-helper call; opaque/alias/runtime limitations.",
+    "K418": "State helper writes savedS to reloaded holder+8 before callbacks; prior holder and final field equality may differ."
+  },
+  "audit": "Preliminary122B statement corrected to194B; original failed first primary seal scripts retained. Agent preflight stopped before image/helper access and repaired separately. Investigator report receiver/reload/caller-store/zero-association corrections retained by addendum; earlier report revision availability explicitly adjudicated.",
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Selected conditional construction/state source component only",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires exact selected-input closure reconciliation"
+  },
+  "limits": [
+    "No locally checked successful-null allocation result. Opaque allocator/initializer/aliases/lifetime/list validity/failure atomicity remain unknown.",
+    "Sequential duplicate copies can differ with aliases/mutation; some node tails/padding are not explicitly initialized.",
+    "State stores through reloaded holder; callbacks/helper can change holder/state/fields/lifetime. Final reciprocal identity unproved.",
+    "Parent277 physical/Carrier/reassembly/queued payload/compact/type/reply/auth/world/M1Partial. No server-code mismatch/newnativegrant.",
+    "Next exact conditional fallback state callback145dcff90; cachedtable historical provenance retained, packet role unproved."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

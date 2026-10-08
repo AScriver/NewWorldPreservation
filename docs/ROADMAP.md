@@ -1,5 +1,24 @@
 # Milestone 1 roadmap
 
+## Initial receive-object state assignment — October8, #281
+
+[K416–K418](REGISTRATION_RECEIVE_STATE.md) joins the direct lookup-node
+constructor to the guarded state-assignment helper. New-node object+8 receives
+the receive factory's zero; the state helper later writesS into the reloaded
+holder's+8 before callbacks. The prior holder copied toS+28 can differ from that
+reloaded object. Allocator/initializer/callback/alias/lifetime effects remain
+limits; successful-null construction and stable reciprocal identity are not
+proved. This is static source evidence, with no codec mismatch/server change.
+
+Two roots564B/no table windows, native/source seals and critical review support
+the component. Original failures/corrections are retained; nine known fullimage
+passes include failed primary size assertion and count shared baseline once.
+Static75697152B/BSS11118896B/navigation are separate. Relevant36catalog/PF and
+public/private bindings pass; unchanged1960/50/fivePS/closedloopback reuse is
+reconciled against selected inputs. No game/native/runtime resources or new grant.
+Parent277 physical/Carrier/reassembly/queued payload→compact/type/reply/auth/world/
+M1 remains Partial. Next source target: conditional fallback state callback145dcff90.
+
 ## Receive address-associated object lookup — October8, #280
 
 [K413–K415](REGISTRATION_ADDRESS_FACTORY.md) resolves fallbackroot+a0 to124B

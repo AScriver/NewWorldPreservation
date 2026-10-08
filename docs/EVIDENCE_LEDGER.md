@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Initial receive-object state assignment — October8, #281
+
+[Receipt](../research/evidence/current-registration-receive-state.json) pins
+clean a3834d1 and the exact original construction/state/native/review artifacts.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K416 | Direct node allocation/copies/links and output-slot return | Early publication/no null guard; tails/overlap/allocator/lifetime/list consistency unknown |194B/48 native instructions |
+| K417 | Selected receive factory zero→new object+8→guarded state call | New-node/ordinary return/nonalias/preservation only; existing nodes/runtime unproved | Unchanged280/263 plus current constructor |
+| K418 | State assignment to reloaded holder+8 before callbacks | Prior holder may differ; zero-allocation/final fields/callbacks/initializer/physical unknown |370B/100 native instructions |
+
+Selected source componentPassed; parent277/M1Partial. Original preliminary
+size/report errors and failed preflight/seal preserved or explicitly disclosed.
+No server change, native trial or new grant; next conditional callback145dcff90.
+
 ## Receive address-associated object lookup — October8, #280
 
 [Receipt](../research/evidence/current-registration-address-factory.json) pins
