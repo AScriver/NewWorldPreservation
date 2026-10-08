@@ -3,6 +3,7 @@
 /scripts/current_registration_request_receive.py text eol=lf
 /tests/test_current_registration_request_receive.py text eol=lf
 /research/evidence/current-registration-request-receive.json text eol=lf
+/research/evidence/current-registration-lower-send.json text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf
 /tests/test_current_token_contract.py text eol=lf

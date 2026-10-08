@@ -427,6 +427,17 @@
       "limit": "Pure server decoder, explicit selector binding and receiver cap/canonical/exhaustion policies. Native inverse, Carrier placement, runtime values, response choice, authentication and M1 remain unproved. Sender/BODY/old fixtures unchanged."
     },
     {
+      "id": "current-registration-lower-send",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K363", "K364", "K365"],
+      "docs": ["docs/REGISTRATION_STREAM_FRAMING.md", "docs/REGISTRATION_REQUEST_RECEIVE.md"],
+      "scripts": ["scripts/current_registration_request_body.py", "scripts/current_registration_request_stream.py", "scripts/current_registration_request_receive.py"],
+      "tests": [],
+      "evidence": [{"path": "research/evidence/current-registration-lower-send.json", "classification": "source-inference", "scope": "Selected supplied/fallback backend dispatch and separate one-byte callback send; original synthetic historical-parser comparison recorded separately"}],
+      "fixtures": [],
+      "limit": "Conditional successful-allocation source route; runtime interface, loaded dependency/call result, worker drain and final Carrier layout unknown. Synthetic parser alignment is not runtime type19, historical860 contents, authentication, response choice or M1. No codec/fixture/responder/native trial change."
+    },
+    {
       "id": "current-registration-request-stream",
       "roadmapTasks": [
         "M1-06B"
@@ -1951,6 +1962,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-lower-send.json",
     "research/evidence/current-registration-request-receive.json",
     "research/evidence/current-creation-queue-drain-boundary.json",
     "research/evidence/official-session-video-20261007.json",

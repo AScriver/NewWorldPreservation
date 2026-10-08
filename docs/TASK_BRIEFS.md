@@ -1,5 +1,35 @@
 # Bounded task briefs
 
+## #261 — lower-interface registration send dispatch (M)
+
+- Latest server-protocol continuation164/178; clean3282a87. Reuse #226 physical
+  stream/queued backend/chunk copying and the completed #260 server receiver.
+  Owned image8654f01d…/179,204,176 bytes, mapf1e2385f…; no new client observation.
+- Exact next route: backend constructor145dba8d0 supplied/fallback lower interface
+  and145dcc970 backend+130 virtual+68 dispatch. Determine installed table/method
+  and whether it consumes bytes or signals work. Preserve unknown runtime choice.
+  Reuse old constructor/chunk functions, at most four new PDATA-backed functions
+  and four bounded static table windows; no inferred leaf or whole-image analysis.
+- Investigator owns ignored .scratch/registration261-lower-20261008T0104Z/ and
+  private/ghidra/registration261-lower-20261008T0104Z/; primary owns the original
+  receipt and narrow framing/ledger/roadmap/handoff/catalog edits. No shared
+  services, ports, fixtures or native process resources. Serialize queries; all
+  one-shot children/JVMs exit and databases remain private. Do not revert others.
+- Native instructions, output/image/map/tool/checkout pins and failed methods
+  qualify source claims. No guessed class name, Carrier header, response message,
+  runtime selector/auth/world acceptance or codec change without paired source.
+  No client launch/process memory/hooks/capture/endpoints/replay/system changes.
+- After a bounded source checkpoint run36 affected catalog/runner checks and
+  actual preflight, reconcile/reuse unchanged1641-case/49-module workspace/five
+  PowerShell suites/closed loopback. Scoped local commit, honest acceptance and
+  claim release. Split any further packet assembly above this bounded leaf.
+- Source outcome: fallback+68 is now joined through interface+20 callback+30 to
+  a conditional local one-byte Winsock send. No queued-byte/final Carrier join.
+  Historical retry has one synthetic six-field alignment but ignores all four
+  tested prefix corruptions. Next bounded source leaf starts at the already
+  stored wrapper callback145ddab20; its worker/scheduling role remains unjoined.
+  No new message/runtime trial is admitted.
+
 ## #260 — replacement-server registration receive decoder (M)
 
 - Latest user scope: reproduce server receive/send under164; this leaf is under178.

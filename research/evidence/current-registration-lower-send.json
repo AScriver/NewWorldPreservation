@@ -1,0 +1,444 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "workItemId": 164,
+  "actionableId": 261,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T01:22:12.126739+00:00",
+  "claimIds": [
+    "K363",
+    "K364",
+    "K365"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "3282a87926d3c3f42be9963e0b952ec0b19b1142",
+    "queryDirty": "M docs/TASK_BRIEFS.md",
+    "imageBytes": 179204176,
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0"
+  },
+  "sources": {
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "research/upstream/first-light/server/javelin/v3_request.py": "3e5d144de49dd83dedc696ca9ef31b5450d994833ecbf01803f4dc5aee84c9eb",
+    "tests/fixtures/registration/current-request-stream-original.json": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
+    "docs/REGISTRATION_REQUEST_STREAM_CODEC.md": "5579c9cf5e5f3d8a30ba78af21722d527e5fc0fc564003283671c2f5667a5f50",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/carrier_registration_probe.py": "7d943eaffb29e9989217909faa50ccb1a83a3306bb1787fc96560ddd5ae2d816",
+    "research/evidence/current-registration-stream-framing.json": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971",
+    "research/evidence/current-registration-request-receive.json": "1873782decc03063efbbfa267956c1d82c971db1b579ab11311a5002f67cc475"
+  },
+  "privateArtifacts": {
+    ".scratch/registration261-lower-20261008T0104Z/receipt.json": "8da0b5f2761cc2701ce737054b68ecb7ea91944293d929a621da44cb8916f932",
+    ".scratch/registration261-lower-20261008T0104Z/report.md": "5f6165618807708052d5f429939457a0f6320827e70daa29022edb9e61c4f231",
+    ".scratch/registration261-primary-20261008T0115Z/Seal.py": "b06c6b28116ed27b827ff17cf006be373d2797af37f270d90426bb357167cdeb",
+    ".scratch/registration261-primary-20261008T0115Z/Seal.ps1": "0da21cdfc5fd8727e0d6fa9609f45de6a03524afcfca0954fa7655fb63e821f8",
+    ".scratch/registration261-primary-20261008T0115Z/seal.json": "28ba05143103b680a5871535754db5ea5c69d148136d8216acf455ac97867ac6",
+    ".scratch/registration261-primary-20261008T0115Z/Resolve-Ordinal.py": "e5fe3224293e74c4b45ab6e86ffac5732bbe6cb705da9e897515067a0433e423",
+    ".scratch/registration261-primary-20261008T0115Z/Resolve-Ordinal.ps1": "cc9d6759dd4901d2b6f08934115497fb5aa9a6d32f99e5fdad4a027db18270ee",
+    ".scratch/registration261-primary-20261008T0115Z/ordinal-export.json": "17eb34b7d63da0dd13f52cec225ef7b8f1722649c01c534eaab26b2a614fbb04",
+    ".scratch/registration261-primary-20261008T0115Z/evidence-ledger.md": "07c28b81dcacb166343c0d91067a2cf98bbcba3dadc7117265edfdb501d2702b",
+    ".scratch/registration261-historical-prefix-20261008T0107Z/parser-prefix-matrix.json": "d37e7501a077d3348eaacb36264eea5178ffe4a07d6d0580fbd997210402fc3a",
+    ".scratch/registration261-historical-prefix-20261008T0107Z/Run-ParserPrefixMatrix.ps1": "dc22ee689fa963b79ba66b6ded323264f160dec4fd6597493862a3f2736b7d57",
+    ".scratch/registration261-historical-prefix-20261008T0107Z/Compare-HistoricalParserPrefix.ps1": "6c53fe68be6b71336ff976c556400934539c14dfeb23bd04070be09164779bf6",
+    ".scratch/registration261-review-20261008T0118Z/Run-Challenge.ps1": "7b963fd30c0c624cc13a4960cfdc828a65382aba5bff94132e24dc13652779fc",
+    ".scratch/registration261-review-20261008T0118Z/challenge.py": "98cc5f4165baf15db0f842f848d36e6a19481f04bfe4a6b2b86be3fb0b69749d",
+    ".scratch/registration261-review-20261008T0118Z/challenge-results.json": "f8a29d43f1bbea47a5ec4a3a46c50c772062b92490c447a66f705c2d87b1a261",
+    ".scratch/registration261-review-20261008T0118Z/report.md": "e0388db9fd78ec5b8f1f8a9095dd878976f1dc81ab0437f9797f4eedd9255315"
+  },
+  "nativeBindings": [
+    {
+      "start": "0x145dc8b00",
+      "endExclusive": "0x145dc8bfd",
+      "bytes": 253,
+      "sha256": "a2261e9e5c5aba2ffc96650917a3cacad7361e7876e1d9a4f148ad2e9cb8347b"
+    },
+    {
+      "start": "0x145dba8d0",
+      "endExclusive": "0x145dbae8a",
+      "bytes": 1466,
+      "sha256": "eaa23e142d817850d47f096b40360a961a9b3195f48adf15e85279e2b4bfff81"
+    },
+    {
+      "start": "0x145dbae90",
+      "endExclusive": "0x145dbbb7a",
+      "bytes": 3306,
+      "sha256": "aebeef23daa2079ef3f5ecf2ee0058deda44275cf85356bd99f497aaa04eead8"
+    },
+    {
+      "start": "0x145dcc970",
+      "endExclusive": "0x145dccea5",
+      "bytes": 1333,
+      "sha256": "cfcaba22dfb09040fdbdddbb2d0db3d308c8440eae98256de21d46d0c4d49d02"
+    },
+    {
+      "start": "0x145dbe0f0",
+      "endExclusive": "0x145dbe1dd",
+      "bytes": 237,
+      "sha256": "239f79edeab43451c177ea36e5245befeabcef5ad1e7c2d6730eff3c8d2d5a4b"
+    },
+    {
+      "start": "0x145dbe1e0",
+      "endExclusive": "0x145dbe35c",
+      "bytes": 380,
+      "sha256": "7a363297ae0267f325fe6d8bece3b6d18c396159071c13eb9a1067e44337254d"
+    },
+    {
+      "start": "0x140f82280",
+      "endExclusive": "0x140f82330",
+      "bytes": 176,
+      "sha256": "a783a40829b03891fe2f9ea1e36907633ca61ed8e125a3db824ea4c228addbbc"
+    }
+  ],
+  "tableBindings": [
+    {
+      "start": "0x148480888",
+      "bytes": 128,
+      "sha256": "b3dd603675a9b80f0aa10d70d4d907e905c9c9c60a40bd79f39627f7b5a1bac0"
+    },
+    {
+      "start": "0x148480758",
+      "bytes": 64,
+      "sha256": "53990cdba2d3a3f78808b4b165c8b1f725078c795bd956ae130e75f37b449506"
+    }
+  ],
+  "instructionWindowBindings": [
+    {
+      "start": "0x145dbe0f0",
+      "bytes": 256,
+      "sha256": "5acd61ed0c985dd6ef4c743234dfef24ff40b5bb5b12ce83e829ec72ad5d83b8"
+    },
+    {
+      "start": "0x140889240",
+      "bytes": 128,
+      "sha256": "542c7050dab13dcd241e803d7cabad62b2cd68cd54d5a9d9bb5b7d7e3d6a8d7a"
+    },
+    {
+      "start": "0x140f82280",
+      "bytes": 176,
+      "sha256": "a783a40829b03891fe2f9ea1e36907633ca61ed8e125a3db824ea4c228addbbc"
+    }
+  ],
+  "lowerDispatch": {
+    "classification": "strongly source-supported conditional route",
+    "backendFactory": "0x145dc8b00",
+    "backendConstructor": "0x145dba8d0",
+    "wrapperFactory": "0x145dbae90",
+    "backendWrapperOffset": "0x130",
+    "supplied": "wrapper+0 takes config+0 interface pointer when nonnull; concrete supplied vtable and runtime choice unproved",
+    "fallback": {
+      "allocationBytes": 192,
+      "initializer": "0x145dbe0f0",
+      "baseInitializer": "0x145dbe1e0",
+      "vtable": "0x148480888",
+      "slot": "0x68",
+      "target": "0x140889240",
+      "objectOffset": "0x20",
+      "callbackAllocationBytes": 24,
+      "callbackVtable": "0x148480758",
+      "callbackSlot": "0x30",
+      "callbackMethod": "0x140f82280",
+      "backPointers": [
+        "callback+8 -> interface",
+        "callback+0x10 -> interface+0x10"
+      ]
+    },
+    "immediateCall": {
+      "condition": "handle != -1",
+      "localBufferByte": "0x47",
+      "length": 1,
+      "flags": 0,
+      "addressSizes": [
+        16,
+        28
+      ],
+      "iat": [
+        {
+          "module": "WS2_32.dll",
+          "ordinal": 20,
+          "iat": "0x147eca9c8"
+        }
+      ],
+      "ipv4ConstantBeforeConversion": "0x7f000001",
+      "portSource": "interface+0x18",
+      "localExportIdentity": {
+        "recordedUtc": "2026-10-08T01:17:12.049973+00:00",
+        "path": "C:\\Windows\\System32\\WS2_32.dll",
+        "bytes": 534592,
+        "sha256": "535d7a8336ddbae77b1f2c68339e5e7dbeb5f06445d6e42b19c794ef0e26f6a3",
+        "exportOrdinal": 20,
+        "exportNames": [
+          "sendto"
+        ],
+        "exportRva": "0x108e0",
+        "forwarder": null,
+        "scope": "Local installed DLL file export identity only; game loader selection, resolved runtime address and call success unobserved",
+        "dllExecuted": false
+      }
+    },
+    "interpretation": "Separate selected control/wakeup-like send. This immediate buffer is not the queued physical registration stream; final worker drain and Carrier packet assembly remain unjoined."
+  },
+  "historicalParserComparison": {
+    "classification": "offline-executed original synthetic comparison",
+    "upstreamCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "upstreamDirty": "",
+    "opaquePreludeBytes": 32,
+    "records": "Exactly six BE32 key/one-byte length/value records with ID set0..5; tail opaque",
+    "syntheticProfile": {
+      "body_bytes": 105,
+      "body_round_trip": true,
+      "field10_keys": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "field10_value_lengths": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "purpose": "Exercise field10 keys 0..5 as historical retry records when the first key aligns at absolute offset 32.",
+      "source": "decoded existing neutral BODY fixture, then unchanged current BODY encoder"
+    },
+    "framingMatrix": [
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 27,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 32,
+        "flags": 0,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": true,
+        "selector_width": 1,
+        "stream_bytes": 132,
+        "type_index": 19
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 28,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 33,
+        "flags": 0,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 2,
+        "stream_bytes": 133,
+        "type_index": 300
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 43,
+        "fallback_uuid": true,
+        "first_field10_key_absolute": 48,
+        "flags": 0,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 1,
+        "stream_bytes": 148,
+        "type_index": 0
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 35,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 40,
+        "flags": 1,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 1,
+        "stream_bytes": 140,
+        "type_index": 19
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 36,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 41,
+        "flags": 1,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 2,
+        "stream_bytes": 141,
+        "type_index": 300
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 51,
+        "fallback_uuid": true,
+        "first_field10_key_absolute": 56,
+        "flags": 1,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 1,
+        "stream_bytes": 156,
+        "type_index": 0
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 43,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 48,
+        "flags": 3,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 1,
+        "stream_bytes": 148,
+        "type_index": 19
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 44,
+        "fallback_uuid": false,
+        "first_field10_key_absolute": 49,
+        "flags": 3,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 2,
+        "stream_bytes": 149,
+        "type_index": 300
+      },
+      {
+        "body_bytes": 105,
+        "body_start_absolute": 59,
+        "fallback_uuid": true,
+        "first_field10_key_absolute": 64,
+        "flags": 3,
+        "new_decoder": "accepted",
+        "new_decoder_round_trip": true,
+        "retry_parser_accepts": false,
+        "selector_width": 1,
+        "stream_bytes": 164,
+        "type_index": 0
+      }
+    ],
+    "opaquePrefixMutations": [
+      {
+        "mutation": "crc_header_bit_flip_no_recompute",
+        "new_decoder": "checksum",
+        "retry_parser_accepts": true
+      },
+      {
+        "mutation": "count_header_plus_one_no_payload_extension",
+        "new_decoder": "payload-truncated",
+        "retry_parser_accepts": true
+      },
+      {
+        "mutation": "outer_uuid_bit_flip_crc_recomputed",
+        "new_decoder": "outer-uuid",
+        "retry_parser_accepts": true
+      },
+      {
+        "mutation": "selector_19_to_18_crc_recomputed",
+        "new_decoder": "type-mismatch",
+        "retry_parser_accepts": true
+      }
+    ],
+    "prior34FixtureComparison": {
+      "limit": "Those vectors use neutral/rich fixture BODY semantics; 0/34 does not establish a general framing mismatch.",
+      "parser_accepts": {
+        "body_only": 0,
+        "complete_stream": 0,
+        "payload_without_crc_count": 0
+      },
+      "vector_count": 34
+    },
+    "adversarialReview": {
+      "scope": "Bounded native output/ABI/pointer review plus independently executed original parser challenges",
+      "head": "3282a87926d3c3f42be9963e0b952ec0b19b1142",
+      "dirty": "M docs/TASK_BRIEFS.md\n?? research/evidence/current-registration-lower-send.json",
+      "cases": [
+        {
+          "name": "baseline",
+          "bytes": 132,
+          "retry_accepts": true,
+          "retry_tail_bytes": 64,
+          "current_decoder": "accepted"
+        },
+        {
+          "name": "zeroed_entire_opaque_prefix",
+          "bytes": 132,
+          "retry_accepts": true,
+          "retry_tail_bytes": 64,
+          "current_decoder": "outer-uuid"
+        },
+        {
+          "name": "ff_entire_opaque_prefix",
+          "bytes": 132,
+          "retry_accepts": true,
+          "retry_tail_bytes": 64,
+          "current_decoder": "payload-limit"
+        },
+        {
+          "name": "truncated_after_six_records",
+          "bytes": 68,
+          "retry_accepts": true,
+          "retry_tail_bytes": 0,
+          "current_decoder": "payload-truncated"
+        }
+      ],
+      "conclusion": "All three bounded claims survived. Retry accepts zero/FF-filled opaque prefix and truncation after six records; acceptance also does not validate a complete BODY."
+    },
+    "conclusion": "A subset of current-source full-stream framing aligns synthetically; historical parser acceptance does not validate CRC/count/UUID/type or complete BODY. No general framing mismatch or actual historical request identity is established."
+  },
+  "verification": {
+    "primaryNativeSpanRehashes": 7,
+    "reusedArtifactRehashes": 5,
+    "newArtifactRehashes": 27,
+    "newPdataFunctions": 3,
+    "newTableWindows": 2,
+    "uniqueExecutableBytes": 940,
+    "limits": {
+      "newPdataFunctions": 4,
+      "newTableWindows": 4,
+      "executableBytes": 1048576
+    },
+    "sourceSeal": ".scratch/registration261-primary-20261008T0115Z/seal.json",
+    "workspaceReuse": {
+      "pythonPassed": 1641,
+      "modules": 49,
+      "powershellSuites": 5,
+      "listenerClosed": true,
+      "childExitCode": 0
+    }
+  },
+  "counterEvidence": [
+    "Exact140889240 function-slice query rejected for absent PDATA; retained bounded instruction window, no invented function.",
+    "Reused initializer decompilation omitted arguments; native RCX/RDX/R8/R9 preservation and callee stores resolve them.",
+    "Initial34-fixture parser negatives tested collection semantics as well as framing; the original six-field profile is a positive counterexample."
+  ],
+  "limits": [
+    "Selected successful-allocation construction only; runtime supplied/fallback choice and loaded dependency/call result unknown.",
+    "No raw client/process/traffic observed or transmitted. IPv6 destination and worker queue drain not established.",
+    "Immediate one-byte send does not prove broader callbacks or workers never access queued state.",
+    "Explicit synthetic type19 is not a runtime binding. Historical860 request contents/discriminator, authentication, response selection and Carrier placement remain unknown.",
+    "BODY/sender/receiver/fixtures/Carrier responder/prepared native trial unchanged; no new live classifier or reply authorization."
+  ],
+  "cleanup": {
+    "allQueryChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}

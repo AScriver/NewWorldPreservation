@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Registration lower dispatch and parser comparison — October7, #261
+
+[Original receipt](../research/evidence/current-registration-lower-send.json)
+pins3282a87/TASK_BRIEFS-only query state, seven native spans, three new backed
+functions, two tables and the original synthetic parser comparison. Raw source
+outputs and instructions remain ignored. Earlier source receipts are unchanged.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K363 | Supplied/fallback lower-interface construction joins the selected backend+130 wrapper to fallback+68 and callback+30 | Strongly source-supported conditional route with successful allocations. Callback+8 points to interface, callback+10 to interface+10. Runtime selection and supplied interface table remain unknown; no-PDATA leaf has only bounded instruction evidence | [Lower dispatch](REGISTRATION_STREAM_FRAMING.md#follow-up-261); exact native/table/output hashes and primary seal |
+| K364 | The fallback callback's immediate buffer is a separate one-byte0x47 Winsock send argument | Strongly source-supported when handle != -1. Owned PE imports WS2_32 ordinal20; local DLL export names it sendto, without loaded dependency/result proof. IPv4 branch builds a loopback-address argument. Worker queue drain, IPv6 destination and final Carrier layout remain unjoined; wider queued-state access is not disproved | [Call and limits](REGISTRATION_STREAM_FRAMING.md#follow-up-261); native argument dataflow, exact IAT and local file export metadata |
+| K365 | Historical retry parser accepts one original six-field current-stream profile while ignoring corrupt envelope prefix and incomplete BODY | Reproduced nine-profile/four-corruption comparison plus three stronger adversarial cases. All nine valid streams round-trip through current decoder; old retry accepts only flags0/index19 among these cases and all four prefix corruptions. It also accepts zero/FF prefix and truncation after six records. Earlier34-fixture negatives tested field semantics too. No actual historical860 contents, runtime19, authentication or response proof | [Synthetic alignment](REGISTRATION_STREAM_FRAMING.md#historical-parser-alignment--261); source/harness hashes and private matrix/review |
+
 ## Replacement-server registration receive — October7, #260
 
 [Original receipt](../research/evidence/current-registration-request-receive.json)

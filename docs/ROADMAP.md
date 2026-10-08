@@ -23,11 +23,22 @@ defect (K361/K362). Sender/BODY/fixtures/Carrier responder remain unchanged.
 The complete workspace passes1641 Python cases/49 modules, five PowerShell
 suites and its owned loopback lifecycle with unchanged inputs, listener closed
 and child exit0; receipt .scratch/offline-validation/run-9gi9b4je/receipt.json.
-Current sender-to-Carrier placement and source-supported response selection
-are the next protocol joins; grammar acceptance is not authentication. The boundary
-checkpoint passes36 affected catalog/runner tests and actual preflight; unchanged
-1429-case workspace, five PowerShell suites and closed loopback lifecycle are
-reused by exact code/test/fixture comparison. Static helpers exited cleanly.
+#261 now joins the backend's supplied/fallback lower dispatch (K363/K364,
+[source checkpoint](REGISTRATION_STREAM_FRAMING.md#follow-up-261)). The fallback
+callback prepares a separate one-byte buffer for a Winsock send call, consistent
+with a control/wakeup action;
+it does not yet connect queued registration bytes to the final Carrier packet.
+Its wrapper already stores callback145ddab20, the next concrete queue-drain candidate.
+An original six-field synthetic stream also aligns with the old retry parser,
+which accepts all four tested corrupt prefixes that the new decoder rejects
+(K365). Earlier neutral/rich fixture negatives did not prove a general framing
+mismatch. Runtime type binding, historical860 request contents, authentication
+and source-supported response selection remain open. All36 affected catalog/runner
+checks pass; actual preflight index is ready and new receipt bindings match.
+Unchanged workspace/code/fixture inputs reuse the1641-case/49-module result above;
+private closure is .scratch/registration261-primary-20261008T0115Z/closure.json.
+Bounded adversarial review retained the conditional native claims and reproduced
+three stronger parser counterexamples. Static helpers exited cleanly.
 The existing corrected creation trial still needs its specific next-attempt
 grant; this offline continuation starts no client or new live instrumentation.
 

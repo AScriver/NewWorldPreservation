@@ -203,3 +203,78 @@ ordinary-stream and lower-emission limits.
 the selected empty ordinary stream using the corrected #229 nilouter/inner-type
 placement and unchanged verified BODY. Type index and opaque8 fields are explicit;
 no native receive inverse, Carrier hookup or observed runtime values follow.
+
+## Follow-up #261
+
+[The original lower-dispatch receipt](../research/evidence/current-registration-lower-send.json)
+joins the previously unresolved fallback boundary, using the same owned image
+and map at3282a87 with only TASK_BRIEFS dirty. Backend constructor145dba8d0 stores
+the wrapper returned by145dbae90 at backend+130. Wrapper+0 takes config+0's supplied
+interface when nonnull. Otherwise the selected factory allocates0xc0 bytes and
+calls145dbe0f0 with two config option bytes and zero. Runtime selection and the
+supplied interface's actual vtable remain unknown.
+
+The fallback initializer calls145dbe1e0 before installing table148480888. Its
+decompiler omitted arguments; exact instructions preserve RCX/RDX/R8/R9 to the
+callee. The zero fourth argument selects a separate0x18-byte callback allocation
+with table148480758, stored at interface+20. Callback+8 points to the interface;
+callback+10 points to its +10 member. These are conditional source routes with
+successful allocations, not observed constructed objects.
+
+Fallback table+68 points to140889240, a short leaf without PDATA ownership. The
+guarded function query was rejected; a bounded decoded instruction window alone
+shows its interface+20 load and tail dispatch to callback virtual+30. That slot
+points to backed method140f82280. When its handle is not -1, it passes a separate
+local buffer containing byte0x47, length1, flags0 and a16/28-byte address argument
+to the owned PE's WS2_32.dll ordinal20 IAT entry. The local installed DLL file
+exports ordinal20 as sendto; the game's loaded dependency, resolved address,
+return value and emitted traffic remain unobserved. The IPv4 branch builds its
+address from0x7f000001 and the interface+18 port. IPv6 destination semantics are
+not adjudicated here.
+
+This supports a separate control/wakeup interpretation. The immediate send
+buffer is not the queued physical registration stream. Broader callbacks or
+workers may access queued state; their actual queue drain and packet assembly
+remain unjoined. This boundary supplies no final Carrier header or supported
+reply choice. Do not feed the local control byte into the registration decoder.
+
+## Historical parser alignment — #261
+
+The pinned First Light retry parser skips32 opaque bytes, then requires exactly
+six BE32 key/one-byte length/value records with ID set0..5. It does not validate
+the stream checksum/count, outer UUID, wrapper flags/presence, class selector or
+fallback UUID. Its tail is opaque. The832-byte strict parser uses different
+fixed offsets/trailer checks and is not an envelope validator either.
+
+An original synthetic profile with exactly six short field10 values reproduces
+one structural alignment: flags0 and explicit one-byte nonzero selector19 put
+BODY at27, field08 at27–30, collection count at31 and its first key at32. Both
+old retry and current server decoder accept that full stream. Across nine valid
+flags0/1/3 × selectors19/300/0 combinations, the current decoder accepts and
+round-trips all nine; old retry accepts only the first profile in this matrix.
+Selector19 is an experiment input, not a discovered runtime binding.
+
+Four controlled prefix mutations remain accepted by old retry: corrupt CRC,
+declared count larger than available payload, nonnil outer UUID and selector18
+instead of expected19. The new decoder rejects them as checksum,
+payload-truncated, outer-uuid and type-mismatch respectively. The latter two
+cases recompute CRC to isolate the semantic checks. Earlier0/34 comparisons of
+existing neutral/rich fixtures in BODY/payload/full-stream forms also tested
+their collection semantics; the six-field positive counterexample prevents a
+general framing-incompatibility conclusion.
+
+Bounded adversarial review retained the native ABI/back-pointer/conditional
+claims and independently tested stronger parser counterexamples: an entirely
+zeroed32-byte prefix, an FF-filled prefix and truncation immediately after the
+six records all remain accepted by old retry. The current decoder rejects them
+as outer-uuid, payload-limit and payload-truncated. Retry acceptance therefore
+does not establish a complete BODY either. Control/wakeup remains an
+interpretation; actual broader worker processing is not disproved.
+
+These are original synthetic checks, not recovered historical860 request data,
+wire placement, authentication or server acceptance. Sender/BODY/receiver/old
+fixtures and Carrier responder remain unchanged. Three new backed function
+slices and two table windows cover940 unique executable bytes; all private
+query children exited without runtime resources. All36 affected catalog/runner
+checks pass and actual preflight index/bindings are ready/matching; unchanged code/fixtures reuse the
+1641-case/49-module workspace, five PowerShell suites and closed loopback receipt.

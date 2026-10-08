@@ -1,5 +1,39 @@
 # Agent handoff
 
+## #261 lower send dispatch — October7
+
+- K363–K365 [original receipt](../research/evidence/current-registration-lower-send.json)
+  joins selected backend+130 supplied/fallback construction. Fallback+68 forwards
+  via allocated interface+20 callback to +30 method140f82280. Supplied runtime
+  interface remains unknown; successful allocation is a source-route condition.
+- That method conditionally passes its own byte0x47/length1 buffer to WS2_32
+  ordinal20. Local file export names it sendto; loaded DLL/call/traffic remain
+  unobserved. IPv4 address argument uses loopback; no complete worker drain or
+  queued registration-to-Carrier packet join follows. Never treat this control
+  buffer as a client request or infer broader queues are never read.
+- An original six-field profile aligns current full-stream grammar with old
+  retry's opaque32 skip. Nine valid forms round-trip through the new decoder;
+  old retry accepts only flags0/index19 here and all four corrupt prefixes.
+  Adversarial zero/FF prefix and truncation-after-records cases also remain
+  accepted by old retry, rejected by current decoder. Earlier34-fixture negatives
+  do not establish general framing mismatch or complete BODY validation.
+  Runtime type19, historical860 contents, authentication and replies remain open.
+- Private .scratch/registration261-primary-20261008T0115Z/seal.json rehashes seven
+  native spans, five reused/27 new artifacts and table/window bytes. Three backed
+  functions/two tables/940 unique code bytes stay within four/four/1MiB bounds.
+  Absent-PDATA leaf guard failure is retained without inventing a function.
+- Exact next source edge: callback145ddab20 already stored by145dbae90,
+  then actual queued-record drain/lower packet writer. Sender/BODY/receiver,
+  fixtures, Carrier responder and prepared native trial stay unchanged. No live
+  client or runtime resources were acquired; static children exited. The callback's
+  worker role/scheduling still need their own source join.
+- All36 affected catalog/runner cases pass; actual preflight index is ready and
+  new source bindings match. Reuse unchanged1641-case/49-module workspace, five
+  PowerShell suites and closed-loopback/child-exit0 receipt; only ledger/roadmap/
+  catalog source meaning changed among selected inputs. Exact private closure:
+  .scratch/registration261-primary-20261008T0115Z/closure.json. Bounded adversarial
+  review preserved all three claims under their explicit conditions/limits.
+
 ## #260 current registration receive component — October7
 
 - New pure [server decoder](REGISTRATION_REQUEST_RECEIVE.md), K361/K362:
