@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "partial",
+  "workItemId": 164,
+  "actionableId": 270,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T05:07:28.856143+00:00",
+  "claimIds": [
+    "K382",
+    "K383",
+    "K384",
+    "K385"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "1b3fd5c93ef6e9c3fc6a58ccb4a950b8ac9db753",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "direction": "Owned-client transport/dispatch source relevant to server sends; not executed replacement-server receive behavior.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-view-accessors.json": "0b3e72a1bccfaae8d38d35fc1c61e29dbec7c968190652c3b2b3f0efb0fade98",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/queue226-investigator/ghidra-output6/function-146b3c250.c": "b1e84f5b5b77a401afb962ac45179906b5d69b9f9408a3227e79415016e49fcc",
+    ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b27180.txt": "96e79a0f962d4c8a3d630d8f38d04273bfc3ff04b6dec2a4e56e844b63ccbc72",
+    ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b393d0.txt": "b0cc1a6201de8a4b7f6a89ff8f38d75ccc77d43e04b8813e595ccf547f328c67",
+    ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b3c250.txt": "6ac1b12f159fb6dd8bc870dca25040f896cdb5b030bc2ecdb24c939300ac5964",
+    ".scratch/registration-210-primary-20261005T2205Z/metadata.json": "af383492f9678aba30e0c266d72f228f410c98b88c5def515e0239fea9e85401",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/scan-candidates.json": "b80d4633315cb56c19aa2ded374f0ab559182c69a9829ecca6c1302ef71724d3",
+    ".scratch/registration270-primary-20261008T0440Z/Baseline.ps1": "b392830788aede5258b5c7bbe0cb0da6654d9014b1dffbd8889e90cf4b0dc995",
+    ".scratch/registration270-primary-20261008T0440Z/Baseline.py": "b722a6a49d6ec772d6b568b27d8334e8bb6f74fcc350d2c13b9daace100db962",
+    ".scratch/registration270-primary-20261008T0440Z/Publish.ps1": "f77f83d8a335219528f5eedb3ba3605a67858c1799388a3d250018e5047580bb",
+    ".scratch/registration270-primary-20261008T0440Z/Publish.py": "918b46d0091def1c84871163233dc68aaca8c2d99216282f282ca5a56f8ee75e",
+    ".scratch/registration270-primary-20261008T0440Z/Seal.ps1": "d2cd081b73a3446cbfadd64aa60709ce459c002cabdca3bd238ca1a5f8afa3a7",
+    ".scratch/registration270-primary-20261008T0440Z/Seal.py": "c311fe6bfb8f09003b456b4ee40cffef624104caaae8a4c9628111071c43863f",
+    ".scratch/registration270-primary-20261008T0440Z/SealCandidate.ps1": "a892608117b05cd184494c2cab6b3dfc8ad744909fe1d6bdcc05c2c9757202f5",
+    ".scratch/registration270-primary-20261008T0440Z/SealCandidate.py": "7d724b09cad05ba60768a5273344c62acec1b0ed9313c3aa6ff303b29b9b08c4",
+    ".scratch/registration270-primary-20261008T0440Z/adjudication.md": "103435535c27f85f6a38cabd37b8fd6c7c57b39624b324f998abc82f972e6ffd",
+    ".scratch/registration270-primary-20261008T0440Z/baseline.json": "e50c7ef054e330e8704035731b41bd91480c5dd627dbf10f1d63fa64334443d5",
+    ".scratch/registration270-primary-20261008T0440Z/candidate-seal.json": "1e3e27628fb477c917f25a19e68373df7c9d9f8310866fc21d72fddd1e284801",
+    ".scratch/registration270-primary-20261008T0440Z/ledger.md": "3a9ddd2927543b4ff310901f1b9a34e90c3b655332f08b63f3cff50c19bd406d",
+    ".scratch/registration270-primary-20261008T0440Z/native-146b2ba60.txt": "69c96c7ca240e439af1ef37e206595699e01395e97e989e0c860bbfb8bdb919c",
+    ".scratch/registration270-primary-20261008T0440Z/publication-input.json": "88c8c8bc003e40e270661b58429cb6095784bdd62560f40f20cdaa8151000f26",
+    ".scratch/registration270-primary-20261008T0440Z/reused-146b393d0.txt": "1016e71bc33d25c0c5dae21455411dd0ab7bc0a6493b20ce2beab019f9f6a4cd",
+    ".scratch/registration270-primary-20261008T0440Z/reused-146b3c250.txt": "24d02b9db8185b56c4ff49155a9dbc8262d7b7944dc08484feab17fac6c1f8de",
+    ".scratch/registration270-primary-20261008T0440Z/seal.json": "8ca3988c40562cb63351740f8e743a2519ca0fd633216f4f9f3638d9f01a91ce",
+    ".scratch/registration270-receive-producer-20261008T0440Z/REPORT-FULL-CANDIDATE.md": "84101eb1ef610ab5f901b004d636db5a2d4c460fb84a2c374e1a7e113b45daf8",
+    ".scratch/registration270-receive-producer-20261008T0440Z/REPORT.md": "c28d6a555d563223d58875797625d5943eb1bdc31a4ac0d91957f47e762e30b1",
+    ".scratch/registration270-receive-producer-20261008T0440Z/align_virtual20_candidates.py": "6ca747d8170024c396b3f77d76cfbc697a96cd31dc9410023ac74aed172ecfbf",
+    ".scratch/registration270-receive-producer-20261008T0440Z/aligned-call-candidates.json": "d41f426fdeca4f6e7e7e6d926edc38ae6c68f7d5d4b685583635ce2523c40018",
+    ".scratch/registration270-receive-producer-20261008T0440Z/disassemble-full-candidate.py": "538740c68fda9a43b782dcb1106fd4653b24c591a393692e038c01b3899e994e",
+    ".scratch/registration270-receive-producer-20261008T0440Z/output-fullcandidate/function-146b2ba60.c": "1ce1563e5a464e018a86e7d5c4596106cfc9ddc10a019b7c6370d14a784007fd",
+    ".scratch/registration270-receive-producer-20261008T0440Z/output-fullcandidate/receipt.json": "dd0ce7f1583a62fdf9d340e9cd7b981e319ca40c1b7b0b0ebaad58636fcf71ae",
+    ".scratch/registration270-receive-producer-20261008T0440Z/run-align.ps1": "7e9127a21506603f56b406abd443f6f58fd2d54c18ee1dfb13c927c9a796e30e",
+    ".scratch/registration270-receive-producer-20261008T0440Z/run-disassemble-candidate.ps1": "e98da054d661585bfc77d1542ffe1d93a5d21702df3912017d955f3b3ab29b85",
+    ".scratch/registration270-receive-producer-20261008T0440Z/run-full-candidate.ps1": "88f39877d7c647448cbdc231267ba273b64dfda4f6d6406c352e8bc895db4f6a",
+    ".scratch/registration270-review-20261008T0451Z/candidate-review.md": "6240a752baf27ea37a73a1c7363a27fd9bfb62fd17fc1d9e4ee75aedf53cd329",
+    ".scratch/registration270-review-20261008T0451Z/report.md": "aa9041415c0783136cb26922ddc3936f654a086b86c30354c7199719a14c71b0"
+  },
+  "factory": {
+    "entry": "0x146b393d0",
+    "native": {
+      "start": "0x146b393d0",
+      "endExclusive": "0x146b39455",
+      "bytes": 133,
+      "sha256": "de87084b7e8f48d2fbe46df628fef7054ea9cea975862b0da480bf1b6f4c3602",
+      "source": ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b393d0.txt",
+      "sourceSha256": "b0cc1a6201de8a4b7f6a89ff8f38d75ccc77d43e04b8813e595ccf547f328c67"
+    },
+    "guard": "Nonzero allocator result then constructor27180 at wrapper+0x10; output stores require normal control reaches them.",
+    "input": "Saved originalRCX supplied to constructorRDX; constructorRCX=wrapper+0x10.",
+    "output": "Writes {wrapper+0x10,wrapper} through callerRDX output; returns output address.",
+    "secondary": "Existing constructor contract installs secondary at primary+8, hence wrapper+0x18 on constructed path.",
+    "zeroBranch": "If allocator returns0, skips constructor and mechanically writes{0x10,0}; allocator failure/throw policy not queried.",
+    "limit": "No factory-instance\u2192actual secondary receive invocation or lifetime/runtime identity join."
+  },
+  "alignment": {
+    "reusedRange": {
+      "start": "0x146b20000",
+      "endExclusive": "0x146b40000",
+      "bytes": 131072,
+      "sha256": "b41e14a027b99a17fca397a10d180aed5ec6f724d0619abfd52ac91f3005b501"
+    },
+    "candidateRoots": 25,
+    "candidateCodeBytes": 12273,
+    "rawHints": 47,
+    "alignedHints": 45,
+    "hintsWithoutPdataUnselected": 2,
+    "contextBounds": "8 predecessor/1 successor instructions per aligned call",
+    "limit": "Alignment/local shapes do not prove receiver/table/signature/arity/producer absence or complete control flow."
+  },
+  "queuedDispatcher": {
+    "entry": "0x146b3c250",
+    "native": {
+      "start": "0x146b3c250",
+      "endExclusive": "0x146b3d6aa",
+      "bytes": 5210,
+      "sha256": "ebb1b59a79267210d2f37a3583865969500bfbd58faa0e69cbc1b0b04e89075b",
+      "source": ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b3c250.txt",
+      "sourceSha256": "6ac1b12f159fb6dd8bc870dca25040f896cdb5b030bc2ecdb24c939300ac5964"
+    },
+    "support": "Positive queued-send consumer and shared-holder/lifetime operations; coincident+2b0 is not incoming receiver identity.",
+    "limit": "No whole-function incoming or secondary-call exclusion."
+  },
+  "followup": {
+    "entry": "0x146b2ba60",
+    "nativeBytes": 301,
+    "nativeSha256": "5f9f056b436dca7d0232db3df3bec5d03b4ca450e1cd936f00b236cc8a6246c8",
+    "nativeInstructions": 83,
+    "sourceStable": true,
+    "outputDestination": "EntryR8 preservedR14; entryRCX slot dereferenced intoRSI owner.",
+    "initialGuard": "If owner+90 nonnull, unsigned64(0x10000-first+20RAX)>=0x400 retains it; otherwise helper31bd0 may replace owner+90/+98 via moved pair and cleanup.",
+    "pointerStore": "Second+20 at2bb52 on savedRBX=owner+90; (RBX+0x39+RAX) modulo2^64\u2192qword[R14+8] at2bb5c.",
+    "countStore": "Reload owner+90 at2bb60; distinct third+20 at2bb6a; (0x10000-EAX) modulo2^32\u2192dword[R14] at2bb6f.",
+    "directStores": "Direct output stores do not initialize+4padding or+16; unknown indirect effects/aliasing remain.",
+    "rdx": "IncomingRDX may reach first opaque callee; later locally overwritten forpoolhelper/pair values. No blanket unused-argument or callee-arity claim.",
+    "limit": "Output stores require normal control and valid memory. Distinct returns/reloaded receiver need not agree; nested table/target/signature/caller/factory/receive/network interpretation remains unknown.",
+    "nativeRepair": "Agent full-listing attempt failed missingCapstone; primary existing inspection package produced sealed full83instruction listing without install/new source query."
+  },
+  "bounds": {
+    "maxNewPdataRoots": 3,
+    "newPdataRootsAttempted": 1,
+    "newPdataRootsCompleted": 1,
+    "newPdataRootsRefused": 0,
+    "maxNewTableWindows": 2,
+    "newTableWindows": 0,
+    "selectedCodeBytes": 301,
+    "literalFileBackedByteCap": 524288,
+    "helperStaticDataBytes": 37848576,
+    "totalCodeAndStaticDataImported": 37848877,
+    "wholeImageIdentityReadBytes": 179204176,
+    "resourceContract": "failed; literal import byte cap exceeded",
+    "sourceConsistency": "passed; exact guarded native/dataflow effects only",
+    "furtherQueries": "stopped in this unit",
+    "automaticAnalysis": false,
+    "futureBudget": "Separate and guard selected code/tables, mandatory static-section imports and identity/metadata memory before execution."
+  },
+  "processDeviation": {
+    "fileBytes": 4096,
+    "sha256": "eb5567839c5075a924a0eec3b9e13256274552803bfd1ed0ebc37e02a29d5b8c",
+    "instruction": "Agent navigation was directed to reuse the old code interval only.",
+    "actual": "Agent additionally parsed PE header metadata for VA/file mapping; retained as deviation. No code/table outside interval selected.",
+    "adjudication": "Native byte/PDATA/alignment checks above reconcile current image; metadata read does not establish source claims or authorize expanded navigation."
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Partial",
+    "scope": "Positive native effects and local navigation survive review; upstream byte-path goal remainsPartial and resource contract failed.",
+    "review": "K382/K384 positive effects survived; K383 alignment only. K385 native widths/order/returns/reload/direct-store scope survived. Complete receiver/view producer, coherent buffer/network/native acceptance unresolved.",
+    "workspace": "Code/fixtures/runtime unchanged; affected36/actual preflight and exact1890/50/fivePS/closed-loopback reconciliation inROADMAP."
+  },
+  "limits": [
+    "No constructed factory-instance\u2192actual secondary receive caller or incoming RDX-view/R8-pair producer join.",
+    "Local call alignment and queued-send/lifetime observations do not eliminate incoming behavior or prove semantic arity.",
+    "K385 repeated returns and owner reload, arithmetic wrap, unknown callee effects/aliasing and unchecked nested pointer prevent valid/coherent buffer guarantee.",
+    "Resource contract failed:4096Bheader navigation deviation and37,848,877Bcode/static import beyond524288B cap retained; no expanded scope inferred.",
+    "Carrier/socket/header/payload transformations/runtime active identity/response field choice/authentication/native acceptance/M1 remain unknown.",
+    "Original codecs/adapter/candidates unchanged; no client/native run, network, capture, credentials, replay or new trial grant."
+  ],
+  "nextEvidence": "Actual constructed-secondary receive caller/view-pair producer; qualify any new source query with explicit code/static-import/identity resource budgets.",
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "nativeClientCodeExecuted": false,
+    "staticChildrenExited": true,
+    "pushed": false
+  }
+}

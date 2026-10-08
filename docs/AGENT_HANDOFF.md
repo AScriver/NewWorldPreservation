@@ -1,5 +1,21 @@
 # Agent handoff
 
+## #270 receiver factory/view candidate — October7, partial
+
+- [K382–K385 checkpoint](REGISTRATION_RECEIVE_PRODUCER.md): guarded factory,
+  instruction-boundary navigation and positive queue/lifetime cache. Full301B
+  candidate uses distinct virtual returns and owner reload to directly write
+  qword pointer+8/dword count+0; no coherent extent/receiver/Carrier join.
+- Native/reviews pass with qualifications; resource contract failed. Keep4096B
+  navigation-header and37,848,877B code/static import over524288B deviations;
+  whole-image identity read179,204,176B. Future queries separately budget these.
+- Existing private Capstone repaired the failed agent listing attempt. Affected36
+  checks/actual preflight/eight public35 private bindings pass; exact input-set
+  reconciliation reuses1890/50/fivePS/closed-loopback. Closure under
+  .scratch/registration270-primary-20261008T0440Z/closure.json. Static children
+  exited0; no game/runtime resources. Actual caller/view producer/auth/native
+  acceptance remain open; source goal/resource acceptance stayPartial.
+
 ## #269 native view result mapping — October7
 
 - [K381 component](REGISTRATION_VIEW_ACCESSORS.md) resolves same-view field0 as

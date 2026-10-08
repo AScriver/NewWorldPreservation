@@ -1,5 +1,23 @@
 # Evidence ledger
 
+## Receiver factory and full view candidate — October7, #270, partial
+
+[Original source receipt](../research/evidence/current-registration-receive-producer.json)
+pins clean1b3fd5c and exact native/query/private artifacts. Qualified positive
+source effects survive reviews; incoming-byte-path and resource acceptance stayPartial.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K382 | Nonzero-allocation factory constructs primary at wrapper+10, secondary at wrapper+18 under existing constructor; writes output pair | Strongly source-supported133B. Output stores require normal control; zero-return path skips ctor and writes{0x10,0}. Returns output address. Allocation policy/lifetime/factory-instance→receive invocation unknown | [Factory/view checkpoint](REGISTRATION_RECEIVE_PRODUCER.md); native seal/review |
+| K383 |45/47 raw hints align in25 complete in-range PDATA bodies,12273 reused bytes | Observed static alignment/local contexts only. Short windows cannot prove semantic arity, receiver/table, producer or absence; two no-PDATA hints unselected | Original alignment/native seal and arity counterexample |
+| K384 | Cached dispatcher supports queued-send/shared-holder lifetime effects | Strongly source-supported5210B/native cache. Same+2b0 does not identify incoming receiver; no whole-function receive exclusion | Original positive queue/native/review evidence |
+| K385 | Full301B candidate directly writes pointer-shaped qword+8 then count-shaped dword+0 through entryR8 output | Strongly source-supported83 native instructions. Separate getters/owner reload;64-bit guard/pointer versus32-bit count wrap. No coherent valid extent/padding/unknown-callee/alias/table/target/caller/receive/Carrier guarantee | Full query/native repair/supplemental review |
+
+Resource checks failed independently of native consistency:4096B navigation
+header read and37,848,877B code/static import over524288B cap retained. No further
+queries;179,204,176B identity read counted separately. Failed agent decoder is
+historical after primary repair. No client/native/server/runtime acceptance.
+
 ## Native copied-view to reader result mapping — October7, #269
 
 [Original source receipt](../research/evidence/current-registration-view-accessors.json)

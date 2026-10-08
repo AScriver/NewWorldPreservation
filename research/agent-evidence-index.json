@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-receive-producer",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K382", "K383", "K384", "K385"],
+      "docs": ["docs/REGISTRATION_RECEIVE_PRODUCER.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-registration-receive-producer.json", "classification": "source-inference", "scope": "Guarded receiver factory, local instruction alignment, positive queue cache and qualified full pointer/count output candidate; incoming byte path partial"}],
+      "limit": "No actual secondary caller/view producer/Carrier join. Separate returns/owner reload/width wrap and unknown callee effects prevent coherent valid-buffer proof. Native consistency survives; literal import byte cap failed and deviations remain explicit. No codec/runtime/native acceptance."
+    },
+    {
       "id": "current-registration-view-accessors",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K381"],
@@ -2056,6 +2067,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-receive-producer.json",
     "research/evidence/current-registration-view-accessors.json",
     "research/evidence/current-registration-receive-invoker.json",
     "research/evidence/current-registration-receive-callback.json",

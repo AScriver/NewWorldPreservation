@@ -2,6 +2,22 @@
 
 ## Server protocol focus — October 7
 
+Newest #270 [receiver factory/view candidate](REGISTRATION_RECEIVE_PRODUCER.md)
+preserves K382–K385: guarded factory and output pair,45 aligned local call hints,
+positive queued-send/lifetime cache and a full301B pointer/count-output candidate.
+Separate virtual returns, owner reload and64/32-bit arithmetic prevent a coherent
+buffer claim. Actual secondary caller/incoming view-pair/Carrier provenance stays
+unknown. Native seals/reviews pass; source goal and resource contract stayPartial.
+The4096B navigation-header deviation and37,848,877B code/static import over the
+524288B cap remain explicit;179,204,176B identity read is separately counted.
+Further queries stopped. Primary repaired missing-Capstone native decoding using
+an existing package. Affected36 checks/actual preflight and eight public/35 private
+bindings pass; exact input-set reconciliation reuses1890/50/fivePS/closed-loopback
+with four source receipts added and only three metadata files changed since that
+full run. Closure .scratch/registration270-primary-20261008T0440Z/closure.json;
+static query/validation children exited0. Codecs/adapter unchanged, no game/runtime
+resources acquired. Future query budgets separate code/static-import/identity costs.
+
 Newest #269 [copied-view accessor mapping](REGISTRATION_VIEW_ACCESSORS.md)
 closes K381: same-view field0→RDX and(field8-field0) modulo2^64→R8 at146af20c0,
 with existing child+f0 RCX. Two64-byte exact call-target windows show12 bytes

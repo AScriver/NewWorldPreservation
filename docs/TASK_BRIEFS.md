@@ -1,5 +1,22 @@
 # Bounded task briefs
 
+## #270 — upstream secondary caller/view producer (M, partial)
+
+- Child267/root164/178, clean1b3fd5c. Primary owns tracked original metadata;
+  Investigator/reviewer own isolated ignored270 paths. Preserve other edits.
+- Reuse exact267/268/269 source bindings, old factory/dispatcher and raw128KiB
+  navigation.45/47 hints align; local windows cannot establish receiver/arity.
+  Review liveR8 counterexample selected one full301B root,83 native instructions.
+- One root attempted/completed,0refused/0new tables; goal remainsPartial.
+  Resource contract failed:4096B PE navigation read and helper37,848,576B static
+  data+301B code import over524288B cap;179,204,176B identity read separately.
+  Stop further queries in this unit; future budgets guard all three costs.
+- Qualified native/reviews,36affected checks/actual preflight/eight public35 private
+  bindings and exact1890/50/fivePS/closed-loopback reconciliation. Scoped local
+  checkpoint, Partial tracking/readback/release. Static children exited0;
+  no game/runtime/client/network/code/codec/trial changes. Incoming caller/view
+  producer/Carrier/auth/native acceptance remain unproved.
+
 ## #269 — native view pointer/count accessors (S–M)
 
 - Child267/root164/178, clean8c89ee8. Primary owns original bounded native
