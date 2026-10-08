@@ -1,5 +1,19 @@
 # Agent handoff
 
+## #269 native view result mapping — October7
+
+- [K381 component](REGISTRATION_VIEW_ACCESSORS.md) resolves same-view field0 as
+  RDX pointer and(field8-field0) modulo2^64 as R8 count to146af20c0. Existing
+  child+f0 receiver retained. Two64B windows/12B linear native returns; no
+  inferred PDATA boundary, offset/scaling/underflow guard in those sequences.
+- Exact image/map/caller/window/listing hashes, critical review, affected36
+  checks/actual preflight and seven public/14 private bindings pass. Exact
+  input set reuses1890/50/fivePS/closed-loopback; closure is retained under
+  .scratch/registration269-view-accessors-20261008T0424Z/closure.json.
+  Validation child exited0; codecs/adapter/runtime unchanged, no resources.
+- Valid extent/units/alias/field16, actual secondary caller/view producer and
+  Carrier/runtime/native acceptance remain unknown;267/268 aggregate staysPartial.
+
 ## #268 same-primary receive invoker — October7, partial
 
 - [K379/K380 source contract](REGISTRATION_RECEIVE_INVOKER.md): ctor installs

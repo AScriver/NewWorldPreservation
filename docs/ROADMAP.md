@@ -2,6 +2,19 @@
 
 ## Server protocol focus — October 7
 
+Newest #269 [copied-view accessor mapping](REGISTRATION_VIEW_ACCESSORS.md)
+closes K381: same-view field0→RDX and(field8-field0) modulo2^64→R8 at146af20c0,
+with existing child+f0 RCX. Two64-byte exact call-target windows show12 bytes
+of linear return sequences; no offset/scaling/underflow check in those sequences.
+Missing PDATA remains recorded; native observations do not guess boundaries.
+Buffer validity/units/alias/field16/upstream transport/runtime/native acceptance
+remain unknown. Native/window/caller hashes and critical review pass, as do
+affected36 catalog/runner checks, actual preflight and seven public/14 private
+bindings. Exact input-set reconciliation reuses1890/50/fivePS/closed-loopback;
+only source metadata and three added receipts differ since that full run.
+Closure .scratch/registration269-view-accessors-20261008T0424Z/closure.json passes;
+validation child exited0. Codecs/adapter/trial unchanged, no runtime resources.
+
 Newest #268 [owned-client receive invoker](REGISTRATION_RECEIVE_INVOKER.md)
 joins secondary base+8/table+20 to the same primary flag+130/active+2b0 and its
 conditional virtual+10 call (K379/K380). R8 is moved/zeroed before the later

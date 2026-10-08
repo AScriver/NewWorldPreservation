@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 269,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T04:29:40.563948+00:00",
+  "claimIds": [
+    "K381"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "8c89ee80072ab361c00d41e021e2837ed4b6124b",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "direction": "Owned-client incoming copied-view to parser arguments, relevant to server sends; not executed server receive behavior.",
+  "sources": {
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration269-review-20261008T0427Z/report.md": "b8e9619d5a73731c4893246787f7e4e264fb16f0690cba46b5d8fa4dfb52488a",
+    ".scratch/registration267-primary-20261008T0333Z/reused-146b6ba90.txt": "32d4ab225e9de2d31742dc2809c2b0ebe6dd3f18e87199e9ac185d93f3e5fb01",
+    ".scratch/registration268-primary-20261008T0401Z/reused-140870bc0.txt": "2f0a00c3b37bb327ff16ddd996db042f2876f1d4928f5a82ad74df3c97713684",
+    ".scratch/registration269-view-accessors-20261008T0424Z/adjudication.md": "4f71aa938ac4fbd11d6c717c50a415a9cf000566f5eb018ea5edfaa143ec7aaa",
+    ".scratch/registration269-view-accessors-20261008T0424Z/Inspect.ps1": "712d0658e5e07d61d51650d3e098ce6382f03ea05b00b1a43459202b38a03d6c",
+    ".scratch/registration269-view-accessors-20261008T0424Z/Inspect.py": "9a61a475dda6f12a857207891632218c9040c0a77e07a848c022f26cc58394d6",
+    ".scratch/registration269-view-accessors-20261008T0424Z/inspection.json": "a51222526adf3c6d7433581bfb2b4ecaf788600eb26e045f471b28fef56a829d",
+    ".scratch/registration269-view-accessors-20261008T0424Z/ledger.md": "bf41dcf1ae1e663eb5c3b202a1dfadbcea812bf054b4a48be3b6000a3fad776d",
+    ".scratch/registration269-view-accessors-20261008T0424Z/native-1402f2d90.txt": "b4825d325c5c8f7283eef81185f915772906fcd8aa7db69c0760809d8c819317",
+    ".scratch/registration269-view-accessors-20261008T0424Z/native-140879580.txt": "7453d589e911099e9d259b374d36d25864e9565ad0ccb255ea05dc4ce8c7f8e8",
+    ".scratch/registration269-view-accessors-20261008T0424Z/Publish.ps1": "9dc9a9662ddeb018eea98b1a31190cd56bd2e9392588f082dd61f7c058105ea4",
+    ".scratch/registration269-view-accessors-20261008T0424Z/Publish.py": "bc16b8596062c26f82a613d26388589e3fd3d69b29dbce6c33f5e41fa54589ba",
+    ".scratch/registration269-view-accessors-20261008T0424Z/window-1402f2d90.bin": "e6b6afa49f64fa579dfd8cd517904ddec0dc94f33d9731d05e09b39a09d772bd",
+    ".scratch/registration269-view-accessors-20261008T0424Z/window-140879580.bin": "3fcbad17092b7989ff2683ad025fa8ee7c0da9249784625038544841c067a2e6"
+  },
+  "bounds": {
+    "exactCallTargetWindows": 2,
+    "bytesPerWindow": 64,
+    "windowBytesRead": 128,
+    "linearReturnBytes": 12,
+    "newGhidraQueries": 0,
+    "automaticAnalysis": false,
+    "maxWindows": 2,
+    "maxBytesPerWindow": 64
+  },
+  "nativeWindows": [
+    {
+      "entry": "0x140879580",
+      "evidencedCallsite": "0x146b6baf7",
+      "windowBytes": 64,
+      "windowSha256": "3fcbad17092b7989ff2683ad025fa8ee7c0da9249784625038544841c067a2e6",
+      "status": "linear-to-return",
+      "linearEndExclusive": "0x140879588",
+      "linearBytes": 8,
+      "linearSha256": "68f1f68550cdbc86e0d80c33b44c7a67a4e976fe433a5b01dabcdfb683475ff9",
+      "instructions": 3,
+      "pdata": {
+        "available": false,
+        "refusal": "Entry has no evidenced PDATA/unwind owner; do not guess a leaf body"
+      },
+      "nativeListingSha256": "7453d589e911099e9d259b374d36d25864e9565ad0ccb255ea05dc4ce8c7f8e8"
+    },
+    {
+      "entry": "0x1402f2d90",
+      "evidencedCallsite": "0x146b6bb02",
+      "windowBytes": 64,
+      "windowSha256": "e6b6afa49f64fa579dfd8cd517904ddec0dc94f33d9731d05e09b39a09d772bd",
+      "status": "linear-to-return",
+      "linearEndExclusive": "0x1402f2d94",
+      "linearBytes": 4,
+      "linearSha256": "92ca7142687bd5513bea360e328ca1c00c3c3a9b71ffdda7bfc2407de7693978",
+      "instructions": 2,
+      "pdata": {
+        "available": false,
+        "refusal": "Entry has no evidenced PDATA/unwind owner; do not guess a leaf body"
+      },
+      "nativeListingSha256": "b4825d325c5c8f7283eef81185f915772906fcd8aa7db69c0760809d8c819317"
+    }
+  ],
+  "reusedCaller": {
+    "start": "0x146b6ba90",
+    "bytes": 365,
+    "sha256": "5b81ebb03792909648b37dd63bd975a46ac36115733f4a1ce34488d732795b47"
+  },
+  "accessors": {
+    "140879580": "qword(view+8)-qword(view+0) modulo2^64 inRAX",
+    "1402f2d90": "qword(view+0) inRAX",
+    "nativeEffect": "linear sequences reachRET; no offset, scaling or underflow guard in these sequences",
+    "pdata": "no evidenced ownership; native linear-return observations do not infer PDATA function boundaries"
+  },
+  "caller": {
+    "site": "146b6ba90",
+    "sameView": "RCX=RDI at146b6baf4 and146b6baff after140870bc0 returned copied-view address",
+    "count": "firstRAX savedRBX at146b6bafc;RBX\u2192R8 at146b6bb23",
+    "pointer": "secondRAX\u2192RDX at146b6bb26",
+    "receiver": "existingchild+f0\u2192RCX at146b6bb29;call146af20c0 at146b6bb2c",
+    "mapping": "raw start=field0; raw count=(field8-field0) modulo2^64"
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Exact accessor and caller result mapping only; aggregate transport remainsPartial",
+    "criticalReview": "K381 survived; valid extent/units/alias/transport/runtime acceptance unresolved",
+    "workspace": "Original code/fixtures/runtime unchanged; affected36/actual preflight and exact1890/50/fivePS/closed-loopback reuse inROADMAP"
+  },
+  "limits": [
+    "No guarantee of valid allocated buffer, field16 meaning, non-aliasing or unchanged original payload.",
+    "Raw64-bit subtraction does not prove intended signedness/unit interpretation or underflow protection elsewhere.",
+    "Actual upstream secondary caller/view producer/Carrier/socket/runtime active identity/authentication/native acceptance/M1 unknown.",
+    "Original codecs/adapter/candidates/trial unchanged; consumed native grant not renewed."
+  ],
+  "nextEvidence": "Same-primary secondary+20 caller and actual copied-view/pair producer with transport/header provenance.",
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "reviewResourcesAcquired": false,
+    "nativeClientCodeExecuted": false,
+    "pushed": false
+  }
+}

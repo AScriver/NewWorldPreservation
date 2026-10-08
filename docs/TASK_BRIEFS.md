@@ -1,5 +1,22 @@
 # Bounded task briefs
 
+## #269 — native view pointer/count accessors (S–M)
+
+- Child267/root164/178, clean8c89ee8. Primary owns original bounded native
+  inspection/private receipts and tracked docs/catalog; review owns ignored269
+  report only. Existing caller/view helper reused; accessor-named cache search
+  found none. No client/runtime/network/hook/capture/code/codec changes.
+- Two exact evidenced call-target executable windows64B each,128B total;
+  only12B linear native returns claimed. No guessed PDATA/function boundaries,
+  no whole-image analysis, no extra targets. Preserve earlier helper refusal.
+- K381 same-view field0→RDX andfield8-field0 modulo2^64→R8 caller mapping
+  survives native/hash/call-target guards and critical review. Bounds/units/
+  alias/field16/upstream transport/runtime/native acceptance remain unknown.
+- Affected36 checks/actual preflight/public-private binding checks, exact input
+  set reconciliation and scoped local commit/tracking/readback/release. Reuse
+  unchanged1890/50/fivePS/closed-loopback support; component can close while
+  aggregate267/268 staysPartial. No runtime resources acquired.
+
 ## #268 — same-primary callback invoker (M, partial)
 
 - Child267/root164/178, clean0d2b02a. Primary owns tracked original metadata/docs;

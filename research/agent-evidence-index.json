@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-view-accessors",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K381"],
+      "docs": ["docs/REGISTRATION_VIEW_ACCESSORS.md", "docs/REGISTRATION_RECEIVE_INVOKER.md"],
+      "scripts": [],
+      "tests": [],
+      "evidence": [{"path": "research/evidence/current-registration-view-accessors.json", "classification": "source-inference", "scope": "Exact native copied-view field0 and field8-field0 result mapping to reader RDX/R8; component source boundary"}],
+      "fixtures": [],
+      "limit": "Two64B native windows/12B linear-return instructions, no inferred PDATA boundaries. Raw64-bit results, no valid allocation/extent/units/alias/field16/upstream Carrier/runtime/auth/native acceptance proof. Codecs/adapter/trial unchanged."
+    },
+    {
       "id": "current-registration-receive-invoker",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K379", "K380"],
@@ -2045,6 +2056,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-view-accessors.json",
     "research/evidence/current-registration-receive-invoker.json",
     "research/evidence/current-registration-receive-callback.json",
     "research/evidence/current-registration-adapter-current.json",

@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Native copied-view to reader result mapping — October7, #269
+
+[Original source receipt](../research/evidence/current-registration-view-accessors.json)
+pins clean8c89ee8, exact directly evidenced CALL targets and two64-byte windows;
+only12 bytes through linear RET are claimed. Native/caller hashes and review
+close this local component, retaining267/268 aggregate transport limits.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K381 | Same copied-view field0→RDX;field8-field0 modulo2^64→R8 at compact parser146af20c0 | Strongly source-supported8B/4B native accessors and exact365B caller/result flow. No offset/scaling/underflow guard in those sequences; no inferred PDATA boundary. Valid allocation/extent/units/alias/field16/upstream Carrier/runtime/native acceptance remain unproved | [Local pointer/count mapping](REGISTRATION_VIEW_ACCESSORS.md); original bounded native receipt/critical review |
+
+Missing-PDATA extraction refusal is preserved; directly observed instruction
+sequences now resolve the formerly opaque accessor results independently.
+This is owned-client incoming source, relevant to server sends, not an executed
+replacement-server receive path or playable world.
+
 ## Same-primary incoming callback invoker — October7, #268, partial
 
 [Original source receipt](../research/evidence/current-registration-receive-invoker.json)
