@@ -1,5 +1,23 @@
 # Agent handoff
 
+## Current connection callback and system ACK input — October8, #282
+
+[K419–K421](REGISTRATION_CONNECTION_ACK.md) establishes the selected initial
+state-field callback and systemID6 marker/field/cursor/list operations. The
+connection callback supplies a field through opaque container metadata; no
+payload delivery is visible. The ACK reader's selected marker40 branch consumes
+two16-bit fields; its caller peeks the trailingID without moving the cursor and
+later advances8 bits. Physical/configuration/alias/runtime/ownership limits remain.
+
+The pinned FirstLight ACK builder passed an independent13-call synthetic
+comparison (9 exact records,4 guardNone cases), plus ID-route/out-of-domain
+controls. No production mismatch justified a change. Two roots1971B/no new
+windows, exact native seals and targeted review support this source component.
+Original corrections remain separate and frozen. Relevant36catalog/PF/bindings
+pass; unchanged1960/50/fivePS/closedloopback validation is reconciled by actual
+selected inputs. No game/native/listener/service or fresh trial grant.
+Parent277/263 physical/reassembly→compact/type/reply/auth/world/M1 remains Partial.
+
 ## Initial receive-object state assignment — October8, #281
 
 [K416–K418](REGISTRATION_RECEIVE_STATE.md) joins the direct lookup-node

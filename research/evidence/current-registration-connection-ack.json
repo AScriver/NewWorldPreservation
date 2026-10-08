@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 282,
+  "parentActionableId": 277,
+  "claimIds": [
+    "K419",
+    "K420",
+    "K421"
+  ],
+  "recordedUtc": "2026-10-08T10:38:49.458173+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "224684da971366eb3df5e14f94e5e99c5be193d3",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_CONNECTION_ACK.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_CONNECTION_ACK.md": "d38c643bd56af3463cda30eea750f40da37bc482999b95543f9f469534d81186",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-address-factory.json": "a50cc35e3f7c6f019aade1b6f30898e5974181baf3cd0f06cdc864b7857a4f07",
+    "research/evidence/current-registration-driver-backend.json": "30f5fb1c4b38a2f41d49aa9c2be8449c78d4ab44e45720de38d7a10067bc9fbd",
+    "research/evidence/current-registration-incoming-reader.json": "514a066c5cda5ed727f40eb25f2124b22bd3b492d1e3344ca25c30d1442713f9",
+    "research/evidence/current-registration-packet-dispatch.json": "b17b1e40e466bbca541e46a199739ee6ca7eaa9d14792b1966c5811d96417a57",
+    "research/evidence/current-registration-packet-receive.json": "06e20c6232a565811eeb344e11ed3ae0a0943e7954219938a34e1b92171fd76e",
+    "research/evidence/current-registration-receive-state.json": "5dd95921987c2d3a00540d6af29e65aabb0c76f62b9019c1ed3ef1941149792d",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/registration262-worker-20261008T0126Z/table-148480670.json": "476602d6c22a95a51ed6c68e6de890fa4ea6321a8c087c217aa0621b3f014e04",
+    ".scratch/registration277-primary-20261008T0748Z/native-140f7c420.txt": "b78bc03000a956acc68d8fc8a32d6638639c52ebb652b022aabe1ea1923626aa",
+    ".scratch/registration277-primary-20261008T0748Z/native-145dd4a90.txt": "a2fbcdf4e58b954b4a441b0df5133d01fc1ab83101d727a0c3ec91b22a724123",
+    ".scratch/registration278-primary-20261008T0822Z/closure.json": "7162e57defbddc37c2c471bd15e3f55ff88be03f86ad633b5cec65d2876cd2c8",
+    ".scratch/registration279-next-callback-20261008T0916Z/report.md": "38b05f80e15867974fa0cfb5f17cdb15d530c1abc910dfa8f036390b1ece0253",
+    ".scratch/registration280-next-construction-20261008T0937Z/report.md": "257712fed36260a090de5e1e3ca43fb3659846b011df04eee0eb22ca4bce5c31",
+    ".scratch/registration282-ack-verification-20261008T1030Z/experiment-report.md": "5ba643f498090164695293af9bca002a8f3d44ee6b9385f8850502dcbccbeb7c",
+    ".scratch/registration282-ack-verification-20261008T1030Z/harness.py": "2c0ffff7acb3065f3862883ec78a4e6481f28d184e4e556f8d948217d3eb2eeb",
+    ".scratch/registration282-ack-verification-20261008T1030Z/results.json": "1dbfb011cf5a81e04d05f8d430b54d6ce39537cf39526d65bbce19414056fca2",
+    ".scratch/registration282-ack-verification-20261008T1030Z/run.ps1": "505cae6531aa9d4d9a3fcdc591df3503ff5aca086e4bbc3583a698b3c1cc632e",
+    ".scratch/registration282-primary-20261008T1016Z/Baseline.ps1": "0b500ac3f6c63310e69d83420111bcc2a1d680d7c2e0d7dceaf522a32034f183",
+    ".scratch/registration282-primary-20261008T1016Z/Baseline.py": "1d89c868da55c8861765cc8b0015df506ea4be441f115a94da76fda58a5913b2",
+    ".scratch/registration282-primary-20261008T1016Z/Catalog.ps1": "5bcd2e5fe3bafc9700e04928f2e5e7a90553dcb442ea40c8a97ed0d1af207a7e",
+    ".scratch/registration282-primary-20261008T1016Z/Closure.ps1": "dbea2377c59dc0b551cd4f055b0b8cee5434c7c9e7d356a6722e9edd33b01189",
+    ".scratch/registration282-primary-20261008T1016Z/Closure.py": "2d60a3dc1149c882afa3dfabacbe2b1d76e1f69e660b9452ad081ea9656ea841",
+    ".scratch/registration282-primary-20261008T1016Z/Commit.ps1": "f7bda7cbdbd50127d07d43278679434da7a9772113c14add03d1b9b9f410237e",
+    ".scratch/registration282-primary-20261008T1016Z/Metadata.ps1": "b9964f66abc1f709277839c1d1a68ccf0459c46d4e9d7353aad2deecd11ab56e",
+    ".scratch/registration282-primary-20261008T1016Z/Metadata.py": "52a1579c2bb474363a3424e6a5df53e6e894000545f3b3fa7fc44ea45edf4f85",
+    ".scratch/registration282-primary-20261008T1016Z/PrepareBaseline.py": "acc93f10873367ec422098ea4b816be42ab443ce5096821c0331528f935dde8c",
+    ".scratch/registration282-primary-20261008T1016Z/PrepareMetadata.py": "4da1c40db1aa202fb302b20a5d2b452a430836184930c5123560eaffc92917ed",
+    ".scratch/registration282-primary-20261008T1016Z/PreparePublish.py": "02f9a087c7339cf51adbad68b628d6abff0a2d2fd3f6ac7c0728aec3ccccee16",
+    ".scratch/registration282-primary-20261008T1016Z/PrepareSeal.py": "22b52e493d4b60e67ed76cd3bbcfb877fe0c467dcdb8ddc6eadbc24ff76ce199",
+    ".scratch/registration282-primary-20261008T1016Z/PrepareSupport.ps1": "3981b21ac5ac329431bcf2e9677eb1cc4eebb0caa5d6b26d37e0497fc617d119",
+    ".scratch/registration282-primary-20261008T1016Z/PrepareSupport.py": "9f2619e064f3c24e15c5ae2b37009dc503ee9002248fa6eb810fb0c6812a1d06",
+    ".scratch/registration282-primary-20261008T1016Z/Publish.ps1": "b65c3d10d9d216fe55bddb69dbc707f7ebad029eac44009c6f9c759590c55d84",
+    ".scratch/registration282-primary-20261008T1016Z/Publish.py": "7b0b2ae31682337cfb627a84460dc6d2e6a8a6976c7c35ab0c907cba160bc9ad",
+    ".scratch/registration282-primary-20261008T1016Z/Seal.ps1": "4189bdcdd569d2ea438fbe50bf01ac9c5fa751e88c0214b2ee4050e31bd3a6d9",
+    ".scratch/registration282-primary-20261008T1016Z/Seal.py": "729f311ba6f420744aa62f1fe005d180428fcfd76837aca75be6f6c92b583ec6",
+    ".scratch/registration282-primary-20261008T1016Z/Stage.ps1": "f1f9d9804eef57ba23419a629af5c3241135dab61d0bcd80115d96b9f88f17de",
+    ".scratch/registration282-primary-20261008T1016Z/adjudication.md": "52405c35a9cfc949c9cbc722a7e079af6390056b7509d26d514b761a2268a75c",
+    ".scratch/registration282-primary-20261008T1016Z/baseline.json": "eadf36d767ccfd7374d7e8b20488a8f9145ada07ac9d89cc30c94ea0a36b0dc0",
+    ".scratch/registration282-primary-20261008T1016Z/doc-draft.md": "d38c643bd56af3463cda30eea750f40da37bc482999b95543f9f469534d81186",
+    ".scratch/registration282-primary-20261008T1016Z/ledger.md": "b3a0412e8ab6ff334c2531f7e8a17982dd3ff23f933bbf4df7811546a6f996b9",
+    ".scratch/registration282-primary-20261008T1016Z/metadata-head.py": "c4578fa99a0de9d42be6354d022615de52a146e5262310d8aa6feb48d1e83a51",
+    ".scratch/registration282-primary-20261008T1016Z/native-145dcff90.txt": "5bfbfe2332e5bfed7fe3a03c1a1ccdd3881131f0343ee986a7819ba64db7df93",
+    ".scratch/registration282-primary-20261008T1016Z/native-145dd79f0.txt": "48fee009a6311bb6a18485a38a180c6c31054d5d88f3f69538c63e640d8f76fb",
+    ".scratch/registration282-primary-20261008T1016Z/publish-tail.py": "40005860894df29dd465e3618b3d2e1ef6bbf449351f4796cf58cc5912420ed9",
+    ".scratch/registration282-primary-20261008T1016Z/seal-tail.py": "86a204fc1ccf5ccfe486c6469e10fb35b7011f30430651e454acfe404ff9a76b",
+    ".scratch/registration282-primary-20261008T1016Z/seal.json": "bb98d813039b4068d6395927f5758f09795e390a5d27925691641e2ad644874c",
+    ".scratch/registration282-review-20261008T1031Z/report.md": "5221d96d4a0f8693750b628e6757a265ab5e81255efbaf8e1db736c883a71514",
+    ".scratch/registration282-state-callback-20261008T1017Z/ADDENDUM-2.md": "215eead383ebd89de794ecec6041880e309fd7d87a0f8d2e936881720fe4c95d",
+    ".scratch/registration282-state-callback-20261008T1017Z/ADDENDUM.md": "a7555bad52a625a703adc9128238e205e0410d2a862f0624f9388f6d59e033a4",
+    ".scratch/registration282-state-callback-20261008T1017Z/NativeCheck.ps1": "e0d77ddde1e9e73169194082833fe43a2014ffaddd9d9ec810108dd26b2660cb",
+    ".scratch/registration282-state-callback-20261008T1017Z/NativeCheck.py": "7fa39d199af47e9cf5eb19569422333a63d9580e7cf48c43790376a116ea84b6",
+    ".scratch/registration282-state-callback-20261008T1017Z/NativeCheck145dd79f0.ps1": "e04b50cd5dc3a192793807ada67085bfe4207c2c469f5444047a9577a0f00727",
+    ".scratch/registration282-state-callback-20261008T1017Z/NativeCheck145dd79f0.py": "baeada87f6bf51009114211b5a400b2ea82206c0853a285a0d54d1b47df05343",
+    ".scratch/registration282-state-callback-20261008T1017Z/Query145dcff90.ps1": "87a61f23e6529a93d2cfe60a27c5c7cda50a4afc0964c8a839a0c6726f093887",
+    ".scratch/registration282-state-callback-20261008T1017Z/Query145dd79f0.ps1": "2bd36a449cd207c461fa187bfe0751cb83fdf0773c04b932567ba57fdb55816e",
+    ".scratch/registration282-state-callback-20261008T1017Z/REPORT.md": "217be7873b92ab8cc28792e78988669e1d9827ac69324dbc3cae4e56c028dcb4",
+    ".scratch/registration282-state-callback-20261008T1017Z/WriteAddendum.ps1": "aadbdce0be6dea5788189337436a3a042cef562aa7200423f85ed7ff7ddb2841",
+    ".scratch/registration282-state-callback-20261008T1017Z/WriteAddendum2.ps1": "7df4d5fa61c9bdbcd9f6c9832ec0c19e50a7fb5fdc8c1d136b2bf8af57a2f852",
+    ".scratch/registration282-state-callback-20261008T1017Z/native-check-145dd79f0.json": "2b2f2fd90cbecd56e2428eab85b380e8977339f2db37b429a8897e38788bab24",
+    ".scratch/registration282-state-callback-20261008T1017Z/native-check.json": "d5c34e967bda4a30ca0a3a2792bb84597ae51eee712447a179526af1706d42ae",
+    ".scratch/registration282-state-callback-20261008T1017Z/native-instructions-145dd79f0.txt": "73ed4dee3d41268bae5b7902a025824576861fde8c2566c4f8754470d6136703",
+    ".scratch/registration282-state-callback-20261008T1017Z/native-instructions.txt": "5e5ffe127fc5efdbfbc5d85b7ea96fdb7bd559b6c2158612824e2cc38236168f",
+    ".scratch/registration282-state-callback-20261008T1017Z/output-145dcff90/function-145dcff90.c": "6ef6fc8996dd17428b43b85f1adbe89cf45ab08992e6cccdfcc27ad00c715a2d",
+    ".scratch/registration282-state-callback-20261008T1017Z/output-145dcff90/receipt.json": "0ddabdf3d883a5178d66726bef9472ab7bfbd73e05167a463dd4d7fba58cb3c2",
+    ".scratch/registration282-state-callback-20261008T1017Z/output-145dd79f0/function-145dd79f0.c": "27eba3e067bb7ffe8d85a34be9135f54f20b0adb62573c80f51d7c79b83b90db",
+    ".scratch/registration282-state-callback-20261008T1017Z/output-145dd79f0/receipt.json": "a03efc9fb62ed676b0b08d48396dc6853d53d3c0a22381f0b68c9d9862aba6e7",
+    "research/upstream/first-light/server/javelin/frame.py": "798f6419114eacac5c5bfb1fd4822929239cd82fb66835e15242dd78a066b33a",
+    "research/upstream/first-light/server/javelin/wire.py": "bcb82f500455f9aa57312a596554954c04a462a1acc2cb23ae4a74ccd65d3a62",
+    "research/upstream/first-light/server/rep_responder.py": "d1e3a47de31258ba8442f4b8988060ac7cbe16983705591d7173c7617a785d73"
+  },
+  "native": [
+    {
+      "entry": "0x145dcff90",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration282-state-callback-20261008T1017Z/output-145dcff90/receipt.json",
+      "queryReceiptSha256": "0ddabdf3d883a5178d66726bef9472ab7bfbd73e05167a463dd4d7fba58cb3c2",
+      "historicalHead": "224684da971366eb3df5e14f94e5e99c5be193d3",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145dcff90",
+          "endExclusive": "0x145dd0100",
+          "bytes": 368,
+          "sha256": "31d404c250daa2d1e7e1a09d92ac575f55f7fb921e11cd0cae01b53bbe43e2a9",
+          "instructions": 80,
+          "listing": ".scratch/registration282-primary-20261008T1016Z/native-145dcff90.txt",
+          "listingSha256": "5bfbfe2332e5bfed7fe3a03c1a1ccdd3881131f0343ee986a7819ba64db7df93"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dd79f0",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration282-state-callback-20261008T1017Z/output-145dd79f0/receipt.json",
+      "queryReceiptSha256": "a03efc9fb62ed676b0b08d48396dc6853d53d3c0a22381f0b68c9d9862aba6e7",
+      "historicalHead": "224684da971366eb3df5e14f94e5e99c5be193d3",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145dd79f0",
+          "endExclusive": "0x145dd8033",
+          "bytes": 1603,
+          "sha256": "50970e22a3a95c9a52ebd98c6ab2b61ef9145800a87990c673bc1a7229398308",
+          "instructions": 427,
+          "listing": ".scratch/registration282-primary-20261008T1016Z/native-145dd79f0.txt",
+          "listingSha256": "48fee009a6311bb6a18485a38a180c6c31054d5d88f3f69538c63e640d8f76fb"
+        }
+      ]
+    }
+  ],
+  "resourceActual": {
+    "newHelperBatches": 2,
+    "newPdataRoots": 2,
+    "newCodeBytes": 1971,
+    "primaryNewTableWindowBytes": 0,
+    "reusedTableBytes": 192,
+    "initializedStaticImportBytes": 75697152,
+    "virtualBssExtensionBytes": 11118896,
+    "primaryBaselineFullIdentityPasses": 1,
+    "primarySealFullIdentityPasses": 1,
+    "agentUniqueFullIdentityPasses": 4,
+    "primaryFullIdentityPasses": 2,
+    "knownFullIdentityPasses": 6,
+    "knownFullIdentityBytes": 1075225056,
+    "agentNativeFullIdentityPasses": 0,
+    "agentBoundedNativeLogicalBytes": 3267,
+    "failedHelperQueries": 0,
+    "failedPrimarySeals": 0
+  },
+  "metadataNavigation": {
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "directHeaderLogicalBytes": 262
+  },
+  "reusedTable": {
+    "path": ".scratch/registration262-worker-20261008T0126Z/table-148480670.json",
+    "artifactSha256": "476602d6c22a95a51ed6c68e6de890fa4ea6321a8c087c217aa0621b3f014e04",
+    "bytes": 192,
+    "rawSha256": "32ac6b198580ed1a635d9ad9ca097c752e3aa46b840ea1064943c49fd3e358cd",
+    "slot8Target": "0x145dcff90",
+    "historicalHead": "760a51a46197933563aed18489b965d669848735",
+    "historicalDirty": "M docs/TASK_BRIEFS.md"
+  },
+  "sourceClaims": {
+    "K419": "Conditional first-state-field callback through opaque container; no payload delivery or semantic return established.",
+    "K420": "SystemID6 marker/16-bit/bitmap-byte grammar and unchanged-cursor last-byte peek/8-bit continuation; physical/runtime limits.",
+    "K421": "Exact modular list/callback/event effects; actual pinned ACK builder9 exact records/4 guardNone and controls match selected source cursor model."
+  },
+  "audit": "Frozen initial rootcount/capacity/bitmap-count/cursor and ledger ABI/return shorthand errors corrected by separate addenda and primary adjudication; originals retained. No failed helper query/seal.",
+  "synthetic": {
+    "cases": 13,
+    "emittedRecords": 9,
+    "noneGuardCases": 4,
+    "controls": [
+      "final ID5 selects another route",
+      "outside-uint16 values silently mask"
+    ],
+    "nativeClientExecuted": false,
+    "queueSemanticsTested": false
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Selected conditional source and synthetic ACK-layout component only",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires exact selected-input closure reconciliation"
+  },
+  "limits": [
+    "Opaque calls/nullable/alias/lifetime/final identity/actual fallback selection unproved; no payload delivery in selected callback.",
+    "AL/error/configuration and logical cursor/physical bounds remain separate; early exits need not latch failure and caller does not enforce record exhaustion.",
+    "Exact modular traversal source only; callback/event ownership and native acceptance/wrap semantics unknown. Builder argument-domain policy separate.",
+    "Parent277/263 physical/reassembly-to-compact/type/reply/authentication/world/M1Partial; official footage is reference, no fresh native trial grant."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

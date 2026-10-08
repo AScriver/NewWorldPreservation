@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current connection callback and system ACK input — October8, #282
+
+[Receipt](../research/evidence/current-registration-connection-ack.json) pins
+clean224684d, exact selected source/native/review and independent synthetic artifacts.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K419 | Conditional first-state-field callback | Opaque container/cleanup/nullable/aliases/identity/lifetime; no payload delivery |368B/80 instructions |
+| K420 | SystemID6 marker/field/cursor grammar |<=64 bitmapBYTES; AL/error/config gates; early exit need not set error; physical/runtime unknown |1603B/427 instructions plus cached caller/bitreader |
+| K421 | Modular list effects and ACK-builder comparison | Exact0x7fff inequalities; callback/event ownership unknown; synthetic layout is not native acceptance |13 literal calls, ID/out-of-domain controls and critical review |
+
+Selected componentPassed; parent277/263/M1Partial. Existing builder reused;
+no new native trial/client/hook/memory/endpoint. Frozen wording errors retained
+with separate corrections and primary adjudication; six known fullimage identity
+passes, imports/BSS/navigation/native bytes separately counted.
+
 ## Initial receive-object state assignment — October8, #281
 
 [Receipt](../research/evidence/current-registration-receive-state.json) pins

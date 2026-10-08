@@ -449,6 +449,36 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-connection-ack",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K419",
+        "K420",
+        "K421"
+      ],
+      "docs": [
+        "docs/REGISTRATION_CONNECTION_ACK.md"
+      ],
+      "scripts": [
+        "scripts/ghidra_function_slice.py"
+      ],
+      "tests": [
+        "tests/test_project_preflight.py",
+        "tests/test_offline_runner.py"
+      ],
+      "fixtures": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-connection-ack.json",
+          "classification": "source-inference",
+          "scope": "Conditional initial state callback, systemID6 reader grammar/list effects and synthetic ACK-builder comparison"
+        }
+      ],
+      "limit": "Selected static/synthetic byte evidence only; physical/runtime/ownership/reassembly/compact/type/reply/auth/world/M1 unproved."
+    },
+    {
       "id": "current-registration-receive-state",
       "roadmapTasks": [
         "M1-06B"
@@ -2343,6 +2373,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-connection-ack.json",
     "research/evidence/current-registration-receive-state.json",
     "research/evidence/current-registration-address-factory.json",
     "research/evidence/current-registration-incoming-reader.json",
