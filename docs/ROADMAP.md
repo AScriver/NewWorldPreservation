@@ -1,5 +1,26 @@
 # Milestone 1 roadmap
 
+## Private preview screenshot session — October8
+
+The user requested a fresh character-selection screenshot. One isolated owned
+client launched with the existing guarded trust hook and owned loopback services;
+the local HTTPS responder served its synthetic preview character. The user supplied
+a clean image showing `Preservation` / `Preservation Local` and an enabled Play
+button. This is character-selection preview evidence; world entry, a spawned
+private player and gameplay remain unproved.
+
+The private screenshot adapter retained the existing process/job ownership,
+containment and cleanup, selected a nonresponsive DTLS transport probe and used
+the user-stop lifetime. Application reply stages and extra callback diagnostics
+were disabled. Current registration-profile preparation still requires its
+separate trial grant. The screenshot, exact inputs, adapter and receipts stay
+ignored in `private/frida-trials/run-20261008T1744-screenshot`.
+
+Controller cleanup and independent October8 readback verified no game/listeners,
+zero owned rules in both firewall stores and byte-exact hosts restoration;
+installed binaries/signatures and the retained CA passed the controller checks.
+No matching screenshot Actionable existed under164; tracking was not updated.
+
 ## Current registration-only preparation — October8, #285
 
 [K428–K430](CURRENT_REGISTRATION_TRIAL.md) adds explicit current-profile admission,
