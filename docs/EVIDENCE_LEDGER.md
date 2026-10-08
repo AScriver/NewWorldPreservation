@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Driver list and shared buffer table — October7, #274
+
+[Receipt](../research/evidence/current-registration-driver-input-buffers.json)
+pins clean93620b8 and exact1494 new native bytes. Strongly source-supported local
+effects only; no actual transport or runtime acceptance claim.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K396 | Driver+08 jump reaches conditional list worker |677B state/list/reference effects; setup or transport role unknown | Exact PDATA/native seal |
+| K397 | Shared helper performs value lookup/insertion |817B, signed-byte hash count+10, storage selector+18, node/new-byte output; validity/lifetime/callee effects unknown | Exact PDATA/native seal |
+| K398 | Field+18 gates unresolved virtual+10 call |Unsigned >=16; separate from hash count+10; pointer,quantity+1mod64,1. Storage management plausible, transform/Carrier unknown | Critical review and native correction |
+
+Original incorrect length wording retained privately with correction. Known
+callers remain distinct. Two batches completed within declared budget; no game,
+socket, hook or native trial, and no new wire behavior derived from these calls.
+
 ## Conditional socket backend — October7, #273
 
 [Original receipt](../research/evidence/current-registration-driver-backend.json)

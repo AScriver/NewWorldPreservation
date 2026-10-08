@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 274,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T06:59:50.012628+00:00",
+  "claimIds": [
+    "K396",
+    "K397",
+    "K398"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "93620b854796104b217e68f0d4cbe67280a0014d",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "acceptance": "Exact list worker, shared table routine and separate gate quantities; aggregate transport/Carrier remains partial.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-view-accessors.json": "0b3e72a1bccfaae8d38d35fc1c61e29dbec7c968190652c3b2b3f0efb0fade98",
+    "research/evidence/current-registration-receive-producer.json": "c8bb12e94d5890accbc206c8a81b160e46ce08357eb068c36c561b7a7fdd49a6",
+    "research/evidence/current-registration-driver-interface.json": "f888f11381fde36a72b93c18f966982f8b0cfaa32812a5fcd1ec0a0a0198e003",
+    "research/evidence/current-registration-driver-buffer-edges.json": "d16d69aa8858788f1f5f776eb7262f2c508c157376d307b3fdd4c3579fc2d35b",
+    "research/evidence/current-registration-driver-backend.json": "30f5fb1c4b38a2f41d49aa9c2be8449c78d4ab44e45720de38d7a10067bc9fbd",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+    ".scratch/registration273-driver-backend-20261008T0611Z/window-145dddba0.json": "86b032f972d85519adb3ae712526726d160c67b1ff8a6964479179a4b317e461",
+    ".scratch/registration274-driver-setup-20261008T0643Z/CORRECTION.md": "d1c57289244e037d62d39c8580251a7162d9b643e3c03e11a799967fed178935",
+    ".scratch/registration274-driver-setup-20261008T0643Z/REPORT.md": "99fd0f7088927e1b08087e25e0a4ed2edc989945af8ace7b6e0c299be88ae386",
+    ".scratch/registration274-driver-setup-20261008T0643Z/native-145db6410.json": "327543d55b66e7f3960c22e21c147adacf6ecd09f26ad4478e623bb3e0c17be1",
+    ".scratch/registration274-driver-setup-20261008T0643Z/native-145dddbb0.json": "4316b4cec78700eea38b0d4a9605201badfcdaea468a372a1d004710c7c1c4cb",
+    ".scratch/registration274-driver-setup-20261008T0643Z/native-listing-145db6410.py": "0203e8eca76c464ad259857194a5807733d913a750601e8be4a5f3dbe8bb9d4c",
+    ".scratch/registration274-driver-setup-20261008T0643Z/native-listing.py": "f14e6a2f488303f1a803c84662a6d2050d0d319c696b7c46f7ab30f2cd7e9eea",
+    ".scratch/registration274-driver-setup-20261008T0643Z/output-145db6410/function-145db6410.c": "a00f1e0760b037c58ffc83fe9cc7198f3c2aae2f706afce11d7832f1c663019d",
+    ".scratch/registration274-driver-setup-20261008T0643Z/output-145db6410/receipt.json": "82be6f71add88aa38e182ec4af399dbd862535f5fb3c09643824abee8be917ab",
+    ".scratch/registration274-driver-setup-20261008T0643Z/output-145dddbb0/function-145dddbb0.c": "9cadb2e321e5729adc74986cc525f72f63bf33c86c9434cf827a7818f2611122",
+    ".scratch/registration274-driver-setup-20261008T0643Z/output-145dddbb0/receipt.json": "42d6a87fa5d15fafc98f428e78514f374b251d562fa3a0e0f24a8456e9466ec6",
+    ".scratch/registration274-driver-setup-20261008T0643Z/preflight-145db6410.json": "6cb39a15e88d7917032318b8c43086f9933ff3a254c8a0c44cfde76ff5db91f0",
+    ".scratch/registration274-driver-setup-20261008T0643Z/preflight-145db6410.py": "c5747513008f3d1b5f39d2fa5bae30efd3407de48aee979bb48c39a68dad19e7",
+    ".scratch/registration274-driver-setup-20261008T0643Z/preflight.json": "e9b5843822116c16774d9c2a595f107033932b1588e37de7a92274e043d7f71c",
+    ".scratch/registration274-driver-setup-20261008T0643Z/preflight.py": "1289c1127ae3dd9fd69e8760c763e78b56ca0c245377c9df0135ece79df548f4",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-native-145db6410.ps1": "cc186a17f23393c7f9a53a3a9494fbd46e9dae3252ecb7611f6490d447f76a43",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-native-listing.ps1": "8e8cd5d3de9586a90dc390858039d496d358e9dcf1fffc7fbdf4d15b84ca4ded",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-preflight-145db6410.ps1": "5be48e4119fdb9864f953f2ccd0164ff9432dd3f1c27eec295a7987c08af86c1",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-preflight.ps1": "dfd53a1b1527e9339b39bc75fc41cf3919f3e6d430c3651f01e5a5e21b80c9e7",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-slice-145db6410.ps1": "c1f6548f59e3e6660f01e2ad6085b91b399b3474848c7078ddf7e4b56e3c5d16",
+    ".scratch/registration274-driver-setup-20261008T0643Z/run-slice.ps1": "76a541549a29f5bfafb7f73093705af1d7266cdf5bceb2bc7211032c08b76918",
+    ".scratch/registration274-primary-20261008T0642Z/Baseline.ps1": "2b719c9d693cbdbe73bd580425e2f3dfb5cba9ff2e6399d47f49cef536181f95",
+    ".scratch/registration274-primary-20261008T0642Z/Baseline.py": "7eda0bca174f4c7d7223379d97b52d1b06d32961a7dfe382cf8787f8e95c703f",
+    ".scratch/registration274-primary-20261008T0642Z/Publish.ps1": "4233be5e249a4f9a79e8cd3e842ff14c262834a9d7630edd42b073bcd557fc67",
+    ".scratch/registration274-primary-20261008T0642Z/Publish.py": "84cc5e467eb52bf6625f32ba4724ef95e879740fc1ac7ef8bc11075f89eeef1e",
+    ".scratch/registration274-primary-20261008T0642Z/Seal.ps1": "5fe8b5c87f28ca46664c9a0079564af86186798e8d9b4053571d65cda7aee6ac",
+    ".scratch/registration274-primary-20261008T0642Z/Seal.py": "ecbafdcf5475f4887834f33de98d645e6c9252fb490419010bbc5079bb9dded9",
+    ".scratch/registration274-primary-20261008T0642Z/adjudication.md": "a62d6770793286042a79c8b56275b2caa4651e519e083999535737678e6792f7",
+    ".scratch/registration274-primary-20261008T0642Z/baseline.json": "2ac83303e82464ab8375f576e8e409ad1c05cf74d23b85de83d9a0dee825790d",
+    ".scratch/registration274-primary-20261008T0642Z/ledger.md": "733dcaa9c7a9cf28e563f85b8b917479c5452f14229f421b310b320445135c3d",
+    ".scratch/registration274-primary-20261008T0642Z/native-145db6410.txt": "911638f6633334ec4463c854e372ad42b4b566cf00748f8d9dfbabc1481130e4",
+    ".scratch/registration274-primary-20261008T0642Z/native-145dddbb0.txt": "240d07f2f16cb3c25202b23807d72de6c052b10ca544636235003dc74e887c6c",
+    ".scratch/registration274-primary-20261008T0642Z/seal.json": "e4be0d7595b344b23487f886ab657abe80ec36b23bd4ba4d474d28411eddd9fe",
+    ".scratch/registration274-review-20261008T0655Z/report.md": "170e7371a3e54d4454072234833267d79a7ab29d3b2af6e18df21d2eb2436452",
+    ".scratch/rep-verify-policy/fn-145dcb690.txt": "8a1a18f63e6ffc67ba13ec791a494d9ad69616632ffd79e996ae15bef65ae67e",
+    ".scratch/rep-verify-policy/fn-145dd9cf0.txt": "4fc0f44623a0fd602727b5b5a83ad9449af1bc2439cb99831f32a9d542afbc7a"
+  },
+  "newNative": [
+    {
+      "entry": "0x145db6410",
+      "ranges": [
+        {
+          "start": "0x145db6410",
+          "endExclusive": "0x145db6741",
+          "bytes": 817,
+          "sha256": "9a690f0afbb394bdaa5444ded5fb2983590f1d1a266a7ea8f0f426b5716b69ff",
+          "instructions": 212
+        }
+      ],
+      "queryReceiptSha256": "82be6f71add88aa38e182ec4af399dbd862535f5fb3c09643824abee8be917ab"
+    },
+    {
+      "entry": "0x145dddbb0",
+      "ranges": [
+        {
+          "start": "0x145dddbb0",
+          "endExclusive": "0x145ddde55",
+          "bytes": 677,
+          "sha256": "e6fafa5e12a7f281625bdc69e52cf278c4601b09eb97d062f52c0eade6b83d6a",
+          "instructions": 163
+        }
+      ],
+      "queryReceiptSha256": "42d6a87fa5d15fafc98f428e78514f374b251d562fa3a0e0f24a8456e9466ec6"
+    }
+  ],
+  "cachedNative": [
+    {
+      "entry": "0x145dcb690",
+      "start": "0x145dcb690",
+      "endExclusive": "0x145dcc3cd",
+      "bytes": 3389,
+      "sha256": "fa5816817454300baec32bb23f79f1669ac86b7141659178d6baaa8154a4a24c",
+      "instructions": 784,
+      "listing": ".scratch/rep-verify-policy/fn-145dcb690.txt",
+      "listingSha256": "8a1a18f63e6ffc67ba13ec791a494d9ad69616632ffd79e996ae15bef65ae67e",
+      "exactListingMatched": true
+    },
+    {
+      "entry": "0x145dd9cf0",
+      "start": "0x145dd9cf0",
+      "endExclusive": "0x145dda0c3",
+      "bytes": 979,
+      "sha256": "af12f485005bcc160d0d8cfa2bb07eeb450a333700cf5400bb05328f2ce30d60",
+      "instructions": 243,
+      "listing": ".scratch/rep-verify-policy/fn-145dd9cf0.txt",
+      "listingSha256": "4fc0f44623a0fd602727b5b5a83ad9449af1bc2439cb99831f32a9d542afbc7a",
+      "exactListingMatched": true
+    }
+  ],
+  "reusedEntry": {
+    "table": ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json",
+    "tableBytes": 192,
+    "slot": "0x08",
+    "window": ".scratch/registration273-driver-backend-20261008T0611Z/window-145dddba0.json",
+    "windowBytes": 64,
+    "branchBytes": 5,
+    "target": "0x145dddbb0"
+  },
+  "metadataNavigation": {
+    "directHeaderLogicalBytes": 262,
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "meaning": "Measured in-memory PE/PDATA/unwind navigation; separate from full file identity and selected code."
+  },
+  "listWorker": {
+    "claimId": "K396",
+    "entry": "0x145dddbb0",
+    "effects": "Walks driver+0x150 list; entryValue byte+0x90==0x0a gates virtual18/shared-table processing. Conditional one-shot state transfer, reference decrement, bucket accounting, release/unlink/count effects.",
+    "limit": "Product meaning, setup/transport role and callee effects unknown."
+  },
+  "sharedTable": {
+    "claimId": "K397",
+    "entry": "0x145db6410",
+    "input": "R8 string-shaped: qword+0x10 hash count, qword+0x18 inline/heap selection, qword+0x20 new-value metadata.",
+    "hash": "Signed-byte FNV-style 64-bit initial0xcbf29ce484222325/multiplier0x100000001b3; differs from unsigned-byte FNV for high-bit bytes.",
+    "output": "RDX node qword, byte+8 existing0/new1, RAX output address; other output bytes not initialized in this body.",
+    "limit": "Encoding, valid extent, full type/lifetime and opaque helper effects unknown; callers remain distinct."
+  },
+  "conditionalVirtualCall": {
+    "claimId": "K398",
+    "gate": "Unsigned qword field+0x18 >=16; distinct from hash count+0x10.",
+    "arguments": "Receiver=global context+0x30 object; virtual+0x10 receives pointer,field+0x18+1 modulo2^64,1.",
+    "limit": "No resolved table/target/effect or transform/Carrier/reply identity."
+  },
+  "resources": {
+    "helperBatches": 2,
+    "newPdataRootsAttempted": 2,
+    "newPdataRootsCompleted": 2,
+    "newPdataRootsRefused": 0,
+    "newPdataCodeBytes": 1494,
+    "reusedPdataCodeBytes": 4368,
+    "newExecutableWindowReadBytes": 0,
+    "newDataWindowBytes": 0,
+    "reusedTableBytes": 192,
+    "reusedEntryWindowBytes": 64,
+    "mandatoryInitializedStaticImportsPerBatch": 37848576,
+    "cumulativeInitializedStaticImports": 75697152,
+    "newCodePlusStaticImports": 75698646,
+    "uninitializedStaticExtensionsTotal": 11118896,
+    "gameImageFileExtentBytes": 179204176,
+    "primaryBaselineIdentityPasses": 1,
+    "primarySealIdentityPassesPerInvocation": 1,
+    "agentFullImagePassesAfterBaseline": 8,
+    "agentFullImageIdentityBytes": 1433633408,
+    "primarySealInvocations": 1,
+    "agentPreflightMetadataPerBatch": {
+      "readCalls": 511631,
+      "readBytes": 7833876,
+      "directHeaderBytes": 262
+    },
+    "meaning": "Two metered equivalent preflights; Ghidra receipts do not provide per-read counters. Full identity, selected code/static and virtual BSS are separate quantities."
+  },
+  "counterEvidence": [
+    "Initial setup hypothesis not established.",
+    "Original report called +0x18 a length; review/native correction separates it from +0x10 hash count. Original retained with correction."
+  ],
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Primary native/PDATA/table/window seal and related adversarial review; affected catalog/preflight and exact unchanged1890/50/fivePS/closedloopback reuse recorded in closure."
+  },
+  "limits": [
+    "Local list/table effects only; setup role, incoming transport producer, Carrier placement and actual client invocation unknown.",
+    "Gate field+0x18 is distinct from hash count+0x10. Dynamic virtual+0x10 target/effect unknown; storage management is a plausible alternative to transformation.",
+    "Unqueried construction/comparison/insertion/resize/release callees, aliases and lifetime may affect state. No complete object validity or final runtime state proved.",
+    "Shared callee identity does not equate caller inputs, bytes, output use or protocol content. No new server message/transform implemented from this evidence.",
+    "Runtime type bindings, appropriate response fields, authentication, native acceptance and Milestone1 remain unproved."
+  ],
+  "cleanup": {
+    "staticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

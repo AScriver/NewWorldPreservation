@@ -1,5 +1,15 @@
 # Bounded task briefs
 
+## #274 — list worker and shared table (M)
+
+- Root164/parent267, clean93620b8. Primary tracked metadata; agents ignored274dirs.
+- Cap3newPDATAroots/128KiB,2helpers/80MiB initializedstatic+BSSseparate;
+  atmost2exact64Bentry and2datawindows/512B. Navigation/fullidentity separately.
+- Actual2roots1494B/2batches, no new entry/datawindow. Reused4368B native,
+  192Btable/64Bentry. No game/network/runtime or wire behavior implemented.
+- Native/review field correction precedes affected36/PF/binding/unchanged1890
+  reconciliation, scoped commit/tracking/release. Aggregate receive staysPartial.
+
 ## #273 — conditional backend identity (M)
 
 - Root164/parent267, cleanf08cd0e; primary owns trackedfiles, agents ignored273

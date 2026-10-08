@@ -1,5 +1,23 @@
 # Milestone 1 roadmap
 
+## Driver list and shared table — October7, #274
+
+[K396–K398](REGISTRATION_DRIVER_INPUT_BUFFERS.md) pins clean93620b8 and exact
+677B list worker plus817B shared lookup/insertion helper. New source describes
+conditional state/reference/list effects and signed-byte hashing. Critical
+review separates the+18 gate/storage quantity from+10 hash count; source2068
+reference copy is distinct from source20d8 clear. No transform/network role
+established. Original report and correction retained. Two batches1494 newcode,
+75697152 initializedstatic and11118896 virtualBSS separately; imageidentity and
+metadata navigation separately accounted. Staticchildren exited; no runtime
+resources or codec/trial change. Actualtransport/Carrier/response/auth/native/M1
+remainsPartial. Next useful unit: explicitly runnable current registration
+profile and synthetic local request/reply, retaining unresolved runtime limits.
+Closure: .scratch/registration274-primary-20261008T0642Z/closure.json.
+Validated: affected36 and actual preflight passed;11 public/37 private bindings
+matched. Exact1890/50/fivePS/closedloopback support reused with8 added source
+receipts,3 changed metadata inputs and no removed inputs.
+
 ## Server protocol focus — October 7
 
 Newest #273 [conditional transport backend](REGISTRATION_DRIVER_BACKEND.md)

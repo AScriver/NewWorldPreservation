@@ -1,5 +1,15 @@
 # Agent handoff
 
+## #274 driver list and shared table — October7
+
+- [K396–K398](REGISTRATION_DRIVER_INPUT_BUFFERS.md) qualifies local list/table
+  effects. Gatefield+18 differs from hashcount+10; source2068 referencecopied,
+  only20d8 cleared. Original incorrect length wording retained with correction.
+- Exact1494 newnative bytes/2batches; no supported wire behavior from this path.
+  Source/private bindings and closure under ignored registration274 primarydirs.
+- ActualCarrier/response/auth/native/M1 remainsPartial. Continue runnable explicit
+  currentregistration profile with synthetic local exchange. No new native grant.
+
 ## #273 conditional backend — October7
 
 - [K392–K395](REGISTRATION_DRIVER_BACKEND.md) closes conditionalconstructor/
