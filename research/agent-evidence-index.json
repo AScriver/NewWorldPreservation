@@ -449,6 +449,38 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-plain-flags",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K401",
+        "K402",
+        "K403"
+      ],
+      "docs": [
+        "docs/REGISTRATION_ADAPTER_CURRENT.md"
+      ],
+      "scripts": [
+        "scripts/carrier_registration_probe.py"
+      ],
+      "tests": [
+        "tests/test_carrier_registration_probe.py"
+      ],
+      "fixtures": [
+        "tests/fixtures/registration/current-request-stream-original.json",
+        "tests/fixtures/registration/current-response-record-original.json"
+      ],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-plain-flags.json",
+          "classification": "offline-executed",
+          "scope": "Cached emitter grammar and explicit-current classification; independent hand-encoded flag18 synthetic CLI/DTLS request/reply"
+        }
+      ],
+      "limit": "Tested bit40-clear length-bearing structure, including80 parser control; native input/reassembly/connecting semantics/type/appropriate response/authentication/world/M1 unproved. Synthetic caller selectors and BODY."
+    },
+    {
       "id": "current-registration-server-cli",
       "roadmapTasks": [
         "M1-06B"
@@ -2161,6 +2193,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-plain-flags.json",
     "research/evidence/current-registration-server-cli.json",
     "research/evidence/current-registration-driver-input-buffers.json",
     "research/evidence/current-registration-driver-backend.json",

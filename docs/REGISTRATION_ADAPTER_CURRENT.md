@@ -56,6 +56,35 @@ implementation. Decoded fields are discarded; events contain fixed metadata.
 Peer state retains existing input hashes and outgoing reply bytes, not decoded
 request values. The caller still owns input buffers; this is not secure erasure.
 
+## Current request recognition without flag hints
+
+Actionables #276 admits the sole data record to current schema decoding when a
+current profile is explicitly configured, including selector zero. The existing
+gates still require channel0, a prior connect ACK and no connect request in the
+same datagram. Multiple data records remain rejected rather than selecting one
+by schema. Every candidate passes the same exact stream decoder before reply or
+cached resend. Events use `recognition_basis=explicit_current_profile`.
+
+Previously, flag40 candidates and a separate flag21 compatibility path could
+reach this decoder; other eligible flags such as00/18 could not. Historical
+mode retains those existing selection rules. The change leaves framing,
+decompression guards, request-field discard, response bytes and successful-send
+state rules intact.
+
+The selected native emitter inspected in #263 does not set bit40. Its tested
+bit40-clear length-bearing records structurally match the pinned frame parser,
+including independent count/mode and omitted sequence fields. This supports
+reusing that parser with explicit current schema selection. Bit80 is set when
+native record+2a is nonzero. FirstLight reads80 as its connecting flag; its
+special subheaders are instead gated by40 and are not derived from this emitter.
+Native connecting semantics, input parsing, fragment reassembly and placement
+of the full registration stream remain unproved.
+
+[Current flag-recognition receipt](../research/evidence/current-registration-plain-flags.json)
+records cached source corrections, focused rejection/state tests and a hand
+encoded flag18 request through the actual loopback CLI. All selectors and
+response fields in that exchange are synthetic caller inputs.
+
 The caller response is encoded before peer resources with fresh wrapper flags0
 and its exact compact record prefix. The complete encoded record must fit4096
 bytes. It is passed directly into the pinned frame codec, without a second

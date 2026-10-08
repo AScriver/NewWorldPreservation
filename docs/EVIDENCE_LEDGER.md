@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current registration flag recognition — October8, #276
+
+[Receipt](../research/evidence/current-registration-plain-flags.json) pins
+c15ad56 plus exact dirty adapter/test inputs and cached native/source corrections.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K401 | Tested bit40-clear record grammar matches pinned frame parser | Strongly source-supported field rules, including80 parser control; native input/reassembly/connecting semantics unproved | Cached263/265, corrections and hand literals |
+| K402 | Selected emitter does not set40; adapter already had21 fallback | Emitter-local source, not a universal input gate | Exact cached instructions and critical review |
+| K403 | Explicit current mode recognizes strict requests without flag hints | Executed synthetic flags/selectors/context/rejection/privacy/retry/send checks; server policy, not native acceptance | 32 new cases, focused647/full1960 and actual flag18 CLI/DTLS |
+
+Original incorrect reports remain private with three source corrections and a
+critical-review addendum. Decoded fields
+are discarded; fixed metadata does not imply secure erasure or zero state
+mutation on rejection. Native type/response/auth/world/M1 remains unknown.
+
 ## Runnable current registration server — October8, #275
 
 [Receipt](../research/evidence/current-registration-server-cli.json) pins

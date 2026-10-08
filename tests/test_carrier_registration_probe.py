@@ -320,6 +320,70 @@ def test_current_literal_request_routes_exact_caller_response(vector, response_i
     assert any(row["event"] == "V3_RESPONSE_RESENT" for row in events.rows)
 
 
+@pytest.mark.parametrize("flags", [0x00, 0x01, 0x18, 0x19, 0x20, 0x38])
+@pytest.mark.parametrize("request_index", [0, 19])
+def test_current_stream_recognition_does_not_require_historical_flag_hints(flags, request_index):
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == request_index and row["flags"] == 0)
+    adapter, events, frame, historical = current_adapter(request_index=request_index)
+    peer = Peer("plain-current")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=flags, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02current")
+    assert adapter.peers[peer.id].v3_sent and historical.tokens == []
+    assert frame.marshaled[-1].payload == encode_registration_response_record(CURRENT_RESPONSE, type_index=3)
+    candidate = next(row for row in events.rows if row["event"] == "V3_CANDIDATE")
+    assert candidate["recognition_basis"] == "explicit_current_profile"
+    adapter.on_app(peer, b"\x03retry")
+    assert len(frame.marshaled) == 1
+    assert any(row["event"] == "V3_RESPONSE_RESENT" for row in events.rows)
+
+
+@pytest.mark.parametrize("context", ["before-connect", "same-connect", "multiple", "wrong-channel", "control"])
+def test_current_plain_candidate_keeps_single_channel_zero_postconnect_boundary(context):
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    adapter, events, frame, _ = current_adapter()
+    peer = Peer("current-boundary")
+    if context != "before-connect":
+        frame.records = [Record(system_id=1, payload=b"\x01")]
+        adapter.on_app(peer, b"\x01connect")
+    channel = 1 if context == "wrong-channel" else 3 if context == "control" else 0
+    frame.records = [Record(channel=channel, flags=0x18, payload=current_stream(vector))]
+    if context == "same-connect":
+        frame.records.append(Record(system_id=1, payload=b"\x01"))
+    elif context == "multiple":
+        frame.records.append(Record(channel=0, flags=0x18, payload=b"unrelated"))
+    adapter.on_app(peer, b"\x02current")
+    assert not adapter.peers[peer.id].v3_sent and frame.marshaled == []
+    assert not any(row["event"] == "V3_RESPONSE_SENT" for row in events.rows)
+
+
+def test_current_plain_rejection_never_uses_historical_parser_or_logs_data(monkeypatch):
+    adapter, events, frame, historical = current_adapter()
+    for name in ("parse_v3_request", "parse_v3_request_retry"):
+        monkeypatch.setattr(adapter.v3_request, name, lambda _: pytest.fail("historical fallback"))
+    peer = Peer("plain-reject")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x18, payload=b"private-not-a-stream")]
+    adapter.on_app(peer, b"\x02current")
+    assert not adapter.peers[peer.id].v3_sent and frame.marshaled == []
+    assert historical.tokens == []
+    assert any(row.get("reason") == "schema_unresolved" for row in events.rows)
+    assert "private-not-a-stream" not in str(events.rows)
+
+
+def test_historical_profile_does_not_gain_plain_flag_candidate_recognition():
+    adapter, events, frame, _ = setup_adapter()
+    peer = Peer("historical-boundary")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x18, payload=b"opaque")]
+    adapter.on_app(peer, b"\x02data")
+    assert not adapter.peers[peer.id].v3_sent and frame.marshaled == []
+    assert not any(row["event"] == "REGISTRATION_SCHEMA_RESULT" for row in events.rows)
+
+
 @pytest.mark.parametrize("missing", ["current_request_type_index", "current_response_type_index", "current_response_body"])
 def test_current_profile_requires_all_three_values(missing):
     values = dict(current_request_type_index=19, current_response_type_index=3,
@@ -352,7 +416,8 @@ def test_current_response_cap_includes_record_prefix_before_peer_resources():
 
 
 @pytest.mark.parametrize("kind", ["checksum", "count", "outer-uuid", "flags", "presence", "selector", "suffix", "prefix", "body-tail", "over-cap"])
-def test_current_profile_rejects_malformed_stream_without_legacy_fallback(kind, monkeypatch):
+@pytest.mark.parametrize("record_flags", [0x18, 0x21])
+def test_current_profile_rejects_malformed_stream_without_legacy_fallback(kind, record_flags, monkeypatch):
     import zlib
     vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
     value = current_stream(vector)
@@ -380,7 +445,7 @@ def test_current_profile_rejects_malformed_stream_without_legacy_fallback(kind, 
     peer = Peer("rejected-current")
     frame.records = [Record(system_id=1, payload=b"\x01")]
     adapter.on_app(peer, b"\x01connect")
-    frame.records = [Record(channel=0, flags=0x21, payload=value)]
+    frame.records = [Record(channel=0, flags=record_flags, payload=value)]
     adapter.on_app(peer, b"\x02current")
     assert frame.marshaled == [] and historical.tokens == []
     assert not adapter.peers[peer.id].v3_sent
@@ -417,7 +482,8 @@ def test_current_request_schema_cap_includes_physical_header(string_bytes, expec
     assert result == (("current_physical", "raw", expected_size) if accepted else ("unresolved", "none", 0))
 
 
-def test_current_valid_request_fields_are_not_logged_or_retained_in_peer_state():
+@pytest.mark.parametrize("record_flags", [0x18, 0x21])
+def test_current_valid_request_fields_are_not_logged_or_retained_in_peer_state(record_flags):
     from dataclasses import replace
     from current_registration_request_body import decode_body
     from current_registration_request_stream import encode_registration_request_stream
@@ -429,7 +495,7 @@ def test_current_valid_request_fields_are_not_logged_or_retained_in_peer_state()
     peer = Peer("current-data-discard")
     frame.records = [Record(system_id=1, payload=b"\x01")]
     adapter.on_app(peer, b"\x01connect")
-    frame.records = [Record(channel=0, flags=0x21, payload=value)]
+    frame.records = [Record(channel=0, flags=record_flags, payload=value)]
     adapter.on_app(peer, b"\x02current")
     state = adapter.peers[peer.id]
     assert state.v3_sent and historical.tokens == []
@@ -439,7 +505,8 @@ def test_current_valid_request_fields_are_not_logged_or_retained_in_peer_state()
     # The caller owns input buffers; discarding decoded fields is not secure erasure.
 
 
-def test_current_partial_reply_does_not_advance_send_state():
+@pytest.mark.parametrize("record_flags", [0x18, 0x21])
+def test_current_partial_reply_does_not_advance_send_state(record_flags):
     vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
     adapter, events, frame, _ = current_adapter()
     peer = Peer("current-partial")
@@ -448,7 +515,7 @@ def test_current_partial_reply_does_not_advance_send_state():
     state = adapter.peers[peer.id]
     previous_ack = (state.ack_sequence, state.acked_through)
     peer.partial = True
-    frame.records = [Record(channel=0, flags=0x21, payload=current_stream(vector))]
+    frame.records = [Record(channel=0, flags=record_flags, payload=current_stream(vector))]
     adapter.on_app(peer, b"\x02current")
     assert not state.v3_sent and state.v3_response_record is None
     assert (state.ack_sequence, state.acked_through) == previous_ack
@@ -1036,6 +1103,23 @@ class FakeLz4:
         if self.fail or uncompressed_size < 4096:
             raise self.LZ4BlockError("private malformed bytes")
         return b"x" * (262145 if self.overflow else 12)
+
+
+def test_bounded_decompression_reaches_plain_current_stream_classification():
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    decoder = FakeLz4()
+    adapter, events, frame, _ = current_adapter(
+        decompressor=decoder, compression_guard=lambda: True)
+    peer = Peer("compressed-current")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.compressed = True
+    frame.records = [Record(channel=0, flags=0x18, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02whole-block")
+    assert adapter.peers[peer.id].v3_sent
+    assert decoder.hints == [256, 1024, 4096]
+    assert any(row["event"] == "CARRIER_DECOMPRESSED" for row in events.rows)
+    assert next(row for row in events.rows if row["event"] == "V3_CANDIDATE")["recognition_basis"] == "explicit_current_profile"
 
 
 def test_bounded_compression_uses_full_body_and_only_records_lengths():

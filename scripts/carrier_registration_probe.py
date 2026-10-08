@@ -790,9 +790,11 @@ class RegistrationAdapter:
             return
         reliable_single = (candidate_context and not v3_candidates and
                            data_records[0].flags == 0x21)
-        if v3_candidates or reliable_single:
+        current_single = (candidate_context and self._current_request_type_index is not None)
+        if v3_candidates or reliable_single or current_single:
             v3_record = v3_candidates[0] if v3_candidates else data_records[0]
-            basis = "no_length_flag" if v3_candidates else "schema_compatibility"
+            basis = ("explicit_current_profile" if current_single else
+                     "no_length_flag" if v3_candidates else "schema_compatibility")
             parse_mode, normalization, normalized_bytes = self._registration_schema(v3_record.payload)
             self._emit("REGISTRATION_SCHEMA_RESULT", peer, envelope_sequence=sequence,
                        parse_mode=parse_mode, normalization=normalization,

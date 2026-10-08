@@ -1,5 +1,27 @@
 # Agent handoff
 
+## Current registration flag recognition — October8, #276
+
+[K401–K403](REGISTRATION_ADAPTER_CURRENT.md#current-request-recognition-without-flag-hints)
+reuses the existing frame parser and strict request decoder. Explicit current
+mode admits one channel0 data record after a prior connect ACK, without a
+historical flag hint; same-datagram connect and multiple data records remain
+rejected. Historical flag40/21 selection stays intact. Cached emitter evidence
+supports the tested bit40-clear grammar, including a bit80 parser control.
+Corrected bit80 polarity and the40-versus80 subheader mistake are retained in
+private addenda. Native input/reassembly/connecting semantics remain unproved.
+
+Executed hand-encoded flag18 request through real pyOpenSSL DTLS/CLI: exact typed
+reply, identical duplicate cache, fresh retry and three malformed/unrelated
+rejections without replay. Actual Python LZ4 branch converged separately; no
+native transform equivalence inferred. Focused647 and full1960 Python/50modules/
+fivePS/ownedloopback passed. Child exited0, ports closed, temporary keys/BODY
+removed. Original receipt and closure are in the registration276 evidence and
+ignored primary directory. Changed whole-probe receipts remain historical;
+unchanged native/codec subclaims retained. Actual client placement, runtime type
+and response values, authentication, playable world and M1 remain unknown.
+No new image query, game client, controller, native grant or game endpoint.
+
 ## Runnable current registration server — October8, #275
 
 [K399–K400](REGISTRATION_ADAPTER_CURRENT.md#runnable-current-server-profile)
