@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Conditional post-parser dispatch — October8, #278
+
+[Receipt](../research/evidence/current-registration-packet-dispatch.json) pins
+clean c021773 and exact conditional source/review inputs.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K407 | Supplied/fallback owner+10 construction and slot48 candidate | 96B allocation; null/opaque/lifetime/alias and actual receiver unknown | Cached3306B ctor/table192B/dynamic caller |
+| K408 | Connected scalar updates through return | Any-nonzero configured DWORD, modulo32 decrement/zero-only clear, sequential alias effects; whole extent unknown | Exact32+64B windows/16instructions/review |
+| K409 | Conditional aggregate18/1a inputs, residualRAX and no payload dispatch | Source-flow only; return signature and supplied-interface/runtime/Carrier/compact acceptance unknown | Native seals and critical review |
+
+PDATA refusal, prefix failure and missing original failed script hash retained.
+Zero selected-root bytes do not mean zero executable-window inspection. This
+closes the selected conditional component, not parent277/Milestone1 acceptance.
+
 ## Incoming record source checkpoint — October8, #277
 
 [Receipt](../research/evidence/current-registration-packet-receive.json) pins

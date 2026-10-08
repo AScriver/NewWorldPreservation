@@ -1,5 +1,26 @@
 # Agent handoff
 
+## Conditional post-parser dispatch — October8, #278
+
+[K407–K409](REGISTRATION_PACKET_DISPATCH.md) classifies the conditional fallback
+target after incoming parsing. Cached ctor3306B/table192B support supplied or
+96B fallback construction; actual dynamic receiver selection remains unknown.
+The PDATA refusal remains recorded. Two bounded executable windows32+64B give
+16 connected instructions throughRET: sequential scalar updates, any-nonzero
+configured DWORD gate, modular decrement/byte clear and residual WORD in RAX.
+Alias sequencing matters; no success Boolean or whole leaf extent is inferred.
+There is no call/payload copy on this captured normal-return flow. It therefore
+does not close the incoming payload→compact registration join in parent277.
+
+Exact source seals/critical review,36affected catalog/PF and newbindings support
+this selected component. Unchanged1960/50/fivePS/closedloopback is reused by
+actual input comparison. No server-code/native/runtime change. Seven fullimage
+passes include failures;96requested/93distinct/256actual windowB, cached3306/
+192 and metadata separate; zero Ghidra/static/BSS imports. The original failed
+prefix script was edited beforehash; missingbytes and failure disclosed.
+Next source edge is the specific per-channel receive-queue consumer. Parent277
+actual Carrier/compact/type/response/auth/world/M1 acceptance remains Partial.
+
 ## Incoming record source checkpoint — October8, #277
 
 [K404–K406](REGISTRATION_PACKET_RECEIVE.md) closes selected-function source

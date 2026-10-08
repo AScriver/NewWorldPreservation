@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 278,
+  "parentActionableId": 277,
+  "claimIds": [
+    "K407",
+    "K408",
+    "K409"
+  ],
+  "recordedUtc": "2026-10-08T08:46:10.050172+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "c02177311db77695230ed2f0051983ec14e8ef0a",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_PACKET_DISPATCH.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_PACKET_DISPATCH.md": "585fe3a638e3d16b96e411cd45f35068199fce662184bd3e1d0c66f5679b5ebe",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-bit-send.json": "4bd9650c613a07a8a918c493032dca8d077700c38aac78a3e898d061f0d7cc7a",
+    "research/evidence/current-registration-bytepath.json": "a33434deca99e0572e178357aef2a86e418cb141fc3930d8c5c18cf7581751bc",
+    "research/evidence/current-registration-packet-receive.json": "06e20c6232a565811eeb344e11ed3ae0a0943e7954219938a34e1b92171fd76e",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/queue226-investigator/ghidra-output15/function-145dbae90.c": "0b0334e186f38ec565d2679bd692d0121f13b8386299698953517b4e70fe1bb2",
+    ".scratch/queue226-investigator/ghidra-output15/receipt.json": "8ab747f212d4330604468098c840d860101886fbfdba5286ae30d4bebc86eb0f",
+    ".scratch/registration262-worker-20261008T0126Z/table-148480670.json": "476602d6c22a95a51ed6c68e6de890fa4ea6321a8c087c217aa0621b3f014e04",
+    ".scratch/registration263-bytepath-20261008T0145Z/fn-145dddfa0.txt": "8e1d904c4c3bf7c9f7f9aa21ffda3cb4161298f47ce6a13de0343a7428a63165",
+    ".scratch/registration277-next-edge-20261008T0817Z/report.md": "fe096055902970d34e7ad93987a94131ba25da7882c60329409d72f854f5c0e0",
+    ".scratch/registration277-primary-20261008T0748Z/closure.json": "916a223fc5e777c199268019cd239f6535c9c09bef6053fb1351fecf0e81313d",
+    ".scratch/registration278-dispatch-20261008T0823Z/CachedFlow.ps1": "a964a03390df2437f7331995e2b452a93c5c14713cb522e6d5dec0e0dee40e27",
+    ".scratch/registration278-dispatch-20261008T0823Z/CachedFlow.py": "779b501f7c47b094d7f1450e2b6a0dc2bc5d30ae90978832e4156cf94352f1e1",
+    ".scratch/registration278-dispatch-20261008T0823Z/Continuation.ps1": "e465244b706aabc078a606b7a86e6f1506365a52143b146d0db30deb47f24c24",
+    ".scratch/registration278-dispatch-20261008T0823Z/Continuation.py": "4dc665d9ff51eeac9e75adf93258a80a6d2e0f2dd9d241cda833b8609a4376a2",
+    ".scratch/registration278-dispatch-20261008T0823Z/Prefix.ps1": "b26fc60c46436a89c9862f75ac552bdf832dfc496338dacf4b588fe09e299a21",
+    ".scratch/registration278-dispatch-20261008T0823Z/Prefix.py": "c29203d20cf555d71aa40d3fdf30704491b4384c439558ef9c4ae4d100532685",
+    ".scratch/registration278-dispatch-20261008T0823Z/QueryCandidate.ps1": "4808a40ac152941cfe15b37b65b4957e2086f6fe78b4102e17151d72a37a13c2",
+    ".scratch/registration278-dispatch-20261008T0823Z/addendum.md": "c7a2cdccb5618d87dfb6e83a538736708e72d7992ab42253ce8fd17fb549ba39",
+    ".scratch/registration278-dispatch-20261008T0823Z/cached-flow-addendum.md": "acd87f692d3f7e0325c80bb6fcbd9247ff2d4770bc4483674bdb8705a23eb630",
+    ".scratch/registration278-dispatch-20261008T0823Z/cached-flow-result.json": "c48f5bff7bc888a1b6873b0c116d4dbb80e0432f1293907735e74e30a809506d",
+    ".scratch/registration278-dispatch-20261008T0823Z/continuation-report.md": "bbfafad29396797fe4a48ec22cfcc9b18a12151a421e492661ad7eea0889633d",
+    ".scratch/registration278-dispatch-20261008T0823Z/continuation-result.json": "971592a578cc384586af35374cb19d87bf3efee178a4e68c1c0759dfae1745a1",
+    ".scratch/registration278-dispatch-20261008T0823Z/prefix-attempt-1-failure.md": "053b07a7c0230d5df0c31b0df3fbcd5e758d403887099a802ac6ac6e56d7dc98",
+    ".scratch/registration278-dispatch-20261008T0823Z/prefix-result.json": "8b7aebc71c2a56a219590fae88b4758f03083c3cb34d6adbaf0f578d9fc62bbd",
+    ".scratch/registration278-dispatch-20261008T0823Z/report.md": "ddfb43810b5d2fae36294f0f17ec2b8fb474e0f120ceca6f55d32bdf5a59d261",
+    ".scratch/registration278-primary-20261008T0822Z/BackupSeal.ps1": "033aef759ee192dde856bb99ffce88d5e1ea26a484517cfb27fdc47c6273fab7",
+    ".scratch/registration278-primary-20261008T0822Z/Baseline.ps1": "31835be0d5d8b614568e9b73e0ec1213813d9c1d07d47517a4914181ff3f1bcd",
+    ".scratch/registration278-primary-20261008T0822Z/Baseline.py": "8af2b9b3eedec8cb8baa1dfbf0683c7d763878dd8259fe615fd57eabe450f64e",
+    ".scratch/registration278-primary-20261008T0822Z/ContinuationSeal.ps1": "3bc131005ad4d3a19bba8ce77b1a64212b9986fa2cc1ed56c04d02a6c156db22",
+    ".scratch/registration278-primary-20261008T0822Z/ContinuationSeal.py": "b73558b9b5190d3ba247f0962b914fcf11685d19090972d333a4e68aff6059b9",
+    ".scratch/registration278-primary-20261008T0822Z/Metadata.py": "a6a7ceb9702cf455d15fa795b02825dd8dbddfaf0a50d1d2541dd1e2317bd814",
+    ".scratch/registration278-primary-20261008T0822Z/Publish.ps1": "f4c2596c2460d312f7c98ce763dfc72c2626b1f0faabbb64f5a9b114a707ce79",
+    ".scratch/registration278-primary-20261008T0822Z/Publish.py": "c465a2b3b48c97115ce5801c8a8ef1623b9897bcac31dfe7c1883a02a545a587",
+    ".scratch/registration278-primary-20261008T0822Z/Seal.failed-1.py": "9737ec39078e7286b0dbee2c79c54c6a9604d4702bd6c3f5db0a066d51c182d0",
+    ".scratch/registration278-primary-20261008T0822Z/Seal.ps1": "d6f8b1294a81ddccf4bbb52da9bd1c569a6d514a53e93856c52a95a4e0f21f16",
+    ".scratch/registration278-primary-20261008T0822Z/Seal.py": "a76ef84247e9146872ccdae181fed66b2d87172166cd80569970884f719b168d",
+    ".scratch/registration278-primary-20261008T0822Z/baseline.json": "aa6f97868d14d91d86da46124ffa4be71885e997170d5c7269316a8350fdcf80",
+    ".scratch/registration278-primary-20261008T0822Z/continuation-seal.json": "6ab6e791f59ca4e53c910fd5d623d49098736fe52e4d877a62f174b086e9c4ab",
+    ".scratch/registration278-primary-20261008T0822Z/failed-seal-1.md": "2cef6aee8edfab854658d44be15917e9e436d7ea050ed9b574fedd1fb9ce83c0",
+    ".scratch/registration278-primary-20261008T0822Z/ledger.md": "962b50780b01c9b9c1b4ac142f96e647ef4c75f4ae2a90c2c6526a88f5c5ea89",
+    ".scratch/registration278-primary-20261008T0822Z/native-145dbae90.txt": "7883ec6534208ef61ba4833115d3deebe65fda0f3fb31a1cbffd38543a3184b1",
+    ".scratch/registration278-primary-20261008T0822Z/native-connected-prefixes-140f71580.txt": "176a12e7b8173c77ad0eb8529c98633ffd47fbdb0b7a494abb7509601cafc9e3",
+    ".scratch/registration278-primary-20261008T0822Z/native-prefix-140f71580.txt": "4f53897404efa204b4f5d3bb56c1f8131e41f962e3c1a728007a87a627fbfe42",
+    ".scratch/registration278-primary-20261008T0822Z/seal.json": "4e2d28dce04668db0b3f4352505295117b4c7c5c8c5bb2b0a16aa3e582af054a",
+    ".scratch/registration278-review-20261008T0840Z/report.md": "1d2ff8217db6b5050f943f71ecb11eb075e45ade075703875f15928fd55e2e33"
+  },
+  "cachedConstructor": {
+    "entry": "0x145dbae90",
+    "ranges": [
+      {
+        "start": "0x145dbae90",
+        "endExclusive": "0x145dbbb7a",
+        "bytes": 3306,
+        "sha256": "aebeef23daa2079ef3f5ecf2ee0058deda44275cf85356bd99f497aaa04eead8",
+        "instructions": 755,
+        "listing": ".scratch/registration278-primary-20261008T0822Z/native-145dbae90.txt",
+        "listingSha256": "7883ec6534208ef61ba4833115d3deebe65fda0f3fb31a1cbffd38543a3184b1"
+      }
+    ]
+  },
+  "cachedTable": {
+    "path": ".scratch/registration262-worker-20261008T0126Z/table-148480670.json",
+    "bytes": 192,
+    "sha256": "32ac6b198580ed1a635d9ad9ca097c752e3aa46b840ea1064943c49fd3e358cd",
+    "slot48": "0x140f71580"
+  },
+  "connectedPrefix": {
+    "status": "passed",
+    "recordedUtc": "2026-10-08T08:38:27.054644+00:00",
+    "head": "c02177311db77695230ed2f0051983ec14e8ef0a",
+    "entryWindowSha256": "f8ae1e2ef0e7a41bd779d069e807d5b28effc1dddda8d250e11075bedf86ba40",
+    "continuationWindowSha256": "a4646ef906bc7825ea34def36cca67d1af09c8719fe40a8e8964a88ec448640f",
+    "continuationFileOffset": "0xf70b9d",
+    "connectedInstructions": 16,
+    "returns": [
+      "0x140f715cb"
+    ],
+    "listing": ".scratch/registration278-primary-20261008T0822Z/native-connected-prefixes-140f71580.txt",
+    "listingSha256": "176a12e7b8173c77ad0eb8529c98633ffd47fbdb0b7a494abb7509601cafc9e3",
+    "firstSealSha256": "4e2d28dce04668db0b3f4352505295117b4c7c5c8c5bb2b0a16aa3e582af054a",
+    "wholeFunctionExtentEstablished": false,
+    "newDataWindows": 0,
+    "recheckedPrefixBytes": 96,
+    "headerLogicalBytes": 340,
+    "additionalFullImageIdentityPasses": 1,
+    "nativeClientCodeExecuted": false,
+    "runtimeResourcesAcquired": false
+  },
+  "resourceActual": {
+    "newPdataRootsAttempted": 1,
+    "newPdataRootsCompleted": 0,
+    "newGhidraImports": 0,
+    "newInitializedStaticBytes": 0,
+    "newBssBytes": 0,
+    "agentFullIdentityPasses": 4,
+    "primaryFullIdentityPasses": 3,
+    "knownFullIdentityPassesIncludingFailures": 7,
+    "knownFullIdentityBytes": 1254429232,
+    "newExecutableWindowCount": 2,
+    "newRequestedWindowBytes": 96,
+    "distinctWindowCoverageBytes": 93,
+    "actualSelectedWindowReadBytes": 256,
+    "cachedConstructorBytes": 3306,
+    "cachedTableReadBytes": 192,
+    "primaryFailureBeforeImageRead": 1,
+    "navigation": {
+      "readCalls": 511631,
+      "readBytes": 7833876,
+      "directHeaderLogicalBytes": 262
+    },
+    "continuationHeaderLogicalBytes": 340
+  },
+  "sourceClaims": {
+    "K407": "Conditional supplied/fallback96B object/table48 target; actual receiver/lifetime/supplied selection unknown.",
+    "K408": "Connected scalar updates, anynonzero configured DWORD gate, modulo32 decrement and zero-only byte clear with sequential alias qualifications.",
+    "K409": "Conditional aggregate18/1a reads, residual zeroextended latest secondWORD inRAX; captured normal-return flow has no payload traversal/call/bulk copy."
+  },
+  "audit": "Original PDATA refusal immutable. Failed prefix script edited beforehash; original failedbytes unavailable and disclosed. Original primary failed import script retained. Older partial-flow/return/resource wording qualified by cached-flow addendum, primary ledger and critical review.",
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Selected conditional component only",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires exact selected-input closure reconciliation"
+  },
+  "limits": [
+    "No PDATA/whole-function extent or native runtime dispatch proof; pointers/alias/lifetime/semantic field names and return signature unknown.",
+    "Supplied-interface/physical Carrier/compact callback/type/appropriate response/authentication/world/M1 remains unknown. Parent277 acceptance Partial.",
+    "No codec/server change or new native grant. Next source target is exact receive-queue consumer."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}
