@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Incoming record source checkpoint — October8, #277
+
+[Receipt](../research/evidence/current-registration-packet-receive.json) pins
+clean34668be and selected source/review identities. Source inference only.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K404 | Supplied-reader flags and field reads | Conditional normal path; local counters, equality end tests and precheck writes; physical incoming provenance unknown | Exact parser3203B/cached caller3263B |
+| K405 | Direct bit reader guards and copies | AL only, unsigned subtraction wrap, postcopy cursor reload/alias, rounded unaligned reads; no physical bounds proof | Exact helper277B and pinned memcpy subclaim |
+| K406 | Payload allocation/list and control paths | Aggregate length changes before AL check; channel3 IDs<=5 share common path; no rollback/release guarantee or full reassembly | Instructions, corrections and critical review |
+
+Original erroneous report remains immutable with two addenda. Next virtual+48
+target/body and actual payload drain are unknown. #277 aggregate acceptance
+remains Partial; no native execution, codec change or Milestone1 proof.
+
 ## Current registration flag recognition — October8, #276
 
 [Receipt](../research/evidence/current-registration-plain-flags.json) pins

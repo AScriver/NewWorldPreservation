@@ -1,5 +1,26 @@
 # Milestone 1 roadmap
 
+## Incoming record source checkpoint — October8, #277
+
+[K404–K406](REGISTRATION_PACKET_RECEIVE.md) closes selected-function source
+facts, with **Partial** incoming-to-registration acceptance. Two new PDATA
+roots total3,480B; cached caller3,263B. Exact flags/field widths, AL result,
+unsigned-end guard, aligned/unaligned copy, alias limits, conditional channel3
+and partial state/queue effects are instruction-reviewed. The incoming
+aggregate length changes before payload success; no atomic acceptance implied.
+Original reports, failures and two corrections remain private and hash-bound.
+Eight known full identity passes, including failures, are counted separately
+from static/BSS import, navigation and bounded reads.
+
+No codec/server change or native execution follows from this checkpoint.
+Unchanged1960Python/50modules/fivePS/closedloopback support is reused only by
+actual selected-input reconciliation; affected36/catalog and preflight check
+the new original receipt. No runtime resources were acquired. Next source edge:
+owner+10 virtual+48 called with state and an incoming-aggregate address before
+cleanup; target/body/payload drain remain unknown. Actual Carrier/compact
+callback join, appropriate type/response values, authentication/world/M1 remain
+unproved. #277 stays Researching with Partial acceptance, not Done.
+
 ## Current registration flag recognition — October8, #276
 
 [K401–K403](REGISTRATION_ADAPTER_CURRENT.md#current-request-recognition-without-flag-hints)
