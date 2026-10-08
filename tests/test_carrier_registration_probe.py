@@ -46,10 +46,9 @@ def test_current_cli_rejects_out_of_range_or_noninteger_selector(selector):
         adapter_module.parse_options(CLI_BASE + current)
 
 
-@pytest.mark.parametrize("stage", ["--heartbeat-15d", "--self-ident-default",
-    "--self-ident-current-length", "--spawn-point-notification", "--world-activation",
-    "--player-creation-candidate"])
-def test_current_cli_cannot_enable_trial_messages(stage):
+@pytest.mark.parametrize("stage", ["--self-ident-default", "--self-ident-current-length",
+    "--spawn-point-notification", "--world-activation", "--player-creation-candidate"])
+def test_current_cli_rejects_stages_without_prerequisites(stage):
     with pytest.raises(SystemExit):
         adapter_module.parse_options(CLI_BASE + CLI_CURRENT + [stage])
 
@@ -61,9 +60,20 @@ def test_current_cli_zero_selector_and_historical_default_are_distinct():
     historical = adapter_module.parse_options(CLI_BASE)
     assert historical.current_request_type_index is None
     assert adapter_module.prepare_current_registration(historical) == {}
+    assert adapter_module.parse_options(CLI_BASE + CLI_CURRENT +
+        ["--server-version", adapter_module.OWNED_SERVER_VERSION]).server_version == adapter_module.OWNED_SERVER_VERSION
+    assert adapter_module.parse_options(CLI_BASE + CLI_CURRENT + ["--heartbeat-15d"]).heartbeat_15d
+
+
+def test_current_cli_accepts_explicit_bootstrap_but_rejects_creation():
+    stages = ["--server-version", adapter_module.OWNED_SERVER_VERSION,
+              "--heartbeat-15d", "--self-ident-default", "--spawn-point-notification",
+              "--world-activation", "--self-ident-current-length"]
+    options = adapter_module.parse_options(CLI_BASE + CLI_CURRENT + stages)
+    assert (options.heartbeat_15d, options.self_ident_default, options.spawn_point_notification,
+            options.world_activation, options.self_ident_current_length) == (True,) * 5
     with pytest.raises(SystemExit):
-        adapter_module.parse_options(CLI_BASE + CLI_CURRENT +
-            ["--server-version", adapter_module.OWNED_SERVER_VERSION])
+        adapter_module.parse_options(CLI_BASE + CLI_CURRENT + stages + ["--player-creation-candidate"])
 
 
 @pytest.mark.parametrize("digest", ["", "0" * 63, "0" * 65, "z" * 64])
@@ -293,6 +303,104 @@ def current_adapter(request_index=19, response_index=3, body=CURRENT_RESPONSE, *
 
 def current_stream(vector):
     return bytes.fromhex(vector["crc_be32"] + vector["count_be32"] + vector["payload"])
+
+
+def ready_current_bootstrap(*, user_stop=False, **stages):
+    vector = next(row for row in CURRENT_STREAMS if row["type_index"] == 19 and row["flags"] == 0)
+    adapter, events, frame, historical = current_adapter(
+        request_index=vector["type_index"], server_version=adapter_module.OWNED_SERVER_VERSION,
+        heartbeat_15d=True, self_ident_default=True, clock=lambda: 0.0,
+        user_stop_lifetime=user_stop, **stages)
+    peer = Peer("current-bootstrap")
+    frame.records = [Record(system_id=1, payload=b"\x01")]
+    adapter.on_app(peer, b"\x01connect")
+    frame.records = [Record(channel=0, flags=0x21, payload=current_stream(vector))]
+    adapter.on_app(peer, b"\x02current")
+    assert frame.marshaled[0].payload == encode_registration_response_record(CURRENT_RESPONSE, type_index=3)
+    assert historical.tokens == [] and historical.versions == []
+    return adapter, events, frame, peer
+
+
+def test_current_bootstrap_exact_bytes_order_and_retries():
+    adapter, events, frame, peer = ready_current_bootstrap(
+        spawn_point_notification=True, world_activation=True, self_ident_current_length=True)
+    state = adapter.peers[peer.id]
+    assert (state.next_heartbeat_at, state.next_self_ident_at) == (0.5, 1.0)
+    adapter.on_tick(peer, 4.0)
+    assert [row["event"] for row in events.rows if row["event"].endswith("_SENT")][-2:] == [
+        "SELF_IDENT_DEFAULT_SENT", "HEARTBEAT_15D_SENT"]
+    assert frame.marshaled[1].payload == (b"\x83\x02" +
+        adapter_module.current_self_ident_default.encode_default())
+    before = (state.next_out_envelope_seq, state.next_ch0_seq, state.next_ch0_rel,
+              state.ack_sequence, state.next_spawn_point_at)
+    adapter.on_app(peer, b"\x02current")  # cached envelope
+    assert (state.next_out_envelope_seq, state.next_ch0_seq, state.next_ch0_rel,
+            state.ack_sequence, state.next_spawn_point_at) == before
+    adapter.on_app(peer, b"\x03current")  # fresh registration retry
+    assert b"encoded-response" in peer.sent[-1]
+    assert len(frame.marshaled) == 3  # fresh retry reuses the sent record
+    assert (state.next_out_envelope_seq, state.next_ch0_seq, state.next_ch0_rel,
+            state.ack_sequence) == (before[0] + 1, before[1], before[2], before[3] + 1)
+    assert state.next_spawn_point_at == before[-1]
+    for tick in (5.0, 6.0, 7.0):
+        adapter.on_tick(peer, tick)
+    sent = [row["event"] for row in events.rows if row["event"] in (
+        "SELF_IDENT_DEFAULT_SENT", "SPAWN_POINT_NOTIFICATION_SENT",
+        "LEVEL_INFO_CANDIDATE_SENT", "EMPTY_STATE_BUNDLE_SENT")]
+    assert sent == ["SELF_IDENT_DEFAULT_SENT", "SPAWN_POINT_NOTIFICATION_SENT",
+                    "LEVEL_INFO_CANDIDATE_SENT", "EMPTY_STATE_BUNDLE_SENT"]
+    for typed, prefix in ((adapter_module.current_spawn_point.encode_notification(), b"\x04"),
+                          (adapter_module.current_world_activation.encode_level_info_candidate(), b"\x3f"),
+                          (adapter_module.current_world_activation.encode_empty_bundle(), b"\x09")):
+        assert sum(record.payload == prefix + typed for record in frame.marshaled) == 1
+    assert [(record.sequence, record.reliable_sequence) for record in frame.marshaled] == [
+        (index, index) for index in range(len(frame.marshaled))]
+    assert all(row.get("client_acceptance_proven") is not True for row in events.rows)
+
+
+def test_current_timed_heartbeat_failure_does_not_gate_actor():
+    adapter, events, _frame, peer = ready_current_bootstrap()
+    peer.partial = True
+    adapter.on_tick(peer, 0.5)
+    assert adapter.peers[peer.id].heartbeat_disabled
+    peer.partial = False
+    adapter.on_tick(peer, 1.0)
+    assert adapter.peers[peer.id].self_ident_sent
+    assert any(row["event"] == "SELF_IDENT_DEFAULT_SENT" for row in events.rows)
+
+
+@pytest.mark.parametrize("failure", ["heartbeat", "actor", "spawn", "level"])
+def test_current_user_stop_send_failures_suppress_successors(failure):
+    adapter, events, _frame, peer = ready_current_bootstrap(
+        user_stop=True, spawn_point_notification=True, world_activation=True)
+    failure_tick = {"heartbeat": 0.5, "actor": 1.0, "spawn": 2.0, "level": 3.0}[failure]
+    for tick in (0.5, 1.0, 2.0):
+        if tick >= failure_tick:
+            break
+        adapter.on_tick(peer, tick)
+    peer.partial = True
+    expected = "heartbeat_send_failed" if failure == "heartbeat" else "actor_send_failed"
+    with pytest.raises(TerminalProtocolError, match=expected):
+        adapter.on_tick(peer, failure_tick)
+    sent = {row["event"] for row in events.rows}
+    if failure == "heartbeat":
+        assert "SELF_IDENT_DEFAULT_SENT" not in sent
+    if failure == "actor":
+        assert "SPAWN_POINT_NOTIFICATION_SENT" not in sent
+    if failure == "spawn":
+        assert "LEVEL_INFO_CANDIDATE_SENT" not in sent
+    if failure == "level":
+        assert "EMPTY_STATE_BUNDLE_SENT" not in sent
+    with pytest.raises(TerminalProtocolError, match=expected):
+        adapter.on_tick(peer, 10.0)
+
+
+def test_current_direct_adapter_rejects_player_creation():
+    with pytest.raises(ValueError, match="current registration cannot select player creation"):
+        current_adapter(server_version=adapter_module.OWNED_SERVER_VERSION,
+            heartbeat_15d=True, self_ident_default=True, self_ident_current_length=True,
+            spawn_point_notification=True, world_activation=True,
+            prepared_creation=_synthetic_prepared_creation())
 
 
 @pytest.mark.parametrize("vector", CURRENT_STREAMS, ids=lambda row: row["name"])

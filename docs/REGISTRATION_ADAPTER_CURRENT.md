@@ -36,8 +36,11 @@ Supply all four together. The server verifies the private path, reads at most409
 bytes, checks the hash, decodes one exact canonical BODY and checks the encoded
 record cap before opening runtime resources. It rejects partial configuration,
 invalid selectors, malformed/noncanonical/trailing BODY and mismatched hashes.
-Current mode excludes `--server-version`, heartbeat and actor/creation trial
-options. All current response fields remain caller-selected; the CLI supplies
+Current mode can also select the existing optional heartbeat and bootstrap
+stages under their original prerequisites; see [the composed path](CURRENT_REGISTRATION_BOOTSTRAP.md).
+Player creation remains excluded. `--server-version` is independent guard
+metadata in current mode and never changes the caller BODY. All current response
+fields remain caller-selected; the CLI supplies
 no default identity or authentication result. Existing lifetime, certificate,
 private log and pinned FirstLight arguments still apply.
 
@@ -119,4 +122,5 @@ receipt is rewritten to claim a new native result. Existing private trial
 manifests also bind the adapter: by source inspection, the launcher guard would
 reject changed input hashes before admission. The controller was not run.
 The consumed October7 native creation grant remains closed;
-this component neither prepares nor authorizes another attempt.
+the original component did not authorize another attempt. The later composed
+bootstrap path also requires a separate specific native grant.

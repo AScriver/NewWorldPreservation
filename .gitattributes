@@ -104,3 +104,7 @@
 /research/evidence/current-registration-ack-budget.json text eol=lf
 /research/evidence/current-registration-receive-pool.json text eol=lf
 /research/evidence/current-registration-trial-preparation.json text eol=lf
+/scripts/Invoke-FridaPrivateTrial.ps1 text eol=lf
+/tests/test_frida_controller_lifetime.ps1 text eol=lf
+/docs/CURRENT_REGISTRATION_BOOTSTRAP.md text eol=lf
+/research/evidence/current-registration-bootstrap.json text eol=lf

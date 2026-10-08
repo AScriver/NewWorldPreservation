@@ -26,11 +26,11 @@ function Get-CurrentRegistrationTrialArguments {
     $bodyPath = [IO.Path]::GetFullPath($Manifest.current_response_body)
     $privateRoots = @((Join-Path $WorkspaceRoot 'private'),(Join-Path $WorkspaceRoot '.scratch'))
     if (@($privateRoots | Where-Object { $bodyPath.StartsWith($_+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) }).Count -eq 0) { throw 'Current registration BODY must remain private.' }
-    foreach ($mixedName in @('registration_server_version','registration_server_version_receipt','trial_character_path','trial_character_sha256','type_index_path','delivery_mode','trial_known_empty_occupancy','trial_occupied_low64')) {
-        if ($Manifest.PSObject.Properties.Name -contains $mixedName) { throw 'Current registration cannot mix historical or creation inputs.' }
+    foreach ($mixedName in @('trial_character_path','trial_character_sha256','type_index_path','delivery_mode','trial_known_empty_occupancy','trial_occupied_low64')) {
+        if ($Manifest.PSObject.Properties.Name -contains $mixedName) { throw 'Current registration cannot mix creation inputs.' }
     }
-    foreach ($mixedName in @('heartbeat_15d','self_ident_default','spawn_point_notification','world_activation','context_gate_observer','self_ident_current_length','player_creation_candidate')) {
-        if ($Manifest.PSObject.Properties.Name -contains $mixedName -and $Manifest.$mixedName -ne $false) { throw 'Current registration cannot enable actor, world or creation stages.' }
+    if ($Manifest.PSObject.Properties.Name -contains 'player_creation_candidate' -and $Manifest.player_creation_candidate -ne $false) {
+        throw 'Current registration cannot select player creation.'
     }
     return @('--current-request-type-index',([string]$Manifest.current_request_type_index),
              '--current-response-type-index',([string]$Manifest.current_response_type_index),

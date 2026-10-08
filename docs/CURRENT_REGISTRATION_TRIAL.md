@@ -1,5 +1,11 @@
 # Current registration-only trial preparation — #285
 
+This page records the original registration-only preparation and its checks.
+The later [current registration/bootstrap composition](CURRENT_REGISTRATION_BOOTSTRAP.md)
+admits the existing optional stages. The original private manifest and receipt
+retain their historical bindings; changed controller/probe inputs require fresh
+preparation before a separately admitted native attempt.
+
 The trial controller can now select the implemented current-format registration
 responder. It validates the private response before setting up containment or
 services, forwards the four selected inputs only to DTLS, and permits the existing
@@ -22,9 +28,11 @@ An explicit `current_registration: true` selects four manifest fields:
 | current_response_body | File resolving under private/ or .scratch/ |
 | current_response_body_sha256 | Exact hexadecimal SHA256 |
 
-Disabled selection with ancillary fields, incomplete fields, noninteger/bool
-selectors, historical version or enabled actor/world/creation/observer mixtures
-are refused. Selected BODY, verifier, interpreter and current codecs need unique
+Disabled selection with ancillary fields, incomplete fields and noninteger/bool
+selectors are refused. The original registration-only preparation also refused
+historical version and actor/world/observer mixtures; the later composed path
+admits existing optional stages while retaining their guards. Creation mixtures
+remain refused. Selected BODY, verifier, interpreter and current codecs need unique
 matching hash bindings. The pure verifier and runtime adapter share the same
 bounded preparation: read at most 4097 bytes, admit 1..4096, require hash match,
 complete canonical BODY and a typed record no larger than 4096. Verifier output

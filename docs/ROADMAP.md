@@ -1,5 +1,35 @@
 # Milestone 1 roadmap
 
+## Replacement server implementation focus — October8, #213
+
+The user's latest direction makes game-server replacement the active work.
+Official two-player recording is deferred indefinitely; reference collection
+and off-machine backup are outside this task. Historical preservation evidence
+and the broader multiplayer milestone retain their existing scope.
+
+[K431–K433](CURRENT_REGISTRATION_BOOTSTRAP.md) connects current registration to
+the existing optional heartbeat/SelfIdentification/spawn/LevelInfo/empty-bundle
+send path through the CLI and controller. Exact caller BODY, shared cursors,
+stage prerequisites and map/type/version/hash guards are retained; current
+player-creation mixing is rejected at every entry point. No scheduler, codec,
+response defaults or readiness model was added.
+
+284 focused cases, isolated PowerShell helpers and three actual synthetic
+localhost DTLS variants passed. The first complete run passed2045 cases and
+failed only three missing ledger references introduced with the new catalog;
+the ledger was corrected. The required rerun passed2046 cases in52 Python
+modules, five PowerShell suites and a closed owned loopback CLI exchange, with
+all299 selected inputs stable. Final hashes and cleanup are in the
+[receipt](../research/evidence/current-registration-bootstrap.json).
+
+A fresh154-binding private candidate reuses the existing isolated client copy,
+the existing current131 prefix and the three-site/seven-boolean observer. It has
+no elapsed cutoff and requires a specific native trial grant. Request19,
+response3 and the zero BODY remain experiment values; native registration,
+authentication, map/context readiness and player control remain unknown.
+Full #213 acceptance stays partial. No native client/controller launch or
+routing/trust mutation occurred.
+
 ## Private preview screenshot session — October8
 
 The user requested a fresh character-selection screenshot. One isolated owned
@@ -1417,16 +1447,21 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 ## Exact next blocker
 
-October6 refocus is active: one fresh visible controllable private player is the
-immediate milestone. The last private trial initialized context but sent an empty
-bundle and timed out without a player. Child252 now constructs the original bounded
-creation/identity candidate offline from the recorded resource, fresh-reference
-and identity BODY support. Resource index9 remains conditional on unobserved runtime
-mode/native loading. Fresh identity must also propagate consistently through
-bootstrap/queue and the member. Composition does not admit a new live send;
-record/Carrier placement, runtime delivery, designation, context readiness,
-camera/input and movement remain distinct unproved transitions. See the
-[durable one-player checkpoint](ONE_PLAYER_MILESTONE.md).
+October8 server implementation is active: one fresh visible controllable private
+player remains the immediate milestone. The current registration responder now
+composes with the existing bootstrap sequence. The next client boundary to prove
+is recognized current input and accepted reply, followed by actual map/context
+conditions. Sent LevelInfo or an empty bundle does not prove map readiness;
+readiness may depend on player construction and must be observed rather than
+assumed to complete independently. See [the implemented path](CURRENT_REGISTRATION_BOOTSTRAP.md).
+
+The creation/identity candidate is already constructed offline. Its October7
+native attempt stopped before registration/creation on the repeated-connect
+guard; the subsequent offline guard repair is not a successful native rerun.
+Resource index9, actual Carrier delivery, fresh identity propagation,
+designation, camera/input and movement remain separate unproved conditions.
+A fresh specifically admitted native attempt is required. The latest selection
+screenshot is preview evidence. See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
 
 October5 tooling improvement: function-scoped Ghidra is now the default for
 bounded native questions. The original helper imports selected PDATA/chained-unwind

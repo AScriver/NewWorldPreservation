@@ -1,5 +1,43 @@
 # Agent handoff
 
+## Current registration/bootstrap composition — October8, #213
+
+Task: expose and verify the existing current-request bootstrap send path.
+Checkout: clean base e093847; exact changed inputs, Python3.11.9 and clean
+FirstLight63756a3 are pinned in the [receipt](../research/evidence/current-registration-bootstrap.json).
+Slice result: local composition implemented; full #213 phase acceptance partial.
+Next owner: user for a specifically admitted native transition observation;
+agent for any independent source-supported server changes.
+Required authorization: fresh single-attempt current registration/bootstrap
+grant before launching the prepared isolated client. The October7 grant is closed.
+
+The CLI/controller now permit existing optional bootstrap stages with a hashed
+caller BODY; current+creation is rejected including direct API. Scheduling and
+wire bytes are unchanged. Owned-version selection is guard metadata and does
+not fill BODY field_38. A delayed tick may send SelfIdentification before the
+first heartbeat. Actual retries and deterministic send failures were checked;
+these local states do not establish asynchronous map or actor readiness.
+
+284 focused cases, AST-isolated PowerShell helpers and three actual localhost
+DTLS variants passed. The initial focused expectations and first full-run
+missing ledger references are retained explicitly. Final workspace/hygiene
+results and exact bindings belong to the receipt and closure, not a native claim.
+The full rerun passed2046 Python cases/52 modules, five PowerShell suites and
+owned loopback CLI with299 stable inputs; receipt SHA256
+`5014fba46e29af302c3a3bee1297ba10fe7dd00ce319622c19ad2b633066d5b6`.
+Each synthetic child exited0; its port rebound and generated keys/BODY were
+removed. No game, controller top level, Frida, routing/trust or installed EAC
+resource ran. Useful regression tests are retained; one-use harnesses/results
+stay ignored. No new production scaffolding or observer was introduced.
+
+Fresh private inputs are in `private/frida-trials/run-20261008T1843-current-bootstrap`,
+with154 bindings, reused client copy, current131 prefix and existing guarded
+observer. Selectors19/3 and the 18-zero BODY are experimental. Actual admission
+must recheck CA validity, all hashes and resource ownership. Native registration,
+authentication, context readiness, player construction/designation and input
+remain unknown. Official friend capture is deferred indefinitely; capture and
+backup work are outside the active replacement-server scope.
+
 ## Current registration-only preparation — October8, #285
 
 [K428–K430](CURRENT_REGISTRATION_TRIAL.md) adds explicit current-profile admission,

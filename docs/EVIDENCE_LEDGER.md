@@ -1,5 +1,27 @@
 # Evidence ledger
 
+## Current registration/bootstrap composition — October8, #213
+
+[Receipt](../research/evidence/current-registration-bootstrap.json) pins clean
+base e093847, changed source/test bytes, original contracts and private checks.
+
+| ID | Claim | Evidence and limits |
+| --- | --- | --- |
+| K431 | Current CLI/controller can select the existing optional bootstrap flags; creation is excluded at all three API boundaries | Focused 284 cases, actual isolated PowerShell helpers and source review; caller BODY is unchanged, version remains guard metadata; controller top level unrun |
+| K432 | Current-request retries preserve deadlines/cursors; actor successors require successful sends | Deterministic current-path delayed-tick and terminal-failure controls; heartbeat is an independent timer, not a readiness prerequisite; native phase conditions unknown |
+| K433 | Configured synthetic DTLS peer receives exact reply and four unchanged bootstrap payloads | Three owned localhost runs: composed sequence, delayed retry and current-only compatibility; five cold prerequisite/creation refusals; child exits0, ports rebound, generated certs/BODY removed |
+
+Source review falsified strict heartbeat-success-before-SelfIdentification
+ordering. Initial focused assertions were corrected to cached-record reuse and
+terminal user-stop send exceptions; production scheduling was unchanged.
+The first full workspace run passed2045 and failed only the missing K431–K433
+index/ledger references; the frozen failure/logs remain private. The required
+rerun passed2046 cases/52 modules, five PowerShell suites and closed loopback
+CLI with299 stable inputs. Final hashes are recorded in the receipt.
+Local send behavior does not prove
+native registration, authentication, asynchronous context readiness or a player.
+Full #213 phase-readiness acceptance remains partial.
+
 ## Current registration-only preparation — October8, #285
 
 [Receipt](../research/evidence/current-registration-trial-preparation.json)

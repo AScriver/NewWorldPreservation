@@ -1,5 +1,40 @@
 # Bounded task briefs
 
+## #213 — current registration and bootstrap ordering (M, partial)
+
+- Input: clean main `e093847904d3e2bbef6d80e47f65f0784660ccb9`; existing
+  pinned First Light codecs, current owned-image contracts and project Python
+  environment. Record changed input hashes in this unit's receipt.
+- Outcome: expose the current reply profile with the existing optional heartbeat,
+  SelfIdentification, spawn notification, LevelInfo and empty-bundle send path.
+  Reuse exact codecs and shared cursors; no new messages or response values.
+- Primary owns docs/ROADMAP.md, docs/AGENT_HANDOFF.md, this brief, the evidence
+  ledger/index and original public receipt. Implementer owns
+  scripts/carrier_registration_probe.py, scripts/Invoke-FridaPrivateTrial.ps1,
+  tests/test_carrier_registration_probe.py and
+  tests/test_frida_controller_lifetime.ps1. Preserve concurrent work.
+- Ledger: current reply schedules independent heartbeat/SelfIdentification
+  deadlines; actor-to-spawn-to-LevelInfo-to-bundle requires successful sends.
+  Delayed ticks may send SelfIdentification before the first heartbeat. Version
+  selection is guard metadata and must never rewrite the caller's current BODY.
+  Native selectors, authentication, context readiness and player readiness remain
+  unknown; send state is not readiness. Full #213 acceptance remains open.
+- Operations: offline edits, deterministic rejection/order/retry tests and one
+  owned localhost DTLS exchange. No client launch, hooks, memory observation,
+  routing/trust changes, official endpoints or publishing. Current creation is
+  excluded; existing prefix/observer and selected binding guards remain intact.
+- Resources: unique ignored `.scratch/registration-bootstrap-20261008/` primary
+  files; tester uses a separate unique directory, ephemeral loopback port, fresh
+  synthetic certificates and an owned child, then removes its ephemeral keys.
+  No shared fixed ports, clients, hosts, firewall or certificate-store resources.
+- Completion: focused Python/AST-isolated PowerShell controls, literal current
+  reply and unchanged bootstrap bytes over DTLS, full workspace validation,
+  staged publication hygiene, scoped local commit and resource/claim cleanup.
+  Retain failures. No native acceptance or phase-readiness claim from these checks.
+- Next owner: agent for the implemented send path and narrow source questions;
+  user only for a separately prepared, specifically admitted native trial.
+  Existing native grants are not extended by this offline unit.
+
 ## #274 — list worker and shared table (M)
 
 - Root164/parent267, clean93620b8. Primary tracked metadata; agents ignored274dirs.

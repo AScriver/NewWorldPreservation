@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 213,
+  "parentActionableId": 179,
+  "claimIds": [
+    "K431",
+    "K432",
+    "K433"
+  ],
+  "recordedUtc": "2026-10-08T18:55:13.383514+00:00",
+  "input": {
+    "head": "e093847904d3e2bbef6d80e47f65f0784660ccb9",
+    "baselineDirty": [],
+    "python": "3.11.9",
+    "firstLightHead": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "firstLightDirty": [],
+    "experimentalSelectors": {
+      "request": 19,
+      "response": 3
+    },
+    "experimentalBody": "Original minimal canonical 18 zero bytes; field_38 empty; native semantics unknown"
+  },
+  "sources": {
+    "AGENTS.md": "7bbae37bbd75ca7f6213d953f00f905cd67e9c706f486550c9fb7bdcedc0c1e1",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "docs/CURRENT_REGISTRATION_BOOTSTRAP.md": "1e6a3197dd3bd830f0eadd757b6bbad76c400a15f09b71e672c97f2cc925260f",
+    "scripts/carrier_registration_probe.py": "a55f8ba36189ec7b8cf907441892360ee041d95fea951ee746157f19aa3ccbee",
+    "scripts/Invoke-FridaPrivateTrial.ps1": "2185fa6c0a235a59fced88f591cf3731c7b651b694fd39d448bfe22867aa4a48",
+    "scripts/private_current_registration_trial.py": "85d31d4a91fcf21e2da2e4055d131849bf322e6f513c4944a47689e8a4cd725c",
+    "scripts/private_trial_lifetime.py": "156ab1f7374bd0b147d8726567fd4902dfee780ca5522b045fdf0961751d1d22",
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "scripts/current_self_ident_default.py": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22",
+    "scripts/current_spawn_point.py": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c",
+    "scripts/current_world_activation.py": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc",
+    "scripts/dtls_transport_probe.py": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf",
+    "tests/test_carrier_registration_probe.py": "d22222a6c9f5c19f07cdf2d064bdf48d808c33601fc6a93319748cdd53ed8019",
+    "tests/test_frida_controller_lifetime.ps1": "cd45a2b5b36034dc7cf85803c42ec6a0842275ab9297cdd4b5a11ef61aa9eb77",
+    "tests/fixtures/registration/current-request-stream-original.json": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
+    "research/evidence/current-self-ident-default-contract.json": "a4721b557b77cb602788b484f4226e96ac528e0195532a1666839b706ee4e87f",
+    "research/evidence/current-world-activation-contract.json": "ba7e117cce24f3971e350677b971d7e544dfc48d80e770969b399797aac14dda",
+    "research/evidence/current-context-gate-contract.json": "db686d1cce9387ca10575a881a4f4e23ccc16fee00fee295416a285308d91317",
+    "research/evidence/current-self-length-prefix-contract.json": "01ec196fd63a14173f68e703f842cecb874d364907cd9e8c3b3700a34502c42b"
+  },
+  "privateArtifacts": {
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/challenge.py": "d40267bbce27921415b05a19b5efebb652c0f5b8328b93b814eb25b7006d891c",
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/child.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/child.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/events.jsonl": "926360ae9d074107d0064f8f77a4c667f50c1b22b3bffb0d22e88f8ea69b4c40",
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/result.json": "424e6eef85437b4ddea5ef41a0ef83798c7569e65b0b6a4161786bb7b2e9439b",
+    ".scratch/registration-bootstrap-tester-20261008T1836Z/run.ps1": "0389622144f97378305ce574b8fea310b32424c16def932f3fdc5eac05383d95",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/challenge.py": "a7da2792aa3de81470dbc7ac9befd2c3f6a13c59d4d00279f9b2402204688591",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/child.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/child.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/events.jsonl": "0aacd10b1e6fa837ee070c1c34e37253d1f8dbd27498960661da109958e310bb",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/result.json": "075736c7ad7e8ec6970995d1f56436f1f2240bf96622078f0f6b0eebcdff0f0d",
+    ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/run.ps1": "58cc8f464c05cb634bebb5aff3dc74513d146d4843b0c6feff319d027df11e25",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/challenge.py": "eb15a6715938e73017460ab102e07ba1109483f6b65bf10a9fc120c4556e0739",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/child.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/child.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/events.jsonl": "f2bdb980803d98500376b61094517ff8a0be1e6a55277a51e2984fb463d43e22",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/result.json": "bf5f5e457a4a8f92c2b845bb9ce0d030ead98011239620e26eb80058deb3eaf9",
+    ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/run.ps1": "5a30715c90e4c4a51a5ae8730e682d967dfe80997cf33447b2461b5df29084b8",
+    ".scratch/registration-bootstrap-implementation-report-20261008T183725Z-4f8c/report.md": "c26b9d23dc9624313cf198b06b187b51531cb5b6f427947fcd76e565f71b47ca",
+    ".scratch/registration-bootstrap-20261008/adjudication.md": "4f3ab82ad33fb202b5fb66f7e422e180f478189ca51c51296d99fcee1091c8ed",
+    ".scratch/registration-bootstrap-20261008/Metadata.py": "728aa1ab52bfa4ba3f4b4fdaa0e3010a3d7733e0a65ddad93016e6ed63e3df9e",
+    ".scratch/registration-bootstrap-20261008/Metadata.ps1": "09b88ae6eb322f749506a01a6004b5721375513fb6f967dc8f3123d93e34f754",
+    ".scratch/registration-bootstrap-20261008/Workspace.ps1": "b67f99a6049319cdcbb54041e3a5e30e349117bacc1c3ba265e3e1a8b5f6a482",
+    ".scratch/registration-bootstrap-20261008/WorkspaceRetry.ps1": "de0190e521ad111e7509245f1e4ddd296ccc6d5ecc252b062e3157836a69342e",
+    ".scratch/registration-bootstrap-20261008/PrepareInputs.py": "c40aeacd2fdefb3cac0a6d6306cd36aa0f2839c8399d4fb49969b6f96f142e60",
+    ".scratch/registration-bootstrap-20261008/PrepareInputs.ps1": "be106e86a07e01661f084b4d5aa3f05bbf2d11f1f0e5a4bfd83e5f105a867ec0",
+    ".scratch/registration-bootstrap-20261008/CheckPrepared.ps1": "4a4cee8a4f0c948a46733e370d056584b063c4f4c7a1f140f470510ff6226d53",
+    ".scratch/registration-bootstrap-20261008/prepared-input-check.json": "9250cb24a9a4ec26f151ac115f5c85431640868e9c41a58fa07b0c7830c18e86",
+    ".scratch/registration-bootstrap-20261008/ReadWorkspace.py": "af8d54e2851327b922b20642f2ae3804d20d89ac458af4322967ea51d95be2e7",
+    ".scratch/registration-bootstrap-20261008/ReadWorkspace.ps1": "c74d8962579a89719b32d81aadf3257bd94c0417512ca1c1155102e2e82a9687",
+    ".scratch/registration-bootstrap-20261008/workspace.log": "5f1156c49dddbb2bfaf15d96800be56ee6a3559c7b0b0491b43dc922dd89b29e",
+    ".scratch/registration-bootstrap-20261008/workspace-retry.log": "6b1127f5b48bf9b4956a227aff8ec2f8b31e20f5fdad5e61477ba5629b478eac",
+    ".scratch/offline-validation/run-1i_w_cir/receipt.json": "b40f45771540d45c51f51dfd167bbeced00e93110ddb70f2fe25c1d623f7baa3",
+    ".scratch/offline-validation/run-1i_w_cir/workspace-pytest.log": "9c3442db5d42185e69785e82f5e560586e3318de1f3630f3eae0f29e73244151",
+    ".scratch/offline-validation/run-1i_w_cir/workspace-junit.xml": "929fb6b0f70fc6a446a4da9d9bba629ab2bb266da6d16042733724fffeade0e8",
+    ".scratch/offline-validation/run-1i_w_cir/workspace-collect.log": "100f90e0e75a2ba8daa9d66aabb4f3f5b0414a2656ee80afda255d4089b38ba0",
+    ".scratch/registration-bootstrap-20261008/preparation.json": "70e9fb3bce54b3fcbfcc839481d7bdc3ce703fe4cc93982cbf0313a24919a6e5",
+    "private/frida-trials/run-20261008T1843-current-bootstrap/trial-inputs.json": "c316ace27bac51c85fe3a64ae38b6f746fa280f50832ebd29e9d5c15b991cc27",
+    "private/frida-trials/run-20261008T1843-current-bootstrap/Run-PreparedFrida.ps1": "4d77ede9b0ec18ce79b50a0dfa3fdbfa776fed53b3ff274f87b4aab712271251",
+    "private/frida-trials/run-20261008T1843-current-bootstrap/admission.json": "e4f2f718e7489daed8f2ed430c8d43b0d36f522f85daa97110a04d05493241b2",
+    "private/frida-trials/run-20261008T1843-current-bootstrap/stage-complete.json": "4a03118e241e93f64d760a694ecaab1fa9da68dffe483655b1a22688d0e9d6a0",
+    "private/frida-trials/run-20261008T1843-current-bootstrap/current-response-body.bin": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+    ".scratch/offline-validation/run-rg9rvjc6/receipt.json": "5014fba46e29af302c3a3bee1297ba10fe7dd00ce319622c19ad2b633066d5b6"
+  },
+  "changes": [
+    "Permit current selectors and SHA-bound caller BODY with existing optional bootstrap flags and owned-version guard metadata.",
+    "Retain stage prerequisites, selected type/map/version/codec bindings and existing observer/prefix admission; change no scheduler or wire bytes.",
+    "Reject current registration with player creation in CLI, controller and direct adapter.",
+    "Add actual current-request order, retry, delayed tick, send-failure and default compatibility controls."
+  ],
+  "validation": {
+    "focused": {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q tests/test_carrier_registration_probe.py",
+      "casesPassed": 284
+    },
+    "powershell": "Controller parser/automatic-variable validation and AST-isolated actual helper suite passed; controller top level not run.",
+    "dtls": [
+      {
+        "path": ".scratch/registration-bootstrap-tester-20261008T1836Z/result.json",
+        "sha256": "424e6eef85437b4ddea5ef41a0ef83798c7569e65b0b6a4161786bb7b2e9439b",
+        "scope": "Exact caller response, cache/fresh retries and four unchanged literal stages; five cold prerequisite/creation controls"
+      },
+      {
+        "path": ".scratch/registration-bootstrap-tester-delay-20261008T1838Z/result.json",
+        "sha256": "075736c7ad7e8ec6970995d1f56436f1f2240bf96622078f0f6b0eebcdff0f0d",
+        "scope": "Retry at +0.750s does not restart SelfIdentification deadline; four stages once"
+      },
+      {
+        "path": ".scratch/registration-bootstrap-tester-minimal-20261008T1839Z/result.json",
+        "sha256": "bf5f5e457a4a8f92c2b845bb9ce0d030ead98011239620e26eb80058deb3eaf9",
+        "scope": "Current-only exact reply with no optional traffic for 1.4s"
+      }
+    ],
+    "workspace": {
+      "status": "passed",
+      "path": ".scratch/offline-validation/run-rg9rvjc6/receipt.json",
+      "sha256": "5014fba46e29af302c3a3bee1297ba10fe7dd00ce319622c19ad2b633066d5b6",
+      "startedUtc": "2026-10-08T18:46:16.710817+00:00",
+      "finishedUtc": "2026-10-08T18:47:42.113112+00:00",
+      "selectedInputs": 299,
+      "changedInputs": [],
+      "python": {
+        "selectedFiles": 52,
+        "collected": 2046,
+        "executed": 2046,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "powershell": [
+        {
+          "file": "tests/test_official_observation.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_observe_current_client.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_anchor_transaction.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_rep_launch_lifecycle.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        },
+        {
+          "file": "tests/test_frida_controller_lifetime.ps1",
+          "status": "passed",
+          "validator": "parser-and-automatic-variable"
+        }
+      ],
+      "cli": {
+        "status": "passed",
+        "httpStatus": 200,
+        "listenerClosed": true,
+        "childExitCode": 0,
+        "bind": "127.0.0.1",
+        "port": 63693
+      },
+      "selectedPythonModules": 52,
+      "selectedPowerShellSuites": 5
+    }
+  },
+  "retainedFailures": {
+    "initialFocused": "Three incorrect test expectations: cached retry did not marshal a new record; actor and LevelInfo user-stop failures raised terminal exceptions. Initial 3 failed/280 passed, corrected final 284 passed. Production behavior unchanged.",
+    "initialOutputRetention": "Returned tool output was not saved to disk; explicit report retained instead.",
+    "report": ".scratch/registration-bootstrap-implementation-report-20261008T183725Z-4f8c/report.md",
+    "firstWorkspace": {
+      "receipt": ".scratch/offline-validation/run-1i_w_cir/receipt.json",
+      "sha256": "b40f45771540d45c51f51dfd167bbeced00e93110ddb70f2fe25c1d623f7baa3",
+      "passedCases": 2045,
+      "failedCases": 1,
+      "failure": "New catalog referenced K431-K433 before ledger entries existed; ledger entries added, no production code changed."
+    }
+  },
+  "clientExecuted": false,
+  "controllerTopLevelExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "newNativeGrant": false,
+  "cleanup": "Each synthetic child exited0; each owned ephemeral UDP port rebound; generated certificates/keys and BODY removed. No native game or privileged routing/trust resource acquired.",
+  "limits": [
+    "Local send state and synthetic DTLS execution do not establish native registration, suitable response/authentication fields, async context readiness or player readiness.",
+    "Heartbeat and SelfIdentification have independent deadlines; delayed ticks can send actor before heartbeat; timed heartbeat failure does not itself gate actor.",
+    "Version selection is independent guard metadata and never rewrites current BODY field_38.",
+    "Existing trial manifests and whole-file source receipts remain historical after code changes; a new native attempt requires fresh bindings and specific grant.",
+    "Full #213 phase-readiness acceptance remains Partial."
+  ],
+  "preparedNativeInputs": {
+    "status": "prepared-only",
+    "recordedUtc": "2026-10-08T18:44:16.449682+00:00",
+    "runDirectory": "private/frida-trials/run-20261008T1843-current-bootstrap",
+    "manifestSha256": "c316ace27bac51c85fe3a64ae38b6f746fa280f50832ebd29e9d5c15b991cc27",
+    "boundFiles": 154,
+    "metadata": {
+      "body_bytes": 18,
+      "body_sha256": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+      "client_acceptance_proven": false,
+      "current_request_type_index": 19,
+      "current_response_type_index": 3,
+      "status": "prepared-only",
+      "typed_record_bytes": 22,
+      "typed_record_sha256": "94a2a9ad6415f47f7b578f91e1d3b2c76dd77ca07b8fdde6adc59d16c3ea2010"
+    },
+    "clientCopyReused": true,
+    "caNotAfterUtc": "2026-10-09T18:58:22+00:00",
+    "selectedStages": [
+      "heartbeat",
+      "SelfIdentification current131 prefix",
+      "spawn notification",
+      "LevelInfo",
+      "empty bundle"
+    ],
+    "observerScope": "existing three pinned sites/seven booleans/96 event cap only",
+    "nativeGrant": false,
+    "nativeClientExecuted": false,
+    "runtimeResourcesAcquired": false,
+    "bodySemantics": "Experimental request19/response3 and minimal zero BODY; field_38 empty, authentication/native suitability unknown"
+  }
+}

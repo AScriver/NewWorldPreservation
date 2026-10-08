@@ -53,6 +53,23 @@ try {
         'current_registration_response_record.py' | ForEach-Object { Join-Path $workspaceRoot (Join-Path 'scripts' $_) })
     $manifestObject.files = @($paths | ForEach-Object { [pscustomobject]@{path=$_;sha256=(Get-FileHash -LiteralPath $_ -Algorithm SHA256).Hash.ToLowerInvariant()} })
     Assert-CurrentRegistrationTrialPreflight -Manifest $manifestObject -RegistrationArguments $registrationArguments -ScriptRoot (Join-Path $workspaceRoot 'scripts')
+    $manifestObject | Add-Member -NotePropertyName registration_server_version -NotePropertyValue '[RETAIL].Javelin.1.400.6031.6004151'
+    $manifestObject | Add-Member -NotePropertyName registration_server_version_receipt -NotePropertyValue (Join-Path $registrationTestRoot 'owned-version.json')
+    foreach ($stageName in @('heartbeat_15d','self_ident_default','spawn_point_notification',
+                            'world_activation','context_gate_observer','self_ident_current_length')) {
+        $manifestObject | Add-Member -NotePropertyName $stageName -NotePropertyValue $true
+    }
+    $bootstrapArguments = @(Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot)
+    if (($bootstrapArguments -join '|') -cne ($registrationArguments -join '|')) { throw 'Current bootstrap changed the literal BODY selection.' }
+    Assert-CurrentRegistrationTrialPreflight -Manifest $manifestObject -RegistrationArguments $bootstrapArguments -ScriptRoot (Join-Path $workspaceRoot 'scripts')
+    foreach ($stageName in @('registration_server_version','registration_server_version_receipt',
+                            'heartbeat_15d','self_ident_default','spawn_point_notification',
+                            'world_activation','context_gate_observer','self_ident_current_length')) {
+        $manifestObject.PSObject.Properties.Remove($stageName)
+    }
+    if (-not $source.Contains('if ($manifest.PSObject.Properties.Name -contains ''registration_server_version'')') -or
+        -not $source.Contains('if ($manifest.PSObject.Properties.Name -contains ''world_activation'')') -or
+        -not $source.Contains('if ($manifest.PSObject.Properties.Name -contains ''self_ident_current_length'')')) { throw 'Downstream version, map or length guards missing.' }
     foreach ($invalidNumber in @(-1,4294967296,1.5,$true)) {
         $manifestObject.current_request_type_index = $invalidNumber
         try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Invalid JSON selector accepted.' }
@@ -71,7 +88,7 @@ try {
     try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Nonboolean current selection accepted.' }
     catch { if ($_.Exception.Message -ceq 'Nonboolean current selection accepted.') { throw } }
     $manifestObject.current_registration = $true
-    foreach ($mixedName in @('registration_server_version','heartbeat_15d','player_creation_candidate','context_gate_observer')) {
+    foreach ($mixedName in @('trial_character_path','player_creation_candidate')) {
         Add-Member -InputObject $manifestObject -NotePropertyName $mixedName -NotePropertyValue $true
         try { $null = Get-CurrentRegistrationTrialArguments -Manifest $manifestObject -WorkspaceRoot $workspaceRoot; throw 'Mixed profile accepted.' }
         catch { if ($_.Exception.Message -ceq 'Mixed profile accepted.') { throw } }
