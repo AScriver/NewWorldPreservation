@@ -1,5 +1,20 @@
 # Bounded task briefs
 
+## #272 — driver buffers and forwarding (M)
+
+- Child267/root164/178, clean6a0b6c0. Exact constructor/table targets and caches
+  first; roles unknown. Two noPDATA metadata refusals preserved. Before newcode,
+  amended budget admits two64B exactentrywindows/linearstop atbranch/call/RET.
+- Two5B JMPs select cached3389B andnew522B bodies. One direct evidenced584B
+  helper admitted as second/final batch, following primarybudget confirmation.
+  Newcode1106B, windows128B, no datawindows; initializedstatic75697152B<=80MiB,
+  BSS11118896B separate. Identity179204176Bperpass; actualread/failure counts kept.
+- Primary owns tracked metadata; agents own ignored272dirs. Native/critical
+  review qualifies pointers/state/widths/consume/holder/context/DWORDreloads;
+  localK388–K391 close, actualsocket/Carrier/primarycallback remainsunknown.
+- Affected36/PF/bindings/exact1890reuse, scopedcommit/actualtracking/readback/
+  release andstaticchildexit. No code/codec/adapter/native trial/runtime changes.
+
 ## #271 — constructed driver method classification (M)
 
 - Child267/root164/178, clean7b6d3cc. Reuse exact267/268/269/270 bindings,

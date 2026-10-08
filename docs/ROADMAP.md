@@ -2,6 +2,21 @@
 
 ## Server protocol focus — October 7
 
+Newest #272 [driver buffer and forwarding](REGISTRATION_DRIVER_BUFFER_EDGES.md)
+closes K388–K391 local source effects: direct entry JMPs, cached input-buffer/
+backend call, queued copy/consume/conditional backend call and caller-code list
+dispatch. Review qualifies loadedpointer versus field address, state versus node
+offsets, nonzero versus positive input, separate64/32-bit lengths, oversizeconsume,
+holderorigin and conditional context/reloadedDWORD. Actualbackend/socket/primary
+receive/Carrier identity remainsPartial. Two helpers1106B code/cached3389B,
+128B windows10B claimed/2metadata refusals, no newdatawindows, initializedstatic
+75697152B/BSS11118896B and repeatedidentity costs separatelybudgeted. Native/hash/
+criticalreview, affected36/actual preflight and11public/36private bindings pass.
+Exact1890/50/fivePS/closed-loopback support is reused after reconciling six added
+source receipts and only three changed metadata inputs. Closure is retained under
+.scratch/registration272-primary-20261008T0540Z. Staticchildrenexited, no runtime
+resources or codec/adapter/trial change. Next: driver init/backend field20 identity.
+
 Newest #271 [constructed driver methods](REGISTRATION_DRIVER_INTERFACE.md)
 closes K386/K387 as precise source classifications: uint16 field18→staticWS2
 ordinal15/localDLLexport`ntohs`, and32-bit0x485-ownvirtual30result. Separate

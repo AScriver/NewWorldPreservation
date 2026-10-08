@@ -1,5 +1,22 @@
 # Evidence ledger
 
+## Driver buffers and forwarding — October7, #272
+
+[Original receipt](../research/evidence/current-registration-driver-buffer-edges.json)
+pins clean6a0b6c0, exact native/cache/window/query and critical review. Local roles
+close; actualsocket/primaryreceive/Carrier aggregate267 remainsPartial.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K388 | Two driver-table targets directly jump to evidenced PDATA bodies | Two64B windows/10B branches,118B not decoded; no guessed boundaries or runtime invocation | [Buffer paths](REGISTRATION_DRIVER_BUFFER_EDGES.md) |
+| K389 | Cached routine passes loaded buffer/32-bit capacity to backend virtual20 then forwards holder/length |3389B/784 native instructions exactmatch. Nonzero result is not signed-positive/valid extent; actualsocket/Carrier/receiver unknown | Native/cache/binding review |
+| K390 | Queue check/copy arguments, cursor/count consumption and conditional backend virtual18 call |522B/130 instructions. STATE=qword[node+50], loaded destination,64-bit extent/separatelow32 signed length; oversize consumes. No delivery guarantee | Native/hash/critical review |
+| K391 | Shared helper invokes supplied code with loaded entry fields and reloadedDWORD during guarded traversal |584B/148 instructions. Conditional secondcontext maydiffer; callback/alias/retention/primarycallback identities unjoined | Directcaller/ABI/native review |
+
+Two helpers1106B newcode/cached3389B, initializedstatic75697152/BSS11118896,
+nativewindows128B, no newdatawindows; failures/metadatarefusals retained. Existing
+codecs/adapter/candidates unchanged, no actualserver/client/native evidence.
+
 ## Constructed driver accessor classification — October7, #271
 
 [Original receipt](../research/evidence/current-registration-driver-interface.json)

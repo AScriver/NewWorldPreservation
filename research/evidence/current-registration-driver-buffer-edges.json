@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 272,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T06:03:01.535454+00:00",
+  "claimIds": [
+    "K388",
+    "K389",
+    "K390",
+    "K391"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "6a0b6c0471de06b5c96a128d94052f924ff02727",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "acceptance": "Precise conditional driver jump/buffer/queue/caller-code effects only; actual socket/primary-receive/Carrier aggregate267 remains partial.",
+  "direction": "Owned-client transport source relevant to replacement server input/output; no executed server/client packet or gameplay evidence.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-view-accessors.json": "0b3e72a1bccfaae8d38d35fc1c61e29dbec7c968190652c3b2b3f0efb0fade98",
+    "research/evidence/current-registration-receive-producer.json": "c8bb12e94d5890accbc206c8a81b160e46ce08357eb068c36c561b7a7fdd49a6",
+    "research/evidence/current-registration-driver-interface.json": "f888f11381fde36a72b93c18f966982f8b0cfaa32812a5fcd1ec0a0a0198e003",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "research/evidence/current-registration-bit-send.json": "4bd9650c613a07a8a918c493032dca8d077700c38aac78a3e898d061f0d7cc7a",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/FOLLOWUP-HELPER.md": "949a29a8e096883ccff9bd06918d005f47f0e42749d5e27a383692c45722be7a",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/REPORT.md": "0602b12cd9c9fa69f9cf58c5ff9f3da39154a583cec87d39a89d755224f5e532",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/dump-native-145db4ef0.py": "5d022c8e9a415a48216f69293a68a4f231cedcf93397bfb02047f27be01909ab",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/dump-native-145dcb480.py": "dacdb2e1610e0ad481218fcb1bd0968749faf4d37a4dd3648ec19f4493730b36",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/native-145db4ef0.txt": "4fa78babef24250cc170f6d342afe6e1a9a4b8df81ea81ed468f27e0eacbb67c",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/native-145dcb480.txt": "1ba4c33e027aefae5a095a81db01afa49544b4e2a4cab44ec999609312d6f7a7",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output-145db4ef0/function-145db4ef0.c": "146e23f969a3ba1d8e3e43f78023014b01aca841322711ec68eaf601d0aa6940",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output-145db4ef0/receipt.json": "add3942955619d35fc8fc332a12a9de42c2b320f4afbc1ee28074e8a1033a4b4",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output/function-145dcb480.c": "0c645b09b30114ad13d6e5e7a7e15b87093a5c82140b307bfb360636c3b01865",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output/receipt.json": "5c0c316140cabb1f0b451cb2b4cb8670a38f7ee04450573385c9c61d5055cd3b",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/read-target-windows.py": "ca8694f1a1e29a368207ac3fba6a5a417680031f7074b207534791e8a29168b4",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/run-dump-native-145db4ef0.ps1": "39ff683cd8cc007a2edff8f88ff454bc1abbfcf9e3dc9c22dea07801f99de58b",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/run-dump-native.ps1": "ab62e67a843ffdf532c0149d7a88d5649dadf324b786b997eab5bd1917145c3d",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/run-slice-145db4ef0.ps1": "cc1fb1f29a5b3f3e1513ab7b480a65f6d1deeb7eac15d6f1fab7daf23452df5d",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/run-slice-145dcb480.ps1": "f76300848abac154fbb2ee4c7d2d7bf8dac537d8429b051c802222f4fb5341ee",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/run-target-windows.ps1": "9760b8cd36c231e83c290d8e37cbd38734f6cee29cb6fc1d334ca1bb18d0a032",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/target-windows.json": "bb72258db8d44d42d911e9499dc45da2c66b1639a0c704129a599a4df5769c37",
+    ".scratch/registration272-primary-20261008T0540Z/Baseline.ps1": "f551b82c864ff5f3e1f6bb565b9eb9f5e13d15d55a5258761bf7c49c527b004c",
+    ".scratch/registration272-primary-20261008T0540Z/Baseline.py": "e5a96e324480b33d7774798329306b33acbc2b0ec4491cb98533a6b1316cadc1",
+    ".scratch/registration272-primary-20261008T0540Z/Publish.ps1": "ab9b52f2bed855bb15e636e10c12038c58dfd0c518ed711383931d6289f2c367",
+    ".scratch/registration272-primary-20261008T0540Z/Publish.py": "10e6282974f49909f01ec78e252840115188d949576ee120cf7f053520820122",
+    ".scratch/registration272-primary-20261008T0540Z/Seal.ps1": "f5a8edf7a320c34bdfb690790dbc4bc721d00878115eb9ae4f3c38acbeb73435",
+    ".scratch/registration272-primary-20261008T0540Z/Seal.py": "59868447bad9a3974591644e92c136dc39682b948a7681a78eba1c446ef070c6",
+    ".scratch/registration272-primary-20261008T0540Z/adjudication.md": "e4831c93257ff186379c08e4fc91eadee7288b6c6b36762691e45d05086aaf72",
+    ".scratch/registration272-primary-20261008T0540Z/baseline.json": "75b7d447490c2b1c9a65665f3a38c192050bd2a446e59656c5c81f8988adb98c",
+    ".scratch/registration272-primary-20261008T0540Z/ledger.md": "72ec1457e79cd4dc817bae005a22979b4bd27fbf988646ce431dfce82f677df8",
+    ".scratch/registration272-primary-20261008T0540Z/native-145db4ef0.txt": "2f5cfa1a587457efeb437cbb9167e01e4d8d1416d8bbe6ed1363282cf8c08cc8",
+    ".scratch/registration272-primary-20261008T0540Z/native-145dcb480.txt": "8cea420b5105157b6c9a2065bad2ee0ae4988e01511f7df8c5f9e1e06c362d7e",
+    ".scratch/registration272-primary-20261008T0540Z/publication-input.json": "12d0c9dfebd41f9a281c17de51be266d2505026a83569c2ee9504d861fcdf9cf",
+    ".scratch/registration272-primary-20261008T0540Z/seal.json": "17fe954911b09ca606e3f4cc02548067579413220fb20f2acc883dde90ee803e",
+    ".scratch/registration272-review-20261008T0558Z/report.md": "171b6b3caeb1648d4aad5a22da6d55926f81a5e80f6e31516b286435bd4e759f",
+    ".scratch/rep-verify-policy/analyze_policy.py": "dc4ecfc84c9bbd7816ca30c68a4a45b6d9fd7c2c301e5d8477f1c148bf3274ea",
+    ".scratch/rep-verify-policy/fn-145dbdd30.txt": "d2e50593a2524e09278c47d83d3ec807ecf3defa34c50b3f72bcfef3c128ae5b",
+    ".scratch/rep-verify-policy/fn-145dcb690.txt": "8a1a18f63e6ffc67ba13ec791a494d9ad69616632ffd79e996ae15bef65ae67e",
+    ".scratch/rep-verify-policy/members-145dbd000-145de1000-d0.json": "f7207c09bed779a60284a776b40c07e8049f656be7d9b78c78003395cbd1ac94"
+  },
+  "entryWindows": {
+    "readBytes": 128,
+    "decodedBranchBytes": 10,
+    "remainingBytesNotDecoded": 118,
+    "refusals": "Two exact entry metadata owner checks failed; no guessed PDATA boundaries."
+  },
+  "newNative": [
+    {
+      "entry": "0x145dcb480",
+      "ranges": [
+        {
+          "start": "0x145dcb480",
+          "endExclusive": "0x145dcb68a",
+          "bytes": 522,
+          "sha256": "7f24e5ab07282bf02919930920b5b88dbab4f52dca4c702ec647ca330237d52e",
+          "instructions": 130
+        }
+      ],
+      "queryReceiptSha256": "5c0c316140cabb1f0b451cb2b4cb8670a38f7ee04450573385c9c61d5055cd3b"
+    },
+    {
+      "entry": "0x145db4ef0",
+      "ranges": [
+        {
+          "start": "0x145db4ef0",
+          "endExclusive": "0x145db5138",
+          "bytes": 584,
+          "sha256": "59d93c8fc428a7a02eaf3b29e2f9c583a326645d792bc8e0b3b5c1c26be42f54",
+          "instructions": 148
+        }
+      ],
+      "queryReceiptSha256": "add3942955619d35fc8fc332a12a9de42c2b320f4afbc1ee28074e8a1033a4b4"
+    }
+  ],
+  "cachedNative": {
+    "start": "0x145dcb690",
+    "endExclusive": "0x145dcc3cd",
+    "bytes": 3389,
+    "sha256": "fa5816817454300baec32bb23f79f1669ac86b7141659178d6baaa8154a4a24c",
+    "instructions": 784,
+    "listing": ".scratch/rep-verify-policy/fn-145dcb690.txt",
+    "listingSha256": "8a1a18f63e6ffc67ba13ec791a494d9ad69616632ffd79e996ae15bef65ae67e",
+    "exactListingMatched": true
+  },
+  "driver": {
+    "table": "0x148480a20",
+    "constructor": "0x145dbdd30",
+    "slots": {
+      "0x10": "0x145dd4a80 \u2192 JMP145dcb690",
+      "0x18": "0x145dd6240 \u2192 JMP145dcb480"
+    },
+    "limit": "Conditional construction/use; separate from primary14858c358, no runtime identity or role from matching offsets."
+  },
+  "inputBuffer": {
+    "claimId": "K389",
+    "entry": "0x145dcb690",
+    "initialBackendCall": "RCX=qword[driver+20], RDX=qword[driver+e0], R8D=dword[driver+118], R9=&local output; stackDWORD1c and local pointer; target backend virtual+20.",
+    "result": "EAX\u2192R12D; nonzero path invokes driver virtual+a0 and moves returned holder; null holder mechanically zeros length.",
+    "forwarding": "Helper145db4ef0 code140571444 receives driver-address slot, pointer to localDWORD length, pointer to local holder. Length reloaded afterward.",
+    "limit": "Positive initial buffer/result/forwarding and later length/byte checks; opaque backends/callees/aliasing/holder validity/socket/Carrier meaning unknown. No whole-function absence."
+  },
+  "queue": {
+    "claimId": "K390",
+    "entry": "0x145dcb480",
+    "state": "List anchored driver+150; node+10 header, qword[node+50] points to STATE. STATE+50 array/+58 quantity/+60 cursor/+68 count; stride520; counter STATE+20dc.",
+    "copyArguments": "Extent=(qword[slot+518]-slot) modulo2^64. If extent<=zeroextendeddword[driver+118], calls147aad05b with RCX=qword[driver+d8],RDX=slot,R8=extent.",
+    "copyAssociation": "Reused265 pinned-image static import name association to VCRUNTIME memcpy only; old265 probe binding historical after266, no whole-receipt freshness or executed copy outcome claim.",
+    "length": "After call recomputes EBP from low32 qword[slot+518]-slot; cursor/count advance on both fit and oversize paths, then signedEBP<=0 exits.",
+    "holder": "PositiveEBP path initializes localholder=node+10 and increments holder+18; it is not the provider return from virtual30.",
+    "backend": "If driverbyte8 and holdervirtual30 return nonzero: RCX=qword[driver+20],RDX=providerreturn,R8D=localproviderDWORD,R9=previouslyloadedqword[driver+d8],stackDWORD=itemlength; target backendvirtual18.",
+    "forwarding": "BackendEAX==0 enters helper code14057143c with length-pointer and holder-slot pointer; conditional release, STATEcounter increment and predicate check follow.",
+    "limit": "No delivery/full-length/socket/success meaning; separate repeated loads, callee effects, aliases and normal-control prerequisites remain."
+  },
+  "dispatch": {
+    "claimId": "K391",
+    "entry": "0x145db4ef0",
+    "effect": "Saves four inputs; guarded traversal calls suppliedcode with RCX=qword[entry+28],EDX=reloadedDWORD[param3],R8=savedopaqueparam4. Conditional hash/object-key path uses RCX=qword[entry+10] and same source pointers.",
+    "context": "Calls opaque145dcd8d0; second call only on first traversal branch. Stable/same context not guaranteed.",
+    "limit": "Each invocation reloads DWORD, value may differ. Callback bodies14057143c/444 and meaning/retention/async effects unknown; directcalls do not join stored primary146b714d0 or socket/Carrier delivery."
+  },
+  "resources": {
+    "helperBatches": 2,
+    "newPdataRootsAttempted": 2,
+    "newPdataRootsCompleted": 2,
+    "newPdataRootsRefused": 0,
+    "metadataOwnerChecksRefused": 2,
+    "newPdataCodeBytes": 1106,
+    "reusedPdataCodeBytes": 3389,
+    "newExecutableWindowReadBytes": 128,
+    "newExecutableWindowClaimedBytes": 10,
+    "mandatoryInitializedStaticImportsPerBatch": 37848576,
+    "cumulativeInitializedStaticImports": 75697152,
+    "newCodePlusStaticImports": 75698258,
+    "uninitializedStaticExtensionsTotal": 11118896,
+    "newDataWindows": 0,
+    "gameImageFileExtentBytes": 179204176,
+    "primaryBaselineIdentityPasses": 1,
+    "primarySealIdentityPassesPerInvocation": 1,
+    "agentFullImageReadPasses": 11,
+    "agentFullImageRepeatedBytes": 1971245936,
+    "agentFailedNearFullHashReadByteCount": "Not recorded; failed stream-cursor hash guard retained separately.",
+    "primarySealSuccessfulInvocations": 1,
+    "scope": "Initialized static import/code, BSS extension, native windows, cached code and repeated identity reads are separately counted. No whole-image automatic analysis."
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "K388\u2013K391 survived native/hash/critical review after loaded-pointer, state-offset, holder-origin, conditional-context and nonzero-versus-positive qualifications; source component only.",
+    "workspace": "Code/fixtures/runtime unchanged; affected36/actual preflight/bindings and exact1890/50/fivePS/closed-loopback reconciliation before commit, retained in closure/ROADMAP."
+  },
+  "counterEvidence": [
+    "Two exact table entries lack PDATA; metadata refusals retained. Only5B direct JMP per64B window decoded, remaining118B unqueried; target bodies independently have evidenced PDATA.",
+    "Initial window stream-cursor hash and first wrapper baseline-hash guards failed before accepted window/helper query; corrected bounded runs preserved separately.",
+    "Original node-relative shorthand corrected: queue/state is qword[node+50]; internal offsets/counter use state. Helper param4 holder initializednode+10, not providerreturn.",
+    "Loaded buffer and callback receiver qwords are not addresses of fields. Input backend result gate is nonzero; no positive/valid length proof.",
+    "Helper secondcontext call is conditional; contexts neednotmatch, each callback reloadsDWORD and effects/retention unknown. EAXzero and cursor/count consumption are not delivery guarantees."
+  ],
+  "limits": [
+    "Actual driver backend field20/table/runtime and concrete virtual18/20 socket or transform identities unjoined.",
+    "Callercode14057143c/444, primaryreceiver146b714d0/view-pair/Carrier relationship unknown; no actualserver/client packets or native gameplay acceptance.",
+    "Source-qualified copied/forwarded buffer arguments are not valid extents, lifetime/alias transparency or full-length delivery guarantees.",
+    "Currentselectors/responsevalues/auth/nativeacceptance/M1 remainopen; original codecs/adapter/candidates/native trial unchanged.",
+    "All source outputs private/ignored; no native/client/library execution, network/endpoints/capture/credentials/replay/upstream or push."
+  ],
+  "nextEvidence": "Constructed driver initialization/backend field20 identity and concrete virtual18/20 destinations; preserve current buffer/caller effects without assumed receive role.",
+  "cleanup": {
+    "staticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

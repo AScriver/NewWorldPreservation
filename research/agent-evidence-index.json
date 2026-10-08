@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-driver-buffer-edges",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K388", "K389", "K390", "K391"],
+      "docs": ["docs/REGISTRATION_DRIVER_BUFFER_EDGES.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-registration-driver-buffer-edges.json", "classification": "source-inference", "scope": "Exact separate-driver entry JMPs, buffer/backend arguments, queued consume/conditional call and caller-code traversal effects; actual socket/receive/Carrier identity partial"}],
+      "limit": "Loaded pointers/state offsets, separate widths/reloads, oversizeconsume/holder/context/normal-control qualified. No socket/Carrier/primarycallback/delivery/lifetime/native acceptance; no code/adapter/trial change."
+    },
+    {
       "id": "current-registration-driver-interface",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K386", "K387"],
@@ -2080,6 +2091,7 @@
   "receipts": [
     "research/evidence/current-registration-receive-producer.json",
     "research/evidence/current-registration-driver-interface.json",
+    "research/evidence/current-registration-driver-buffer-edges.json",
     "research/evidence/current-registration-view-accessors.json",
     "research/evidence/current-registration-receive-invoker.json",
     "research/evidence/current-registration-receive-callback.json",

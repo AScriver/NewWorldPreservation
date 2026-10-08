@@ -1,5 +1,18 @@
 # Agent handoff
 
+## #272 driver buffers and forwarding — October7
+
+- [K388–K391](REGISTRATION_DRIVER_BUFFER_EDGES.md) closes exactdriver JMP/buffer/
+  queue/caller-helper roles. Loadedpointers/state offsets, nonzero/unsigned/signed
+  widths, oversizeconsumption, holderorigin and conditional/reloadedvalues qualified.
+- Twohelpers1106Bcode/cached3389B, windows128B/10Bclaimed,2metarefusals,
+  initializedstatic/BSS/identity costs separatelycounted. Originalfailures/reports
+  retained; no invented socket/Carrier/primary146b714d0 or delivery association.
+- Native/review/affected36/PF/input reconciliation closure under
+  .scratch/registration272-primary-20261008T0540Z; ownedstaticchildrenexited,
+  no runtime resources/codecs/adapter/candidates/trial change. Nextboundsource
+  question: driver initialization/backend field20 and virtual18/20 destinations.
+
 ## #271 constructed driver methods — October7
 
 - [K386/K387 component](REGISTRATION_DRIVER_INTERFACE.md): separate table148480a20
