@@ -18,9 +18,32 @@ The constructor accepts three optional inputs together:
   authentication semantics remain unproved.
 
 Supplying only some inputs fails before peer state is created. Omitting all
-three retains the historical request/reply path. There is no CLI selection for
-this profile. The current profile does not choose an identity, token, version,
+three retains the historical request/reply path. The current profile does not
+choose an identity, token, version,
 authentication result or captured response fields.
+
+## Runnable current server profile
+
+Actionables #275 exposes these inputs through the existing loopback-only CLI:
+
+- `--current-request-type-index`: explicit decimal or hexadecimal uint32.
+- `--current-response-type-index`: explicit decimal or hexadecimal uint32.
+- `--current-response-body`: binary BODY file in this workspace's ignored
+  `private/` or `.scratch/` directory. This is BODY alone, without framing.
+- `--current-response-body-sha256`: exact hexadecimal SHA256 of those bytes.
+
+Supply all four together. The server verifies the private path, reads at most4097
+bytes, checks the hash, decodes one exact canonical BODY and checks the encoded
+record cap before opening runtime resources. It rejects partial configuration,
+invalid selectors, malformed/noncanonical/trailing BODY and mismatched hashes.
+Current mode excludes `--server-version`, heartbeat and actor/creation trial
+options. All current response fields remain caller-selected; the CLI supplies
+no default identity or authentication result. Existing lifetime, certificate,
+private log and pinned FirstLight arguments still apply.
+
+The local synthetic exchange uses original fixtures with explicit selectors and
+a deliberately empty response BODY. Those values are test inputs, not evidence
+of correct live-client selectors or an appropriate successful response.
 
 After the existing connect/candidate gates, the current profile accepts one
 complete raw physical request through the original decoder: CRC32, BE32 count,

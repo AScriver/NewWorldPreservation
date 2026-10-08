@@ -23,6 +23,102 @@ CURRENT_STREAMS = json.loads((Path(__file__).resolve().parents[1] /
     "tests/fixtures/registration/current-request-stream-original.json").read_text())["vectors"]
 
 
+CLI_BASE = ["--certificates", "unused", "--log", "unused", "--first-light", "unused"]
+CLI_CURRENT = ["--current-request-type-index", "0", "--current-response-type-index", "0x3",
+               "--current-response-body", "private/body.bin",
+               "--current-response-body-sha256", "0" * 64]
+
+
+@pytest.mark.parametrize("mask", range(1, 15))
+def test_current_cli_requires_the_entire_explicit_profile(mask):
+    supplied = [value for index in range(4) if mask & (1 << index)
+                for value in CLI_CURRENT[index * 2:index * 2 + 2]]
+    with pytest.raises(SystemExit) as error:
+        adapter_module.parse_options(CLI_BASE + supplied)
+    assert error.value.code == 2
+
+
+@pytest.mark.parametrize("selector", ["-1", "4294967296", "0x100000000", "none"])
+def test_current_cli_rejects_out_of_range_or_noninteger_selector(selector):
+    current = CLI_CURRENT.copy()
+    current[1] = selector
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(CLI_BASE + current)
+
+
+@pytest.mark.parametrize("stage", ["--heartbeat-15d", "--self-ident-default",
+    "--self-ident-current-length", "--spawn-point-notification", "--world-activation",
+    "--player-creation-candidate"])
+def test_current_cli_cannot_enable_trial_messages(stage):
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(CLI_BASE + CLI_CURRENT + [stage])
+
+
+def test_current_cli_zero_selector_and_historical_default_are_distinct():
+    options = adapter_module.parse_options(CLI_BASE + CLI_CURRENT)
+    assert options.current_request_type_index == 0
+    assert options.current_response_type_index == 3
+    historical = adapter_module.parse_options(CLI_BASE)
+    assert historical.current_request_type_index is None
+    assert adapter_module.prepare_current_registration(historical) == {}
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(CLI_BASE + CLI_CURRENT +
+            ["--server-version", adapter_module.OWNED_SERVER_VERSION])
+
+
+@pytest.mark.parametrize("digest", ["", "0" * 63, "0" * 65, "z" * 64])
+def test_current_cli_requires_a_complete_hexadecimal_digest(digest):
+    current = CLI_CURRENT.copy()
+    current[-1] = digest
+    with pytest.raises(SystemExit):
+        adapter_module.parse_options(CLI_BASE + current)
+
+
+def private_body_options(tmp_path, monkeypatch, raw):
+    import connectivity_probe
+    monkeypatch.setattr(connectivity_probe, "WORKSPACE", tmp_path)
+    path = tmp_path / "private" / "body.bin"
+    path.parent.mkdir()
+    path.write_bytes(raw)
+    current = CLI_CURRENT.copy()
+    current[5], current[7] = str(path), hashlib.sha256(raw).hexdigest().upper()
+    return adapter_module.parse_options(CLI_BASE + current)
+
+
+def test_current_cli_prepares_exact_caller_body_and_selectors(tmp_path, monkeypatch):
+    # Original literal: zero u32/u64, two empty counted byte fields, four false flags.
+    options = private_body_options(tmp_path, monkeypatch, bytes.fromhex("00" * 18))
+    prepared = adapter_module.prepare_current_registration(options)
+    assert prepared == {"current_request_type_index": 0, "current_response_type_index": 3,
+                        "current_response_body": CURRENT_RESPONSE}
+
+
+@pytest.mark.parametrize("raw", [b"", bytes(17), bytes(18) + b"tail",
+    bytes(12) + b"\x80\x00" + bytes(5), bytes(17) + b"\x02", bytes(4097),
+    bytes(12) + b"\xbf\x3f" + b"x" * 4095 + bytes(5)])
+def test_current_cli_rejects_invalid_or_unbounded_body_privately(tmp_path, monkeypatch, raw):
+    options = private_body_options(tmp_path, monkeypatch, raw)
+    with pytest.raises(ValueError) as error:
+        adapter_module.prepare_current_registration(options)
+    assert str(error.value) == "Invalid private current registration response configuration"
+
+
+def test_current_cli_hash_and_private_path_fail_before_runtime(tmp_path, monkeypatch):
+    options = private_body_options(tmp_path, monkeypatch, bytes(18))
+    options.current_response_body_sha256 = "0" * 64
+    monkeypatch.setattr(adapter_module, "verify_reference", lambda *_: pytest.fail("runtime reached"))
+    with pytest.raises(ValueError):
+        adapter_module.main(CLI_BASE + ["--current-request-type-index", "0",
+            "--current-response-type-index", "3", "--current-response-body",
+            options.current_response_body, "--current-response-body-sha256", "0" * 64])
+    outside = tmp_path / "body.bin"
+    outside.write_bytes(bytes(18))
+    options.current_response_body = str(outside)
+    options.current_response_body_sha256 = hashlib.sha256(bytes(18)).hexdigest()
+    with pytest.raises(ValueError, match="Invalid private"):
+        adapter_module.prepare_current_registration(options)
+
+
 class Events:
     def __init__(self):
         self.rows = []

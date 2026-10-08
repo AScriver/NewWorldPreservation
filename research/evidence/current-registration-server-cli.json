@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 275,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T07:09:43.688772+00:00",
+  "claimIds": [
+    "K399",
+    "K400"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "8c0443049721186c8748f901d0f71da7b97d9e77",
+    "dirty": [
+      " M docs/REGISTRATION_ADAPTER_CURRENT.md",
+      " M scripts/carrier_registration_probe.py",
+      " M tests/test_carrier_registration_probe.py"
+    ],
+    "runtime": ".venv Python 3.11.9, pyOpenSSL DTLS memory-BIO client and server, actual pinned First Light frame/wire modules",
+    "firstLightCommit": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "ownedImage": "Prior pinned static identity reused; no new image query or native client."
+  },
+  "sources": {
+    "docs/REGISTRATION_ADAPTER_CURRENT.md": "947f1f1fc735b4e83e1b96debcb1b287535782a0b333ac06870c49eb880f888a",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/carrier_registration_probe.py": "97f411e36b6e79fea76d19b9ed5b89c4290557cc299922e99ae15995dd5d2cef",
+    "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "scripts/dtls_transport_probe.py": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/fixtures/registration/current-request-stream-original.json": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8",
+    "tests/fixtures/registration/current-response-body-original.json": "c7f52d4008858c05670607503e828f2d5381a3ff75e33e146ac26c2bddea52e6",
+    "tests/fixtures/registration/current-response-record-original.json": "bba16a9b620bf15a052947d9e9b19cc56d24e2005d373fe1f3788fff53c2d8b2",
+    "tests/test_carrier_registration_probe.py": "df85de37b0d9b1ca90bb19379c02f998ff155db11f86dbc6657053d8865f5799"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-hpbec4y2/receipt.json": "57306343712d0a7ef3b35076cd4aa5d05b00c849e31fe1452d9c25f360382e51",
+    ".scratch/registration274-primary-20261008T0642Z/closure.json": "ed4e7f9337d09d802de885962c55fb3ca1dd2efb7ab3d3ff9c3d718e531f4f09",
+    ".scratch/registration275-primary-20261008T0702Z/Focused.ps1": "171ffa7b1ea756d6932aa1a452c2427805df7f4cecc7aa751efb1a026dee8cbe",
+    ".scratch/registration275-primary-20261008T0702Z/Publish.ps1": "45f1aaae61fa46a38e0fb3760d9b328e13c00c8189a5c931ab63f2486a22d4d4",
+    ".scratch/registration275-primary-20261008T0702Z/Publish.py": "b82cf15435d394fb278cc9c8a78abccfb45df0ef4d950a1453cba14ecaf53385",
+    ".scratch/registration275-primary-20261008T0702Z/Workspace.ps1": "01277afb034b21612f643837eb851e9105f669b49efe865bcbd56d4c3c374b16",
+    ".scratch/registration275-primary-20261008T0702Z/focused-junit.xml": "688a0a8736f1787ce72af356e5a4662cd1869fd5b29ea3363a7ac9289a38f9a9",
+    ".scratch/registration275-primary-20261008T0702Z/focused.log": "476c0091dfd9f75ddc9ae65d2de03a3af843b6b89747cd488fb79594163b6885",
+    ".scratch/registration275-primary-20261008T0702Z/workspace.log": "edfe82517851b4055fa5a3cfd4ce31c4b81d0f8c893cea81383770beed688662",
+    ".scratch/registration275-tester-20261008T0702Z/child.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration275-tester-20261008T0702Z/child.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".scratch/registration275-tester-20261008T0702Z/events.jsonl": "257181a521c855e6615c086f04c0b6186e5142bd56a9ddf87b37ab7c49d244f2",
+    ".scratch/registration275-tester-20261008T0702Z/experiment-report.json": "e64adbdfd1d9efd6e0c04913cabdd73a37b6c5a9654df30eefcbca1781c60759",
+    ".scratch/registration275-tester-20261008T0702Z/loopback-result.json": "1b8f97772f047934a3111db9f77e219c17ce78479581bf008bb21ec35f7b01c7",
+    ".scratch/registration275-tester-20261008T0702Z/loopback_harness.py": "ac7c48fa5c26b18b985165cc982b056f53b308c45533e3da13746fa195100903",
+    ".scratch/registration275-tester-20261008T0702Z/run.ps1": "7bc7ab7db61a28e472d80de2ba0e37834edd561e888b2432b03480deb9f9113e"
+  },
+  "cli": {
+    "claimId": "K399",
+    "mode": "Explicit caller-owned current registration only",
+    "inputs": [
+      "current-request-type-index",
+      "current-response-type-index",
+      "current-response-body",
+      "current-response-body-sha256"
+    ],
+    "validation": "All inputs together; uint32 incl0; private resolved path; atmost4097-byte read; hash/exactcanonical BODY/fullrecord4096cap before runtime resources.",
+    "excluded": "Historical version override and heartbeat/actor/creation candidate stages.",
+    "semantics": "No inferred type binding, appropriate response values, identity or authentication outcome."
+  },
+  "localExchange": {
+    "claimId": "K400",
+    "classification": "synthetic loopback DTLS/Carrier",
+    "checks": {
+      "clientAcceptanceFalse": true,
+      "connectAck": true,
+      "dtlsHandshake": true,
+      "duplicateCachedIdentical": true,
+      "eventLogPrivateMarkerAbsent": true,
+      "historicalFallbackRejected": true,
+      "responderStopped": true,
+      "schemaUnresolvedCount": 2,
+      "syntheticPrivateMarkerNotSent": true,
+      "trailingRejected": true,
+      "typedReply": "523f0e09e70a453000c872c3725ca0787d3c3c92d0bf0bd60a08f64dda600af5"
+    },
+    "requestLiteralSha256": "824b384749a9001af3d13c7b1678f99da75d1a4452b98ffef81f75e4c7d5766a",
+    "responseLiteralSha256": "94a2a9ad6415f47f7b578f91e1d3b2c76dd77ca07b8fdde6adc59d16c3ea2010",
+    "runtime": "pyOpenSSL verified local CA/DTLS plus pinned FirstLight frame/wire",
+    "selectorInputs": {
+      "request": 19,
+      "response": 3
+    },
+    "noFallbackScope": "Observed rejection of two inputs; source/unit checks separately establish current rejection path without historical parser fallback.",
+    "cleanup": {
+      "command": "& C:\\Users\\Austin\\.codex\\tools\\Invoke-CodexPowerShell.ps1 -Path .\\.scratch\\registration275-tester-20261008T0702Z\\run.ps1 -Execute",
+      "cwd": "C:\\Code\\NewWorldPreservation",
+      "validation": "Task PowerShell parser and PSAvoidAssignmentToAutomaticVariable passed; Python AST parsed; one-shot run exited 0",
+      "selection": "Explicit CLI request index19, response index3, exact canonical minimum BODY file and matching SHA256; duration25s, 127.0.0.1 ephemeral UDP port63987, fresh localhost CA/leaf only in ignored scratch",
+      "serverPid": 27192,
+      "childExit": 0,
+      "listenerClosed": true,
+      "certificateAndBodyFilesRemoved": true,
+      "runDeadline": "Harness hard deadline 29s; completed in approximately 26.5s including natural server duration and cleanup"
+    }
+  },
+  "validation": {
+    "type": "Automated test",
+    "outcome": "Passed",
+    "focused": 615,
+    "newConfigurationCases": 38,
+    "workspacePython": 1928,
+    "workspaceModules": 50,
+    "powershellSuites": 5,
+    "independentChallengeGroups": 6,
+    "workspaceReceiptSha256": "57306343712d0a7ef3b35076cd4aa5d05b00c849e31fe1452d9c25f360382e51"
+  },
+  "historicalInputChanges": [
+    "Changed probe/test bytes make adapter-bound #266 and older whole-probe receipts historical; no rewriting. Unchanged codec/image subclaims remain distinct."
+  ],
+  "limits": [
+    "No actual New World client, native receive inverse, authentication, authoritative current selector binding, actor/world state, or Milestone 1 acceptance was exercised.",
+    "The positive request/reply oracle came from original synthetic literal fixtures. The separate sensitive-marker request was generated by the existing original sender codec.",
+    "CLI selects experimental caller-provided request index19, response index3 and constructor-default BODY. A correct local reply does not prove client acceptance.",
+    "The selected port was chosen by a local ephemeral bind/release and confirmed by listener event; the exact port could have raced before child bind, but this run bound successfully.",
+    "No native trial/controller launched, no new grant, no upstream modifications or game endpoint contact."
+  ],
+  "cleanup": {
+    "listenerClosed": true,
+    "childExitCode": 0,
+    "certificateAndBodyFilesRemoved": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

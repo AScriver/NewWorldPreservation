@@ -885,6 +885,46 @@ class RegistrationAdapter:
             self._ack(peer, state, sequence)
 
 
+def _uint32_selector(value):
+    try:
+        selected = int(value, 0)
+    except ValueError:
+        raise argparse.ArgumentTypeError("selector must be a uint32 integer") from None
+    if not 0 <= selected < 1 << 32:
+        raise argparse.ArgumentTypeError("selector must be a uint32 integer")
+    return selected
+
+
+def prepare_current_registration(options):
+    """Validate caller-owned current response bytes before runtime resources."""
+    if options.current_request_type_index is None:
+        return {}
+    from connectivity_probe import private_directory
+    from current_registration_response_body import decode_body, encode_body
+    from current_registration_response_record import encode_registration_response_record
+
+    try:
+        path = private_directory(options.current_response_body)
+        with path.open("rb") as stream:
+            raw = stream.read(MAX_REGISTRATION_BYTES + 1)
+        if not 1 <= len(raw) <= MAX_REGISTRATION_BYTES:
+            raise ValueError
+        if hashlib.sha256(raw).hexdigest() != options.current_response_body_sha256.lower():
+            raise ValueError
+        body, consumed = decode_body(raw)
+        if consumed != len(raw) or encode_body(body) != raw:
+            raise ValueError
+        response = encode_registration_response_record(
+            body, type_index=options.current_response_type_index)
+        if len(response) > MAX_REGISTRATION_BYTES:
+            raise ValueError
+    except (OSError, ValueError, TypeError):
+        raise ValueError("Invalid private current registration response configuration") from None
+    return {"current_request_type_index": options.current_request_type_index,
+            "current_response_type_index": options.current_response_type_index,
+            "current_response_body": body}
+
+
 def parse_options(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--certificates", required=True)
@@ -894,6 +934,10 @@ def parse_options(argv=None):
     parser.add_argument("--chain", choices=("full", "leaf"), default="full")
     parser.add_argument("--first-light", type=Path, required=True)
     parser.add_argument("--server-version", choices=(OWNED_SERVER_VERSION,))
+    parser.add_argument("--current-request-type-index", type=_uint32_selector)
+    parser.add_argument("--current-response-type-index", type=_uint32_selector)
+    parser.add_argument("--current-response-body")
+    parser.add_argument("--current-response-body-sha256")
     parser.add_argument("--heartbeat-15d", action="store_true")
     parser.add_argument("--self-ident-default", action="store_true")
     parser.add_argument("--self-ident-current-length", action="store_true")
@@ -911,6 +955,19 @@ def parse_options(argv=None):
     resolve_lifetime_options(parser, options, default_seconds=300)
     if not 1 <= options.port <= 65535:
         parser.error("Port 1..65535 required")
+    current_inputs = (options.current_request_type_index, options.current_response_type_index,
+                      options.current_response_body, options.current_response_body_sha256)
+    if any(value is not None for value in current_inputs):
+        if not all(value is not None for value in current_inputs):
+            parser.error("Current registration requires both selectors, private BODY and SHA256")
+        digest = options.current_response_body_sha256.lower()
+        if len(digest) != 64 or any(character not in "0123456789abcdef" for character in digest):
+            parser.error("Current response BODY requires a hexadecimal SHA256")
+        if (options.server_version is not None or options.heartbeat_15d or
+                options.self_ident_default or options.self_ident_current_length or
+                options.spawn_point_notification or options.world_activation or
+                options.player_creation_candidate):
+            parser.error("Current registration profile cannot select historical or actor trial stages")
     if options.self_ident_default and (not options.heartbeat_15d or
                                       options.server_version != OWNED_SERVER_VERSION):
         parser.error("Default actor candidate requires owned version and heartbeat")
@@ -937,6 +994,7 @@ def parse_options(argv=None):
 
 def main(argv=None):
     options = parse_options(argv)
+    current_registration = prepare_current_registration(options)
     from contextlib import nullcontext
     with (UserStop(options.until_stopped) if options.until_stopped else nullcontext()) as stop:
         prepared_creation = None
@@ -965,7 +1023,8 @@ def main(argv=None):
                                           spawn_point_notification=options.spawn_point_notification,
                                           world_activation=options.world_activation,
                                           prepared_creation=prepared_creation,
-                                          user_stop_lifetime=options.until_stopped is not None)
+                                          user_stop_lifetime=options.until_stopped is not None,
+                                          **current_registration)
             Responder(directory, events, port=options.port, chain=options.chain,
                       on_app=adapter.on_app,
                       on_tick=adapter.on_tick if options.heartbeat_15d else None,

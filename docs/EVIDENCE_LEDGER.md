@@ -1,5 +1,18 @@
 # Evidence ledger
 
+## Runnable current registration server — October8, #275
+
+[Receipt](../research/evidence/current-registration-server-cli.json) pins
+8c04430 plus actual dirty code/test identities. Executed local synthetic evidence.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K399 | CLI exposes explicit current registration inputs |All-or-none selectors/private canonical BODY/hash before resources; caller values only |38 new cases, full1928 and actual CLI child |
+| K400 | Local DTLS/Carrier exchange produces exact reply and cached retry |Literal oracle, two rejected inputs, metadata privacy, child/listener cleanup; synthetic selectors/body, no native acceptance |Six controlled challenge groups |
+
+Currentcodec placement/native/auth/world/M1 remainsunproved. Changedwhole-probe
+receipts are historical; exact unchangedcodec/source subclaims remain separate.
+
 ## Driver list and shared buffer table — October7, #274
 
 [Receipt](../research/evidence/current-registration-driver-input-buffers.json)

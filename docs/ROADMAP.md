@@ -1,5 +1,25 @@
 # Milestone 1 roadmap
 
+## Runnable current registration server — October8, #275
+
+[K399–K400](REGISTRATION_ADAPTER_CURRENT.md#runnable-current-server-profile)
+adds an explicit current profile to the loopback CLI: two uint32 selectors and
+private canonical response BODY with exact SHA256. All inputs together; no
+inferred identity/authentication values or actor/trial stage selection. Invalid
+configuration fails before runtime resources. Existing recovered codecs reused.
+
+Executed synthetic pyOpenSSL DTLS/Carrier exchange with pinned FirstLight:
+connect ACK, literal-exact typed reply, identical cached retry, historical-form
+and trailing request rejection; synthetic marker absent from logs/outbound.
+Six challenge groups passed; native acceptance remainsunproved. Child exited0,
+listener closed, ephemeral certificate/BODY files removed. Focused615 and full
+1928Python/50modules/fivePS/ownedloopback passed. New receipt binds17 public and
+16 private artifacts; closure under ignored registration275 primary directory.
+Changed probe/test makes older whole-probe receipts historical; unchanged
+codec/image subclaims retained. ActualCarrier placement, correct runtime type/
+response fields, authentication and playableworld/M1 remainunknown. No client,
+controller, new native grant, upstream change or game endpoint contact.
+
 ## Driver list and shared table — October7, #274
 
 [K396–K398](REGISTRATION_DRIVER_INPUT_BUFFERS.md) pins clean93620b8 and exact
