@@ -1,5 +1,26 @@
 # Agent handoff
 
+## Server protocol focus and #240 queue boundary — October7
+
+- Latest user direction defers new official behavior references and prioritizes
+  replacement-server receive/send work under164. Official videos show normal
+  official gameplay only; native creation trial's single grant remains consumed.
+- K360 [boundary receipt](../research/evidence/current-creation-queue-drain-boundary.json)
+  resolves146ae5adb: aligned caller146b25880 supplies original argument2 when
+  helper returns3 to leaf146ae5ad0, which exchanges byte+344 with1 then tail-jumps
+  known queue drain146abae10. Decompiler omits this argument; exact instructions
+  verify it. Flag/gate semantics and opaque helpers remain unknown.
+- One new backed function and five native windows are sealed. No producer/writer
+  acceptance or candidate/codec change. Cached+a8/stored-stream+58 producers,
+  type8 alias/payload and native outer writer remain the #240 source blocker.
+  Further unchanged scans of this leaf add no evidence. Continue useful server
+  receive decoding from the already proved V3 client sender contract.
+- Static helpers exited without runtime resources. All36 affected catalog/runner
+  cases pass; actual preflight has a ready index and matching new receipt bindings
+  in .scratch/protocol240-boundary-20261008T0027Z. Prior1429-case/48-module workspace,
+  five PowerShell suites and closed loopback lifecycle are reused after exact
+  comparison: only ledger, roadmap and catalog differ among those inputs.
+
 ## #240 supplier follow-up and historical fault read — October7, partial
 
 - [Original follow-up receipt](../research/evidence/current-creation-supplier-followup.json),

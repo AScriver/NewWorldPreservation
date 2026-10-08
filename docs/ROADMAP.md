@@ -1,10 +1,32 @@
 # Milestone 1 roadmap
 
-## Shutdown preservation — official evidence only, October 7
+## Server protocol focus — October 7
 
-This chat continues only #166/workItem164 official-server evidence that becomes
-unavailable January31,2027. The separate chat retains the private-player priority
-below. [Reconciled inventory, missing evidence and friend packet](SHUTDOWN_PRESERVATION.md),
+The user's latest direction defers further official behavior references and
+prioritizes reproducing what the client sends and what a replacement server
+must return, under workItemId164. Current client-derived codecs, private trial
+observations and offline checks support this work; official recordings establish
+only original-game reference behavior. #240's concrete leaf/caller check now
+resolves the former unverified queue reference: argument2 is conditionally
+forwarded through a flag-exchange leaf to the known queue drain (K360,
+[receipt](../research/evidence/current-creation-queue-drain-boundary.json)).
+The cached/stream producer, actual type8 payload and native outer writer remain
+open. No codec or candidate change follows; further unchanged scans of that
+leaf are not the next task. Current Carrier receive/reply inspection found a
+historical registration classifier/88-byte reply, with current physical sender
+placement and response selection still unjoined. Next useful offline work is
+an original server decoder for the proved client V3 sender envelope. The boundary
+checkpoint passes36 affected catalog/runner tests and actual preflight; unchanged
+1429-case workspace, five PowerShell suites and closed loopback lifecycle are
+reused by exact code/test/fixture comparison. Static helpers exited cleanly.
+The existing corrected creation trial still needs its specific next-attempt
+grant; this offline continuation starts no client or new live instrumentation.
+
+## Earlier shutdown preservation — October 7
+
+The earlier #166/workItem164 scope preserved official-server evidence that becomes
+unavailable January31,2027. Those references retain their limited meaning under
+the server-protocol focus above. [Reconciled inventory, missing evidence and friend packet](SHUTDOWN_PRESERVATION.md),
 [sanitized baseline receipt](../research/evidence/shutdown-preservation-20261007.json),
 [new gameplay/return/travel receipt](../research/evidence/official-session-video-20261007.json).
 

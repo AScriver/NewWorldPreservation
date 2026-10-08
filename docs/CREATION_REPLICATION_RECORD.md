@@ -157,8 +157,32 @@ the source slot and increments queue+20. This joins the feeder's downstream
 pointer insertion on normal return, while opaque allocation/resize effects and
 pointee lifetime remain qualified. Direct caller `146a9fe30` is cleanup-shaped;
 its call does not identify the pending-entry producer. Another byte-scan candidate
-at `146ae5adb` lacks a verified function boundary/arguments and remains a candidate.
+at `146ae5adb` initially lacked a verified function boundary/arguments; the next
+checkpoint below resolves that boundary while retaining the producer limit.
 Cached+a8, stored-stream+58, actual type8 payload and native writer remain unjoined.
+
+## Queue-drain boundary — October7, #240
+
+The exact candidate is a tail jump in a16-byte leaf at `146ae5ad0`, without a
+PDATA entry. A single-target direct-reference scan identifies the aligned call
+`146b258b2` in backed function `146b25880`. Exact instructions preserve its
+original argument2 inRCX and call the leaf only when `146adfa20` returns3.
+The leaf exchanges byte+344 with1, then tail-jumps the already joined queue
+drain `146abae10`. The decompiler omits the leaf argument; machine instructions
+establish that data flow. Meaning of the gate and flag remains unknown.
+
+[Original boundary receipt](../research/evidence/current-creation-queue-drain-boundary.json),
+K360, seals the neighboring file windows, actual caller and output hashes at
+7026772 with only ROADMAP/TASK_BRIEFS dirty during the query. One backed Ghidra
+function was queried; no inferred Ghidra function was created for the leaf.
+The earlier hypothetical linear decode alone was insufficient entry proof.
+The initial Capstone import failure occurred before reading the image and was
+repaired using the existing private package; no tools were installed.
+
+This is a conditional queue-drain route, not an identified creation producer.
+Cached+a8/stored-stream+58, actual type8 payload and the native outer writer
+remain open. The candidate, codecs and prior source receipts are unchanged.
+Static helpers exited; no client or runtime resources were acquired.
 
 Remaining #210 joins: native outer writer and enclosing receive/Carrier placement,
 actual runtime mapping/index/fallback choice, exact resend/ACK retirement,

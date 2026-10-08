@@ -1,5 +1,27 @@
 # Bounded task briefs
 
+## #240 — unresolved native caller boundary, October 7 server-protocol continuation (S)
+
+- User refocus: reproduce replacement-server receive/send behavior; defer further
+  official reference collection. Baseline7026772 is clean. WorkItemId164/177/240;
+  preserve prior supplier receipts, codecs/candidate and other-chat edits.
+- Exact source question: does byte-scan site146ae5adb establish a valid call to
+ 146abae10 from an evidenced entry? Reuse prior reviewed functions. Check complete
+  PE/PDATA/chained-unwind identity and only bounded connected instruction windows;
+  an embeddedE8 displacement alone is insufficient. At most two new function
+  queries after ownership is established; no guessed surrounding function.
+- Image: owned179,204,176-byte NewWorld.exe, SHA256
+  `8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e`;
+  mappingSHA256 `f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75`.
+- Own `.scratch/protocol240-boundary-20261008T0027Z/`, original sanitized receipt,
+  focused creation-record/ledger/ROADMAP/handoff/catalog updates. No native game,
+  process access, hooks, capture, endpoint contact, system changes or listeners.
+  Read-only Investigator separately maps Carrier requests/replies without edits.
+- Validate exact native windows, decoder/script/output hashes and checkout drift;
+  retain failed/unresolved routes. Run affected tooling/catalog checks and reuse
+  unchanged full-workspace inputs. Scoped local commit and research handoff/release
+  with all one-shot file-analysis children exited; no creation/gameplay claim.
+
 ## #166 — shutdown-critical official evidence continuation (M coordination)
 
 - October 7 scope: official observations that become unavailable January 31, 2027;

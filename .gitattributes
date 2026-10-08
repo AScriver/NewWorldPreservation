@@ -1,4 +1,5 @@
 # Keep byte-hashed new contract evidence stable across Windows Git checkouts.
+/research/evidence/current-creation-queue-drain-boundary.json text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf
 /tests/test_current_token_contract.py text eol=lf

@@ -32,14 +32,15 @@
     {
       "id": "current-creation-record-supplier-path",
       "roadmapTasks": ["M1-06A"],
-      "claimIds": ["K357", "K358"],
+      "claimIds": ["K357", "K358", "K360"],
       "docs": ["docs/CREATION_REPLICATION_RECORD.md"],
       "scripts": ["scripts/ghidra_function_slice.py"],
       "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
       "fixtures": [],
       "evidence": [
         {"path": "research/evidence/current-creation-record-supplier-path.json", "classification": "source-inference", "scope": "Wrapper pair placement, pending queue routes and cached/default/stream conditional inputs"},
-        {"path": "research/evidence/current-creation-supplier-followup.json", "classification": "source-inference", "scope": "Two-function downstream pointer insertion/caller follow-up; producer and other candidate boundary remain unjoined"}
+        {"path": "research/evidence/current-creation-supplier-followup.json", "classification": "source-inference", "scope": "Historical two-function downstream pointer insertion/caller follow-up; producer unjoined and another candidate then unverified"},
+        {"path": "research/evidence/current-creation-queue-drain-boundary.json", "classification": "source-inference", "scope": "Exact leaf entry established by an aligned direct caller; conditional argument/flag/tail-jump route, no producer/writer join"}
       ],
       "limit": "Static partial source checkpoint. Lower byte helpers/direction, concrete type8 alias, actual payload producer and native outer writer remain unjoined. No candidate/codec/native acceptance."
     },
@@ -1939,6 +1940,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-creation-queue-drain-boundary.json",
     "research/evidence/official-session-video-20261007.json",
     "research/evidence/official-session-loot-comparison-20261007.json",
     "research/evidence/shutdown-preservation-20261007.json",

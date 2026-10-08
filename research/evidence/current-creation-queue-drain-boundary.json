@@ -1,0 +1,294 @@
+{
+  "schema": 1,
+  "classification": "original-bounded-evidence-checkpoint",
+  "status": "partial",
+  "recordedUtc": "2026-10-08T00:42:28.077040+00:00",
+  "workItemId": 164,
+  "sourceActionableIds": [
+    240
+  ],
+  "claimIds": [
+    "K360"
+  ],
+  "input": {
+    "head": "7026772b920f1e6aff77f85ff5eabc8553cf9150",
+    "queryGitStatus": " M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n",
+    "recordingGitStatus": " M docs/AGENT_HANDOFF.md\n M docs/CREATION_REPLICATION_RECORD.md\n M docs/EVIDENCE_LEDGER.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "unchangedHistoricalBindings": [
+      {
+        "path": "research/evidence/current-creation-supplier-followup.json",
+        "bytes": 11874,
+        "sha256": "a3b3ca2128173d50b5ea3fc8558cd75b1d753bcd5d9a041c766a35dba532d120",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "8c6f6672358180f795aedf312e137a2eb9d8f223"
+      },
+      {
+        "path": "research/evidence/current-creation-record-supplier-path.json",
+        "bytes": 24047,
+        "sha256": "cd7b920109b92c2291901ccf7bc7826a0fbcb6531e8e768126b93d946dde03ba",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "157fbff6c6d2ee8853a01525a5f559c89b3e26f0"
+      },
+      {
+        "path": "research/evidence/current-creation-record-publication-inputs.json",
+        "bytes": 10984,
+        "sha256": "a6c11e083dd77b223fb8f521378ee0c3d391ed6387fa1b8c85778d6a6cf2657c",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "868f7442dfeb24fc83061575c122dd280af1ccf1"
+      },
+      {
+        "path": "research/evidence/current-player-creation-candidate.json",
+        "bytes": 9509,
+        "sha256": "b5da087e282e7648ec311fca32715302ca7f08e868810e8aed8e104255b90f65",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "ffca25b1a75aa72937141967925a6e535b65ee49"
+      },
+      {
+        "path": "scripts/current_player_creation_candidate.py",
+        "bytes": 3509,
+        "sha256": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "92a14d7f032111332009b99504f64b23fc55d92a"
+      },
+      {
+        "path": "scripts/current_creation_replication_record.py",
+        "bytes": 7119,
+        "sha256": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "dbd5d41ff7b50ee26772501057c847554355e061"
+      },
+      {
+        "path": "scripts/carrier_registration_probe.py",
+        "bytes": 49882,
+        "sha256": "7d943eaffb29e9989217909faa50ccb1a83a3306bb1787fc96560ddd5ae2d816",
+        "gitCleanBlobUnchanged": true,
+        "gitBlob": "1564d534f80e964f3ff7a3669b97c00148d0cf6c"
+      }
+    ]
+  },
+  "sourceInference": {
+    "claimId": "K360",
+    "classification": "strongly-source-supported",
+    "finding": "The formerly unaligned146ae5adb candidate is the tail jump in a16-byte leaf at146ae5ad0. Verified direct caller146b25880 forwards original argument2 only when146adfa20 returns3; the leaf exchanges byte+344 with1 then tail-jumps the known queue drain146abae10.",
+    "instructionRefs": [
+      "146b2589c",
+      "146b258a2",
+      "146b258a5",
+      "146b258aa",
+      "146b258ad",
+      "146b258b0",
+      "146b258b2",
+      "146ae5ad0",
+      "146ae5ad5",
+      "146ae5adb"
+    ],
+    "limits": [
+      "The16-byte leaf has no PDATA entry; entry evidence comes from its aligned direct caller, not an inferred Ghidra function.",
+      "Gate value3, byte+344 meaning and indirect callee/notification roles are unknown. Argument identity is machine data flow, not recovered C type.",
+      "Only selected direct call/jump/LEA and aligned data pointers to this exact leaf were searched. No absence claim about indirect or inlined routes.",
+      "The established queue-drain edge does not identify pending-entry cached+a8/stored-stream+58 producers, type8 payload or native outer slot/count writer."
+    ],
+    "counterevidence": [
+      "Candidate is a tail jump rather than CALL; hypothetical decoding from neighboring range end was insufficient entry proof.",
+      "Decompiler omits the leaf call argument; exact instructions preserve original argument2 inRCX.",
+      "Selected caller includes owner notifications/reference maintenance, but opaque helper semantics prevent labeling this as the missing producer."
+    ],
+    "nativeWindows": [
+      {
+        "start": "0x146ae5a1f",
+        "endExclusive": "0x146ae5ae0",
+        "bytes": 193,
+        "sha256": "ce3b880d422b0452f9c0041784a19f50c69c72974dc92a791bd955636e06a9d1"
+      },
+      {
+        "start": "0x146ae5720",
+        "endExclusive": "0x146ae5a1f",
+        "bytes": 767,
+        "sha256": "18ee1fa3e1e9d01229e618873afa72381aef233bdfa77b0fbf9bd427105f0673"
+      },
+      {
+        "start": "0x146ae5ae0",
+        "endExclusive": "0x146ae5ba1",
+        "bytes": 193,
+        "sha256": "acc3db34c74e476cb122aaf8e5edf1c0785d76cbe360bd4fa30397e31fd237da"
+      },
+      {
+        "start": "0x146ae5ad0",
+        "endExclusive": "0x146ae5ae0",
+        "bytes": 16,
+        "sha256": "af9673a0c10a0bfd61be00e467a56c951856415a8eb6796b6ce3cbc303cd11b0"
+      },
+      {
+        "start": "0x146b25880",
+        "endExclusive": "0x146b25bb5",
+        "bytes": 821,
+        "sha256": "3d6b3f6676f54c7274ea41520de3c397ecb1362d19c928ffd634dae52f0942a6"
+      }
+    ],
+    "primarySeal": {
+      "allNativeSpansMatch": true,
+      "imageAndMappingMatch": true,
+      "instructionCoverageComplete": true,
+      "outputHashesMatch": true
+    },
+    "tools": {
+      "capstone": {
+        "capstone": "5.0.7",
+        "modulePath": "C:\\Code\\NewWorldPreservation\\.scratch\\inspection-tools\\capstone\\__init__.py",
+        "moduleSha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
+        "libraryPath": "C:\\Code\\NewWorldPreservation\\.scratch\\inspection-tools\\capstone\\lib\\capstone.dll",
+        "librarySha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+      },
+      "callerQuery": {
+        "ghidra": "12.1.4",
+        "pyghidra": "3.1.0"
+      },
+      "automaticAnalysis": false,
+      "functionsQueried": 1,
+      "overlappingGlobalWarnings": 1
+    }
+  },
+  "failedMethods": [
+    {
+      "observedUtc": "2026-10-08T00:28:33Z",
+      "status": "failed-before-query",
+      "reason": "Shared tool Python does not include capstone in its default search path",
+      "error": "ModuleNotFoundError: No module named capstone",
+      "sourceImageRead": false,
+      "analysisOutputsWritten": false,
+      "repair": "Reuse the existing pinned Capstone5.0.7 package in ignored inspection-tools, as in prior extractor; record module/library hashes. No installation or shared environment change."
+    },
+    {
+      "observedUtc": "2026-10-08T00:41:54Z",
+      "status": "failed-primary-seal-before-public-receipt",
+      "reason": "Raw git show blob versus working file comparison ignores checkout EOL conversion",
+      "error": "AssertionError in unchanged historical-file check; native spans and output checks had passed",
+      "sourceImageRead": true,
+      "analysisOutputsWritten": false,
+      "repair": "Compare Git clean-filtered file object to the pinned HEAD blob, retaining separate actual disk SHA256 bindings. No source or candidate changes."
+    }
+  ],
+  "priorWorkspaceReuse": {
+    "receipt": {
+      "path": ".scratch/offline-validation/run-yph5ma7e/receipt.json",
+      "bytes": 51509,
+      "sha256": "f92982b6a851b27af7b06b0a5bac4e47cfc1e8e40643c0c4b17b428996037b40"
+    },
+    "finishedAtUtc": "2026-10-07T22:06:07.559103+00:00",
+    "pythonPassed": 1429,
+    "selectedModules": 48,
+    "powershellSuites": 5,
+    "cliLifecycle": "passed and closed",
+    "inputDelta": [
+      "docs/EVIDENCE_LEDGER.md",
+      "docs/ROADMAP.md",
+      "research/agent-evidence-index.json"
+    ],
+    "limit": "Reuse unchanged scripts/tests/fixtures/lifecycle; affected catalog tests/preflight are checked separately."
+  },
+  "publicSourceBindings": [
+    {
+      "path": "scripts/ghidra_function_slice.py",
+      "bytes": 15114,
+      "sha256": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341"
+    }
+  ],
+  "privateMetadata": [
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/attempts.json",
+      "bytes": 1102,
+      "sha256": "95234bfaf446f53ab857db07f25fed5bccdf06c3eb43b4682cce34eb9f23fe50"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/caller-output/function-146b25880.c",
+      "bytes": 5749,
+      "sha256": "755308a4ee9b3311fb5e0aa358e2aa4b35d5d4541256140be9072f5e70d34617"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/caller-output/receipt.json",
+      "bytes": 1101,
+      "sha256": "67b6f2c8c0ac05601c2a23c9030b115a886059f301c27b09c7c1c0d8a2859d61"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Inspect-Boundary.ps1",
+      "bytes": 461,
+      "sha256": "b0a90f2957f71a17220aff7606e15dd05757cfe557381e5ca382cf1298cecb94"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Inspect-Boundary.py",
+      "bytes": 7048,
+      "sha256": "771ec7abc8815fabf6b05dabc315ce0c9dcf51d1f88828de8cc4c97aaaa4fc85"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Inspect-LeafReferences.ps1",
+      "bytes": 460,
+      "sha256": "c03fac7716012a6c837642c90ccb1e7225db886dd8423a59730046bb73b6a037"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Inspect-LeafReferences.py",
+      "bytes": 6062,
+      "sha256": "a0336bf42aa4f83791c6b7512e652b5709c0947519a87eb0bea5a6b9bc218293"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/boundary.json",
+      "bytes": 3981,
+      "sha256": "a818371ff82c150b593ba9466814b4fa6a92e284784a4981f14c44b6237bccaf"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/gap-window.txt",
+      "bytes": 2076,
+      "sha256": "3bf08fead07013510292705ebe392a07b3da6f45d3b595fcf923651304368065"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/leaf-owner-146b25880.txt",
+      "bytes": 8448,
+      "sha256": "c2b2c06b9336da53c5f6824184256fad74b62905aa146628f74720368bd2b60f"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/leaf-xrefs.json",
+      "bytes": 1698,
+      "sha256": "684a68658fcefb334509f14959bf3390e759bcb5aebb7b8b27459872de3acaed"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/neighbor-146ae5720.txt",
+      "bytes": 7775,
+      "sha256": "89a7a4970f3efa82aefb6dcc85415dffc9471b41e573e5805bf4a13fa2c1cb6c"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/output/neighbor-146ae5ae0.txt",
+      "bytes": 2005,
+      "sha256": "faee224ea52f356185231ca7858bfccd2b5efe1241fe96281176b998c07fc5d5"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Query-Caller.ps1",
+      "bytes": 864,
+      "sha256": "0b837966be65ba544776ee08b8fb18d01f140329d0f46d84cf92283ae0da40f1"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Seal.ps1",
+      "bytes": 425,
+      "sha256": "eb0396ea3bd2582c7e395fd779ccb5e809d7b0b3e0c7b8fd34522b5180672f36"
+    },
+    {
+      "path": ".scratch/protocol240-boundary-20261008T0027Z/Seal.py",
+      "bytes": 9133,
+      "sha256": "b86f9bd0324252a65c3eda592f28ca2960ed5df5a18dfe522effed3b9560d195"
+    }
+  ],
+  "cleanup": {
+    "staticHelpersExited": true,
+    "runtimeResourcesAcquired": false,
+    "clientLaunched": false,
+    "processMemoryRead": false,
+    "hooksChanged": false,
+    "networkUsed": false,
+    "privateArtifactsRetained": true
+  },
+  "limits": [
+    "Original metadata and conclusions only; raw native instructions/decompilation remain ignored.",
+    "Native producer/writer acceptance is still partial; no codec/candidate/live-trial change or Milestone1 claim."
+  ]
+}

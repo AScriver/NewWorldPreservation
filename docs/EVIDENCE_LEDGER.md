@@ -1,5 +1,15 @@
 # Evidence ledger
 
+## Queue-drain boundary — October7, #240, partial
+
+[Original receipt](../research/evidence/current-creation-queue-drain-boundary.json)
+pins current image/map, five native windows and one backed caller query at7026772
+with ROADMAP/TASK_BRIEFS dirty. Prior receipts and original candidate stay unchanged.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K360 | Exact direct caller establishes the former scan candidate as a leaf tail jump to the known queue drain | Strongly source-supported: original argument2 forwarded when helper returns3, byte+344 exchanged with1. Gate/flag semantics and opaque helpers unknown. No cached/stream producer, type8 payload or native outer writer join; no runtime observation | [Instruction and entry limits](CREATION_REPLICATION_RECORD.md#queue-drain-boundary--october7-240); PDATA caller, complete decode and exact span/output seals |
+
 ## Supplier follow-up and existing fault metadata — October7, partial
 
 [Original receipt](../research/evidence/current-creation-supplier-followup.json)
