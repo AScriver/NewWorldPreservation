@@ -1,5 +1,27 @@
 # Bounded task briefs
 
+## #214 — current registration and fresh-player native observation (M, partial)
+
+- Input: clean291cee63, prepared082904e8/approved19f85039,156 unchanged inputs,
+  exact107B original candidate6c02da12/character43a01d0e, current19/3/zeroBODY.
+  Human October8 one-attempt grant consumed; no second launch.
+- Owner: primary exclusively owns run2112-current-player, native Job/controller/
+  dispatch/three services,443/64003, hosts/copy locks and eleven program rules.
+  Adversary reads only fixed evidence and writes its ignored review; no live
+  resource mutation or added observer. Public changes are original metadata/docs.
+- Outcome: current six-stage sends/ACKs and six admitted callback samples,
+  user-reported selection return/spawn timeout. Native creation/designation and
+  later async readiness remain unread; five-minute control acceptance unfulfilled.
+- Lifetime: no elapsed cutoff/primary stop script. Existing idle/service failure
+  caused retained game teardown. Controller plus independent cleanup passed.
+- Validation: all156 before/after,44 retained sources, canonical candidate,
+  fixed metadata/source criteria/human limits and exact resource readback.
+  Reuse unchanged2059/fivePS runtime checks; fresh evidence/catalog/preflight,
+  adversarial review, staged hygiene, local commit and tracker claim release.
+- Handoff: source-supported async context→type8 dispatch/application boundary;
+  no guessed timing change. Closed attempt requires no user action. Another
+  native run needs a concrete reviewed proposal and separate specific grant.
+
 ## #286 — integrate current registration and original fresh-player candidate (M)
 
 - Baseline clean main40cee5f; current runtime/test and156 private bindings pinned
@@ -15,8 +37,9 @@
 - Rejection: incomplete/stale/mismatched inputs, missing stage, wrong occupancy/
   class/mode, multi-peer reuse, repeated candidate send or timer-as-readiness claim.
 - Cleanup: exact synthetic children/ports/certs released; private records and
-  receipts retained. No native resources acquired. Next user action is a specific
-  one-attempt grant for the [prepared scope](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md).
+  receipts retained. No native resources acquired by this offline unit. The
+  later admitted [native attempt](CURRENT_REGISTRATION_PLAYER_TRIAL.md) is closed
+  above; it supplied no playable-player acceptance or further native grant.
 
 ## #214 — one admitted current registration/map observation (M, partial)
 

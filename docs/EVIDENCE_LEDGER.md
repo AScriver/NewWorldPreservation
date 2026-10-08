@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current registration/fresh-player attempt — October8, #214, partial
+
+[Receipt](../research/evidence/current-registration-player-trial.json) pins clean
+291cee63,156 unchanged bindings,44 retained sources and exact private diagnostics.
+
+| ID | Claim | Evidence and limits |
+| --- | --- | --- |
+| K441 | Current bootstrap and original107B creation candidate were sent once and ACK-covered |Six sends/envelopes4/7/12/17/22/27, creation record/reliable14,1.027s after empty bundle;238 matched echoes. Observed transport metadata plus source-bound canonical input; native decoding/application unobserved |
+| K442 | Existing guarded callbacks again latch immediate context activation |Six samples: self true, pending false→true→false, activation true; immediate readiness false. Later async completion unread, non-atomic samples and ephemeral tag only. Missing-context marker precedes creation and cannot prove its rejection |
+| K443 | User reports selection return and spawn timeout after Play |Loading/black/alternate loading/apparent partial map→selection UI; exact Connection Error: Timed out while waiting for server to spawn the player. Human report without agent screen/footage; no controllable player or stable world entry |
+| K444 | Later idle/service failure closes the retained game with verified cleanup |Peer idle_deadline→owned_peer_closed→controller stop/Job teardown; no elapsed cutoff or primary stop script. Independent exact owners/ports/11rules bothstores/hosts/images/signatures/Root1 passed; gameplay cause unknown, no native crash diagnosis |
+
+The grant is consumed. Current actor construction/designation, async readiness,
+camera/input, movement/restart and authentication remain separate unproved
+conditions. #214 and aggregate acceptance stay partial.
+
 ## Current registration/fresh player integration — October8, #286
 
 [Receipt](../research/evidence/current-registration-player-integration.json) pins

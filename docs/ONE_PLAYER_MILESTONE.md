@@ -39,8 +39,12 @@ October8's later [current-registration/map attempt](CURRENT_REGISTRATION_BOOTSTR
 reached native response receipt and self/LevelInfo/context activation, then the
 user reported a spawn timeout. Creation was omitted and later async readiness
 was unread. The [#286 integration](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md)
-now prepares the original fresh candidate on that route; native acceptance
-remains unperformed and requires its own specific one-attempt grant.
+prepared the original fresh candidate on that route. The subsequent separately
+admitted [107-byte native attempt](CURRENT_REGISTRATION_PLAYER_TRIAL.md) sent
+and ACK-covered that candidate once, but the user again reported selection
+return and player-spawn timeout. Native creation/application, designation and
+later async readiness remain unread. That grant is consumed; conditions2–5
+remain unfulfilled and no further launch follows from the result.
 
 ## Furthest real-client behavior
 

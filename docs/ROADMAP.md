@@ -1,5 +1,27 @@
 # Milestone 1 roadmap
 
+## Current registration/fresh-player attempt — October8, #214, partial
+
+[K441–K444](CURRENT_REGISTRATION_PLAYER_TRIAL.md): the admitted clean291cee63
+attempt sent the exact107-byte fresh candidate once after the current bootstrap.
+All156 bindings remained unchanged and all six send envelopes were ACK-covered;
+238 heartbeat echoes matched. Existing callbacks again latched context activation,
+with readiness false only at the immediate return. Later asynchronous readiness
+and native creation/application/designation remain unread.
+
+The user reported loading/apparent partial map→selection and a player-spawn
+timeout. No controllable player was established. The missing-context bundle
+marker precedes creation, so it cannot demonstrate rejection of that candidate.
+The subsequent peer idle/service failure closed the owned game; exact cleanup
+and independent readback passed. The grant is consumed, with no second launch.
+
+Next source question: asynchronous map/context handoff into type8 dispatch and
+creation/application, retaining class/resource/identity/designation uncertainty.
+No guessed delay or packet fix follows from this result. Runtime/tests are
+unchanged from full2059/fivePS validation; fresh affected evidence checks apply.
+The replacement-server milestone remains open; no user action is pending for
+the closed attempt.
+
 ## Current registration and fresh player integration — October8, #286
 
 [K438–K440](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md) connects explicit current
@@ -17,8 +39,9 @@ no native client or system resources were started. Complete workspace verificati
 and scoped review are recorded in the integration receipt. Native key9 delivery,
 resource loading, effective identity override, asynchronous map readiness,
 designation, camera/input and movement remain unproved. The next concrete step
-is one specifically approved isolated-client creation attempt with user-stop
-lifetime. Previous grants are consumed; this integration grants no new launch.
+was one specifically approved isolated-client creation attempt with user-stop
+lifetime. That subsequent attempt is closed above; this integration itself
+granted no new launch or gameplay acceptance.
 
 ## Current registration/map attempt — October8, #214, partial
 

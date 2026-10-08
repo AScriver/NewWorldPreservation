@@ -1,5 +1,25 @@
 # Agent handoff
 
+## Closed current registration/fresh-player attempt — October8, #214, partial
+
+- Clean main291cee63; user-approved one attempt, now consumed. Reused verified
+  owned copy;156 bindings unchanged;44 executed sources retained privately.
+  [K441–K444](CURRENT_REGISTRATION_PLAYER_TRIAL.md) and original receipt pin inputs.
+- Current bootstrap plus fresh107B candidate sent once; six envelopes ACK-covered,
+ 238 matched echoes. Actual six guarded callback samples end immediate readiness
+ false/activation true. Later async readiness/creation/designation remain unread.
+- Human loading/apparent map→selection/player-spawn timeout report establishes
+ no controllable player. Missing-context marker22:09:41.021 precedes creation
+42.017; do not claim it rejected the new candidate or guess a longer delay fix.
+- DTLS idle/service failure triggered controller-owned stop/Job teardown. No
+ elapsed client cutoff/primary stop script. Independent22:12:54 readback passed
+ exact owners/ports/11rules bothstores/hosts/images/signatures/app/build/Root1.
+ Steam metadata differs from old stage; cause/timing unknown. All resources closed.
+- Runtime/tests unchanged; reuse full2059/52modules/fivePS/closedloopback,
+ validate new evidence/catalog/preflight/review/hygiene. Next owner is agent for
+ source-supported async context handoff and type8 creation/application boundary.
+ No user action or additional native launch is authorized for this closed run.
+
 ## Current registration/fresh player integration — October8, #286
 
 - Slice: existing original creation/identity candidate now composes with the
@@ -14,10 +34,10 @@
   selected input-admission checks and canonical verifiers passed with child starts
   captured. No native resource block ran. Retain private preparation/diagnostics;
   all old proposals and consumed runs remain unchanged.
-- Next owner: user for a new specific one-attempt grant and manual Play/control
-  report. [Prepared scope](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md). Existing
-  CA expires October9 at18:58:22UTC; recheck validity/bindings before admission.
-  Agent can continue authorized source-supported work separately.
+- The subsequent specifically approved attempt is now closed above with a
+  spawn timeout; its grant is consumed. [Original prepared scope](CURRENT_REGISTRATION_PLAYER_INTEGRATION.md).
+  Existing CA expires October9 at18:58:22UTC; any future admitted run must recheck
+  validity/bindings. Agent can continue authorized source-supported work separately.
 - Limits: key9/class-table/resource loading, effective provider override,
   async readiness, player designation, camera/input and movement remain unproved.
   No extra observation site or claimed gameplay completion. Full server replacement

@@ -68,7 +68,7 @@ PSScriptRoot. Its test now supplies the original controller directory through a
 task variable; production admission expressions were unchanged. Retain this
 failed check and its correction with the private verification output.
 
-## Prepared next client experiment
+## Prepared proposal and subsequent native attempt
 
 `private/frida-trials/run-20261008T2112-current-player` contains a new original
 private record,107-byte candidate and156 unique bindings. Manifest SHA256:
@@ -84,8 +84,9 @@ October9 at18:58:22UTC; recheck its validity and all bindings before admission.
 The proposed lifetime is user-stop with no elapsed cutoff, retaining genuine
 startup/transport/owner failure controls and exact cleanup. The previous grants
 are consumed. [AGENTS](../AGENTS.md) requires a new specific single-attempt grant;
-this preparation adds no native permission. After approval and launch, the user
-selects **Play**, reports whether a player appears, and tests ordinary camera,
-movement/turn/stop if controls work. A timeout, return to selection, sent payload
-or ACK is preserved as its own result. Restart reproducibility remains a separate
-subsequent acceptance step; one grant never authorizes multiple attempts.
+this preparation added no native permission. A later specific October8 grant
+admitted one attempt, now [closed with a spawn timeout](CURRENT_REGISTRATION_PLAYER_TRIAL.md).
+The candidate was sent once and ACK-covered; user-reported selection return
+established no controllable player. Native dispatch/application and async
+context readiness remain separate source questions. Restart reproducibility
+also remains unproved; the consumed grant authorizes no further attempt.

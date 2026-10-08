@@ -1,0 +1,648 @@
+{
+  "schema": 1,
+  "classification": "observed-metadata",
+  "mode": "owned-private-current-registration-player-trial",
+  "status": "closed-partial",
+  "workItemId": 164,
+  "actionableId": 214,
+  "parentActionableId": 179,
+  "claimIds": [
+    "K441",
+    "K442",
+    "K443",
+    "K444"
+  ],
+  "recordedUtc": "2026-10-08T22:19:57.962018+00:00",
+  "input": {
+    "head": "291cee63d21294da63019f1f2766f9984b1e1e2d",
+    "trackedDirtyAtLaunch": [],
+    "ownedImageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "frida": "17.22.0",
+    "firstLightHead": "63756a3f7ff0ae41752dcc7c80267802c3fa7548",
+    "selectors": {
+      "request": 19,
+      "response": 3,
+      "exactIncomingWireTypeProven": false
+    },
+    "bodyBytes": 18,
+    "bodySha256": "60daa3a5f7dbfa200f8c82840ecf5b42640b70f3b7218a4c6bbd67db542e75a4",
+    "bodyValues": "original canonical zero BODY; field_38 empty",
+    "bodyNativeSuitability": "supported only by progress on this admitted route; authentication/semantic suitability unknown",
+    "serverVersion": "guard metadata only; never injected into BODY",
+    "playerCreationCandidate": true,
+    "preparedManifestSha256": "082904e8141f2f239c7584c3279db70ab677c9e36005c31b0e0d7e68d48299e9",
+    "approvedManifestSha256": "19f85039709aee96a34fbcb45aa2b395ebf8e3382aaae3975d1ea53511efaa44",
+    "approvalMetadataOnlyChanged": true,
+    "boundFiles": 156,
+    "allBoundFilesUnchangedAfterRun": true,
+    "lifetime": "user-stop without elapsed client cutoff; existing protocol idle failure remains terminal",
+    "candidateTypedBytes": 107,
+    "candidateSha256": "6c02da121095bd0e5fa938db66a635ed25a3fbf4722063d2eb81bae6b9607310",
+    "characterSha256": "43a01d0e785cf45a55f0f4112b737e07fc95172f2eac8e690645be4f771cc7ab",
+    "deliveryMode": "resource-index",
+    "knownEmptyOccupancy": true
+  },
+  "authorization": {
+    "answer": "Approve this one trial",
+    "singleAttemptConsumed": true,
+    "humanGrantReceivedUtc": "2026-10-08T22:03:44Z",
+    "existingThreeSiteSevenBooleanObserver": true,
+    "noExtraObservationSites": true,
+    "noOfficialEndpointTrafficAuthorized": true,
+    "exactOriginalCreationCandidateAdmitted": true,
+    "noSecondLaunchAuthorized": true
+  },
+  "transport": {
+    "eventCounts": {
+      "DTLS_PROBE_LISTENING": 1,
+      "DTLS_PEER_OPENED": 1,
+      "DTLS_DATAGRAM_RECEIVED": 1204,
+      "DTLS_HANDSHAKE_STATE": 13,
+      "DTLS_SNI": 1,
+      "DTLS_SERVER_OUTPUT": 547,
+      "DTLS_HANDSHAKE_ESTABLISHED": 1,
+      "DTLS_APPLICATION_DISCARDED": 1200,
+      "CARRIER_PARSED": 1200,
+      "CARRIER_RECORD": 1443,
+      "CONNECT_ACK_SENT": 2,
+      "CARRIER_DECOMPRESSED": 239,
+      "CLIENT_CARRIER_ACK_RANGE": 484,
+      "CLIENT_DATA_AFTER_CONNECT_ACK": 1,
+      "REGISTRATION_SCHEMA_RESULT": 1,
+      "V3_CANDIDATE": 1,
+      "V3_PARSER_RESULT": 1,
+      "V3_RESPONSE_SENT": 1,
+      "HEARTBEAT_15D_SENT": 298,
+      "POST_REGISTRATION_CLIENT_DATA": 1,
+      "HEARTBEAT_15D_ACK": 238,
+      "CARRIER_ACK_SENT": 239,
+      "SELF_IDENT_DEFAULT_SENT": 1,
+      "SPAWN_POINT_NOTIFICATION_SENT": 1,
+      "LEVEL_INFO_CANDIDATE_SENT": 1,
+      "EMPTY_STATE_BUNDLE_SENT": 1,
+      "PLAYER_CREATION_CANDIDATE_SENT": 1,
+      "DTLS_SOCKET_FAILURE": 58,
+      "DTLS_PEER_CLOSED": 1,
+      "DTLS_PROBE_FAILURE": 1,
+      "DTLS_PROBE_STOPPED": 1
+    },
+    "handshakesEstablished": 1,
+    "physicalRequestBytes": 860,
+    "parseMode": "current_physical",
+    "normalization": "raw",
+    "requestTypeUnproved": true,
+    "responseSent": 1,
+    "responseBodyBytes": 18,
+    "responseTypeIndex": 3,
+    "heartbeatsSent": 298,
+    "matchedHeartbeatAcks": 238,
+    "sends": [
+      {
+        "state": "V3_RESPONSE_SENT",
+        "timestamp_utc": "2026-10-08T22:09:36.893Z",
+        "envelope_sequence": 4,
+        "record_sequence": 0,
+        "reliable_sequence": 0,
+        "typed_bytes": 22,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:36.893Z"
+      },
+      {
+        "state": "SELF_IDENT_DEFAULT_SENT",
+        "timestamp_utc": "2026-10-08T22:09:37.912Z",
+        "envelope_sequence": 7,
+        "record_sequence": 2,
+        "reliable_sequence": 2,
+        "typed_bytes": 131,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:37.915Z"
+      },
+      {
+        "state": "SPAWN_POINT_NOTIFICATION_SENT",
+        "timestamp_utc": "2026-10-08T22:09:38.939Z",
+        "envelope_sequence": 12,
+        "record_sequence": 5,
+        "reliable_sequence": 5,
+        "typed_bytes": 4,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:38.942Z"
+      },
+      {
+        "state": "LEVEL_INFO_CANDIDATE_SENT",
+        "timestamp_utc": "2026-10-08T22:09:39.964Z",
+        "envelope_sequence": 17,
+        "record_sequence": 8,
+        "reliable_sequence": 8,
+        "typed_bytes": 63,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:39.966Z"
+      },
+      {
+        "state": "EMPTY_STATE_BUNDLE_SENT",
+        "timestamp_utc": "2026-10-08T22:09:40.990Z",
+        "envelope_sequence": 22,
+        "record_sequence": 11,
+        "reliable_sequence": 11,
+        "typed_bytes": 9,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:40.994Z"
+      },
+      {
+        "state": "PLAYER_CREATION_CANDIDATE_SENT",
+        "timestamp_utc": "2026-10-08T22:09:42.017Z",
+        "envelope_sequence": 27,
+        "record_sequence": 14,
+        "reliable_sequence": 14,
+        "typed_bytes": 107,
+        "client_ack_range_covers_envelope": true,
+        "first_cover_utc": "2026-10-08T22:09:42.020Z"
+      }
+    ],
+    "authenticationProven": false,
+    "candidateAttempts": 1,
+    "candidateSentTypedBytes": 107,
+    "candidateAfterEmptyBundleSeconds": 1.027,
+    "nativeCreationOrDesignationObserved": false,
+    "candidateWireBytesCaptured": false
+  },
+  "contextObserver": {
+    "eventCount": 6,
+    "eventCap": 96,
+    "events": [
+      {
+        "event": "context_gate",
+        "time_ns": 1791497377915785700,
+        "site": "self_identification",
+        "phase": "entry",
+        "port_tag": 1,
+        "self_identified": false,
+        "activation_latched": false,
+        "context_ready": false,
+        "level_pending": false,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      },
+      {
+        "event": "context_gate",
+        "time_ns": 1791497377915785700,
+        "site": "self_identification",
+        "phase": "return",
+        "port_tag": 1,
+        "self_identified": true,
+        "activation_latched": false,
+        "context_ready": false,
+        "level_pending": false,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      },
+      {
+        "event": "context_gate",
+        "time_ns": 1791497379967271700,
+        "site": "level_info",
+        "phase": "entry",
+        "port_tag": 1,
+        "self_identified": true,
+        "activation_latched": false,
+        "context_ready": false,
+        "level_pending": false,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      },
+      {
+        "event": "context_gate",
+        "time_ns": 1791497379967271700,
+        "site": "level_info",
+        "phase": "return",
+        "port_tag": 1,
+        "self_identified": true,
+        "activation_latched": false,
+        "context_ready": false,
+        "level_pending": true,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      },
+      {
+        "event": "context_gate",
+        "time_ns": 1791497381001049000,
+        "site": "context_load",
+        "phase": "entry",
+        "port_tag": 1,
+        "self_identified": true,
+        "activation_latched": false,
+        "context_ready": false,
+        "level_pending": true,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      },
+      {
+        "event": "context_gate",
+        "time_ns": 1791497381021577300,
+        "site": "context_load",
+        "phase": "return",
+        "port_tag": 1,
+        "self_identified": true,
+        "activation_latched": true,
+        "context_ready": false,
+        "level_pending": false,
+        "jav_context_present": true,
+        "client_sdk_present": true,
+        "game_present": true
+      }
+    ],
+    "laterAsynchronousReadinessObserved": false,
+    "samplesAreAtomic": false,
+    "observerTimestampIdentity": "host receipt time, not an in-process event clock",
+    "portTagLimit": "ephemeral tag correlates within this run; no allocation-generation identity"
+  },
+  "ownedLog": {
+    "markerCounts": {
+      "REGISTRATION_RESPONSE_RECEIVED": 1,
+      "ACTOR_CONNECTION_START": 1,
+      "ACTOR_CONNECTION_SUCCEEDS": 1,
+      "LEVEL_INFO_CHANGED": 2,
+      "CONTEXT_INITIALIZE_CALL": 1,
+      "CLIENT_CONTEXT_INITIALIZE": 1,
+      "BUNDLE_WITHOUT_CONTEXT": 1
+    },
+    "sourceReadSha256": "96a64264ffad4e3efa0df1b18a2539c73b56f23393076fdb52bbed20291ce492",
+    "sourceStableDuringRead": true,
+    "rawLinesExported": false,
+    "credentialBearingLinesDiscarded": true,
+    "attributionLimit": "Common owned log; numeric times correlate with this exclusive trial. A filtered absence is not global absence.",
+    "bundleWithoutContextMarkerUtc": "2026-10-08T22:09:41.021Z",
+    "bundleMarkerPrecedesCreation": true,
+    "bundleMarkerCannotBeAttributedToCreationRejection": true
+  },
+  "visualReport": {
+    "source": "human reports in this chat; no agent direct screen observation or footage",
+    "sequence": "loading, black, different loading, apparent partial map, return to character selection and UI",
+    "finalError": "Connection Error: Timed out while waiting for server to spawn the player.",
+    "receivedTimesAreNotVisualEventTimes": true,
+    "manualUserCloseAsserted": false,
+    "stableWorldEntryProven": false,
+    "controllablePlayerProven": false
+  },
+  "termination": {
+    "firstReceiveResetUtc": "2026-10-08T22:11:40.520Z",
+    "receiveResetCount": 58,
+    "receiveResetPeerAttributed": false,
+    "peerCloseReason": "idle_deadline",
+    "peerClosedUtc": "2026-10-08T22:12:09.613Z",
+    "responderExitReason": "owned_peer_closed",
+    "controllerFailure": {
+      "line": 333,
+      "message": "Service exited during trial.",
+      "type": "RuntimeException"
+    },
+    "gameJobClosedByControllerStop": true,
+    "agentStopScriptExecuted": false,
+    "elapsedClientCutoffUsed": false,
+    "originalGameplayFailureCause": "not determined by later transport/cleanup outcome",
+    "lastClientDatagramUtc": "2026-10-08T22:11:39.586Z",
+    "responderFailureUtc": "2026-10-08T22:12:09.613Z"
+  },
+  "cleanup": {
+    "controllerUtc": "2026-10-08T22:12:18.9304516+00:00",
+    "independentReadbackUtc": "2026-10-08T22:12:54.6441538+00:00",
+    "status": "passed",
+    "gameAndExactOwnedHelpersAbsent": true,
+    "portsClosed": true,
+    "ownedRuleCount": 11,
+    "ownedRulesRemainingBothStores": 0,
+    "hostsByteExact": true,
+    "hostsSha256": "7c0d9bdf4d52255a757f4e1fa235c39a65701b26ec7b2c5aae8975539a4cc708",
+    "installedHashesAndSignaturesUnchanged": true,
+    "retainedCARootCount": 1,
+    "trustStoreModified": false,
+    "appid": "1063730",
+    "buildid": "22469132",
+    "steamManifestDiffersFromReusedOctober4Stage": true,
+    "steamManifestChangeCauseAndTiming": "unknown; no claim of a change during this trial",
+    "ignoredOwnedCopyRetained": true
+  },
+  "sources": {
+    "scripts/bootstrap_log_metadata.py": "ff2ffc5e1f5cae70131e80635031567fc2377c1b00001bf03836418789fe8f56",
+    "scripts/bootstrap_probe.py": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f",
+    "scripts/carrier_registration_probe.py": "c264bc24ca542311e87a7ad1e98ebd64921d3d0cc2b73eaac64a8ab61d215909",
+    "scripts/channel_descriptor.py": "12849224c266f705889ee33a31bc3f0fcd38252542e204fb2c08f88e63f2b217",
+    "scripts/client_config_archive_metadata.py": "bcbb7dec2613ef108bef0377324ae7080dcac9e8748a4d82b21c9c5b13208430",
+    "scripts/connectivity_probe.py": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c",
+    "scripts/credentials_contract_probe.py": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff",
+    "scripts/current_creation_member_body.py": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800",
+    "scripts/current_creation_replication_record.py": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817",
+    "scripts/current_creation_trial_ref.py": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6",
+    "scripts/current_player_creation_candidate.py": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d",
+    "scripts/current_player_identity_body.py": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df",
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "scripts/current_self_ident_default.py": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22",
+    "scripts/current_spawn_point.py": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c",
+    "scripts/current_type8_bundle_body.py": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105",
+    "scripts/current_world_activation.py": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc",
+    "scripts/dtls_transport_probe.py": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf",
+    "scripts/frida_client_trial.py": "79f09514642d875ac056f8f5508699cf5f1e8a5acf22daa08c2e50bcc2ad0faa",
+    "scripts/frida_trial_observer.js": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1",
+    "scripts/game_log_metadata.py": "cd1c13f4e59292339021ab5d9257261cf0e1d26458c9f8ec78de930ad5ae94c3",
+    "scripts/Invoke-FridaPrivateTrial.ps1": "bb91c2e8a8da4eec5a9c212444fc7bc47880d3ef4639ccbf7b196fa3d630e291",
+    "scripts/private_current_registration_trial.py": "85d31d4a91fcf21e2da2e4055d131849bf322e6f513c4944a47689e8a4cd725c",
+    "scripts/private_player_creation_trial.py": "07fd55927f28228f9302d9313652858d2f8ac681de86e3c68492e9148bbd2e30",
+    "scripts/private_trial_character.py": "2654751e8683d1bbfd43ffae2bba5927726d882e430a0c78caabd1ac8e840c33",
+    "scripts/private_trial_lifetime.py": "156ab1f7374bd0b147d8726567fd4902dfee780ca5522b045fdf0961751d1d22",
+    "scripts/project_preflight.py": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee",
+    "scripts/queue_contract_probe.py": "672e6d9422b7c75e1124c3e4bda3b8b9a4abe24aa5586935b5f4531ea96f7b72",
+    "scripts/rep_anchor_candidate.py": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1",
+    "scripts/session_handoff_probe.py": "cd33450bc809a0286f32eb9f87a9acd1c0664b3852c1af4e76ccdb1644ac93bf",
+    "scripts/Set-ConnectivityHosts.ps1": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f",
+    "scripts/token_contract_probe.py": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11",
+    "scripts/udp_handoff_probe.py": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919",
+    "scripts/validate_connectivity.py": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e",
+    "scripts/validate_first_light.py": "b0da03a9bb364c099d88b23489821240dbb7feceb33a22ae3969499466406407",
+    "scripts/validate_offline.py": "4f9c38d85fc9cfc973b966b31d2595f42a4cb169a877de9a4d84f7ca166a6042",
+    "scripts/verify_probe_cli.py": "51dce48f02e28e0d3b368ae273432f8ce01af3b2cb160b2747a2a56e3d238ddb",
+    "scripts/windows_rep_readonly_probe.py": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74",
+    "scripts/windows_tcp_owner.py": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58",
+    "scripts/windows_udp_owner.py": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf"
+  },
+  "privateArtifacts": {
+    "private/frida-trials/run-20261008T2112-current-player/trial-inputs.pre-approval.json": "082904e8141f2f239c7584c3279db70ab677c9e36005c31b0e0d7e68d48299e9",
+    "private/frida-trials/run-20261008T2112-current-player/trial-inputs.json": "19f85039709aee96a34fbcb45aa2b395ebf8e3382aaae3975d1ea53511efaa44",
+    "private/frida-trials/run-20261008T2112-current-player/approved-trial.json": "f9b4ad4db6c30d4cc68e60478dd6bffce447278dd3e303f907501442372736a0",
+    "private/frida-trials/run-20261008T2112-current-player/admission.json": "e4f2f718e7489daed8f2ed430c8d43b0d36f522f85daa97110a04d05493241b2",
+    "private/frida-trials/run-20261008T2112-current-player/stage-complete.json": "48cee270796d01bbbaf77bd7d922eb42b13026c95a58690bfb088eb107a4d802",
+    "private/frida-trials/run-20261008T2112-current-player/controller-owner.json": "a718ad1c782e14c91d5369554ad8bba2593a70b9d478868b5e4459a4cb77ef78",
+    "private/frida-trials/run-20261008T2112-current-player/controller-output.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private/frida-trials/run-20261008T2112-current-player/containment-events.jsonl": "2ca82dfff492c012258aec242df628b9576502cef28e0092b0bf66f44514dbed",
+    "private/frida-trials/run-20261008T2112-current-player/firewall-ownership.json": "b89d4c066e783bc9a35520385e86af3046747d828587c2e9b9913137f0c52190",
+    "private/frida-trials/run-20261008T2112-current-player/https-v4-owner.json": "351ec33625d9e607ea1804ab7886e2c6762617f4a829cf97c81b3d1f59196593",
+    "private/frida-trials/run-20261008T2112-current-player/https-v6-owner.json": "58ccc6b23470852e60f822d2c886757034ac8b98b593d496c17133e9ec14fc0c",
+    "private/frida-trials/run-20261008T2112-current-player/dtls-owner.json": "36c3598d0a010e959a4b53e5f7526ef5d1fd823f1bafc9dfe69e0de02ae1aa9e",
+    "private/frida-trials/run-20261008T2112-current-player/frida-dispatch-owner.json": "3f78118bcba7f99b0828875a8a7a40da0f3d226077886254b182145b7d87bce3",
+    "private/frida-trials/run-20261008T2112-current-player/frida-events.jsonl": "ca4f45f9ee18d6ecd6d9784713cec29c1ff3c11ee6c149969921790f7f57bc1c",
+    "private/frida-trials/run-20261008T2112-current-player/dtls.jsonl": "074f4ce49ee26d3d41dd2a0e5bf48e5b14930acd0472d8b25336dd9a67dcd508",
+    "private/frida-trials/run-20261008T2112-current-player/https-v4.jsonl": "1a0d4ea24bde7cb8feac096212c4c0c34c6ef199a53df2c411f868395a4516d3",
+    "private/frida-trials/run-20261008T2112-current-player/https-v6.jsonl": "8f9230b2d9766ae716ecb32c4eb32b39b9f0fcb4becde0e7ea7621a3dcda73dd",
+    "private/frida-trials/run-20261008T2112-current-player/stop.request": "57dddf411ced07789d41a3903b5b77d1df62eee49951dcebaef9b30cfd06979e",
+    "private/frida-trials/run-20261008T2112-current-player/user-observations.json": "0379b8d32c92d034c24cde54f273e8c99b08b8cf5c24ab5e1a1b5eb39ff2378a",
+    "private/frida-trials/run-20261008T2112-current-player/user-final-report.json": "d0fefafe3de21756abbd6c1885abe9d516d7ea66e05f962b280a0e27d82a378e",
+    "private/frida-trials/run-20261008T2112-current-player/controller-result.json": "aa8262b6adb9871fd4348d93b0f7a206345288876d397d675717d15f07050554",
+    "private/frida-trials/run-20261008T2112-current-player/cleanup.json": "fd75d15dddf154270fbb0d894392d4ea51c7a884bdd343d1df9bec8d15c68682",
+    "private/frida-trials/run-20261008T2112-current-player/cleanup-readback.json": "a998d468c86e058c8d090528372806006e3be590027839f12404abd047a02344",
+    "private/frida-trials/run-20261008T2112-current-player/native-progress-final.json": "d0b414f218191b82e6c5da2f24d54205054e96dc4c8596e08b932334b4ddabaf",
+    "private/frida-trials/run-20261008T2112-current-player/approval-reconciliation.json": "7b35b7c283620397535d8af65297a5a744d3aa446992d1d3b458e685b4086830",
+    "private/frida-trials/run-20261008T2112-current-player/executed-sources.json": "272a32c7ddbe80f7e95c866a665e8c106fdf5cf44f1c94d4e1f84c930fcbd0b1",
+    ".scratch/current-player-trial-20261008T2207Z/Prepare-ApprovedTrial.ps1": "a9d1c8a0acdb9e383d3b17eda3e4b57dcb9ba2adf8580bf4c244ee0b7dc7b5a3",
+    ".scratch/current-player-trial-20261008T2207Z/Launch-ApprovedTrial.ps1": "bfd65075a0864968a49fe9e2b837851d0f6d0dfd33e9afed0029d7b4bcdafd4c",
+    ".scratch/current-player-trial-20261008T2207Z/Run-PreparedController.ps1": "4d7611447aaac97b338f8fa82b5327544775f0eb82aa5675b296bf0e2242600d",
+    ".scratch/current-player-trial-20261008T2207Z/Observe-Trial.py": "1001dcbd8952eed39052b5a7263add999f514bdc81ef0470a2514c37c170a926",
+    ".scratch/current-player-trial-20261008T2207Z/Observe-Trial.ps1": "d51b579aaa5112b21ead79ca4fdcb78514e5af496348ba577e59d875352faac7",
+    ".scratch/current-player-trial-20261008T2207Z/Record-Visual.ps1": "ca922aa7580198be35c976b362f7b467184ef82821727607bd707671ce3f96f8",
+    ".scratch/current-player-trial-20261008T2207Z/Record-Final.ps1": "078958351fd6470c6c8e5147aa669cd551650b08daeedba9cac40ceb122ee466",
+    ".scratch/current-player-trial-20261008T2207Z/Readback-Cleanup.ps1": "8fbc9981f231b26060188a964a2b34eac79b2fba85d41bd1932050546a747c85",
+    ".scratch/current-player-trial-20261008T2207Z/Verify-Approval.ps1": "826612bafc1a813dfa5a040a270ed9960e76b20effd7ea04e249e922ab6bd596",
+    ".scratch/current-player-trial-20261008T2207Z/ledger.md": "38a65ebf61c8a4d501d3a8cc12c91ae1a90e84e68ba24177847737ec6de5f08c",
+    ".scratch/current-player-trial-20261008T2207Z/native-preflight.json": "c687d9fd266e9eaa691fb73a528d1b6818760d399bcd61014bd557a0c9ea5160",
+    ".scratch/current-player-trial-20261008T2207Z/Seal-Trial.py": "d9cbe3b0fbcc0377d6e490b772351111eb079d4b82bd57b653bec471d80d7e32",
+    ".scratch/current-player-trial-20261008T2207Z/Seal-Trial.ps1": "14a70d0ab236345255df71398c76ae9c25045465559b1f32b9c94e5d940d9b99",
+    ".scratch/current-player-trial-20261008T2207Z/review.md": "46f777f346373bf5a0a5460298bd1db28e007a8d32bfdf46e21efb0fb7c22101",
+    ".scratch/current-player-trial-20261008T2207Z/adjudication.md": "3d38ec198912b9aadeefb31fb1d968d480893eb0c0392ec458445b1134869ee2",
+    ".scratch/current-player-trial-20261008T2207Z/runtime-validation-reuse.json": "84c46dabacf77809eddcc8537fdc8d5622c3c0e954bc7b75cf336540b357c65b",
+    ".scratch/current-player-trial-20261008T2207Z/catalog-junit.xml": "5c57ea90e59dcafaa295cbb6404762f42440485d778eea5d3f6fcb473fccfa79",
+    ".scratch/current-player-trial-20261008T2207Z/catalog.log": "23bbd244ae2f4b1c65ac03a9e7a6e5b914a92d6856161f1e85ac9b27f47a9187",
+    ".scratch/current-player-trial-20261008T2207Z/preflight-output.txt": "af9177b63c81a527dd9f5067eb16efa5597c5c53b6367642d64e09316860996d",
+    ".scratch/current-player-trial-20261008T2207Z/Validate-Catalog.ps1": "bc828e3d97dd96095b279acf0514726af952fa7fbf0da2838820050602fcc084",
+    ".scratch/current-player-trial-20261008T2207Z/Finalize-Receipt.ps1": "e6f40a1b5099841e03ab57799a704608a324e43caade9abe05fb46b1368a1242",
+    ".scratch/current-player-trial-20261008T2207Z/Finalize-Receipt.py": "3a89744c733222f8234c0edb6d6892199974fab0aedfb8238b2771c35572f948",
+    "private/frida-trials/run-20261008T2112-current-player/receipt-pre-review.json": "6678a56e90d4d3507d6ddba25ac161f6656b53a802d04880f0ef18eaf08bcdf3"
+  },
+  "retainedExecutedSourceCopies": [
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/bootstrap_log_metadata.py",
+      "sha256": "ff2ffc5e1f5cae70131e80635031567fc2377c1b00001bf03836418789fe8f56"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/bootstrap_probe.py",
+      "sha256": "4f417fa587038a5cfd7f218155bf223edbd2608d8c4b8b9e421e6d6db5b1131f"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/carrier_registration_probe.py",
+      "sha256": "c264bc24ca542311e87a7ad1e98ebd64921d3d0cc2b73eaac64a8ab61d215909"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/channel_descriptor.py",
+      "sha256": "12849224c266f705889ee33a31bc3f0fcd38252542e204fb2c08f88e63f2b217"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/client_config_archive_metadata.py",
+      "sha256": "bcbb7dec2613ef108bef0377324ae7080dcac9e8748a4d82b21c9c5b13208430"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/connectivity_probe.py",
+      "sha256": "3231f78d32920e893494120570206f4c6b2cae74b92ec5bf9ee0189b0cb4c17c"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/credentials_contract_probe.py",
+      "sha256": "4d31779acc0ca9acaf7ff17cc3b8c50bc5b3c79715d859a36ab931402a2425ff"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_creation_member_body.py",
+      "sha256": "940c3ede73f59a2254d0feb856248a2fe8252d67330c5c80e107b50c52ac1800"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_creation_replication_record.py",
+      "sha256": "519d074b943349040e0c77efbe4b9cec8aa21c7c59d9eed50a4e5e49f19f0817"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_creation_trial_ref.py",
+      "sha256": "c46c4be4b7f5dc215e8a3e3bc04622e485a37b6bab1288ed27085a27c69851e6"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_player_creation_candidate.py",
+      "sha256": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_player_identity_body.py",
+      "sha256": "460d6cf76f68a30b63fb6507289d348f9bddc91bed667cd574265aebc0b726df"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_registration_request_body.py",
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_registration_request_receive.py",
+      "sha256": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_registration_request_stream.py",
+      "sha256": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_registration_response_body.py",
+      "sha256": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_registration_response_record.py",
+      "sha256": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_self_ident_default.py",
+      "sha256": "2a48ba6248eabd2ad408d49cde4c85d067f000474ebba5122dceb3812e301d22"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_spawn_point.py",
+      "sha256": "ec83527a2c194cca57dec863335896cf3314564e24cc5a3e8207aadb67768c9c"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_type8_bundle_body.py",
+      "sha256": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/current_world_activation.py",
+      "sha256": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/dtls_transport_probe.py",
+      "sha256": "9ef63f6282f7d5dea5f810aa7081d3ff63c2e657563a0f525ad4a1f96d297adf"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/frida_client_trial.py",
+      "sha256": "79f09514642d875ac056f8f5508699cf5f1e8a5acf22daa08c2e50bcc2ad0faa"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/frida_trial_observer.js",
+      "sha256": "7b1583a3cecbe7f85522dce9699b6ef23428558d5a408d5abfad6ccb9a1859c1"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/game_log_metadata.py",
+      "sha256": "cd1c13f4e59292339021ab5d9257261cf0e1d26458c9f8ec78de930ad5ae94c3"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/Invoke-FridaPrivateTrial.ps1",
+      "sha256": "bb91c2e8a8da4eec5a9c212444fc7bc47880d3ef4639ccbf7b196fa3d630e291"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/private_current_registration_trial.py",
+      "sha256": "85d31d4a91fcf21e2da2e4055d131849bf322e6f513c4944a47689e8a4cd725c"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/private_player_creation_trial.py",
+      "sha256": "07fd55927f28228f9302d9313652858d2f8ac681de86e3c68492e9148bbd2e30"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/private_trial_character.py",
+      "sha256": "2654751e8683d1bbfd43ffae2bba5927726d882e430a0c78caabd1ac8e840c33"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/private_trial_lifetime.py",
+      "sha256": "156ab1f7374bd0b147d8726567fd4902dfee780ca5522b045fdf0961751d1d22"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/project_preflight.py",
+      "sha256": "80fd648476a57f65b0ee9d1752e6d911b254a914c5d0ed15070c0e4ab10d83ee"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/queue_contract_probe.py",
+      "sha256": "672e6d9422b7c75e1124c3e4bda3b8b9a4abe24aa5586935b5f4531ea96f7b72"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/rep_anchor_candidate.py",
+      "sha256": "4563c9cb0ca669f1b9285cb82f7932b905c17a468c26bf02a0e7dac7e5d7bbc1"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/session_handoff_probe.py",
+      "sha256": "cd33450bc809a0286f32eb9f87a9acd1c0664b3852c1af4e76ccdb1644ac93bf"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/Set-ConnectivityHosts.ps1",
+      "sha256": "39099c00234d726afccb14f882623c8d2bfe42439158c73a1f1aaefc6a35f76f"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/token_contract_probe.py",
+      "sha256": "5d41528be9003897fa7dd31ee3df4ab3f0b5d5ffc66e0e21c176ae7aeeff7a11"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/udp_handoff_probe.py",
+      "sha256": "4fe65e8854986e0596ab2f847e131a3afb4498cef80a7c9e9bc58de1cff86919"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/validate_connectivity.py",
+      "sha256": "b9fceb6997b7113dfc91c0f3d095ac222f611e2ef2733408b9b7cbcc0a75187e"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/validate_first_light.py",
+      "sha256": "b0da03a9bb364c099d88b23489821240dbb7feceb33a22ae3969499466406407"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/validate_offline.py",
+      "sha256": "4f9c38d85fc9cfc973b966b31d2595f42a4cb169a877de9a4d84f7ca166a6042"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/verify_probe_cli.py",
+      "sha256": "51dce48f02e28e0d3b368ae273432f8ce01af3b2cb160b2747a2a56e3d238ddb"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/windows_rep_readonly_probe.py",
+      "sha256": "0ae3c76b14635319a6a5e89b86fc1ae00630bb0ec1822428ebf01a6ac2093d74"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/windows_tcp_owner.py",
+      "sha256": "4c571b6998e0ca0f2afffb562ebfcdf9b26c011e66fe146df2c4ed9295c6df58"
+    },
+    {
+      "path": "private/frida-trials/run-20261008T2112-current-player/executed-sources/windows_udp_owner.py",
+      "sha256": "f7aa2679a3370f9875a9b779e1f04961631fe93b847eae82c32c839264cf15bf"
+    }
+  ],
+  "offlineValidationReuse": {
+    "receipt": ".scratch/offline-validation/run-7qeh5b62/receipt.json",
+    "sha256": "d73188468626b1c17a68750c45d4583a56779b92693085a09bb0b5e8a4687869",
+    "scope": "unchanged runtime/test inputs:2059 Python cases/52modules/fivePS/closed synthetic loopback; new native evidence/catalog checks require fresh affected validation",
+    "recordedUtc": "2026-10-08T22:19:57.946014+00:00",
+    "priorReceiptSha256": "d73188468626b1c17a68750c45d4583a56779b92693085a09bb0b5e8a4687869",
+    "selectedPriorInputs": 301,
+    "unchangedInputs": 297,
+    "changedMetadata": [
+      "docs/EVIDENCE_LEDGER.md",
+      "docs/ROADMAP.md",
+      "research/agent-evidence-index.json",
+      "research/evidence/current-registration-player-integration.json"
+    ],
+    "changedRuntimeOrTests": [],
+    "freshAffectedChecks": "36 catalog/runner cases and actual offline preflight; original native metadata/doc changes only"
+  },
+  "acceptance": {
+    "selectedNativeProgress": "Observed through existing context activation and candidate send",
+    "aggregateWorldEntry": "Partial",
+    "renderedControllablePrivatePlayer": false,
+    "unreadConditions": [
+      "later asynchronous map/context readiness",
+      "native creation record decoding and application",
+      "runtime class/resource installation and indexed identity delivery",
+      "local player designation/camera/input",
+      "movement authority/restart reproducibility",
+      "secure private authentication"
+    ],
+    "next": "Source-supported map/context handoff and creation dispatch/application boundary; no guessed timing fix or additional native grant"
+  },
+  "verification": {
+    "freshCatalogCasesPassed": 36,
+    "actualOfflinePreflight": "passed",
+    "adversarialReview": "K441-K444 survived; native application/readiness/control and gameplay cause remain unobserved",
+    "reviewerIndependentlyRehashedBindings": 156,
+    "reviewerIndependentlyRehashedRetainedSources": 44,
+    "reviewerPerformedExtraNativeObservation": false,
+    "jobTeardownEvidence": "observed stop/completion metadata plus executed owner/controller source; exact visual close time unobserved",
+    "retainedCARootCheckIsWholeStoreInventory": false,
+    "noPrimaryStopScriptBasis": "primary tool/action history; controller issued its own stop after failure",
+    "resourceAndClaimCleanup": "native resources verified; tracker claim release recorded separately after local commit"
+  }
+}
