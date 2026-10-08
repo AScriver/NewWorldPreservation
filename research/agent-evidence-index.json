@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-bootstrap-trial",
+      "roadmapTasks": ["M1-06C.3"],
+      "claimIds": ["K434", "K435", "K436", "K437"],
+      "docs": ["docs/CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md"],
+      "scripts": ["scripts/carrier_registration_probe.py", "scripts/Invoke-FridaPrivateTrial.ps1", "scripts/frida_client_trial.py", "scripts/frida_trial_observer.js"],
+      "tests": [],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-registration-bootstrap-trial.json", "classification": "observed-metadata", "scope": "One specifically approved native owned-copy attempt: physical request/reply and callback activation, human visual failure, automatic peer/service closure and independent cleanup"}],
+      "limit": "Incoming wire selector/authentication and later async readiness unproved; no creation payload or stable player. Human apparent-map/timeout report is not agent screen observation/footage. Single grant consumed; no second native attempt."
+    },
+    {
       "id": "current-registration-bootstrap",
       "roadmapTasks": ["M1-06C.2"],
       "claimIds": ["K431", "K432", "K433"],
@@ -2482,6 +2493,7 @@
   "receipts": [
     "research/evidence/current-registration-trial-preparation.json",
     "research/evidence/current-registration-bootstrap.json",
+    "research/evidence/current-registration-bootstrap-trial.json",
     "research/evidence/current-registration-receive-pool.json",
     "research/evidence/current-registration-ack-budget.json",
     "research/evidence/current-registration-connection-ack.json",

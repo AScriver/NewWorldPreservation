@@ -1,5 +1,27 @@
 # Agent handoff
 
+## Closed current registration/map attempt — October8, #214, partial
+
+- Clean d90d0d1; specific single-attempt grant;154 unchanged bindings19/3/zeroBODY,
+ existing bootstrap/observer, no creation;44 source copies retained privately.
+- [K434–K437](CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md): physical request860B;
+ response22B with18-byte BODY; self/LevelInfo/context-load callbacks and activation.
+ Five send envelopes ACK-covered,238 matching echoes. Immediate readiness=false;
+ later asynchronous completion remains unread.
+- User reported apparent partial map→selection/player-spawn timeout, then window
+ closure without manual exit. No agent visual observation/footage. Peer idle/
+ service failure triggered controller stop and game Job exit. No elapsed client
+ cutoff or agent stop script; original gameplay failure cause unknown.
+- Controller cleanup and independent19:13:36 readback passed for exact processes,
+ ports, eleven rules/bothstores, hosts, installed images/signatures/app/build/CA.
+ Steam metadata differs from reusedOctober4stage; cause/timing unknown.
+- Runtime/test code is unchanged; reuse full2046/52modules/fivePS/closedloopback.
+ Native evidence receives fresh affected catalog/preflight/hygiene/review.
+- Run `private/frida-trials/run-20261008T1843-current-bootstrap` is durably closed;
+ grant consumed, no second launch. #214 is partial. Agent next: source-supported
+ current-registration/fresh-player integration and separate async readiness.
+ Another concrete native attempt requires its own specific grant.
+
 ## Current registration/bootstrap composition — October8, #213
 
 Task: expose and verify the existing current-request bootstrap send path.

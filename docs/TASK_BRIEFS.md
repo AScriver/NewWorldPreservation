@@ -1,5 +1,33 @@
 # Bounded task briefs
 
+## #214 — one admitted current registration/map observation (M, partial)
+
+- Input: clean main d90d0d1; original154-binding prepared manifest, selectors19/3,
+  zero18-byte BODY, reused hash-pinned owned copy, Python3.11.9/Frida17.22.0.
+  Specific human grant: "Approve this one trial" on October8; now consumed.
+- Outcome: observe current physical registration and existing actor/context
+  stages. No player creation payload or extra observer site. The existing
+  three-site/seven-boolean observer is capped96; six events were collected.
+- Primary owns this run, its exact game Job/three services/dispatch/controller,
+  ports443/64003, copy locks, hosts journal and eleven firewall program rules;
+  no concurrent agent may acquire or mutate these resources. Primary owns
+  AGENTS.md, native-result doc/receipt, roadmap/handoff/ledger/index and closure.
+- Lifetime: user-stop with no elapsed client cutoff. Existing protocol idle
+  failure closed the service, then the controller closed the game Job. User
+  reports the window closed without a manual exit; preserve that distinction.
+- Evidence: receipt and six callback samples support progress through context
+  activation. Immediate readiness=false leaves later asynchronous completion
+  unread. Human apparent-map report/return to selection/spawn timeout supplies
+  no agent visual proof or stable player control. Request selector19 and secure
+  authentication remain unproved. No second launch follows from this result.
+- Validation: all154bindings before/after; source-backed numeric send/ACK and
+  fixed-marker review; actual controller cleanup plus independent exact process,
+  listener, rules/bothstores, hosts, image/signature, app/build and CA readback.
+  Reuse unchanged full2046/fivePS runtime validation; check affected catalog and
+  preflight freshly, review evidence meaning, staged hygiene and local commit.
+- Handoff: agent for source-supported fresh-player/readiness integration;
+  another native attempt requires its own concrete preparation and grant.
+
 ## #213 — current registration and bootstrap ordering (M, partial)
 
 - Input: clean main `e093847904d3e2bbef6d80e47f65f0784660ccb9`; existing

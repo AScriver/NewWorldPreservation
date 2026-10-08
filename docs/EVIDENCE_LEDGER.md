@@ -1,5 +1,24 @@
 # Evidence ledger
 
+## Current registration/map attempt — October8, #214, partial
+
+[Receipt](../research/evidence/current-registration-bootstrap-trial.json) pins
+clean d90d0d1,154 unchanged bindings, exact private logs and44 retained sources.
+Diagnostics and cleanup are observed; the visual sequence is user-reported and
+game Job teardown is strongly source-supported. No creation was attempted.
+
+| ID | Claim | Evidence and limits |
+| --- | --- | --- |
+| K434 | Current physical request/response route permits native bootstrap progress | One private DTLS handshake, raw860-byte parse, response3/18-byte BODY; fixed response-receipt/actor-start/success markers and actual self callback. Incoming wire selector19/authentication/general BODY suitability unproved |
+| K435 | Existing callbacks identify self, queue LevelInfo and latch context activation | Six guarded entry/return samples: self false→true, pending false→true→false, activation false→true. Immediate readiness=false; later async readiness unread, samples non-atomic |
+| K436 | Delivery and reported apparent map remain short of world/player control | Envelopes4/7/12/17/22 ACK-covered;298 heartbeats/238 matched echoes. Human apparent-map→selection/spawn-timeout report, without agent screen observation or footage; no creation payload or stable player |
+| K437 | Idle peer/service failure caused controller-owned closure with verified cleanup | DTLS idle_deadline/owned_peer_closed→service-exit controller stop→game Job exit; no elapsed client cutoff or manual user close. Independent exact processes/ports/11rules bothstores/hosts/images/signatures/CA check. Steam metadata differs from old stage, cause/timing unknown |
+
+The later transport/cleanup outcome does not establish the cause of gameplay
+failure. Asynchronous readiness, fresh player construction/designation and
+camera/input ownership remain separate unread conditions. Grant consumed;
+#214/aggregate world entry stays partial. No additional native attempt implied.
+
 ## Current registration/bootstrap composition — October8, #213
 
 [Receipt](../research/evidence/current-registration-bootstrap.json) pins clean

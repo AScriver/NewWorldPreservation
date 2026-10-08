@@ -1,5 +1,30 @@
 # Milestone 1 roadmap
 
+## Current registration/map attempt — October8, #214, partial
+
+The single specifically approved attempt ran at clean d90d0d1 with154 unchanged
+bindings and no creation payload. [K434–K437](CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md)
+establish private DTLS, physical request parsing, one current response and the
+SelfIdentification/LevelInfo/context-load callbacks. Activation latched and
+pending LevelInfo was consumed; readiness was false only in the final immediate
+sample. Later asynchronous readiness remains unread. All five send envelopes
+were ACK-covered and238 heartbeat echoes matched.
+
+The user reported an apparent partial map, return to selection and a player-spawn
+timeout. This is human visual evidence; stable world entry/player control remains
+unproved. The later peer idle/service failure caused the controller to close the
+game Job automatically. Cleanup plus independent readback passed, including all
+eleven rules/bothstores, exact hosts and installed images/signatures/CA. Steam
+metadata differs from the older stage baseline; cause/timing is unknown.
+
+The grant is consumed. Current registration can progress on this admitted route;
+incoming wire selector/authentication semantics and fresh-player/readiness
+conditions remain open. Next: source-backed integration of fresh player
+construction/designation and the asynchronous readiness boundary. No second
+launch, extra hook or new creation payload is admitted by this result. Reuse the
+unchanged full2046/fivePS offline checks; native receipt/catalog verification is
+recorded separately. Friend footage and backup work remain outside this task.
+
 ## Replacement server implementation focus — October8, #213
 
 The user's latest direction makes game-server replacement the active work.
@@ -27,8 +52,8 @@ the existing current131 prefix and the three-site/seven-boolean observer. It has
 no elapsed cutoff and requires a specific native trial grant. Request19,
 response3 and the zero BODY remain experiment values; native registration,
 authentication, map/context readiness and player control remain unknown.
-Full #213 acceptance stays partial. No native client/controller launch or
-routing/trust mutation occurred.
+Full #213 acceptance stays partial. This offline checkpoint performed no native
+launch or routing/trust mutation; the subsequent #214 attempt is recorded above.
 
 ## Private preview screenshot session — October8
 
@@ -1449,19 +1474,23 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 
 October8 server implementation is active: one fresh visible controllable private
 player remains the immediate milestone. The current registration responder now
-composes with the existing bootstrap sequence. The next client boundary to prove
-is recognized current input and accepted reply, followed by actual map/context
-conditions. Sent LevelInfo or an empty bundle does not prove map readiness;
+composes with the existing bootstrap sequence. The October8 #214 attempt now
+observes physical request parsing, reply receipt, self callback and context
+activation on that admitted route. Exact incoming wire selector/authentication
+semantics and later asynchronous map/context conditions remain unproved.
+Sent LevelInfo or an empty bundle does not prove map readiness;
 readiness may depend on player construction and must be observed rather than
-assumed to complete independently. See [the implemented path](CURRENT_REGISTRATION_BOOTSTRAP.md).
+assumed to complete independently. See [the native result](CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md).
 
 The creation/identity candidate is already constructed offline. Its October7
 native attempt stopped before registration/creation on the repeated-connect
 guard; the subsequent offline guard repair is not a successful native rerun.
 Resource index9, actual Carrier delivery, fresh identity propagation,
 designation, camera/input and movement remain separate unproved conditions.
-A fresh specifically admitted native attempt is required. The latest selection
-screenshot is preview evidence. See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
+Current registration with creation is still excluded. First prepare and verify
+its source-supported integration and the separate readiness boundary; a further
+native attempt requires a specific grant. The #214 grant is consumed. Selection/
+apparent-map reports establish no stable player. See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
 
 October5 tooling improvement: function-scoped Ghidra is now the default for
 bounded native questions. The original helper imports selected PDATA/chained-unwind
