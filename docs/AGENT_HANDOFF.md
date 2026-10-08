@@ -1,5 +1,30 @@
 # Agent handoff
 
+## #262 stored callback dispatch — October7, partial
+
+- K366/K367 [original checkpoint](../research/evidence/current-registration-worker-dispatch.json)
+  joins the zero-result factory branch to stored145ddab20 callable and its
+  stop-controlled internal16-entry-block tagged-record queue. Opaque helpers
+  do not establish runtime scheduling/thread execution. Saved-return address,
+  destination+2cd8, tag2 p=*(record+10) and separate receivers are instruction-pinned.
+- Conditional fallback methods unlink a matching node and update periodic state.
+  The1f8 argument is allocator/disposal-like extent, not byte copy. Internal
+  record popping is distinct from prior queued physical registration chunks;
+  null-pop continuation is not evidence all byte queues were drained.
+- Exact next helpers:145dddfa0(owner), lower (*owner) virtual+8,145ddeee0(owner)
+  at145ddb4e1/4ec/4f2. Bodies are unqueried under this leaf's four-root cap.
+  Byte writer/Carrier/reply/auth/runtime acceptance remain open; continue those
+  concrete helpers in a separate bounded leaf rather than rescanning this ring.
+- Four roots/eight ranges/6452 bytes/one table and reused factory3306 bytes are
+  sealed in .scratch/registration262-primary-20261008T0136Z/seal.json. Bounded
+  review corrected gate/pointer/matching-node qualifications; raw outputs/DBs
+  remain ignored and all static children exited without runtime resources.
+- All36 affected checks pass, actual preflight index is ready/new bindings match.
+  Exact .scratch/registration262-primary-20261008T0136Z/closure.json reuses the
+  unchanged1641-case/49-module code/fixture/runtime result, five PowerShell suites
+  and listenerClosed/childExit0; ledger/roadmap/catalog meaning was revalidated.
+  Task acceptance stays partial for the actual byte-path join.
+
 ## #261 lower send dispatch — October7
 
 - K363–K365 [original receipt](../research/evidence/current-registration-lower-send.json)

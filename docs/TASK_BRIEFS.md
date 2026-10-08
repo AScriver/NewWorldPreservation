@@ -1,5 +1,32 @@
 # Bounded task briefs
 
+## #262 — queued registration callback and worker dispatch (M)
+
+- Continue164/178 from clean760a51a. Reuse completed226/261 sender/backend/chunk
+  and separate one-byte callback source proof,260 decoder and unchanged inputs.
+  Exact new candidate145ddab20 is stored by wrapper factory145dbae90; its worker
+  purpose/scheduling, list drain and final packet writer must be proved.
+- Investigator owns only ignored .scratch/registration262-worker-20261008T0126Z/
+  and private/ghidra/registration262-worker-20261008T0126Z/. Primary owns tracked
+  receipt/framing/ledger/roadmap/handoff/catalog updates. No shared services,
+  ports, fixture state or runtime resources. This is a guided related follow-up,
+  not an independent discovery of prior261 conclusions. Preserve others' edits.
+- At most four new PDATA-backed roots, four bounded static data/table windows
+  and1MiB selected code. Inspect exact entry and only concrete connected edges;
+  reuse old outputs. Pin file/native/output/tool/runtime/dirty state, cross-check
+  instructions and preserve refused/partial results. Split broader assembly.
+- Determine actual queue/list/byte forwarding; no guessed Carrier framing,
+  semantic class, current type binding, authentication or replies. No client,
+  process memory, hooks, captures, endpoints, native trial, replay, upstream or push.
+- Seal source and review material ambiguities; run affected36 catalog/runner
+  cases/actual preflight, compare unchanged1641-case/49-module workspace inputs
+  before reuse. Commit bounded unit, truthful acceptance/readback/claim release;
+  all owned static children exit and private databases remain ignored.
+- Partial outcome: callback/internal tagged-record dispatch joined, with zero
+  gate/nonzero p/separate receiver/matching-node/null-pop conditions. Four roots
+  used. Actual byte-path helpers145dddfa0 and145ddeee0 around lower+8 remain
+  unqueried; keep262 open and continue a separate bounded source leaf.
+
 ## #261 — lower-interface registration send dispatch (M)
 
 - Latest server-protocol continuation164/178; clean3282a87. Reuse #226 physical

@@ -438,6 +438,17 @@
       "limit": "Conditional successful-allocation source route; runtime interface, loaded dependency/call result, worker drain and final Carrier layout unknown. Synthetic parser alignment is not runtime type19, historical860 contents, authentication, response choice or M1. No codec/fixture/responder/native trial change."
     },
     {
+      "id": "current-registration-worker-dispatch",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K366", "K367"],
+      "docs": ["docs/REGISTRATION_STREAM_FRAMING.md"],
+      "scripts": [],
+      "tests": [],
+      "evidence": [{"path": "research/evidence/current-registration-worker-dispatch.json", "classification": "source-inference", "scope": "Conditional callback construction/internal record drain and concrete unqueried post-pop byte-path candidates"}],
+      "fixtures": [],
+      "limit": "Partial byte-path acceptance; opaque helper/indirect/supplied/runtime effects remain unknown. Internal tagged records do not prove queued physical-byte drain or packet/reply/auth/M1 acceptance. No codec or live change."
+    },
+    {
       "id": "current-registration-request-stream",
       "roadmapTasks": [
         "M1-06B"
@@ -1962,6 +1973,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-worker-dispatch.json",
     "research/evidence/current-registration-lower-send.json",
     "research/evidence/current-registration-request-receive.json",
     "research/evidence/current-creation-queue-drain-boundary.json",

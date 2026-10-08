@@ -39,6 +39,15 @@ Unchanged workspace/code/fixture inputs reuse the1641-case/49-module result abov
 private closure is .scratch/registration261-primary-20261008T0115Z/closure.json.
 Bounded adversarial review retained the conditional native claims and reproduced
 three stronger parser counterexamples. Static helpers exited cleanly.
+#262's [partial callback checkpoint](REGISTRATION_STREAM_FRAMING.md#callback-and-record-dispatch--262)
+now pins its zero-result construction branch and internal tagged-record popping,
+separate from queued physical stream chunks. It reaches concrete post-pop
+145dddfa0(owner), lower virtual+8 and145ddeee0(owner); their byte-path bodies are
+the next bounded source work. Four new backed roots are sealed; no codec,
+classifier, response or native trial changes follow from this partial result.
+All36 affected catalog/runner cases pass, actual preflight index/bindings match,
+and .scratch/registration262-primary-20261008T0136Z/closure.json seals unchanged
+workspace support and resource cleanup. #262 remains a partial source checkpoint.
 The existing corrected creation trial still needs its specific next-attempt
 grant; this offline continuation starts no client or new live instrumentation.
 

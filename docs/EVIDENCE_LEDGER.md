@@ -1,5 +1,17 @@
 # Evidence ledger
 
+## Registration callback dispatch — October7, #262, partial
+
+[Original checkpoint](../research/evidence/current-registration-worker-dispatch.json)
+pins760a51a/TASK_BRIEFS-only state, four new backed roots/eight native ranges,
+one table and the reused factory instructions. Actual queued-byte placement is
+still unresolved; this checkpoint changes no codec or live responder.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K366 | Zero-result factory branch builds the stored callback; its stop-controlled loop drains an internal tagged-record queue in16-entry blocks | Strongly source-supported. Opaque submission/return handling does not prove scheduling or execution; saved-return address is passed with destination owner+2cd8. Complete internal drain assumes valid nonnull entries. No observed population or registration-byte drain | [Callback conditions](REGISTRATION_STREAM_FRAMING.md#callback-and-record-dispatch--262); exact factory/callback instructions and primary source seal |
+| K367 | Conditional tag2/fallback calls unlink a matching node; null-pop continuation reaches two concrete unqueried helpers around lower+8 | Strongly source-supported callsites, unknown actual byte path. Separate optional owner+30 and owner+10 receivers; p=record+10 pointee must be nonnull. Fallback clears *p before matching; unlink/disposal/count decrement require a match.1f8 is extent, not copy. No broader no-send, packet, runtime or response proof | [Next byte edges](REGISTRATION_STREAM_FRAMING.md#callback-and-record-dispatch--262); reviewed pointer/ABI/table dataflow and retained partial acceptance |
+
 ## Registration lower dispatch and parser comparison — October7, #261
 
 [Original receipt](../research/evidence/current-registration-lower-send.json)

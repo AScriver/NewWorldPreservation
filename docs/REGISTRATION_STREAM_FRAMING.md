@@ -278,3 +278,47 @@ slices and two table windows cover940 unique executable bytes; all private
 query children exited without runtime resources. All36 affected catalog/runner
 checks pass and actual preflight index/bindings are ready/matching; unchanged code/fixtures reuse the
 1641-case/49-module workspace, five PowerShell suites and closed loopback receipt.
+
+## Callback and record dispatch — #262
+
+[The original partial checkpoint](../research/evidence/current-registration-worker-dispatch.json)
+follows the stored145ddab20 callback at760a51a/TASK_BRIEFS-only query state. In the
+factory's zero-result branch, a callable stores that function and owner pointer,
+then is passed to14149c930. The address of its saved return value is passed to
+140e863f0 with destination owner+2cd8. The decompiler's qword index+59b is not a
+byte offset. Opaque helper effects, handle role and actual thread execution remain
+unproved; native instructions establish the calls and arguments.
+
+The callback checks stop byte+2ce8 and pops an internal tagged-record queue:
+owner+2c0 block array, +2c8 block-bound operand, +2d0 cursor and +2d8 depth. Indexing
+uses cursor>>4 and cursor&15, then advances/wraps the cursor and decrements depth.
+The first dword selects record tags0–3. This record queue is distinct from the
+prior child+90+mode*40 chunk lists. A null pop exits to continuation; treating
+that as a complete internal drain assumes valid nonnull queued records.
+
+For tag2, p=*(record+10) must be nonnull. Optional owner+30 virtual+20 receives
+p+28; owner+10 virtual+10 then receives p. These are different receivers, and p
+is not the tagged record. Owner+10 holds the supplied config+8 object or a
+successful fallback0x60 allocation with table148480670. Conditional fallback+10
+maps to145dd05d0, which clears *p before searching. Only a matching list node is
+unlinked, passed through opaque disposal/allocator-like calls and counted down.
+Its1f8/8 arguments are extent/alignment, not a proved copy size.
+
+The null-pop continuation calls145dd4570, then owner+10 virtual+90; the selected
+fallback145ddd470 updates accumulated state. Later exact callsites pass the
+original owner to145dddfa0 at145ddb4e1, invoke (*owner) virtual+8 at145ddb4ec, then
+pass the original owner to145ddeee0 at145ddb4f2. These unqueried helpers are the
+next concrete byte-path candidates. The callback's indirect work can affect
+shared queues; absence of a direct old chunk-helper call proves no broad absence
+of sends. Actual registration bytes, final packet assembly and reply choice
+remain unresolved.
+
+Four new backed roots/eight ranges cover6452 unique executable bytes and one
+192-byte table. Primary rehashes all spans/artifacts and re-decodes the already
+queried3306-byte factory, without another function root. Bounded adversarial
+review retains the source claims with explicit gate, pointer, matching-node and
+null-pop conditions. No native/process/network resources were acquired; all
+static children exited. All36 affected catalog/runner cases and actual preflight
+index/new receipt bindings pass. Exact unchanged-input closure is
+.scratch/registration262-primary-20261008T0136Z/closure.json; code/fixtures retain
+the1641-case/49-module workspace, five PowerShell suites and closed loopback support.

@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "workItemId": 164,
+  "actionableId": 262,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T01:41:22.432940+00:00",
+  "claimIds": [
+    "K366",
+    "K367"
+  ],
+  "acceptance": "partial: internal callback/record dispatch joined; actual queued registration-byte writer still unresolved",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "760a51a46197933563aed18489b965d669848735",
+    "queryDirty": "M docs/TASK_BRIEFS.md",
+    "imageBytes": 179204176,
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "capstone": "5.0.7",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0"
+  },
+  "sources": {
+    "scripts/current_registration_request_body.py": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4",
+    "scripts/current_registration_request_stream.py": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "research/evidence/current-registration-stream-framing.json": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971",
+    "research/evidence/current-registration-lower-send.json": "1e48c154cae0b883aac08730bb1bd3d7ae95a916277a025f4fe1349e535157bc",
+    "research/evidence/current-registration-request-receive.json": "1873782decc03063efbbfa267956c1d82c971db1b579ab11311a5002f67cc475"
+  },
+  "privateArtifacts": {
+    ".scratch/registration262-worker-20261008T0126Z/receipt.json": "a3b929ab6a9a87da8a9f5cb95eb13ea2288194856e5dff6ac443042060785729",
+    ".scratch/registration262-worker-20261008T0126Z/report.md": "654e4d2b2e8f10aaf9e710703a4b64ec75b0a833976e6fa1b7c9bf7b54cc6538",
+    ".scratch/registration262-primary-20261008T0136Z/Seal.py": "d3931c74463ebbd6a673fd81f774685b2dd4437eebdc907c22f250b0c6bca148",
+    ".scratch/registration262-primary-20261008T0136Z/Seal.ps1": "cfab515fdf67061298a395dde1a7ed5c587d528cd5f1c1294f6fa6dcc78a6677",
+    ".scratch/registration262-primary-20261008T0136Z/seal.json": "8f30c76754c7980dbe0be94143c9db6ee4423ed3dd117e33c9a67e271c76aeb0",
+    ".scratch/registration262-primary-20261008T0136Z/reused-factory-instructions.txt": "b4c5cbfc18dd18f61d7adf00a9f21975c6be59cb680412ae98ff6b86e7fd9a4d",
+    ".scratch/registration262-primary-20261008T0136Z/ledger.md": "7fa5777451fb0fca2e5d7c488aad683dbe4e790be8115e28393475383ab7c8cd",
+    ".scratch/registration262-review-20261008T0138Z/report.md": "ddd6e1d6bea997221817f859eda4c90c7f1a5738f35f650b0211497c9524481c"
+  },
+  "nativeBindings": [
+    {
+      "start": "0x145ddab20",
+      "endExclusive": "0x145ddb970",
+      "bytes": 3664,
+      "sha256": "79b7587e7e364ad4112bba5afe283a7e0767a3d38760bb86f7d75f812d839a28"
+    },
+    {
+      "start": "0x145dd4570",
+      "endExclusive": "0x145dd4a7c",
+      "bytes": 1292,
+      "sha256": "6d871f920d3cb9783ea373e3d783ee3f09a6221cf59342c3091c317bf76cd752"
+    },
+    {
+      "start": "0x145dd05d0",
+      "endExclusive": "0x145dd06e0",
+      "bytes": 272,
+      "sha256": "ea8909fa5ea1521faaace142476fe6aa82f88b0c4568fc61c5df703eb140b3be"
+    },
+    {
+      "start": "0x145ddd470",
+      "endExclusive": "0x145ddd4d5",
+      "bytes": 101,
+      "sha256": "592bf1bcb58ab69a941230426a3ea904730c605362a38c809b94b4f61f26eb67"
+    },
+    {
+      "start": "0x145ddd4d5",
+      "endExclusive": "0x145ddd4fe",
+      "bytes": 41,
+      "sha256": "a9599bd70b4adcdc15e13c25e38302f28ad7a421cc7fc6733d972dbd92a21297"
+    },
+    {
+      "start": "0x145ddd4fe",
+      "endExclusive": "0x145ddd908",
+      "bytes": 1034,
+      "sha256": "e79c3bf98a2fd89ea9a63ba0ee68651fa24fdf65b08eccd46b13e5cb8545be16"
+    },
+    {
+      "start": "0x145ddd908",
+      "endExclusive": "0x145ddd928",
+      "bytes": 32,
+      "sha256": "f1a73caba8af020fd936da6d0c53bc8e815cec44eeaab165f9bc52e4ffa405d0"
+    },
+    {
+      "start": "0x145ddd928",
+      "endExclusive": "0x145ddd938",
+      "bytes": 16,
+      "sha256": "99b9ff65c1d64e6fd2ec41ca0418dc563e1b9dd668bd2c0c72294ca368c30a39"
+    }
+  ],
+  "reusedFactoryNativeBinding": {
+    "start": "0x145dbae90",
+    "endExclusive": "0x145dbbb7a",
+    "bytes": 3306,
+    "sha256": "aebeef23daa2079ef3f5ecf2ee0058deda44275cf85356bd99f497aaa04eead8"
+  },
+  "tableBindings": [
+    {
+      "start": "0x148480670",
+      "bytes": 192,
+      "sha256": "32ac6b198580ed1a635d9ad9ca097c752e3aa46b840ea1064943c49fd3e358cd",
+      "artifact": {
+        "path": ".scratch/registration262-worker-20261008T0126Z/table-148480670.json",
+        "sha256": "476602d6c22a95a51ed6c68e6de890fa4ea6321a8c087c217aa0621b3f014e04"
+      },
+      "slots": {
+        "+0x10": "0x145dd05d0",
+        "+0x18": "0x140f6fa10",
+        "+0x90": "0x145ddd470"
+      }
+    }
+  ],
+  "callbackConstruction": {
+    "factory": "0x145dbae90",
+    "condition": "earlier opaque interface-call result saved in ESI equals zero",
+    "conditionSites": [
+      "0x145dbb960",
+      "0x145dbb962"
+    ],
+    "callableBytes": 24,
+    "callback": "0x145ddab20",
+    "receiver": "wrapper owner",
+    "passedTo": "0x14149c930",
+    "savedReturnAddressPassedTo": "0x140e863f0",
+    "destinationAddressOffset": "0x2cd8",
+    "limit": "Opaque helper effects and actual scheduling/thread execution unproved; returned-handle role is interpretation"
+  },
+  "internalQueue": {
+    "callback": "0x145ddab20",
+    "stopByteOffset": "0x2ce8",
+    "arrayOffset": "0x2c0",
+    "blockBoundOperandOffset": "0x2c8",
+    "cursorOffset": "0x2d0",
+    "depthOffset": "0x2d8",
+    "blockEntries": 16,
+    "recordTagBits": 32,
+    "selectedTags": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "limit": "Internal tagged-record drain with valid structures, not a proved byte-stream drain or observed queue population"
+  },
+  "selectedDispatch": {
+    "tag2Condition": "p=*(record+0x10) is nonnull; p is separate from the tagged record",
+    "tag2": [
+      "optional owner+0x30 object virtual+0x20 with p+0x28",
+      "owner+0x10 object virtual+0x10 with p"
+    ],
+    "owner10Binding": "Incoming config+8 interface when nonnull, otherwise successful0x60 allocation initialized with table148480670",
+    "fallbackMethods": {
+      "0x10": "0x145dd05d0",
+      "0x90": "0x145ddd470"
+    },
+    "unlinkMethod": "Clears *p before searching; on matching node unlinks it, invokes opaque disposal/allocator-like calls with extent0x1f8/alignment8 and decrements list count",
+    "periodic": [
+      "0x145dd4570",
+      "owner+0x10 virtual+0x90"
+    ],
+    "limit": "Selected fallback methods are conditional; supplied interface, opaque helpers and side effects unknown"
+  },
+  "postDrainCondition": "null-pop continuation; complete internal drain assumes valid nonnull record entries and does not establish queued-byte processing",
+  "postDrain": [
+    {
+      "site": "0x145ddb4e1",
+      "callee": "0x145dddfa0",
+      "receiver": "original owner",
+      "bodyQueried": false
+    },
+    {
+      "site": "0x145ddb4ec",
+      "callee": "(*owner) virtual+0x8",
+      "receiver": "*owner",
+      "bodyQueried": false
+    },
+    {
+      "site": "0x145ddb4f2",
+      "callee": "0x145ddeee0",
+      "receiver": "original owner",
+      "bodyQueried": false
+    }
+  ],
+  "verification": {
+    "primarySeal": ".scratch/registration262-primary-20261008T0136Z/seal.json",
+    "newFunctionRoots": 4,
+    "newNativeRanges": 8,
+    "artifactBindings": 25,
+    "toolBindings": 4,
+    "tableWindows": 1,
+    "uniqueNewExecutableBytes": 6452,
+    "reusedFactoryBytes": 3306,
+    "queryLimits": {
+      "newPdataFunctions": 4,
+      "maxNewPdataFunctions": 4,
+      "newTableWindows": 1,
+      "maxNewTableWindows": 4,
+      "uniqueSelectedExecutableBytes": 6452,
+      "maxSelectedExecutableBytes": 1048576,
+      "automaticAnalysis": false,
+      "perFunctionTimeoutSeconds": 30
+    }
+  },
+  "adversarialReview": {
+    "result": "K366/K367 survived with condition/pointer/matching-node/null-pop precision; actual byte path unresolved",
+    "newNativeQueries": false,
+    "runtimeExecuted": false
+  },
+  "counterEvidence": [
+    "Primary corrected a qword element index0x59b to actual byte offset0x2cd8, confirmed by existing factory instructions.",
+    "Primary separated tag2 optional owner+0x30 callback receiver from owner+0x10 dispatch receiver.",
+    "Extent0x1f8 belongs to an opaque allocator/disposal-like call, not a proved byte-copy size.",
+    "No direct old chunk-helper reference in selected bodies is bounded negative evidence only; unqueried post-drain/indirect calls may access those queues."
+  ],
+  "limits": [
+    "Conditional normal construction/valid structures only; scheduling/runtime interface selection/queue population/lifetimes unobserved.",
+    "Internal ring is distinct from prior child+0x90+mode*0x40 chunk lists. No complete queued-byte drain, packet assembly or broad absence-of-send result.",
+    "Post-drain helpers/body and lower+8 are the next source joins; no encoder/classifier/reply/trial change follows.",
+    "Carrier placement/current type binding/authentication/response choice/native world and Milestone1 remain unproved."
+  ],
+  "cleanup": {
+    "allQueryChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}
