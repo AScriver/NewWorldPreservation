@@ -1,5 +1,30 @@
 # Evidence ledger
 
+## Asynchronous context into creation — October8, #213
+
+Clean source-query baseline maincdefd4ef; owned image8654f01d…,
+build22469132/version1.400.6031.6004151, mappingf1e2385f….
+[Original trace](ASYNC_CONTEXT_CREATION.md) and
+[receipt](../research/evidence/current-async-context-creation.json) bind exact
+private seals and current original inputs. New public documents/catalog are
+task-owned dirty output; runtime code, test inputs and the owned image are unchanged.
+
+| ID | Claim | Classification / limit | Evidence |
+|---|---|---|---|
+| K445 | Global ClientContext publication precedes loader Initialize and per-port readiness | Strongly source-supported: Init constructs/publishes base+2c0;14100a290 returns its holder,141025ee0/handler recover the base. Reachability is not usable SDK or readiness proof. |146440d75..db0;146448ee8→14171b850;14643e826..868; Architect sealed O1/O2 |
+| K446 | Registered console map handling joins async unload/work-drain phases to ready publication | Strongly source-supported conditional bus/table route: map callback→game+a8→146467f50→work predicate146420cc0→game update14646c720→virtual1f8/14644b980. It permits/reissues map change, not proven finished new-map loading. Interceptors/runtime enablement/work/phase remain unobserved. | Exact registered holder/table/thunk adjustments and primary/derived slots; trace K446 section/private source seal |
+| K447 | Ready setter drains retained input through actual port handler | Strongly source-supported: first-wrapper actor+b0 port stores ready at145a951a8;146455e90 moves/clears port+c8 then replays virtual8 before separate ordered entries. Ready/nonnull context and further gates remain required. No actual trial replay or request/generation identity established. |145a95160;146455eb5..fbd;14643e7b0; first-wrapper14644bad7..baf5 |
+| K448 | False08 type8 path requires exact port byte/sequence and does not queue a mismatch through its helper | Strongly source-supported: R14 port/R12 bundle/R13 recipient; bundle+8 selects policy, byte30/sequence28 compare port80/70; queue permission false. Exact match advances cursor and conditionally calls14175ccc0; mismatch skips it. Other pending drain is not retry proof. |14643e7d7/ea2c/eac5/eb62..83;14644b280; corrected Investigator supplement supersedes first-pass owner-field attribution |
+| K449 | Canonical empty and closed107B creation both omit sequence and select false08 | Executed original local codec/exact preserved candidate check: field30/31=0, flag08false, payload0/98. Canonical bytes/hash, not captured wire or observed native decoding. |candidate-fields.json; candidateSHA6c02da12…; current original codec/composer hashes |
+| K450 | Conditional creation dispatch still differs from live local-player readiness | Strongly source-supported existing parser/application/resource route14175ccc0→146af20d0/2340→141717fc0→14178db00→registered141747c60. Actor wait additionally needs ready, Registry and live local pointer/guard. Actual class/resource/result/designation/control remain unknown. | Existing recipient/member/application/binding receipts; fresh four-function current-image/old-seal verification145a7d4c0/145a923c0/14644a070/146800d10 |
+| K451 | Known cursor states expose a conditional default-bundle admission rejection | Strongly source-supported constants/branches: ctor70/78=UINT64_MAX, reset70/78=1, context80 published by conditional LevelInfo+a2 branch. A ctor sentinel match advances to0; fresh-factory absent sequence remainsMAX and cannot match0/1. Native reused destinations/partial mutation are not modeled. Default LevelInfo does not prove reset ran. Actual trial state/order/other writers remain unread. |149f3fdd0/dd8;1463ff888..89e;146463652..664;14644690f..946/c45..50; TYPE8_BUNDLE_BODY absent-reader/factory limits; original source-derived control table |
+| K452 | Static review and15 source-derived controls retain separate phase acceptance | Executed original models/canonical checks and independent targeted source/hash review; no game code or native replay. Holder-accessor wording corrected; unsupported historical-anchor correction withdrawn. Imported Capstone5.0.7 distinguished from distributionmetadata5.0.9; failures/first-pass corrections retained. Full #213/native acceptance remains partial. | Private review a7c6d7c2…; source/control/failed-query seals and affected validation in receipt; no new runtime resource |
+
+Immediate readiness=false, ACKs and the human spawn timeout do not identify the
+failed native predicate. The next source-backed implementation is context-scoped
+bundle sequencing followed by creation/resource/designation verification; no
+delay change or additional native launch is admitted by this trace.
+
 ## Current registration/fresh-player attempt — October8, #214, partial
 
 [Receipt](../research/evidence/current-registration-player-trial.json) pins clean

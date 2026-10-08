@@ -1,5 +1,28 @@
 # Milestone 1 roadmap
 
+## Asynchronous context and bundle admission — October8, #213, partial
+
+[K445–K451](ASYNC_CONTEXT_CREATION.md) now join context publication/Initialize,
+registered console map dispatch, asynchronous unload work, game update,
+first-wrapper port readiness, retained-message replay and the conditional
+type8 parser/application/resource-creation route. Ready admits delivery around
+a map change; it does not prove completed map loading or local-player control.
+
+The closed trial's canonical empty and107B creation bundles both omit sequence
+and select the false08 gate. Under fresh native object defaults, current source
+requires exact port context/sequence:
+a fresh sentinel match advances the cursor to0; reset initializes it to1. A
+subsequent absent sequence cannot match either0 or1 and this call does not queue
+the rejected object. This is a concrete conditional admission gap, with15
+original source-derived controls; actual trial cursor/order/reset remains unread.
+
+Next agent work: establish and implement context-scoped bundle sequence ownership
+for the composed bootstrap/creation path, preserving Carrier counters separately.
+Then verify conditional creation/resource/identity/designation and the live local
+Registry slot. No longer-delay guess, new observation site or native retry is
+authorized. Full #213/native player acceptance remains partial; existing client
+archive/runtime tests are reused, and no user action is pending for this trace.
+
 ## Current registration/fresh-player attempt — October8, #214, partial
 
 [K441–K444](CURRENT_REGISTRATION_PLAYER_TRIAL.md): the admitted clean291cee63
@@ -15,8 +38,9 @@ marker precedes creation, so it cannot demonstrate rejection of that candidate.
 The subsequent peer idle/service failure closed the owned game; exact cleanup
 and independent readback passed. The grant is consumed, with no second launch.
 
-Next source question: asynchronous map/context handoff into type8 dispatch and
-creation/application, retaining class/resource/identity/designation uncertainty.
+At closure the next source question was asynchronous map/context handoff into
+type8 dispatch/creation. The static join and admission finding are now recorded
+above, retaining runtime class/resource/identity/designation uncertainty.
 No guessed delay or packet fix follows from this result. Runtime/tests are
 unchanged from full2059/fivePS validation; fresh affected evidence checks apply.
 The replacement-server milestone remains open; no user action is pending for
@@ -1517,25 +1541,26 @@ Compression/reliability/reassembly fixes are narrowly pulled into M1-03/06/08 **
 ## Exact next blocker
 
 October8 server implementation is active: one fresh visible controllable private
-player remains the immediate milestone. The current registration responder now
-composes with the existing bootstrap sequence. The October8 #214 attempt now
-observes physical request parsing, reply receipt, self callback and context
-activation on that admitted route. Exact incoming wire selector/authentication
-semantics and later asynchronous map/context conditions remain unproved.
-Sent LevelInfo or an empty bundle does not prove map readiness;
-readiness may depend on player construction and must be observed rather than
-assumed to complete independently. See [the native result](CURRENT_REGISTRATION_BOOTSTRAP_TRIAL.md).
+player remains the immediate milestone. Current registration and the original
+fresh creation candidate are integrated; the closed #214 attempt sent all six
+stages with ACK coverage and context activation but ended in a human-reported
+spawn timeout. Its single grant is consumed. No native creation, stable player
+or control was established. [Native result](CURRENT_REGISTRATION_PLAYER_TRIAL.md).
 
-The creation/identity candidate is already constructed offline. Its October7
-native attempt stopped before registration/creation on the repeated-connect
-guard; the subsequent offline guard repair is not a successful native rerun.
-Resource index9, actual Carrier delivery, fresh identity propagation,
-designation, camera/input and movement remain separate unproved conditions.
-The #286 offline integration now admits the complete original candidate with
-current registration. Its fresh private proposal and synthetic checks establish
-preparation only; a further native attempt requires a specific grant. The separate
-readiness boundary remains unread. The #214 grant is consumed. Selection/
-apparent-map reports establish no stable player. See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
+The [asynchronous source trace](ASYNC_CONTEXT_CREATION.md) now closes context
+publication→map-unload continuation→port admission→retained-message replay and
+the conditional creation route. Its concrete next blocker is bundle admission:
+the composed default bundles omit sequence despite the selected handler's exact
+context/cursor requirement. Correct context-scoped sequence ownership requires
+the actual initialization/order; it must not reuse Carrier envelope/reliable
+counters or assume a timer establishes readiness. Source controls demonstrate
+rejection in known cursor states, not the cause of the closed trial.
+
+After admission, resource index9, concrete class/body acceptance, fresh identity,
+designation and live Registry lifetime still govern camera/input/movement.
+Incoming selector/authentication semantics and later native async state remain
+unproved. Another client attempt requires a separately prepared specific grant.
+See the [one-player checkpoint](ONE_PLAYER_MILESTONE.md).
 
 October5 tooling improvement: function-scoped Ghidra is now the default for
 bounded native questions. The original helper imports selected PDATA/chained-unwind

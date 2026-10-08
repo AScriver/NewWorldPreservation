@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-async-context-creation",
+      "roadmapTasks": ["M1-06C.2"],
+      "claimIds": ["K445", "K446", "K447", "K448", "K449", "K450", "K451", "K452"],
+      "docs": ["docs/ASYNC_CONTEXT_CREATION.md"],
+      "scripts": ["scripts/ghidra_function_slice.py", "scripts/current_type8_bundle_body.py", "scripts/current_world_activation.py", "scripts/current_player_creation_candidate.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-async-context-creation.json", "classification": "source-inference", "scope": "Exact conditional async unload/port admission/replay/creation joins, canonical candidate fields and original source-derived sequencing/actor controls"}],
+      "limit": "Static source, original controlled models and canonical files only; native phase/counters/reset/dispatch/construction/designation remain unread. Ready permits map change, not completed loading. No native cause, gameplay acceptance, wire/timing change or new launch authority."
+    },
+    {
       "id": "current-registration-player-trial",
       "roadmapTasks": ["M1-06C.3"],
       "claimIds": ["K441", "K442", "K443", "K444"],
@@ -2535,6 +2546,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-async-context-creation.json",
     "research/evidence/current-registration-trial-preparation.json",
     "research/evidence/current-registration-bootstrap.json",
     "research/evidence/current-registration-bootstrap-trial.json",

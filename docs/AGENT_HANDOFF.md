@@ -1,5 +1,31 @@
 # Agent handoff
 
+## Asynchronous context into creation — October8, #213, partial
+
+- Clean source-query baseline maincdefd4ef; pinned owned image/build/type mapping
+  reused. [K445–K451](ASYNC_CONTEXT_CREATION.md) and original receipt bind source
+  seals, canonical candidate fields, review and affected checks.
+- Global ClientContext is published before Initialize. Registered map handling
+  joins game-owned async unload/job/AssetBus/reference drain and update phases
+  to first-wrapper port readiness and replay of retained input. This permits a
+  map change/message admission; it does not prove completed map loading.
+- Exact direct-branch aliases: portR14, incoming bundleR12, recipientR13.
+  False bundle08 requires exact byte/expected-sequence match with queue permission
+  false. Both canonical bundles omit sequence; known ctor→0/reset1 states expose
+  a conditional admission rejection.15 original controls passed; actual native
+  order/counters/parse/create/designation remain unread, with no timeout cause claim.
+- Review corrected holder-accessor wording and rejected an unnecessary historical
+  anchor correction. Preserve first-pass attribution/tool-version failures and
+  supplements. Imported Capstone5.0.7 differs from distributionmetadata5.0.9.
+- Agent next: source-supported context-scoped bundle sequence ownership for the
+  composed path, then creation/resource/identity/designation/live Registry checks.
+  Carrier counters are separate. No runtime/scheduler/wire change in this unit.
+- Full #213 acceptance stays partial. No user action, native resource, endpoint,
+  trust/routing mutation or extra observer site. Client archive reused; useful
+  sealed private query/control evidence and sparse Ghidra DBs retained, no new
+  production scaffolding. Reuse unchanged2059/fivePS and run affected evidence
+  checks; staged hygiene/local commit/claim release belong to closure receipt.
+
 ## Closed current registration/fresh-player attempt — October8, #214, partial
 
 - Clean main291cee63; user-approved one attempt, now consumed. Reused verified

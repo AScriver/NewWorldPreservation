@@ -1,0 +1,345 @@
+{
+  "schema": 1,
+  "recordedUtc": "2026-10-08T16:06:05.874239-07:00",
+  "task": {
+    "workItemId": 164,
+    "actionableId": 213,
+    "acceptance": "Partial; completed bounded static trace, native phase/player acceptance open"
+  },
+  "status": "static-trace-and-conditional-admission-controls-verified",
+  "classification": "source-inference with explicitly identified original controlled/canonical checks",
+  "checkout": {
+    "baselineHead": "cdefd4ef6834af070d5c1c5ac723203068eb6eec",
+    "baselineBranch": "main",
+    "sourceQueryBaselineClean": true,
+    "currentHead": "cdefd4ef6834af070d5c1c5ac723203068eb6eec",
+    "ownedOutputStatus": [
+      "M  docs/AGENT_HANDOFF.md",
+      "AM docs/ASYNC_CONTEXT_CREATION.md",
+      "MM docs/EVIDENCE_LEDGER.md",
+      "MM docs/ROADMAP.md",
+      "M  docs/TASK_BRIEFS.md",
+      "M  research/agent-evidence-index.json",
+      "AM research/evidence/current-async-context-creation.json"
+    ],
+    "runtimeSourceModified": false,
+    "supplementSealWorktree": "one primary-owned untracked docs/ASYNC_CONTEXT_CREATION.md; clean query baseline differs from final sealing state"
+  },
+  "image": {
+    "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "fileVersion": "1.400.6031.6004151",
+    "steamApp": "1063730",
+    "steamBuild": "22469132",
+    "typeMappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "ownedCopyReused": true
+  },
+  "sourceQueries": [
+    {
+      "path": ".scratch/async-context-owner-20261008T2230/query1/receipt.json",
+      "sha256": "91b7d2c1b1aada4bb270ee6285e8a19306bf351f696aec0b53a86e09eee30108",
+      "functionCount": 2,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-context-owner-20261008T2230/query2/receipt.json",
+      "sha256": "ef235d17bf9de21a2c1ab550faab379243bf962b706b43d4246e37e8f61cb7d9",
+      "functionCount": 4,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-context-owner-20261008T2230/query3/receipt.json",
+      "sha256": "b4f9ee5a11a611df3348a585e9e2366866817e9d9d91220226ace9ec2369835a",
+      "functionCount": 4,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-context-owner-20261008T2230/query4/receipt.json",
+      "sha256": "ed6852c75fd68c21b8855685a3cc6662aa77bf8c7a3227850e680aef7b0b1bb5",
+      "functionCount": 3,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-context-owner-20261008T2230/query5/receipt.json",
+      "sha256": "9cdf91fcdd382105aa09e1d6086355b355c00466fa8f4023bb4e0f0417eb6cf6",
+      "functionCount": 3,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-bundle-dispatch-20261008T2230/output/receipt.json",
+      "sha256": "06e75bb61d834c08999782f20f012fe0563c90837e19b669726a76861fef115f",
+      "functionCount": 2,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    },
+    {
+      "path": ".scratch/async-bundle-dispatch-20261008T2230/fields/ghidra-output/receipt.json",
+      "sha256": "76471625c7c939f8b18afb594384885295fa7a41852967f7f88e655f741589a7",
+      "functionCount": 4,
+      "automaticAnalysis": false,
+      "timeoutSecondsPerFunction": 30
+    }
+  ],
+  "sourceSeals": {
+    "architect": {
+      "path": ".scratch/async-context-owner-20261008T2230/evidence-seal.json",
+      "sha256": "1605e8db40a625ac7db3864fc9ef8eb972e98afb2c9c533d9547df48ffa81d3c"
+    },
+    "investigatorOriginalHistorical": {
+      "path": ".scratch/async-bundle-dispatch-20261008T2230/evidence-seal.json",
+      "sha256": "06bd0751d91510b6c4875d3e3623f68370a2fcb7c590fd1087bcb2f784bb4b2a"
+    },
+    "investigatorCorrection": {
+      "path": ".scratch/async-bundle-dispatch-20261008T2230/evidence-seal-supplement.json",
+      "sha256": "cb3c6b4be8c1656bc5c6b4b80ded1107465aa9edb456ad07c78ff18dea2e3655"
+    },
+    "adversary": {
+      "path": ".scratch/async-context-creation-review-20261008T2250/evidence-seal.json",
+      "sha256": "a7c6d7c2bbb03438f50c8557b24e80ff5389748d4f23317dab188ba48a19e62e"
+    },
+    "primaryInstructions": {
+      "path": ".scratch/async-context-creation-20261008T2230/primary-instructions.json",
+      "sha256": "79ecf212aebcfdeaa3320952e569a5eba30d7f76255ae20957287e2c13ca7fae"
+    },
+    "canonicalFields": {
+      "path": ".scratch/async-context-creation-20261008T2230/candidate-fields.json",
+      "sha256": "b23bdf70c07cda32ac0546f8f16261361237b9045725308c5b60f09e23ca2d6f"
+    },
+    "phaseControls": {
+      "path": ".scratch/async-context-creation-20261008T2230/phase-controls.json",
+      "sha256": "b642b2170dcd924ae0851324b4a4058ddd7059209dda876c785a3700486f2826"
+    }
+  },
+  "privateArtifactHashesVerified": 138,
+  "historicalPublicMetadataChanged": [
+    {
+      "path": "docs/EVIDENCE_LEDGER.md",
+      "recordedSha256": "02a459452a4f5a849ca4c7e341c0ba850ce8e6f2518eed6cd8d6def44c2efa8b",
+      "currentSha256": "81aecf0800b2638748e4a8c8a63da215fffb88430a0e9f9d1f1db6bf441944a5",
+      "reason": "task-owned metadata updated after clean query baseline"
+    }
+  ],
+  "claims": [
+    {
+      "id": "K445",
+      "classification": "strongly source-supported",
+      "claim": "Global ClientContext publication precedes Initialize/per-port readiness; holder accessor is distinct from caller base recovery."
+    },
+    {
+      "id": "K446",
+      "classification": "strongly source-supported",
+      "claim": "Registered map dispatch and game update join asynchronous unloading/work drain to ready publication around permitting/reissuing map change; no completed-load assertion."
+    },
+    {
+      "id": "K447",
+      "classification": "strongly source-supported",
+      "claim": "First-wrapper ready publication replays moved/cleared pre-ready input through port handler before distinct ordered entries; no actual trial replay observed."
+    },
+    {
+      "id": "K448",
+      "classification": "strongly source-supported",
+      "claim": "False08 direct bundle branch compares port80/70, advances on exact match, skips recipient on mismatch with helper queue permission false."
+    },
+    {
+      "id": "K449",
+      "classification": "original offline-executed canonical codec check",
+      "claim": "Both canonical empty/107B creation bundles omit sequence, use30/31 zero and08false, payload lengths0/98; no wire/native decoding claim."
+    },
+    {
+      "id": "K450",
+      "classification": "strongly source-supported",
+      "claim": "Conditional parser/member/resource dispatch remains separate from actor-ready/live local Registry pointer/guard and actual player control."
+    },
+    {
+      "id": "K451",
+      "classification": "strongly source-supported conditional inference",
+      "claim": "Ctor cursorMAX can admit one exact absent sequence and advance0; reset cursor1 or prior-match0 rejects absent sequence. LevelInfo reset/publication is conditional and default flags do not prove it ran."
+    },
+    {
+      "id": "K452",
+      "classification": "original offline-executed controls and source review",
+      "claim": "15 source-derived controls and targeted corrected-source review passed within limits; failures/historical corrections retained, native aggregate Partial."
+    }
+  ],
+  "canonicalCandidateFields": [
+    {
+      "label": "original-empty-bundle",
+      "typedBytes": 9,
+      "sha256": "6cd106a087a9f42b861e328437fbffa874e4321895134c0227c999e8dd36e600",
+      "sequencePresent": false,
+      "nativeSequenceSentinelIfAbsent": "0xffffffffffffffff",
+      "field30": 0,
+      "field31": 0,
+      "field08": false,
+      "optionalStructurePresent": false,
+      "payloadBytes": 0
+    },
+    {
+      "label": "exact-closed-trial-creation",
+      "typedBytes": 107,
+      "sha256": "6c02da121095bd0e5fa938db66a635ed25a3fbf4722063d2eb81bae6b9607310",
+      "sequencePresent": false,
+      "nativeSequenceSentinelIfAbsent": "0xffffffffffffffff",
+      "field30": 0,
+      "field31": 0,
+      "field08": false,
+      "optionalStructurePresent": false,
+      "payloadBytes": 98
+    }
+  ],
+  "controls": {
+    "count": 15,
+    "status": "passed",
+    "privateReceipt": ".scratch/async-context-creation-20261008T2230/phase-controls.json",
+    "gameCodeExecuted": false,
+    "trialReplayed": false,
+    "limits": [
+      "Known input/state branches only; not native conformance or trial replay",
+      "No alternate true08 policy model, actual runtime ordering, interceptors, resets or additional writers inferred",
+      "Conditional recipient call does not prove parsing/creation/designation/player control"
+    ]
+  },
+  "review": {
+    "status": "corrected K445-K451 survived within static scope",
+    "sealSha256": "a7c6d7c2bbb03438f50c8557b24e80ff5389748d4f23317dab188ba48a19e62e",
+    "corrections": [
+      "holder accessor wording corrected",
+      "port/bundle/recipient aliases corrected with historical first pass retained",
+      "imported Capstone5.0.7 distinguished from distributionmetadata5.0.9",
+      "historical setter-anchor defect characterization withdrawn",
+      "conditional LevelInfo flags/reset and source-query versus sealing worktree state retained"
+    ]
+  },
+  "tools": {
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "sharedPython": "3.11.9",
+    "capstoneImportedModule": "5.0.7",
+    "capstoneDistributionMetadata": "5.0.9"
+  },
+  "failedPartialRetained": [
+    "Architect inspect.py shadowing and no-PDATA leaf attempts, repaired narrow/fixed-range checks",
+    "Investigator initial Capstone import failure and historical attribution/version corrections",
+    "Primary no-PDATA leaf rejection, repaired exact sealed instruction comparison; explicit switch table data",
+    "Adversary failed read-only filename/glob queries, no evidence derived"
+  ],
+  "limits": [
+    "No new native execution or actual async phase/work/cursor/reset/dispatch observed",
+    "No diagnosis of closed trial timeout or proof of candidate rejection in that run",
+    "No concrete class/resource/build/designation/control/restart acceptance",
+    "No completed map-load assertion from port-ready",
+    "No actual Carrier wire capture claimed from canonical files",
+    "Canonical None/absent-sequence arithmetic assumes fresh native factory defaultMAX; reused destination and partial native decoder mutation are not modeled or observed",
+    "No alternate true08 policy or unexpanded writers/interceptors/generation/shutdown guarantee assumed"
+  ],
+  "next": "Establish/implement source-supported context-scoped bundle sequencing separately from Carrier counters, then verify actual creation/resource/designation under separately authorized procedure",
+  "cleanup": {
+    "clientLaunched": false,
+    "processReads": false,
+    "hooks": false,
+    "captures": false,
+    "portsOrListenersCreated": false,
+    "endpointContact": false,
+    "hostsTrustEacModified": false,
+    "finiteHelpersExited": true,
+    "privateSparseDatabasesRetained": true,
+    "privateSourceControlAndFailedQueryEvidenceRetained": true,
+    "newProductionScaffolding": false,
+    "publicationPerformed": false
+  },
+  "sources": {
+    "AGENTS.md": "42a7d55ccf45c0706576b336ad96b71decaf55df55f476fda4705b505bc19363",
+    "docs/AGENT_START.md": "8643a7f28aa48c56ffc375420f2960275e4cbab3d7f1dc266c884b3ec744f6d1",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/carrier_registration_probe.py": "c264bc24ca542311e87a7ad1e98ebd64921d3d0cc2b73eaac64a8ab61d215909",
+    "scripts/Invoke-FridaPrivateTrial.ps1": "bb91c2e8a8da4eec5a9c212444fc7bc47880d3ef4639ccbf7b196fa3d630e291",
+    "scripts/current_type8_bundle_body.py": "266f01da9b3dfd1c5bf307018e9d0d3c9ad6737be45ffeda564e046969018105",
+    "scripts/current_world_activation.py": "cb9356fa42d3be788b19c1cb07e3fa01c78309091951b31656dfb19ddbc2b3dc",
+    "scripts/current_player_creation_candidate.py": "547f63eb41e13693d8e2484072da347ccfe9f5c2511db9f65fb4a294de3a4b2d",
+    "tests/test_project_preflight.py": "b743a3333c56e4017b5e12aa19e549c6bae7abe5ee0ab237ecc6da8c992fe48a",
+    "tests/test_offline_runner.py": "7466b73730171a74532c5889cc36f4ee2c257ad35fec0a768b2b5c173eb147e0",
+    "research/evidence/current-type8-recipient-join.json": "83b55f90333ea2603d5b692203909702ec9b355163bdaf6b78953f0d2561d7d5",
+    "research/evidence/current-player-member-application.json": "f44d7847d96b02fab4e3ec6a92fac45319f7a156b533de2e341a6cb964881e3b",
+    "research/evidence/current-player-construction-join.json": "2cbca0b1ec27d31c15ee4d8a61e8cd2f580f6cf56da014ed0e51f55255b40d3c",
+    "research/evidence/current-registration-player-trial.json": "0f3d003ca63430a1efc8af1b2f7671d215b84afaf19b8412c726dc1ed2a36fa8",
+    "docs/ASYNC_CONTEXT_CREATION.md": "5a2a387b006be74a4fd303cc450227f277288b0831c2c7b1261d29712b4ad03e"
+  },
+  "validation": {
+    "sourceAndPrivateHashes": {
+      "status": "passed",
+      "privateArtifactsVerified": 138,
+      "sourceQueryCount": 7
+    },
+    "affectedEvidenceCatalog": {
+      "status": "passed",
+      "command": [
+        "C:\\Code\\NewWorldPreservation\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_project_preflight.py",
+        "tests/test_offline_runner.py",
+        "--junitxml=C:\\Code\\NewWorldPreservation\\.scratch\\async-context-creation-20261008T2230\\affected-junit.xml"
+      ],
+      "junit": ".scratch/async-context-creation-20261008T2230/affected-junit.xml",
+      "counts": {
+        "tests": 36,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "indexReady": true,
+      "newReceiptFreshness": "local-bindings-match",
+      "checkedPublicBindings": 16,
+      "nativeClientExecuted": false
+    },
+    "workspaceReuse": {
+      "status": "reused-unaffected-inputs",
+      "receipt": ".scratch/offline-validation/run-7qeh5b62/receipt.json",
+      "sha256": "d73188468626b1c17a68750c45d4583a56779b92693085a09bb0b5e8a4687869",
+      "pythonCases": 2059,
+      "pythonModules": 52,
+      "powerShellSuites": 5,
+      "closedLoopbackCliPriorPassed": true,
+      "checkedInputs": 301,
+      "matchingInputs": 297,
+      "changedMetadataOnly": [
+        "docs/EVIDENCE_LEDGER.md",
+        "docs/ROADMAP.md",
+        "research/agent-evidence-index.json",
+        "research/evidence/current-registration-player-integration.json"
+      ],
+      "runtimeAndLockMatch": true,
+      "runtimeSourcesTestsConfigurationFixturesChanged": false,
+      "limit": "Historical named workspace checks reused with exact unaffected inputs; fresh affected metadata checks executed separately"
+    },
+    "stagedHygiene": {
+      "status": "passed",
+      "snapshot": "First complete staged snapshot before this metadata update; final candidate rescanned privately",
+      "blobsScanned": 421,
+      "bytesScanned": 5311950,
+      "findings": 0,
+      "initialInventorySha256": "f5a8d8f03e4cebd6831a72ac1af279eef139e16de7f24c78a969fe18be56d08a",
+      "finalCandidateReceipt": ".scratch/async-context-creation-20261008T2230/hygiene-final.json",
+      "reviewedMarkers": [
+        {
+          "path": "tests/test_rep_anchor_candidate.py",
+          "rule": "private-key"
+        }
+      ]
+    },
+    "actualProjectPreflight": {
+      "status": "passed",
+      "workspaceReady": true,
+      "boundaryCount": 81,
+      "newReceiptFreshness": "local-bindings-match",
+      "report": ".scratch/async-context-creation-20261008T2230/preflight.json",
+      "reportSha256": "56b833720f493b17fddf3cbd1fe891bef875cf2342286820bd84857aeee77de5"
+    }
+  }
+}

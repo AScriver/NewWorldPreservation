@@ -1,5 +1,35 @@
 # Bounded task briefs
 
+## #213 — asynchronous context into native creation trace (M, partial)
+
+- User outcome: trace actual asynchronous map/context setup→native creation
+  handling. Scope workItem164, exact leaf213; retain the parent's phase acceptance.
+- Inputs: clean maincdefd4ef, owned image8654f01d…/build22469132,
+  mappingf1e2385f…, closed current-player trial and sealed current recipient/member
+  application/designation evidence. Distinguish source/controlled/canonical/native.
+- Primary owns ASYNC_CONTEXT_CREATION doc/receipt and small ledger/catalog/roadmap/
+  handoff additions. Independent Architect owns async loader/lifetime scratch;
+  Investigator owns bundle gate scratch; Adversary owns review scratch. Each uses
+  unique private Ghidra/output resources; no shared resource or public edit overlap.
+- Acceptance: exact context publication/Initialize/registered async continuation,
+  ready/retained replay and conditional parser/creation joins; concrete field and
+  reset/admission controls; exact material unknowns; relevant validation, privacy,
+  cleanup and local commit. No invented transition to make a fixture pass.
+- Operations: bounded pinned-image static queries and original sanitized evidence/
+  source-derived controls only. No native launch/read/hook/capture, endpoint, ports,
+  routing/trust/EAC mutation, new message, guessed delay, publication or task creation.
+- Result: K445–K451 close the static async handoff; ready permits map change rather
+  than proving finished map load. False08 default omitted-sequence pair exposes
+  conditional rejection after ctor-sentinel consumption/reset;15 original controls
+  passed. Member/class/resource/application/designation/runtime gates remain open.
+- Review: exact holder/base distinction corrected; bundle/port/recipient and
+  imported-module identity corrections retain original failures. Known LevelInfo
+  reset/publication remains conditional; default flags do not establish it ran.
+- Closure: validate affected evidence/catalog, reuse unchanged2059/fivePS/runtime
+  inputs, scoped staged hygiene/commit, retain useful private source/control receipts,
+  release claim with Partial. Agent next owns context-scoped bundle sequence
+  contract; no user action or additional client grant is pending for this trace.
+
 ## #214 — current registration and fresh-player native observation (M, partial)
 
 - Input: clean291cee63, prepared082904e8/approved19f85039,156 unchanged inputs,
