@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Same-primary incoming callback invoker — October7, #268, partial
+
+[Original source receipt](../research/evidence/current-registration-receive-invoker.json)
+pins clean0d2b02a, reused constructor/invoker/copy native bytes, tables and bounded
+candidate queries. This is owned-client incoming source for server sends; current
+replacement-server receive behavior is not established by these static edges.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K379 | Constructed secondary base+8 method conditionally invokes same-primary active+2b0 virtual+10 | Strongly source-supported table/field/ABI edges. Initial guards may return; R8 consumed before pointer reload/null branch. Closure-table edge conditional; runtime installation/table identity, delivery/rollback/success and upstream caller/producer unknown | [Conditional dispatch](REGISTRATION_RECEIVE_INVOKER.md#same-connection-and-conditional-dispatch); original native/table seal and review |
+| K380 | View-copy helper performs three sequential qword load/store pairs and returns destination | Strongly source-supported26-byte native body/24-byte object effect. Field meanings, payload address/extent, overlap guarantees and byte transparency do not follow. Failed accessor query retained; missing PDATA alone proves no leaf | [Copy limits](REGISTRATION_RECEIVE_INVOKER.md#copy-effect-and-remaining-byte-provenance); reused exact native source |
+
+Three candidate roots4858 bytes include repeated226 source and do not join an
+actual producer.128KiB raw hints/zero direct references prove no object or absence
+claim. Full Carrier/registration/native acceptance remains partial/unproved.
+
 ## Receive callback storage and argument separation — October7, #267, partial
 
 [Original source receipt](../research/evidence/current-registration-receive-callback.json)

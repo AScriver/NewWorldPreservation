@@ -2,6 +2,22 @@
 
 ## Server protocol focus — October 7
 
+Newest #268 [owned-client receive invoker](REGISTRATION_RECEIVE_INVOKER.md)
+joins secondary base+8/table+20 to the same primary flag+130/active+2b0 and its
+conditional virtual+10 call (K379/K380). R8 is moved/zeroed before the later
+active-null recheck; no delivery/rollback/success claim. Three-qword copy has
+no established field/payload meaning; active-table/runtime identity and actual
+upstream caller remain unknown. Direction is client incoming source for server
+sends, not an executed server receive path. Four attempted roots/three completed
+4858 bytes (one2242-byte duplicate),128KiB raw hints and missing-PDATA refusal
+are retained. Native/table seals and critical review pass, as do affected36
+catalog/runner checks/actual preflight and seven public/40 private bindings.
+Exact selected input-set reconciliation reuses1890/50/fivePS/closed-loopback
+support; only source metadata and two added receipts differ since that full run.
+Closure .scratch/registration268-primary-20261008T0401Z/closure.json retains the
+repaired copied-schema harness failure separately. Original codecs/adapter
+unchanged; static children exited, no live trial/resources acquired.
+
 Newest #267 [receive checkpoint](REGISTRATION_TRANSPORT_RECEIVE.md) pins selected
 primary+48 callback storage and separate stream/pair argument flow (K377/K378).
 Flag+130/helper return do not prove callable availability; RCX addresses the

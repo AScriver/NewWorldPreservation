@@ -17,6 +17,8 @@
 /research/evidence/current-registration-adapter-current.json text eol=lf
 /research/evidence/current-registration-receive-callback.json text eol=lf
 /docs/REGISTRATION_TRANSPORT_RECEIVE.md text eol=lf
+/research/evidence/current-registration-receive-invoker.json text eol=lf
+/docs/REGISTRATION_RECEIVE_INVOKER.md text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf
 /tests/test_current_token_contract.py text eol=lf

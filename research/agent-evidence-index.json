@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-receive-invoker",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K379", "K380"],
+      "docs": ["docs/REGISTRATION_RECEIVE_INVOKER.md", "docs/REGISTRATION_TRANSPORT_RECEIVE.md"],
+      "scripts": [],
+      "tests": [],
+      "evidence": [{"path": "research/evidence/current-registration-receive-invoker.json", "classification": "source-inference", "scope": "Conditional same-primary active callback invocation and three-qword view-copy effect; owned-client incoming source, aggregate byte provenance partial"}],
+      "fixtures": [],
+      "limit": "Constructed secondary this identity and closure-table edge conditional; R8 consumed before late-null branch, no delivery/rollback/success or payload transparency. Actual upstream caller/Carrier/accessors/runtime/auth/native acceptance unknown. Codecs/adapter/trial unchanged."
+    },
+    {
       "id": "current-registration-receive-callback",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K377", "K378"],
@@ -2034,6 +2045,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-receive-invoker.json",
     "research/evidence/current-registration-receive-callback.json",
     "research/evidence/current-registration-adapter-current.json",
     "research/evidence/current-registration-bit-send.json",

@@ -1,5 +1,21 @@
 # Bounded task briefs
 
+## #268 — same-primary callback invoker (M, partial)
+
+- Child267/root164/178, clean0d2b02a. Primary owns tracked original metadata/docs;
+  Investigator/reviewer own ignored268 outputs only, preserve shared files.
+  Reuse constructor/secondary table/method/copy and prior callback source first.
+- Four attempted roots/three completed4858 bytes, one2242-byte overlap;128KiB
+  raw hints and missing-PDATA accessor refusal retained. No new table query,
+  client/hooks/memory/capture/network/native trial/codecs/adapter/source edits.
+- Same-primary conditional virtual+10 invoker and three-qword object effect
+  survive primary seals/review. Retain pair-before-late-null, conditional table,
+  slot-address ABI, copy-versus-payload and client-incoming/server-send limits.
+- Affected36 catalog/runner, actual preflight/public-private bindings and exact
+  selected input-set reconciliation permit1890/50/fivePS/closed-loopback reuse.
+  Preserve scoped checkpoint and Partial tracking/release; actual upstream
+  secondary caller/view-pair producer and accessor span semantics remain open.
+
 ## #267 — concrete receive callback and byte handoff (M, partial)
 
 - Continue164/178 from clean3259724. Primary owns original contract/ledger/

@@ -1,5 +1,22 @@
 # Agent handoff
 
+## #268 same-primary receive invoker — October7, partial
+
+- [K379/K380 source contract](REGISTRATION_RECEIVE_INVOKER.md): ctor installs
+  secondary interface at primary+8; table+20 method conditionally calls the same
+  primary active+2b0 virtual+10. Guards, pointer reload and R8 consumption before
+  late null branch remain explicit; active-table148591708 identity conditional.
+- Three-qword object copy is not payload transparency. RCX=&capture.child slot
+  correction survives review. Actual secondary caller/view-pair producer unknown;
+  missing PDATA accessor query does not prove leafness. Client incoming source
+  informs server sends; no executed replacement-server receive behavior.
+- Four attempted roots/three completed4858 bytes include one2242-byte repeated
+  source.128KiB raw hints give no object/absence claim. Seals/review, affected36
+  checks/actual preflight and seven public/40 private bindings pass. Exact input
+  set reuses1890/50/fivePS/closed-loopback; closure and repaired-schema harness
+  failure retained under .scratch/registration268-primary-20261008T0401Z/.
+  Codecs/adapter unchanged; static children exited, no runtime resources.
+
 ## #267 receive callback checkpoint — October7, partial
 
 - [K377/K378 source contract](REGISTRATION_TRANSPORT_RECEIVE.md) joins selected

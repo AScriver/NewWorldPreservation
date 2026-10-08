@@ -1,0 +1,353 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "partial",
+  "workItemId": 164,
+  "actionableId": 268,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T04:18:48.563200+00:00",
+  "claimIds": [
+    "K379",
+    "K380"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "0d2b02a1acd9b5291cb56871be034e6143de795f",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "queryState": "clean0d2b02a, sourceStable true, no automatic analysis, timeout30",
+    "investigatorContext": "related continuation with inherited map; not independent first pass"
+  },
+  "direction": "Owned-client incoming transport source; relevant to replacement-server sends, not proof of server receive behavior.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "research/evidence/current-registration-bytepath.json": "a33434deca99e0572e178357aef2a86e418cb141fc3930d8c5c18cf7581751bc",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration268-receive-invoker-20261008T0401Z/REPORT.md": "f58013d8eaa6b763521461170e08760abd4126c85d156392c88bd2e0058f5df4",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/run-accessor.ps1": "4ba6e2f0ccc2180b6f2d5bc9cd6053d068f072daa649b7be26845fe9d31153ca",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/run-scan.ps1": "2266e4906b9ff839fb41253d703fee49aa0461b4a6587aa94aed6cf7fe0b4dca",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/run-slices.ps1": "0adee375cf1f4a39815755cba454516dd7078a01218133201d42c4bb5baa0e3d",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/scan-candidates.json": "b80d4633315cb56c19aa2ded374f0ab559182c69a9829ecca6c1302ef71724d3",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/scan_callback_candidates.py": "12a9967f4c7af0ee7099f27872cf254b905063ab00f45ee469e1aa7f4befcc5b",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/task-brief.md": "0af6a40ed25214af9e249b4a595fb20f210323aec682ccba4a0ab7407c9ac465",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/update-report.ps1": "192f1395652625c7e8759097737bec54a2c9f0bcb4dff4ba2532381f4c5d9074",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/write-report.ps1": "6ccf0fca568c83db6c6fa30610251b5ebd94e5c5512a34552b15f4816bd48498",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/output-slices/function-146b34780.c": "8349445893ae0d60067634d8172b996ddd17b3df9e5605ff60693746d28fef94",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/output-slices/function-146b35740.c": "16962a039f1d994ab4d59692eb009b46dc00afc84d76cdcc5336ad60b4db0659",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/output-slices/function-146b3b610.c": "b46cdab68fbefe712ca4f0c8598db52e056cb4a40b3fbbe1b7db99c2a38df00a",
+    ".scratch/registration268-receive-invoker-20261008T0401Z/output-slices/receipt.json": "58c0645e1e87f0c38a48cde35d3fccf4a973388a2a289c987ff8b446f8f8bb58",
+    ".scratch/registration268-review-20261008T0412Z/report.md": "3f5c46c7712297aedd0df31ee4c5f0c7ca40748204e29b715788001e6c8d3adc",
+    ".scratch/registration-210-primary-20261005T2205Z/metadata.json": "af383492f9678aba30e0c266d72f228f410c98b88c5def515e0239fea9e85401",
+    ".scratch/bundle239-architect-20261006T1823Z/fn-140870bc0.txt": "ebec4609c40bc5bf60a20cadf27428c5a8ef70315a8ebd064b888eec288c5ba3",
+    ".scratch/registration-210-lifetime-20261005T2204Z/receive-followup/receipt-53667f090e0c.json": "34a42024871a3c813b28f6ebb44abe3f9efc5c8501446bc97f56e4be3eae3ef1",
+    ".scratch/queue226-investigator/ghidra-output/function-146b3b610.c": "b46cdab68fbefe712ca4f0c8598db52e056cb4a40b3fbbe1b7db99c2a38df00a",
+    ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b27180.txt": "96e79a0f962d4c8a3d630d8f38d04273bfc3ff04b6dec2a4e56e844b63ccbc72",
+    ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b288f0.txt": "1e7ae332aee92cfd906f577c3aac259b6d67db7fc9e4ef58b38a0c539bf4befc",
+    ".scratch/registration268-primary-20261008T0401Z/Baseline.py": "69ded087d99945822fac9e0465d1708d6cf48f8bc892ac292d94a59a86dc1655",
+    ".scratch/registration268-primary-20261008T0401Z/Baseline.ps1": "a86399b7589512cc6fef6a1a5a555030e3d857faed26cbba1070eadc50c55472",
+    ".scratch/registration268-primary-20261008T0401Z/baseline.json": "84c399bd4c68f21137a81b35033aa7cbe474e0763f0ec982ac504ccb6c9ae8bd",
+    ".scratch/registration268-primary-20261008T0401Z/ReuseSeal.py": "eb79387610f61c20ee883507e084af82346f1f9dee7a15231aed0610a0514a49",
+    ".scratch/registration268-primary-20261008T0401Z/ReuseSeal.ps1": "6279da52f97e517c6ef24e0634add7b0365a9b47d8c68cbe33a3098c27e64f05",
+    ".scratch/registration268-primary-20261008T0401Z/reuse-seal.json": "52a2b2953e737e5d02b56b23d1c7a603d17bc259fc8314ba42b276dfabe8b701",
+    ".scratch/registration268-primary-20261008T0401Z/Seal.py": "2f4e09288f246e6bbfd7496f7ecb40a2141255e0f9c11316a6ef0a8df8bbb25b",
+    ".scratch/registration268-primary-20261008T0401Z/Seal.ps1": "d287a316f19f52e6e0a36203404a08cc8e7bba43062f3cb6df2c1075f66b79ad",
+    ".scratch/registration268-primary-20261008T0401Z/seal.json": "543c779e9e2bfeef5e96deeff47cfd8983e1ac31242fc8612dedb368b5f793eb",
+    ".scratch/registration268-primary-20261008T0401Z/ledger.md": "89819df1c0bcd6e9cb7fc20ef644fe6e6feb178162813a66d27a59b4b7bf57dc",
+    ".scratch/registration268-primary-20261008T0401Z/adjudication.json": "f465c74508e4bb9847f56958575600f7db8777a476314662b2e318c1b307725e",
+    ".scratch/registration268-primary-20261008T0401Z/adjudication.md": "366565cdaf9ee1ad0ad6e540e7b6fd74fa41aaccfe9b89f69796570acee17517",
+    ".scratch/registration268-primary-20261008T0401Z/Publish.py": "fc6971ee2cb684260906ab85c0d5459f35b127e2189c34ee2c8164bb8c9888d7",
+    ".scratch/registration268-primary-20261008T0401Z/Publish.ps1": "92b9c296a40b8100cfb7b93953f284537a235e37065c964e3c1fb5757c2e96ed",
+    ".scratch/registration268-primary-20261008T0401Z/candidate-146b34780.txt": "6d773a9eadbed453adac6be63e3e3b29ad91e960793658446be309add7364a9d",
+    ".scratch/registration268-primary-20261008T0401Z/candidate-146b35740.txt": "ec8493c275c256638d4c7094e62508852c16121640ea001182ebcadc8060427e",
+    ".scratch/registration268-primary-20261008T0401Z/candidate-146b3b610.txt": "5109be56b3634924fcad8a181379f21a2a6931059072f229f859aaf497db1dfe",
+    ".scratch/registration268-primary-20261008T0401Z/reused-140870bc0.txt": "2f0a00c3b37bb327ff16ddd996db042f2876f1d4928f5a82ad74df3c97713684",
+    ".scratch/registration268-primary-20261008T0401Z/reused-146b27180.txt": "6becf21f1f0ee56ba6bf903690aaf3efe11542ec71be7bd6d6c2698bc4994929",
+    ".scratch/registration268-primary-20261008T0401Z/reused-146b288f0.txt": "2cd863cce6c03b85c98f6a51c0e3f28eacb3a0112ee33b58336a65a3c18d7155"
+  },
+  "bounds": {
+    "queryRootsAttempted": 4,
+    "completed": 3,
+    "rejected": 1,
+    "importedQueryBytes": 4858,
+    "repeatedRoot": "0x146b3b610",
+    "repeatedBytes": 2242,
+    "newTableQueries": 0,
+    "rawCandidateScanBytes": 131072,
+    "maxRoots": 4,
+    "maxTableWindows": 4,
+    "maxQueryBytes": 1048576,
+    "reusedNativeBytes": 510,
+    "reusedTableBytes": 296
+  },
+  "candidateNativeBindings": [
+    {
+      "entry": "0x146b34780",
+      "start": "0x146b34780",
+      "endExclusive": "0x146b34b68",
+      "bytes": 1000,
+      "sha256": "d8a777cbd6ec781323f2e8183a8cd4717c6145911094e17cae65e4043602c7bb"
+    },
+    {
+      "entry": "0x146b35740",
+      "start": "0x146b35740",
+      "endExclusive": "0x146b35d90",
+      "bytes": 1616,
+      "sha256": "da444e4eea1fd77fba8af5a0d289476a5a7708e10dc027c43d08f9fe687a47a5"
+    },
+    {
+      "entry": "0x146b3b610",
+      "start": "0x146b3b610",
+      "endExclusive": "0x146b3bed2",
+      "bytes": 2242,
+      "sha256": "d555ec932ba28b0c3f69ca3e133721af69ca078a09b6856d7f6ea88b7d2f55cb"
+    }
+  ],
+  "reusedNativeBindings": [
+    {
+      "entry": "0x146b27180",
+      "start": "0x146b27180",
+      "endExclusive": "0x146b2729c",
+      "bytes": 284,
+      "sha256": "2c9957b72db5487fd307d8613c8b826c023e6c8fe5bd328529be3ba95791b645",
+      "reusedSource": ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b27180.txt",
+      "reusedSourceSha256": "96e79a0f962d4c8a3d630d8f38d04273bfc3ff04b6dec2a4e56e844b63ccbc72"
+    },
+    {
+      "entry": "0x146b288f0",
+      "start": "0x146b288f0",
+      "endExclusive": "0x146b289b8",
+      "bytes": 200,
+      "sha256": "0f636737706dc97f25ee39e5bb1450c222160eef9a0696408f9ec67c756ac5d6",
+      "reusedSource": ".scratch/registration-210-lifetime-20261005T2204Z/fn-146b288f0.txt",
+      "reusedSourceSha256": "1e7ae332aee92cfd906f577c3aac259b6d67db7fc9e4ef58b38a0c539bf4befc"
+    },
+    {
+      "start": "0x140870bc0",
+      "endExclusive": "0x140870bda",
+      "bytes": 26,
+      "sha256": "f3aab015c92dcf275cf413d767a6a7df07fd780044f321ade386e4c789d908fc",
+      "path": ".scratch/bundle239-architect-20261006T1823Z/fn-140870bc0.txt",
+      "sourceSha256": "ebec4609c40bc5bf60a20cadf27428c5a8ef70315a8ebd064b888eec288c5ba3"
+    }
+  ],
+  "reusedTables": [
+    {
+      "address": "0x14858c358",
+      "bytes": 192,
+      "sha256": "0d495081f07e3c77b49b6e64e1121e49892f54aa532638ee2afd471e0c626fb1",
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x146b27820"
+        },
+        {
+          "offset": "0x8",
+          "target": "0x146b28390"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x146b283b0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0x146b28370"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x146b280f0"
+        },
+        {
+          "offset": "0x28",
+          "target": "0x146b283d0"
+        },
+        {
+          "offset": "0x30",
+          "target": "0x146b27e10"
+        },
+        {
+          "offset": "0x38",
+          "target": "0x146b27860"
+        },
+        {
+          "offset": "0x40",
+          "target": "0x146b28e50"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x146b28f70"
+        },
+        {
+          "offset": "0x50",
+          "target": "0x146b28fd0"
+        },
+        {
+          "offset": "0x58",
+          "target": "0x146b27dd0"
+        },
+        {
+          "offset": "0x60",
+          "target": "0x140294850"
+        },
+        {
+          "offset": "0x68",
+          "target": "0x140294860"
+        },
+        {
+          "offset": "0x70",
+          "target": "0x146b28ef0"
+        },
+        {
+          "offset": "0x78",
+          "target": "0x146b28f30"
+        },
+        {
+          "offset": "0x80",
+          "target": "0x146b28eb0"
+        },
+        {
+          "offset": "0x88",
+          "target": "0x146b27ca0"
+        },
+        {
+          "offset": "0x90",
+          "target": "0x1406cfd80"
+        },
+        {
+          "offset": "0x98",
+          "target": "0x1402a1750"
+        },
+        {
+          "offset": "0xa0",
+          "target": "0x1406c2850"
+        },
+        {
+          "offset": "0xa8",
+          "target": "0x146b28100"
+        },
+        {
+          "offset": "0xb0",
+          "target": "0x1436189c0"
+        },
+        {
+          "offset": "0xb8",
+          "target": "0x146b28a30"
+        }
+      ]
+    },
+    {
+      "address": "0x14858c418",
+      "bytes": 56,
+      "sha256": "fc8c3f8bc982fe66a8ea11c667b971776be28f31fe34471683a7c0b20a42f6b5",
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x146b27708"
+        },
+        {
+          "offset": "0x8",
+          "target": "0x146b28800"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x146b286a0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0x146b28640"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x146b288f0"
+        },
+        {
+          "offset": "0x28",
+          "target": "0x146b289f0"
+        },
+        {
+          "offset": "0x30",
+          "target": "0x146b289c0"
+        }
+      ]
+    },
+    {
+      "address": "0x148591708",
+      "bytes": 48,
+      "sha256": "b2611275f8216db61e70149a76925219729fea551ff164936f6f874cd91a3831",
+      "slot10": "0x146b714d0",
+      "receipt": ".scratch/registration-210-lifetime-20261005T2204Z/receive-followup/receipt-53667f090e0c.json",
+      "receiptSha256": "34a42024871a3c813b28f6ebb44abe3f9efc5c8501446bc97f56e4be3eae3ef1"
+    }
+  ],
+  "invoker": {
+    "constructor": "146b271c6/cd installs14858c418 at primary+8",
+    "table": "14858c418+20 ->146b288f0",
+    "samePrimary": "secondary+128/+2a8 = primary+130/+2b0",
+    "guards": "primary byte+130 nonzero and active+2b0 nonnull before move/copy",
+    "guardFailure": "initial guard failure returns before pair movement/copy",
+    "pair": "incomingR8 two qwords moved to local pair, source words cleared",
+    "pairTiming": "pair consumed before later active-null branch; no guaranteed delivery/rollback or success return",
+    "view": "caller RDX copied through140870bc0; helper result submitted as RDX",
+    "active": "reloaded at28957 and null-tested at2895e/61; null reaches147aa6289",
+    "call": "2896b virtual+10 with RCX=active,RDX=copy result,R8=local pair address",
+    "closureTableCondition": "if active callable uses148591708, its+10 ->146b714d0",
+    "next": "146b714d0 passesRCX=&capture.child slot to146b6ba90; dereference then child+f0 member/compact reader",
+    "limit": "actual installation, active table identity, upstream caller and RDX/R8 producer unproved"
+  },
+  "viewCopy": {
+    "helper": "140870bc0",
+    "nativeBytes": 26,
+    "copiedBytes": 24,
+    "effect": "three qwords source+0/+8/+10 to destination+0/+8/+10; returns destination",
+    "limit": "copies view object; field meaning and underlying payload/byte transparency not established"
+  },
+  "candidateSearch": {
+    "range": [
+      "0x146b20000",
+      "0x146b40000"
+    ],
+    "sha256": "b41e14a027b99a17fca397a10d180aed5ec6f724d0619abfd52ac91f3005b501",
+    "counts": {
+      "2b0": 15,
+      "2a8": 14,
+      "280": 12,
+      "callSlotHint": 47
+    },
+    "limit": "Raw unaligned hints in128KiB only; no absence or object/provenance claim.",
+    "selectedResult": "Three selected lifecycle-like bodies did not yield demonstrated secondary caller/producer join; not proof of no indirect dispatch."
+  },
+  "counterEvidence": [
+    "146b3b610 query repeats cached226 body.",
+    "140879580 rejected for noPDATA/unwind owner; no source emitted;1402f2d90 unqueried.",
+    "First raw scan runtime lacked Capstone; successful scan uses standard library; failed attempt gives no source claim.",
+    "Investigator child+8 wording corrected to &capture.child slot-address ABI; original report retained."
+  ],
+  "validation": {
+    "type": "Review",
+    "outcome": "Partial",
+    "nativeAndTableSeal": "Passed",
+    "criticalReview": "Corrected K379/K380 conditional same-primary invoker and three-qword view-object copy survive; active-table runtime identity and upstream input producer unresolved.",
+    "workspace": "Code/fixtures/runtime unchanged; affected36/actual preflight and exact1890/50/fivePS/closed-loopback reuse recorded in ROADMAP."
+  },
+  "limits": [
+    "Actual upstream secondary caller, network-to-view/Carrier path, accessor/span semantics and runtime active-table installation unknown.",
+    "Appropriate response fields/authentication/current runtime binding/native client acceptance/M1 unproved.",
+    "Original codecs/adapter/trial unchanged; consumed native grant not renewed."
+  ],
+  "nextEvidence": "Bounded native accessor semantics, then actual secondary+20 caller and its view/pair producer.",
+  "cleanup": {
+    "staticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "reviewResourcesAcquired": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}
