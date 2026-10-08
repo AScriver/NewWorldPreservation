@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Constructed driver accessor classification — October7, #271
+
+[Original receipt](../research/evidence/current-registration-driver-interface.json)
+pins clean7b6d3cc. Native/hash/repaired-import review closes this component;
+aggregate267 incoming byte path remainsPartial.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K386 | Separate driver+48 readsuint16 field18 through statically associatedWS2 ordinal15 andreturnsAX zeroextended | Strongly source-supported22B. Prefix membership repair plus pinned localDLLexport`ntohs`; no loadedAPI/call/address/port/runtime evidence | [Driver method classification](REGISTRATION_DRIVER_INTERFACE.md); native/import seal and critical review |
+| K387 | Driver+28 returns0x485-ownvirtual30EAX modulo2^32 | Strongly source-supported cached24B/current-image match. Same table conditionally selects1402f2cc0, body/value/runtime identity unknown; no wider downstream/other-method absence claim | Reused exact PDATA/native table/body |
+
+Original nearest-descriptor counterexample retained after16B membership repair;
+one newroot/two datawindows24B, exact static imports/BSS/identity costs separate.
+No codec/runtime/native trial changes.
+
 ## Receiver factory and full view candidate — October7, #270, partial
 
 [Original source receipt](../research/evidence/current-registration-receive-producer.json)

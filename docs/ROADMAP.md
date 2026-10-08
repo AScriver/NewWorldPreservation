@@ -2,6 +2,22 @@
 
 ## Server protocol focus — October 7
 
+Newest #271 [constructed driver methods](REGISTRATION_DRIVER_INTERFACE.md)
+closes K386/K387 as precise source classifications: uint16 field18→staticWS2
+ordinal15/localDLLexport`ntohs`, and32-bit0x485-ownvirtual30result. Separate
+driver148480a20 remains distinct from primary14858c358. Critical review found
+and repaired missing import-terminator membership via16B nonzero lookup prefix;
+original counterexample retained. One new22B root/cached24B recheck, two24B-total
+datawindows;37848576B initializedstatic/5559448B BSS and identity reads separately
+budgeted. No actual incoming buffer/Carrier/runtime/native acceptance follows.
+Native/repaired-import review, affected36 checks/actual preflight and nine public/
+34 private bindings pass. Exact full-suite input reconciliation reuses1890/50/
+fivePS/closed-loopback with five source receipts added and only three metadata
+files changed since that run. Closure is retained under
+.scratch/registration271-primary-20261008T0513Z. Codecs/adapter unchanged,
+static children exited, no runtime resources. Continue buffer-handling driver
+methods within a new bounded source unit; aggregate267 remainsPartial.
+
 Newest #270 [receiver factory/view candidate](REGISTRATION_RECEIVE_PRODUCER.md)
 preserves K382–K385: guarded factory and output pair,45 aligned local call hints,
 positive queued-send/lifetime cache and a full301B pointer/count-output candidate.

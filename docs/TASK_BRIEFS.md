@@ -1,5 +1,21 @@
 # Bounded task briefs
 
+## #271 — constructed driver method classification (M)
+
+- Child267/root164/178, clean7b6d3cc. Reuse exact267/268/269/270 bindings,
+  conditional driver constructor/table and cached24B method. Primary owns
+  tracked metadata; Investigator/reviewer own isolated ignored271 paths.
+- One new22B PDATA root completed, cached24B rechecked,0refused. Two newdata
+  windows8B+16B=24B; no thirdroot. Guard initializedstatic37848576B separately
+  under40MiB, code<=128KiB, BSS5559448B and full179204176B identity perpass.
+  Separately pinned534592B localDLL exportmetadata; no DLL code execution.
+- K386/K387 localeffects close after critical import-membership repair. Original
+  nearestFirstThunk counterexample remains; loadedAPI/fieldmeaning/virtual30
+  target/incomingbuffer/callback/Carrier/native acceptance remainunknown.
+- Native/hash/review, affected36/PF/newbindings and exact1890/50/fivePS/closed
+  loopback input reconciliation precede localcommit/Done/readback/release.
+  No code/codec/adapter/native trial change or runtime resource acquired.
+
 ## #270 — upstream secondary caller/view producer (M, partial)
 
 - Child267/root164/178, clean1b3fd5c. Primary owns tracked original metadata;

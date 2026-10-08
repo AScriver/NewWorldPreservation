@@ -1,5 +1,19 @@
 # Agent handoff
 
+## #271 constructed driver methods — October7
+
+- [K386/K387 component](REGISTRATION_DRIVER_INTERFACE.md): separate table148480a20
+  gives uint16 field18/import-return adapter and32-bit0x485-ownvirtual30 result.
+  StaticWS2 ordinal15/pinnedlocalDLLexport`ntohs` association repaired via16B
+  nonzero lookup-prefix membership. Original descriptor-gap counterexample retained.
+- One new22B root/cached24B recheck, two datawindows24B; static/BSS/identity
+  resources separated. No broader incoming route/absence/runtime evidence.
+  Exact native/review/affected36/preflight/input reconciliation closure under
+  .scratch/registration271-primary-20261008T0513Z; no runtime resources.
+- Aggregate267 actual incoming buffer/receiver/callback/Carrier join remains
+  Partial. Continue eligible buffer-handling driver methods; no user game action
+  needed for offline source work. Codecs/adapter/native trial unchanged.
+
 ## #270 receiver factory/view candidate — October7, partial
 
 - [K382–K385 checkpoint](REGISTRATION_RECEIVE_PRODUCER.md): guarded factory,

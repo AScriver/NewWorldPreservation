@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-driver-interface",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K386", "K387"],
+      "docs": ["docs/REGISTRATION_DRIVER_INTERFACE.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-registration-driver-interface.json", "classification": "source-inference", "scope": "Separate constructed-driver exact uint16 static-import adapter and32-bit virtual-result arithmetic accessor; incoming route remains partial"}],
+      "limit": "Precise two-method classification only. Repaired static import membership/localDLL name association is not live loader/call/field/port evidence. Virtual30 meaning, actual incoming byte/callback/Carrier/runtime/native acceptance unjoined; no code/adapter/trial change."
+    },
+    {
       "id": "current-registration-receive-producer",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K382", "K383", "K384", "K385"],
@@ -2068,6 +2079,7 @@
   ],
   "receipts": [
     "research/evidence/current-registration-receive-producer.json",
+    "research/evidence/current-registration-driver-interface.json",
     "research/evidence/current-registration-view-accessors.json",
     "research/evidence/current-registration-receive-invoker.json",
     "research/evidence/current-registration-receive-callback.json",

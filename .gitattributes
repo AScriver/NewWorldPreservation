@@ -22,6 +22,7 @@
 /research/evidence/current-registration-view-accessors.json text eol=lf
 /docs/REGISTRATION_VIEW_ACCESSORS.md text eol=lf
 /research/evidence/current-registration-receive-producer.json text eol=lf
+/research/evidence/current-registration-driver-interface.json text eol=lf
 /docs/REGISTRATION_RECEIVE_PRODUCER.md text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf

@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 271,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T05:36:25.687334+00:00",
+  "claimIds": [
+    "K386",
+    "K387"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "7b6d3cc2611115e755f1d7154fcbac2899ec6844",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "acceptance": "Precise conditional two-method source classification only; aggregate267 incoming byte path remains partial.",
+  "direction": "Owned-client transport source relevant to server sends; not executed replacement-server receive or native gameplay evidence.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-view-accessors.json": "0b3e72a1bccfaae8d38d35fc1c61e29dbec7c968190652c3b2b3f0efb0fade98",
+    "research/evidence/current-registration-receive-producer.json": "c8bb12e94d5890accbc206c8a81b160e46ce08357eb068c36c561b7a7fdd49a6",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration261-primary-20261008T0115Z/ordinal-export.json": "17eb34b7d63da0dd13f52cec225ef7b8f1722649c01c534eaab26b2a614fbb04",
+    ".scratch/registration267-primary-20261008T0333Z/fn-145dbdd30.txt": "cdc36c6bf90cb1a6bcabd97899ddf3032a80f2e04f8515d08fd5f5844ff81301",
+    ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+    ".scratch/registration271-driver-interface-20261008T0513Z/REPORT.md": "652db2ad620d13e4c65e3ff9becf439217a3790c62f8f8a722e20e081b3be2b8",
+    ".scratch/registration271-driver-interface-20261008T0513Z/global-147eca8c8.json": "88fc10aa4a7e128a7a2156a823b1e376baa32ded61b8683345e09867a526626e",
+    ".scratch/registration271-driver-interface-20261008T0513Z/global-import-binding.json": "db9a4f2847f02476e22eab123908092ac59b12b7fde5063cb7ff8f59395c627c",
+    ".scratch/registration271-driver-interface-20261008T0513Z/native-listings.json": "5ebbfe2a8b0bdedf633a6e3ba0fdcb4f88b8b22416435698cdabd0a56a057535",
+    ".scratch/registration271-driver-interface-20261008T0513Z/native-listings.py": "6675ca5f2ab68644782c78e26d82200c35c35e4c8ff773fb09a3b674401d4d73",
+    ".scratch/registration271-driver-interface-20261008T0513Z/output/function-140f684a0.c": "2ac0a2ba2a5902b784ba8f525e34ff8834dd944a406aa03167ad0390962ce588",
+    ".scratch/registration271-driver-interface-20261008T0513Z/output/receipt.json": "66745599cf416a74f49a0e6020710c3a6e937b0de538030a0e20c0db8c980966",
+    ".scratch/registration271-driver-interface-20261008T0513Z/preflight-140f684a0.py": "a2c526403a352c8042ad11e959c1058f94b8432d6cf3d6651f66b04b281bcfac",
+    ".scratch/registration271-driver-interface-20261008T0513Z/preflight.json": "daccd2766c78554909cb3d3c8fab5e023b6750390b34b98af24ef946de8eebef",
+    ".scratch/registration271-driver-interface-20261008T0513Z/read-global-147eca8c8.py": "dd59204991e2522196ecaac822efc97bc718336b37ca87cfe02954c0ef2ee4c2",
+    ".scratch/registration271-driver-interface-20261008T0513Z/resolve-global-import.py": "2b2b97269eb738249d3252ebc8d1c7c564651a0178d8e4bdb6a3f5b41ccb78aa",
+    ".scratch/registration271-driver-interface-20261008T0513Z/run-global-window.ps1": "9c2efc3fc98337f576a78cfc779c083f186db408afd9cf4ca7d6f5f85b54090c",
+    ".scratch/registration271-driver-interface-20261008T0513Z/run-import-binding.ps1": "1e3b676e6713893ae29e43a2bfcd17f193a1a63661211d9c6dfba04eaa96453b",
+    ".scratch/registration271-driver-interface-20261008T0513Z/run-native-listings.ps1": "aea06c1b616e8ab5204aa90c277b475533b9f237cc251a2696fa0061e538f0de",
+    ".scratch/registration271-driver-interface-20261008T0513Z/run-query.ps1": "4e6ea7c16e04b2272d1f2aca174f0247e7a0d500fb7399eb186b65aef5f15443",
+    ".scratch/registration271-primary-20261008T0513Z/Baseline.ps1": "456e4f0721442176c087c1dddd690b4d7fc9816e973ca6606505bd81ee8c7c9c",
+    ".scratch/registration271-primary-20261008T0513Z/Baseline.py": "1f84a4ba22da5900a31d2d7fd5a5d3d8d06a6f24cbe673593c521e7aa14b8f71",
+    ".scratch/registration271-primary-20261008T0513Z/Publish.ps1": "545164fe23958ca08e62c2e40e5e26c1a6994738cc2aca312cfcee8bb9a750ac",
+    ".scratch/registration271-primary-20261008T0513Z/Publish.py": "9a0f66b4273e17fd55463ce3a189b98d60f0a741431d627f5887b90e5ad6d0ce",
+    ".scratch/registration271-primary-20261008T0513Z/Seal.ps1": "e538e725856f47abbf9470d6cd337a62eaf455b1cc22491e3472f5f3bcef953f",
+    ".scratch/registration271-primary-20261008T0513Z/Seal.py": "31b87e9ce13df5b91eb092de7084560ee87b1285816770ead392ab1196441b8d",
+    ".scratch/registration271-primary-20261008T0513Z/adjudication.md": "8cf5f7eca3b66a6b987acb71fea20909154aa3d6b7b795a5d1cb05495dea7808",
+    ".scratch/registration271-primary-20261008T0513Z/baseline.json": "46f658e76f58cbd038ee37cef94bfc86dc44ed5e2e6dad3abc123e88f91b31c5",
+    ".scratch/registration271-primary-20261008T0513Z/import-membership.json": "7a8a2c47e158ee7579f8b9303d68a736fe87a979f688e28e11cac0a52bcd240b",
+    ".scratch/registration271-primary-20261008T0513Z/ledger.md": "15d0928025a9e1e0c0ddc7e585d1f78db4dfe549765b403a8e1f081d28d4cb5a",
+    ".scratch/registration271-primary-20261008T0513Z/ordinal15-export.json": "00dae1e801f5b668c4f613678a418937a513caa56cf5b3469f8c0eec3146efc5",
+    ".scratch/registration271-primary-20261008T0513Z/seal.json": "2bc3b7cf585e987512a0a64cf23bf51d5cf19a45738320cc6e19d5628bc5b9f7",
+    ".scratch/registration271-review-20261008T0531Z/report.md": "739973cf3edb4a50972471fd00c71c9bbf2e3d43369286dd5d9913e6e5783094",
+    ".scratch/rep-verify-policy/analyze_policy.py": "dc4ecfc84c9bbd7816ca30c68a4a45b6d9fd7c2c301e5d8477f1c148bf3274ea",
+    ".scratch/rep-verify-policy/fn-145dcd610.txt": "c247f34bb2da2b0bc7d66d4c1cb2496b817b5d0dde72bc4e55cd3a6e885c64b9",
+    ".scratch/rep-verify-policy/members-145dbd000-145de1000-d0.json": "f7207c09bed779a60284a776b40c07e8049f656be7d9b78c78003395cbd1ac94"
+  },
+  "driver": {
+    "constructor": "0x145dbdd30",
+    "table": "0x148480a20",
+    "construction": "Conditional146b36920 branch; owner+48 guard, owner+50 store are distinct. No driver+50 null guard demonstrated.",
+    "identityLimit": "Separate from primary14858c358; coincident virtual offsets do not join object or callback identity."
+  },
+  "methods": [
+    {
+      "claimId": "K386",
+      "slotHex": "0x48",
+      "slotDecimal": 72,
+      "native": {
+        "start": "0x140f684a0",
+        "endExclusive": "0x140f684b6",
+        "spanBytes": 22,
+        "nativeSha256": "f3b95b68f863ac5128eaf8ddf74e7b79e7c4c3c5ca728af25cc9398e04bd4ec1"
+      },
+      "effect": "Readsuint16[this+18] intoECX; callsIAT147eca8c8; zeroextendsAX intoEAX andreturns.",
+      "import": {
+        "status": "passed",
+        "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+        "targetGlobal": "0x147eca8c8",
+        "iatVa": "0x147eca8c8",
+        "iatBytes": "0f00000000000080",
+        "iatDataSha256": "ee9d3290b659de212f9cd0df3a0c3bb24c4717c3ae3e8b7bbd26c7b953c06e9c",
+        "lookupVa": "0x149e71420",
+        "lookupBytes": "0f00000000000080",
+        "lookupValue": "0x800000000000000f",
+        "importKind": "ordinal",
+        "module": "WS2_32.dll",
+        "ordinal": 15,
+        "symbolName": null,
+        "liveResolvedTargetKnown": false,
+        "scope": "Only the exact descriptor/thunk corresponding to the evidenced RIP target was decoded; no live loader state read."
+      },
+      "membership": {
+        "status": "passed",
+        "descriptorArrayRva": "0x9e6f7d4",
+        "descriptorEntriesReadIncludingTerminator": 45,
+        "descriptorBytesRead": 900,
+        "selectedFirstThunkVa": "0x147eca8c0",
+        "selectedLookupBaseVa": "0x149e71418",
+        "targetIndex": 1,
+        "lookupPrefixBytes": 16,
+        "lookupPrefixSha256": "f2ea93080366db3ce56e2d734de310849602677c01a36969c65f74e7e9ddb3ca",
+        "noZeroThroughTarget": true,
+        "moduleNameBytesReadIncludingTerminator": 11,
+        "scope": "Positive membership in selected descriptor lookup prefix; prior parser alone was insufficient. No other lookup arrays/symbols enumerated."
+      },
+      "localFileExport": {
+        "status": "passed",
+        "recordedUtc": "2026-10-08T05:32:23.118232+00:00",
+        "path": "C:\\Windows\\System32\\WS2_32.dll",
+        "fileBytes": 534592,
+        "fileSha256": "535d7a8336ddbae77b1f2c68339e5e7dbeb5f06445d6e42b19c794ef0e26f6a3",
+        "exportOrdinal": 15,
+        "exportNames": [
+          "ntohs"
+        ],
+        "exportRva": "0x25750",
+        "forwarder": null,
+        "metadataBounds": {
+          "functionCount": 500,
+          "nameCount": 196,
+          "maxNames": 4096
+        },
+        "scope": "Exact pinned local DLL file export-name identity only; full DLL identity bytes read, no DLL code decoded/selected/executed, no loaded target identity or call outcome.",
+        "dllExecuted": false
+      },
+      "limit": "Static descriptor/ordinal/local DLL export-name association only. Field meaning/address/port, loaded resolution and call effects/outcome unknown."
+    },
+    {
+      "claimId": "K387",
+      "slotHex": "0x28",
+      "slotDecimal": 40,
+      "native": {
+        "start": "0x145dcd610",
+        "endExclusive": "0x145dcd628",
+        "spanBytes": 24,
+        "nativeSha256": "58d67dfdbc07ff472181aa0cd01218201532be99f6efa85424fa70db4c937944"
+      },
+      "effect": "Calls own receiver virtual+30; returns(0x485-EAX) modulo2^32.",
+      "conditionalVirtualTarget": "Same preserved148480a20 table+30\u21921402f2cc0; target body not queried in271.",
+      "limit": "Actual runtime dispatch/object and target body/value meaning unknown; no buffer/span or receive callback explicitly introduced by this body."
+    }
+  ],
+  "resources": {
+    "newHelperBatches": 1,
+    "newRootsAttempted": 1,
+    "newRootsCompleted": 1,
+    "newRootsRefused": 0,
+    "newHelperCodeBytes": 22,
+    "cachedCodeBytesRechecked": 24,
+    "newGameDataWindows": 2,
+    "newGameDataWindowBytes": 24,
+    "mandatoryInitializedStaticImportBytes": 37848576,
+    "newCodePlusStaticImportBytes": 37848598,
+    "uninitializedStaticExtensionBytes": 5559448,
+    "gameImageFileExtentBytes": 179204176,
+    "agentConfirmedFullImageReadPassesMin": 6,
+    "agentAmbiguousEarlierHashPassExcluded": true,
+    "primaryBaselineFullImageReadPasses": 1,
+    "primarySealFullImageReadPassesPerInvocation": 1,
+    "primarySealSuccessfulInvocationsAtThisSeal": 3,
+    "localDllMetadataIdentityPassesPerInvocation": 1,
+    "localDllSuccessfulPassesAtThisSeal": 3,
+    "localDllFileExtentBytes": 534592,
+    "importMetadataNumericReadCount": "Agent prior numeric tally absent; primary membership repair records exact descriptor/prefix/module counts separately."
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Native/hash/cached/table binding and repaired positive import membership/name join; precise K386/K387 only.",
+    "workspace": "Code/fixtures/runtime unchanged; affected36/actual preflight and exact1890/50/fivePS/closed-loopback reconciliation required before commit and recorded in closure/ROADMAP."
+  },
+  "counterEvidence": [
+    "Original nearestFirstThunk parser lacked pre-target terminator membership proof. Critical review gap repaired by second16B nonzero lookup prefix; original parser/report preserved.",
+    "Agent API nameunknown report is historical before primary pinnedDLL export-name join; loaded runtime target remainsunknown.",
+    "Agent virtual30 targetunknown shorthand is qualified by existing table: preserved148480a20+30 names1402f2cc0, whose body was not queried. Runtime identity and meaning remainunknown.",
+    "Twoaccessors selected; no absence claim for other driver methods or downstream opaque effects.",
+    "Agent importmetadata numeric read total absent; primary repair records900descriptorB/16lookupB/11moduleB. Identity counts separately report per-invocation and three primary seal passes."
+  ],
+  "limits": [
+    "Actual incoming buffer/receiver/callback/Carrier/transform join unresolved; source classification does not deliver a private world.",
+    "Current selectors/response values/authentication/nativeacceptance/M1 remain unproved.",
+    "Codecs/adapter/candidates unchanged; no native client/library execution, runtime resources, network/capture/replay/credentials or new trial grant."
+  ],
+  "cleanup": {
+    "staticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}
