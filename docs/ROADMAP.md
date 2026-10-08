@@ -1,5 +1,27 @@
 # Milestone 1 roadmap
 
+## Incoming buffer and reader construction — October8, #279
+
+[K410–K412](REGISTRATION_INCOMING_READER.md) joins the conditional fallback
+receive chain to local reader construction. One new302B wrapper and4658B of
+reused code/table192B support fallback socket import, opaque output-slot and
+registry-callback effects, optional filter count replacement and reader setup.
+The valid untransformed header uses32 bits; a transformed view resets to0.
+Initialized explicit16-bit field order agrees with the pinned BE parser under
+aligned/nonaliased preservation assumptions. No concrete codec mismatch was
+found; the current server remains unchanged.
+
+Source seal/critical review and36affected catalog/preflight/binding checks
+support this component. The unchanged1960Python/50modules/fivePS/closedloopback
+result is reused only by exact selected-input reconciliation. Four known full
+image passes716816704B, static37848576B/BSS5559448B and navigation are separate.
+Original failed native-check source is preserved; it failed before file access.
+No native/client/runtime resources or new native grant. Physical extents,
+qword transform-count overflow, supplied/runtime interfaces and opaque effects
+remain limits; parent277's queued payload/reassembly→compact/type/response/
+authentication/world/M1 acceptance remains Partial. Next concrete edge is the
+fallback root's+a0 address-object factory, after exact table-slot selection.
+
 ## Conditional post-parser dispatch — October8, #278
 
 [K407–K409](REGISTRATION_PACKET_DISPATCH.md) classifies the conditional fallback

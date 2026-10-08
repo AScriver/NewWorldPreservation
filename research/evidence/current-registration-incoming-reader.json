@@ -1,0 +1,293 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 279,
+  "parentActionableId": 277,
+  "claimIds": [
+    "K410",
+    "K411",
+    "K412"
+  ],
+  "recordedUtc": "2026-10-08T09:21:42.911879+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "0a4330eea4f34beb50983ffacd7356caca0c28b8",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_INCOMING_READER.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_INCOMING_READER.md": "9b4f0fcc9c6d509e9fc31ffc809f9f594acf7f36edbb2405828e8c2fa6f82b39",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-driver-backend.json": "30f5fb1c4b38a2f41d49aa9c2be8449c78d4ab44e45720de38d7a10067bc9fbd",
+    "research/evidence/current-registration-packet-dispatch.json": "b17b1e40e466bbca541e46a199739ee6ca7eaa9d14792b1966c5811d96417a57",
+    "research/evidence/current-registration-packet-receive.json": "06e20c6232a565811eeb344e11ed3ae0a0943e7954219938a34e1b92171fd76e",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe0f0/function-145dbe0f0.c": "db22e5b6e44a3345df90a0e7ee5302b462e6d72de45b0855ebf47e5ff531f3ac",
+    ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe0f0/receipt.json": "b5199a7f4353de79cfa5da370b611f3af8407ad0affad6146d006b8dd8808884",
+    ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe1e0/function-145dbe1e0.c": "562ec6ca6b007ebed7dabe85b8cd12a769ce5d8718875985c3147846c93e1330",
+    ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe1e0/receipt.json": "4e9d825fc647a6ee1edf5f537bdc07f31297a5725afcdac2f80bcef26b6845e4",
+    ".scratch/registration261-lower-20261008T0104Z/table-148480758.json": "ef1f1e315e8f05d230053e8074b622542e3a8041c3db4a95f759cecbd5c706f8",
+    ".scratch/registration261-lower-20261008T0104Z/table-148480888.json": "d0680908f81fead20c3a21532f15cc7e6d9309c1ff52de57a42d6fe9ad2248be",
+    ".scratch/registration263-bytepath-20261008T0145Z/query1-output/function-145dddfa0.c": "0c5e2b63f5cb1b29a06d8f86c84e0187d23afbffa387442209ab33be3ad322e0",
+    ".scratch/registration263-bytepath-20261008T0145Z/query1-output/receipt.json": "af798df734f6c292e0cb50e3f0b28580fa50a114af5a49d200bc405669ba9415",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output-145db4ef0/function-145db4ef0.c": "146e23f969a3ba1d8e3e43f78023014b01aca841322711ec68eaf601d0aa6940",
+    ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output-145db4ef0/receipt.json": "add3942955619d35fc8fc332a12a9de42c2b320f4afbc1ee28074e8a1033a4b4",
+    ".scratch/registration273-driver-backend-20261008T0611Z/output-140f7c980/function-140f7c980.c": "3f902477e5b2f626ad7330bc71b4b6621f5e7574393514777dc687dd8db126f1",
+    ".scratch/registration273-driver-backend-20261008T0611Z/output-140f7c980/receipt.json": "867772b1228650b137a250a9132b5a21bdaa96000cef9defdc43485792548e18",
+    ".scratch/registration278-next-reader-20261008T0859Z/report.md": "6066b01406d6665f201ac459e679c9d4e8d69fab6f95540563114cb21feb08f6",
+    ".scratch/registration278-primary-20261008T0822Z/closure.json": "7162e57defbddc37c2c471bd15e3f55ff88be03f86ad633b5cec65d2876cd2c8",
+    ".scratch/registration279-next-callback-20261008T0916Z/report.md": "38b05f80e15867974fa0cfb5f17cdb15d530c1abc910dfa8f036390b1ece0253",
+    ".scratch/registration279-primary-20261008T0901Z/Baseline.ps1": "9b008dd06dd20c80463ba5e261f500333357d628e93cded797a4c916a7daf773",
+    ".scratch/registration279-primary-20261008T0901Z/Baseline.py": "fcba6533fbc0f33968e67bddc7d5bd04c51fd42bf27f991ba81367211572a50a",
+    ".scratch/registration279-primary-20261008T0901Z/Catalog.ps1": "4e3f9525990707b95ea38bccf69188e026c0939359d0caeb5e17edf517653f6c",
+    ".scratch/registration279-primary-20261008T0901Z/Closure.ps1": "e86c2ab84680972fb3903865b07aa5d5b8dac8555ae2f39613cab2087974e2cb",
+    ".scratch/registration279-primary-20261008T0901Z/Closure.py": "8d8f713973771940c49ed39044ded059490ffe71e8969e942d27ebe579b75102",
+    ".scratch/registration279-primary-20261008T0901Z/Commit.ps1": "f0c3861bf6ab7c6a3c8852ad30059a289838ee643f9be94efa5d56d811b76222",
+    ".scratch/registration279-primary-20261008T0901Z/Metadata.ps1": "754fa4e39173775ad0f3846b3d1307515022d9a29a5e795b2b72351183fe99dd",
+    ".scratch/registration279-primary-20261008T0901Z/Metadata.py": "98baa0baac9286a0fd35c4ef26185dca168f98b32f0c485b029e40d31dace738",
+    ".scratch/registration279-primary-20261008T0901Z/PrepareSupport.ps1": "1de8ca7b30f0d0a850874b7f2fc3bd599573634b2412827e902a8fa643f712f8",
+    ".scratch/registration279-primary-20261008T0901Z/PrepareSupport.py": "0d405c97bdf614441bc6f4bc28aec5c3f67c6dc43a02f51249ba5b4735b3f073",
+    ".scratch/registration279-primary-20261008T0901Z/Publish.ps1": "e872e1f17f3457bee4be7deca1e8d59f9c0861d0ff17fadb1303aa437ecef244",
+    ".scratch/registration279-primary-20261008T0901Z/Publish.py": "b94b81fb3a3ef9dc0c0e74d9befdc7b57d6f4063be3e6eb5a4aca22699c95400",
+    ".scratch/registration279-primary-20261008T0901Z/Seal.ps1": "080f2e5a46b0b23dda6cd3c95b5ce404034090f069e62b72c91c2ff25a272638",
+    ".scratch/registration279-primary-20261008T0901Z/Seal.py": "12dd15b2ce6a4f9c826008c7860f7cbdc2d5ececcef655c4d2814acfc159d69b",
+    ".scratch/registration279-primary-20261008T0901Z/Stage.ps1": "a8fe4dd62b7beb8a8ead6ba0265030c3d297e5f706dd7b6a03883362025caad3",
+    ".scratch/registration279-primary-20261008T0901Z/adjudication.md": "7d9cc4785e46810d6bd4ee5ae40307ee97ff0f3f75bc2f8c501226572da3becc",
+    ".scratch/registration279-primary-20261008T0901Z/baseline.json": "62898428741ecec54b98ab7c76c1c1399527a208a03aeee2102b5afb1ee51af8",
+    ".scratch/registration279-primary-20261008T0901Z/doc-draft.md": "9b4f0fcc9c6d509e9fc31ffc809f9f594acf7f36edbb2405828e8c2fa6f82b39",
+    ".scratch/registration279-primary-20261008T0901Z/ledger.md": "278a920f56bead9b7ff0ad85c0532a727f0130eca2a1cd0ea796fdf77f62599a",
+    ".scratch/registration279-primary-20261008T0901Z/native-140f7c980.txt": "11e37a74668d48562a0fcd335bd33fb8c1bc81c7ddef2ee5e4c1f184f8aa1aff",
+    ".scratch/registration279-primary-20261008T0901Z/native-145db4ef0.txt": "2f5cfa1a587457efeb437cbb9167e01e4d8d1416d8bbe6ed1363282cf8c08cc8",
+    ".scratch/registration279-primary-20261008T0901Z/native-145dbe0f0.txt": "9f20019d96648b42acecc5d95da220ef7c21c123336b745533967363bc965656",
+    ".scratch/registration279-primary-20261008T0901Z/native-145dbe1e0.txt": "c90784473b6afc56836c891575124bccc4e0ac95b4242a0b159f1479f4dca0e5",
+    ".scratch/registration279-primary-20261008T0901Z/native-145dd8b90.txt": "daa9d39d38fc03117682eb3725fc07f02e052de380738c1fa84a53e2ab63c6d8",
+    ".scratch/registration279-primary-20261008T0901Z/native-145dddfa0.txt": "09768282892e67c446690abf80d508f77bc4a5229ac96cce4a03e0d3f5bd454a",
+    ".scratch/registration279-primary-20261008T0901Z/seal.json": "530ceb1ac37e9274d6981008951f3b3e50898eafd6cc2773ba3e11d9cef0196e",
+    ".scratch/registration279-reader-20261008T0902Z/ADDENDUM-2.md": "3355284e18f8fc3d1902b9484b7f404b3e32970e14ae7130e04e579dcc68c414",
+    ".scratch/registration279-reader-20261008T0902Z/ADDENDUM.md": "048709a2ef5cce2daacfb09f546452365ec2eb3361b315f214daa46448c62f05",
+    ".scratch/registration279-reader-20261008T0902Z/NativeCheck.failed.py": "a6af2a6e862500b41d5f4d6e2b628619c00b219bbe8ff72abc61f0e79e970415",
+    ".scratch/registration279-reader-20261008T0902Z/NativeCheck.ps1": "2ef319933991d640c6d2d9f038ec1e572d5e12e6b4532817c909b231ef21a382",
+    ".scratch/registration279-reader-20261008T0902Z/NativeCheck.py": "5d4b62db1e0366d845fe6f5dccfff8e48aa833a0e7fe75e34b9f73c51ccf21c3",
+    ".scratch/registration279-reader-20261008T0902Z/PreserveFailedCheck.ps1": "ad19519334a7d7820fcb963bbca89ba124ca46293faf3aadc4ea1c2bf28d345c",
+    ".scratch/registration279-reader-20261008T0902Z/Query.ps1": "cf639b989d201d3391e77688e1671e68a44f5519ee2b161b2ac832d7dd2485d7",
+    ".scratch/registration279-reader-20261008T0902Z/REPORT.md": "ed7ff660670a7995e28bdf1a8d54a309b0e1c86fc1fd8e210024b5a8d9af2788",
+    ".scratch/registration279-reader-20261008T0902Z/native-check.json": "aca6ef387ed92037419e5962df2fad665dafd7dfb6affda55a95967d21027b85",
+    ".scratch/registration279-reader-20261008T0902Z/query-output/function-145dd8b90.c": "257b059b235c5c3085b345448fc495c9b4834900d01c4d3d5fb611ebb588bfe1",
+    ".scratch/registration279-reader-20261008T0902Z/query-output/receipt.json": "f1701a48c9a1f92b88554fd5623c9dbc1bdf5ab5062d291d65c286f660d86cf5",
+    ".scratch/registration279-reader-20261008T0902Z/result.json": "45f5382a649899a688ecb4e1ff137950325370030fb2eca301461a10561f3a29",
+    ".scratch/registration279-reader-20261008T0902Z/run.json": "58366c63574b1ed53af0c8974ee694bc752e76a36639ba577929d8bf868d4d5d",
+    ".scratch/registration279-review-20261008T0913Z/report.md": "07b17c40c438718ffd590dd118a42c2b91568e8de05c22917dfa0da310bd31b3",
+    "research/upstream/first-light/server/javelin/frame.py": "798f6419114eacac5c5bfb1fd4822929239cd82fb66835e15242dd78a066b33a",
+    "research/upstream/first-light/server/javelin/wire.py": "bcb82f500455f9aa57312a596554954c04a462a1acc2cb23ae4a74ccd65d3a62"
+  },
+  "native": [
+    {
+      "entry": "0x145dd8b90",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration279-reader-20261008T0902Z/query-output/receipt.json",
+      "queryReceiptSha256": "f1701a48c9a1f92b88554fd5623c9dbc1bdf5ab5062d291d65c286f660d86cf5",
+      "historicalHead": "0a4330eea4f34beb50983ffacd7356caca0c28b8",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145dd8b90",
+          "endExclusive": "0x145dd8cbe",
+          "bytes": 302,
+          "sha256": "66e71289674599e7ca81b47d4a8e4f9b65707e36f65ac84c712e7496c9b50fef",
+          "instructions": 83,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-145dd8b90.txt",
+          "listingSha256": "daa9d39d38fc03117682eb3725fc07f02e052de380738c1fa84a53e2ab63c6d8"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dddfa0",
+      "newQuery": false,
+      "queryReceipt": ".scratch/registration263-bytepath-20261008T0145Z/query1-output/receipt.json",
+      "queryReceiptSha256": "af798df734f6c292e0cb50e3f0b28580fa50a114af5a49d200bc405669ba9415",
+      "historicalHead": "db060e053d4473a51664b7d89b3beba6597f93d9",
+      "historicalDirty": " M docs/TASK_BRIEFS.md\n",
+      "ranges": [
+        {
+          "start": "0x145dddfa0",
+          "endExclusive": "0x145ddec5f",
+          "bytes": 3263,
+          "sha256": "d4ebedc5236a384ba67c2afd2332bdf1585631ef916bc2c852f3d0df2fba0354",
+          "instructions": 764,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-145dddfa0.txt",
+          "listingSha256": "09768282892e67c446690abf80d508f77bc4a5229ac96cce4a03e0d3f5bd454a"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dbe0f0",
+      "newQuery": false,
+      "queryReceipt": ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe0f0/receipt.json",
+      "queryReceiptSha256": "b5199a7f4353de79cfa5da370b611f3af8407ad0affad6146d006b8dd8808884",
+      "historicalHead": "3282a87926d3c3f42be9963e0b952ec0b19b1142",
+      "historicalDirty": " M docs/TASK_BRIEFS.md\n",
+      "ranges": [
+        {
+          "start": "0x145dbe0f0",
+          "endExclusive": "0x145dbe1dd",
+          "bytes": 237,
+          "sha256": "239f79edeab43451c177ea36e5245befeabcef5ad1e7c2d6730eff3c8d2d5a4b",
+          "instructions": 61,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-145dbe0f0.txt",
+          "listingSha256": "9f20019d96648b42acecc5d95da220ef7c21c123336b745533967363bc965656"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dbe1e0",
+      "newQuery": false,
+      "queryReceipt": ".scratch/registration261-lower-20261008T0104Z/ghidra-output-145dbe1e0/receipt.json",
+      "queryReceiptSha256": "4e9d825fc647a6ee1edf5f537bdc07f31297a5725afcdac2f80bcef26b6845e4",
+      "historicalHead": "3282a87926d3c3f42be9963e0b952ec0b19b1142",
+      "historicalDirty": " M docs/TASK_BRIEFS.md\n",
+      "ranges": [
+        {
+          "start": "0x145dbe1e0",
+          "endExclusive": "0x145dbe35c",
+          "bytes": 380,
+          "sha256": "7a363297ae0267f325fe6d8bece3b6d18c396159071c13eb9a1067e44337254d",
+          "instructions": 103,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-145dbe1e0.txt",
+          "listingSha256": "c90784473b6afc56836c891575124bccc4e0ac95b4242a0b159f1479f4dca0e5"
+        }
+      ]
+    },
+    {
+      "entry": "0x140f7c980",
+      "newQuery": false,
+      "queryReceipt": ".scratch/registration273-driver-backend-20261008T0611Z/output-140f7c980/receipt.json",
+      "queryReceiptSha256": "867772b1228650b137a250a9132b5a21bdaa96000cef9defdc43485792548e18",
+      "historicalHead": "f08cd0e6aa16e027528eb81b00b51863fade1cce",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x140f7c980",
+          "endExclusive": "0x140f7ca42",
+          "bytes": 194,
+          "sha256": "2b8c07df57691f24057e660b0b12bbdb021ded64c2b5ac75c669b7df89aa74b3",
+          "instructions": 55,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-140f7c980.txt",
+          "listingSha256": "11e37a74668d48562a0fcd335bd33fb8c1bc81c7ddef2ee5e4c1f184f8aa1aff"
+        }
+      ]
+    },
+    {
+      "entry": "0x145db4ef0",
+      "newQuery": false,
+      "queryReceipt": ".scratch/registration272-driver-buffer-edges-20261008T0542Z/output-145db4ef0/receipt.json",
+      "queryReceiptSha256": "add3942955619d35fc8fc332a12a9de42c2b320f4afbc1ee28074e8a1033a4b4",
+      "historicalHead": "6a0b6c0471de06b5c96a128d94052f924ff02727",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145db4ef0",
+          "endExclusive": "0x145db5138",
+          "bytes": 584,
+          "sha256": "59d93c8fc428a7a02eaf3b29e2f9c583a326645d792bc8e0b3b5c1c26be42f54",
+          "instructions": 148,
+          "listing": ".scratch/registration279-primary-20261008T0901Z/native-145db4ef0.txt",
+          "listingSha256": "2f5cfa1a587457efeb437cbb9167e01e4d8d1416d8bbe6ed1363282cf8c08cc8"
+        }
+      ]
+    }
+  ],
+  "cachedTables": [
+    {
+      "path": ".scratch/registration261-lower-20261008T0104Z/table-148480888.json",
+      "artifactSha256": "d0680908f81fead20c3a21532f15cc7e6d9309c1ff52de57a42d6fe9ad2248be",
+      "start": "0x148480888",
+      "bytes": 128,
+      "sha256": "b3dd603675a9b80f0aa10d70d4d907e905c9c9c60a40bd79f39627f7b5a1bac0",
+      "slot": "0x58",
+      "target": "0x145dd8b90"
+    },
+    {
+      "path": ".scratch/registration261-lower-20261008T0104Z/table-148480758.json",
+      "artifactSha256": "ef1f1e315e8f05d230053e8074b622542e3a8041c3db4a95f759cecbd5c706f8",
+      "start": "0x148480758",
+      "bytes": 64,
+      "sha256": "53990cdba2d3a3f78808b4b165c8b1f725078c795bd956ae130e75f37b449506",
+      "slot": "0x20",
+      "target": "0x140f7c980"
+    }
+  ],
+  "resourceActual": {
+    "newHelperBatches": 1,
+    "newPdataRoots": 1,
+    "newCodeBytes": 302,
+    "cachedCodeBytes": 4658,
+    "reusedTableBytes": 192,
+    "newTableWindows": 0,
+    "initializedStaticImportBytes": 37848576,
+    "virtualBssExtensionBytes": 5559448,
+    "agentFullIdentityPasses": 2,
+    "primaryFullIdentityPasses": 2,
+    "knownFullIdentityPasses": 4,
+    "knownFullIdentityBytes": 716816704,
+    "agentNativeHeaderBytes": 4096,
+    "agentNativeCodeBytes": 302,
+    "failedNativeLaunchBeforeFileAccess": 1
+  },
+  "metadataNavigation": {
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "directHeaderLogicalBytes": 262
+  },
+  "sourceClaims": {
+    "K410": "Conditional root+58/backend+20/static receive-import source chain; alternate/supplied/runtime selection unproved.",
+    "K411": "Output-slot release/acquisition/registry-callback and EAX result/status effects; pointee types, callbacks, aliases and physical extent unproved.",
+    "K412": "Normal U32 bitextent/headercursor32 versus transformedreset0; exact initialized field supports narrow aligned preserved BE comparison, not complete codec equality."
+  },
+  "audit": "Original REPORT and two corrections retained. Original failed native-check script is preserved and hashed; failure before file access. Primary adjudication corrects the investigator total-unknown endian statement using277 exact swap gates. Transform qword multiplication overflow/physical capacity limitations retained.",
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Selected conditional source component only",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires exact selected-input closure reconciliation"
+  },
+  "limits": [
+    "Runtime interface/backend/socket invocation, physical extents and opaque callback/filter/transform behavior remain unproved.",
+    "U32 normal count versus configured capacity is not locally checked. Transform qword*8 wraps modulo64 with no shown overflow or output-capacity check.",
+    "Parent277 queued payload/reassembly-to-compact/type/response/auth/world/M1 acceptance remains Partial.",
+    "No concrete codec mismatch/server-code change or fresh native grant. Next source edge: exact fallback root+a0 slot and address-object factory."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Incoming buffer and reader construction — October8, #279
+
+[Receipt](../research/evidence/current-registration-incoming-reader.json) pins
+clean0a4330e and original source/review/adjudication inputs.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K410 | Conditional root+58/backend+20/static receive-import chain | Alternate/supplied/later interfaces and actual runtime selection unknown | New302B wrapper/cached ctor/backend/native tables |
+| K411 | Output-slot/refcount/acquisition/callback/result effects | Callback receives pointee/status byvalue/output pointer; types/aliases/extent unknown | New302B wrapper/reused584B registry helper/corrections |
+| K412 | Local reader units/initialization/header32/reset0/narrow BE comparison | Wrapped transform counts and no physical capacity checks; opaque preservation required | Cached3263B caller/prior277 parser/native review |
+
+No concrete codec mismatch/codechange; selected source componentPassed while
+parent277/M1 remains Partial. Original reports, failed script and corrections
+retained. Validation reuses unaffected1960 cases by exact input comparison.
+
 ## Conditional post-parser dispatch — October8, #278
 
 [Receipt](../research/evidence/current-registration-packet-dispatch.json) pins
