@@ -1,5 +1,24 @@
 # Agent handoff
 
+## Current ACK callback and budget update — October8, #283
+
+[K422–K424](REGISTRATION_ACK_BUDGET.md) closes the selected fallback callback's
+output-byte question: the two return paths write0 on equality of the compared
+QWORDs and1 after inequality/counter updates. The callback retains its entry
+pointee; it does not reload the state slot at comparison. Both integer divisors
+in this connected graph are locally guarded. The direct609B helper computes
+scalar values and locally appends an opaque object; its separate integer divisor
+is unguarded, constructor argument6 does not establish a wire ID, and a later
+state reload need not equal the earlier flag-write pointee.
+
+One refused PDATA query remains preserved. Seven declared windows704captured/
+535unique bytes cover95 reachableinstructions412B; no full-function extent or
+runtime fallback is inferred. Exact seals/reviews support selected source closure;
+no concrete server mismatch justified a change. Required catalog/PF/bindings and
+unchanged1960/50/fivePS/closedloopback reuse are reconciled by actual selected
+inputs. Parent277/263 physical/reassembly→compact/type/reply/auth/world/M1Partial.
+Official clips remain normal-game references; no fresh native trial grant.
+
 ## Current connection callback and system ACK input — October8, #282
 
 [K419–K421](REGISTRATION_CONNECTION_ACK.md) establishes the selected initial

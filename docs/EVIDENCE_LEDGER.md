@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current ACK callback and budget update — October8, #283
+
+[Receipt](../research/evidence/current-registration-ack-budget.json) pins
+clean4569ed8, exact private byte/seal/review/continuation/adjudication artifacts.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K422 | Conditional fallback callback output predicate | SnapshotT retained; two byte stores; normal completion/alias/fault/runtime/units unknown; PDATA refused |95 reachableinstructions412B, seven windows704captured/535unique |
+| K423 | Guarded scalar update helper | Separate unguarded divisor; opaque virtual outputs/constants; flag-write snapshot versus later reload |609B/149 instructions plus cached caller/emitter |
+| K424 | Local object append | Constructorarg6 is not wire ID proof; nullable stores/ownership/consumer/lifetime unknown |Exact calls/stores and targeted review |
+
+Selected conditional source questionPassed; parent277/263/M1Partial. Historical
+Partial prefix receipts remain unchanged. Seven identity passes and separate
+imports/BSS/bounded-read counts; no client/native/endpoint/listener/service or
+original-server change. Official footage is reference only.
+
 ## Current connection callback and system ACK input — October8, #282
 
 [Receipt](../research/evidence/current-registration-connection-ack.json) pins

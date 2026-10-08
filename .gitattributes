@@ -101,3 +101,4 @@
 /research/evidence/current-registration-address-factory.json text eol=lf
 /research/evidence/current-registration-receive-state.json text eol=lf
 /research/evidence/current-registration-connection-ack.json text eol=lf
+/research/evidence/current-registration-ack-budget.json text eol=lf
