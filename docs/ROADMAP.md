@@ -1,5 +1,23 @@
 # Milestone 1 roadmap
 
+## Receive address-associated object lookup — October8, #280
+
+[K413–K415](REGISTRATION_ADDRESS_FACTORY.md) resolves fallbackroot+a0 to124B
+factory145dc9600 and its380B lookup/create helper145db6bd0. Copied address-area
+fields select a bucket and selected-field equality; outputnode+10 receives a
+postADD zero guard/increment. The ignored result byte distinguishes branches,
+not durable creation. Allocation/rehash/outputobject+8 state assignment remain
+opaque; I+38 is a distinct field. No codec mismatch or server change follows.
+
+Native/table seal, critical review,36catalog/actualPF and public/private bindings
+support this component. Exact unchanged1960/50/fivePS/closedloopback reuse is
+reconciled against selected inputs. Nine known full identity passes count the
+shared baseline once;504code/8table/static75697152/BSS11118896/navigation are
+separate. No failed query or game/native/runtime resources; no new native grant.
+Parent277's physical/reassembly/queued payload→compact/type/reply/auth/world/M1
+acceptance remains Partial. Next direct source target is145de1a30, then only a
+source-supported factory virtual target if used by that body.
+
 ## Incoming buffer and reader construction — October8, #279
 
 [K410–K412](REGISTRATION_INCOMING_READER.md) joins the conditional fallback

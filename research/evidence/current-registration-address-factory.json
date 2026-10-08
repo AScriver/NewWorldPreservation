@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "selectedComponentAcceptance": "Passed",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 280,
+  "parentActionableId": 277,
+  "claimIds": [
+    "K413",
+    "K414",
+    "K415"
+  ],
+  "recordedUtc": "2026-10-08T09:52:34.412096+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "3808c7fcd9ed4ba7b2a79279667fdc7404551298",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_ADDRESS_FACTORY.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_ADDRESS_FACTORY.md": "f59aeaef8367380462403ed7ba9bdd21833931c2aa8336ba563ff60cb2a5de93",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-driver-backend.json": "30f5fb1c4b38a2f41d49aa9c2be8449c78d4ab44e45720de38d7a10067bc9fbd",
+    "research/evidence/current-registration-incoming-reader.json": "514a066c5cda5ed727f40eb25f2124b22bd3b492d1e3344ca25c30d1442713f9",
+    "research/evidence/current-registration-packet-dispatch.json": "b17b1e40e466bbca541e46a199739ee6ca7eaa9d14792b1966c5811d96417a57",
+    "research/evidence/current-registration-packet-receive.json": "06e20c6232a565811eeb344e11ed3ae0a0943e7954219938a34e1b92171fd76e",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/registration278-primary-20261008T0822Z/closure.json": "7162e57defbddc37c2c471bd15e3f55ff88be03f86ad633b5cec65d2876cd2c8",
+    ".scratch/registration279-next-callback-20261008T0916Z/report.md": "38b05f80e15867974fa0cfb5f17cdb15d530c1abc910dfa8f036390b1ece0253",
+    ".scratch/registration280-address-factory-20261008T0928Z/NativeCheck.ps1": "e3129b7e2e0d751720f9479484a563cea45bb60c0501b293fe8adb67540a868f",
+    ".scratch/registration280-address-factory-20261008T0928Z/NativeCheck.py": "f4722264ebf906b2ffebb4d43281f269742504b76488dfd88eb7295d100ad0f6",
+    ".scratch/registration280-address-factory-20261008T0928Z/QueryFactory.ps1": "9bd8ff3c025b1d29796d41548490e35944cbb01564b62f62b2a3c3f5f4c6f724",
+    ".scratch/registration280-address-factory-20261008T0928Z/QueryFactoryCallee.ps1": "14c01f5142761df49e8ab960c9a820aa3ce697a4b9ebbf0e97e14cf7bb4abe59",
+    ".scratch/registration280-address-factory-20261008T0928Z/REPORT.md": "febae46a2223e86afe25b8326de09cfb782ee8a8d180eaacbdd1144ca5e76dcc",
+    ".scratch/registration280-address-factory-20261008T0928Z/ReadRootSlot.ps1": "a62dff0f743884171e611c7babeab0a066e8c296350a794cb410ac27eecfbbd6",
+    ".scratch/registration280-address-factory-20261008T0928Z/ReadRootSlot.py": "380430342437d5dc52d0b3f2216792c6ee9aaad83e116bc4378d779a659f525e",
+    ".scratch/registration280-address-factory-20261008T0928Z/native-check.json": "b93a23714d74dd6c800019b94a5faad310c2a391f2e97ac504fd9e8bdb8fd096",
+    ".scratch/registration280-address-factory-20261008T0928Z/native-instructions.txt": "cb5a861bbc9d8d78f0e75277da10bb16b8d69c9ccbbb6ed557edb593868ac5d5",
+    ".scratch/registration280-address-factory-20261008T0928Z/output-145db6bd0/function-145db6bd0.c": "3294e3ac02fbcd0f24475a227e06804a879139bef5a06189b24c8a33a84e4b07",
+    ".scratch/registration280-address-factory-20261008T0928Z/output-145db6bd0/receipt.json": "9d6887c250d199611dddeb0b33b1e3fce36ca95bf12bb6a7bafa91f91d3ee065",
+    ".scratch/registration280-address-factory-20261008T0928Z/output-145dc9600/function-145dc9600.c": "b0a8f21e485b672ec4ee84733f227633ce60af18dfb69ab74c8f7aabb5805c97",
+    ".scratch/registration280-address-factory-20261008T0928Z/output-145dc9600/receipt.json": "02ad96f8d266ffe5ff28864e3b1a67d0cb5b908ccd23daa3a0c021b1cbd23523",
+    ".scratch/registration280-address-factory-20261008T0928Z/root-slot.json": "4c3df978f1b6a184267a960c685b40b9d33f7c221f52c5ea25856db19ac4f2a0",
+    ".scratch/registration280-next-construction-20261008T0937Z/report.md": "257712fed36260a090de5e1e3ca43fb3659846b011df04eee0eb22ca4bce5c31",
+    ".scratch/registration280-primary-20261008T0927Z/Baseline.ps1": "2df00a47d322fa7398dfc6e373663d291c864d5dd56415029a3b19be5d30c43e",
+    ".scratch/registration280-primary-20261008T0927Z/Baseline.py": "9e7e68ea9e0a9d55e270a92a2a05d7b2a2e870880d338ea525f72f01db1518de",
+    ".scratch/registration280-primary-20261008T0927Z/Catalog.ps1": "aa048f3d600be35d36cef546fb53df4de03abf7b86547895da6a7a670586619b",
+    ".scratch/registration280-primary-20261008T0927Z/Closure.ps1": "ef8043df878a1772308acc9c104c48078bc17313ea7ae5359b0ac2baaef7f7fe",
+    ".scratch/registration280-primary-20261008T0927Z/Closure.py": "e1bd1f2eaac704043547494e597876e98df5cb35b05b8cfc792471872e857da8",
+    ".scratch/registration280-primary-20261008T0927Z/Commit.ps1": "74d4da17500c3e7f1b6248b138da882b7dfe7cf0f53ad5bb3ff12095a291c4a9",
+    ".scratch/registration280-primary-20261008T0927Z/Metadata.ps1": "257dda649cae956baadbd9f484dc0173b7ad2b2ea0253ca0b5a598b929a554cc",
+    ".scratch/registration280-primary-20261008T0927Z/Metadata.py": "6f2415ccb168a218bbda253799abf682450bd63c2cd891e359fd51b62f6a464f",
+    ".scratch/registration280-primary-20261008T0927Z/PrepareBaseline.py": "477ec8df513ffbf8b17f2a853b73bc81673792b5aa09c949102f776e47fcd3a7",
+    ".scratch/registration280-primary-20261008T0927Z/PrepareMetadata.py": "15eabebc52981296152da821914f54a2ae7519fff5d8302581d91af47502c287",
+    ".scratch/registration280-primary-20261008T0927Z/PreparePublish.py": "50bb7ac44325739808cabe54ba6548a7f9d7b31bd0b216b35c4f091c1e68878b",
+    ".scratch/registration280-primary-20261008T0927Z/PrepareSeal.py": "3cba3c73bb5e4ba73d1e95453cb396c51a262a9a89ec3f0b820508ea1abc2c1b",
+    ".scratch/registration280-primary-20261008T0927Z/PrepareSupport.ps1": "6385f275aae66ac08c6a3d2a5f064f6689e66601e8084b86d31dae471250b3cc",
+    ".scratch/registration280-primary-20261008T0927Z/PrepareSupport.py": "a214366770698240df8cabe0115d29188f0c793e4220f6bbdfc7a7d7e53e5c37",
+    ".scratch/registration280-primary-20261008T0927Z/Publish.ps1": "7bf65cacb3ff7d2ce6964da07a3b4697f3e7c8b84eee3301a755da8926572ca6",
+    ".scratch/registration280-primary-20261008T0927Z/Publish.py": "dbbf6201f653289bc0632204fac7ae72969fc1a793c7c20d69bd7d5dea5497ad",
+    ".scratch/registration280-primary-20261008T0927Z/Seal.ps1": "5db9d9fd4dbfcf7d2e515364079f12f7fad78fa2d62ecd5f8cab46d5ad453b66",
+    ".scratch/registration280-primary-20261008T0927Z/Seal.py": "053864b2fd7b71060edb1f7687ba6e4eca43c7dddedcb731f4073afb764cc8ba",
+    ".scratch/registration280-primary-20261008T0927Z/Stage.ps1": "72b6668e0719d29ae946f94699d287d28a1bd38a70cf7087a047da9547651332",
+    ".scratch/registration280-primary-20261008T0927Z/adjudication.md": "bb6aea739730c5459a704f121ddd810100d506b32feb08e7ed4cfc3b1474e6ae",
+    ".scratch/registration280-primary-20261008T0927Z/baseline.json": "30b528ce25c885a7676424b402fabddebe8fae4fbe3738b8cf85d1af69b3c6ab",
+    ".scratch/registration280-primary-20261008T0927Z/doc-draft.md": "f59aeaef8367380462403ed7ba9bdd21833931c2aa8336ba563ff60cb2a5de93",
+    ".scratch/registration280-primary-20261008T0927Z/ledger.md": "f285fea7509a88caf30ebc74cee2ef0f17c4a9442d014982da3d53338d66f805",
+    ".scratch/registration280-primary-20261008T0927Z/metadata-head.py": "0032239ee99b2c51e568bb2e511667dac569558e88377c0c9799777ad758d704",
+    ".scratch/registration280-primary-20261008T0927Z/native-145db6bd0.txt": "b5f4c6609ef67c587bab87aa6eec159ada7725dc896cba6b5b8c5f27f9b76d06",
+    ".scratch/registration280-primary-20261008T0927Z/native-145dc9600.txt": "7d28f3d38cfa0078e5ae204cce5d18e112f2ca13e7ba04bbd2f72e1864e55e85",
+    ".scratch/registration280-primary-20261008T0927Z/publish-tail.py": "c6bd9df94452d6ce9ccaa189127b485bd668346c5b65d82212ef5ced0a52f128",
+    ".scratch/registration280-primary-20261008T0927Z/seal-tail.py": "fa830d945a16fe38bd3ae182e86a83a006352b59bde1f65468d0b0c560f32b1a",
+    ".scratch/registration280-primary-20261008T0927Z/seal.json": "bbea30f9d1918691f4f734f17ab3437eacb0b5282cafffd6c44cb8eaca8ebef0",
+    ".scratch/registration280-review-20261008T0936Z/report.md": "a55eea160b24110168a5ee21a581f1370564c8e26613a50a96fe4782191ad379",
+    "research/upstream/first-light/server/javelin/frame.py": "798f6419114eacac5c5bfb1fd4822929239cd82fb66835e15242dd78a066b33a",
+    "research/upstream/first-light/server/javelin/wire.py": "bcb82f500455f9aa57312a596554954c04a462a1acc2cb23ae4a74ccd65d3a62"
+  },
+  "native": [
+    {
+      "entry": "0x145db6bd0",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration280-address-factory-20261008T0928Z/output-145db6bd0/receipt.json",
+      "queryReceiptSha256": "9d6887c250d199611dddeb0b33b1e3fce36ca95bf12bb6a7bafa91f91d3ee065",
+      "historicalHead": "3808c7fcd9ed4ba7b2a79279667fdc7404551298",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145db6bd0",
+          "endExclusive": "0x145db6d4c",
+          "bytes": 380,
+          "sha256": "edee2eeed63155d2a639f7aa5a125f1884079fe9c5ab8e5a3abd3bb66a4bd2c0",
+          "instructions": 108,
+          "listing": ".scratch/registration280-primary-20261008T0927Z/native-145db6bd0.txt",
+          "listingSha256": "b5f4c6609ef67c587bab87aa6eec159ada7725dc896cba6b5b8c5f27f9b76d06"
+        }
+      ]
+    },
+    {
+      "entry": "0x145dc9600",
+      "newQuery": true,
+      "queryReceipt": ".scratch/registration280-address-factory-20261008T0928Z/output-145dc9600/receipt.json",
+      "queryReceiptSha256": "02ad96f8d266ffe5ff28864e3b1a67d0cb5b908ccd23daa3a0c021b1cbd23523",
+      "historicalHead": "3808c7fcd9ed4ba7b2a79279667fdc7404551298",
+      "historicalDirty": "",
+      "ranges": [
+        {
+          "start": "0x145dc9600",
+          "endExclusive": "0x145dc967c",
+          "bytes": 124,
+          "sha256": "f0eb03dbc0fa888121f3ff2f9371907fcc7d528f27990fcb1d1b7e6deef66cf2",
+          "instructions": 30,
+          "listing": ".scratch/registration280-primary-20261008T0927Z/native-145dc9600.txt",
+          "listingSha256": "7d28f3d38cfa0078e5ae204cce5d18e112f2ca13e7ba04bbd2f72e1864e55e85"
+        }
+      ]
+    }
+  ],
+  "rootSlotA0": {
+    "tableBase": "0x148480888",
+    "address": "0x148480928",
+    "bytes": 8,
+    "sha256": "2f9b2b7114c764b202ee5b4beb1ad25f7831dd4014606e4b3e88a1ce54baab89",
+    "target": "0x145dc9600"
+  },
+  "resourceActual": {
+    "newHelperBatches": 2,
+    "newPdataRoots": 2,
+    "newCodeBytes": 504,
+    "primaryNewTableWindowBytes": 8,
+    "initializedStaticImportBytes": 75697152,
+    "virtualBssExtensionBytes": 11118896,
+    "primaryBaselineFullIdentityPasses": 1,
+    "primarySealFullIdentityPasses": 1,
+    "agentUniqueFullIdentityPasses": 7,
+    "primaryFullIdentityPasses": 2,
+    "knownFullIdentityPasses": 9,
+    "knownFullIdentityBytes": 1612837584,
+    "agentNativeFullIdentityPasses": 1,
+    "agentNativeSelectedCodeBytes": 504,
+    "failedQueries": 0
+  },
+  "metadataNavigation": {
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "directHeaderLogicalBytes": 262
+  },
+  "sourceClaims": {
+    "K413": "Exact fallback+a0 factory/copies/adjusted node pointer/postADD guard and holder return.",
+    "K414": "Selected key/hash/equality/search and distinct creation argument/result branches; branch byte is not validated allocation.",
+    "K415": "Conditional receive-address-output area association to indexed object; construction/state/physical/higher payload joins unproved."
+  },
+  "audit": "Original REPORT and cache note retained. Primary brief double-counted shared baseline; corrected union9 fullidentity passes. NativeCheck read/hashed full image, decoded504B. No failed/refused query.",
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Selected conditional source component only",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires exact selected-input closure reconciliation"
+  },
+  "limits": [
+    "PostADD zero guard is not rawnode-null checking; padding/tail/physical extents/allocation/rehash/lifetime/alias effects unproved.",
+    "Selected-field equality does not compare every copied byte. Creation branch byte does not prove durable successful insertion.",
+    "Returnedobject+8 is distinct fromI+38; constructor/state assignment and runtime/callback/filter preservation unjoined.",
+    "Parent277 physical/Carrier/reassembly/queued payload/compact/type/reply/auth/world/M1Partial. No codec mismatch/server change/newnativegrant.",
+    "Next exact source target145de1a30; factory vptr target only after demonstrated use."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

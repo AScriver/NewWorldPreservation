@@ -98,3 +98,4 @@
 /research/evidence/current-registration-packet-receive.json text eol=lf
 /research/evidence/current-registration-packet-dispatch.json text eol=lf
 /research/evidence/current-registration-incoming-reader.json text eol=lf
+/research/evidence/current-registration-address-factory.json text eol=lf

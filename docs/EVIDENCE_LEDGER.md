@@ -1,5 +1,20 @@
 # Evidence ledger
 
+## Receive address-associated object lookup — October8, #280
+
+[Receipt](../research/evidence/current-registration-address-factory.json) pins
+clean3808c7f and original source/review/adjudication inputs.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K413 | Fallback+a0 factory/copies/outputnode+10/holder return | PostADD zero guard; no raw-node null/complete initialization/lifetime proof | Exact8B table/124B native |
+| K414 | Selected key/hash/equality/search and creation branches | Byte1 denotes branch; allocation/rehash/list/aliases opaque | Direct380B helper/native/call ABI |
+| K415 | Conditional address-output area to indexed object association | Returnedobject+8 differs fromI+38; state/physical/native/higher payload unjoined | Current280 plus unchanged279 source |
+
+Selected source componentPassed; parent277/M1Partial. Nine identity passes
+reconcile shared baseline once; original reports/corrections retained. No codec
+mismatch, server change, native trial or new grant.
+
 ## Incoming buffer and reader construction — October8, #279
 
 [Receipt](../research/evidence/current-registration-incoming-reader.json) pins
