@@ -1,5 +1,16 @@
 # Evidence ledger
 
+## Typed registration response record — October7, #264
+
+[Original encoder receipt](../research/evidence/current-registration-response-record.json)
+pins9668f01/new task-owned code/fixture/profile state and the reused wrapper/BODY/
+compact-reader evidence. Original offline checks and native source are separate.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K371 | Pure response record encoder wraps unchanged BODY with explicit typed wrapper and exact compact length | Reproduced seven hand literals,113 new+45 existingBODY checks and five independent reader groups. Explicit selector/opaque raw8/fresh0/1/3 domain; optional fields, compact boundaries, max strings and suffix extent checked. No full Carrier envelope/runtime type3/reply selection/authentication/native acceptance | [Record API](REGISTRATION_RESPONSE_RECORD.md); hash-bound literals/JUnit and independent experiments |
+| K372 | Parsed response UUID is stored unchanged at descriptor+18 and submitted as raw16 bytes on resulting-zero selector branch | Strongly source-supported conditional construction. Two roots/516 bytes, native MOVUPS128 at146152b39/b3c; out-pair[0]=allocationBase+10. Nonnull descriptor/resulting zero required. Final edge is pointer/length submission to virtual+40, not actual observed emission. Full physical transport/runtime binding remain open | [UUID source order](REGISTRATION_RESPONSE_RECORD.md#source-and-verification-boundary); exact native seal and critical review |
+
 ## Registration packet assembly calls — October7, #263, partial
 
 [Original checkpoint](../research/evidence/current-registration-bytepath.json)

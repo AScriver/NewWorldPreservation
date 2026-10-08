@@ -1,5 +1,39 @@
 # Bounded task briefs
 
+## #264 — typed registration response record encoder (M)
+
+- Continue164/178 from clean9668f01. Reuse sealed generic wrapper/selector,
+  response BODY/class UUID and compact-record reader;263 inbound-map confirms
+  pure record boundary while lower/Carrier-to-callback provenance is unknown.
+- Primary owns new original encoder/literal fixtures/tests, profile/inventory,
+  docs/receipt/catalog and tracking. Tester owns only ignored private experiment
+  output and preserves others' edits. No shared runtime/ports/services/native
+  resources or fresh image queries; caller supplies type/wrapper values.
+- Encode exact compact length + fresh flags0/1/3 + optional raw8 fields +
+  presence1 + compact explicit uint32 index/zero UUID fallback + existing BODY.
+  Keep sender CRC/nil descriptor/Carrier and acceptance out of the claim.
+- Literal and independent reader checks, outer/count selector boundaries, max
+  strings and invalid caller arguments. Update reviewed static/test inventories;
+  focused and complete workspace/fivePS/owned-loopback/actual preflight. Scoped
+  local commit, terminal readback/claim release and owned resource cleanup.
+- UUID provenance correction: existing text/parser/raw-copy evidence leaves
+  helper1407de270 descriptor+18 storage unjoined. Investigator owns only ignored
+  .scratch/registration264-uuid-20261008T0217Z/ and matching private/ghidra/ dir;
+  at most two new PDATA roots/one128-byte data window/1MiB code, exact native
+  argument/store checks. First1407de270 forwards the parsed UUID to146152b10;
+  inspect only that connected constructor as the second root. Candidate fallback
+  bytes stay unproved until the actual descriptor+18 store is joined.
+  No new runtime/native execution; record actual dirty state and retain failures.
+
+- Outcome: seven literal records,113 new+45 existingBODY checks and five
+  independent reader groups pass. Two source roots/516 bytes prove the UUID
+  descriptor storage, with out-pair/non-null/resulting-zero submission limits.
+  Complete1754-case/50-module workspace, fivePS suites and owned closed-loopback
+  lifecycle pass. Affected36 catalog/runner/actual preflight also pass; closure
+  retains exact hashes and outcome-only documentation delta. No native client
+  or runtime resources were acquired. Typed-record acceptance is complete;
+  full Carrier placement, authentication and native acceptance remain separate.
+
 ## #263 — post-record registration byte path (M)
 
 - Continue164/178 from clean db060e0. Reuse226/261/262 physical sender, chunk

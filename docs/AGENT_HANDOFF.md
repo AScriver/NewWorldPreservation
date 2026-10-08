@@ -1,5 +1,32 @@
 # Agent handoff
 
+## #264 typed response record encoder — October7
+
+- Original [response encoder](REGISTRATION_RESPONSE_RECORD.md), K371/K372,
+  constructs compact extent + fresh typed wrapper + unchanged response BODY.
+  Caller supplies uint32 selector and optional opaque8-byte fields; no runtime
+  index3 default. Zero uses the source-order UUID fallback; second-only fields
+  are rejected within this selected fresh-wrapper API, not the full native domain.
+- Seven hand literals,113 new+45 existingBODY cases and five independent reader
+  groups pass. Boundaries, all selector widths, max strings, invalid caller inputs
+  and suffix extent are checked. No complete Carrier envelope or response-choice,
+  authentication, world/player state or native acceptance follows.
+- Two new roots/516 bytes pin sequential UUID parsing through the out-pair to
+  descriptor+18 and its unchanged128-bit MOVUPS copy. Nonnull descriptor and
+  resulting-zero selector condition the virtual+40 raw16-byte submission;
+  actual native emission remains unobserved. Primary instruction/hash seal and
+  bounded critical review retain these limits; source databases stay ignored.
+- Complete workspace passes1754 Python cases/50 modules, all fivePS suites and
+  owned loopback lifecycle; listener closed and child exited0. Receipt:
+  .scratch/offline-validation/run-5sh_j_7u/receipt.json. All36 affected checks and
+  actual preflight/index/bindings pass. Private closure reconciles only outcome
+  documentation after the run at
+  .scratch/registration264-response-record-20261008T0211Z/closure.json.
+- All static children exited and no game/runtime resources were acquired.
+  Continue concrete bit-copy140f8bfd0 and fallback lower send145dda0d0 under
+  a separate bounded leaf; preserve optional transform/supplied-interface and
+  exact child/state reciprocity limits. No new native trial is authorized.
+
 ## #263 packet assembly calls — October7, partial
 
 - K368–K370 [checkpoint](../research/evidence/current-registration-bytepath.json)

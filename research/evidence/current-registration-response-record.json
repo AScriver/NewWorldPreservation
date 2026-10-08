@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "workItemId": 164,
+  "actionableId": 264,
+  "parentActionableId": 178,
+  "recordedUtc": "2026-10-08T02:27:31.962519+00:00",
+  "claimIds": [
+    "K371",
+    "K372"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "9668f0112d8db69fa27091b20d99f7c1680a15dc",
+    "implementationDirty": [
+      " M docs/TASK_BRIEFS.md",
+      "?? scripts/current_registration_response_record.py",
+      "?? tests/fixtures/registration/current-response-record-original.json",
+      "?? tests/test_current_registration_response_record.py"
+    ],
+    "nativeQueryStates": [
+      {
+        "head": "9668f0112d8db69fa27091b20d99f7c1680a15dc",
+        "dirty": [
+          " M .gitattributes",
+          " M docs/TASK_BRIEFS.md",
+          " M scripts/offline-test-profiles.json",
+          " M scripts/validate_offline.py",
+          " M tests/test_offline_runner.py",
+          "?? scripts/current_registration_response_record.py",
+          "?? tests/fixtures/registration/current-response-record-original.json",
+          "?? tests/test_current_registration_response_record.py"
+        ]
+      },
+      {
+        "head": "9668f0112d8db69fa27091b20d99f7c1680a15dc",
+        "dirty": [
+          " M .gitattributes",
+          " M docs/TASK_BRIEFS.md",
+          " M research/agent-evidence-index.json",
+          " M scripts/offline-test-profiles.json",
+          " M scripts/validate_offline.py",
+          " M tests/test_offline_runner.py",
+          "?? docs/REGISTRATION_RESPONSE_RECORD.md",
+          "?? scripts/current_registration_response_record.py",
+          "?? tests/fixtures/registration/current-response-record-original.json",
+          "?? tests/test_current_registration_response_record.py"
+        ]
+      }
+    ],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9",
+    "ghidra": "12.1.4",
+    "pyghidra": "3.1.0",
+    "capstone": "5.0.7"
+  },
+  "sources": {
+    "scripts/current_registration_response_record.py": "d2c24e78ed0f37fabe6f8ad9f4b1a4c46ba2e3bf9bfe0f5408d69575cce649fe",
+    "scripts/current_registration_response_body.py": "ba0a2db4ce073e56c1a781c2b0673a631686714df6b418cd0068c69b5a34c747",
+    "tests/test_current_registration_response_record.py": "557e0a7a30a7b45bf9348660335c65f9a81be97804eeec56c11c3addb29dc90d",
+    "tests/fixtures/registration/current-response-record-original.json": "bba16a9b620bf15a052947d9e9b19cc56d24e2005d373fe1f3788fff53c2d8b2",
+    "tests/fixtures/registration/current-response-body-original.json": "c7f52d4008858c05670607503e828f2d5381a3ff75e33e146ac26c2bddea52e6",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_offline_runner.py": "802cd72c3fe059115b1e2883921bd505757a1402a4a49c82fe14b84b6f2dde5c",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-response-body-codec.json": "8ebd689086445694cf798861d5a0b39d356ed9043e63fecb53c39899a30aecb4",
+    "research/evidence/current-registration-stream-framing.json": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971"
+  },
+  "privateArtifacts": {
+    "private/ghidra/registration264-uuid-20261008T0217Z/receipt.json": "9a531b7388a4a00295d9ec109a86c313a821d2970ade4f5c9ce635f22c8d1733",
+    ".scratch/registration264-uuid-20261008T0217Z/report.md": "6e02402e35bcb6658b7bf880549d9308397193b920ef319a99872656dca90daa",
+    ".scratch/registration264-uuid-review-20261008T0222Z/report.md": "847dab8455543d5136d3b37f72b0b210509ec7c19fe776df9eef05e8367999d1",
+    ".scratch/registration264-tester-20261008T0215Z/experiment-report.json": "91d946149e96c4429f89409a1dc96e325763fbb4c4eb0dfc98e04ea6acf94956",
+    ".scratch/registration263-inbound-map-20261008T0153Z/REPORT.md": "a21074f40ddb0dc37c47eb7f42837f224d326ea37ce66d00e108fb8a638852b0",
+    ".scratch/registration263-inbound-map-20261008T0153Z/UUID-FALLBACK.md": "7994dfb587847bde3bd59d65cbd08a76dbad6f2204ea549e62932bebe36e1569",
+    ".scratch/registration264-response-record-20261008T0211Z/baseline.json": "610edb73ea58370b4f74b008496409a3d89f275233374338f3f7da302839786c",
+    ".scratch/registration264-response-record-20261008T0211Z/Seal.py": "8e37b687670e1aef73445092cb0ea1993e46c41e3fe7eb8c5bb235465a2e6592",
+    ".scratch/registration264-response-record-20261008T0211Z/Seal.ps1": "ba7c091dc4c23268b5b192e0a73b8d9e7877e99d5838db341c43b4608b26e522",
+    ".scratch/registration264-response-record-20261008T0211Z/seal.json": "7b84ddbb896d643416e299cdb7f5e6c83639ffd3f092ccc4033b41fd1531e3d3",
+    ".scratch/registration264-response-record-20261008T0211Z/ledger.md": "d0a2c1ebe0974aff2ceb90a7ce82e662f12397c7035e08708649a9494e52b855",
+    ".scratch/registration264-response-record-20261008T0211Z/focused-junit.xml": "41448b0865d75670a4e3eb121490460961488ceaeaf4128556a8945e7058dd9d",
+    ".scratch/registration264-response-record-20261008T0211Z/focused-tests.log": "162668ab45c9fd42e3bb6a3d093b762cb767b6a9de6ceb832922034c12049cbe"
+  },
+  "api": {
+    "function": "encode_registration_response_record",
+    "selector": "required trueuint32; zero selects fixed response UUID fallback",
+    "optionalFields": "ordered opaque caller8-byte bytes; fresh flags0/1/3, second-only rejected",
+    "layout": "canonical compact byte count + flags/optional8/presence1/compact selector or rawUUID16 + unchangedBODY",
+    "ownership": "immutable bytes result; accepted BODY/wrapper values immutable",
+    "bound": "existing BODY string policy max0x2ffff each; no native cap inferred"
+  },
+  "uuidSource": {
+    "text": "104145a7-ff95-44f1-9468-21fb41c8ac2b",
+    "bytesHex": "104145a7ff9544f1946821fb41c8ac2b",
+    "constructor": "0x1407de270",
+    "innerConstructor": "0x146152b10",
+    "descriptor": "out-pair[0]=allocationBase+0x10",
+    "copy": "MOVUPS128 [RDX] to [RCX+0x18] at146152b39/b3c; no transformation",
+    "condition": "successful allocation/construction; nonnull descriptor; resulting selector zero after possible lookup",
+    "writerEdge": "descriptor+0x18 and length16 submitted to virtual+0x40",
+    "limit": "raw stored/source-order bytes and call arguments; actual native copy/emission/runtime fallback unobserved"
+  },
+  "nativeBindings": [
+    {
+      "start": "0x1407de270",
+      "endExclusive": "0x1407de3ae",
+      "bytes": 318,
+      "sha256": "5d71dfa8e0d966ff2a075d04ca87a09847e7fa61ed4a324f2b6afc44f241dce1"
+    },
+    {
+      "start": "0x146152b10",
+      "endExclusive": "0x146152bd6",
+      "bytes": 198,
+      "sha256": "af81a9b77398ba6e44093b428482eba2ba31228b319bea0a8f50b996e90de041"
+    }
+  ],
+  "validation": {
+    "type": "Automated test",
+    "outcome": "Passed",
+    "focusedCases": 158,
+    "newCases": 113,
+    "existingBodyCases": 45,
+    "handDerivedLiteralRecords": 7,
+    "independentGroupsPassed": 5,
+    "independentInputHashesUnchanged": true,
+    "sourceRoots": 2,
+    "nativeBytes": 516,
+    "newDataWindows": 0,
+    "criticalUuidReview": "conditional source-order lemma survived",
+    "inventory": "fixtures-static23 to24; workspace49 to50 modules",
+    "scope": "pure literal/reader construction and static source; complete workspace closure tracked separately in ROADMAP"
+  },
+  "counterEvidence": [
+    "Initial UUID text/parser/raw-pointer evidence omitted descriptor store; first new helper delegated to inner constructor; second closes exact store.",
+    "Native copy is one128-bit MOVUPS atb39/b3c; preliminary decompiler two-qword description is not native instruction identity.",
+    "Outer constructor returns out-pair address; its first field holds descriptor; successful/nonnull/resulting-zero conditions retained.",
+    "Initial independent scratch harness syntax error occurred before encoder call and was repaired without production changes."
+  ],
+  "limits": [
+    "Explicit caller bindings/values and selected fresh domain; runtime index3, actual selected flags/BODY/status/authentication unknown.",
+    "Full physical incoming/Carrier-to-compact-record provenance, native acceptance and world/player/M1 unproved.",
+    "ExistingBODY/sender/receiver/classifier/Carrier responder/candidate/native trial unchanged. No current server reply-selection claim."
+  ],
+  "cleanup": {
+    "allStaticAndTesterChildrenExited": true,
+    "runtimeResourcesAcquiredByCodecWork": false,
+    "privateDatabasesRetainedIgnored": true,
+    "pushed": false
+  }
+}

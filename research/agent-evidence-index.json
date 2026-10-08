@@ -438,6 +438,17 @@
       "limit": "Conditional successful-allocation source route; runtime interface, loaded dependency/call result, worker drain and final Carrier layout unknown. Synthetic parser alignment is not runtime type19, historical860 contents, authentication, response choice or M1. No codec/fixture/responder/native trial change."
     },
     {
+      "id": "current-registration-response-record",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K371", "K372"],
+      "docs": ["docs/REGISTRATION_RESPONSE_RECORD.md", "docs/REGISTRATION_RESPONSE_BODY_CODEC.md"],
+      "scripts": ["scripts/current_registration_response_record.py", "scripts/current_registration_response_body.py"],
+      "tests": ["tests/test_current_registration_response_record.py", "tests/test_current_registration_response_body.py"],
+      "evidence": [{"path": "research/evidence/current-registration-response-record.json", "classification": "offline-executed", "scope": "Original explicit-binding typed response record component; bounded literals/reader checks separate from full Carrier and native acceptance"}],
+      "fixtures": ["tests/fixtures/registration/current-response-record-original.json", "tests/fixtures/registration/current-response-body-original.json"],
+      "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
+    },
+    {
       "id": "current-registration-bytepath",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K368", "K369", "K370"],
@@ -1851,6 +1862,12 @@
   ],
   "fixtures": [
     {
+      "path": "tests/fixtures/registration/current-response-record-original.json",
+      "sha256": "bba16a9b620bf15a052947d9e9b19cc56d24e2005d373fe1f3788fff53c2d8b2",
+      "classification": "synthetic",
+      "scope": "Seven original hand-derived typed response record literals; explicit selector/wrapper inputs, no captured fields or native acceptance"
+    },
+    {
       "path": "tests/fixtures/replication/current-type8-bundle-original.json",
       "sha256": "923ec36974218fac561f106d3f28e699f40bdb997ffce691d4de14e721782c88",
       "classification": "synthetic",
@@ -1984,6 +2001,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-response-record.json",
     "research/evidence/current-registration-worker-dispatch.json",
     "research/evidence/current-registration-bytepath.json",
     "research/evidence/current-registration-lower-send.json",

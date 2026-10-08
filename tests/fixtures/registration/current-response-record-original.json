@@ -1,0 +1,15 @@
+{
+  "classification": "original hand-derived typed-record literal bytes; caller-supplied selectors/wrapper fields; not full Carrier envelope or native acceptance",
+  "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+  "contracts": ["research/evidence/current-initial-registration-contract.json", "research/evidence/current-registration-response-body-codec.json"],
+  "bodyFixture": "tests/fixtures/registration/current-response-body-original.json",
+  "vectors": [
+    {"name": "minimum-explicit3", "bodyName": "minimum", "type_index": 3, "field_04": null, "field_0c": null, "payloadBytes": 21, "record_hex": "15000103000000000000000000000000000000000000"},
+    {"name": "minimum-uuid-fallback", "bodyName": "minimum", "type_index": 0, "field_04": null, "field_0c": null, "payloadBytes": 37, "record_hex": "25000100104145a7ff9544f1946821fb41c8ac2b000000000000000000000000000000000000"},
+    {"name": "rich-selector128", "bodyName": "endian-raw-nul-bool-order", "type_index": 128, "field_04": null, "field_0c": null, "payloadBytes": 27, "record_hex": "1b000180020102030411223344556677880300ff41027f0000010001"},
+    {"name": "minimum-first-wrapper", "bodyName": "minimum", "type_index": 3, "field_04": "0001020304050607", "field_0c": null, "payloadBytes": 29, "record_hex": "1d0100010203040506070103000000000000000000000000000000000000"},
+    {"name": "minimum-both-wrappers", "bodyName": "minimum", "type_index": 3, "field_04": "0001020304050607", "field_0c": "f8f9fafbfcfdfeff", "payloadBytes": 37, "record_hex": "25030001020304050607f8f9fafbfcfdfeff0103000000000000000000000000000000000000"},
+    {"name": "rich-both-uuid-fallback", "bodyName": "endian-raw-nul-bool-order", "type_index": 0, "field_04": "0001020304050607", "field_0c": "f8f9fafbfcfdfeff", "payloadBytes": 58, "record_hex": "3a030001020304050607f8f9fafbfcfdfeff0100104145a7ff9544f1946821fb41c8ac2b0102030411223344556677880300ff41027f0000010001"},
+    {"name": "minimum-selector-uint32-max", "bodyName": "minimum", "type_index": 4294967295, "field_04": null, "field_0c": null, "payloadBytes": 25, "record_hex": "190001f7ffffff1f000000000000000000000000000000000000"}
+  ]
+}

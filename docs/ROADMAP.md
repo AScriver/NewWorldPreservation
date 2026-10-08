@@ -65,6 +65,21 @@ Next useful code unit is a pure typed response record around the existing BODY,
 generic wrapper and compact reader, with caller-supplied type/wrapper values.
 That component cannot establish the full incoming Carrier envelope or acceptance.
 
+#264 adds the [typed response record encoder](REGISTRATION_RESPONSE_RECORD.md)
+around unchanged BODY with explicit type/wrapper inputs and exact compact
+record length (K371/K372). Seven hand-derived literals,113 new+45 existingBODY
+cases and five independent reader groups pass. Two narrow source roots resolve
+the parsed UUID→descriptor+18 unchanged128-bit copy and conditional16-byte
+fallback submission. No live responder or native acceptance changes. Complete
+workspace passes1754 Python cases/50 modules and all five PowerShell suites;
+its owned loopback listener closes and child exits0. Exact unchanged-input run:
+.scratch/offline-validation/run-5sh_j_7u/receipt.json. All36 affected catalog/runner
+checks and actual preflight pass; closure reconciles only outcome documentation
+after that run at .scratch/registration264-response-record-20261008T0211Z/closure.json.
+All static children exited; source databases remain private/ignored. Next source
+unit is concrete bit-copy140f8bfd0 and fallback lower send145dda0d0, preserving
+conditional transform/supplied-interface and byte-provenance limits.
+
 ## Earlier shutdown preservation — October 7
 
 The earlier #166/workItem164 scope preserved official-server evidence that becomes

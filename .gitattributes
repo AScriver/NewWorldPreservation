@@ -6,6 +6,10 @@
 /research/evidence/current-registration-lower-send.json text eol=lf
 /research/evidence/current-registration-worker-dispatch.json text eol=lf
 /research/evidence/current-registration-bytepath.json text eol=lf
+/scripts/current_registration_response_record.py text eol=lf
+/tests/test_current_registration_response_record.py text eol=lf
+/tests/fixtures/registration/current-response-record-original.json text eol=lf
+/research/evidence/current-registration-response-record.json text eol=lf
 /scripts/token_contract_probe.py text eol=lf
 /tests/test_token_contract_probe.py text eol=lf
 /tests/test_current_token_contract.py text eol=lf
