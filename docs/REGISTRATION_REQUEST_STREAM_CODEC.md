@@ -46,8 +46,10 @@ nonempty high-water streams, recycling and mutable native storage are unmodeled.
 
 The reused safe BODY encoder fully encodes or raises. This API returns no partial
 stream after helper failure, while the native writer ignores its body Boolean;
-no universal native success/atomicity claim follows. No decoder is added because
-the actual native receive inverse remains a separate unproved boundary.
+no universal native success/atomicity claim follows. #230 added no decoder; the
+native receive inverse remains a separate unproved boundary. The later
+[original replacement-server decoder](REGISTRATION_REQUEST_RECEIVE.md) inverses
+this proved sender contract with explicit safe server policies.
 
 ## Original checks and remaining limits — J230-3/J230-4
 

@@ -1,5 +1,32 @@
 # Bounded task briefs
 
+## #260 — replacement-server registration receive decoder (M)
+
+- Latest user scope: reproduce server receive/send under164; this leaf is under178.
+  Clean baseline33e38a6, pinned image8654f01d…/179,204,176 bytes and mapf1e2385f…
+  match. Reuse #225 BODY and #226/#227/#229/#230 sender source joins,34 literal
+  physical streams and existing codecs unchanged. Full private baseline is
+  .scratch/registration260-receive-20261008T0047Z/baseline.json.
+- Own new `scripts/current_registration_request_receive.py` and matching tests;
+  reviewed fixture-test inventory/count, original receipt/catalog, this brief,
+  registration stream doc and small ledger/roadmap/handoff/navigation updates.
+  Preserve sender/BODY/old fixtures, Carrier responder and prepared native trial.
+- Acceptance: caller-explicit selector binding, bounded header/count/CRC, immutable
+  payload snapshot, nil outer UUID, flags0/1/3, ordered opaque8 fields, presence1,
+  canonical current compact selector/fixed V3 fallback, exact BODY extent and
+  consumed physical record extent. Decoder is original server policy, not proof
+  of native receive inverse, runtime type index or Carrier placement.
+- Configurable default1MiB limit/canonical selector/exact BODY are explicit safe
+  receive policies. Preserve BODY failure code and absolute cursor without raw
+  fields in diagnostics. Outer suffix remains caller-owned, not parsed.
+- Validate literal streams first, independent corrupt/truncation/boundary/ownership
+  probes, then native Tester in private isolated scratch with no tracked edits.
+  Run complete workspace, five PowerShell suites/owned loopback lifecycle and
+  actual preflight; seal exact tested source/fixture/input state and cleanup.
+- No native game, hooks/process reads, live sessions/capture, credentials/replay,
+  endpoint contact or new replies. All file-analysis/test children must exit;
+  review/stage only owned paths, local commit and completed leaf handoff/release.
+
 ## #240 — unresolved native caller boundary, October 7 server-protocol continuation (S)
 
 - User refocus: reproduce replacement-server receive/send behavior; defer further

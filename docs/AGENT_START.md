@@ -43,7 +43,7 @@ its memory, edit hosts/trust stores, or contact game endpoints.
 & C:\Users\Austin\.codex\tools\Invoke-CodexPowerShell.ps1 -Path .\scripts\Test-Offline.ps1 -Execute -ArgumentList '-ListProfiles'
 ```
 
-The default `workspace` profile explicitly selects reviewed Python tests, three
+The default `workspace` profile explicitly selects reviewed Python tests, five
 mock/synthetic PowerShell suites and an owned loopback HTTPS child lifecycle check.
 Focused profiles are listed in [offline-test-profiles.json](../scripts/offline-test-profiles.json).
 `upstream` and `all` additionally require the existing clean, pinned external First

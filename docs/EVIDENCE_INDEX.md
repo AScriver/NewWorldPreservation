@@ -31,6 +31,7 @@ adds a sampled UI comparison and its later count difference, with raw media priv
 | `current-player-entity-vector` | M1-06A | [Owned vector and guarded binding receiver](PLAYER_ENTITY_VECTOR.md) |
 | `current-player-entity-binding` | M1-06A | [Current typed reference binding and guard ownership](PLAYER_ENTITY_BINDING.md) |
 | `current-registration-request-stream` | M1-06B | [Offline selected V3 sender stream encoder](REGISTRATION_REQUEST_STREAM_CODEC.md) |
+| `current-registration-request-receive` | M1-06B | [Replacement-server selected V3 stream decoder](REGISTRATION_REQUEST_RECEIVE.md) |
 | `current-registration-identifier-placement` | M1-06B | [Current outer UUID and inner type-selector join](REGISTRATION_IDENTIFIER_PLACEMENT.md) |
 | `current-registration-lookup-text` | M1-06B | [Offline verified lookup-text conversion](REGISTRATION_LOOKUP_TEXT_CODEC.md) |
 | `current-registration-setup-inputs` | M1-06B | [Actual setup input caller and tagged pair](REGISTRATION_SETUP_INPUTS.md) |

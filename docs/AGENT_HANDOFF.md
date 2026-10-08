@@ -1,5 +1,30 @@
 # Agent handoff
 
+## #260 current registration receive component — October7
+
+- New pure [server decoder](REGISTRATION_REQUEST_RECEIVE.md), K361/K362:
+  selected proved client physical stream → immutable BODY/opaque wrapper fields
+  and consumed extent. Require caller type binding; bounded count/CRC/snapshot,
+  canonical selector and exact BODY are explicit server policies. Default cap1MiB
+  is configurable; no native receive inverse or runtime map19 claim.
+- Reuses unchanged #225/#230 BODY/sender modules and34 literal fixtures.
+  All669 focused cases pass, including212 new receiver cases. Native Tester
+  independently passed11 experiment groups; initial incorrect test compact count
+  was repaired, no production defect found. Full concurrent header/payload-copy
+  races and actual Carrier/native/authentication remain untested.
+- Reviewed fixtures-static inventory increases22→23 and Python modules48→49.
+  Complete workspace passes1641 Python cases/49 modules, all five PowerShell
+  suites and the owned loopback lifecycle at
+  .scratch/offline-validation/run-9gi9b4je/receipt.json with inputs unchanged;
+  its listener closed and child exited0. Decoder work acquired no runtime resources.
+  Actual preflight index is ready and new receipt bindings match; private
+  .scratch/registration260-receive-20261008T0047Z/closure.json reconciles the only
+  post-run selected input delta as ROADMAP outcome documentation. No new live
+  classifier/reply integration or client trial.
+- Exact next receive join: selected physical sender stream through lower backend
+  to actual Carrier data, then runtime type and source-supported response choice.
+  Keep the historical860 request/88 response separate from current grammar proof.
+
 ## Server protocol focus and #240 queue boundary — October7
 
 - Latest user direction defers new official behavior references and prioritizes

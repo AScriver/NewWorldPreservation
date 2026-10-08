@@ -19,6 +19,7 @@
       "tests/test_current_queue_handoff.py",
       "tests/test_current_registration_request_body.py",
       "tests/test_current_registration_request_stream.py",
+      "tests/test_current_registration_request_receive.py",
       "tests/test_current_registration_response_body.py",
       "tests/test_current_token_contract.py",
       "tests/test_game_log_metadata.py",

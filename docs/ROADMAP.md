@@ -14,8 +14,17 @@ The cached/stream producer, actual type8 payload and native outer writer remain
 open. No codec or candidate change follows; further unchanged scans of that
 leaf are not the next task. Current Carrier receive/reply inspection found a
 historical registration classifier/88-byte reply, with current physical sender
-placement and response selection still unjoined. Next useful offline work is
-an original server decoder for the proved client V3 sender envelope. The boundary
+placement and response selection still unjoined. New #260 implements an
+[original server decoder](REGISTRATION_REQUEST_RECEIVE.md) for the proved client
+V3 sender envelope: explicit type binding, length/CRC/UUID/wrapper/BODY parsing,
+immutable bounded snapshot and consumed extent. All34 old literal streams and
+669 focused cases pass; independent11-group falsification found no receiver
+defect (K361/K362). Sender/BODY/fixtures/Carrier responder remain unchanged.
+The complete workspace passes1641 Python cases/49 modules, five PowerShell
+suites and its owned loopback lifecycle with unchanged inputs, listener closed
+and child exit0; receipt .scratch/offline-validation/run-9gi9b4je/receipt.json.
+Current sender-to-Carrier placement and source-supported response selection
+are the next protocol joins; grammar acceptance is not authentication. The boundary
 checkpoint passes36 affected catalog/runner tests and actual preflight; unchanged
 1429-case workspace, five PowerShell suites and closed loopback lifecycle are
 reused by exact code/test/fixture comparison. Static helpers exited cleanly.

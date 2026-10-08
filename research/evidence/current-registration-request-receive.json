@@ -1,0 +1,335 @@
+{
+  "schema": 1,
+  "classification": "offline-executed",
+  "status": "passed",
+  "verificationScope": "Focused original server decoder and independent synthetic falsification; complete workspace/lifecycle results are recorded separately before closure",
+  "recordedUtc": "2026-10-08T00:56:16.217141+00:00",
+  "workItemId": 164,
+  "actionableId": 260,
+  "parentActionableId": 178,
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "claimIds": [
+    "K361",
+    "K362"
+  ],
+  "input": {
+    "head": "33e38a657496974a6c170cc768c5808a25094abf",
+    "initialDirty": "",
+    "testedDirty": " M .gitattributes\n M docs/AGENT_HANDOFF.md\n M docs/AGENT_START.md\n M docs/EVIDENCE_INDEX.md\n M docs/EVIDENCE_LEDGER.md\n M docs/REGISTRATION_REQUEST_STREAM_CODEC.md\n M docs/ROADMAP.md\n M docs/TASK_BRIEFS.md\n M research/agent-evidence-index.json\n M scripts/offline-test-profiles.json\n M scripts/validate_offline.py\n M tests/test_offline_runner.py\n?? docs/REGISTRATION_REQUEST_RECEIVE.md\n?? scripts/current_registration_request_receive.py\n?? tests/test_current_registration_request_receive.py\n",
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "imageBytes": 179204176,
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75",
+    "python": "3.11.9"
+  },
+  "sourceContractsReusedUnchanged": [
+    {
+      "path": "research/evidence/current-registration-request-stream-validation.json",
+      "bytes": 16023,
+      "sha256": "ea7d7665091f08410a1ca8b007ae2502806794118fafc62a6f52a2e8a9c12341"
+    },
+    {
+      "path": "research/evidence/current-registration-request-body-codec-validation.json",
+      "bytes": 15011,
+      "sha256": "487f9ef30f56d737dfca37c006a25c7378461acca821b6462f5ce4a1f54c1e0a"
+    },
+    {
+      "path": "research/evidence/current-registration-stream-framing.json",
+      "bytes": 51304,
+      "sha256": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971"
+    },
+    {
+      "path": "research/evidence/current-registration-identifier-placement.json",
+      "bytes": 46277,
+      "sha256": "958171b511ea949bf586c656d650ffdc790e93c594fb6e31c84658480ec7c7a8"
+    }
+  ],
+  "sourceAndFixtureBindings": [
+    {
+      "path": "scripts/current_registration_request_receive.py",
+      "bytes": 4666,
+      "sha256": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903"
+    },
+    {
+      "path": "tests/test_current_registration_request_receive.py",
+      "bytes": 9509,
+      "sha256": "d92574da885c0cba773e460a93dd7a09bd0ac9f4868e95ec028f0a68a4cd217c"
+    },
+    {
+      "path": "scripts/offline-test-profiles.json",
+      "bytes": 3520,
+      "sha256": "dd25ce4c0786a297295a316aea129a4c5797f0e4429004854c4581db48870cfc"
+    },
+    {
+      "path": "scripts/validate_offline.py",
+      "bytes": 19697,
+      "sha256": "a1b2b914fa073482a8a3e4dd99c440df55f349f3b31f9fb5aa876290a870ba61"
+    },
+    {
+      "path": "tests/test_offline_runner.py",
+      "bytes": 11587,
+      "sha256": "34f9e2690fc9aebd01252dd1b98ba4d4e2b7c08e0ce55cb5d612285618c44fb2"
+    },
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "bytes": 14007,
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "scripts/current_registration_request_stream.py",
+      "bytes": 2525,
+      "sha256": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2"
+    },
+    {
+      "path": "tests/test_current_registration_request_stream.py",
+      "bytes": 4587,
+      "sha256": "5abe71addb5149ac5338057d3ebe0f57ade7136edd0a91856db5decbd0820219"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-stream-original.json",
+      "bytes": 26210,
+      "sha256": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-body-original.json",
+      "bytes": 4324,
+      "sha256": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f"
+    }
+  ],
+  "receiverPolicies": {
+    "requiredExpectedSelector": true,
+    "defaultPayloadCapBytes": 1048576,
+    "configurableCapDomain": "positive true uint32",
+    "freshWrapperFlags": [
+      0,
+      1,
+      3
+    ],
+    "selectedPresence": 1,
+    "outerUuid": "nil16",
+    "zeroSelector": "fixed V3 literal UUID fallback",
+    "selectorCanonicalOnly": true,
+    "bodyCanonicalOnly": false,
+    "exactSelectedBodyExtent": true,
+    "suffixParsed": false,
+    "parsedBytesAreCheckSummedSnapshot": true
+  },
+  "focusedValidation": {
+    "command": "validated .scratch/registration260-receive-20261008T0047Z/Focused.ps1",
+    "selectedModules": 4,
+    "collected": 669,
+    "passed": 669,
+    "failed": 0,
+    "skipped": 0,
+    "newReceiverCases": 212,
+    "literalSenderVectorsDecoded": 34,
+    "junit": {
+      "path": ".scratch/registration260-receive-20261008T0047Z/focused-junit.xml",
+      "bytes": 104547,
+      "sha256": "2a0a8054242924470f2c18aab26e3dba8ba13a0f19679df63e2861ce5ba545dd"
+    }
+  },
+  "independentVerification": {
+    "report": {
+      "path": ".scratch/registration260-tester-20261008T0050Z/experiment-report.json",
+      "bytes": 5943,
+      "sha256": "d8ec1acf79a165d1807eaa82add3eac0199064fe515adbe8d1c3b4994ef51832"
+    },
+    "groupsPassed": 11,
+    "groups": [
+      {
+        "name": "fixtures",
+        "result": "PASS",
+        "observed": "34 literal original sender fixtures decoded; selected extent, type index and opaque fields matched"
+      },
+      {
+        "name": "envelope_order",
+        "result": "PASS",
+        "observed": "reversed count, truncated payload, reversed CRC, 1 GiB declared count, type mismatch and outer UUID change rejected while BODY decoder was replaced with a failing sentinel"
+      },
+      {
+        "name": "optional_truncations",
+        "result": "PASS",
+        "observed": "24 selected CRC-valid short payloads with flags 1/3 rejected; final-byte short cases returned body code 3 at the selected end cursor"
+      },
+      {
+        "name": "reserved_flags_presence",
+        "result": "PASS",
+        "observed": "1,536 CRC-valid mutations across six wrappers: all 253 reserved flag values each, plus presence values 0, 2 and 255; fixed reason and absolute cursor"
+      },
+      {
+        "name": "selector_aliases",
+        "result": "PASS",
+        "observed": "six over-wide or uint32-wrapping compact selector aliases rejected as noncanonical"
+      },
+      {
+        "name": "bounds_and_extent",
+        "result": "PASS",
+        "observed": "payload cap 104 accepted with outer suffix, cap 103 rejected; selected BODY extra byte and missing byte rejected with expected extent/code/cursor"
+      },
+      {
+        "name": "hostile_body_counts",
+        "result": "PASS",
+        "observed": "four roughly 51-byte inputs declaring collection counts just above and exactly at 0x02000000 and string sizes exactly at and above 0x2ffff rejected with body codes 4, 2, 1, 1; each measured 0.006-0.008 ms in this run"
+      },
+      {
+        "name": "mutable_ownership",
+        "result": "PASS",
+        "observed": "flags 3 mutable source overwritten after decode; returned opaque bytes and BODY representation unchanged"
+      },
+      {
+        "name": "mutation_during_crc",
+        "result": "PASS",
+        "observed": "CRC function mutated four source BODY bytes after computing checksum; parsed BODY retained original value"
+      },
+      {
+        "name": "buffer_variants",
+        "result": "PASS",
+        "observed": "contiguous native-I format and two-dimensional views accepted; strided and released views raised controlled TypeError"
+      },
+      {
+        "name": "config_and_diagnostics",
+        "result": "PASS",
+        "observed": "12 invalid configuration values rejected before buffer access; hostile marker absent from stream diagnostic"
+      }
+    ],
+    "sourceHashMatchesPrimary": true,
+    "limits": [
+      "No native receive path, Carrier placement, runtime selector binding, authentication, or two-client acceptance was exercised.",
+      "Mutation during CRC was deterministic injection after payload snapshot; it did not simulate a writer racing the header and payload snapshot operations.",
+      "Tiny hostile inputs demonstrated prompt rejection but do not establish an absolute allocation or latency bound for all possible capped payloads.",
+      "Fixture BODY meaning relies on the existing pure BODY codec; the test is not independent native evidence."
+    ],
+    "cleanup": "Only ignored task scratch files were written. No tracked files edited by tester; one-shot Python children exited and no Python process with this scratch path remained. No services, listeners, ports, clients, process reads, hooks, network calls, credentials, or captures were used."
+  },
+  "retainedCounterevidence": [
+    "Initial focused run passed668 cases and failed one stale reviewed-inventory assertion48->49; updated that assertion along with manifest group22->23, then669 pass. Receiver code needed no correction.",
+    "First harness run exited 1 because the scratch test expected code 2 for a compact count that actually encoded a value above the collection limit. Corrected only the scratch literal to the exact boundary and reran successfully; this was a harness error, not a receiver defect. The final harness also added exact final-BODY cursor checks for flags 1/3 and a representation comparison after source overwrite.",
+    "Sender and BODY grammar support does not establish current Carrier request placement or authentication."
+  ],
+  "unchangedBaselineBindings": [
+    {
+      "path": "scripts/current_registration_request_body.py",
+      "bytes": 14007,
+      "sha256": "cbe9430c480909c7d4c40ef8ef8f160ea8a9a4b60ee7e2148e190f5ec4b44cb4"
+    },
+    {
+      "path": "scripts/current_registration_request_stream.py",
+      "bytes": 2525,
+      "sha256": "2baf06715d0669537f7b614b1bf535b049ccdc462d0f0b7b870d395a8670cfa2"
+    },
+    {
+      "path": "tests/test_current_registration_request_stream.py",
+      "bytes": 4587,
+      "sha256": "5abe71addb5149ac5338057d3ebe0f57ade7136edd0a91856db5decbd0820219"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-stream-original.json",
+      "bytes": 26210,
+      "sha256": "b0e3c5080185913ba02bfe83ba27ec0d1ca220324b8e5b645ab8bce640aaf6a8"
+    },
+    {
+      "path": "tests/fixtures/registration/current-request-body-original.json",
+      "bytes": 4324,
+      "sha256": "c9e3d4e2a0a1b2daf598521433278c6935343051871ede9e580a2e14f4c3a80f"
+    },
+    {
+      "path": "research/evidence/current-registration-request-stream-validation.json",
+      "bytes": 16023,
+      "sha256": "ea7d7665091f08410a1ca8b007ae2502806794118fafc62a6f52a2e8a9c12341"
+    },
+    {
+      "path": "research/evidence/current-registration-request-body-codec-validation.json",
+      "bytes": 15011,
+      "sha256": "487f9ef30f56d737dfca37c006a25c7378461acca821b6462f5ce4a1f54c1e0a"
+    },
+    {
+      "path": "research/evidence/current-registration-stream-framing.json",
+      "bytes": 51304,
+      "sha256": "125540501a5bf4c6c492c5d896bb360a81a698023733d2906596c7566909a971"
+    },
+    {
+      "path": "research/evidence/current-registration-identifier-placement.json",
+      "bytes": 46277,
+      "sha256": "958171b511ea949bf586c656d650ffdc790e93c594fb6e31c84658480ec7c7a8"
+    },
+    {
+      "path": "scripts/carrier_registration_probe.py",
+      "bytes": 49882,
+      "sha256": "7d943eaffb29e9989217909faa50ccb1a83a3306bb1787fc96560ddd5ae2d816"
+    }
+  ],
+  "privateMetadata": [
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/baseline.json",
+      "bytes": 2497,
+      "sha256": "a9d1c8a4c24e6e138cb5887379c45fc2cbbe8da26b9b2dad928015e0005b5fd4"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/Baseline.ps1",
+      "bytes": 408,
+      "sha256": "6d4307092938f43e2a7aa19b256659f5eb137092ebdf427dae9f8998b0b42f1d"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/Baseline.py",
+      "bytes": 2398,
+      "sha256": "52faf24bce024eb6b2c1ca5c4128d0502b3cf1d2363ef80a7bc976603c0286ef"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/focused-junit.xml",
+      "bytes": 104547,
+      "sha256": "2a0a8054242924470f2c18aab26e3dba8ba13a0f19679df63e2861ce5ba545dd"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/focused-tests.log",
+      "bytes": 831,
+      "sha256": "fea2c971dcdc15df325d6c8d5077d9f64241bac47191e8174a452a9b703d1882"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/Focused.ps1",
+      "bytes": 856,
+      "sha256": "0174af6af6394ec3ea9917f174131cf6643a4198e3367def89433158025c23a7"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/Seal.ps1",
+      "bytes": 381,
+      "sha256": "1a33351e8965c4cddab1b61b032313e6c6601b0bf4bc7b7cf38c5fc01ab3b218"
+    },
+    {
+      "path": ".scratch/registration260-receive-20261008T0047Z/Seal.py",
+      "bytes": 6595,
+      "sha256": "7e9099277aa23fe83229e8a37e0714d6687ea6fe5cece61e27d84fa55d80f717"
+    },
+    {
+      "path": ".scratch/registration260-tester-20261008T0050Z/experiment-report.json",
+      "bytes": 5943,
+      "sha256": "d8ec1acf79a165d1807eaa82add3eac0199064fe515adbe8d1c3b4994ef51832"
+    },
+    {
+      "path": ".scratch/registration260-tester-20261008T0050Z/harness.py",
+      "bytes": 9522,
+      "sha256": "8aa0ee53f3f868cf37349a26edec86babb6b5f8abc5576910c9c7e3b4a48d069"
+    },
+    {
+      "path": ".scratch/registration260-tester-20261008T0050Z/run.ps1",
+      "bytes": 386,
+      "sha256": "ec0b448ecd525b3b872bd20d27c81fcd65173243cd7aa0e83133c8353f21d312"
+    }
+  ],
+  "cleanup": {
+    "fileAnalysisHelpersExited": true,
+    "testerChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "clientLaunched": false,
+    "processMemoryRead": false,
+    "hooksChanged": false,
+    "networkUsedByDecoderWork": false
+  },
+  "limits": [
+    "Original pure replacement-server inverse of selected client sender contract; no native receiver inferred.",
+    "Actual runtime selector/index/fallback and ambient opaque values remain unknown; explicit caller binding is an assumption, not authentication.",
+    "No Carrier classifier or reply emission was changed; physical sender-to-Carrier placement and current response selection remain open.",
+    "No native trial/new grant, private playable world/player/movement/restart or two-client acceptance. Official video remains official-game reference only."
+  ]
+}

@@ -416,6 +416,17 @@
       "limit": "Normal stable-input source path only; unique successful insertion required for exact supplied-object identity. Partial phases and cache/source-resolution steps differ. No fresh entity allocation, schema/application, runtime binding, service lifetime, #212 or M1 acceptance."
     },
     {
+      "id": "current-registration-request-receive",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K361", "K362"],
+      "docs": ["docs/REGISTRATION_REQUEST_RECEIVE.md", "docs/REGISTRATION_REQUEST_STREAM_CODEC.md"],
+      "scripts": ["scripts/current_registration_request_receive.py", "scripts/current_registration_request_body.py", "scripts/current_registration_request_stream.py"],
+      "tests": ["tests/test_current_registration_request_receive.py", "tests/test_current_registration_request_stream.py", "tests/test_current_registration_request_body.py"],
+      "evidence": [{"path": "research/evidence/current-registration-request-receive.json", "classification": "offline-executed", "scope": "Original safe server inverse of selected client sender grammar; literal compatibility, controlled malformed-input/ownership checks and independent falsification"}],
+      "fixtures": ["tests/fixtures/registration/current-request-stream-original.json", "tests/fixtures/registration/current-request-body-original.json"],
+      "limit": "Pure server decoder, explicit selector binding and receiver cap/canonical/exhaustion policies. Native inverse, Carrier placement, runtime values, response choice, authentication and M1 remain unproved. Sender/BODY/old fixtures unchanged."
+    },
+    {
       "id": "current-registration-request-stream",
       "roadmapTasks": [
         "M1-06B"
@@ -1940,6 +1951,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-request-receive.json",
     "research/evidence/current-creation-queue-drain-boundary.json",
     "research/evidence/official-session-video-20261007.json",
     "research/evidence/official-session-loot-comparison-20261007.json",

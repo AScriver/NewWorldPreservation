@@ -1,5 +1,16 @@
 # Evidence ledger
 
+## Replacement-server registration receive — October7, #260
+
+[Original receipt](../research/evidence/current-registration-request-receive.json)
+pins clean33e38a6 baseline, unchanged sender/BODY/fixtures and the tested new decoder.
+These are controlled original offline results, before any Carrier/native join.
+
+| Claim | Finding | Scope and limits | Evidence |
+|---|---|---|---|
+| K361 | Original server decoder accepts all34 literal selected current V3 sender streams and returns owned fields/physical extent | Reproduced synthetic compatibility across compact widths and fresh flags0/1/3. Explicit selector binding, cap, canonical selector and exact BODY are server policies. No observed client request, native inverse, runtime binding or authentication | [API/domain](REGISTRATION_REQUEST_RECEIVE.md); unchanged literal fixtures and focused JUnit |
+| K362 | Envelope bounds and owned snapshot preserve checksum/parse identity, reject malformed input and avoid input-field diagnostics | Reproduced212 receiver cases; independent11 groups include1536 reserved flag/presence variants,24 optional-wrapper truncations and tiny payloads with huge declared BODY counts. Mutation at CRC is controlled, not a full concurrent header-copy race. No native/Carrier/live server behavior | [Receiver policies and limits](REGISTRATION_REQUEST_RECEIVE.md#explicit-receiver-policy); exact source/hash-pinned primary and Tester experiments |
+
 ## Queue-drain boundary — October7, #240, partial
 
 [Original receipt](../research/evidence/current-creation-queue-drain-boundary.json)
