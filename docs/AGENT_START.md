@@ -24,7 +24,9 @@ preserve the broader two-client roadmap and existing approvals.
    analysis is not the default. Fill the [task brief](TASK_BRIEFS.md#task-brief-template), including exact files,
    permitted operations, input identity and rejection checks. Run the matching
    focused profile; use the complete workspace profile before handing off.
-6. Finish with the [handoff format](AGENT_HANDOFF.md). Record the task/verification
+6. Finish with the [handoff format](AGENT_HANDOFF.md#handoff-format), recording the
+   bounded slice result, next owner/action and any required authorization.
+   Record the task/verification
    in ROADMAP with a small edit that preserves any concurrent work.
    Follow [completion and continuation](../AGENTS.md#completion-and-continuation):
    preserve required checks and material corrections, reuse unaffected validation,

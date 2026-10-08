@@ -18,6 +18,16 @@ The controller top level, containment and native client were not run. Source #28
 pool/cursor question and native type, authentication, world entry and Milestone 1
 remain unresolved. Official clips are normal-game references.
 
+## Agent workflow implementation — October8
+
+The handoff format now records the bounded slice result, next owner/action and
+required authorization; task briefs identify expected responsibility. Review of
+180 local links/anchors and three synthetic handoff scenarios preserved completed
+offline work versus open native acceptance, a missing trial grant versus approved
+independent research, and existing Actionables lifecycle states. Historical handoff
+entries and live grant text are unchanged. Next: extract the templates and shorten
+startup navigation. No matching scoped Actionable exists; tracking was not updated.
+
 ## Current receive-view pool — October8, #284
 
 [K425–K427](REGISTRATION_RECEIVE_POOL.md) trace two exact helpers395B and one

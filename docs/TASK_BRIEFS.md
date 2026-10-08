@@ -673,7 +673,16 @@ Rejection checks: <negative cases; evidence that would falsify the proposed resu
 Failed approaches: <conditions/results to retain; no blind repetition>
 Cleanup: <owned resources/readback; private diagnostics/receipt locations>
 Handoff: <AGENT_HANDOFF format; ROADMAP/ledger updates; next bounded step>
+Expected next owner: <agent | user | external | none; one bounded action and reason>
+Required authorization: <existing task/live scope; specific missing grant; or none additional>
 ```
+
+The brief identifies expected responsibility; the handoff records the actual slice
+result and next owner. These fields do not change Actionables lifecycle states or
+native/gameplay acceptance. Use agent when authorized independent work remains;
+reserve user for a required decision, authorization or manual observation, and
+external for an identified outside dependency. No next owner is needed only when
+the requested bounded outcome and closure are complete.
 
 ## Shared operating contract
 

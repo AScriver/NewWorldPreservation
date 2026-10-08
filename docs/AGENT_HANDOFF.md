@@ -818,6 +818,8 @@ Private file-only helper resources exited; offline runner receipts record owned
 loopback cleanup. Local commit only; next permitted #164 leaf follows release.
 Parent232 aggregate, concrete member/schema, #212 and bilateral movement stay open.
 
+## Handoff format
+
 Use this format at a task boundary. Keep current task status in [ROADMAP](ROADMAP.md)
 and substantive factual claims in [EVIDENCE_LEDGER](EVIDENCE_LEDGER.md). A handoff
 links those records rather than creating another current-status document.
@@ -827,6 +829,10 @@ Task: <ROADMAP ID and bounded outcome>
 Owner / edit scope: <agent and exact files; independently owned files preserved>
 Checkout: <HEAD, relevant dirty/untracked paths and hashes; runtime/lock identity>
 Evidence inputs: <claim IDs; build, upstream commit/dirty state, fixture hashes>
+Slice result: <complete | partial; result for this bounded outcome>
+Next owner: <agent | user | external | none>
+Next action / reason: <one bounded action and why that owner must perform it>
+Required authorization: <existing task/live scope; specific missing grant; or none additional>
 
 Changes:
 - <concrete behavior changed, why, and affected files>
@@ -853,6 +859,13 @@ Next concrete action:
 - <one bounded step, required evidence/authorization and verification command>
 ROADMAP / ledger updates: <links to the preserved task and claim records>
 ```
+
+A completed offline slice can coexist with an open native or gameplay milestone.
+Use agent when authorized independent work remains; use user for a required
+decision, grant or manual observation; identify the actual outside dependency
+for external. Use none only when the requested bounded outcome and closure are
+complete. These fields describe responsibility, not new Actionables states or
+permission to extend a live procedure. Preserve historical handoffs unchanged.
 
 For offline tooling, identify the unique run receipt and the input hashes in it.
 Do not paste private stdout, raw packets, secrets, client assets or decoded
