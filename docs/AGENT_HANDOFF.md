@@ -1,5 +1,20 @@
 # Agent handoff
 
+## Current receive-view pool — October8, #284
+
+[K425–K427](REGISTRATION_RECEIVE_POOL.md) trace two exact helpers395B and one
+40B outer-object table. Initial pair[0]=O+50/pair[1]=O; installed14858aae8 is
+at[O], not the interior object. Opaque direct/indirect calls prevent proof of
+final pair contents. The outer table's slot20 is not caller field90's cursor
+target. The pool/cursor question remainsPartial; no server change justified.
+
+Exact native seals and critical review preserve the corrected base distinction,
+six identity passes and separate imports/BSS/metadata. Historical270resourceFailed
+unchanged.36catalog/PF/bindings and actual unchanged1960/50/fivePS/closedloopback
+reuse support source preservation. Parent267/263/277 physical/reassembly-to-
+compact/type/reply/auth/world/M1Partial. Official recordings are normal-game
+reference; no fresh native grant.284 staysResearching after coherent commit.
+
 ## Current ACK callback and budget update — October8, #283
 
 [K422–K424](REGISTRATION_ACK_BUDGET.md) closes the selected fallback callback's

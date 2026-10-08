@@ -1,5 +1,21 @@
 # Evidence ledger
 
+## Current receive-view pool — October8, #284
+
+[Receipt](../research/evidence/current-registration-receive-pool.json) pins
+cleanmaina3b6cf0 and original private byte/query/seal/review artifacts.
+
+| ID | Claim | Scope and limits | Support |
+| --- | --- | --- | --- |
+| K425 | Wrapper forwards getter result and original pair, returns pair pointer | Getter/allocation/lifetime opaque |41B exactPDATA/native |
+| K426 | Initial pair stores/interior pointer and outer-object table install | Later direct/indirect effects can alter pair/object; no final identity/ownership |354B exactPDATA/native |
+| K427 | Outer table slot20 names146b10670 | No body/runtime binding; not interior/caller90 cursor target |One40B source-derived data window |
+
+Source byte checksPassed; selected pool/cursor acceptancePartial and remains
+Researching. Wrong-table interim hypothesis corrected,270resourceFailed retained.
+No client/native/runtime/server change; Carrier/queue/reassembly/type/auth/world/
+M1unknown. Official footage is reference only.
+
 ## Current ACK callback and budget update — October8, #283
 
 [Receipt](../research/evidence/current-registration-ack-budget.json) pins

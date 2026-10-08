@@ -449,6 +449,36 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-receive-pool",
+      "roadmapTasks": [
+        "M1-06B"
+      ],
+      "claimIds": [
+        "K425",
+        "K426",
+        "K427"
+      ],
+      "docs": [
+        "docs/REGISTRATION_RECEIVE_POOL.md"
+      ],
+      "scripts": [
+        "scripts/ghidra_function_slice.py"
+      ],
+      "tests": [
+        "tests/test_project_preflight.py",
+        "tests/test_offline_runner.py"
+      ],
+      "fixtures": [],
+      "evidence": [
+        {
+          "path": "research/evidence/current-registration-receive-pool.json",
+          "classification": "source-inference",
+          "scope": "Receive-view pair wrapper, initial outer object stores and exact outer table"
+        }
+      ],
+      "limit": "Pool/cursor questionPartial; opaque calls/final pair/interior vptr/physical/Carrier/reassembly/compact/auth/world/M1 unproved."
+    },
+    {
       "id": "current-registration-ack-budget",
       "roadmapTasks": [
         "M1-06B"
@@ -2403,6 +2433,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-receive-pool.json",
     "research/evidence/current-registration-ack-budget.json",
     "research/evidence/current-registration-connection-ack.json",
     "research/evidence/current-registration-receive-state.json",

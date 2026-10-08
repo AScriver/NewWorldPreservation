@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "partial",
+  "selectedComponentAcceptance": "Partial",
+  "aggregateAcceptance": "Partial",
+  "workItemId": 164,
+  "actionableId": 284,
+  "parentActionableId": 267,
+  "claimIds": [
+    "K425",
+    "K426",
+    "K427"
+  ],
+  "recordedUtc": "2026-10-08T12:16:36.351306+00:00",
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "a3b6cf01062684c929b09e355e02c8e0605d45bc",
+    "baselineDirty": [],
+    "publicationDirty": [
+      " M .gitattributes",
+      " M docs/AGENT_HANDOFF.md",
+      " M docs/EVIDENCE_LEDGER.md",
+      " M docs/ROADMAP.md",
+      " M research/agent-evidence-index.json",
+      "?? docs/REGISTRATION_RECEIVE_POOL.md"
+    ],
+    "image": {
+      "sha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+      "bytes": 179204176,
+      "fullIdentityPasses": 1
+    },
+    "typeMapSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "sources": {
+    "docs/REGISTRATION_RECEIVE_POOL.md": "1fc5b696a310c33240b32fd388d63564cf853204d8d9728cd096a224797476f4",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf",
+    "research/evidence/current-registration-ack-budget.json": "9f7d388d5bb0fab1b7fb836280ccd2efcaac0e6203158e275c757417f058ba22",
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-receive-producer.json": "c8bb12e94d5890accbc206c8a81b160e46ce08357eb068c36c561b7a7fdd49a6",
+    "scripts/carrier_registration_probe.py": "5d6e83ced3087c02e313d3f93d8adf32f8c39bbcccbb7a8e9e1bbe8a3d800d62",
+    "scripts/current_registration_request_receive.py": "bf40fc7164090efa048a49cc8fecc299f86e7a765b2726014698606fe31a5903",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "scripts/offline-test-profiles.json": "adfebba055c8cdbc4cee1165310b6fa2020d6be16386fec11c2694edd6041f65",
+    "scripts/validate_offline.py": "941b57c2257ce429bf7c79c61269a41965fcb951b8b359fd83c002e60634df48",
+    "tests/test_carrier_registration_probe.py": "3b644bb751d426f1bfb6d249e71e5f17b4d98e55e13f0fe9bee63aecb1b98574"
+  },
+  "privateArtifacts": {
+    ".scratch/offline-validation/run-mwgxnr5i/receipt.json": "c17b355697aa2cd53d96d3ec54719d239e8195d92e1cf836ad55e98ee6ec5eb6",
+    ".scratch/registration270-primary-20261008T0440Z/candidate-seal.json": "1e3e27628fb477c917f25a19e68373df7c9d9f8310866fc21d72fddd1e284801",
+    ".scratch/registration270-primary-20261008T0440Z/native-146b2ba60.txt": "69c96c7ca240e439af1ef37e206595699e01395e97e989e0c860bbfb8bdb919c",
+    ".scratch/registration270-receive-producer-20261008T0440Z/output-fullcandidate/receipt.json": "dd0ce7f1583a62fdf9d340e9cd7b981e319ca40c1b7b0b0ebaad58636fcf71ae",
+    ".scratch/registration283-primary-20261008T1048Z/closure.json": "18146fda44cc6f7b4cf5d4e2bdaa383032ee7e8a1bfecda4da647059143b1a2d",
+    ".scratch/registration284-consumer-navigation-20261008T1148Z/ADDENDUM.md": "1da9357be823fd19b652f82ef5c38fd8ad2362276717c8fa4f4e94637252b694",
+    ".scratch/registration284-consumer-navigation-20261008T1148Z/REPORT.md": "9161d91f81bf5549e0f47aa101c6c8a6b0db3aeb410796140c42e4694be526c0",
+    ".scratch/registration284-pool-20261008T1200Z/CheckFirst.ps1": "d9134f6052e74cc7173a66e8687578d27db8f01a16928b7e09261687ea9603a8",
+    ".scratch/registration284-pool-20261008T1200Z/CheckFirst.py": "5625583de4242cd42139e4b6f92262f8fab8f867173c971c1b7a65bd133df2a1",
+    ".scratch/registration284-pool-20261008T1200Z/CheckSecond.ps1": "ca4507f5890a06b431dbaae43d9ce6db7423ed35b5fef04a721436820c5af5d8",
+    ".scratch/registration284-pool-20261008T1200Z/CheckSecond.py": "5789afc0167be272fd3ec31df7e0caaf7156b04d36ec643b4bc919d49c8ee940",
+    ".scratch/registration284-pool-20261008T1200Z/PreflightSecond.ps1": "d87d2435e7eb4cec2171812f2b60216b6613c27be091dfe2c217bd47ba84c086",
+    ".scratch/registration284-pool-20261008T1200Z/PreflightSecond.py": "8ea0a66654448739469df437cfedb0640bdb46b0e1cd5d02d6790bbc5e376cb0",
+    ".scratch/registration284-pool-20261008T1200Z/QueryFirst.ps1": "ca07361cff67a67f4b17bbb01945c679776246f21b2e7970fe04f0d0cac525a0",
+    ".scratch/registration284-pool-20261008T1200Z/QuerySecond.ps1": "716854734154d494511c8d37121fbf98e4b377830ba262f5962f44883033d9bb",
+    ".scratch/registration284-pool-20261008T1200Z/REPORT.md": "48622825744dec1fc0978cc0c8592318665eb23d78bef6d0415a8a85c139100a",
+    ".scratch/registration284-pool-20261008T1200Z/ReadTable.ps1": "9b5c4a2b9122bb3baf4e26f6c4c9a846af575e284639fd72485d33c0c6a64c7c",
+    ".scratch/registration284-pool-20261008T1200Z/ReadTable.py": "c95e4608b7e06e84fd5379c6f690fc67532140bb4e94f4883095ad6bac96fea8",
+    ".scratch/registration284-pool-20261008T1200Z/native-146ae5440.txt": "b53ec054e9e5c0905e168c42f6772874cf81caff693d7e051a4eb5c3b7dc2496",
+    ".scratch/registration284-pool-20261008T1200Z/native-146b31bd0.txt": "53e77a5cf563f9d4c12382071329fda0672416fc33dad19c3fdb3e80da052d94",
+    ".scratch/registration284-pool-20261008T1200Z/native-check-first.json": "5cb93059b20641be723980bd02bdff83e04de431599fa4096150fa82e6b08101",
+    ".scratch/registration284-pool-20261008T1200Z/native-check-second.json": "7a2107f6225279d1b8b557146c77e44433189d2e188cada90dfeb7f1c9f60e8d",
+    ".scratch/registration284-pool-20261008T1200Z/preflight-second.json": "0a0b78d3969abc0fa445afe1484c80eec810827f5138529a64513dbb1101f16c",
+    ".scratch/registration284-pool-20261008T1200Z/query-1-output/function-146b31bd0.c": "cdfb36143934e92824bdf2e2a0ea63aad635c76ebdd14d3e9d9abfc9453a6719",
+    ".scratch/registration284-pool-20261008T1200Z/query-1-output/receipt.json": "ce7d1578c9838df2e5acb51789558490770efe12a78df9eb1a4a3f11a620fe89",
+    ".scratch/registration284-pool-20261008T1200Z/query-2-output/function-146ae5440.c": "c81d8ff1ab269f87babc8cf2739b206bf1a7941740bcbbf778173d494ea795fa",
+    ".scratch/registration284-pool-20261008T1200Z/query-2-output/receipt.json": "7967bf80c7ee3e6554fe9e244884a2361ec3ba6eea903e8bec8662cc8db2f1f6",
+    ".scratch/registration284-pool-20261008T1200Z/raw-146ae5440.bin": "ea4a0cc73b341de22eab9616baa4c3cdec5779c5a637c46582f3b2a8055f8493",
+    ".scratch/registration284-pool-20261008T1200Z/raw-146b31bd0.bin": "d3d57523ae9437acdbbf7ebf73b4abe34429655967190fc9250b1f9e885304a3",
+    ".scratch/registration284-pool-20261008T1200Z/vtable-14858aae8.bin": "c24d140894c5f86f87e42536a43caf2d9aa2fbf8116404be13fe9c6d7aa869ac",
+    ".scratch/registration284-pool-20261008T1200Z/vtable-14858aae8.json": "53157c92dad2313c8672cbe061b6988f9b4be9932ef409d8b09d7b64d58bdde8",
+    ".scratch/registration284-primary-20261008T1155Z/Baseline.ps1": "96632ed7656cdd80e180dca4cc21b24f2624afec7127e73261623a44e0961883",
+    ".scratch/registration284-primary-20261008T1155Z/Baseline.py": "305521bb09dd7eb8f1bc46a0c7e3f56544405a663f3a701192882062c460c399",
+    ".scratch/registration284-primary-20261008T1155Z/Catalog.ps1": "c978ef76875c7f7baeb19d7bbf99f7261dee2a778a390d5fd5ca7e3e45e59710",
+    ".scratch/registration284-primary-20261008T1155Z/ClosurePartial.ps1": "90941abbdb37dc343cdc77ab754b1174e14109e23e106e68e33ce4a961e1d8c3",
+    ".scratch/registration284-primary-20261008T1155Z/ClosurePartial.py": "47be3aebc02e6403d42d6a17704573f5b109e23da2f119c7d7677ab41a36e5bd",
+    ".scratch/registration284-primary-20261008T1155Z/Commit.ps1": "6ffdfdc4e7aca35e9fa46460a1c444de9d41ab42e38dd2612da5d385159513f0",
+    ".scratch/registration284-primary-20261008T1155Z/Metadata.ps1": "9f72f9e5f0793310a6077ed9863f20966992848fbf868ff71fcfd8296af67424",
+    ".scratch/registration284-primary-20261008T1155Z/Metadata.py": "fe6af39304b92b86a9e66021b0b6cc5b9af654143a1e9cdc2d5dbf32e6418e08",
+    ".scratch/registration284-primary-20261008T1155Z/PrepareClosure.ps1": "ba5ebb4d3b7a43b5f5e42e91e5a924c53189829cb9e142d57efd3efc9c44c632",
+    ".scratch/registration284-primary-20261008T1155Z/PrepareClosure.py": "1ef1ee2be3571201ef1b96347507a6b663a22a3d8044ab5865c0aafa5accac81",
+    ".scratch/registration284-primary-20261008T1155Z/PrepareSupport.ps1": "aa1ce854d143b1a803fb72cd6889c5b061b730e9da9ebe61400bf0b753cd528b",
+    ".scratch/registration284-primary-20261008T1155Z/PrepareSupport.py": "6a9c9f9eb16fc59b8d42337617f15196b09ede8c7af58be8f3aeda9a5199d688",
+    ".scratch/registration284-primary-20261008T1155Z/Publish.ps1": "b0c091cfcfcd4f850b5b669cb3b49ad7d2f78e3999b7b59e25109e280de5aa37",
+    ".scratch/registration284-primary-20261008T1155Z/Publish.py": "fca02ae7793c905aa4f87e742d0a16410b5c42fc5baaad90b0dc17bdc9fda86a",
+    ".scratch/registration284-primary-20261008T1155Z/Seal.ps1": "af7c57138a25c267d629d647bf5b140c13ba5a25bfcf1235ecb7a08ae1955d7d",
+    ".scratch/registration284-primary-20261008T1155Z/Seal.py": "b9c10542966066b5cb82a4845bab27b40b7588145f8eb3365427ede8d5d9177a",
+    ".scratch/registration284-primary-20261008T1155Z/Stage.ps1": "7cadfc5876b7c30d762309d46c9b61d8a52dbda3547d6d5b88e81b99be352503",
+    ".scratch/registration284-primary-20261008T1155Z/adjudication.md": "300513cfaa34e79e3ecd870c60f71a3262173558544632ee9ed152664dfa0a1e",
+    ".scratch/registration284-primary-20261008T1155Z/baseline.json": "5507c770bd99b7e44c72d460720f0ba4424a8f8d9e2cf6f97c45d90a992d45c7",
+    ".scratch/registration284-primary-20261008T1155Z/doc-draft.md": "1fc5b696a310c33240b32fd388d63564cf853204d8d9728cd096a224797476f4",
+    ".scratch/registration284-primary-20261008T1155Z/ledger.md": "00b408feeaf48a900952e538a563fdbc1e3a7334150b7a565800ebffe2765789",
+    ".scratch/registration284-primary-20261008T1155Z/native-146ae5440.txt": "cabc205f7a8ff2c8d19597644535cc2ddd034541fa9860e31cd71a94c46c705a",
+    ".scratch/registration284-primary-20261008T1155Z/native-146b31bd0.txt": "53ea68b5d097e68261dade5b8f4834bae13971b0d6b2daeccc7618543e20b936",
+    ".scratch/registration284-primary-20261008T1155Z/seal.json": "b6771a865ed8740ad3ee8df1a8288fcb26a8914695df270bffd7a1679c791c7a",
+    ".scratch/registration284-review-20261008T1211Z/report.md": "96d6161ec910f2cf59d9748a137c8130d08982519274cfd5f1f585ba137fc9bc"
+  },
+  "native": [
+    {
+      "entry": "0x146b31bd0",
+      "queryReceipt": ".scratch/registration284-pool-20261008T1200Z/query-1-output/receipt.json",
+      "queryReceiptSha256": "ce7d1578c9838df2e5acb51789558490770efe12a78df9eb1a4a3f11a620fe89",
+      "ranges": [
+        {
+          "start": "0x146b31bd0",
+          "endExclusive": "0x146b31bf9",
+          "bytes": 41,
+          "sha256": "d3d57523ae9437acdbbf7ebf73b4abe34429655967190fc9250b1f9e885304a3",
+          "instructions": 12,
+          "listing": ".scratch/registration284-primary-20261008T1155Z/native-146b31bd0.txt",
+          "listingSha256": "53ea68b5d097e68261dade5b8f4834bae13971b0d6b2daeccc7618543e20b936"
+        }
+      ]
+    },
+    {
+      "entry": "0x146ae5440",
+      "queryReceipt": ".scratch/registration284-pool-20261008T1200Z/query-2-output/receipt.json",
+      "queryReceiptSha256": "7967bf80c7ee3e6554fe9e244884a2361ec3ba6eea903e8bec8662cc8db2f1f6",
+      "ranges": [
+        {
+          "start": "0x146ae5440",
+          "endExclusive": "0x146ae55a2",
+          "bytes": 354,
+          "sha256": "ea4a0cc73b341de22eab9616baa4c3cdec5779c5a637c46582f3b2a8055f8493",
+          "instructions": 99,
+          "listing": ".scratch/registration284-primary-20261008T1155Z/native-146ae5440.txt",
+          "listingSha256": "cabc205f7a8ff2c8d19597644535cc2ddd034541fa9860e31cd71a94c46c705a"
+        }
+      ]
+    }
+  ],
+  "table": {
+    "path": ".scratch/registration284-pool-20261008T1200Z/vtable-14858aae8.json",
+    "artifactSha256": "53157c92dad2313c8672cbe061b6988f9b4be9932ef409d8b09d7b64d58bdde8",
+    "bytes": 40,
+    "rawSha256": "c24d140894c5f86f87e42536a43caf2d9aa2fbf8116404be13fe9c6d7aa869ac",
+    "slot20Target": "0x146b10670",
+    "installedBase": "entry RCX object, not interior object+0x50"
+  },
+  "resourceActual": {
+    "helperBatches": 2,
+    "successfulPdataRoots": 2,
+    "selectedPdataCodeBytes": 395,
+    "codePrefixWindows": 0,
+    "newDataTableWindows": 1,
+    "newDataTableBytes": 40,
+    "initializedStaticImportBytesPerBatch": 37848576,
+    "totalInitializedStaticImportBytes": 75697152,
+    "virtualBssExtensionBytesPerBatch": 5559448,
+    "totalVirtualBssExtensionBytes": 11118896,
+    "agentFullIdentityPasses": 4,
+    "primaryBaselineFullIdentityPasses": 1,
+    "primarySealFullIdentityPasses": 1,
+    "knownFullIdentityPasses": 6,
+    "knownFullIdentityBytes": 1075225056
+  },
+  "metadataNavigation": {
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "directHeaderLogicalBytes": 262
+  },
+  "sourceClaims": {
+    "K425": "41B wrapper forwards opaque getter(entryRCX+1c0) result and original output pair, returns original pair address.",
+    "K426": "354B helper writes pair[0]=O+50 then opaque indirectcall then pair[1]=O, installs tableat[O], and calls opaque14086c9f0(pair,O+50,O+50) before optional indirectcall.",
+    "K427": "One40B exact outer-table window resolves slot20 to146b10670; not an interior-object/caller90 cursor target."
+  },
+  "audit": "Native check corrected interim outer/interior table confusion. Simultaneous initial pair and final contents require unproved opaque-effect/alias preservation. Preserve historical270resourceFailed and all immutable ancestor artifacts.",
+  "validation": {
+    "type": "Review",
+    "outcome": "Partial",
+    "scope": "Exact source stores/wrapper/table checksPassed; originalpool/cursor questionPartial",
+    "affectedCatalogTests": 36,
+    "workspaceReuse": "Requires actual selected-input closure; selected code/test inputs unchanged."
+  },
+  "limits": [
+    "No final returned-pair/interior vptr/cursor/span validity/ownership/lifetime established.",
+    "Two-root contract exhausted; no extra body/table query or repeated270 failed query.",
+    "Physical/Carrier/statequeue/reassembly-to-compact/type/reply/auth/world/M1Partial; no concrete server fix.",
+    "Official recordings remain normal-game reference; no new native trial grant or client/runtime/network evidence."
+  ],
+  "cleanup": {
+    "runtimeResourcesAcquired": false,
+    "ownedSourceChildrenExited": true,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}
