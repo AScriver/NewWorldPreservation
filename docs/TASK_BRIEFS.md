@@ -1,5 +1,20 @@
 # Bounded task briefs
 
+## #273 — conditional backend identity (M)
+
+- Root164/parent267, cleanf08cd0e; primary owns trackedfiles, agents ignored273
+  directories. Cachefirst ctor/table/entry targets; roles initiallyunknown.
+- Cap3newPDATAroots/128KiB,2helpers/80MiBinitializedstatic+BSSseparate;
+  2exact64Bentrywindows and2game-datawindows256B each/512B. PE/PDATA/unwind
+  navigation and179204176Bfullidentity passes admitted/count separately.
+- BeforeDLLlookup, separately admitted pinned534592BWS2exportmetadata only,
+  tables<=4096/string512B, fullidentity counts; no executablecode decoding/run.
+- Actual1helper/new194Broot, cached2766B/tables256B;1entry64B/5Bclaim,
+  2prefixes64B. Measured metadata/corrected fullread accounting retained.
+- K392–K395 precisecomponent closes after native/review/affected36/PF/binding/
+  exact1890reconciliation, scopedcommit/tracking/release/staticprocesscleanup.
+  Actualreceiver/Carrier/auth/nativeacceptance unknown; no codec/trial change.
+
 ## #272 — driver buffers and forwarding (M)
 
 - Child267/root164/178, clean6a0b6c0. Exact constructor/table targets and caches

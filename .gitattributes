@@ -24,6 +24,8 @@
 /research/evidence/current-registration-receive-producer.json text eol=lf
 /research/evidence/current-registration-driver-interface.json text eol=lf
 /research/evidence/current-registration-driver-buffer-edges.json text eol=lf
+/research/evidence/current-registration-driver-backend.json text eol=lf
+/docs/REGISTRATION_DRIVER_BACKEND.md text eol=lf
 /docs/REGISTRATION_DRIVER_BUFFER_EDGES.md text eol=lf
 /docs/REGISTRATION_RECEIVE_PRODUCER.md text eol=lf
 /scripts/token_contract_probe.py text eol=lf

@@ -1,5 +1,17 @@
 # Agent handoff
 
+## #273 conditional backend — October7
+
+- [K392–K395](REGISTRATION_DRIVER_BACKEND.md) closes conditionalconstructor/
+  table/receiveimport/entry effects. New194Brecvfrom target; cachedsend220B and
+  old265pre-terminator importsubclaim reused. Whole265probe receipt historical.
+- Allocation0x18(24)bytes, optionalerrorstores/zeroambiguity, initial/retrylength,
+  reloadedhandle/reusedaddress-length and retainedpointee limits qualified.
+- Native/criticalreview/affected36/PF/inputreconciliation closure under
+  .scratch/registration273-primary-20261008T0611Z; privateoriginals/correction
+  retained. No runtime resources/codec/adapter/trial changes. Actualincoming/
+  Carrier/auth/native/M1 unknown. Next exactsource target145dddbb0.
+
 ## #272 driver buffers and forwarding — October7
 
 - [K388–K391](REGISTRATION_DRIVER_BUFFER_EDGES.md) closes exactdriver JMP/buffer/

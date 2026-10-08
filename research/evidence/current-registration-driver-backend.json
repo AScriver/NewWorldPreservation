@@ -1,0 +1,326 @@
+{
+  "schema": 1,
+  "classification": "source-inference",
+  "status": "passed",
+  "workItemId": 164,
+  "actionableId": 273,
+  "parentActionableId": 267,
+  "recordedUtc": "2026-10-08T06:35:40.171625+00:00",
+  "claimIds": [
+    "K392",
+    "K393",
+    "K394",
+    "K395"
+  ],
+  "clientExecuted": false,
+  "nativeClientCodeExecuted": false,
+  "milestone1": "not tested",
+  "input": {
+    "head": "f08cd0e6aa16e027528eb81b00b51863fade1cce",
+    "dirty": [],
+    "imageSha256": "8654f01d324636d9f74f1c793b0cc4a417c3c5fa9847d9913c358ca29e0fdc8e",
+    "mappingSha256": "f1e2385f333455a0524ed92ff2a3cb1c66824b1949462d0d12e9f9c06c82be75"
+  },
+  "acceptance": "Exact conditional backend construction/table/receive import and local entry effects; actual incoming/Carrier/runtime/auth aggregate267 remains partial.",
+  "direction": "Owned-client incoming socket source relevant to replacement-server outgoing data; no reciprocal server parser or executed client/network evidence.",
+  "sources": {
+    "research/evidence/current-registration-receive-callback.json": "61c2df0a4a81346aefe7cdc08d86751a2d381f08b09c6c88d19fd58dde3b56cf",
+    "research/evidence/current-registration-receive-invoker.json": "8b4f600b00c46bc3df56d1731f2718adff5861ef928c4642cbec869b55f7afb5",
+    "research/evidence/current-registration-view-accessors.json": "0b3e72a1bccfaae8d38d35fc1c61e29dbec7c968190652c3b2b3f0efb0fade98",
+    "research/evidence/current-registration-receive-producer.json": "c8bb12e94d5890accbc206c8a81b160e46ce08357eb068c36c561b7a7fdd49a6",
+    "research/evidence/current-registration-driver-interface.json": "f888f11381fde36a72b93c18f966982f8b0cfaa32812a5fcd1ec0a0a0198e003",
+    "research/evidence/current-registration-driver-buffer-edges.json": "d16d69aa8858788f1f5f776eb7262f2c508c157376d307b3fdd4c3579fc2d35b",
+    "research/evidence/current-initial-registration-contract.json": "9d3d151bcbdcb4fc59a32062d8d7aaff395a8b5b551f17fa5da012a3fce639e8",
+    "research/evidence/current-registration-adapter-current.json": "19c4ef96023620d1c9ca11ba13f9ea9d8ab8999eb437c62a43b797c97d89c321",
+    "research/evidence/current-registration-bit-send.json": "4bd9650c613a07a8a918c493032dca8d077700c38aac78a3e898d061f0d7cc7a",
+    "scripts/ghidra_function_slice.py": "6d281846a32bcb4db6f0b13111a1d007190b8c3bda135fb4c7695ba199b7a341",
+    "docs/TOOLS.md": "5aadbe14c7b95dcec4191b63a76bbc86db7da579dd4102122ea0aa5cea592d07",
+    "requirements-dev.lock": "1d0d02f073e5dac15d68bcf5e210c52e4db7c6dd6a8e68c3f71e72b9692e15cf"
+  },
+  "privateArtifacts": {
+    ".scratch/registration261-lower-20261008T0104Z/table-148480758.json": "ef1f1e315e8f05d230053e8074b622542e3a8041c3db4a95f759cecbd5c706f8",
+    ".scratch/registration261-primary-20261008T0115Z/instructions-145dbe0f0.txt": "4d42ff5ec00489a77656f95f39943dbf4eeb362ee201c5f1d4ec6020aaf0e9e5",
+    ".scratch/registration261-primary-20261008T0115Z/instructions-145dbe1e0.txt": "421f82a985da7b6763591ea7e37d2dd28ca12d075b12a98b7c30ee5808bf7cca",
+    ".scratch/registration261-primary-20261008T0115Z/ordinal-export.json": "17eb34b7d63da0dd13f52cec225ef7b8f1722649c01c534eaab26b2a614fbb04",
+    ".scratch/registration265-bit-send-20261008T0238Z/fn-140f7fb80.txt": "0174ec1e736b7864f5145fac84bb10a666bb3bcf05a5f19e6d06c5614106bf5e",
+    ".scratch/registration265-primary-20261008T0238Z/Seal.py": "f21612d0140f13c236febed9f6e5360df26999f017da83bdbd598d61beb8559d",
+    ".scratch/registration265-primary-20261008T0238Z/seal.json": "9a11e34284db51dd9699979d37f1cf14e366141f1b253e802692f3916b7665d1",
+    ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+    ".scratch/registration271-primary-20261008T0513Z/import-membership.json": "7a8a2c47e158ee7579f8b9303d68a736fe87a979f688e28e11cac0a52bcd240b",
+    ".scratch/registration273-driver-backend-20261008T0611Z/REPORT-ACCOUNTING-ADDENDUM.md": "3a8bae1b2de499ca36cd3fe93c81f655c39dc42323ab3b8ddb0f6a4d341d736c",
+    ".scratch/registration273-driver-backend-20261008T0611Z/REPORT.md": "9dd358c961f89b227eebf06abb080f508f30cce8ab5b1482c0fb2860fb9f5b49",
+    ".scratch/registration273-driver-backend-20261008T0611Z/bind-import-147eca8d8.py": "5ee85288611d420783a67a9439a8a13221701cdb66a82a1c0a8234cc62391a00",
+    ".scratch/registration273-driver-backend-20261008T0611Z/import-147eca8d8.json": "b9d64c25712ad1fe009fcec4e856e923d16c13a9318f10d3f514cae74d003185",
+    ".scratch/registration273-driver-backend-20261008T0611Z/output-140f7c980/function-140f7c980.c": "3f902477e5b2f626ad7330bc71b4b6621f5e7574393514777dc687dd8db126f1",
+    ".scratch/registration273-driver-backend-20261008T0611Z/output-140f7c980/receipt.json": "867772b1228650b137a250a9132b5a21bdaa96000cef9defdc43485792548e18",
+    ".scratch/registration273-driver-backend-20261008T0611Z/preflight-140f7c980.json": "363b2ee2496629128f73e7d5ea16a81de3b9e45688c62203753c6a7bdcb1d576",
+    ".scratch/registration273-driver-backend-20261008T0611Z/preflight-140f7c980.py": "4b11d9bb851889e5cf1389a7737dcd9e0a70e6fd457dcb032b8b90d648d098fb",
+    ".scratch/registration273-driver-backend-20261008T0611Z/read-145dddba0.py": "2411ba561b7bb1325e602972dd639a9e2a8e2c606938533110a76c17c9143c70",
+    ".scratch/registration273-driver-backend-20261008T0611Z/resolve-ws2-ordinal17.py": "d872a96ab2cc88fa5a41d5083e9e253d0c85a7bc4602de3f9ca5a665fb093abd",
+    ".scratch/registration273-driver-backend-20261008T0611Z/run-entry-window.ps1": "4583b4a7075455affab5cd1a24187430c0bcc95275fe5c0f8faf788c76eb5d5d",
+    ".scratch/registration273-driver-backend-20261008T0611Z/run-import-binding.ps1": "f37af09da8bebfe09d6c3482e0f22b4ed5f778d777e9a70bfd6e4b94c5549dca",
+    ".scratch/registration273-driver-backend-20261008T0611Z/run-preflight.ps1": "d802be791b30d71a48729c6bfae1d28b9f94e9e3e341e35357aa5a112923f349",
+    ".scratch/registration273-driver-backend-20261008T0611Z/run-slice-140f7c980.ps1": "ab8bb1f2e0d945224d4ddcd70e011393025c4afe6cc0ac253c57976ebf047861",
+    ".scratch/registration273-driver-backend-20261008T0611Z/run-ws2-ordinal17.ps1": "389093aeafd832d5bfa6d6b5e643ad3ceccfd4fb0761b1af6e9e26436579a285",
+    ".scratch/registration273-driver-backend-20261008T0611Z/window-145dddba0.json": "86b032f972d85519adb3ae712526726d160c67b1ff8a6964479179a4b317e461",
+    ".scratch/registration273-driver-backend-20261008T0611Z/ws2-ordinal17-export.json": "029c078068ce5b2c7a7cff761bc4e4395b007dc0c163657a344d03f5a63005da",
+    ".scratch/registration273-primary-20261008T0611Z/Baseline.ps1": "acf36320e4fe8b9409388b95b628f8419761fc9dbf867ff5b6b8a0b8cbc8f10a",
+    ".scratch/registration273-primary-20261008T0611Z/Baseline.py": "341ad5728244a0c206626db20050e176413e631672294a4834a22a3941c8db0e",
+    ".scratch/registration273-primary-20261008T0611Z/Publish.ps1": "339371048782a5d248d084c92c666ed4edfc4f6c0501ce0963378e91b5f18a0e",
+    ".scratch/registration273-primary-20261008T0611Z/Publish.py": "a7b8cc00cfd64d9cffc3a9ebaa5466665adbce4f7de7528aaad4dc701916f757",
+    ".scratch/registration273-primary-20261008T0611Z/Seal.ps1": "f5befdad0c32e287cc40943f46fc4516b5d222b57ad8ec7c6c31443b7759319d",
+    ".scratch/registration273-primary-20261008T0611Z/Seal.py": "930ff2d30ad4dab997e5f6cec4a8d5e7acf28bee3ebe65affd8001ed6936d9af",
+    ".scratch/registration273-primary-20261008T0611Z/adjudication.md": "7acef25a64ef87acc8a9c81e3220dc743f464601265853014e370b22a3e1fa60",
+    ".scratch/registration273-primary-20261008T0611Z/baseline.json": "cc08dc2626b87674523d6f4fb8054e803ac604454a56d15b54b15bee761559a7",
+    ".scratch/registration273-primary-20261008T0611Z/ledger.md": "5675f429aa909b1d97d294b26f79a6c7a26acca09274532ac7b610eb8b61ce5c",
+    ".scratch/registration273-primary-20261008T0611Z/native-140f7c980.txt": "11e37a74668d48562a0fcd335bd33fb8c1bc81c7ddef2ee5e4c1f184f8aa1aff",
+    ".scratch/registration273-primary-20261008T0611Z/publication-input.json": "60c374a97bbf1d6c6d913594328780071c3f558bd87af9e9a48e07cde5241abc",
+    ".scratch/registration273-primary-20261008T0611Z/seal.json": "5da2aa160d3be0f3957522f8128782614a9c72942464408bf8204c1e42176bba",
+    ".scratch/registration273-review-20261008T0629Z/report.md": "03a504e0436dd3306285ca1186f0e43b698cc1f2e0415f07e34c4f9565d0c6ff",
+    ".scratch/rep-verify-policy/fn-145dbdd30.txt": "d2e50593a2524e09278c47d83d3ec807ecf3defa34c50b3f72bcfef3c128ae5b",
+    ".scratch/rep-verify-policy/fn-145dd9cf0.txt": "4fc0f44623a0fd602727b5b5a83ad9449af1bc2439cb99831f32a9d542afbc7a"
+  },
+  "newNative": [
+    {
+      "entry": "0x140f7c980",
+      "ranges": [
+        {
+          "start": "0x140f7c980",
+          "endExclusive": "0x140f7ca42",
+          "bytes": 194,
+          "sha256": "2b8c07df57691f24057e660b0b12bbdb021ded64c2b5ac75c669b7df89aa74b3",
+          "instructions": 55
+        }
+      ],
+      "queryReceiptSha256": "867772b1228650b137a250a9132b5a21bdaa96000cef9defdc43485792548e18"
+    }
+  ],
+  "cachedNative": [
+    {
+      "entry": "0x145dbdd30",
+      "start": "0x145dbdd30",
+      "endExclusive": "0x145dbe0e6",
+      "bytes": 950,
+      "sha256": "36110dbf2e4e53023f868b49396c9b0be7a620b9bde6a404dd1eff5d3d4f671b",
+      "instructions": 214,
+      "listing": ".scratch/rep-verify-policy/fn-145dbdd30.txt",
+      "listingSha256": "d2e50593a2524e09278c47d83d3ec807ecf3defa34c50b3f72bcfef3c128ae5b",
+      "exactListingMatched": true
+    },
+    {
+      "entry": "0x145dbe0f0",
+      "start": "0x145dbe0f0",
+      "endExclusive": "0x145dbe1dd",
+      "bytes": 237,
+      "sha256": "239f79edeab43451c177ea36e5245befeabcef5ad1e7c2d6730eff3c8d2d5a4b",
+      "instructions": 61,
+      "listing": ".scratch/registration261-primary-20261008T0115Z/instructions-145dbe0f0.txt",
+      "listingSha256": "4d42ff5ec00489a77656f95f39943dbf4eeb362ee201c5f1d4ec6020aaf0e9e5",
+      "exactListingMatched": true
+    },
+    {
+      "entry": "0x145dbe1e0",
+      "start": "0x145dbe1e0",
+      "endExclusive": "0x145dbe35c",
+      "bytes": 380,
+      "sha256": "7a363297ae0267f325fe6d8bece3b6d18c396159071c13eb9a1067e44337254d",
+      "instructions": 103,
+      "listing": ".scratch/registration261-primary-20261008T0115Z/instructions-145dbe1e0.txt",
+      "listingSha256": "421f82a985da7b6763591ea7e37d2dd28ca12d075b12a98b7c30ee5808bf7cca",
+      "exactListingMatched": true
+    },
+    {
+      "entry": "0x145dd9cf0",
+      "start": "0x145dd9cf0",
+      "endExclusive": "0x145dda0c3",
+      "bytes": 979,
+      "sha256": "af12f485005bcc160d0d8cfa2bb07eeb450a333700cf5400bb05328f2ce30d60",
+      "instructions": 243,
+      "listing": ".scratch/rep-verify-policy/fn-145dd9cf0.txt",
+      "listingSha256": "4fc0f44623a0fd602727b5b5a83ad9449af1bc2439cb99831f32a9d542afbc7a",
+      "exactListingMatched": true
+    },
+    {
+      "entry": "0x140f7fb80",
+      "start": "0x140f7fb80",
+      "endExclusive": "0x140f7fc5c",
+      "bytes": 220,
+      "sha256": "8f0f601cdf0e4a4fad91d74fb91e1c428021408d185fe72e7764104b2d51d3e9",
+      "instructions": 58,
+      "listing": ".scratch/registration265-bit-send-20261008T0238Z/fn-140f7fb80.txt",
+      "listingSha256": "0174ec1e736b7864f5145fac84bb10a666bb3bcf05a5f19e6d06c5614106bf5e",
+      "exactListingMatched": true
+    }
+  ],
+  "cachedTables": [
+    {
+      "address": "0x148480a20",
+      "bytes": 192,
+      "sha256": "1a75e636c8c587eeab9e1cac335b191022bf35497a2d66e8773d7a79a5d4bbfc",
+      "listing": ".scratch/registration267-receive-source-20261008T0332Z/driver-vtable-148480a20.json",
+      "listingSha256": "30be9babc337a9f5c340722ad68616b894d9e49f7c012982486d4bfb4ddc8835",
+      "exactSlotsMatched": true
+    },
+    {
+      "address": "0x148480758",
+      "bytes": 64,
+      "sha256": "53990cdba2d3a3f78808b4b165c8b1f725078c795bd956ae130e75f37b449506",
+      "listing": ".scratch/registration261-lower-20261008T0104Z/table-148480758.json",
+      "listingSha256": "ef1f1e315e8f05d230053e8074b622542e3a8041c3db4a95f759cecbd5c706f8",
+      "exactSlotsMatched": true
+    }
+  ],
+  "entryWindow": {
+    "address": "0x145dddba0",
+    "readBytes": 64,
+    "decodedBranchBytes": 5,
+    "remainingBytesNotDecoded": 59,
+    "destination": "0x145dddbb0",
+    "limit": "Exact entry branch only; destination body and setup role unqueried. Missing PDATA metadata check is not a query refusal."
+  },
+  "metadataNavigation": {
+    "directHeaderLogicalBytes": 262,
+    "readCalls": 511631,
+    "readBytes": 7833876,
+    "meaning": "In-memory PE exception-directory/unwind navigation; separate from full file identity passes and selected code/data."
+  },
+  "receiveImportMembership": {
+    "module": "WS2_32.dll",
+    "descriptorBytesReadIncludingTerminator": 900,
+    "moduleNameBytesRead": 11,
+    "firstThunk": "0x147eca8c0",
+    "lookupBase": "0x149e71418",
+    "targetIndex": 3,
+    "targetOrdinal": 17,
+    "noZeroThroughTarget": true,
+    "newSelectedDataWindows": 2,
+    "newSelectedDataWindowBytes": 64,
+    "extraNavigationRecheckBytes": 943,
+    "scope": "Exact positive descriptor and nonzero prefix membership; no loaded import target."
+  },
+  "localDllExport": {
+    "path": "C:\\Windows\\System32\\WS2_32.dll",
+    "fileBytes": 534592,
+    "sha256": "535d7a8336ddbae77b1f2c68339e5e7dbeb5f06445d6e42b19c794ef0e26f6a3",
+    "ordinal": 17,
+    "names": [
+      "recvfrom"
+    ],
+    "targetRva": "0x10030",
+    "forwarder": false,
+    "primaryMetadataBytesRead": 3609,
+    "primaryIdentityPasses": 1,
+    "primaryIdentityBytesRead": 534592,
+    "scope": "Full identity includes executable file bytes; no executable code separately selected, decoded or executed. No loaded module identity."
+  },
+  "construction": {
+    "claimId": "K392",
+    "chain": [
+      "0x145dbdd30",
+      "0x145dbe0f0",
+      "0x145dbe1e0"
+    ],
+    "field": "0x20",
+    "fallbackCondition": "entryR9B==0 or helper140f91e30 AL==0",
+    "allocationSizeBytes": 24,
+    "allocationAlignmentBytes": 8,
+    "table": "0x148480758",
+    "effect": "Clears field20; fallback nonnull allocation installs table, object+8=receiver, object+10=receiver+10, then stores object at receiver+20. Null allocation stores null; alternate branch installs opaque returned object.",
+    "limit": "Normal-control effects at initializer only; unknown callees/aliases/overwrites/final ctor state/runtime branch/valid lifetime."
+  },
+  "conditionalDispatch": {
+    "claimId": "K393",
+    "driverTable": "0x148480a20",
+    "backendTable": "0x148480758",
+    "targets": {
+      "0x18": "0x140f7fb80",
+      "0x20": "0x140f7c980"
+    },
+    "condition": "If constructed tables and fallback pointee remain installed at272 qword[driver+20] virtual calls, exact table slots select these targets.",
+    "sendAssociation": "Reused265 independently traversed pre-terminator WS2_32 ordinal20/localDLL sendto association on identical image; exact220B native body rechecked. Historical static subclaim only, not fresh273 index33-prefix proof, loadedAPI or stalewholeprobe validation.",
+    "limit": "No actual caller-instance/invocation/socket lifecycle/loaded API/Carrier join; matching fields alone insufficient."
+  },
+  "receive": {
+    "claimId": "K394",
+    "entry": "0x140f7c980",
+    "staticImport": "WS2_32.dll ordinal17/localDLL recvfrom",
+    "arguments": "RCX=qword[qword[backend+0x10]],RDX=entrybuffer,R8=entryR8,R9D=0; stackarg5=entryR9,address arg6=&entry fifth-arg slot. SavedESI is low32 of entryR8.",
+    "retry": "SignextendedEAX==1 and bufferbyte0x47 retries with reloaded handle chain,R8D=ESI and same address-length slot without explicit reset.",
+    "error": "Result\u22121 calls unclassified error import147eca9f0; optional sixth-entry argument receives DWORD0 if error0x2733 else0x10, then returns0.",
+    "result": "Other results returned signextended. Wrapper has no explicit optional-error-pointer store on nonerror branches; aliases/import effects may still change memory. Returned0 conflates import0 and mappederror.",
+    "limit": "Returned payload count differs from address-length output. No validity/lifetime/iteration bound/protocolG meaning/Carrier/primarycallback/runtime guarantee."
+  },
+  "otherEntries": {
+    "claimId": "K395",
+    "setupTarget": "0x145dddba0\u2192JMP145dddbb0",
+    "separateInputQueue": "0x145dd9cf0 complete979B cachedbody; virtual18 call receiver is entry inputobject loadedfrom[RDX].",
+    "limit": "Setupdestination body/role and inputobject alias to driverbackend/primarycallback unqueried."
+  },
+  "supplementalDocumentation": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-recvfrom",
+      "checkedUtc": "2026-10-08T06:23:00Z",
+      "scope": "API formal parameters/payload return versus address-length output only, not runtime invocation."
+    }
+  ],
+  "resources": {
+    "helperBatches": 1,
+    "newPdataRootsAttempted": 1,
+    "newPdataRootsCompleted": 1,
+    "newPdataRootsRefused": 0,
+    "metadataOwnerChecksRefused": 1,
+    "newPdataCodeBytes": 194,
+    "reusedPdataCodeBytes": 2766,
+    "newExecutableWindowReadBytes": 64,
+    "newExecutableWindowClaimedBytes": 5,
+    "reusedTableWindowBytes": 256,
+    "newDataWindows": 2,
+    "newDataWindowBytes": 64,
+    "mandatoryInitializedStaticImportsPerBatch": 37848576,
+    "cumulativeInitializedStaticImports": 37848576,
+    "newCodePlusStaticImports": 37848770,
+    "uninitializedStaticExtensionsTotal": 5559448,
+    "gameImageFileExtentBytes": 179204176,
+    "primaryBaselineIdentityPasses": 1,
+    "primarySealIdentityPassesPerInvocation": 1,
+    "agentGameImageIdentityPasses": 7,
+    "agentGameImageIdentityBytesRead": 1254429232,
+    "agentFailedOrAdditionalIdentityPassesEvidenced": 0,
+    "primaryGameImageIdentityPasses": 2,
+    "primaryGameImageIdentityBytesRead": 358408352,
+    "agentDllIdentityPasses": 1,
+    "agentDllIdentityBytesRead": 534592,
+    "primaryDllIdentityPasses": 1,
+    "primaryDllIdentityBytesRead": 534592,
+    "agentDllMetadataBytesRead": 3913,
+    "primaryDllMetadataBytesRead": 3609,
+    "equivalentHelperMetadataWalkReadBytes": 7833876,
+    "equivalentHelperDirectHeaderBytes": 262,
+    "metadataCounterProvenance": "Measured agentpreflight/primaryseal; originalhelperreceipt has no per-read counter. Baseline navigation inferable from unchangedhelper/image, not originally measured."
+  },
+  "validation": {
+    "type": "Review",
+    "outcome": "Passed",
+    "scope": "Exact conditional K392-K395 native/constructor/table/import/localDLL/cache effects with retained-counterexample and critical ABI/branch/width/alias/resource review.",
+    "workspace": "Unchangedcode/fixtures/runtime; affected36/actualpreflight/bindings and exact1890/50/fivePS/closedloopback reconciliation beforecommit, inclosure/ROADMAP."
+  },
+  "counterEvidence": [
+    "Original+50alias guess contradicted by979Bcachedbody; setup destination remainsunqueried.",
+    "OriginalnoDLLcode-read/hash-attribution wording corrected in retained separateaddendum.",
+    "Conditional/null/alternate/retainedpointee required; zero return/error-output/address-length/reload/width limits retained.",
+    "Old270resourcefailure and stale265wholeprobe receipt preserved; no broadfreshnessclaim."
+  ],
+  "limits": [
+    "Conditional fallback installation/table association only; unknown callerinstance/pointee retention/alias/lifetime/finalconstructor/runtime/loadedAPI.",
+    "No reciprocal server parser, socketlifecycle/primaryreceive/Carrier transform/packet content/auth/native/M1 proof.",
+    "No executableDLLcode separately selected/decoded/executed; fullidentity hash includes executable-section bytes.",
+    "Original codecs/adapter/fixtures unchanged; no game/client/trial/network resources or push."
+  ],
+  "nextEvidence": "Exactsetup branchdestination145dddbb0 and socket-to-holder/transform/primary/Carrier joins; choose small next source or source-supported implementation.",
+  "cleanup": {
+    "staticChildrenExited": true,
+    "runtimeResourcesAcquired": false,
+    "privateOutputsIgnored": true,
+    "pushed": false
+  }
+}

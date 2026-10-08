@@ -449,6 +449,17 @@
       "limit": "Caller-selected type/wrapper/BODY values and fresh0/1/3 domain; full physical input provenance, runtime binding, response selection/authentication/native acceptance/M1 unproved. BODY and Carrier responder unchanged."
     },
     {
+      "id": "current-registration-driver-backend",
+      "roadmapTasks": ["M1-06B"],
+      "claimIds": ["K392", "K393", "K394", "K395"],
+      "docs": ["docs/REGISTRATION_DRIVER_BACKEND.md"],
+      "scripts": ["scripts/ghidra_function_slice.py"],
+      "tests": ["tests/test_project_preflight.py", "tests/test_offline_runner.py"],
+      "fixtures": [],
+      "evidence": [{"path": "research/evidence/current-registration-driver-backend.json", "classification": "source-inference", "scope": "Conditional backend constructor/table/receive import association and exact local entry effects; actual incoming/Carrier/runtime aggregate partial"}],
+      "limit": "Fallback/null/alternate/callee/pointee retention, importname versus loadedAPI, count/address-length/error/zero/retry/alias widths qualified. Historical265send subclaim reused only; no reciprocal server/auth/native/M1 or code/trial change."
+    },
+    {
       "id": "current-registration-driver-buffer-edges",
       "roadmapTasks": ["M1-06B"],
       "claimIds": ["K388", "K389", "K390", "K391"],
@@ -2089,6 +2100,7 @@
     }
   ],
   "receipts": [
+    "research/evidence/current-registration-driver-backend.json",
     "research/evidence/current-registration-receive-producer.json",
     "research/evidence/current-registration-driver-interface.json",
     "research/evidence/current-registration-driver-buffer-edges.json",

@@ -1,5 +1,22 @@
 # Evidence ledger
 
+## Conditional socket backend — October7, #273
+
+[Original receipt](../research/evidence/current-registration-driver-backend.json)
+pins cleanf08cd0e and native/cache/table/import/export/review hashes. Precise
+conditional source component closes; actualincoming/Carrier/runtime remainsPartial.
+
+| Claim | Finding | Evidence and limits | References |
+|---|---|---|---|
+| K392 | Constructor chain conditionally installs fallback backend at field0x20 | Cached950/237/380B exactmatch. Allocation0x18(24)bytes, alternate/null/callee/alias/final-state limits | [Backend source](REGISTRATION_DRIVER_BACKEND.md) |
+| K393 | Retained fallback table selects concrete send/receive targets | Exact tables256B; newreceiveWS2ordinal17/localDLLrecvfrom membership. Historical265sendimport subclaim reused, not stale wholeprobe receipt; no runtime instance/loader/socket lifecycle | Table/native/import review |
+| K394 | Receive count, one-byte0x47 retry and optional error-output effects |194B/55instructions. InitialR8/retrylow32/reloadedhandle/address-length slot qualified. Error-only explicit stores; returned0 ambiguous. No packet semantics/termination/validextent | Exact native/API/review |
+| K395 | Setup entry is one JMP; separate cached queue method uses input object |64Bwindow/5Bclaim→unqueried145dddbb0; cached979B. No backend/primarycallback alias from matching fields | Entry/cache seal |
+
+Onehelper194B/newprefixes64B, cachedcode2766B/tables256B. Static/BSS/metadata/
+identity costs separatelycounted; originalreport/accountingaddendum retained.
+No code/codec/adapter/runtime/native trial change or reciprocal server proof.
+
 ## Driver buffers and forwarding — October7, #272
 
 [Original receipt](../research/evidence/current-registration-driver-buffer-edges.json)

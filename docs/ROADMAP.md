@@ -2,6 +2,28 @@
 
 ## Server protocol focus — October 7
 
+Newest #273 [conditional transport backend](REGISTRATION_DRIVER_BACKEND.md)
+closes K392–K395 local source effects. Cachedconstructor/base/init chain
+conditionally installs fallback24-byte object/table148480758 atdriver+0x20.
+Retainedtable/pointee assumptions connect272calls to exactsend/receive targets;
+alternate/null/callee/alias/final-state/runtime conditions remainunknown.
+New194B/55instruction receive method bindsWS2ordinal17/pinnedlocalDLLrecvfrom
+through exactprefix/descriptor membership. Cached220Bsendbody rechecked; unchanged
+historical265pre-terminator ordinal20/sendto subclaim reused, wholeprobe receipt
+historical. Address-length versus payloadcount, initial/retry32-bit length,
+reloadedhandle/reusedslot, error-only explicit stores and zero ambiguity qualified.
+Setupentry onlyJMP→unqueried145dddbb0;979Binputqueue hasno backend/primaryalias.
+Onehelper194Bnewcode/cached2766B/tables256B; window64B/5claimed andprefix64B.
+Initializedstatic37848576B/BSS5559448B, meteredPE/PDATA/unwindnavigation and
+repeatedidentity reads separatelybudgeted. Originalreports/correctedaccounting
+retained. Native/criticalreview, affected36/actualpreflight and12public/41private
+bindings pass. Exact1890/50/fivePS/closedloopback support is reused with seven
+addedsource receipts and only three changed metadata inputs. Closure under
+.scratch/registration273-primary-20261008T0611Z. Staticchildrenexited, no runtime
+resources/codec/adapter/trial change. Actualprimary/Carrier/response/auth/native/
+M1 remainsPartial. Continue exactsetupdestination145dddbb0 or another evidenced
+byte-transform edge; conditional socket association alone cannot define replies.
+
 Newest #272 [driver buffer and forwarding](REGISTRATION_DRIVER_BUFFER_EDGES.md)
 closes K388–K391 local source effects: direct entry JMPs, cached input-buffer/
 backend call, queued copy/consume/conditional backend call and caller-code list
